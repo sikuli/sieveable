@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="drawable" name="icon" id="0x7f020000" />
+    <public type="drawable" name="ratio" id="0x7f020001" />
+    <public type="drawable" name="switch_checked" id="0x7f020002" />
+    <public type="drawable" name="switch_checked_focus" id="0x7f020003" />
+    <public type="drawable" name="switch_uncheck" id="0x7f020004" />
+    <public type="drawable" name="switch_uncheck_focus" id="0x7f020005" />
+    <public type="drawable" name="switchbutton" id="0x7f020006" />
+    <public type="layout" name="main" id="0x7f030000" />
+    <public type="array" name="ratios" id="0x7f040000" />
+    <public type="string" name="app_name" id="0x7f050000" />
+    <public type="string" name="text_ScreenRatio" id="0x7f050001" />
+    <public type="string" name="text_ToggleCM_INCH" id="0x7f050002" />
+    <public type="string" name="text_ToggledCM" id="0x7f050003" />
+    <public type="string" name="text_ToggledINCH" id="0x7f050004" />
+    <public type="string" name="text_ScreenDiagonal" id="0x7f050005" />
+    <public type="string" name="text_ScreenWidth" id="0x7f050006" />
+    <public type="string" name="text_ScreenHeight" id="0x7f050007" />
+    <public type="id" name="ScrollView01" id="0x7f060000" />
+    <public type="id" name="RelativeLayout01" id="0x7f060001" />
+    <public type="id" name="ImageView01" id="0x7f060002" />
+    <public type="id" name="lbl_ratio" id="0x7f060003" />
+    <public type="id" name="spnRatioSelector" id="0x7f060004" />
+    <public type="id" name="TableLayout01" id="0x7f060005" />
+    <public type="id" name="TableRow01" id="0x7f060006" />
+    <public type="id" name="TextView01" id="0x7f060007" />
+    <public type="id" name="edit_Diagonal" id="0x7f060008" />
+    <public type="id" name="lbl_ScreenDiagonalMeastureType" id="0x7f060009" />
+    <public type="id" name="TableRow02" id="0x7f06000a" />
+    <public type="id" name="TextView02" id="0x7f06000b" />
+    <public type="id" name="edit_Width" id="0x7f06000c" />
+    <public type="id" name="lbl_ScreenWidthMeastureType" id="0x7f06000d" />
+    <public type="id" name="TableRow03" id="0x7f06000e" />
+    <public type="id" name="TextView03" id="0x7f06000f" />
+    <public type="id" name="edit_Height" id="0x7f060010" />
+    <public type="id" name="lbl_ScreenHeightMeastureType" id="0x7f060011" />
+    <public type="id" name="lblToggleCmInch" id="0x7f060012" />
+    <public type="id" name="linearLayout1" id="0x7f060013" />
+    <public type="id" name="textView1" id="0x7f060014" />
+    <public type="id" name="tglCmInchButton" id="0x7f060015" />
+    <public type="id" name="textView2" id="0x7f060016" />
+</resources>

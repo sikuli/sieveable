@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TV Screen Size Calculator</string>
+    <string name="text_ScreenRatio">Select your screen Ratio</string>
+    <string name="text_ToggleCM_INCH">Toggle between INCH and CM measurements</string>
+    <string name="text_ToggledCM">CM</string>
+    <string name="text_ToggledINCH">Inch</string>
+    <string name="text_ScreenDiagonal">Screen Diagonal</string>
+    <string name="text_ScreenWidth">Screen Width</string>
+    <string name="text_ScreenHeight">Screen Height</string>
+</resources>

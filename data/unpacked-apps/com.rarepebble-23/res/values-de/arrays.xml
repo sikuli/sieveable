@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_day_offset_entries">
+        <item>Gestern</item>
+        <item>1 Woche zurück</item>
+        <item>2 Wochen zurück</item>
+    </string-array>
+    <string-array name="export_ranges">
+        <item>Ausgewählter Tag</item>
+        <item>Ausgewählter Tag und vorhergehende Woche</item>
+        <item>Alles</item>
+    </string-array>
+    <string-array name="purge_ranges">
+        <item>1 Jahr</item>
+        <item>6 Monate</item>
+        <item>1 Monat</item>
+        <item>1 Woche</item>
+        <item>1 Tag</item>
+    </string-array>
+</resources>

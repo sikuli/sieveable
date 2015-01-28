@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">單位換算</string>
+    <string name="app_about">"版本 %s
+版權所有 © 2010 - 2011
+whph.net"</string>
+    <string name="app_site">http://whph.net</string>
+    <string name="yes">確定</string>
+    <string name="no">取消</string>
+    <string name="about">關於</string>
+    <string name="exit">關閉程式</string>
+    <string name="more_app">更多應用程式</string>
+    <string name="wrong_url">網址無效，無法加載</string>
+    <string name="unit_prompt">選擇單位</string>
+    <string name="default_unit_value">1</string>
+    <string name="convert">換算</string>
+</resources>

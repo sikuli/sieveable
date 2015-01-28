@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="8.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:id="@id/stats_no_target_message" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@android:style/TextAppearance.Medium" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stats_no_target_message" />
+            <View android:background="@drawable/header_background" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="8.0sp" android:layout_marginBottom="8.0sp" />
+        </LinearLayout>
+        <TextView android:textAppearance="@android:style/TextAppearance.Medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stats_targets_heading" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/stats_target_table" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0sp">
+            <include layout="@layout/stats_target_tick" />
+            <include layout="@layout/stats_target_tick" />
+            <include layout="@layout/stats_target_tick" />
+            <include layout="@layout/stats_target_tick" />
+            <include layout="@layout/stats_target_tick" />
+            <include layout="@layout/stats_target_tick" />
+            <include layout="@layout/stats_target_tick" />
+        </LinearLayout>
+        <TextView android:id="@id/stats_current_run" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="4.0sp" android:text="@plurals/stats_current_run" />
+        <TextView android:id="@id/stats_best_run" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0sp" android:layout_marginBottom="4.0sp" android:text="@plurals/stats_best_run" />
+        <View android:background="@drawable/header_background" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="8.0sp" android:layout_marginBottom="8.0sp" />
+        <TextView android:textAppearance="@android:style/TextAppearance.Medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stats_averages_heading" />
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TableRow android:layout_marginTop="4.0sp" android:layout_marginBottom="4.0sp">
+                <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0sp" android:text="@string/stats_average_7" />
+                <com.rarepebble.BarView android:layout_gravity="center_vertical" android:id="@id/stats_bar_7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:typeface="monospace" android:gravity="right|center" android:id="@id/stats_average_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1234" />
+            </TableRow>
+            <TableRow android:layout_marginTop="4.0sp" android:layout_marginBottom="4.0sp">
+                <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0sp" android:text="@string/stats_average_30" />
+                <com.rarepebble.BarView android:layout_gravity="center_vertical" android:id="@id/stats_bar_30" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:typeface="monospace" android:gravity="right|center" android:id="@id/stats_average_30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123" />
+            </TableRow>
+            <TableRow android:layout_marginTop="4.0sp" android:layout_marginBottom="4.0sp">
+                <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0sp" android:text="@string/stats_average_365" />
+                <com.rarepebble.BarView android:layout_gravity="center_vertical" android:id="@id/stats_bar_365" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:typeface="monospace" android:gravity="right|center" android:id="@id/stats_average_365" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123" />
+            </TableRow>
+            <TableRow android:layout_marginTop="4.0sp" android:layout_marginBottom="4.0sp">
+                <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0sp" android:text="@string/stats_average_all" />
+                <com.rarepebble.BarView android:layout_gravity="center_vertical" android:id="@id/stats_bar_all" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <TextView android:typeface="monospace" android:gravity="right|center" android:id="@id/stats_average_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

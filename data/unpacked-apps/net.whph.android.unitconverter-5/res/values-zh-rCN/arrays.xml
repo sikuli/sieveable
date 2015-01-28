@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="measurement_array">
+        <item>距离和长度</item>
+        <item>重量和质量</item>
+        <item>体积和容量</item>
+        <item>面积</item>
+        <item>时间</item>
+        <item>温度</item>
+        <item>速度</item>
+        <item>角度</item>
+        <item>压力</item>
+        <item>数据存储</item>
+        <item>能量</item>
+        <item>功率</item>
+        <item>力</item>
+        <item>加速度</item>
+    </string-array>
+</resources>

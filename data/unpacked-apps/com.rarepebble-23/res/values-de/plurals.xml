@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="stats_current_run">
+        <item quantity="other">Sie sind innerhalb Ihres Zieles seit %d Tagen.</item>
+        <item quantity="one">Sie sind innerhalb Ihres Zieles seit %d Tag.</item>
+    </plurals>
+    <plurals name="stats_best_run">
+        <item quantity="other">Ihr bestes Ergebnis ist %d Tage.</item>
+        <item quantity="one">Ihr bestes Ergebnis ist %d Tag.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,14 @@
+version: 2.0.0-RC3
+apkFileName: com.rarepebble-23.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '4'
+packageInfo:
+  forced-package-id: '127'
+versionInfo:
+  versionCode: '23'
+  versionName: '1.16'
+compressionType: false
