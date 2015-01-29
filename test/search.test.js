@@ -1,23 +1,55 @@
 var should = require('chai').should()
 var search = require('../lib')
 
+// wrap 'q' around 'it' to take a query object and convert it to a title string
+var q = function(query, callback) {
+    it(JSON.stringify(query), callback)
+}
+
 describe('search', function() {
 
-    var q, results
+    var query, results
     beforeEach(function(done) {
 
-    	// parse the titile of each 'it' as the query
-        q = JSON.parse(this.currentTest.title)
+        // parse the titile of each 'it' as the query
+        query = JSON.parse(this.currentTest.title)
 
         // invoke search on the query
-        search(q, function(err, ret) {
+        search(query, function(err, ret) {
             results = ret
             done()
         })
     })
 
-    it('{"app": "com.evernote"}', function() {
+    var json = JSON.stringify
+
+    describe('packageName', function() {
+
+        q({
+            packageName: 'com.rarepebble'
+        }, function() {
+
+            results.should.have.length(1)
+        })
+
+        q({
+            packageName: "do.not.exist"
+        }, function() {
+
+            results.should.have.length(0)
+        })
+
     })
 
+    describe('activities', function() {
+
+        q({
+            activities: []
+        }, function() {
+
+            results.should.have.length(1)
+        })
+
+    })
 
 })
