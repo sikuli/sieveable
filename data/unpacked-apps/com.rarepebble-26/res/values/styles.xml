@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AutoCompleteTextViewLight" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:textColor">@android:color/primary_text_light</item>
+    </style>
+    <style name="Theme.myLight" parent="@android:style/Theme.Light">
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewLight</item>
+    </style>
+    <style name="CalculatorTextButton" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">65.0dip</item>
+        <item name="android:layout_height">65.0dip</item>
+    </style>
+    <style name="CalculatorButton" parent="@style/CalculatorTextButton">
+        <item name="android:textSize">30.0dip</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CalculatorText" parent="@android:style/Widget.EditText">
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">right</item>
+        <item name="android:focusable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:layout_width">260.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">260.0dip</item>
+        <item name="android:lines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/img_explainpicture" android:layout_width="100.0dip" android:layout_height="100.0dip" android:src="@drawable/ratio" android:scaleType="fitXY" android:contentDescription="ratio_example" />
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/lbl_ratio" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/text_ScreenRatio" />
+                <Spinner android:entries="@array/ratios" android:layout_gravity="center_horizontal" android:id="@id/spinner_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/linearLayout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/lbl_compare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_compare" />
+                <Spinner android:entries="@array/ratios_plus_empty" android:layout_gravity="center_horizontal" android:id="@id/spinner_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <TableLayout android:layout_gravity="center_horizontal" android:id="@id/TableLayout01" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TableRow android:id="@id/TableRow03" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/TextView03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_Screen" />
+            </TableRow>
+            <TableRow android:id="@id/TableRow01" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_ScreenDiagonal" />
+                <EditText android:id="@id/edit_Diagonal_left" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:numeric="decimal" android:inputType="numberDecimal" />
+                <TextView android:id="@id/lbl_ScreenDiagonalMeastureType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                <EditText android:enabled="false" android:id="@id/edit_Diagonal_right" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:numeric="decimal" android:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow android:id="@id/TableRow02" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_ScreenWidth" />
+                <EditText android:id="@id/edit_Width_left" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:numeric="decimal" android:inputType="numberDecimal" />
+                <TextView android:id="@id/lbl_ScreenWidthMeastureType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                <EditText android:enabled="false" android:id="@id/edit_Width_right" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:numeric="decimal" android:inputType="numberDecimal" />
+            </TableRow>
+            <TableRow android:id="@id/TableRow03" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/TextView03" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_ScreenHeight" />
+                <EditText android:id="@id/edit_Height_left" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:numeric="decimal" android:inputType="numberDecimal" />
+                <TextView android:id="@id/lbl_ScreenHeightMeastureType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                <EditText android:enabled="false" android:id="@id/edit_Height_right" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="" android:singleLine="true" android:numeric="decimal" android:inputType="numberDecimal" />
+            </TableRow>
+        </TableLayout>
+        <TextView android:layout_gravity="center_horizontal" android:id="@id/lblToggleCmInch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_ToggleCM_INCH" android:layout_below="@id/TableLayout01" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/linearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/text_ToggledINCH" />
+            <CheckBox android:id="@id/tglCmInchButton" android:background="@drawable/switchbutton" android:layout_width="60.0dip" android:layout_height="60.0dip" android:button="@null" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/text_ToggledCM" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

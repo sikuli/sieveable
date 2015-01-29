@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="ScrollView01">false</item>
+    <item type="id" name="img_explainpicture">false</item>
+    <item type="id" name="lbl_ratio">false</item>
+    <item type="id" name="spinner_left">false</item>
+    <item type="id" name="linearLayout">false</item>
+    <item type="id" name="lbl_compare">false</item>
+    <item type="id" name="spinner_right">false</item>
+    <item type="id" name="TableLayout01">false</item>
+    <item type="id" name="TableRow03">false</item>
+    <item type="id" name="TextView03">false</item>
+    <item type="id" name="TableRow01">false</item>
+    <item type="id" name="TextView01">false</item>
+    <item type="id" name="edit_Diagonal_left">false</item>
+    <item type="id" name="lbl_ScreenDiagonalMeastureType">false</item>
+    <item type="id" name="edit_Diagonal_right">false</item>
+    <item type="id" name="TableRow02">false</item>
+    <item type="id" name="TextView02">false</item>
+    <item type="id" name="edit_Width_left">false</item>
+    <item type="id" name="lbl_ScreenWidthMeastureType">false</item>
+    <item type="id" name="edit_Width_right">false</item>
+    <item type="id" name="edit_Height_left">false</item>
+    <item type="id" name="lbl_ScreenHeightMeastureType">false</item>
+    <item type="id" name="edit_Height_right">false</item>
+    <item type="id" name="lblToggleCmInch">false</item>
+    <item type="id" name="linearLayout1">false</item>
+    <item type="id" name="textView1">false</item>
+    <item type="id" name="tglCmInchButton">false</item>
+    <item type="id" name="textView2">false</item>
+</resources>

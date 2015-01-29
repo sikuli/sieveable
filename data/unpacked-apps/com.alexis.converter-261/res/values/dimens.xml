@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="taillePoliceTitle">20.0sp</dimen>
+    <dimen name="taillePoliceSubtitle">15.0sp</dimen>
+    <dimen name="taillePoliceLastUpdated">15.0sp</dimen>
+    <dimen name="taillePoliceBoutons">25.0sp</dimen>
+    <dimen name="taillePoliceTextes">40.0sp</dimen>
+    <dimen name="taillePoliceTitres">40.0sp</dimen>
+</resources>

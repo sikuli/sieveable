@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="header_background">#66888888</item>
+    <item type="drawable" name="header_pressed">#ff888888</item>
+    <item type="drawable" name="header_focused">#aa888888</item>
+</resources>

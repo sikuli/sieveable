@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/titleCategoryConversion" android:key="conversion">
+        <CheckBoxPreference android:title="@string/titleneverRound" android:key="neverRoundSettings" android:summary="@string/subtitleneverRound" android:defaultValue="false" />
+        <com.alexis.converter.NumberPickerPreference android:title="@string/titleSettingsNbrDecimales" android:key="nbrDecimalesSettings" android:summary="@string/subtitleSettingsNbrDecimalesS" />
+        <ListPreference android:entries="@array/entriesSwapSettings" android:title="@string/titleSettingsSwap" android:key="swapSettings" android:defaultValue="false" android:dialogTitle="@string/titleSettingsSwap" android:entryValues="@array/valuesSwapSettings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/search" android:key="search">
+        <com.alexis.converter.MessagePreference android:title="@string/clearRecent" android:key="clearRecent" android:summary="@string/subtitleClearRecent" />
+        <CheckBoxPreference android:title="@string/neverRemember" android:key="neverRememberSearch" android:summary="@string/subtitleNeverRemember" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/titleCategoryRates" android:key="exchange_rates">
+        <Preference android:title="@string/titleSettingsSync" android:key="syncSettings" />
+        <CheckBoxPreference android:title="@string/titleSettingsAutoUpdate" android:key="autoUpdateSettings" android:summary="@string/subtitleSettingsAutoUpdate" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/titleCategoryUI" android:key="ui">
+        <ListPreference android:entries="@array/entriesThemeSettings" android:title="@string/titleSettingsTheme" android:key="themeSettings" android:defaultValue="dark" android:dialogTitle="@string/titleSettingsTheme" android:entryValues="@array/valuesThemeSettings" />
+        <ListPreference android:entries="@array/entriesNavSettings" android:title="@string/titleSettingsNav" android:key="navSettings" android:defaultValue="screen" android:dialogTitle="@string/titleSettingsNav" android:entryValues="@array/valuesNavSettings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/titleCategoryContact" android:key="contact">
+        <Preference android:title="@string/appsText" android:summary="@string/readableAppsAdress">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/appsAdress" />
+        </Preference>
+        <Preference android:title="@string/myWebsiteText" android:summary="@string/readableWebsiteAdress">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/myWebsiteAdress" />
+        </Preference>
+        <Preference android:title="@string/emailText" android:summary="@string/readableEmailAdress">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/emailAdress" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

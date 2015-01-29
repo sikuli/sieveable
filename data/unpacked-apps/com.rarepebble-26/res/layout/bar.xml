@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="10.0sp" android:paddingRight="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center_vertical" android:id="@id/barUnderflow" android:background="@drawable/progress_fill" android:layout_width="0.0px" android:layout_height="8.0dip" android:layout_weight="10.0" />
+    <View android:layout_gravity="center_vertical" android:background="@drawable/progress_fill_end" android:layout_width="2.0dip" android:layout_height="18.0dip" android:layout_weight="0.0" />
+    <View android:layout_gravity="center_vertical" android:id="@id/barFilled" android:background="@drawable/progress_fill" android:layout_width="0.0px" android:layout_height="12.0dip" android:layout_weight="80.0" />
+    <View android:layout_gravity="center_vertical" android:id="@id/barEmpty" android:background="@drawable/progress_fill_empty" android:layout_width="0.0px" android:layout_height="12.0dip" android:layout_weight="20.0" />
+    <View android:layout_gravity="center_vertical" android:background="@drawable/progress_fill_end" android:layout_width="2.0dip" android:layout_height="18.0dip" android:layout_weight="0.0" />
+    <View android:layout_gravity="center_vertical" android:id="@id/barOverflow" android:background="@drawable/progress_fill" android:layout_width="0.0px" android:layout_height="8.0dip" android:layout_weight="10.0" />
+</LinearLayout>

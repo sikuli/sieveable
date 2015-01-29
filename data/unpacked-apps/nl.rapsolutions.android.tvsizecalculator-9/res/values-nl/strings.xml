@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_ScreenRatio">Selecteer uw scherm Ratio</string>
+    <string name="text_ToggleCM_INCH">Wissel tussen INCH en CM</string>
+    <string name="text_ToggledCM">CM</string>
+    <string name="text_ToggledINCH">Inch</string>
+    <string name="text_Screen">Scherm:</string>
+    <string name="text_ScreenDiagonal">Diagonaal</string>
+    <string name="text_ScreenWidth">Breedte</string>
+    <string name="text_ScreenHeight">Hoogte</string>
+    <string name="text_compare">Vergelijk</string>
+</resources>

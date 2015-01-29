@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listCategories">
+        <item>@string/categoryAngle</item>
+        <item>@string/categoryAngularVelocity</item>
+        <item>@string/categoryArea</item>
+        <item>@string/categoryPressure</item>
+        <item>@string/categoryCurrency</item>
+        <item>@string/categoryEnergy</item>
+        <item>@string/categoryFrequency</item>
+        <item>@string/categoryVolume</item>
+        <item>@string/categorySpeed</item>
+        <item>@string/categoryMass</item>
+        <item>@string/categoryTemperature</item>
+        <item>@string/categoryTorque</item>
+        <item>@string/categoryBase</item>
+        <item>@string/categoryLength</item>
+        <item>@string/categoryDataSize</item>
+        <item>@string/categoryDataRate</item>
+        <item>@string/categoryFuel</item>
+        <item>@string/categoryDensity</item>
+        <item>@string/categoryTime</item>
+    </string-array>
+    <string-array name="entriesSwapSettings">
+        <item>Değerler ve birimler takas edilecek</item>
+        <item>Üst değeri aynı kalacak ama birimler takas edilecek</item>
+    </string-array>
+    <string-array name="entriesThemeSettings">
+        <item>Karanlık tema</item>
+        <item>Aydınlık tema</item>
+    </string-array>
+    <string-array name="entriesNavSettings">
+        <item>Ayrı ekran</item>
+        <item>Açılan liste</item>
+        <item>Her ikisi de</item>
+    </string-array>
+    <string-array name="listeGroupsTemperature">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+        <item>Rankine</item>
+        <item>Planck sıcaklığı</item>
+    </string-array>
+    <string-array name="listeGroupsLength">
+        <item>Kilometre</item>
+        <item>Hektometre</item>
+        <item>Dekametre</item>
+        <item>Metre</item>
+        <item>Desimetre</item>
+        <item>Santimetre</item>
+        <item>Milimetre</item>
+        <item>Mikrometre</item>
+        <item>Nanometre</item>
+        <item>Pikometre</item>
+        <item>League</item>
+        <item>Mil</item>
+        <item>Milin sekizde biri</item>
+        <item>Rod</item>
+        <item>Fathom</item>
+        <item>Yard</item>
+        <item>Adım</item>
+        <item>Fit</item>
+        <item>El</item>
+        <item>İnç</item>
+        <item>Barleycorn</item>
+        <item>Deniz mili</item>
+        <item>Parsec</item>
+        <item>Işık yılı</item>
+        <item>Astronomik birim</item>
+        <item>Işık ikinci</item>
+        <item>Ångström</item>
+        <item>Bohr radius</item>
+        <item>Planck uzunluğu</item>
+    </string-array>
+    <string-array name="listeGroupsSpeed">
+        <item>Kilometre bölü saat</item>
+        <item>Metre bölü saniye</item>
+        <item>Kilometre bölü saniye</item>
+        <item>Saniye bölü kilometre</item>
+        <item>Mil bölü saat</item>
+        <item>Fit bölü saniye</item>
+        <item>Mil bölü saniye</item>
+        <item>Saniye bölü mil</item>
+        <item>Knot</item>
+        <item>Işık hızı</item>
+        <item>Mach</item>
+    </string-array>
+    <string-array name="listeGroupsBase">
+        <item>İkili</item>
+        <item>Ternary</item>
+        <item>Quaternary</item>
+        <item>Quinary</item>
+        <item>Senary</item>
+        <item>Septenary</item>
+        <item>Octal</item>
+        <item>Nonary</item>
+        <item>Decimal</item>
+        <item>Duodecimal</item>
+        <item>Hexadecimal</item>
+    </string-array>
+    <string-array name="listeGroupsCurrency">
+        <item>AED - BAE Dirhemi</item>
+        <item>AUD - Avustralya Doları</item>
+        <item>BRL - Brezilya Reali</item>
+        <item>CAD - Kanada Dolar</item>
+        <item>CHF - İsviçre Frangı</item>
+        <item>CNY - Çin Yuan</item>
+        <item>CZK - Çek Korunası</item>
+        <item>DEM - Alman Markı</item>
+        <item>EUR - Euro</item>
+        <item>FRF - Fransız Frankı</item>
+        <item>GBP - İngiliz Starlini</item>
+        <item>HKD - Hong Kong Doları</item>
+        <item>HUF - Hungarian Forint</item>
+        <item>INR - Hindistan Rupisi</item>
+        <item>JPY - Japon Yeni</item>
+        <item>MXN - Meksika Peso</item>
+        <item>MYR - Malezya Ringiti</item>
+        <item>NZD - Yeni Zelanda Doları</item>
+        <item>PHP - Filipin Pezosu</item>
+        <item>SAR - Suudi Riyali</item>
+        <item>SEK - İsveç Kronu</item>
+        <item>SGD - Singapur Doları</item>
+        <item>THB - Tayland Bahtı</item>
+        <item>TRY - Turkish Lira</item>
+        <item>USD - Amerikan Doları</item>
+        <item>ZAR - Güney Afrika Randı</item>
+    </string-array>
+    <string-array name="listeGroupsMass">
+        <item>Metric ton</item>
+        <item>Metric hundredweight</item>
+        <item>Kilogram</item>
+        <item>Gram</item>
+        <item>Milligram</item>
+        <item>Microgram</item>
+        <item>Nanogram</item>
+        <item>Picogram</item>
+        <item>Long ton</item>
+        <item>Short ton</item>
+        <item>Long hundredweight</item>
+        <item>Short hundredweight</item>
+        <item>Slug</item>
+        <item>Stone</item>
+        <item>Pound</item>
+        <item>Ounce</item>
+        <item>Grain</item>
+        <item>Carat</item>
+        <item>Troy pound</item>
+        <item>Troy ounce</item>
+        <item>Planck kütlesi</item>
+        <item>Atomik Kütle Birimi</item>
+        <item>Nötron kütlesi</item>
+        <item>Proton kütlesi</item>
+        <item>Elektron kütlesi</item>
+        <item>Elektronvolt</item>
+        <item>Kiloelektronvolt</item>
+        <item>Megaelektronvolt</item>
+        <item>Gigaelektronvolt</item>
+        <item>Teraelektronvolt</item>
+        <item>Güneş kütlesi</item>
+        <item>Jüpiter kütlesi</item>
+        <item>Dünya kütlesi</item>
+        <item>Ay kütlesi</item>
+    </string-array>
+    <string-array name="listeGroupsTime">
+        <item>Planck zamanı</item>
+        <item>Milisaniye</item>
+        <item>Saniye</item>
+        <item>Dakika</item>
+        <item>Saat</item>
+        <item>Gün</item>
+        <item>Hafta</item>
+        <item>Ay</item>
+        <item>Yıl</item>
+        <item>Yüzyıl</item>
+    </string-array>
+    <string-array name="listeGroupsArea">
+        <item>Kilometre kare</item>
+        <item>Hektometre kare</item>
+        <item>Dekametre kare</item>
+        <item>Metre kare</item>
+        <item>Desimetre kare</item>
+        <item>Santimetre kare</item>
+        <item>Milimetre kare</item>
+        <item>Mil kare</item>
+        <item>Acre</item>
+        <item>Yarda kare</item>
+        <item>Square foot</item>
+        <item>İnç kare</item>
+        <item>Hectare</item>
+        <item>Are</item>
+        <item>Barn</item>
+        <item>Outhouse</item>
+        <item>Shed</item>
+        <item>Planck alanı</item>
+    </string-array>
+    <string-array name="listeGroupsVolume">
+        <item>Kilometreküp</item>
+        <item>Metreküp</item>
+        <item>Desimetreküp</item>
+        <item>Santimetreküp</item>
+        <item>Milimetreküp</item>
+        <item>Kilolitre</item>
+        <item>Litre</item>
+        <item>Desiliter</item>
+        <item>Santilitre</item>
+        <item>Mililitre</item>
+        <item>Mil-küp</item>
+        <item>Yarda-küp</item>
+        <item>Ayak Küp</item>
+        <item>İnç Küp</item>
+        <item>Bira varili UK</item>
+        <item>Bushel UK</item>
+        <item>Peck UK</item>
+        <item>Gallon UK</item>
+        <item>Quart UK</item>
+        <item>Pint UK</item>
+        <item>Cup UK</item>
+        <item>Gill UK</item>
+        <item>Sıvı ons UK</item>
+        <item>Çorba kaşığı UK</item>
+        <item>Çaykaşığı UK</item>
+        <item>Bira varili UK</item>
+        <item>Bushel US</item>
+        <item>Peck US</item>
+        <item>Gallon US</item>
+        <item>Quart US</item>
+        <item>Pint US</item>
+        <item>Cup US</item>
+        <item>Gill US</item>
+        <item>Sıvı ons US</item>
+        <item>Çorba kaşığı US</item>
+        <item>Çaykaşığı US</item>
+        <item>Yakıt Tankeri</item>
+        <item>Planck hacmi</item>
+    </string-array>
+    <string-array name="listeGroupsPressure">
+        <item>Megapascal</item>
+        <item>Kilopascal</item>
+        <item>Hectopascal</item>
+        <item>Pascal</item>
+        <item>Metrekare başına Newton</item>
+        <item>Milimetre kare başına kilogram</item>
+        <item>Santimetre kare başına kilogram</item>
+        <item>Metrekare başına kilogram</item>
+        <item>Kilopound per square inch</item>
+        <item>Kilopound per square foot</item>
+        <item>Pound per square inch</item>
+        <item>Pound per square foot</item>
+        <item>Torr</item>
+        <item>Millimeter of mercury</item>
+        <item>Foot of mercury</item>
+        <item>Inch of mercury</item>
+        <item>Millimeter of water</item>
+        <item>Foot of water</item>
+        <item>Inch of water</item>
+        <item>Atmosphere</item>
+        <item>Bar</item>
+        <item>Millibar</item>
+        <item>Barye</item>
+        <item>Planck basıncı</item>
+    </string-array>
+    <string-array name="listeGroupsAngle">
+        <item>Derece</item>
+        <item>Radyan</item>
+        <item>Radyan * π</item>
+        <item>Gradyan</item>
+        <item>Turn</item>
+        <item>Quadrant</item>
+        <item>Sextant</item>
+        <item>Arcminute</item>
+        <item>Arcsecond</item>
+        <item>Angular mil</item>
+    </string-array>
+    <string-array name="listeGroupsFuel">
+        <item>Litre başına kilometre</item>
+        <item>Kilometre başına litre</item>
+        <item>100 kilometre başına litre</item>
+        <item>Litre başına mil</item>
+        <item>Mil başına litre</item>
+        <item>100 mil başına litre</item>
+        <item>Mil başına gallon UK</item>
+        <item>Gallon başına mil UK</item>
+        <item>Gallon başına 100 mil UK</item>
+        <item>Mil başına gallon US</item>
+        <item>Gallon başına mil US</item>
+        <item>Gallon başına 100 mil US</item>
+    </string-array>
+    <string-array name="listeGroupsEnergy">
+        <item>Gigajoule</item>
+        <item>Megajoule</item>
+        <item>Kilojoule</item>
+        <item>Joule</item>
+        <item>Erg</item>
+        <item>Kilowatt-saat</item>
+        <item>Watt-saat</item>
+        <item>Elektronvolt</item>
+        <item>Kiloelektronvolt</item>
+        <item>Megaelektronvolt</item>
+        <item>Gigaelektronvolt</item>
+        <item>Teraelektronvolt</item>
+        <item>Kilokalori</item>
+        <item>Kalori</item>
+        <item>İngiliz ısı birimi</item>
+        <item>Foot-pound</item>
+        <item>Horsepower-hour</item>
+        <item>Planck enerjisi</item>
+    </string-array>
+    <string-array name="listeGroupsTorque">
+        <item>Meganewton-metre</item>
+        <item>Kilonewton-metre</item>
+        <item>Newton-metre</item>
+        <item>Milinewton-metre</item>
+        <item>Dyne-metre</item>
+        <item>Mikronewton-metre</item>
+        <item>Kilogram-metre</item>
+        <item>Gram-metre</item>
+        <item>Newton-santimetre</item>
+        <item>Dyne-santimetre</item>
+        <item>Kilogram-santimetre</item>
+        <item>Gram-santimetre</item>
+        <item>Pound-fit</item>
+        <item>Ounce-fit</item>
+        <item>Poundal-fit</item>
+        <item>Pound-inç</item>
+        <item>Ounce-inç</item>
+        <item>Poundal-inç</item>
+    </string-array>
+    <string-array name="listeGroupsDataSize">
+        <item>Bit</item>
+        <item>Nibble</item>
+        <item>Bayt</item>
+        <item>Kilobit</item>
+        <item>Kibibit</item>
+        <item>Kilobayt</item>
+        <item>Kibibayt</item>
+        <item>Megabit</item>
+        <item>Mebibit</item>
+        <item>Megabayt</item>
+        <item>Mebibayt</item>
+        <item>Gigabit</item>
+        <item>Gibibit</item>
+        <item>Gigabayt</item>
+        <item>Gibibayt</item>
+        <item>Terabit</item>
+        <item>Tebibit</item>
+        <item>Terabayt</item>
+        <item>Tebibayt</item>
+        <item>Petabit</item>
+        <item>Pebibit</item>
+        <item>Petabayt</item>
+        <item>Pebibayt</item>
+        <item>Eksabit</item>
+        <item>Eksbibit</item>
+        <item>Eksabayt</item>
+        <item>Eksbibayt</item>
+        <item>Zettabit</item>
+        <item>Zebibit</item>
+        <item>Zettabayt</item>
+        <item>Zebibayt</item>
+        <item>Yottabit</item>
+        <item>Yobibit</item>
+        <item>Yottabayt</item>
+        <item>Yobibayt</item>
+    </string-array>
+    <string-array name="listeGroupsDataRate">
+        <item>Bit bölü saniye</item>
+        <item>Bit bölü dakika</item>
+        <item>Bit bölü saat</item>
+        <item>Bit bölü gün</item>
+        <item>Bit bölü yıl</item>
+        <item>Bayt bölü saniye</item>
+        <item>Bayt bölü dakika</item>
+        <item>Bayt bölü saat</item>
+        <item>Bayt bölü gün</item>
+        <item>Bayt bölü yıl</item>
+        <item>Kilobayt bölü saniye</item>
+        <item>Kilobayt bölü dakika</item>
+        <item>Kilobayt bölü saat</item>
+        <item>Kilobayt bölü gün</item>
+        <item>Kilobayt bölü yıl</item>
+        <item>Kibibayt bölü saniye</item>
+        <item>Kibibayt bölü dakika</item>
+        <item>Kibibayt bölü saat</item>
+        <item>Kibibayt bölü gün</item>
+        <item>Kibibayt bölü yıl</item>
+        <item>Megabayt bölü saniye</item>
+        <item>Megabayt bölü dakika</item>
+        <item>Megabayt bölü saat</item>
+        <item>Megabayt bölü gün</item>
+        <item>Megabayt bölü yıl</item>
+        <item>Mebibayt bölü saniye</item>
+        <item>Mebibayt bölü dakika</item>
+        <item>Mebibayt bölü saat</item>
+        <item>Mebibayt bölü gün</item>
+        <item>Mebibayt bölü yıl</item>
+        <item>Gigabayt bölü saniye</item>
+        <item>Gigabayt bölü dakika</item>
+        <item>Gigabayt bölü saat</item>
+        <item>Gigabayt bölü gün</item>
+        <item>Gigabayt bölü yıl</item>
+        <item>Gibibayt bölü saniye</item>
+        <item>Gibibayt bölü dakika</item>
+        <item>Gibibayt bölü saat</item>
+        <item>Gibibayt bölü gün</item>
+        <item>Gibibayt bölü yıl</item>
+        <item>Terabayt bölü saniye</item>
+        <item>Terabayt bölü dakika</item>
+        <item>Terabayt bölü saat</item>
+        <item>Terabayt bölü gün</item>
+        <item>Terabayt bölü yıl</item>
+        <item>Tebibayt bölü saniye</item>
+        <item>Tebibayt bölü dakika</item>
+        <item>Tebibayt bölü saat</item>
+        <item>Tebibayt bölü gün</item>
+        <item>Tebibayt bölü yıl</item>
+    </string-array>
+    <string-array name="listeGroupsFrequency">
+        <item>Milihertz (f)</item>
+        <item>Hertz (f)</item>
+        <item>Kilohertz (f)</item>
+        <item>Megahertz (f)</item>
+        <item>Gigahertz (f)</item>
+        <item>Terahertz (f)</item>
+        <item>Petahertz (f)</item>
+        <item>Beat per minute (f)</item>
+        <item>Femtosaniye (T)</item>
+        <item>Pikosaniye (T)</item>
+        <item>Nanosaniye (T)</item>
+        <item>Mikrosaniye (T)</item>
+        <item>Milisaniye (T)</item>
+        <item>Saniye (T)</item>
+        <item>Dakika (T)</item>
+        <item>Saat (T)</item>
+        <item>Pikometre (λ)</item>
+        <item>Nanometre (λ)</item>
+        <item>Mikrometre (λ)</item>
+        <item>Milimetre (λ)</item>
+        <item>Metre (λ)</item>
+        <item>Kilometre (λ)</item>
+    </string-array>
+    <string-array name="listeGroupsDensity">
+        <item>Kilogram bölü kilometreküp</item>
+        <item>Kilogram bölü metreküp</item>
+        <item>Kilogram bölü desimetreküp</item>
+        <item>Kilogram bölü santimetreküp</item>
+        <item>Kilogram bölü milimetreküp</item>
+        <item>Gram bölü kilometreküp</item>
+        <item>Gram bölü metreküp</item>
+        <item>Gram bölü desimetreküp</item>
+        <item>Gram bölü santimetreküp</item>
+        <item>Gram bölü milimetreküp</item>
+        <item>Kilogram bölü litre</item>
+        <item>Gram bölü litre</item>
+        <item>Gram bölü desilitre</item>
+        <item>Gram bölü santilitre</item>
+        <item>Gram bölü mililitre</item>
+        <item>Miligram bölü mililitre</item>
+        <item>Pound bölü ayak küp</item>
+        <item>Pound bölü inç küp</item>
+        <item>Pound bölü gallon UK</item>
+        <item>Pound bölü gallon US</item>
+        <item>Pound bölü bushel UK</item>
+        <item>Pound bölü bushel US</item>
+        <item>Ounce bölü ayak küp</item>
+        <item>Ounce bölü inç küp</item>
+        <item>Ounce bölü gallon UK</item>
+        <item>Ounce bölü gallon US</item>
+        <item>Ounce bölü bushel UK</item>
+        <item>Ounce bölü bushel US</item>
+        <item>Slug bölü ayak küp</item>
+        <item>Planck yoğunluğu</item>
+    </string-array>
+    <string-array name="listeGroupsAngularVelocity">
+        <item>Turn bölü milisaniye</item>
+        <item>Turn bölü saniye</item>
+        <item>Turn bölü dakika</item>
+        <item>Turn bölü saat</item>
+        <item>Turn bölü gün</item>
+        <item>Milisaniye bölü turn</item>
+        <item>Saniye bölü turn</item>
+        <item>Dakika bölü turn</item>
+        <item>Saat bölü turn</item>
+        <item>Gün bölü turn</item>
+        <item>Derece bölü milisaniye</item>
+        <item>Radyan bölü milisaniye</item>
+        <item>Radyan * π bölü milisaniye</item>
+        <item>Gradyan bölü milisaniye</item>
+        <item>Arcminute bölü milisaniye</item>
+        <item>Arcsecond bölü milisaniye</item>
+        <item>Derece bölü saniye</item>
+        <item>Radyan bölü saniye</item>
+        <item>Radyan * π bölü saniye</item>
+        <item>Gradyan bölü saniye</item>
+        <item>Arcminute bölü saniye</item>
+        <item>Arcsecond bölü saniye</item>
+        <item>Derece bölü dakika</item>
+        <item>Radyan bölü dakika</item>
+        <item>Radyan * π bölü dakika</item>
+        <item>Gradyan bölü dakika</item>
+        <item>Arcminute bölü dakika</item>
+        <item>Arcsecond bölü dakika</item>
+        <item>Derece bölü saat</item>
+        <item>Radyan bölü saat</item>
+        <item>Radyan * π bölü saat</item>
+        <item>Gradyan bölü saat</item>
+        <item>Arcminute bölü saat</item>
+        <item>Arcsecond bölü saat</item>
+    </string-array>
+</resources>

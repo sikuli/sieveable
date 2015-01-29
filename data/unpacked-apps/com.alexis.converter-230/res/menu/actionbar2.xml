@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu android:id="@id/actionbar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_swap" android:id="@id/boutonSwap" android:title="@string/titreBoutonSwap" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_clear" android:id="@id/boutonClear" android:title="@string/titreBoutonClear" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_copy" android:id="@id/boutonCopy" android:title="@string/titreBoutonCopy" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_paste" android:id="@id/boutonPaste" android:title="@string/titreBoutonPaste" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_search" android:id="@id/boutonSearch" android:title="@string/titreBoutonSearch" android:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_settings" android:id="@id/boutonSettings" android:title="@string/titreBoutonSettings" android:showAsAction="ifRoom" />
+</menu>

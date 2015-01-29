@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/data_size" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:textSize="@dimen/taillePoliceBoutons" android:gravity="center_horizontal" android:id="@id/group1data_size" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <EditText android:textSize="@dimen/taillePoliceTextes" android:gravity="center_horizontal" android:id="@id/edittextdata_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/valeurDefaut" android:ems="10" android:layout_below="@id/group1data_size" android:inputType="numberSigned|numberDecimal" />
+            <Spinner android:textSize="@dimen/taillePoliceBoutons" android:gravity="center_horizontal" android:id="@id/group2data_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/edittextdata_size" />
+            <TextView android:textSize="@dimen/taillePoliceTextes" android:gravity="center_horizontal" android:id="@id/textdata_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/valeurDefaut" android:layout_below="@id/group2data_size" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listCategories">
+        <item>@string/categoryAngle</item>
+        <item>@string/categoryAngularVelocity</item>
+        <item>@string/categoryArea</item>
+        <item>@string/categoryBase</item>
+        <item>@string/categoryCurrency</item>
+        <item>@string/categoryDataRate</item>
+        <item>@string/categoryDataSize</item>
+        <item>@string/categoryDensity</item>
+        <item>@string/categoryEnergy</item>
+        <item>@string/categoryFrequency</item>
+        <item>@string/categoryFuel</item>
+        <item>@string/categoryLength</item>
+        <item>@string/categoryMass</item>
+        <item>@string/categoryPressure</item>
+        <item>@string/categorySpeed</item>
+        <item>@string/categoryTemperature</item>
+        <item>@string/categoryTime</item>
+        <item>@string/categoryTorque</item>
+        <item>@string/categoryVolume</item>
+    </string-array>
+    <string-array name="entriesSwapSettings">
+        <item>Values and units will be swapped</item>
+        <item>Upper value will remain the same but units will be swapped</item>
+    </string-array>
+    <string-array name="valuesSwapSettings">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+    <string-array name="entriesThemeSettings">
+        <item>Dark theme</item>
+        <item>Light theme</item>
+    </string-array>
+    <string-array name="valuesThemeSettings">
+        <item>dark</item>
+        <item>light</item>
+    </string-array>
+    <string-array name="entriesNavSettings">
+        <item>Separate screen</item>
+        <item>Drop-down list</item>
+        <item>Both</item>
+    </string-array>
+    <string-array name="valuesNavSettings">
+        <item>screen</item>
+        <item>dropdown</item>
+        <item>both</item>
+    </string-array>
+    <string-array name="listeGroupsTemperature">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+        <item>Rankine</item>
+        <item>Planck temperature</item>
+    </string-array>
+    <string-array name="valuesTemperature">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+        <item>Rankine</item>
+        <item>Planck temperature</item>
+    </string-array>
+    <string-array name="listeGroupsLength">
+        <item>Kilometer</item>
+        <item>Hectometer</item>
+        <item>Decameter</item>
+        <item>Meter</item>
+        <item>Decimeter</item>
+        <item>Centimeter</item>
+        <item>Millimeter</item>
+        <item>Micrometer</item>
+        <item>Nanometer</item>
+        <item>Picometer</item>
+        <item>League</item>
+        <item>Mile</item>
+        <item>Furlong</item>
+        <item>Rod</item>
+        <item>Fathom</item>
+        <item>Yard</item>
+        <item>Pace</item>
+        <item>Foot</item>
+        <item>Hand</item>
+        <item>Inch</item>
+        <item>Barleycorn</item>
+        <item>Nautical mile</item>
+        <item>Parsec</item>
+        <item>Light-year</item>
+        <item>Astronomical unit</item>
+        <item>Light-second</item>
+        <item>Ångström</item>
+        <item>Bohr radius</item>
+        <item>Planck length</item>
+    </string-array>
+    <string-array name="valuesLength">
+        <item>Kilometer</item>
+        <item>Hectometer</item>
+        <item>Decameter</item>
+        <item>Meter</item>
+        <item>Decimeter</item>
+        <item>Centimeter</item>
+        <item>Millimeter</item>
+        <item>Micrometer</item>
+        <item>Nanometer</item>
+        <item>Picometer</item>
+        <item>League</item>
+        <item>Mile</item>
+        <item>Furlong</item>
+        <item>Rod</item>
+        <item>Fathom</item>
+        <item>Yard</item>
+        <item>Pace</item>
+        <item>Foot</item>
+        <item>Hand</item>
+        <item>Inch</item>
+        <item>Barleycorn</item>
+        <item>Nautical mile</item>
+        <item>Parsec</item>
+        <item>Light-year</item>
+        <item>Astronomical unit</item>
+        <item>Light-second</item>
+        <item>Ångström</item>
+        <item>Bohr radius</item>
+        <item>Planck length</item>
+    </string-array>
+    <string-array name="listeGroupsSpeed">
+        <item>Kilometer per hour</item>
+        <item>Meter per second</item>
+        <item>Kilometer per second</item>
+        <item>Second per kilometer</item>
+        <item>Mile per hour</item>
+        <item>Foot per second</item>
+        <item>Mile per second</item>
+        <item>Second per mile</item>
+        <item>Knot</item>
+        <item>Speed of light</item>
+        <item>Mach</item>
+    </string-array>
+    <string-array name="valuesSpeed">
+        <item>Kilometer per hour</item>
+        <item>Meter per second</item>
+        <item>Kilometer per second</item>
+        <item>Second per kilometer</item>
+        <item>Mile per hour</item>
+        <item>Foot per second</item>
+        <item>Mile per second</item>
+        <item>Second per mile</item>
+        <item>Knot</item>
+        <item>Speed of light</item>
+        <item>Mach</item>
+    </string-array>
+    <string-array name="listeGroupsBase">
+        <item>Binary</item>
+        <item>Ternary</item>
+        <item>Quaternary</item>
+        <item>Quinary</item>
+        <item>Senary</item>
+        <item>Septenary</item>
+        <item>Octal</item>
+        <item>Nonary</item>
+        <item>Decimal</item>
+        <item>Duodecimal</item>
+        <item>Hexadecimal</item>
+    </string-array>
+    <string-array name="valuesBase">
+        <item>Binary</item>
+        <item>Ternary</item>
+        <item>Quaternary</item>
+        <item>Quinary</item>
+        <item>Senary</item>
+        <item>Septenary</item>
+        <item>Octal</item>
+        <item>Nonary</item>
+        <item>Decimal</item>
+        <item>Duodecimal</item>
+        <item>Hexadecimal</item>
+    </string-array>
+    <string-array name="listeGroupsCurrency">
+        <item>AED - Emirati Dirham</item>
+        <item>AUD - Australian Dollar</item>
+        <item>BRL - Brazilian Real</item>
+        <item>CAD - Canadian Dollar</item>
+        <item>CHF - Swiss Franc</item>
+        <item>CNY - Chinese Yuan</item>
+        <item>CZK - Czech Koruna</item>
+        <item>DEM - German Mark</item>
+        <item>EUR - Euro</item>
+        <item>FRF - French Franc</item>
+        <item>GBP - British Pound Sterling</item>
+        <item>HKD - Hong Kong Dollar</item>
+        <item>HUF - Hungarian Forint</item>
+        <item>INR - Indian Rupee</item>
+        <item>JPY - Japanese Yen</item>
+        <item>MXN - Mexican Peso</item>
+        <item>MYR - Malaysian Ringgit</item>
+        <item>NZD - New Zealand Dollar</item>
+        <item>PHP - Philippine Peso</item>
+        <item>SAR - Saudi Riyal</item>
+        <item>SEK - Swedish Krona</item>
+        <item>SGD - Singapore Dollar</item>
+        <item>THB - Thai Baht</item>
+        <item>TRY - Turkish Lira</item>
+        <item>USD - US Dollar</item>
+        <item>ZAR - South African Rand</item>
+    </string-array>
+    <string-array name="valuesCurrency">
+        <item>AED</item>
+        <item>AUD</item>
+        <item>BRL</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>CNY</item>
+        <item>CZK</item>
+        <item>DEM</item>
+        <item>EUR</item>
+        <item>FRF</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>HUF</item>
+        <item>INR</item>
+        <item>JPY</item>
+        <item>MXN</item>
+        <item>MYR</item>
+        <item>NZD</item>
+        <item>PHP</item>
+        <item>SAR</item>
+        <item>SEK</item>
+        <item>SGD</item>
+        <item>THB</item>
+        <item>TRY</item>
+        <item>USD</item>
+        <item>ZAR</item>
+    </string-array>
+    <string-array name="listeGroupsMass">
+        <item>Metric ton</item>
+        <item>Metric hundredweight</item>
+        <item>Kilogram</item>
+        <item>Gram</item>
+        <item>Milligram</item>
+        <item>Microgram</item>
+        <item>Nanogram</item>
+        <item>Picogram</item>
+        <item>Long ton</item>
+        <item>Short ton</item>
+        <item>Long hundredweight</item>
+        <item>Short hundredweight</item>
+        <item>Slug</item>
+        <item>Stone</item>
+        <item>Pound</item>
+        <item>Ounce</item>
+        <item>Grain</item>
+        <item>Carat</item>
+        <item>Troy pound</item>
+        <item>Troy ounce</item>
+        <item>Planck mass</item>
+        <item>Atomic mass unit</item>
+        <item>Neutron mass</item>
+        <item>Proton mass</item>
+        <item>Electron mass</item>
+        <item>Electronvolt</item>
+        <item>Kiloelectronvolt</item>
+        <item>Megaelectronvolt</item>
+        <item>Gigaelectronvolt</item>
+        <item>Teraelectronvolt</item>
+        <item>Solar mass</item>
+        <item>Jupiter mass</item>
+        <item>Earth mass</item>
+        <item>Lunar mass</item>
+    </string-array>
+    <string-array name="valuesMass">
+        <item>Metric ton</item>
+        <item>Metric hundredweight</item>
+        <item>Kilogram</item>
+        <item>Gram</item>
+        <item>Milligram</item>
+        <item>Microgram</item>
+        <item>Nanogram</item>
+        <item>Picogram</item>
+        <item>Long ton</item>
+        <item>Short ton</item>
+        <item>Long hundredweight</item>
+        <item>Short hundredweight</item>
+        <item>Slug</item>
+        <item>Stone</item>
+        <item>Pound</item>
+        <item>Ounce</item>
+        <item>Grain</item>
+        <item>Carat</item>
+        <item>Troy pound</item>
+        <item>Troy ounce</item>
+        <item>Planck mass</item>
+        <item>Atomic mass unit</item>
+        <item>Neutron mass</item>
+        <item>Proton mass</item>
+        <item>Electron mass</item>
+        <item>ELECTRONVOLT</item>
+        <item>KILO-ELECTRONVOLT</item>
+        <item>MEGA-ELECTRONVOLT</item>
+        <item>GIGA-ELECTRONVOLT</item>
+        <item>TERA-ELECTRONVOLT</item>
+        <item>SOLAR MASS</item>
+        <item>JUPITER MASS</item>
+        <item>EARTH MASS</item>
+        <item>LUNAR MASS</item>
+    </string-array>
+    <string-array name="listeGroupsTime">
+        <item>Planck time</item>
+        <item>Millisecond</item>
+        <item>Second</item>
+        <item>Minute</item>
+        <item>Hour</item>
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+        <item>Century</item>
+    </string-array>
+    <string-array name="valuesTime">
+        <item>Planck time</item>
+        <item>Millisecond</item>
+        <item>Second</item>
+        <item>Minute</item>
+        <item>Hour</item>
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+        <item>Century</item>
+    </string-array>
+    <string-array name="listeGroupsArea">
+        <item>Square kilometer</item>
+        <item>Square hectometer</item>
+        <item>Square decameter</item>
+        <item>Square meter</item>
+        <item>Square decimeter</item>
+        <item>Square centimeter</item>
+        <item>Square millimeter</item>
+        <item>Square mile</item>
+        <item>Acre</item>
+        <item>Square yard</item>
+        <item>Square foot</item>
+        <item>Square inch</item>
+        <item>Hectare</item>
+        <item>Are</item>
+        <item>Barn</item>
+        <item>Outhouse</item>
+        <item>Shed</item>
+        <item>Planck area</item>
+    </string-array>
+    <string-array name=" valuesArea">
+        <item>Square kilometer</item>
+        <item>Square hectometer</item>
+        <item>Square decameter</item>
+        <item>Square meter</item>
+        <item>Square decimeter</item>
+        <item>Square centimeter</item>
+        <item>Square millimeter</item>
+        <item>Square mile</item>
+        <item>Acre</item>
+        <item>Square yard</item>
+        <item>Square foot</item>
+        <item>Square inch</item>
+        <item>Hectare</item>
+        <item>Are</item>
+        <item>Barn</item>
+        <item>Outhouse</item>
+        <item>Shed</item>
+        <item>PLANCK AREA</item>
+    </string-array>
+    <string-array name="listeGroupsVolume">
+        <item>Cubic kilometer</item>
+        <item>Cubic meter</item>
+        <item>Cubic decimeter</item>
+        <item>Cubic centimeter</item>
+        <item>Cubic millimeter</item>
+        <item>Kiloliter</item>
+        <item>Liter</item>
+        <item>Deciliter</item>
+        <item>Centiliter</item>
+        <item>Milliliter</item>
+        <item>Cubic mile</item>
+        <item>Cubic yard</item>
+        <item>Cubic foot</item>
+        <item>Cubic inch</item>
+        <item>Beer barrel UK</item>
+        <item>Bushel UK</item>
+        <item>Peck UK</item>
+        <item>Gallon UK</item>
+        <item>Quart UK</item>
+        <item>Pint UK</item>
+        <item>Cup UK</item>
+        <item>Gill UK</item>
+        <item>Fluid ounce UK</item>
+        <item>Tablespoon UK</item>
+        <item>Teaspoon UK</item>
+        <item>Beer barrel US</item>
+        <item>Bushel US</item>
+        <item>Peck US</item>
+        <item>Gallon US</item>
+        <item>Quart US</item>
+        <item>Pint US</item>
+        <item>Cup US</item>
+        <item>Gill US</item>
+        <item>Fluid ounce US</item>
+        <item>Tablespoon US</item>
+        <item>Teaspoon US</item>
+        <item>Oil barrel</item>
+        <item>Planck volume</item>
+    </string-array>
+    <string-array name="valuesVolume">
+        <item>Cubic kilometer</item>
+        <item>Cubic meter</item>
+        <item>Cubic decimeter</item>
+        <item>Cubic centimeter</item>
+        <item>Cubic millimeter</item>
+        <item>Kiloliter</item>
+        <item>Liter</item>
+        <item>Deciliter</item>
+        <item>Centiliter</item>
+        <item>Milliliter</item>
+        <item>Cubic mile</item>
+        <item>Cubic yard</item>
+        <item>Cubic foot</item>
+        <item>Cubic inch</item>
+        <item>Beer barrel UK</item>
+        <item>Bushel UK</item>
+        <item>Peck UK</item>
+        <item>Gallon UK</item>
+        <item>Quart UK</item>
+        <item>Pint UK</item>
+        <item>Cup UK</item>
+        <item>Gill UK</item>
+        <item>Fluid ounce UK</item>
+        <item>Tablespoon UK</item>
+        <item>Teaspoon UK</item>
+        <item>Beer barrel US</item>
+        <item>Bushel US</item>
+        <item>Peck US</item>
+        <item>Gallon US</item>
+        <item>Quart US</item>
+        <item>Pint US</item>
+        <item>Cup US</item>
+        <item>Gill US</item>
+        <item>Fluid ounce US</item>
+        <item>Tablespoon US</item>
+        <item>Teaspoon US</item>
+        <item>Oil barrel</item>
+        <item>PLANCK VOLUME</item>
+    </string-array>
+    <string-array name="listeGroupsPressure">
+        <item>Megapascal</item>
+        <item>Kilopascal</item>
+        <item>Hectopascal</item>
+        <item>Pascal</item>
+        <item>Newton per square meter</item>
+        <item>Kilogram per square millimeter</item>
+        <item>Kilogram per square centimeter</item>
+        <item>Kilogram per square meter</item>
+        <item>Kilopound per square inch</item>
+        <item>Kilopound per square foot</item>
+        <item>Pound per square inch</item>
+        <item>Pound per square foot</item>
+        <item>Torr</item>
+        <item>Millimeter of mercury</item>
+        <item>Foot of mercury</item>
+        <item>Inch of mercury</item>
+        <item>Millimeter of water</item>
+        <item>Foot of water</item>
+        <item>Inch of water</item>
+        <item>Atmosphere</item>
+        <item>Bar</item>
+        <item>Millibar</item>
+        <item>Barye</item>
+        <item>Planck pressure</item>
+    </string-array>
+    <string-array name="valuesPressure">
+        <item>Megapascal</item>
+        <item>Kilopascal</item>
+        <item>Hectopascal</item>
+        <item>Pascal</item>
+        <item>Newton per square meter</item>
+        <item>Kilogram-force per square millimeter</item>
+        <item>Kilogram-force per square centimeter</item>
+        <item>Kilogram-force per square meter</item>
+        <item>Kilopound per square inch</item>
+        <item>Kilopound per square foot</item>
+        <item>Pound per square inch</item>
+        <item>Pound per square foot</item>
+        <item>Torr</item>
+        <item>Millimeter of mercury</item>
+        <item>Foot of mercury</item>
+        <item>Inch of mercury</item>
+        <item>Millimeter of water</item>
+        <item>Foot of water</item>
+        <item>Inch of water</item>
+        <item>Atmosphere</item>
+        <item>Bar</item>
+        <item>Millibar</item>
+        <item>Barye</item>
+        <item>PLANCK PRESSURE</item>
+    </string-array>
+    <string-array name="listeGroupsAngle">
+        <item>Degree</item>
+        <item>Radian</item>
+        <item>Radian * π</item>
+        <item>Gradian</item>
+        <item>Turn</item>
+        <item>Quadrant</item>
+        <item>Sextant</item>
+        <item>Arcminute</item>
+        <item>Arcsecond</item>
+        <item>Angular mil</item>
+    </string-array>
+    <string-array name="valuesAngle">
+        <item>Degree</item>
+        <item>Radian</item>
+        <item>Radian times PI</item>
+        <item>Gradian</item>
+        <item>Turn</item>
+        <item>Quadrant</item>
+        <item>Sextant</item>
+        <item>Arcminute</item>
+        <item>Arcsecond</item>
+        <item>Angular mil</item>
+    </string-array>
+    <string-array name="listeGroupsFuel">
+        <item>Kilometer per liter</item>
+        <item>Liter per kilometer</item>
+        <item>Liter per 100 kilometers</item>
+        <item>Mile per liter</item>
+        <item>Liter per mile</item>
+        <item>Liter per 100 miles</item>
+        <item>Mile per gallon UK</item>
+        <item>Gallon per mile UK</item>
+        <item>Gallon per 100 miles UK</item>
+        <item>Mile per gallon US</item>
+        <item>Gallon per mile US</item>
+        <item>Gallon per 100 miles US</item>
+    </string-array>
+    <string-array name="valuesFuel">
+        <item>KMPL</item>
+        <item>LPKM</item>
+        <item>L_PER_100</item>
+        <item>MIPL</item>
+        <item>LPMI</item>
+        <item>L_PER_100_MI</item>
+        <item>MPG_UK</item>
+        <item>GPM_UK</item>
+        <item>GP100M_UK</item>
+        <item>MPG_US</item>
+        <item>GPM_US</item>
+        <item>GP100M_US</item>
+    </string-array>
+    <string-array name="listeGroupsEnergy">
+        <item>Gigajoule</item>
+        <item>Megajoule</item>
+        <item>Kilojoule</item>
+        <item>Joule</item>
+        <item>Erg</item>
+        <item>Kilowatt-hour</item>
+        <item>Watt-hour</item>
+        <item>Electronvolt</item>
+        <item>Kiloelectronvolt</item>
+        <item>Megaelectronvolt</item>
+        <item>Gigaelectronvolt</item>
+        <item>Teraelectronvolt</item>
+        <item>Kilocalorie</item>
+        <item>Calorie</item>
+        <item>British thermal unit</item>
+        <item>Foot-pound</item>
+        <item>Horsepower-hour</item>
+        <item>Planck energy</item>
+    </string-array>
+    <string-array name="valuesEnergy">
+        <item>GIGAJOULE</item>
+        <item>MEGAJOULE</item>
+        <item>KILOJOULE</item>
+        <item>JOULE</item>
+        <item>ERG</item>
+        <item>KW-H</item>
+        <item>W-H</item>
+        <item>ELECTRONVOLT</item>
+        <item>KILO-ELECTRONVOLT</item>
+        <item>MEGA-ELECTRONVOLT</item>
+        <item>GIGA-ELECTRONVOLT</item>
+        <item>TERA-ELECTRONVOLT</item>
+        <item>KILOCALORIE</item>
+        <item>CALORIE</item>
+        <item>BTU</item>
+        <item>FT-LB</item>
+        <item>HP-H</item>
+        <item>PLANCK ENERGY</item>
+    </string-array>
+    <string-array name="listeGroupsTorque">
+        <item>Meganewton-meter</item>
+        <item>Kilonewton-meter</item>
+        <item>Newton-meter</item>
+        <item>Millinewton-meter</item>
+        <item>Dyne-meter</item>
+        <item>Micronewton-meter</item>
+        <item>Kilogram-meter</item>
+        <item>Gram-meter</item>
+        <item>Newton-centimeter</item>
+        <item>Dyne-centimeter</item>
+        <item>Kilogram-centimeter</item>
+        <item>Gram-centimeter</item>
+        <item>Pound-foot</item>
+        <item>Ounce-foot</item>
+        <item>Poundal-foot</item>
+        <item>Pound-inch</item>
+        <item>Ounce-inch</item>
+        <item>Poundal-inch</item>
+    </string-array>
+    <string-array name="valuesTorque">
+        <item>MEGANEWTON-METRE</item>
+        <item>KILONEWTON-METRE</item>
+        <item>NEWTON-METRE</item>
+        <item>MILLINEWTON-METRE</item>
+        <item>DYNE-METRE</item>
+        <item>MICRONEWTON-METRE</item>
+        <item>KILOGRAM-METRE</item>
+        <item>GRAM-METRE</item>
+        <item>NEWTON-CENTIMETRE</item>
+        <item>DYNE-CENTIMETRE</item>
+        <item>KILOGRAM-CENTIMETRE</item>
+        <item>GRAM-CENTIMETRE</item>
+        <item>POUND-FOOT</item>
+        <item>OUNCE-FOOT</item>
+        <item>POUNDAL-FOOT</item>
+        <item>POUND-INCH</item>
+        <item>OUNCE-INCH</item>
+        <item>POUNDAL-INCH</item>
+    </string-array>
+    <string-array name="listeGroupsDataSize">
+        <item>Bit</item>
+        <item>Nibble</item>
+        <item>Byte</item>
+        <item>Kilobit</item>
+        <item>Kibibit</item>
+        <item>Kilobyte</item>
+        <item>Kibibyte</item>
+        <item>Megabit</item>
+        <item>Mebibit</item>
+        <item>Megabyte</item>
+        <item>Mebibyte</item>
+        <item>Gigabit</item>
+        <item>Gibibit</item>
+        <item>Gigabyte</item>
+        <item>Gibibyte</item>
+        <item>Terabit</item>
+        <item>Tebibit</item>
+        <item>Terabyte</item>
+        <item>Tebibyte</item>
+        <item>Petabit</item>
+        <item>Pebibit</item>
+        <item>Petabyte</item>
+        <item>Pebibyte</item>
+        <item>Exabit</item>
+        <item>Exbibit</item>
+        <item>Exabyte</item>
+        <item>Exbibyte</item>
+        <item>Zettabit</item>
+        <item>Zebibit</item>
+        <item>Zettabyte</item>
+        <item>Zebibyte</item>
+        <item>Yottabit</item>
+        <item>Yobibit</item>
+        <item>Yottabyte</item>
+        <item>Yobibyte</item>
+    </string-array>
+    <string-array name="valuesDataSize">
+        <item>BIT</item>
+        <item>NIBBLE</item>
+        <item>BYTE</item>
+        <item>KILOBIT</item>
+        <item>KIBIBIT</item>
+        <item>KILOBYTE</item>
+        <item>KIBIBYTE</item>
+        <item>MEGABIT</item>
+        <item>MEBIBIT</item>
+        <item>MEGABYTE</item>
+        <item>MEBIBYTE</item>
+        <item>GIGABIT</item>
+        <item>GIBIBIT</item>
+        <item>GIGABYTE</item>
+        <item>GIBIBYTE</item>
+        <item>TERABIT</item>
+        <item>TEBIBIT</item>
+        <item>TERABYTE</item>
+        <item>TEBIBYTE</item>
+        <item>PETABIT</item>
+        <item>PEBIBIT</item>
+        <item>PETABYTE</item>
+        <item>PEBIBYTE</item>
+        <item>EXABIT</item>
+        <item>EXBIBIT</item>
+        <item>EXABYTE</item>
+        <item>EXBIBYTE</item>
+        <item>ZETTABIT</item>
+        <item>ZEBIBIT</item>
+        <item>ZETTABYTE</item>
+        <item>ZEBIBYTE</item>
+        <item>YOTTABIT</item>
+        <item>YOBIBIT</item>
+        <item>YOTTABYTE</item>
+        <item>YOBIBYTE</item>
+    </string-array>
+    <string-array name="listeGroupsDataRate">
+        <item>Bit per second</item>
+        <item>Bit per minute</item>
+        <item>Bit per hour</item>
+        <item>Bit per day</item>
+        <item>Bit per year</item>
+        <item>Byte per second</item>
+        <item>Byte per minute</item>
+        <item>Byte per hour</item>
+        <item>Byte per day</item>
+        <item>Byte per year</item>
+        <item>Kilobyte per second</item>
+        <item>Kilobyte per minute</item>
+        <item>Kilobyte per hour</item>
+        <item>Kilobyte per day</item>
+        <item>Kilobyte per year</item>
+        <item>Kibibyte per second</item>
+        <item>Kibibyte per minute</item>
+        <item>Kibibyte per hour</item>
+        <item>Kibibyte per day</item>
+        <item>Kibibyte per year</item>
+        <item>Megabyte per second</item>
+        <item>Megabyte per minute</item>
+        <item>Megabyte per hour</item>
+        <item>Megabyte per day</item>
+        <item>Megabyte per year</item>
+        <item>Mebibyte per second</item>
+        <item>Mebibyte per minute</item>
+        <item>Mebibyte per hour</item>
+        <item>Mebibyte per day</item>
+        <item>Mebibyte per year</item>
+        <item>Gigabyte per second</item>
+        <item>Gigabyte per minute</item>
+        <item>Gigabyte per hour</item>
+        <item>Gigabyte per day</item>
+        <item>Gigabyte per year</item>
+        <item>Gibibyte per second</item>
+        <item>Gibibyte per minute</item>
+        <item>Gibibyte per hour</item>
+        <item>Gibibyte per day</item>
+        <item>Gibibyte per year</item>
+        <item>Terabyte per second</item>
+        <item>Terabyte per minute</item>
+        <item>Terabyte per hour</item>
+        <item>Terabyte per day</item>
+        <item>Terabyte per year</item>
+        <item>Tebibyte per second</item>
+        <item>Tebibyte per minute</item>
+        <item>Tebibyte per hour</item>
+        <item>Tebibyte per day</item>
+        <item>Tebibyte per year</item>
+    </string-array>
+    <string-array name="valuesDataRate">
+        <item>OOBI SEC</item>
+        <item>OOBI MIN</item>
+        <item>OOBI HOU</item>
+        <item>OOBI DAY</item>
+        <item>OOBI YEA</item>
+        <item>OOBY SEC</item>
+        <item>OOBY MIN</item>
+        <item>OOBY HOU</item>
+        <item>OOBY DAY</item>
+        <item>OOBY YEA</item>
+        <item>KOBY SEC</item>
+        <item>KOBY MIN</item>
+        <item>KOBY HOU</item>
+        <item>KOBY DAY</item>
+        <item>KOBY YEA</item>
+        <item>KIBY SEC</item>
+        <item>KIBY MIN</item>
+        <item>KIBY HOU</item>
+        <item>KIBY DAY</item>
+        <item>KIBY YEA</item>
+        <item>MOBY SEC</item>
+        <item>MOBY MIN</item>
+        <item>MOBY HOU</item>
+        <item>MOBY DAY</item>
+        <item>MOBY YEA</item>
+        <item>MIBY SEC</item>
+        <item>MIBY MIN</item>
+        <item>MIBY HOU</item>
+        <item>MIBY DAY</item>
+        <item>MIBY YEA</item>
+        <item>GOBY SEC</item>
+        <item>GOBY MIN</item>
+        <item>GOBY HOU</item>
+        <item>GOBY DAY</item>
+        <item>GOBY YEA</item>
+        <item>GIBY SEC</item>
+        <item>GIBY MIN</item>
+        <item>GIBY HOU</item>
+        <item>GIBY DAY</item>
+        <item>GIBY YEA</item>
+        <item>TOBY SEC</item>
+        <item>TOBY MIN</item>
+        <item>TOBY HOU</item>
+        <item>TOBY DAY</item>
+        <item>TOBY YEA</item>
+        <item>TIBY SEC</item>
+        <item>TIBY MIN</item>
+        <item>TIBY HOU</item>
+        <item>TIBY DAY</item>
+        <item>TIBY YEA</item>
+    </string-array>
+    <string-array name="listeGroupsFrequency">
+        <item>Millihertz (f)</item>
+        <item>Hertz (f)</item>
+        <item>Kilohertz (f)</item>
+        <item>Megahertz (f)</item>
+        <item>Gigahertz (f)</item>
+        <item>Terahertz (f)</item>
+        <item>Petahertz (f)</item>
+        <item>Beat per minute (f)</item>
+        <item>Femtosecond (T)</item>
+        <item>Picosecond (T)</item>
+        <item>Nanosecond (T)</item>
+        <item>Microsecond (T)</item>
+        <item>Millisecond (T)</item>
+        <item>Second (T)</item>
+        <item>Minute (T)</item>
+        <item>Hour (T)</item>
+        <item>Picometer (λ)</item>
+        <item>Nanometer (λ)</item>
+        <item>Micrometer (λ)</item>
+        <item>Millimeter (λ)</item>
+        <item>Meter (λ)</item>
+        <item>Kilometer (λ)</item>
+    </string-array>
+    <string-array name="valuesFrequency">
+        <item>MILLI-HERTZ</item>
+        <item>HERTZ</item>
+        <item>KILO-HERTZ</item>
+        <item>MEGA-HERTZ</item>
+        <item>GIGA-HERTZ</item>
+        <item>TERA-HERTZ</item>
+        <item>PETA-HERTZ</item>
+        <item>PERIOD MINUTE</item>
+        <item>FEMTO-SECOND</item>
+        <item>PICO-SECOND</item>
+        <item>NANO-SECOND</item>
+        <item>MICRO-SECOND</item>
+        <item>MILLI-SECOND</item>
+        <item>SECOND</item>
+        <item>MINUTE</item>
+        <item>HOUR</item>
+        <item>PICO-METER</item>
+        <item>NANO-METER</item>
+        <item>MICRO-METER</item>
+        <item>MILLI-METER</item>
+        <item>METER</item>
+        <item>KILO-METER</item>
+    </string-array>
+    <string-array name="listeGroupsDensity">
+        <item>Kilogram per cubic kilometer</item>
+        <item>Kilogram per cubic meter</item>
+        <item>Kilogram per cubic decimeter</item>
+        <item>Kilogram per cubic centimeter</item>
+        <item>Kilogram per cubic millimeter</item>
+        <item>Gram per cubic kilometer</item>
+        <item>Gram per cubic meter</item>
+        <item>Gram per cubic decimeter</item>
+        <item>Gram per cubic centimeter</item>
+        <item>Gram per cubic millimeter</item>
+        <item>Kilogram per liter</item>
+        <item>Gram per liter</item>
+        <item>Gram per deciliter</item>
+        <item>Gram per centiliter</item>
+        <item>Gram per milliliter</item>
+        <item>Milligram per milliliter</item>
+        <item>Pound per cubic foot</item>
+        <item>Pound per cubic inch</item>
+        <item>Pound per gallon UK</item>
+        <item>Pound per gallon US</item>
+        <item>Pound per bushel UK</item>
+        <item>Pound per bushel US</item>
+        <item>Ounce per cubic foot</item>
+        <item>Ounce per cubic inch</item>
+        <item>Ounce per gallon UK</item>
+        <item>Ounce per gallon US</item>
+        <item>Ounce per bushel UK</item>
+        <item>Ounce per bushel US</item>
+        <item>Slug per cubic foot</item>
+        <item>Planck density</item>
+    </string-array>
+    <string-array name="valuesDensity">
+        <item>KIGR CKIM</item>
+        <item>KIGR COOM</item>
+        <item>KIGR CDEM</item>
+        <item>KIGR CCEM</item>
+        <item>KIGR CMLM</item>
+        <item>OOGR CKIM</item>
+        <item>OOGR COOM</item>
+        <item>OOGR CDEM</item>
+        <item>OOGR CCEM</item>
+        <item>OOGR CMLM</item>
+        <item>KIGR OOLI</item>
+        <item>OOGR OOLI</item>
+        <item>OOGR DELI</item>
+        <item>OOGR CELI</item>
+        <item>OOGR MLLI</item>
+        <item>MLGR MLLI</item>
+        <item>POUN CUFT</item>
+        <item>POUN CUIN</item>
+        <item>POUN GAUK</item>
+        <item>POUN GAUS</item>
+        <item>POUN BUUK</item>
+        <item>POUN BUUS</item>
+        <item>OUNC CUFT</item>
+        <item>OUNC CUIN</item>
+        <item>OUNC GAUK</item>
+        <item>OUNC GAUS</item>
+        <item>OUNC BUUK</item>
+        <item>OUNC BUUS</item>
+        <item>SLUG CUFT</item>
+        <item>PLMA PLVO</item>
+    </string-array>
+    <string-array name="listeGroupsAngularVelocity">
+        <item>Turn per millisecond</item>
+        <item>Turn per second</item>
+        <item>Turn per minute</item>
+        <item>Turn per hour</item>
+        <item>Turn per day</item>
+        <item>Millisecond per turn</item>
+        <item>Second per turn</item>
+        <item>Minute per turn</item>
+        <item>Hour per turn</item>
+        <item>Day per turn</item>
+        <item>Degree per millisecond</item>
+        <item>Radian per millisecond</item>
+        <item>Radian * π per millisecond</item>
+        <item>Gradian per millisecond</item>
+        <item>Arcminute per millisecond</item>
+        <item>Arcsecond per millisecond</item>
+        <item>Degree per second</item>
+        <item>Radian per second</item>
+        <item>Radian * π per second</item>
+        <item>Gradian per second</item>
+        <item>Arcminute per second</item>
+        <item>Arcsecond per second</item>
+        <item>Degree per minute</item>
+        <item>Radian per minute</item>
+        <item>Radian * π per minute</item>
+        <item>Gradian per minute</item>
+        <item>Arcminute per minute</item>
+        <item>Arcsecond per minute</item>
+        <item>Degree per hour</item>
+        <item>Radian per hour</item>
+        <item>Radian * π per hour</item>
+        <item>Gradian per hour</item>
+        <item>Arcminute per hour</item>
+        <item>Arcsecond per hour</item>
+    </string-array>
+    <string-array name="valuesAngularVelocity">
+        <item>TURN MIL</item>
+        <item>TURN SEC</item>
+        <item>TURN MIN</item>
+        <item>TURN HOU</item>
+        <item>TURN DAY</item>
+        <item>MIL TURN_</item>
+        <item>SEC TURN_</item>
+        <item>MIN TURN_</item>
+        <item>HOU TURN_</item>
+        <item>DAY_TURN_</item>
+        <item>DEGR MIL</item>
+        <item>RADI MIL</item>
+        <item>RADP MIL</item>
+        <item>GRAD MIL</item>
+        <item>MINU MIL</item>
+        <item>SECO MIL</item>
+        <item>DEGR SEC</item>
+        <item>RADI SEC</item>
+        <item>RADP SEC</item>
+        <item>GRAD SEC</item>
+        <item>MINU SEC</item>
+        <item>SECO SEC</item>
+        <item>DEGR MIN</item>
+        <item>RADI MIN</item>
+        <item>RADP MIN</item>
+        <item>GRAD MIN</item>
+        <item>MINU MIN</item>
+        <item>SECO MIN</item>
+        <item>DEGR HOU</item>
+        <item>RADI HOU</item>
+        <item>RADP HOU</item>
+        <item>GRAD HOU</item>
+        <item>MINU HOU</item>
+        <item>SECO HOU</item>
+    </string-array>
+</resources>

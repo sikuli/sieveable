@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/length" android:background="@color/couleurFond" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/taillePoliceTitres" android:textColor="@color/couleurTexte" android:gravity="center_horizontal" android:id="@id/titleLength" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/categoryLength" />
+            <Spinner android:textSize="@dimen/taillePoliceBoutons" android:gravity="center_horizontal" android:id="@id/group1length" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/titleLength" />
+            <EditText android:textSize="@dimen/taillePoliceTextes" android:gravity="center_horizontal" android:id="@id/edittextlength" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/valeurDefaut" android:ems="10" android:layout_below="@id/group1length" android:inputType="numberSigned|numberDecimal" />
+            <Spinner android:textSize="@dimen/taillePoliceBoutons" android:gravity="center_horizontal" android:id="@id/group2length" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/edittextlength" />
+            <TextView android:textSize="@dimen/taillePoliceTextes" android:textColor="@color/couleurTexte" android:gravity="center_horizontal" android:id="@id/textlength" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/valeurDefaut" android:layout_below="@id/group2length" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
