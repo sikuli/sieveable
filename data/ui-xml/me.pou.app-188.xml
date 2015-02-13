@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app package="me.pou.app" version_code="188" version_name="1.4.43">
+	<Directory directory_name="layout">
+		<File name="dialog_email.xml">
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<EditText android:id="@id/emailDialog_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<Button android:id="@id/emailDialog_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="OK" android:layout_weight="0.5"/>
+					<Button android:id="@id/emailDialog_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5"/>
+				</LinearLayout>
+			</LinearLayout>
+		</File>
+		<File name="dialog_input.xml">
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<EditText android:id="@id/inputDialog_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text"/>
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<Button android:id="@id/inputDialog_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="OK" android:layout_weight="0.5"/>
+					<Button android:id="@id/inputDialog_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5"/>
+				</LinearLayout>
+			</LinearLayout>
+		</File>
+		<File name="dialog_password.xml">
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<EditText android:id="@id/passwordDialog_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<Button android:id="@id/passwordDialog_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="OK" android:layout_weight="0.5"/>
+					<Button android:id="@id/passwordDialog_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5"/>
+				</LinearLayout>
+				<Button android:id="@id/passwordDialog_resend" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/password_resend_button"/>
+			</LinearLayout>
+		</File>
+		<File name="dialog_password_new.xml">
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<EditText android:id="@id/passwordDialog_password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<Button android:id="@id/passwordDialog_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="OK" android:layout_weight="0.5"/>
+					<Button android:id="@id/passwordDialog_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="0.5"/>
+				</LinearLayout>
+			</LinearLayout>
+		</File>
+	</Directory>
+</app>
