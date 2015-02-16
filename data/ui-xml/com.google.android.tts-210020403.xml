@@ -1,0 +1,21 @@
+<App name="com.google.android.tts" version_code="210020403">
+  <Directory directory_name="layout">
+    <File file_name="installer_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/install_data_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="Download this data to support offline speech synthesis on your device."/>
+    <ListView android:id="@id/voices_list" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <TextView android:id="@id/no_installable_voices" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No downloadable voices"/>
+</LinearLayout>
+    </File>
+    <File file_name="list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="16.0dip" android:paddingEnd="12.0dip">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorAlertDialogListItem" android:ellipsize="marquee" android:gravity="left|center" android:id="@id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorAlertDialogListItem" android:ellipsize="marquee" android:gravity="left|center" android:id="@id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+    <Button android:gravity="center_vertical" android:id="@id/action_button_1" android:paddingRight="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="12.0dip"/>
+    <Button android:gravity="center_vertical" android:id="@id/action_button_2" android:paddingRight="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="12.0dip"/>
+</LinearLayout>
+    </File>
+  </Directory>
+</App>

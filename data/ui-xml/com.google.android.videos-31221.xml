@@ -1,0 +1,1214 @@
+<App name="com.google.android.videos" version_code="31221">
+  <Directory directory_name="layout">
+    <File file_name="abc_action_bar_decor.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <android.support.v7.internal.widget.ActionBarContainer android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle">
+        <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+        <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </android.support.v7.internal.widget.ActionBarContainer>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_bar_decor_overlay.xml">
+      <android.support.v7.internal.widget.ActionBarOverlayLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/action_bar_overlay_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <LinearLayout android:layout_gravity="top" android:id="@id/top_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.internal.widget.ActionBarContainer android:gravity="top" android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="?attr/actionBarStyle">
+            <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+            <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+        </android.support.v7.internal.widget.ActionBarContainer>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="?android:windowContentOverlay" android:scaleType="fitXY"/>
+    </LinearLayout>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:layout_gravity="bottom" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</android.support.v7.internal.widget.ActionBarOverlayLayout>
+    </File>
+    <File file_name="abc_action_bar_home.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:background="?actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" class="android.support.v7.internal.widget.ActionBarView$HomeView">
+    <ImageView android:layout_gravity="left|center" android:id="@id/up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-8.0dip" android:src="?homeAsUpIndicator"/>
+    <ImageView android:layout_gravity="center" android:id="@id/home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+</view>
+    </File>
+    <File file_name="abc_action_bar_tab.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" class="android.support.v7.internal.widget.ScrollingTabContainerView$TabView" style="?attr/actionBarTabStyle"/>
+    </File>
+    <File file_name="abc_action_bar_tabbar.xml">
+      <android.support.v7.internal.widget.LinearLayoutICS xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/actionBarTabBarStyle"/>
+    </File>
+    <File file_name="abc_action_bar_title_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:enabled="false" android:orientation="horizontal" android:background="?actionBarItemBackground" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="left|center" android:id="@id/up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?homeAsUpIndicator"/>
+    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/action_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:ellipsize="end" android:id="@id/action_bar_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:layout_marginBottom="5.0dip" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_bar_view_list_nav_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/actionBarTabBarStyle"/>
+    </File>
+    <File file_name="abc_action_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ActionMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?actionMenuTextAppearance" android:textColor="?actionMenuTextColor" android:gravity="center" android:layout_gravity="center" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/actionButtonStyle"/>
+    </File>
+    <File file_name="abc_action_menu_layout.xml">
+      <android.support.v7.internal.view.menu.ActionMenuView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:divider="?actionBarDivider" app:dividerPadding="12.0dip"/>
+    </File>
+    <File file_name="abc_action_mode_bar.xml">
+      <android.support.v7.internal.widget.ActionBarContextView xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </File>
+    <File file_name="abc_action_mode_close_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/action_mode_close_button" android:paddingLeft="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="16.0dip" android:contentDescription="Done" style="?attr/actionModeCloseButtonStyle">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?actionModeCloseDrawable" android:scaleType="fitCenter"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_activity_chooser_view.xml">
+      <android.support.v7.internal.widget.LinearLayoutICS xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/activity_chooser_view_content" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/activityChooserViewStyle">
+    
+    <FrameLayout android:layout_gravity="center" android:id="@id/expand_activities_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/default_activity_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</android.support.v7.internal.widget.LinearLayoutICS>
+    </File>
+    <File file_name="abc_activity_chooser_view_list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/list_item" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:minWidth="196.0dip">
+    <LinearLayout android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="8.0dip"/>
+        <TextView android:textAppearance="?textAppearanceLargePopupMenu" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_expanded_menu_layout.xml">
+      <android.support.v7.internal.view.menu.ExpandedMenuView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/expanded_menu" android:layout_width="?panelMenuListWidth" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_list_menu_item_checkbox.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/checkbox" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_list_menu_item_icon.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="-8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="centerInside"/>
+    </File>
+    <File file_name="abc_list_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ListMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="?listPreferredItemHeightSmall">
+    <RelativeLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="?listPreferredItemPaddingLeft" android:layout_marginRight="?listPreferredItemPaddingRight" android:layout_weight="1.0">
+        <TextView android:textAppearance="?textAppearanceListItemSmall" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/shortcut" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title"/>
+    </RelativeLayout>
+</android.support.v7.internal.view.menu.ListMenuItemView>
+    </File>
+    <File file_name="abc_list_menu_item_radio.xml">
+      <RadioButton xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/radio" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_popup_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ListMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:minWidth="196.0dip">
+    <RelativeLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="?textAppearanceLargePopupMenu" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <TextView android:textAppearance="?textAppearanceSmallPopupMenu" android:id="@id/shortcut" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title" android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</android.support.v7.internal.view.menu.ListMenuItemView>
+    </File>
+    <File file_name="abc_search_dropdown_item_icons_2line.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="8.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="?searchResultListItemHeight">
+    <ImageView android:id="@android:id/icon1" android:visibility="invisible" android:layout_width="32.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/edit_query" android:background="?searchViewEditQueryBackground" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="?searchViewEditQuery" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@android:id/icon2" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_toLeftOf="@id/edit_query" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true"/>
+    <TextView android:textAppearance="?textAppearanceSearchResultSubtitle" android:gravity="top" android:id="@android:id/text2" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="29.0dip" android:singleLine="true" android:layout_toLeftOf="@android:id/icon2" android:layout_toRightOf="@android:id/icon1" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true" style="?android:attr/dropDownItemStyle"/>
+    <TextView android:textAppearance="?textAppearanceSearchResultTitle" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@android:id/icon2" android:layout_toRightOf="@android:id/icon1" android:layout_above="@android:id/text2" android:layout_centerVertical="true" style="?android:attr/dropDownItemStyle"/>
+</RelativeLayout>
+    </File>
+    <File file_name="abc_search_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/search_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:gravity="center_vertical" android:id="@id/search_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="2.0dip" android:drawablePadding="0.0dip"/>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/search_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewSearchIcon" android:contentDescription="Search" style="?attr/actionButtonStyle"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_edit_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/search_mag_icon" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="?searchViewSearchIcon" android:scaleType="centerInside"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_plate" android:background="?searchViewTextField" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <view android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/search_src_text" android:background="@null" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="36.0dip" android:minWidth="160.0dip" android:singleLine="true" android:layout_weight="1.0" android:inputType="textAutoComplete|textNoSuggestions" android:dropDownAnchor="@id/search_edit_frame" android:imeOptions="actionSearch" android:contentDescription="Search query" android:dropDownHeight="wrap_content" android:dropDownHorizontalOffset="0.0dip" android:dropDownVerticalOffset="0.0dip" class="android.support.v7.widget.SearchView$SearchAutoComplete" style="?attr/searchViewAutoCompleteTextView"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_close_btn" android:background="?selectableItemBackground" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewCloseIcon" android:contentDescription="Clear query"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/submit_area" android:background="?searchViewTextFieldRight" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_go_btn" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewGoIcon" android:contentDescription="Submit query"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_voice_btn" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewVoiceIcon" android:contentDescription="Voice search"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="account_actionbar_header_view_plain.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    ">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="18.0sp" android:ellipsize="end" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="14.0sp" android:ellipsize="end" android:id="@id/account_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:singleLine="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="account_dual_target_expandable_list_item_view.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/account_spinner" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+    <LinearLayout android:layout_gravity="left|center" android:orientation="horizontal" android:id="@id/clickablearea" android:layout_width="wrap_content" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+        
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="48.0dip" android:layout_height="48.0dip"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/account_display_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/account_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="account_expandable_group_wrapper.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+    <com.google.android.videos.ui.FocusedImageView android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:src="@drawable/bg_default_profile_art" videos:canReduce="true"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/content_wrapper" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+        <View android:layout_gravity="center_vertical" android:id="@id/divider" android:background="@drawable/divider_holo_light" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip"/>
+        <FrameLayout android:id="@id/expander_wrapper" android:layout_width="40.0dip" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:id="@id/expander_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/expander_open_holo_light"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="account_expandable_list_item_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/account_spinner" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?android:listPreferredItemHeight">
+    
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="48.0dip" android:layout_height="48.0dip"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/account_display_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/account_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="account_item_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="#ff333333" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?android:listPreferredItemHeight">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:background="@drawable/account_avatar_background" android:padding="1.0dip" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginLeft="7.0dip" android:layout_marginRight="3.0dip" android:cropToPadding="true"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/account_display_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/account_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="account_list_item_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/account_list_background" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?android:listPreferredItemHeight">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/checkmark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_menu_check_holo_light"/>
+
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/avatar" android:layout_width="48.0dip" android:layout_height="48.0dip"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/account_display_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/account_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="account_spinner_header_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/account_spinner" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:id="@id/account_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="actionbar_compat.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/actionbar" android:background="@drawable/nav_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+    <ImageView android:id="@id/videos_icon" android:background="@drawable/actionbar_item_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_apps_videos_with_up" android:scaleType="centerCrop"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/actionbar_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0"/>
+    <android.support.v7.app.MediaRouteButton android:layout_width="wrap_content" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></LinearLayout>
+    </File>
+    <File file_name="actor_card.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="wrap_content" videos:layout_removeOnDismiss="false">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/card_background_default" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/actor_image" android:visibility="gone" android:layout_width="172.0dip" android:layout_height="172.0dip" android:scaleType="centerCrop" android:contentDescription="Image of %1$s"/>
+            <TextView android:textSize="12.0sp" android:textStyle="italic" android:textColor="#ffffffff" android:id="@id/image_source" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:shadowColor="#ff000000" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_alignRight="@id/actor_image" android:layout_alignBottom="@id/actor_image" android:layout_alignParentLeft="true" android:fontFamily="sans-serif-condensed"/>
+            <TextView android:id="@id/actor_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/actor_image" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/character_names" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/actor_image" android:layout_below="@id/actor_name" android:translationY="-12.0dip" style="&#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/label_age" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Age" android:layout_toRightOf="@id/actor_image" android:layout_below="@id/character_names" style="&#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/age" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_toRightOf="@id/actor_image" android:layout_below="@id/label_age" style="&#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/years" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_toRightOf="@id/actor_image" android:layout_below="@id/age" style="&#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/label_birthplace" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Born" android:layout_toRightOf="@id/actor_image" android:layout_below="@id/years" style="&#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/birthplace" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_toRightOf="@id/actor_image" android:layout_below="@id/label_birthplace" style="&#10;         &#10;         &#10;         &#10;    "/>
+            <View android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_toRightOf="@id/actor_image" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <Button android:id="@id/play_store_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/play_store_button_icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip"/>
+        <Button android:id="@id/search_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/web_search_button_icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <View android:layout_gravity="top|right|center" android:id="@id/feedback_button" android:background="@drawable/feedback_button" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="Feedback"/>
+</FrameLayout>
+    </File>
+    <File file_name="captioning_preview.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="150.0dip">
+    <ImageView android:id="@id/preview_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/caption_background" android:scaleType="centerCrop"/>
+    <com.google.android.videos.subtitles.SubtitleView android:layout_gravity="bottom|center" android:id="@id/preview_text" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="Captions will look like this"/>
+</FrameLayout>
+    </File>
+    <File file_name="cards_view_content.xml">
+      <com.google.android.videos.tagging.SuggestionGridLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true"/>
+    </File>
+    <File file_name="cluster_detailed_episodes.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="wrap_content" videos:regularCluster="true" videos:itemLayout="@layout/cluster_item_detailed_episode" videos:itemCount="2" videos:itemColumnSpan="1" videos:itemRowSpan="1"/>
+    </File>
+    <File file_name="cluster_episodes.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent" videos:regularCluster="true" videos:itemLayout="@layout/cluster_item_episode" videos:itemCount="2" videos:itemColumnSpan="3" videos:itemRowSpan="2"/>
+    </File>
+    <File file_name="cluster_item_detailed_episode.xml">
+      <com.google.android.videos.ui.playnext.EpisodeClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" videos:thumbnailMeasureMode="use_layout_params">
+    <com.google.android.videos.ui.playnext.PlayTextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:lines="4" android:layout_alignParentBottom="true" android:lineSpacingMultiplier="1.2"/>
+    <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:singleLine="true" android:layout_toLeftOf="@id/overflow" android:layout_above="@id/description" android:layout_alignParentLeft="true"/>
+    <FrameLayout android:id="@id/episode_synopsis_target" android:focusable="true" android:nextFocusRight="@id/pin" android:layout_width="0.0dip" android:layout_height="0.0dip" android:foreground="@drawable/default_item_selector" android:layout_below="@id/thumbnail_frame_overlay" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/title"/>
+    <TextView android:id="@id/status_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="23.0sp" android:singleLine="true" android:layout_alignBottom="@id/thumbnail_frame" android:layout_alignParentLeft="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/thumbnail_frame_overlay" android:focusable="true" android:layout_width="0.0dip" android:layout_height="0.0dip" android:foreground="@drawable/default_item_selector" android:layout_alignLeft="@id/thumbnail_frame" android:layout_alignTop="@id/thumbnail_frame" android:layout_alignRight="@id/thumbnail_frame" android:layout_alignBottom="@id/thumbnail_frame"/>
+    <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:nextFocusLeft="@id/episode_synopsis_target" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/thumbnail_frame" android:layout_alignParentRight="true" videos:pinBackground="@drawable/ic_download_background_holo_light"/>
+    <FrameLayout android:id="@id/overflow" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="@drawable/default_item_selector" android:layout_toLeftOf="@id/pin" android:layout_below="@id/thumbnail_frame" android:layout_alignWithParentIfMissing="true">
+        <TextView android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </FrameLayout>
+</com.google.android.videos.ui.playnext.EpisodeClusterItemView>
+    </File>
+    <File file_name="cluster_item_episode.xml">
+      <com.google.android.videos.ui.playnext.EpisodeClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailMeasureMode="use_layout_params">
+    <View android:id="@id/pivot" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_marginBottom="48.0dip" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/pivot"/>
+    <TextView android:ellipsize="end" android:id="@id/status_text" android:paddingLeft="79.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="23.0dip" android:singleLine="true" android:layout_above="@id/pivot" android:layout_alignParentLeft="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/mini_poster" android:background="@drawable/tv_season_no_border" android:clipToPadding="true" android:layout_width="68.0dip" android:layout_height="66.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+    <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" videos:pinBackground="@drawable/ic_download_background_holo_light"/>
+    <FrameLayout android:id="@id/overflow" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:foreground="@drawable/default_item_selector" android:layout_toLeftOf="@id/pin" android:layout_below="@id/thumbnail_frame" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true">
+        <TextView android:layout_gravity="center_vertical" android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </FrameLayout>
+    <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_toLeftOf="@id/overflow" android:layout_toRightOf="@id/mini_poster" android:layout_below="@id/thumbnail_frame" android:layout_alignParentBottom="true"/>
+    <ProgressBar android:id="@id/watch_progress" android:layout_width="fill_parent" android:layout_height="4.0dip" android:progressDrawable="@drawable/watch_progress" android:layout_alignParentBottom="true" style="@android:style/Widget.ProgressBar.Horizontal"/>
+</com.google.android.videos.ui.playnext.EpisodeClusterItemView>
+    </File>
+    <File file_name="cluster_item_movie.xml">
+      <com.google.android.videos.ui.playnext.MovieClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailMeasureMode="use_layout_params">
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <FrameLayout android:id="@id/status_frame" android:layout_width="fill_parent" android:layout_height="49.0sp" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:ellipsize="end" android:id="@id/status" android:background="@null" android:paddingRight="48.0dip" android:layout_width="fill_parent" android:layout_height="49.0sp" android:maxLines="2" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <ProgressBar android:id="@id/watch_progress" android:layout_width="fill_parent" android:layout_height="4.0dip" android:progressDrawable="@drawable/watch_progress" android:layout_alignParentBottom="true" style="@android:style/Widget.ProgressBar.Horizontal"/>
+</com.google.android.videos.ui.playnext.MovieClusterItemView>
+    </File>
+    <File file_name="cluster_item_movie_suggestion.xml">
+      <com.google.android.videos.ui.playnext.MovieSuggestionClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailAspectRatio="0.693" videos:thumbnailMeasureMode="span_horizontal">
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="98.0sp" android:layout_below="@id/thumbnail_frame">
+        <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:maxLines="2" android:layout_alignParentLeft="true"/>
+        <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/year_and_duration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_below="@id/title" android:layout_alignParentLeft="true"/>
+        <ImageView android:id="@id/overflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_overflow_menu" android:layout_alignParentRight="true" android:contentDescription="Options"/>
+        <TextView android:id="@id/price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;    "/>
+    </RelativeLayout>
+</com.google.android.videos.ui.playnext.MovieSuggestionClusterItemView>
+    </File>
+    <File file_name="cluster_item_movie_with_info.xml">
+      <com.google.android.videos.ui.playnext.MovieClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailAspectRatio="0.693" videos:thumbnailMeasureMode="span_horizontal">
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    <TextView android:id="@id/status" android:layout_width="fill_parent" android:layout_height="23.0sp" android:singleLine="true" android:layout_alignLeft="@id/thumbnail_frame" android:layout_alignBottom="@id/thumbnail_frame" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/overflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_overflow_menu" android:layout_below="@id/thumbnail_frame" android:layout_alignParentRight="true" android:contentDescription="Options"/>
+    <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" videos:pinBackground="@drawable/ic_download_background_holo_light"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="86.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_toLeftOf="@id/pin" android:layout_below="@id/thumbnail_frame" android:layout_alignParentLeft="true">
+        <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2"/>
+        <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/year_and_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</com.google.android.videos.ui.playnext.MovieClusterItemView>
+    </File>
+    <File file_name="cluster_item_now_playing.xml">
+      <com.google.android.videos.ui.playnext.NowPlayingClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailMeasureMode="use_layout_params">
+    <View android:id="@id/pivot" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_marginBottom="48.0dip" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/pivot"/>
+    <TextView android:ellipsize="end" android:id="@id/status" android:paddingLeft="79.0dip" android:layout_width="fill_parent" android:layout_height="23.0dip" android:singleLine="true" android:layout_above="@id/pivot" android:layout_alignParentLeft="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/mini_poster" android:background="@drawable/tv_season_no_border" android:clipToPadding="true" android:layout_width="68.0dip" android:layout_height="66.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+    <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_toRightOf="@id/mini_poster" android:layout_below="@id/thumbnail_frame" android:layout_alignParentBottom="true"/>
+    <ProgressBar android:id="@id/watch_progress" android:layout_width="fill_parent" android:layout_height="4.0dip" android:progressDrawable="@drawable/watch_progress" android:layout_alignParentBottom="true" style="@android:style/Widget.ProgressBar.Horizontal"/>
+</com.google.android.videos.ui.playnext.NowPlayingClusterItemView>
+    </File>
+    <File file_name="cluster_item_show.xml">
+      <com.google.android.videos.ui.playnext.ShowClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailAspectRatio="1.0" videos:thumbnailMeasureMode="span_horizontal">
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:singleLine="true" android:layout_below="@id/thumbnail_frame"/>
+    <ImageView android:id="@id/overflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_overflow_menu" android:layout_below="@id/thumbnail_frame" android:layout_alignParentRight="true" android:contentDescription="Options"/>
+</com.google.android.videos.ui.playnext.ShowClusterItemView>
+    </File>
+    <File file_name="cluster_item_show_suggestion.xml">
+      <com.google.android.videos.ui.playnext.ShowSuggestionClusterItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:background="@drawable/card_bg_play" android:focusable="true" videos:thumbnailAspectRatio="1.0" videos:thumbnailMeasureMode="span_horizontal">
+    <ImageView android:id="@id/thumbnail_frame" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="98.0sp" android:layout_below="@id/thumbnail_frame">
+        <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:maxLines="2" android:layout_alignParentRight="true"/>
+        <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/broadcasters" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_below="@id/title"/>
+        <ImageView android:id="@id/overflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/play_overflow_menu" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="Options"/>
+        </RelativeLayout>
+</com.google.android.videos.ui.playnext.ShowSuggestionClusterItemView>
+    </File>
+    <File file_name="cluster_item_show_suggestion_rating_bar_tablet.xml">
+      <RatingBar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/rating" android:layout_marginLeft="8.0dip" android:layout_marginBottom="4.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+    <File file_name="cluster_item_state_overlay.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/default_item_selector"/>
+    </File>
+    <File file_name="cluster_movie_suggestions.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent" videos:regularCluster="true" videos:respectChildHeight="true" videos:itemLayout="@layout/cluster_item_movie_suggestion" videos:itemCount="4"/>
+    </File>
+    <File file_name="cluster_movies.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent" videos:regularCluster="true" videos:respectChildHeight="true" videos:itemLayout="@layout/cluster_item_movie_with_info" videos:itemCount="4"/>
+    </File>
+    <File file_name="cluster_movies_watch_now.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent" videos:regularCluster="true" videos:itemLayout="@layout/cluster_item_movie" videos:itemCount="4" videos:itemColumnSpan="7" videos:itemRowSpan="10"/>
+    </File>
+    <File file_name="cluster_now_playing.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="wrap_content" videos:regularCluster="true" videos:itemLayout="@layout/cluster_item_now_playing" videos:itemCount="2" videos:itemColumnSpan="14" videos:itemRowSpan="10"/>
+    </File>
+    <File file_name="cluster_show_suggestions.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent" videos:regularCluster="true" videos:respectChildHeight="true" videos:itemLayout="@layout/cluster_item_show_suggestion" videos:itemCount="4"/>
+    </File>
+    <File file_name="cluster_shows.xml">
+      <com.google.android.videos.ui.playnext.ClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent" videos:regularCluster="true" videos:respectChildHeight="true" videos:itemLayout="@layout/cluster_item_show" videos:itemCount="4"/>
+    </File>
+    <File file_name="download_network_dialog.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Depending on your data plan, downloading videos when not connected to Wi-Fi may result in additional charges."/>
+        <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textSize="18.0sp" android:id="@id/download_when_on_wifi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Download only on Wi-Fi"/>
+            <RadioButton android:textSize="18.0sp" android:id="@id/download_on_any_network" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Download on any network"/>
+        </RadioGroup>
+        <TextView android:textSize="15.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="You can change this any time in Settings."/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="download_quality_dialog.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="12.0dip" android:paddingTop="4.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RadioButton android:textSize="18.0sp" android:id="@id/download_hd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="HD (Better quality)"/>
+            <RadioButton android:textSize="18.0sp" android:id="@id/download_sd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="SD (Faster, saves space)"/>
+        </RadioGroup>
+        <TextView android:textSize="15.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="You can change this any time in Settings."/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="drag_promo_overlay_short.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="top" android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="204.0dip">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/drag_rewind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_rewind"/>
+        <ImageView android:id="@id/drag_hand" android:paddingLeft="@dimen/drag_promo_hand_padding" android:paddingRight="@dimen/drag_promo_hand_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hand"/>
+        <ImageView android:id="@id/drag_fastforward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_fastfoward"/>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/drag_promo_text_size" android:textColor="#ffffffff" android:gravity="center" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To seek precisely, drag or swipe here" android:maxEms="9" android:shadowColor="#ff000000" android:shadowDy="2.0" android:shadowRadius="2.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="drag_promo_overlay_tall.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="bottom|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="@dimen/drag_promo_text_size" android:textColor="#ffffffff" android:gravity="center" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="To seek precisely, drag or swipe here" android:maxEms="9" android:shadowColor="#ff000000" android:shadowDy="2.0" android:shadowRadius="2.0"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="204.0dip">
+        <ImageView android:id="@id/drag_rewind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_rewind"/>
+        <ImageView android:id="@id/drag_hand" android:paddingLeft="@dimen/drag_promo_hand_padding" android:paddingRight="@dimen/drag_promo_hand_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hand"/>
+        <ImageView android:id="@id/drag_fastforward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_fastfoward"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="episode_synopsis_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content">
+    <TextView android:textAppearance="&#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:singleLine="true"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/description" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:lineSpacingMultiplier="1.2"/>
+</LinearLayout>
+    </File>
+    <File file_name="feedback_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:background="#80000000" android:visibility="gone">
+    
+    <TextView android:id="@id/question" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <LinearLayout android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/yes_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/no_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="No" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="grid_color_picker_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="4.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/color_swatch" android:layout_width="96.0dip" android:layout_height="96.0dip" android:contentDescription="@null"/>
+    <TextView android:gravity="center" android:id="@id/summary" android:layout_width="96.0dip" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="grid_picker_dialog.xml">
+      <GridView xmlns:android="http://schemas.android.com/apk/res/android" android:scrollbarStyle="insideOverlay" android:id="@id/dialog_preference_grid" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchMode="spacingWidthUniform" android:columnWidth="112.0dip" android:numColumns="auto_fit"/>
+    </File>
+    <File file_name="grid_preset_picker_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:paddingLeft="4.0dip" android:paddingTop="8.0dip" android:paddingRight="4.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <FrameLayout android:background="@drawable/transparency_tileable" android:layout_width="96.0dip" android:layout_height="96.0dip">
+        <com.google.android.videos.subtitles.SubtitleView android:layout_gravity="center" android:id="@id/preview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aa"/>
+    </FrameLayout>
+    <TextView android:gravity="center" android:id="@id/summary" android:layout_width="96.0dip" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="help_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/actionbar" android:background="@drawable/nav_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+    <ImageView android:id="@id/videos_icon" android:background="@drawable/actionbar_item_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_apps_videos_with_up" android:scaleType="centerCrop"/>
+    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Help" android:singleLine="true"/>
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@id/actionbar_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout><LinearLayout android:orientation="vertical" android:id="@id/drawer_container" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+    <Button android:id="@id/feedback_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="Feedback" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</LinearLayout></LinearLayout>
+    </File>
+    <File file_name="help_activity_actionbar_compat.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/actionbar" android:background="@drawable/nav_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+    <ImageView android:id="@id/videos_icon" android:background="@drawable/actionbar_item_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_apps_videos_with_up" android:scaleType="centerCrop"/>
+    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="18.0dip" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Help" android:singleLine="true"/>
+        <TextView android:textSize="14.0dip" android:textColor="#ffffffff" android:id="@id/actionbar_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="help_activity_content.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/drawer_container" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+    <Button android:id="@id/feedback_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="Feedback" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="home_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/actionbar" android:background="@drawable/nav_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+    <ImageView android:id="@id/videos_icon" android:background="@drawable/actionbar_item_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_apps_videos_with_up" android:scaleType="centerCrop"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/actionbar_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0"/>
+    <android.support.v7.app.MediaRouteButton android:layout_width="wrap_content" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></LinearLayout><com.google.android.videos.ui.VideosDrawer android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/drawer_page" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer></LinearLayout>
+    </File>
+    <File file_name="home_activity_content.xml">
+      <com.google.android.videos.ui.VideosDrawer xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/drawer_page" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer>
+    </File>
+    <File file_name="home_activity_fragment.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.TouchAwareListView android:id="@id/content_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</FrameLayout>
+    </File>
+    <File file_name="home_activity_tv.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="240.0dip" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/drawer_page" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+</LinearLayout>
+    </File>
+    <File file_name="knowledge_card_item_separator.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="88.0dip" android:layout_marginRight="8.0dip"/>
+    </File>
+    <File file_name="mediaroutebutton2.xml">
+      <android.support.v7.app.MediaRouteButton xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+    <File file_name="movies_card.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:orientation="vertical" android:background="@drawable/card_background_default" android:layout_width="fill_parent" android:layout_height="wrap_content" videos:layout_removeOnDismiss="false">
+    <TextView android:id="@id/movies_card_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <Button android:id="@id/play_store_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="More in Play Store" android:drawableLeft="@drawable/play_store_button_icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+<View android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="88.0dip" android:layout_marginRight="8.0dip"/></LinearLayout>
+    </File>
+    <File file_name="movies_card_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/default_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/poster" android:background="#ffe7e6e6" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="120.0dip" android:scaleType="fitCenter" android:contentDescription="Poster for %1$s"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ff707070" android:id="@id/movie_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:maxLines="2" android:layout_toRightOf="@id/poster" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/year_and_duration" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/poster" android:layout_below="@id/movie_title" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <Button android:id="@id/secondary_action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/poster" android:layout_alignBottom="@id/poster" style="&#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="mr_media_route_chooser_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ListView android:id="@id/media_route_list" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal" android:id="@android:id/empty" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:layout_gravity="center" android:paddingLeft="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Searching for devices…"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="mr_media_route_controller_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/media_route_volume_layout" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ImageView android:gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/mr_ic_audio_vol" android:scaleType="center"/>
+        <SeekBar android:id="@id/media_route_volume_slider" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0"/>
+    </LinearLayout>
+    <FrameLayout android:id="@id/media_route_control_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/buttonBarStyle">
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="0.25"/>
+        <Button android:gravity="center" android:id="@id/media_route_disconnect_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Disconnect" android:layout_weight="1.0" style="?attr/buttonBarButtonStyle"/>
+        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="0.25"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="mr_media_route_list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="64.0dip">
+    <LinearLayout android:gravity="left|center" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:id="@android:id/text1" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="marquee" android:id="@android:id/text2" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="on_device_fragment.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.TouchAwareListView android:id="@id/content_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</FrameLayout>
+    </File>
+    <File file_name="play_card_badge.xml">
+      <com.google.android.play.layout.PlayTextView xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+    <File file_name="play_card_large_minus.xml">
+      <com.google.android.play.layout.PlayCardViewLargeMinus xmlns:android="http://schemas.android.com/apk/res/android" xmlns:playcommon="http://schemas.android.com/apk/res-auto" android:id="@id/play_card" android:background="@drawable/card_bg_play" android:focusable="true" android:nextFocusRight="@id/li_overflow" android:layout_width="fill_parent" android:layout_height="0.0dip" playcommon:card_text_only_reason_margin_left="2.0dip">
+    <com.google.android.play.layout.PlayCardThumbnail android:id="@id/li_thumbnail_frame" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" playcommon:app_thumbnail_padding="10.0dip">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter"/></com.google.android.play.layout.PlayCardThumbnail>
+    <com.google.android.play.layout.PlayTextView android:textSize="20.0sp" android:id="@id/li_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/li_thumbnail_frame" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <RatingBar android:id="@id/li_rating" android:layout_marginLeft="4.0dip" android:layout_marginTop="4.0dip" android:layout_toRightOf="@id/li_thumbnail_frame" android:layout_below="@id/li_title" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayCardPriceView android:id="@id/li_price" android:layout_below="@id/li_title" android:layout_alignBaseline="@id/li_subtitle" android:layout_alignRight="@id/li_overflow" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayTextView android:id="@id/li_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:layout_toRightOf="@id/li_thumbnail_frame" android:layout_above="@id/li_reason_1" android:layout_below="@id/li_subtitle" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ProgressBar android:id="@id/loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true"/>
+    <ImageView android:id="@id/li_overflow" android:nextFocusLeft="@id/play_card" android:layout_marginTop="1.0dip" android:layout_marginRight="4.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+<com.google.android.play.layout.PlayTextView android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/><com.google.android.play.layout.PlayCardReason android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" playcommon:separator_padding_top="4.0dip" playcommon:separator_padding_bottom="4.0dip" playcommon:separator_padding_left="10.0dip" playcommon:separator_padding_right="4.0dip">
+    <com.google.android.play.layout.PlayTextView android:textColor="@color/play_secondary_text" android:ellipsize="marquee" android:id="@id/li_reason" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" playcommon:allowsCompactLineSpacing="true" style="&#10;         &#10;         &#10;    "/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.PlayCardReason><com.google.android.play.layout.PlayCardReason android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" playcommon:separator_padding_top="4.0dip" playcommon:separator_padding_bottom="4.0dip" playcommon:separator_padding_left="10.0dip" playcommon:separator_padding_right="4.0dip">
+    <com.google.android.play.layout.PlayTextView android:textColor="@color/play_secondary_text" android:ellipsize="marquee" android:id="@id/li_reason" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" playcommon:allowsCompactLineSpacing="true" style="&#10;         &#10;         &#10;    "/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.PlayCardReason></com.google.android.play.layout.PlayCardViewLargeMinus>
+    </File>
+    <File file_name="play_card_medium.xml">
+      <com.google.android.play.layout.PlayCardViewMedium xmlns:android="http://schemas.android.com/apk/res/android" xmlns:playcommon="http://schemas.android.com/apk/res-auto" android:id="@id/play_card" android:background="@drawable/card_bg_play" android:focusable="true" android:nextFocusRight="@id/li_overflow" android:layout_width="fill_parent" android:layout_height="0.0dip" playcommon:card_text_only_reason_margin_left="2.0dip">
+    <com.google.android.play.layout.PlayCardThumbnail android:id="@id/li_thumbnail_frame" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginRight="4.0dip" playcommon:app_thumbnail_padding="10.0dip">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter"/></com.google.android.play.layout.PlayCardThumbnail>
+    <com.google.android.play.layout.PlayTextView android:textSize="16.0sp" android:id="@id/li_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="24.0dip" android:layout_toRightOf="@id/li_thumbnail_frame" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <RatingBar android:id="@id/li_rating" android:layout_marginLeft="4.0dip" android:layout_marginTop="2.0dip" android:layout_toRightOf="@id/li_thumbnail_frame" android:layout_below="@id/li_title" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayCardPriceView android:id="@id/li_price" android:layout_below="@id/li_title" android:layout_alignBaseline="@id/li_subtitle" android:layout_alignRight="@id/li_overflow" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayTextView android:textSize="13.0sp" android:id="@id/li_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="12.0dip" android:layout_toRightOf="@id/li_thumbnail_frame" android:layout_above="@id/li_reason_1" android:layout_below="@id/li_subtitle" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ProgressBar android:id="@id/loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true"/>
+    <ImageView android:id="@id/li_overflow" android:nextFocusLeft="@id/play_card" android:layout_marginTop="1.0dip" android:layout_marginRight="4.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+<com.google.android.play.layout.PlayTextView android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/><com.google.android.play.layout.PlayCardReason android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" playcommon:separator_padding_top="4.0dip" playcommon:separator_padding_bottom="4.0dip" playcommon:separator_padding_left="10.0dip" playcommon:separator_padding_right="4.0dip">
+    <com.google.android.play.layout.PlayTextView android:textColor="@color/play_secondary_text" android:ellipsize="marquee" android:id="@id/li_reason" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" playcommon:allowsCompactLineSpacing="true" style="&#10;         &#10;         &#10;    "/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.PlayCardReason><com.google.android.play.layout.PlayCardReason android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" playcommon:separator_padding_top="4.0dip" playcommon:separator_padding_bottom="4.0dip" playcommon:separator_padding_left="10.0dip" playcommon:separator_padding_right="4.0dip">
+    <com.google.android.play.layout.PlayTextView android:textColor="@color/play_secondary_text" android:ellipsize="marquee" android:id="@id/li_reason" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" playcommon:allowsCompactLineSpacing="true" style="&#10;         &#10;         &#10;    "/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.PlayCardReason></com.google.android.play.layout.PlayCardViewMedium>
+    </File>
+    <File file_name="play_card_mini.xml">
+      <com.google.android.play.layout.PlayCardViewMini xmlns:android="http://schemas.android.com/apk/res/android" xmlns:playcommon="http://schemas.android.com/apk/res-auto" android:id="@id/play_card" android:background="@drawable/card_bg_play" android:focusable="true" android:nextFocusRight="@id/li_overflow" android:layout_width="fill_parent" android:layout_height="0.0dip">
+    <com.google.android.play.layout.PlayCardThumbnail android:id="@id/li_thumbnail_frame" android:layout_width="fill_parent" android:layout_height="0.0dip" playcommon:app_thumbnail_padding="6.0dip">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter"/></com.google.android.play.layout.PlayCardThumbnail>
+    <com.google.android.play.layout.PlayTextView android:textSize="14.0sp" android:id="@id/li_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="18.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayCardPriceView android:id="@id/li_price" android:paddingLeft="2.0dip" android:layout_marginBottom="3.0dip" android:layout_alignRight="@id/li_overflow" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <RatingBar android:id="@id/li_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="7.0dip" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <ProgressBar android:id="@id/loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true"/>
+    <ImageView android:id="@id/li_overflow" android:nextFocusLeft="@id/play_card" android:layout_marginTop="-2.0dip" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+<com.google.android.play.layout.PlayTextView android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></com.google.android.play.layout.PlayCardViewMini>
+    </File>
+    <File file_name="play_card_rating_badge.xml">
+      <com.google.android.play.layout.PlayRatingBadgeContainer xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/rating_badge_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RatingBar android:id="@id/li_rating" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="0.5" android:isIndicator="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayTextView style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></com.google.android.play.layout.PlayRatingBadgeContainer>
+    </File>
+    <File file_name="play_card_reason.xml">
+      <com.google.android.play.layout.PlayCardReason xmlns:android="http://schemas.android.com/apk/res/android" xmlns:playcommon="http://schemas.android.com/apk/res-auto" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" playcommon:separator_padding_top="4.0dip" playcommon:separator_padding_bottom="4.0dip" playcommon:separator_padding_left="10.0dip" playcommon:separator_padding_right="4.0dip">
+    <com.google.android.play.layout.PlayTextView android:textColor="@color/play_secondary_text" android:ellipsize="marquee" android:id="@id/li_reason" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" playcommon:allowsCompactLineSpacing="true" style="&#10;         &#10;         &#10;    "/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.PlayCardReason>
+    </File>
+    <File file_name="play_card_reason_avatar.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/>
+    </File>
+    <File file_name="play_card_small.xml">
+      <com.google.android.play.layout.PlayCardViewSmall xmlns:android="http://schemas.android.com/apk/res/android" xmlns:playcommon="http://schemas.android.com/apk/res-auto" android:id="@id/play_card" android:background="@drawable/card_bg_play" android:paddingLeft="0.0dip" android:focusable="true" android:nextFocusRight="@id/li_overflow" android:layout_width="fill_parent" android:layout_height="0.0dip">
+    <com.google.android.play.layout.PlayCardThumbnail android:id="@id/li_thumbnail_frame" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="4.0dip" playcommon:app_thumbnail_padding="10.0dip">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter"/></com.google.android.play.layout.PlayCardThumbnail>
+    <com.google.android.play.layout.PlayTextView android:textSize="16.0sp" android:id="@id/li_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="-1.0dip" android:layout_marginRight="24.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayCardPriceView android:id="@id/li_price" android:layout_marginBottom="4.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ProgressBar android:id="@id/loading_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true"/>
+    <ImageView android:id="@id/li_overflow" android:nextFocusLeft="@id/play_card" android:layout_marginTop="-5.0dip" android:layout_marginRight="4.0dip" android:layout_below="@id/li_thumbnail_frame" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+<com.google.android.play.layout.PlayRatingBadgeContainer android:id="@id/rating_badge_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RatingBar android:id="@id/li_rating" android:paddingBottom="1.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="0.5" android:isIndicator="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <com.google.android.play.layout.PlayTextView style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></com.google.android.play.layout.PlayRatingBadgeContainer><com.google.android.play.layout.PlayTextView android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/><com.google.android.play.layout.PlayCardReason android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" playcommon:separator_padding_top="4.0dip" playcommon:separator_padding_bottom="4.0dip" playcommon:separator_padding_left="10.0dip" playcommon:separator_padding_right="4.0dip">
+    <com.google.android.play.layout.PlayTextView android:textColor="@color/play_secondary_text" android:ellipsize="marquee" android:id="@id/li_reason" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" playcommon:allowsCompactLineSpacing="true" style="&#10;         &#10;         &#10;    "/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.PlayCardReason></com.google.android.play.layout.PlayCardViewSmall>
+    </File>
+    <File file_name="play_card_subtitle.xml">
+      <com.google.android.play.layout.PlayTextView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+    <File file_name="play_card_thumbnail.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter"/>
+    </File>
+    <File file_name="play_popup_selector_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="left|center" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </File>
+    <File file_name="play_tab_container.xml">
+      <com.google.android.play.layout.PlayTabContainer xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/pager_tab_container" android:background="@drawable/play_checker_tile" android:visibility="gone" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip" android:fillViewport="true">
+    <com.google.android.play.layout.PlayTabStrip android:orientation="horizontal" android:id="@id/pager_tab_strip" android:layout_width="wrap_content" android:layout_height="fill_parent"/>
+</com.google.android.play.layout.PlayTabContainer>
+    </File>
+    <File file_name="play_tab_strip_text.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ff505050" android:gravity="center_vertical" android:background="@drawable/highlight_overlay_light" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true"/>
+    </File>
+    <File file_name="player_button.xml">
+      <ImageButton xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/default_item_selector" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="popup_selector.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/popup_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ListView android:id="@id/popup_list" android:background="@drawable/popup_selector_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/default_item_selector" android:divider="#26000000" android:dividerHeight="1.0dip"/>
+</RelativeLayout>
+    </File>
+    <File file_name="recent_actors_card.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:orientation="vertical" android:background="@drawable/card_background_default" android:layout_width="fill_parent" android:layout_height="wrap_content" videos:layout_removeOnDismiss="false">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Just missed" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/recent_actors_card_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Show cards" android:drawableLeft="@drawable/recent_actors_button_icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+<View android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="88.0dip" android:layout_marginRight="8.0dip"/></LinearLayout>
+    </File>
+    <File file_name="recent_actors_card_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/default_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/recent_actor_image" android:background="#ffe7e6e6" android:layout_width="80.0dip" android:layout_height="80.0dip" android:scaleType="centerCrop"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ff707070" android:id="@id/recent_actor_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:singleLine="true" android:layout_toRightOf="@id/recent_actor_image" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/recent_actor_character" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/recent_actor_image" android:layout_below="@id/recent_actor_name" style="&#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="remote_notification_bar.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/video_icon" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="64.0dip" android:src="@drawable/ic_notification_media_route" android:scaleType="centerInside" style="&#10;         &#10;    "/>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_weight="1.0">
+        <TextView android:ellipsize="end" android:layout_gravity="left" android:id="@id/video_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:ellipsize="end" android:layout_gravity="left" android:id="@id/video_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <ImageView android:gravity="center" android:id="@id/video_play_pause" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="64.0dip" android:layout_height="fill_parent" android:src="@drawable/player_play" android:scaleType="center"/>
+</LinearLayout>
+    </File>
+    <File file_name="remote_screen_panel.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.FractionView android:id="@id/bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" videos:fractionHeight="0.6"/>
+    <com.google.android.videos.ui.FocusedImageView android:id="@id/screenshot_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom" android:layout_alignParentTop="true"/>
+    <ImageView android:id="@id/poster_view" android:layout_width="100.0dip" android:layout_height="150.0dip" android:scaleType="centerInside" android:baselineAlignBottom="false" android:layout_below="@id/screenshot_view" style="&#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/spinner" android:background="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/poster_view" android:layout_alignTop="@id/poster_view" android:layout_alignRight="@id/poster_view" android:layout_alignBottom="@id/poster_view">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <TextView android:id="@id/video_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/poster_view" android:layout_below="@id/screenshot_view" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/is_playing_on_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/video_title_text" android:layout_alignLeft="@id/video_title_text" android:layout_alignRight="@id/video_title_text" style="&#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="restrictions_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></LinearLayout>
+    </File>
+    <File file_name="section_heading.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/section_heading_container" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:baselineAlignedChildIndex="0" android:layout_weight="1.0">
+            <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false"/>
+            <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:ellipsize="end" android:id="@id/subheading" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false"/>
+        </LinearLayout>
+        <TextView android:id="@id/action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <View android:id="@id/dimmed_overlay" android:background="#99d9d9d9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/section_heading_container" android:layout_alignTop="@id/section_heading_container" android:layout_alignRight="@id/section_heading_container" android:layout_alignBottom="@id/section_heading_container"/>
+</RelativeLayout>
+    </File>
+    <File file_name="show_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/actionbar" android:background="@drawable/nav_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+    <ImageView android:id="@id/videos_icon" android:background="@drawable/actionbar_item_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_apps_videos_with_up" android:scaleType="centerCrop"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/actionbar_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0"/>
+    <android.support.v7.app.MediaRouteButton android:layout_width="wrap_content" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></LinearLayout><com.google.android.videos.ui.VideosDrawer android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer></LinearLayout>
+    </File>
+    <File file_name="show_activity_content.xml">
+      <com.google.android.videos.ui.VideosDrawer xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer>
+    </File>
+    <File file_name="show_activity_tv.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    </File>
+    <File file_name="side_drawer_account_avatar.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/>
+    </File>
+    <File file_name="side_drawer_account_row.xml">
+      <com.google.android.play.layout.SideDrawerAccountRow xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff333333" android:layout_width="fill_parent" android:layout_height="64.0dip">
+    <TextView android:textSize="15.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:singleLine="true" android:layout_toRightOf="@id/avatar" android:layout_centerVertical="true"/>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></com.google.android.play.layout.SideDrawerAccountRow>
+    </File>
+    <File file_name="side_drawer_destination_active.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;    "/>
+    </File>
+    <File file_name="side_drawer_destination_regular.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;    "/>
+    </File>
+    <File file_name="side_drawer_profile_info_content.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageButton android:id="@id/toggle_account_list_button" android:background="@drawable/highlight_overlay_dark" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:scaleType="center" android:layout_alignParentRight="true"/>
+    <View android:id="@id/account_list_button_divider" android:background="#33ffffff" android:visibility="gone" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_toLeftOf="@id/toggle_account_list_button" android:layout_alignWithParentIfMissing="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/account_list_button_divider" android:layout_toRightOf="@id/avatar" android:layout_centerVertical="true" android:layout_alignWithParentIfMissing="true">
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true"/>
+        <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true"/>
+    </LinearLayout>
+<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitStart"/></RelativeLayout>
+    </File>
+    <File file_name="side_drawer_secondary_action.xml">
+      <com.google.android.play.layout.SideDrawerSecondaryActionRow xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <View android:id="@id/action_separator_top" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+    <TextView android:id="@id/action_text" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <View android:id="@id/action_separator_bottom" android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+</com.google.android.play.layout.SideDrawerSecondaryActionRow>
+    </File>
+    <File file_name="song_card.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:orientation="vertical" android:background="@drawable/card_background_default" android:layout_width="fill_parent" android:layout_height="wrap_content" videos:layout_removeOnDismiss="false">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="What’s this song?" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <RelativeLayout android:id="@id/song_card_body" android:background="@drawable/default_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/album_art" android:visibility="gone" android:layout_width="172.0dip" android:layout_height="172.0dip" android:scaleType="centerCrop" android:contentDescription="Album art of %1$s"/>
+        <View android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_toRightOf="@id/album_art" android:layout_alignParentTop="true"/>
+        <TextView android:id="@id/song_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/album_art" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/song_artist" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/album_art" android:layout_below="@id/song_title" android:translationY="-12.0dip" style="&#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/secondary_action_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/album_art" android:layout_alignBottom="@id/album_art" style="&#10;         &#10;         &#10;         &#10;    "/>
+        <View android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_toRightOf="@id/album_art" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <Button android:id="@id/play_store_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableLeft="@drawable/play_store_button_icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="spacing_footer.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="4.0dip" android:layout_height="4.0dip"/>
+    </File>
+    <File file_name="status.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>
+    </File>
+    <File file_name="support_simple_spinner_dropdown_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:ellipsize="marquee" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:singleLine="true" style="?attr/spinnerDropDownItemStyle"/>
+    </File>
+    <File file_name="video_list_item_holder.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"/>
+    </File>
+    <File file_name="video_playback_control.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="96.0dip">
+    <ImageView android:id="@id/media_route_play_icon" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="96.0dip" android:scaleType="fitStart"/>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:id="@id/media_route_play_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" style="&#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/media_route_play_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <ImageButton android:id="@id/media_route_play_pause" android:layout_marginRight="8.0dip" android:src="@drawable/player_play_pause" style="&#10;         &#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="watch_activity_content.xml">
+      <com.google.android.videos.player.PlayerView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/player" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="watch_details_activity.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.VideosDrawer android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer><LinearLayout android:id="@id/actionbar" android:background="@drawable/nav_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+    <ImageView android:id="@id/videos_icon" android:background="@drawable/actionbar_item_selector" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_apps_videos_with_up" android:scaleType="centerCrop"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/actionbar_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0"/>
+    <android.support.v7.app.MediaRouteButton android:layout_width="wrap_content" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/></LinearLayout></FrameLayout>
+    </File>
+    <File file_name="watch_details_activity_content.xml">
+      <com.google.android.videos.ui.VideosDrawer xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer>
+    </File>
+    <File file_name="watch_details_activity_tv.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    </File>
+    <File file_name="watch_details_header_narrow.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+        
+    <com.google.android.videos.ui.FocusedImageView xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:id="@id/screenshot_view" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_alignParentTop="true" videos:canReduce="true"/>
+    <View android:background="@drawable/banner_gradient" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_alignParentTop="true"/>
+    <RelativeLayout xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:id="@id/banner_action_bar" android:background="@color/ninety_percent_white" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="-48.0dip" android:layout_below="@id/screenshot_view">
+        <Button android:id="@id/play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="154.0dip" android:text="Play" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="&#10;         &#10;    ">
+            <requestFocus/>
+        </Button>
+        <com.google.android.videos.ui.BestFittingLayout android:id="@id/playing_frame" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="154.0dip" android:layout_toLeftOf="@id/pin" android:layout_alignParentLeft="true" videos:fittingConsidersX="true" videos:fittingConsidersY="false">
+            <Button android:id="@id/playing_on" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;    "/>
+            <Button android:id="@id/playing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Playing" style="&#10;         &#10;    "/>
+        </com.google.android.videos.ui.BestFittingLayout>
+        <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:padding="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" videos:pinBackground="@drawable/ic_download_background_holo_light"/>
+    </RelativeLayout>
+    <ImageView android:id="@id/thumbnail_frame" android:background="@drawable/tv_season_no_border" android:layout_width="152.0dip" android:layout_height="212.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="-70.0dip" android:scaleType="fitXY" android:cropToPadding="true" android:layout_below="@id/banner_action_bar" android:layout_alignParentLeft="true" android:contentDescription="Play video"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:textStyle="normal" android:id="@id/title" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/banner_action_bar" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/subheading" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/title" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/badges" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/subheading" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true">
+        <ImageView android:id="@id/badge_hd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hd_badge"/>
+        <ImageView android:id="@id/badge_surround_sound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_surround_sound_badge"/>
+        <ImageView android:id="@id/badge_knowledge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_interactive_badge"/>
+        <ImageView android:id="@id/badge_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cc_badge"/>
+    </LinearLayout>
+</RelativeLayout>
+    <ViewStub android:id="@id/plus_one_button" android:layout="@layout/watch_details_plus_one_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip"/>
+    
+    <RelativeLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip">
+    <View android:id="@id/center" android:visibility="invisible" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_centerHorizontal="true"/>
+    <TextView android:id="@id/storyline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/center" style="&#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/actors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/directors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/actors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/writers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/directors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/producers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/writers" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout></LinearLayout>
+    </File>
+    <File file_name="watch_details_header_wide.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+        <ViewStub android:id="@id/plus_one_button" android:layout="@layout/watch_details_plus_one_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/badges"/>
+    
+    <com.google.android.videos.ui.FocusedImageView xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:id="@id/screenshot_view" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_alignParentTop="true" videos:canReduce="true"/>
+    <View android:background="@drawable/banner_gradient" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_alignParentTop="true"/>
+    <RelativeLayout xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:id="@id/banner_action_bar" android:background="#e5ffffff" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="-48.0dip" android:layout_below="@id/screenshot_view">
+        <Button android:id="@id/play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="154.0dip" android:text="Play" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="&#10;         &#10;    ">
+            <requestFocus/>
+        </Button>
+        <com.google.android.videos.ui.BestFittingLayout android:id="@id/playing_frame" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="154.0dip" android:layout_toLeftOf="@id/pin" android:layout_alignParentLeft="true" videos:fittingConsidersX="true" videos:fittingConsidersY="false">
+            <Button android:id="@id/playing_on" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;    "/>
+            <Button android:id="@id/playing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Playing" style="&#10;         &#10;    "/>
+        </com.google.android.videos.ui.BestFittingLayout>
+        <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:padding="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" videos:pinBackground="@drawable/ic_download_background_holo_light"/>
+    </RelativeLayout>
+    <ImageView android:id="@id/thumbnail_frame" android:background="@drawable/tv_season_no_border" android:layout_width="152.0dip" android:layout_height="212.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="-70.0dip" android:scaleType="fitXY" android:cropToPadding="true" android:layout_below="@id/banner_action_bar" android:layout_alignParentLeft="true" android:contentDescription="Play video"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:textStyle="normal" android:id="@id/title" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/banner_action_bar" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/subheading" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/title" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/badges" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/subheading" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true">
+        <ImageView android:id="@id/badge_hd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hd_badge"/>
+        <ImageView android:id="@id/badge_surround_sound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_surround_sound_badge"/>
+        <ImageView android:id="@id/badge_knowledge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_interactive_badge"/>
+        <ImageView android:id="@id/badge_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cc_badge"/>
+    </LinearLayout>
+</RelativeLayout>
+    
+    <RelativeLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip">
+    <View android:id="@id/center" android:visibility="invisible" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_centerHorizontal="true"/>
+    <TextView android:id="@id/storyline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/center" style="&#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/actors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/directors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/actors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/writers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/directors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/producers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/writers" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout></LinearLayout>
+    </File>
+    <File file_name="watch_details_header_wider.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <View android:id="@id/pivot" android:visibility="invisible" android:layout_width="16.0dip" android:layout_height="1.0dip" android:layout_centerHorizontal="true"/>
+    <ViewStub android:id="@id/plus_one_button" android:layout="@layout/watch_details_plus_one_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/pivot" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/badges"/>
+    
+    <com.google.android.videos.ui.FocusedImageView xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:id="@id/screenshot_view" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_alignParentTop="true" videos:canReduce="true"/>
+    <View android:background="@drawable/banner_gradient" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_alignParentTop="true"/>
+    <RelativeLayout xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:id="@id/banner_action_bar" android:background="#e5ffffff" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="-48.0dip" android:layout_below="@id/screenshot_view">
+        <Button android:id="@id/play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="154.0dip" android:text="Play" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="&#10;         &#10;    ">
+            <requestFocus/>
+        </Button>
+        <com.google.android.videos.ui.BestFittingLayout android:id="@id/playing_frame" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="154.0dip" android:layout_toLeftOf="@id/pin" android:layout_alignParentLeft="true" videos:fittingConsidersX="true" videos:fittingConsidersY="false">
+            <Button android:id="@id/playing_on" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;    "/>
+            <Button android:id="@id/playing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Playing" style="&#10;         &#10;    "/>
+        </com.google.android.videos.ui.BestFittingLayout>
+        <com.google.android.videos.ui.DownloadView android:id="@id/pin" android:background="@drawable/default_item_selector" android:padding="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" videos:pinBackground="@drawable/ic_download_background_holo_light"/>
+    </RelativeLayout>
+    <ImageView android:id="@id/thumbnail_frame" android:background="@drawable/tv_season_no_border" android:layout_width="152.0dip" android:layout_height="212.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="-70.0dip" android:scaleType="fitXY" android:cropToPadding="true" android:layout_below="@id/banner_action_bar" android:layout_alignParentLeft="true" android:contentDescription="Play video"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:textStyle="normal" android:id="@id/title" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/banner_action_bar" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true"/>
+    <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/subheading" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/title" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/badges" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/thumbnail_frame" android:layout_below="@id/subheading" android:layout_alignRight="@id/pivot" android:layout_alignWithParentIfMissing="true">
+        <ImageView android:id="@id/badge_hd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_hd_badge"/>
+        <ImageView android:id="@id/badge_surround_sound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_surround_sound_badge"/>
+        <ImageView android:id="@id/badge_knowledge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_interactive_badge"/>
+        <ImageView android:id="@id/badge_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cc_badge"/>
+    </LinearLayout>
+<RelativeLayout android:paddingLeft="16.0dip" android:paddingRight="16.0dip">
+    <com.google.android.videos.ui.TextResizingLayout android:id="@id/storyline_holder" android:background="@drawable/default_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="6" android:layout_toLeftOf="@id/center">
+        <TextView android:id="@id/storyline" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    </com.google.android.videos.ui.TextResizingLayout>
+    <View android:id="@id/divider" android:background="#80aaaaaa" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:layout_below="@id/storyline_holder"/>
+    <TextView android:id="@id/actors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/directors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/actors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/writers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/directors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/producers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/writers" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout></RelativeLayout>
+    </File>
+    <File file_name="watch_details_plus_one_button.xml">
+      <com.google.android.gms.plus.PlusOneButtonWithPopup xmlns:android="http://schemas.android.com/apk/res/android" xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus" android:id="@id/plus_one_button" android:background="@drawable/default_item_selector" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" plus:annotation="inline"/>
+    </File>
+    <File file_name="watch_details_supplement_info_horizontal.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingRight="16.0dip">
+    <View android:id="@id/center" android:visibility="invisible" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_centerHorizontal="true"/>
+    <TextView android:id="@id/storyline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/center" style="&#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/actors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/directors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/actors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/writers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/directors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/producers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/center" android:layout_below="@id/writers" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="watch_details_supplement_info_vertical.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingRight="16.0dip">
+    <com.google.android.videos.ui.TextResizingLayout android:id="@id/storyline_holder" android:background="@drawable/default_item_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="6" android:layout_toLeftOf="@id/center">
+        <TextView android:id="@id/storyline" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    </com.google.android.videos.ui.TextResizingLayout>
+    <View android:id="@id/divider" android:background="#80aaaaaa" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:layout_below="@id/storyline_holder"/>
+    <TextView android:id="@id/actors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/directors" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/actors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/writers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/directors" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:id="@id/producers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/writers" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="welcome_card_free_movie_narrow.xml">
+      <com.google.android.videos.ui.playnext.WelcomeCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:gravity="top" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@id/welcome_content" android:background="@drawable/card_bg_play" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.videos.welcome.FreeMoviePosterView android:id="@id/welcome_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:contentDescription="@null" videos:columnCount="4"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip"/>
+                <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/welcome_detail_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+    <View android:id="@id/welcome_button_separator_1" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_1" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_2" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_2" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_3" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_3" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    <View android:id="@id/dimmed_overlay" android:background="#99d9d9d9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/welcome_content" android:layout_alignTop="@id/welcome_content" android:layout_alignRight="@id/welcome_content" android:layout_alignBottom="@id/welcome_content"/>
+</com.google.android.videos.ui.playnext.WelcomeCardView>
+    </File>
+    <File file_name="welcome_card_free_movie_wide.xml">
+      <com.google.android.videos.ui.playnext.WelcomeCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:videos="http://schemas.android.com/apk/res/com.google.android.videos" android:gravity="top" android:id="@id/welcome_content" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@id/welcome_content" android:background="@drawable/card_bg_play" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.videos.welcome.FreeMoviePosterView android:id="@id/welcome_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:contentDescription="@null" videos:columnCount="4"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip"/>
+            <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/welcome_detail_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip"/>
+            <View android:id="@id/spacer" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0"/>
+            
+    <View android:id="@id/welcome_button_separator_1" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_1" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_2" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_2" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_3" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_3" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/dimmed_overlay" android:background="#99d9d9d9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/welcome_content" android:layout_alignTop="@id/welcome_content" android:layout_alignRight="@id/welcome_content" android:layout_alignBottom="@id/welcome_content"/>
+</com.google.android.videos.ui.playnext.WelcomeCardView>
+    </File>
+    <File file_name="welcome_card_narrow.xml">
+      <com.google.android.videos.ui.playnext.WelcomeCardView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="top" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@id/welcome_content" android:background="@drawable/card_bg_play" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip"/>
+        <ImageView android:id="@id/welcome_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxHeight="300.0dip" android:contentDescription="@null"/>
+        <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/welcome_detail_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip"/>
+        
+    <View android:id="@id/welcome_button_separator_1" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_1" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_2" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_2" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_3" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_3" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    <View android:id="@id/dimmed_overlay" android:background="#99d9d9d9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/welcome_content" android:layout_alignTop="@id/welcome_content" android:layout_alignRight="@id/welcome_content" android:layout_alignBottom="@id/welcome_content"/>
+</com.google.android.videos.ui.playnext.WelcomeCardView>
+    </File>
+    <File file_name="welcome_card_wide.xml">
+      <com.google.android.videos.ui.playnext.WelcomeCardView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="top" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@id/welcome_content" android:background="@drawable/card_bg_play" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_weight="1.0">
+                <TextView android:textAppearance="&#10;         &#10;         &#10;         &#10;    " android:id="@id/welcome_title" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+                <TextView android:textAppearance="&#10;         &#10;         &#10;    " android:id="@id/welcome_detail_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip"/>
+            </LinearLayout>
+            <ImageView android:layout_gravity="center" android:id="@id/welcome_image" android:layout_width="0.0px" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxHeight="300.0dip" android:layout_weight="0.75" android:contentDescription="@null"/>
+        </LinearLayout>
+        
+    <View android:id="@id/welcome_button_separator_1" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_1" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_2" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_2" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    <View android:id="@id/welcome_button_separator_3" android:background="#ffe4e4e4" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    <Button android:id="@id/welcome_button_3" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    <View android:id="@id/dimmed_overlay" android:background="#99d9d9d9" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/welcome_content" android:layout_alignTop="@id/welcome_content" android:layout_alignRight="@id/welcome_content" android:layout_alignBottom="@id/welcome_content"/>
+</com.google.android.videos.ui.playnext.WelcomeCardView>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-port"/>
+  <Directory directory_name="layout-sw600dp">
+    <File file_name="feedback_view.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="right" android:orientation="vertical" android:id="@id/feedback_box" android:background="@drawable/feedback_background" android:layout_width="406.0dip" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:layout_marginRight="15.0dip">
+        
+    <TextView android:id="@id/question" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <LinearLayout android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Button android:id="@id/yes_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/no_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="No" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</LinearLayout>
+</FrameLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v11">
+    <File file_name="abc_action_bar_decor.xml">
+      <android.support.v7.internal.widget.NativeActionModeAwareLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/action_bar_root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <android.support.v7.internal.widget.ActionBarContainer android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle">
+        <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+        <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </android.support.v7.internal.widget.ActionBarContainer>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</android.support.v7.internal.widget.NativeActionModeAwareLayout>
+    </File>
+    <File file_name="mr_media_route_controller_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/media_route_volume_layout" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ImageView android:gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/mr_ic_audio_vol" android:scaleType="center"/>
+        <SeekBar android:id="@id/media_route_volume_slider" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_weight="1.0"/>
+    </LinearLayout>
+    <FrameLayout android:id="@id/media_route_control_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/buttonBarStyle">
+        <Button android:gravity="center" android:id="@id/media_route_disconnect_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Disconnect" style="?attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="watch_details_activity.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.google.android.videos.ui.VideosDrawer android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.videos.ui.TouchAwareListView android:id="@id/drawer_page" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:src="@drawable/ic_alert"/>
+    <TextView android:textSize="@dimen/status_font_size" android:textColor="#ff8d8d8d" android:textColorLink="#ff33b5e5" android:gravity="center" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip"/>
+    <Button android:id="@id/retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Retry" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/progressbar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout></FrameLayout>
+    <com.google.android.gms.people.ownerslisthelper.OwnersExpandableListView android:id="@id/drawer_menu" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="?actionBarSize" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.google.android.videos.ui.VideosDrawer></FrameLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v14">
+    <File file_name="abc_activity_chooser_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/activity_chooser_view_content" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/activityChooserViewStyle">
+    
+    <FrameLayout android:layout_gravity="center" android:id="@id/expand_activities_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/default_activity_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v16">
+    <File file_name="remote_notification_bar.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/video_icon" android:layout_width="64.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_notification_media_route" android:scaleType="centerInside" style="&#10;         &#10;    "/>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@android:dimen/notification_large_icon_height">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:ellipsize="end" android:layout_gravity="left" android:id="@id/video_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;         &#10;    "/>
+                <TextView android:ellipsize="end" android:layout_gravity="left" android:id="@id/video_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="&#10;         &#10;         &#10;    "/>
+            </LinearLayout>
+            <ImageView android:gravity="center" android:id="@id/video_play_pause" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="64.0dip" android:layout_height="wrap_content" android:src="@drawable/player_play" android:scaleType="center"/>
+        </LinearLayout>
+        <LinearLayout android:background="#ff282828" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+        <LinearLayout android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/video_disconnect" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginLeft="2.0dip" android:text="Disconnect" android:drawableLeft="@drawable/ic_disconnect" style="&#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v17">
+    <File file_name="mr_media_route_list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+    <LinearLayout android:gravity="start|center" android:orientation="vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:id="@android:id/text1" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="marquee" android:id="@android:id/text2" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+</App>
