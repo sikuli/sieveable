@@ -41,15 +41,46 @@ describe('search', function() {
 
     })
 
+    var data = {
+        {
+            name: 'bob',
+            children: ['a', 'b']
+        }, {
+            name: 'amy',
+            children: ['c', 'd', 'e']
+        }, {
+            name: 'tom',
+            children: ['c', 'd', 'e']
+        }        
+    }
+
     describe('activities', function() {
 
         q({
-            activities: []
+            activities: {
+                $size: {
+                    $gt: 3
+                }
+            }
+        }, function() {
+
+            results.should.have.length(1)
+        })
+
+        q({
+
+            activities: [any,any,any]
+
         }, function() {
 
             results.should.have.length(1)
         })
 
     })
+
+
+    '<activities>
+    	<activity></activity> * 10+
+    </activities>'
 
 })
