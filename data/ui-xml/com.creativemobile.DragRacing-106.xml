@@ -1,0 +1,129 @@
+<App name="com.creativemobile.DragRacing" version_code="106">
+  <Directory directory_name="layout">
+    <File file_name="banner_view.xml">
+      <com.moneytapp.sdk.android.view.BannerView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="top|left|center" android:layout_gravity="top|left|center" android:id="@id/mtappbottom_banner" android:paddingLeft="2.0dip" android:paddingTop="1.0dip" android:paddingRight="33.0dip" android:layout_width="320.0dip" android:layout_height="50.0dip" android:layout_marginRight="33.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="false"/>
+    </File>
+    <File file_name="c2m_dialog_cannot_complete_purchase.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cannot complete purchase. You can try input code manually" style="@android:style/TextAppearance.Medium"/>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_initiation_error.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Purchase initiation error" style="@android:style/TextAppearance.Medium"/>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_invalid_code.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Invalid code" style="@android:style/TextAppearance.Medium"/>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_numbers_only.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Only numbers are allowed" style="@android:style/TextAppearance.Medium"/>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_product_activation.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <EditText android:id="@id/activation_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Input activation code" android:inputType="number" style="@android:style/Widget.Holo.EditText">
+        <requestFocus/>
+    </EditText>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_purchase_confirmation.xml">
+      <WebView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/web_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="c2m_dialog_purchase_in_progress.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_purchase_successful.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:id="@id/body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="You have successfully purchased %d RP" style="@android:style/TextAppearance.Medium"/>
+</LinearLayout>
+    </File>
+    <File file_name="c2m_dialog_sms_send_impossible.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sms send impossible" style="@android:style/TextAppearance.Medium"/>
+</LinearLayout>
+    </File>
+    <File file_name="flurry_banner.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/offer_root" android:background="@drawable/banner_bg" android:layout_width="320.0dip" android:layout_height="50.0dip">
+        <ImageView android:id="@id/offer_icon" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_margin="5.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="marquee" android:id="@id/incentive" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#ff000000" android:shadowDx="0.0" android:shadowDy="0.5" android:shadowRadius="0.5" android:layout_toRightOf="@id/offer_icon" android:layout_alignParentTop="true"/>
+        <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:ellipsize="marquee" android:id="@id/title" android:paddingRight="8.0dip" android:layout_width="250.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/incentive" android:layout_alignLeft="@id/incentive"/>
+    </RelativeLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="flurry_offer.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/offer_root" android:background="@drawable/offer_frame" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/offer_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="6.0dip" android:layout_marginBottom="4.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="marquee" android:id="@id/title" android:paddingLeft="1.0dip" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:ellipsize="marquee" android:id="@id/description" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/offer_icon" android:layout_alignTop="@id/offer_icon"/>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff8addff" android:ellipsize="marquee" android:id="@id/incentive" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/description" android:layout_alignLeft="@id/description"/>
+    </RelativeLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="interstitial.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="#bb000000" android:padding="0.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="0.0px">
+    <FrameLayout android:id="@id/assetContainer" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="center" android:layout_gravity="center" android:id="@id/ad_container" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/ad_close_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ad_close_states"/>
+    </FrameLayout>
+</LinearLayout>
+    </File>
+    <File file_name="list_view.xml">
+      <ListView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="mainmenu.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@id/mainmenu_root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/menu_root" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="220.0dip">
+            <Button android:id="@id/menu_play" android:layout_width="200.0dip" android:layout_height="64.0dip" android:text="Race" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+            <Button android:id="@id/menu_garage" android:layout_width="200.0dip" android:layout_height="64.0dip" android:text="Garage" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            <Button android:id="@id/menu_settings" android:layout_width="200.0dip" android:layout_height="64.0dip" android:text="Settings" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+            <Button android:id="@id/menu_social" android:layout_width="200.0dip" android:layout_height="64.0dip" android:text="Social" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <Button android:id="@id/menu_stats" android:layout_width="200.0dip" android:layout_height="64.0dip" android:text="Stats" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="map.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/mapWrapper" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <ImageView android:id="@id/locateMe" android:background="#10000000" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="19.0dip" android:src="@drawable/me" android:text="LocateMe" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/zoomOut" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/btn_minus" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/zoomIn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:src="@android:drawable/btn_plus" android:layout_toRightOf="@id/zoomOut" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="offerwall_banner.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/offer_root" android:background="@drawable/offer_frame" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/offer_banner" android:layout_width="320.0dip" android:layout_height="50.0dip" android:layout_marginLeft="0.0dip" android:layout_marginBottom="0.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="marquee" android:id="@id/title" android:paddingLeft="1.0dip" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff8addff" android:id="@id/incentive" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/offer_banner" android:layout_alignBottom="@id/offer_banner"/>
+    </RelativeLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="racemenu.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@id/mainmenu_root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/menu_root" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="My Car"/>
+        <Spinner android:id="@id/spinner_mycar" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Opponent"/>
+        <Spinner android:id="@id/spinner_opponent" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@id/menu_start" android:layout_width="200.0dip" android:layout_height="64.0dip" android:text="Start" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="toast.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/toast_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:padding="0.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/trophy_gold"/>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/message" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="[message]" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+  </Directory>
+</App>

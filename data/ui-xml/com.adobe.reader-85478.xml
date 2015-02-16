@@ -1,0 +1,1067 @@
+<App name="com.adobe.reader" version_code="85478">
+  <Directory directory_name="layout">
+    <File file_name="abc_action_bar_decor.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <android.support.v7.internal.widget.ActionBarContainer android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle">
+        <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+        <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </android.support.v7.internal.widget.ActionBarContainer>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_bar_decor_overlay.xml">
+      <android.support.v7.internal.widget.ActionBarOverlayLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/action_bar_overlay_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <LinearLayout android:layout_gravity="top" android:id="@id/top_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.internal.widget.ActionBarContainer android:gravity="top" android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="?attr/actionBarStyle">
+            <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+            <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+        </android.support.v7.internal.widget.ActionBarContainer>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="?android:windowContentOverlay" android:scaleType="fitXY"/>
+    </LinearLayout>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:layout_gravity="bottom" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</android.support.v7.internal.widget.ActionBarOverlayLayout>
+    </File>
+    <File file_name="abc_action_bar_home.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:background="?actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" class="android.support.v7.internal.widget.ActionBarView$HomeView">
+    <ImageView android:layout_gravity="left|center" android:id="@id/up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-8.0dip" android:src="?homeAsUpIndicator"/>
+    <ImageView android:layout_gravity="center" android:id="@id/home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+</view>
+    </File>
+    <File file_name="abc_action_bar_tab.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" class="android.support.v7.internal.widget.ScrollingTabContainerView$TabView" style="?attr/actionBarTabStyle"/>
+    </File>
+    <File file_name="abc_action_bar_tabbar.xml">
+      <android.support.v7.internal.widget.LinearLayoutICS xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/actionBarTabBarStyle"/>
+    </File>
+    <File file_name="abc_action_bar_title_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:enabled="false" android:orientation="horizontal" android:background="?actionBarItemBackground" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="left|center" android:id="@id/up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?homeAsUpIndicator"/>
+    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/action_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:ellipsize="end" android:id="@id/action_bar_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:layout_marginBottom="5.0dip" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_bar_view_list_nav_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/actionBarTabBarStyle"/>
+    </File>
+    <File file_name="abc_action_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ActionMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?actionMenuTextAppearance" android:textColor="?actionMenuTextColor" android:gravity="center" android:layout_gravity="center" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/actionButtonStyle"/>
+    </File>
+    <File file_name="abc_action_menu_layout.xml">
+      <android.support.v7.internal.view.menu.ActionMenuView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:divider="?actionBarDivider" app:dividerPadding="12.0dip"/>
+    </File>
+    <File file_name="abc_action_mode_bar.xml">
+      <android.support.v7.internal.widget.ActionBarContextView xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </File>
+    <File file_name="abc_action_mode_close_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/action_mode_close_button" android:paddingLeft="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="16.0dip" android:contentDescription="Done" style="?attr/actionModeCloseButtonStyle">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?actionModeCloseDrawable" android:scaleType="fitCenter"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_activity_chooser_view.xml">
+      <android.support.v7.internal.widget.LinearLayoutICS xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/activity_chooser_view_content" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/activityChooserViewStyle">
+    
+    <FrameLayout android:layout_gravity="center" android:id="@id/expand_activities_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/default_activity_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</android.support.v7.internal.widget.LinearLayoutICS>
+    </File>
+    <File file_name="abc_activity_chooser_view_list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/list_item" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:minWidth="196.0dip">
+    <LinearLayout android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="8.0dip"/>
+        <TextView android:textAppearance="?textAppearanceLargePopupMenu" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_expanded_menu_layout.xml">
+      <android.support.v7.internal.view.menu.ExpandedMenuView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/expanded_menu" android:layout_width="?panelMenuListWidth" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_list_menu_item_checkbox.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/checkbox" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_list_menu_item_icon.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="-8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="centerInside"/>
+    </File>
+    <File file_name="abc_list_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ListMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="?listPreferredItemHeightSmall">
+    <RelativeLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="?listPreferredItemPaddingLeft" android:layout_marginRight="?listPreferredItemPaddingRight" android:layout_weight="1.0">
+        <TextView android:textAppearance="?textAppearanceListItemSmall" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/shortcut" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title"/>
+    </RelativeLayout>
+</android.support.v7.internal.view.menu.ListMenuItemView>
+    </File>
+    <File file_name="abc_list_menu_item_radio.xml">
+      <RadioButton xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/radio" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_popup_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ListMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:minWidth="196.0dip">
+    <RelativeLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="?textAppearanceLargePopupMenu" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <TextView android:textAppearance="?textAppearanceSmallPopupMenu" android:id="@id/shortcut" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title" android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</android.support.v7.internal.view.menu.ListMenuItemView>
+    </File>
+    <File file_name="abc_screen.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ViewStub android:id="@id/action_mode_bar_stub" android:layout="@layout/abc_action_mode_bar" android:inflatedId="@id/action_mode_bar" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <RelativeLayout android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="?android:windowTitleSize" style="?android:attr/windowTitleBackgroundStyle">
+        <ImageView android:id="@id/left_icon" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="5.0dip" android:scaleType="fitCenter" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <LinearLayout android:id="@id/right_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/right_icon" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="5.0dip" android:scaleType="fitCenter"/>
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progress_circular" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:max="10000" style="?android:attr/progressBarStyleSmallTitle"/>
+        </LinearLayout>
+        <ProgressBar android:id="@id/progress_horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:max="10000" android:layout_toLeftOf="@id/right_container" android:layout_toRightOf="@id/left_icon" android:layout_centerVertical="true" style="?android:attr/progressBarStyleHorizontal"/>
+        <TextView android:gravity="center_vertical" android:id="@id/title" android:background="@null" android:fadingEdge="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:layout_toLeftOf="@id/right_container" android:layout_toRightOf="@id/left_icon" style="?android:attr/windowTitleStyle"/>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_search_dropdown_item_icons_2line.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="8.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="?searchResultListItemHeight">
+    <ImageView android:id="@android:id/icon1" android:visibility="invisible" android:layout_width="32.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/edit_query" android:background="?searchViewEditQueryBackground" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="?searchViewEditQuery" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@android:id/icon2" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_toLeftOf="@id/edit_query" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true"/>
+    <TextView android:textAppearance="?textAppearanceSearchResultSubtitle" android:gravity="top" android:id="@android:id/text2" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="29.0dip" android:singleLine="true" android:layout_toLeftOf="@android:id/icon2" android:layout_toRightOf="@android:id/icon1" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true" style="?android:attr/dropDownItemStyle"/>
+    <TextView android:textAppearance="?textAppearanceSearchResultTitle" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@android:id/icon2" android:layout_toRightOf="@android:id/icon1" android:layout_above="@android:id/text2" android:layout_centerVertical="true" style="?android:attr/dropDownItemStyle"/>
+</RelativeLayout>
+    </File>
+    <File file_name="abc_search_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/search_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:gravity="center_vertical" android:id="@id/search_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="2.0dip" android:drawablePadding="0.0dip"/>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/search_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewSearchIcon" android:contentDescription="Search" style="?attr/actionButtonStyle"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_edit_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/search_mag_icon" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="?searchViewSearchIcon" android:scaleType="centerInside"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_plate" android:background="?searchViewTextField" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <view android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/search_src_text" android:background="@null" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="36.0dip" android:minWidth="160.0dip" android:singleLine="true" android:layout_weight="1.0" android:inputType="textAutoComplete|textNoSuggestions" android:dropDownAnchor="@id/search_edit_frame" android:imeOptions="actionSearch" android:contentDescription="Search query" android:dropDownHeight="wrap_content" android:dropDownHorizontalOffset="0.0dip" android:dropDownVerticalOffset="0.0dip" class="android.support.v7.widget.SearchView$SearchAutoComplete" style="?attr/searchViewAutoCompleteTextView"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_close_btn" android:background="?selectableItemBackground" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewCloseIcon" android:contentDescription="Clear query"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/submit_area" android:background="?searchViewTextFieldRight" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_go_btn" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewGoIcon" android:contentDescription="Submit query"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_voice_btn" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewVoiceIcon" android:contentDescription="Voice search"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="about_layout.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:id="@id/about_box" android:paddingLeft="30.0dip" android:paddingTop="40.0dip" android:paddingRight="30.0dip" android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff040404" android:id="@id/adobe_product_name" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Adobe  Reader"/>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff040404" android:id="@id/adobe_reader_version" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Version"/>
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ff040404" android:id="@id/adobe_reader_build_label" android:paddingBottom="40.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Build"/>
+        <TextView android:textSize="14.0sp" android:textColor="#ff040404" android:id="@id/aboutCopyrightTextID" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Copyright © 1984-2013 Adobe Systems Incorporated and its licensors. All rights reserved. Adobe, the Adobe logo, and Reader are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries." android:lineSpacingExtra="6.0dip"/>
+        <TextView android:textSize="14.0sp" android:textColor="#ff040404" android:autoLink="web" android:id="@id/aboutTermsofUseTextID" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Third Party notices, terms and conditions pertaining to third party software can be found at http://www.adobe.com/go/thirdparty and are incorporated by reference herein." android:lineSpacingExtra="6.0dip"/>
+        <TextView android:textSize="14.0sp" android:textColor="#ff040404" android:autoLink="web" android:id="@id/privacyPolicyTextID" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="6.0dip"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="account_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/accountEntriesLinearLayout" android:padding="10.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/serviceIcon" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="vertical" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0sp">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/serviceName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0sp" android:singleLine="true"/>
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/account_entry_subscribe_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/serviceStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/serviceDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="adobereader.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/mainLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/pageViewLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.adobe.reader.viewer.ARPageView android:id="@id/mainPageView" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </LinearLayout>
+    <com.adobe.reader.comments.ARCommentOverlayView android:id="@id/inkCommentCreationView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <RelativeLayout android:id="@id/viewFlipperLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/pageViewLayout">
+        <ViewFlipper android:id="@id/viewFlipper" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/view1" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+            <ImageView android:id="@id/view2" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        </ViewFlipper>
+    </RelativeLayout>
+    <LinearLayout android:id="@id/reflowViewLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignTop="@id/pageViewLayout">
+        <com.adobe.reader.viewer.ARReflowView android:id="@id/reflowView" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </LinearLayout>
+    <View android:id="@id/translucentView" android:background="#77000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <RelativeLayout android:id="@id/topBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignTop="@id/pageViewLayout">
+        <LinearLayout android:orientation="vertical" android:id="@id/top_panel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <com.adobe.reader.viewer.ARDocToolbar android:id="@id/documentToolbar" android:layout_width="fill_parent" android:layout_height="50.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+                <RelativeLayout android:id="@id/toolbarMainView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <Button android:id="@id/fileOpenTopBarButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:text="Documents" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:onClick="onClick" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/toolbarButtonsPanel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                        <ImageButton android:id="@id/cloud_button" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                        <ImageButton android:id="@id/view_mode_button" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                        <ImageButton android:id="@id/commenting_button" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                        <ImageButton android:id="@id/shareDocument" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                        <ImageButton android:id="@id/activateFindButton" android:onClick="onClick" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                    </LinearLayout>
+                    <TextView android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip"/></RelativeLayout>
+            </com.adobe.reader.viewer.ARDocToolbar>
+            <View android:id="@id/toolbar_bottom_shadow" style="&#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/portfolioLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/topBarLayout">
+        <ListView android:id="@id/childFileList" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/portfolio_selector" android:drawSelectorOnTop="false" android:cacheColorHint="#00000000" android:divider="#ffffffff" android:dividerHeight="1.0px"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/findNextPrevButtons" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/pageViewLayout" android:layout_centerHorizontal="true">
+        <ImageButton android:id="@id/findPrevInstanceButton" android:background="@null" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/find_prev_image_selector"/>
+        <ImageButton android:id="@id/findNextInstanceButton" android:background="@null" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/find_next_image_selector"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom|left|center" android:orientation="horizontal" android:id="@id/pageNumberAndPreviousView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:layout_above="@id/bottomToolbar">
+        <ImageButton android:id="@id/previousPosition" android:background="#994b4b4b" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="1.0dip" android:src="@drawable/mp_previousview_md_n_dk"/>
+        <LinearLayout android:orientation="horizontal" android:id="@id/pageNumberOverlay" android:background="#994b4b4b" android:paddingLeft="8.0dip" android:paddingTop="6.0dip" android:paddingRight="8.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:onClick="onClick">
+            <TextView android:id="@id/currentPageTextView" android:background="@drawable/current_page_indicator_background" android:paddingLeft="6.0dip" android:paddingTop="2.0dip" android:paddingRight="6.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+            <TextView android:id="@id/totalPagesTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/bottomToolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/pageViewLayout">
+        <com.adobe.reader.viewer.ARScrubberThumbnailView android:layout_gravity="center" android:orientation="vertical" android:id="@id/scrubberThumbnailView" android:background="#b2333333" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip">
+            <ImageView android:id="@id/scrubberThumbnailImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip"/>
+            <TextView android:layout_gravity="center" android:id="@id/scrubberThumbnailText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="7.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </com.adobe.reader.viewer.ARScrubberThumbnailView>
+        <RelativeLayout android:id="@id/scrubberBottomBar" android:background="@drawable/toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/bottomBarButton">
+                <SeekBar android:id="@id/scrubber" android:paddingLeft="15.0dip" android:paddingTop="15.0dip" android:paddingRight="15.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="21.0dip" android:progressDrawable="@drawable/scrubber_drawable" android:minHeight="21.0dip" android:thumb="@drawable/scrubber_thumb_image_selector" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/bottomBarButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <ImageButton android:id="@id/bookmarkButton" android:visibility="gone" android:src="@drawable/bookmark_button_image_selector" android:onClick="onClick" android:contentDescription="Bookmarks" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                <ImageButton android:id="@id/securityButton" android:visibility="gone" android:src="@drawable/security_button_image_selector" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+                <ImageButton android:id="@id/showAttachmentsButton" android:visibility="gone" android:src="@drawable/toolbar_button_attachment" android:onClick="onClick" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <com.adobe.reader.viewer.ARTouchDisabledLinearLayout android:gravity="center" android:orientation="vertical" android:background="#ff929292" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.adobe.reader.viewer.ARTouchDisabledRelativeLayout android:background="#ff929292" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_alignParentBottom="true"/>
+        <View android:background="@drawable/dotted_line" android:clickable="false" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_alignParentBottom="true"/>
+    </com.adobe.reader.viewer.ARTouchDisabledRelativeLayout>
+    <com.adobe.reader.comments.ARCommentOverlayView android:id="@id/inkSignatureOverlayView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <com.adobe.reader.viewer.ARTouchDisabledRelativeLayout android:gravity="center_horizontal" android:background="#ff929292" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_alignParentTop="true"/>
+        <View android:background="@drawable/dotted_line" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_alignParentTop="true"/>
+        <TextView android:textColor="#ff757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sign Here" android:layout_alignParentTop="true" android:layout_centerInParent="true"/>
+    </com.adobe.reader.viewer.ARTouchDisabledRelativeLayout>
+</com.adobe.reader.viewer.ARTouchDisabledLinearLayout><LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <LinearLayout android:orientation="vertical" android:id="@id/bookmarkPanelLayout" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/bookmarkPanelHeader" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/mp_bookmarksonly_md_n_lt"/>
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:paddingLeft="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Bookmarks" android:layout_weight="1.0"/>
+            <Button android:id="@id/bookmarkDismissButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+        <LinearLayout android:background="#ffcccccc" android:padding="0.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip">
+            <ListView android:id="@id/bookmarkPanel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="#ffcccccc" android:dividerHeight="1.0dip" android:fadeScrollbars="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout><LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetPanel" android:background="@drawable/toolbar" android:padding="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtVwNoResults" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No results to display"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#f22d2d2d" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtResultCount" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="search results.."/>
+            <ProgressBar android:gravity="center" android:id="@id/searchProgress" android:layout_width="wrap_content" android:layout_height="15.0dip" style="@style/cloudLoginLoadingPage"/>
+        </LinearLayout>
+        <ListView android:id="@id/lstViewSnippet" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </LinearLayout>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/findTextLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:textColorHint="#ffbbbbbb" android:id="@id/findText" android:paddingLeft="8.0dip" android:paddingRight="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter text to search" android:maxLines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <ImageButton android:id="@id/clearFind" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector" android:layout_alignRight="@id/findText" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout></LinearLayout></LinearLayout></RelativeLayout>
+    </File>
+    <File file_name="author_dialog_box_layout.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:id="@id/enter_author_text" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <EditText android:id="@id/author_text_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:hint="Enter name here" android:lines="1" android:scrollHorizontally="true" android:layout_below="@id/enter_author_text" android:imeOptions="flagNoEnterAction"/>
+    <LinearLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/author_text_field">
+        <Button android:id="@id/author_save_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Save" android:layout_weight="1.0"/>
+        <Button android:id="@id/author_skip_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Skip" android:layout_weight="1.0"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="automation_list_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fastScrollEnabled="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="bookmark_entries.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@drawable/bookmark_title_text_color_selector" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/bookmarkTitle" android:background="@drawable/bookmark_entry_background_color_selector" android:paddingLeft="40.0dip" android:paddingTop="12.0dip" android:paddingRight="40.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    <ImageView android:id="@id/getPrevLevelBookmarksIcon" android:background="@null" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bookmark_prev_level_image_selector" android:layout_alignTop="@id/bookmarkTitle" android:layout_alignBottom="@id/bookmarkTitle" android:layout_alignParentLeft="true"/>
+    <ImageView android:id="@id/getNextLevelBookmarksIcon" android:background="@null" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bookmark_next_level_image_selector" android:layout_alignTop="@id/bookmarkTitle" android:layout_alignBottom="@id/bookmarkTitle" android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="bookmark_panel.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <LinearLayout android:orientation="vertical" android:id="@id/bookmarkPanelLayout" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/bookmarkPanelHeader" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/mp_bookmarksonly_md_n_lt"/>
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:paddingLeft="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Bookmarks" android:layout_weight="1.0"/>
+            <Button android:id="@id/bookmarkDismissButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+        <LinearLayout android:background="#ffcccccc" android:padding="0.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip">
+            <ListView android:id="@id/bookmarkPanel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="#ffcccccc" android:dividerHeight="1.0dip" android:fadeScrollbars="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="child_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/entriesLinearLayout" android:padding="4.0px" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+    <ImageView android:id="@id/childIcon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="0.0px"/>
+    <TextView android:textStyle="bold" android:textColor="#ff333333" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/childName" android:padding="9.0px" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_weight="1.0" android:hapticFeedbackEnabled="true" android:fadeScrollbars="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="cloud_login_popup_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/cloudLoginPopupLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/cloudLoginPopupTitle" android:background="@drawable/split_pane_topbar_drawable" android:clickable="false" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="Acrobat.com"/>
+    <FrameLayout android:id="@id/cloudLoginLayout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="color_picker_item.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip"/>
+    </File>
+    <File file_name="comment_row.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/commentLinearLayout" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0sp" android:typeface="sans" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/popupnotecomment_authorname" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:typeface="sans" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/popupnotecomment_moddate" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="14.0sp" android:typeface="sans" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/popupnote_numreplies" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView android:enabled="true" android:textSize="13.0sp" android:textColor="#ff333333" android:gravity="top" android:id="@id/popupnotecomment_text" android:background="@null" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cursorVisible="false"/>
+</LinearLayout>
+    </File>
+    <File file_name="context_menu_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <View android:paddingTop="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textStyle="bold" android:gravity="center" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="create_pdf_activity_chooser.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="directory_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/bookmark_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/fileIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/mp_genericfolder_xl_n_lt"/>
+    <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="left|center" android:id="@id/int_dirName" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/ext_dirName" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0"/>
+        <TextView android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="left" android:id="@id/dirDescription" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="directory_row.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip">
+    <TextView android:textColor="#ffffffff" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/directoryPath" android:background="#ff999999" android:paddingLeft="12.0dip" android:paddingRight="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="export_locale_entries.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/localeEntryLinearLayout" android:padding="4.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RadioButton android:layout_gravity="center" android:id="@id/selectedStateButton" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true"/>
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff000000" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/localeOptionName" android:padding="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toLeftOf="@id/selectedStateButton" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="export_options.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/exportOptionsPopupLayout" android:background="#ffdcdcdc" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:id="@id/exportOptionsPopupTopBar" android:background="@drawable/split_pane_topbar_drawable" android:clickable="false" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="center" android:id="@id/exportOptionsPopupTitle" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Export from PDF"/>
+    </RelativeLayout>
+    <FrameLayout android:id="@id/exportOptionsLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/exportDialogMainLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/exportDialogLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <TextView android:textSize="17.0sp" android:textColor="#ff666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="2.0dip" android:text="Export Options"/>
+                <ListView android:id="@id/exportFormatsListView" android:background="@drawable/all_rounded_corners" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="10.0dip" android:cacheColorHint="#00000000"/>
+                <TextView android:textSize="17.0sp" android:textColor="#ff666666" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="2.0dip" android:text="Recognize scanned text in"/>
+                <Button android:textSize="16.0sp" android:textColor="#ff517496" android:gravity="center_vertical" android:id="@id/localeButton" android:background="@drawable/all_rounded_corners" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="10.0dip"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/export_button_layout_background" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:id="@id/exportCancelButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="1.0"/>
+                <Button android:id="@id/exportOkButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Export" android:layout_weight="1.0"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/localeDialogMainLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/localesListView" android:background="@drawable/all_rounded_corners" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="10.0dip" android:cacheColorHint="#00000000"/>
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/export_button_layout_background" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:id="@id/localeCancelButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="1.0"/>
+                <Button android:id="@id/localeExportButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Export" android:layout_weight="1.0"/>
+            </LinearLayout>
+        </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/cloudLoginLoadingPage"/>
+    <TextView android:textSize="15.0sp" android:id="@id/loadingPageText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Loading..."/>
+</LinearLayout></FrameLayout>
+</LinearLayout>
+    </File>
+    <File file_name="export_options_entries.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/entriesLinearLayout" android:padding="4.0dip" android:clickable="true" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RadioButton android:id="@id/selectedStateButton" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true"/>
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ff000000" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/exportOptionName" android:padding="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toLeftOf="@id/selectedStateButton" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="file_browser_document_toggle_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/togglePDFViewButton" android:layout_centerVertical="true">
+    <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="Documents" android:layout_weight="2.0"/>
+    <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:id="@id/actionBarSubtitleText" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="file_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textColor="#ffffffff" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/directoryPath" android:background="#ff999999" android:paddingLeft="12.0dip" android:paddingRight="25.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/fileBrowserBackgroundLayout" android:background="@drawable/file_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="68.0dip" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/fileIcon" android:background="@null" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_pdffiletype_xl_n_lt"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="left|center" android:id="@id/fileName" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="1.0"/>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/fileDetailsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/modifiedDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_alignParentLeft="true"/>
+                    <TextView android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:gravity="right|center" android:id="@id/fileSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/modifiedDate"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="file_transfer_activity_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@id/download_cloud_document_layout" android:background="#ffe8e8e8" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/top_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/documentToolbar" android:layout_width="fill_parent" android:layout_height="50.0dip" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+            <Button android:id="@id/TopBarBackButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:text="Cancel" android:onClick="onClick" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+        <View android:id="@id/toolbar_bottom_shadow" style="&#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/download_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/mp_pdf_lt"/>
+        <ProgressBar android:id="@id/downloadingPDFProgressBar" android:layout_width="220.0dip" android:layout_height="6.0dip" android:layout_marginTop="12.0dip" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/progress_bar_states" style="?android:attr/progressBarStyleHorizontal"/>
+        <TextView android:textSize="20.0sp" android:textColor="#ff000000" android:id="@id/downloadProgressPercentage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="0%"/>
+        <TextView android:textSize="14.0sp" android:id="@id/fileStatusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Opening"/>
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:ellipsize="middle" android:id="@id/downloadingPDFText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="find_toolbar.xml">
+      <com.adobe.reader.search.ARSearchToolbar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/find_toolbar" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+    <RelativeLayout android:id="@id/findTextLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:textColorHint="#ffbbbbbb" android:id="@id/findText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter text to search" android:maxLines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:drawableRight="@drawable/search_edit_text_drawable_right" android:layout_toLeftOf="@id/deactivateFind" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <ImageButton android:id="@id/clearFind" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector" android:layout_alignRight="@id/findText" android:layout_centerVertical="true"/>
+        <Button android:gravity="center" android:id="@id/deactivateFind" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="Cancel" android:layout_alignBaseline="@id/findText" android:layout_alignParentRight="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </RelativeLayout>
+</com.adobe.reader.search.ARSearchToolbar>
+    </File>
+    <File file_name="goto_page_dialog.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <EditText android:id="@id/goto_text_field" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:lines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:inputType="number" android:imeOptions="flagNoEnterAction"/>
+    <LinearLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/goto_text_field">
+        <Button android:id="@id/goto_ok_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="1.0"/>
+        <Button android:id="@id/goto_cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="1.0"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="grey_background.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/grey_background" android:background="#40000000" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="ink_signature_creation_layer.xml">
+      <com.adobe.reader.viewer.ARTouchDisabledLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="#ff929292" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.adobe.reader.viewer.ARTouchDisabledRelativeLayout android:background="#ff929292" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_alignParentBottom="true"/>
+        <View android:background="@drawable/dotted_line" android:clickable="false" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_alignParentBottom="true"/>
+    </com.adobe.reader.viewer.ARTouchDisabledRelativeLayout>
+    <com.adobe.reader.comments.ARCommentOverlayView android:id="@id/inkSignatureOverlayView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <com.adobe.reader.viewer.ARTouchDisabledRelativeLayout android:gravity="center_horizontal" android:background="#ff929292" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_alignParentTop="true"/>
+        <View android:background="@drawable/dotted_line" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_alignParentTop="true"/>
+        <TextView android:textColor="#ff757575" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sign Here" android:layout_alignParentTop="true" android:layout_centerInParent="true"/>
+    </com.adobe.reader.viewer.ARTouchDisabledRelativeLayout>
+</com.adobe.reader.viewer.ARTouchDisabledLinearLayout>
+    </File>
+    <File file_name="ink_toolbar_title.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip"/>
+    </File>
+    <File file_name="intent_filter_activity.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="lcrm_anon_dialog_layout.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@id/lcrm_anon_dlg_layout" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="300.0dip" android:minHeight="200.0dip">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left" android:id="@id/lcrm_anon_notify_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="If you open this document, anonymous usage data will be sent securely to this remote server:"/>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+            <ImageView android:id="@id/lcrm_anon_lock_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/mp_lock_sm_n_dk" android:layout_alignParentLeft="true"/>
+            <HorizontalScrollView android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/lcrm_anon_lock_icon">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="16.0sp" android:textStyle="italic" android:textColor="#ffffffff" android:gravity="left" android:id="@id/lcrm_anon_server_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+            </HorizontalScrollView>
+        </RelativeLayout>
+        <TextView android:textSize="16.0sp" android:id="@id/lcrm_anon_privacy_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="&quot;To learn more about what this means for you, please click here: &lt;a href='%s' &gt;Privacy and Security&lt;/a&gt;&quot;"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <Button android:id="@id/lcrm_anon_open_button" android:layout_width="0.0dip" android:layout_height="40.0dip" android:text="Open" android:layout_weight="1.0"/>
+            <Button android:id="@id/lcrm_anon_cancel_button" android:layout_width="0.0dip" android:layout_height="40.0dip" android:text="Cancel" android:layout_weight="1.0"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="lcrm_auth_dialog_layout.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="300.0dip" android:minHeight="200.0dip">
+    <ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/lcrm_auth_dlg_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left" android:id="@id/lcrm_auth_notify_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Access to this document is restricted by this remote server:" android:layout_weight="2.0"/>
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/lcrm_auth_learn_more_button" android:layout_width="70.0dip" android:layout_height="80.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/lcrm_moreinfo_button" android:layout_weight="1.0"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/lcrm_auth_lock_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:src="@drawable/mp_lock_sm_n_dk" android:layout_alignParentLeft="true"/>
+                <HorizontalScrollView android:gravity="right" android:scrollbars="none" android:fadingEdgeLength="40.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/lcrm_auth_lock_icon">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="14.0sp" android:textStyle="italic" android:textColor="#ffffffff" android:gravity="left" android:id="@id/lcrm_auth_server_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                </HorizontalScrollView>
+            </RelativeLayout>
+            <EditText android:textColor="#ff000000" android:id="@id/lcrm_auth_username_text" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:hint="Username" android:scrollHorizontally="true" android:singleLine="true" android:autoText="false" android:imeOptions="actionNext"/>
+            <EditText android:textColor="#ff000000" android:id="@id/lcrm_auth_password_text" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" android:hint="Password" android:scrollHorizontally="true" android:password="true" android:singleLine="true" android:autoText="false" android:imeOptions="actionDone" android:imeActionLabel="Login"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip">
+                <Button android:id="@id/lcrm_auth_login_button" android:layout_width="0.0dip" android:layout_height="40.0dip" android:text="Login" android:layout_weight="1.0"/>
+                <Button android:id="@id/lcrm_auth_cancel_button" android:layout_width="0.0dip" android:layout_height="40.0dip" android:text="Cancel" android:layout_weight="1.0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/lcrm_learn_more_dlg_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:layout_gravity="top" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_weight="15.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@id/lcrm_learn_more_privacy_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="&quot;You must sign in with your account information to be granted access to this document. Your account information will be sent securely to %1$s. To learn more about what this means for you, please click here: &lt;a href='%2$s' &gt;Privacy and Security&lt;/a&gt;&quot;"/>
+                <View android:id="@id/lcrm_learn_more_horizontal_rule" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip"/>
+                <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@id/lcrm_learn_more_welcome_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip"/>
+            </LinearLayout>
+        </ScrollView>
+        <Button android:layout_gravity="center_horizontal" android:id="@id/lcrm_learn_more_back_button" android:layout_width="wrap_content" android:layout_height="40.0dip" android:minWidth="150.0dip" android:minHeight="40.0dip" android:text="Back" android:layout_weight="1.0"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="left_pane_entries.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/leftPaneEntryLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="50.0dip">
+        <ImageView android:layout_gravity="left|center" android:id="@id/leftPaneEntryIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="21.0dip" android:layout_marginRight="21.0dip"/>
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffc9c9c9" android:layout_gravity="right|center" android:id="@id/leftPaneEntryTitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+        
+    <ProgressBar android:layout_gravity="center_vertical" android:id="@id/statusSpinner" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" style="@android:style/Widget.ProgressBar.Small.Inverse"/>
+    <TextView android:textSize="16.0sp" android:textColor="#ffc9c9c9" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/numOutboxFiles" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip"/>
+</LinearLayout>
+    <View android:background="#ff363636" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_below="@id/leftPaneEntryLayout" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="loading_page_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/cloudLoginLoadingPage"/>
+    <TextView android:textSize="15.0sp" android:id="@id/loadingPageText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Loading..."/>
+</LinearLayout>
+    </File>
+    <File file_name="move_files_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:orientation="vertical" android:id="@id/move_files_layout" android:background="#77000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Choose a location" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/createDirctoryButton" android:background="@drawable/switch_view_button" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/mp_addfolder_md_n_dk"/>
+        <Button android:layout_gravity="center_vertical" android:id="@id/pasteFilesButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="Move" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <LinearLayout android:id="@id/moveDialogNavigateUpLayout" android:background="@drawable/directory_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:id="@id/moveUpIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_levelup_md_n_lt"/>
+        <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/parentDirectoryName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+    <ListView android:id="@id/move_files_list_view" android:background="@drawable/file_list_panel_border" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:layout_weight="1.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="opacity_picker_item_container.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@drawable/mp_opacity_lg_n_dk" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+    <View android:layout_width="35.0dip" android:layout_height="35.0dip"/>
+</LinearLayout>
+    </File>
+    <File file_name="outbox_file_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:background="@drawable/file_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="68.0dip" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/fileIcon" android:background="@null" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_pdffiletype_xl_n_lt"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="left|center" android:id="@id/fileName" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:orientation="horizontal" android:id="@id/fileDetailsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/statusDetailsLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ProgressBar android:id="@id/LoadingSpinner" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" style="@android:style/Widget.ProgressBar.Small.Inverse"/>
+                        <ImageView android:id="@id/failureIcon" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:src="@drawable/mp_failure_lt"/>
+                        <ImageView android:id="@id/errorIcon" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:src="@drawable/mp_alert_lt"/>
+                        <ImageView android:id="@id/completedIcon" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:src="@drawable/mp_checkmarkgreen_lt"/>
+                    </LinearLayout>
+                    <TextView android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/descriptionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true" android:layout_toRightOf="@id/statusDetailsLayout" android:layout_centerVertical="true"/>
+                    <ImageView android:id="@id/cloudIcon" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/mp_clouddoc_disabled_n_lt" android:layout_toRightOf="@id/descriptionText" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageButton android:layout_gravity="center" android:id="@id/cancelOutboxEntry" android:background="@null" android:paddingLeft="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="password_dialog_box_layout.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:id="@id/enter_passwd_text" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%s is protected. Please enter a Document Open Password:"/>
+    <LinearLayout android:id="@id/password_field" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/enter_passwd_text">
+        <EditText android:id="@id/password_text_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Password" android:maxLines="1" android:scrollHorizontally="true" android:password="true" android:imeOptions="flagNoEnterAction"/>
+    </LinearLayout>
+    <LinearLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/password_field">
+        <Button android:id="@id/passwd_ok_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="1.0"/>
+        <Button android:id="@id/passwd_cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="1.0"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="pencil_toolbar.xml">
+      <com.adobe.reader.comments.ARInkCommentToolbar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/pencil_toolbar" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/pencil_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:text="Cancel" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/pencil_undo_button" android:layout_width="40.0dip" android:layout_toLeftOf="@id/pencil_redo_button" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/pencil_redo_button" android:layout_width="40.0dip" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/pencil_done_button" android:layout_alignBaseline="@id/pencil_undo_button" android:layout_alignBottom="@id/pencil_undo_button" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/pencil_done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Save" android:layout_alignBaseline="@id/pencil_cancel_button" android:layout_alignBottom="@id/pencil_cancel_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip"/></RelativeLayout>
+</com.adobe.reader.comments.ARInkCommentToolbar>
+    </File>
+    <File file_name="popup_menu_item.xml">
+      <TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="50.0sp">
+    <ImageView android:layout_gravity="center_vertical" android:paddingLeft="12.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:layout_gravity="center_vertical" android:paddingLeft="12.0sp" android:paddingRight="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <ImageView android:layout_gravity="center_vertical" android:paddingLeft="7.0sp" android:paddingRight="12.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</TableRow>
+    </File>
+    <File file_name="popup_menu_title.xml">
+      <TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ff585858" android:layout_gravity="center_vertical" android:paddingLeft="12.0sp" android:paddingTop="3.0sp" android:paddingBottom="3.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="3"/>
+</TableRow>
+    </File>
+    <File file_name="popup_note_widget_layout.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="2.0dip" android:paddingTop="2.0dip" android:paddingRight="2.0dip" android:paddingBottom="2.0dip" android:layout_width="354.0dip" android:layout_height="326.0dip">
+    <RelativeLayout android:id="@id/popup_note_widget_outer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/PopupButtonsLayout" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentTop="true">
+            <Button android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/popupNoteCancel" android:background="@drawable/popup_widget_button" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" android:maxWidth="100.0dip" android:minWidth="50.0dip" android:text="Cancel" android:lines="1" android:scrollHorizontally="true" android:layout_alignParentLeft="true"/>
+            <Button android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/popupNoteDone" android:background="@drawable/popup_widget_button" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" android:maxWidth="100.0dip" android:minWidth="50.0dip" android:text="Save" android:lines="1" android:scrollHorizontally="true" android:layout_alignParentRight="true"/>
+            <Button android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/popupNoteClose" android:background="@drawable/popup_widget_button" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" android:maxWidth="100.0dip" android:minWidth="50.0dip" android:text="Close" android:lines="1" android:scrollHorizontally="true" android:layout_alignParentRight="true"/>
+            <Button android:textSize="11.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/popupNoteDelete" android:background="@drawable/popup_widget_button" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" android:maxWidth="100.0dip" android:minWidth="50.0dip" android:text="Delete" android:lines="1" android:scrollHorizontally="true" android:layout_alignParentLeft="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/PopupButtonsLayout">
+            <RelativeLayout android:background="@drawable/popup_widget_inner_border" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/popup_note_widget_inner_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <RelativeLayout android:id="@id/popupnotewidget_title_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                        <LinearLayout android:orientation="vertical" android:id="@id/popupnotewidget_edittext_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true">
+                            <ListView android:id="@id/repliesPanel" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="@null" android:fadeScrollbars="true"/>
+                            <EditText android:textSize="13.0sp" android:textColor="#ff333333" android:gravity="top" android:id="@id/popupnotewidget_replytext" android:background="#ffffffff" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+                        </LinearLayout>
+                        <RelativeLayout android:id="@id/popupnotewidget_addtext_layout" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <EditText android:textSize="13.0sp" android:gravity="top" android:id="@id/popupnotewidget_edittext" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Add your comment here." android:imeOptions="actionDone" android:imeActionLabel="Save"/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="print_dialog.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <WebView android:id="@id/printWebview" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</RelativeLayout>
+    </File>
+    <File file_name="recent_file_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="@drawable/file_entry_background_color_selector" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:id="@id/fileIcon_linearLayout" android:layout_width="70.0dip" android:layout_height="68.0dip">
+        <RelativeLayout android:id="@id/fileIcon_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/recentfileicon_top_left_shadow" android:background="@drawable/file_icon_top_left_shadow" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+            <View android:id="@id/recentfileicon_bottom_left_shadow" android:background="@drawable/file_icon_bottom_left_shadow" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+            <View android:id="@id/recentfileicon_bottom_right_shadow" android:background="@drawable/file_icon_bottom_right_shadow" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+            <View android:id="@id/recentfileicon_top_right_shadow" android:background="@drawable/file_icon_top_right_shadow" android:layout_width="3.0dip" android:layout_height="3.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+            <View android:id="@id/recentfileicon_left_shadow" android:background="@drawable/file_icon_left_shadow" android:layout_width="3.0dip" android:layout_height="fill_parent" android:layout_above="@id/recentfileicon_bottom_left_shadow" android:layout_below="@id/recentfileicon_top_left_shadow" android:layout_alignParentLeft="true"/>
+            <View android:id="@id/recentfileicon_right_shadow" android:background="@drawable/file_icon_right_shadow" android:layout_width="3.0dip" android:layout_height="fill_parent" android:layout_above="@id/recentfileicon_bottom_right_shadow" android:layout_below="@id/recentfileicon_top_right_shadow" android:layout_alignParentRight="true"/>
+            <View android:id="@id/recentfileicon_top_shadow" android:background="@drawable/file_icon_top_shadow" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_toLeftOf="@id/recentfileicon_top_right_shadow" android:layout_toRightOf="@id/recentfileicon_top_left_shadow" android:layout_alignParentTop="true"/>
+            <View android:id="@id/recentfileicon_bottom_shadow" android:background="@drawable/file_icon_bottom_shadow" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_toLeftOf="@id/recentfileicon_bottom_right_shadow" android:layout_toRightOf="@id/recentfileicon_bottom_left_shadow" android:layout_alignParentBottom="true"/>
+            <ImageView android:id="@id/recentFileIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_toLeftOf="@id/recentfileicon_right_shadow" android:layout_toRightOf="@id/recentfileicon_left_shadow" android:layout_above="@id/recentfileicon_bottom_shadow" android:layout_below="@id/recentfileicon_top_shadow"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="12.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:gravity="left|center" android:id="@id/fileName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0"/>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/fileDetailsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/modifiedDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:singleLine="true"/>
+            <TextView android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:gravity="right|center" android:id="@id/fileSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/modifiedDate"/>
+            <ImageView android:id="@id/cloudFileIcon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/mp_clouddoc_disabled_n_lt" android:layout_toRightOf="@id/fileSize" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="reply_entries.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/repliesLinearLayout" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/replyIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/mp_reply_sm_n_lt"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/popupnotereply_authorname" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:textStyle="bold" android:textColor="#ff333333" android:id="@id/popupnotereply_moddate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip"/>
+        </LinearLayout>
+        <EditText android:enabled="true" android:textSize="13.0sp" android:textColor="#ff333333" android:gravity="top" android:id="@id/popupnotereply_text" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cursorVisible="false" android:editable="false"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="right_pane_fragment.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/rightPaneFragmentFrameLayout" android:background="@drawable/file_list_panel_border" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@id/rightPaneRecentFilesListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:fastScrollEnabled="true"/>
+    <TextView android:id="@id/noRecentFiles" android:text="No recent documents to display." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <FrameLayout android:id="@id/rightPaneDocumentsLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/folderViewLayout" android:background="@drawable/file_entry_background_color_selector" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/rightPaneDocumentNavigateUpLayout" android:background="@drawable/directory_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <ImageView android:id="@id/navigateUpIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_levelup_md_n_lt"/>
+                <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/navigateUpDirectoryName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+            </LinearLayout>
+            <ListView android:id="@id/folderViewListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:fastScrollEnabled="true"/>
+        </LinearLayout>
+        <FrameLayout android:id="@id/allPDFLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/allPDFListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:fastScrollEnabled="true"/>
+            <TextView android:textSize="16.0sp" android:textColor="#ff818181" android:gravity="center" android:id="@id/noMatchingPdfFiles" android:background="@drawable/file_list_panel_border" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="No files were found"/>
+            <TextView android:textSize="16.0sp" android:textColor="#ff818181" android:gravity="center" android:id="@id/noPdfFiles" android:background="@drawable/file_list_panel_border" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="No PDF Documents Available"/>
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/BlueHeronView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/folderViewLayoutBH" android:background="@drawable/file_entry_background_color_selector" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/rightPaneBHNavigateUpLayout" android:background="@drawable/directory_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+                <ImageView android:id="@id/navigateUpIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_levelup_md_n_lt"/>
+                <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/navigateUpDirectoryNameBH" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+            </LinearLayout>
+            <ListView android:id="@id/rightPaneListViewBH" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:fastScrollEnabled="true"/>
+            <TextView android:id="@id/noCloudFiles" android:text="No documents to display" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/cloudLoginLoadingPage"/>
+    <TextView android:textSize="15.0sp" android:id="@id/loadingPageText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Loading..."/>
+</LinearLayout></FrameLayout>
+    <FrameLayout android:id="@id/cloudTransferView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/cloudTransferListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:fastScrollEnabled="true"/>
+        <TextView android:id="@id/noOutboxFiles" android:text="All documents have been saved to Acrobat.com" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </FrameLayout>
+    <View android:id="@id/rightPaneTransparentView" android:background="#00000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+
+    <FrameLayout android:id="@id/myAccountsMainLayout" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/myAccountsLayout" android:background="#ffcccccc" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="#ff666666" android:ellipsize="middle" android:gravity="left|center" android:layout_gravity="left" android:id="@id/myAccountsHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginBottom="10.0dip" android:text="Adobe Reader Subscriptions" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0"/>
+            <ListView android:id="@id/myAccountsListView" android:background="@drawable/all_rounded_corners" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="10.0dip" android:cacheColorHint="#00000000" android:divider="#ffbbbbbb" android:dividerHeight="1.0dip"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout android:id="@id/helpLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ScrollView android:id="@id/helpScrollView" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ListView android:id="@id/help_listView" android:background="@drawable/all_rounded_corners" android:layout_width="fill_parent" android:layout_height="160.0dip" android:listSelector="#00000000" android:cacheColorHint="#00000000" android:divider="#ffbbbbbb" android:dividerHeight="1.0dip" android:overScrollMode="never"/>
+                <RelativeLayout android:gravity="center" android:id="@id/shareButton" android:background="@drawable/help_share_feedback_color_selector" android:clickable="true" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="20.0dip">
+                    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                        <ImageView android:layout_gravity="end" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/help_share_feedback_icon_selector" android:scaleType="centerInside"/>
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:gravity="center" android:id="@id/shareFeedback" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:text="Share Feedback" android:singleLine="true"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <TextView android:textSize="14.0sp" android:textColor="#ff666666" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/feedback" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginRight="50.0dip" android:text="Help make Adobe Reader a better product by sharing your feedback on the online support forum"/>
+            </LinearLayout>
+        </ScrollView>
+        <WebView android:id="@id/rightPaneWebViewWN" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <WebView android:id="@id/rightPaneWebViewHT" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/cloudLoginLoadingPage"/>
+    <TextView android:textSize="15.0sp" android:id="@id/loadingPageText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="Loading..."/>
+</LinearLayout></FrameLayout>
+</FrameLayout>
+    </File>
+    <File file_name="row_help.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip">
+    <ImageView android:layout_gravity="center" android:id="@id/leftIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:scaleType="centerInside"/>
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:id="@id/mainHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/file_entry_second_layer_text_color_selector" android:ellipsize="middle" android:id="@id/subHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/mainHeading"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="search_toolbar.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/findTextLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:textColorHint="#ffbbbbbb" android:id="@id/findText" android:paddingLeft="8.0dip" android:paddingRight="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter text to search" android:maxLines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <ImageButton android:id="@id/clearFind" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector" android:layout_alignRight="@id/findText" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="security_panel.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/securityViewLayout" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@id/securityPanelHeader" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/securityPanelIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/mp_lock_md_n_lt"/>
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Protected Document" android:layout_weight="1.0"/>
+        <Button android:id="@id/securityDismissButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <LinearLayout android:id="@id/securityPanelBody" android:background="#ff999999" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip">
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ff333333" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/securityView" android:background="#ffffffff" android:paddingLeft="12.0dip" android:paddingTop="8.0dip" android:paddingRight="12.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;This document is protected.&#10;Some edits may not be allowed.&quot;"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="signature_toolbar.xml">
+      <com.adobe.reader.comments.ARInkSignatureToolbar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/ink_signature_toolbar" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/ink_signature_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:text="Cancel" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/ink_signature_done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="10.0dip" android:text="Save" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip"/></RelativeLayout>
+</com.adobe.reader.comments.ARInkSignatureToolbar>
+    </File>
+    <File file_name="snippet_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/snippetPanel" android:background="@drawable/toolbar" android:padding="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtVwNoResults" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No results to display"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#f22d2d2d" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtResultCount" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="search results.."/>
+            <ProgressBar android:gravity="center" android:id="@id/searchProgress" android:layout_width="wrap_content" android:layout_height="15.0dip" style="@style/cloudLoginLoadingPage"/>
+        </LinearLayout>
+        <ListView android:id="@id/lstViewSnippet" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </LinearLayout>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/findTextLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:textColorHint="#ffbbbbbb" android:id="@id/findText" android:paddingLeft="8.0dip" android:paddingRight="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter text to search" android:maxLines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <ImageButton android:id="@id/clearFind" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector" android:layout_alignRight="@id/findText" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout></LinearLayout>
+    </File>
+    <File file_name="snippet_loadrow_progress.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:layout_width="wrap_content" android:layout_height="28.0dip" style="@style/cloudLoginLoadingPage"/>
+</LinearLayout>
+    </File>
+    <File file_name="snippet_panel.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetPanel" android:background="@drawable/toolbar" android:padding="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtVwNoResults" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No results to display"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#f22d2d2d" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtResultCount" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="search results.."/>
+            <ProgressBar android:gravity="center" android:id="@id/searchProgress" android:layout_width="wrap_content" android:layout_height="15.0dip" style="@style/cloudLoginLoadingPage"/>
+        </LinearLayout>
+        <ListView android:id="@id/lstViewSnippet" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </LinearLayout>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/findTextLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:textColorHint="#ffbbbbbb" android:id="@id/findText" android:paddingLeft="8.0dip" android:paddingRight="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter text to search" android:maxLines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <ImageButton android:id="@id/clearFind" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector" android:layout_alignRight="@id/findText" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout></LinearLayout></LinearLayout>
+    </File>
+    <File file_name="snippet_row.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#f22d2d2d" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:id="@id/snippet_separator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="left" android:id="@id/pages_text_view" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Page 1" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:gravity="right" android:id="@id/results_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Results 3 - 7" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/snippetImage" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/snippet_cut_top" android:background="@drawable/snippet_cut_top_repeat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"/>
+        <ImageView android:id="@id/snippet_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_below="@id/snippet_cut_top" android:layout_alignParentTop="true"/>
+        <LinearLayout android:orientation="horizontal" android:id="@id/snippet_cut_bottom" android:background="@drawable/snippet_cut_bottom_repeat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/snippet_image"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="split_pane.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/split_pane_layout" android:background="#ff49494c" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/leftHandPane" android:visibility="invisible" android:layout_width="230.0dip" android:layout_height="fill_parent">
+        <fragment android:id="@id/leftPane" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.adobe.reader.viewer.ARLeftPaneFragment"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/rightHandPane" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:id="@id/rightPane" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.adobe.reader.viewer.ARRightPaneFragment"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/move_files_layout" android:background="#77000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Choose a location" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/createDirctoryButton" android:background="@drawable/switch_view_button" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/mp_addfolder_md_n_dk"/>
+        <Button android:layout_gravity="center_vertical" android:id="@id/pasteFilesButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="Move" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <LinearLayout android:id="@id/moveDialogNavigateUpLayout" android:background="@drawable/directory_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:id="@id/moveUpIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_levelup_md_n_lt"/>
+        <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/parentDirectoryName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+    <ListView android:id="@id/move_files_list_view" android:background="@drawable/file_list_panel_border" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:layout_weight="1.0"/>
+</LinearLayout></RelativeLayout>
+    </File>
+    <File file_name="support_simple_spinner_dropdown_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:ellipsize="marquee" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:singleLine="true" style="?attr/spinnerDropDownItemStyle"/>
+    </File>
+    <File file_name="thumbnail.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/thumbnailLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.adobe.reader.viewer.ARPageThumbnailView android:gravity="center" android:id="@id/parThumbnailGridView" android:background="#ffa0a0a0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="18.0dip" android:verticalSpacing="18.0dip" android:stretchMode="spacingWidth" android:numColumns="auto_fit" android:layout_above="@id/bottomBarForThumbnails" android:layout_below="@id/topBarForThumbnails" android:fadeScrollbars="true"/>
+    <LinearLayout android:id="@id/topBarForThumbnails" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/thumbnailTopBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/thumbnailGridFilesButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentLeft="true" android:onClick="hideThumbnails"/>
+            <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:ellipsize="middle" android:id="@id/thumbnailGridFilename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toRightOf="@id/thumbnailGridFilesButton"/>
+            <Button android:id="@id/thumbnailEditButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/bottomBarForThumbnails" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+        <RelativeLayout android:id="@id/thumbnailBottomBarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:gravity="center_vertical" android:id="@id/thumbnailDismissButton" android:background="@drawable/thumbnail_button_unselected_background" android:paddingLeft="2.0dip" android:paddingTop="7.0dip" android:paddingRight="2.0dip" android:paddingBottom="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dummy_icon" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="thumbnail_tile.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/thumbnailTileRelativeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:gravity="center" android:id="@id/thumbnailTileImage" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:onClick="navigateToPage"/>
+    <TextView android:id="@id/thumbnailPageNumberView" android:padding="5.0dip" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="toast.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/toastLayout" android:background="@drawable/toast_border" android:padding="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:background="@drawable/toast_background" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/toastText" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="toolbar_commenting.xml">
+      <com.adobe.reader.comments.ARCommentsToolbar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/toolbar_commenting" android:layout_width="wrap_content" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/toolbar_commenting_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/tool_add_stickynote" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/tool_add_highlight" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/tool_add_strikeout" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/tool_add_underline" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/tool_add_text" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/tool_add_pencil" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:id="@id/tool_add_inksign" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <RelativeLayout android:id="@id/toolbar_backbutton_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/tool_back_button" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+            <View android:id="@id/tool_divider" android:layout_alignLeft="@id/tool_back_button" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </RelativeLayout>
+    </LinearLayout>
+</com.adobe.reader.comments.ARCommentsToolbar>
+    </File>
+    <File file_name="toolbar_filename.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip"/>
+    </File>
+    <File file_name="toolbar_separator.xml">
+      <ViewStub xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="0.0dip" android:layout_height="0.0dip"/>
+    </File>
+    <File file_name="typewriter_toolbar.xml">
+      <com.adobe.reader.comments.ARFreetextCommentToolbar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/typewriter_toolbar" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+    <Button android:id="@id/typewriter_replace_me_1" android:text="t1" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <Button android:id="@id/typewriter_replace_me_2" android:text="t2" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageButton android:id="@id/typewriter_cancel_button" android:src="@drawable/cancel_search_image_selector" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.adobe.reader.comments.ARFreetextCommentToolbar>
+    </File>
+    <File file_name="widget_top_toolbar.xml">
+      <com.adobe.reader.forms.ARWidgetTopToolbar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget_top_toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+    <Button android:id="@id/widget_toolbar_clearField" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="Reset Field" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <Button android:id="@id/widget_toolbar_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="Next" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <Button android:id="@id/widget_toolbar_previous" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:text="Previous" android:layout_toLeftOf="@id/widget_toolbar_next" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+</com.adobe.reader.forms.ARWidgetTopToolbar>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v11">
+    <File file_name="abc_action_bar_decor.xml">
+      <android.support.v7.internal.widget.NativeActionModeAwareLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/action_bar_root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <android.support.v7.internal.widget.ActionBarContainer android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle">
+        <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+        <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </android.support.v7.internal.widget.ActionBarContainer>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</android.support.v7.internal.widget.NativeActionModeAwareLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v14">
+    <File file_name="abc_activity_chooser_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/activity_chooser_view_content" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/activityChooserViewStyle">
+    
+    <FrameLayout android:layout_gravity="center" android:id="@id/expand_activities_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/default_activity_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-xlarge">
+    <File file_name="bookmark_panel.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="@dimen/bookmark_panel_width" android:layout_height="wrap_content" android:layout_above="@id/bottomToolbar" android:layout_alignParentRight="true">
+    
+    <LinearLayout android:orientation="vertical" android:id="@id/bookmarkPanelLayout" android:background="#ffffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:id="@id/bookmarkPanelHeader" android:background="#ffffffff" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/mp_bookmarksonly_md_n_lt"/>
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff333333" android:layout_gravity="center_vertical" android:paddingLeft="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Bookmarks" android:layout_weight="1.0"/>
+            <Button android:id="@id/bookmarkDismissButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+        <LinearLayout android:background="#ffcccccc" android:padding="0.5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip">
+            <ListView android:id="@id/bookmarkPanel" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="#ffcccccc" android:dividerHeight="1.0dip" android:fadeScrollbars="true"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="ink_toolbar_title.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+    <File file_name="move_files_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/move_files_layout" android:background="#77000000" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="#ffcccccc" android:padding="2.0dip" android:layout_width="500.0dip" android:layout_height="500.0dip">
+        <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+            <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Choose a location" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+            <ImageButton android:layout_gravity="center_vertical" android:id="@id/createDirctoryButton" android:background="@drawable/switch_view_button" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/mp_addfolder_md_n_dk"/>
+            <Button android:layout_gravity="center_vertical" android:id="@id/pasteFilesButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="Move" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        </LinearLayout>
+        <LinearLayout android:id="@id/moveDialogNavigateUpLayout" android:background="@drawable/directory_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <ImageView android:id="@id/moveUpIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_levelup_md_n_lt"/>
+            <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/parentDirectoryName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+        </LinearLayout>
+        <ListView android:id="@id/move_files_list_view" android:background="@drawable/file_list_panel_border" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="snippet_panel.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_below="@id/topBarLayout" android:layout_alignParentRight="true">
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetPanel" android:background="@drawable/toolbar" android:padding="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtVwNoResults" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No results to display"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/snippetLayout" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#f22d2d2d" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="#ffbbbbbb" android:gravity="center" android:id="@id/txtResultCount" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="search results.."/>
+            <ProgressBar android:gravity="center" android:id="@id/searchProgress" android:layout_width="wrap_content" android:layout_height="15.0dip" style="@style/cloudLoginLoadingPage"/>
+        </LinearLayout>
+        <ListView android:id="@id/lstViewSnippet" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </LinearLayout>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@id/findTextLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:textColorHint="#ffbbbbbb" android:id="@id/findText" android:paddingLeft="8.0dip" android:paddingRight="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter text to search" android:maxLines="1" android:scrollHorizontally="true" android:selectAllOnFocus="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <ImageButton android:id="@id/clearFind" android:background="@null" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="12.0dip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cancel_search_image_selector" android:layout_alignRight="@id/findText" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout></LinearLayout></RelativeLayout>
+    </File>
+    <File file_name="split_pane.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/split_pane_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:background="#ff49494c" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/leftHandPane" android:layout_width="230.0dip" android:layout_height="fill_parent">
+            <fragment android:id="@id/leftPane" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.adobe.reader.viewer.ARLeftPaneFragment"/>
+        </LinearLayout>
+        <View android:background="#ff0e0e0e" android:layout_width="1.0dip" android:layout_height="fill_parent"/>
+        <LinearLayout android:orientation="vertical" android:id="@id/rightHandPane" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <fragment android:id="@id/rightPane" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.adobe.reader.viewer.ARRightPaneFragment"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/move_files_layout" android:background="#77000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+        <TextView android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="Choose a location" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/createDirctoryButton" android:background="@drawable/switch_view_button" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/mp_addfolder_md_n_dk"/>
+        <Button android:layout_gravity="center_vertical" android:id="@id/pasteFilesButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text="Move" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <LinearLayout android:id="@id/moveDialogNavigateUpLayout" android:background="@drawable/directory_entry_background_color_selector" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="12.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <ImageView android:id="@id/moveUpIcon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/mp_levelup_md_n_lt"/>
+        <TextView android:textStyle="bold" android:textColor="@drawable/file_entry_text_color_selector" android:ellipsize="middle" android:layout_gravity="center_vertical" android:id="@id/parentDirectoryName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+    <ListView android:id="@id/move_files_list_view" android:background="@drawable/file_list_panel_border" android:layout_width="fill_parent" android:layout_height="0.0dip" android:divider="#ffe0e0e0" android:dividerHeight="0.5dip" android:layout_weight="1.0"/>
+</LinearLayout></FrameLayout>
+    </File>
+    <File file_name="toolbar_filename.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+    <File file_name="toolbar_separator.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;         &#10;         &#10;    "/>
+    </File>
+  </Directory>
+</App>
