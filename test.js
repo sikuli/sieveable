@@ -4,7 +4,7 @@ var fs = require('fs')
 var q1 = require('./lib/q1')
 // var q2 = require('./lib/q2')
 var q3 = require('./lib/q3')
-// var q4 = require('./lib/q4')
+var q5 = require('./lib/q5')
 
 glob.glob('./data/ui-xml/*', function(err, files) {
 
@@ -18,7 +18,7 @@ glob.glob('./data/ui-xml/*', function(err, files) {
     })
 
     // var result = q1(apps)
-    var result = q1(apps)
+    var result = q5(apps)
     console.log(result)
 
 })
