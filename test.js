@@ -18,7 +18,7 @@ glob.glob('./data/ui-xml/*', function(err, files) {
     })
 
     // var result = q1(apps)
-    var result = q5(apps)
+    var result = q5(apps, 10)
     console.log(result)
 
 })
