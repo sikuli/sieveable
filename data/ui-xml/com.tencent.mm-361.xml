@@ -10545,4 +10545,926 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="add_more_friends.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <IconPreference android:icon="@drawable/find_friends_by_micromsg" android:title="搜号码" android:key="find_friends_by_micromsg"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_qq_icon" android:title="添加QQ好友" android:key="find_friends_by_qq"/>
+    <IconPreference android:icon="@drawable/find_more_friend_mobile_icon" android:title="添加手机联系人" android:key="find_friends_by_mobile"/>
+    <IconPreference android:icon="@drawable/find_more_friend_google_icon" android:title="添加Google联系人" android:key="find_friends_by_google_account"/>
+    <IconPreference android:icon="@drawable/find_more_friend_fb_icon" android:title="添加Facebook朋友" android:key="find_friends_by_facebook"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_star_icon" android:title="查找公众号" android:key="find_friends_by_web"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_radar" android:title="一起按，加朋友" android:key="find_friends_by_radar"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="addapp_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <PreferenceCategory android:key="addapp_cat"/>
+    <com.tencent.mm.ui.base.preference.PluginTextPreference android:layout="@layout/mm_preference_content_plugin_text" android:key="addapp_added_text" android:plugin_icon="@drawable/app_icon" android:plugin_text="已在附件栏里" android:plugin_text_color="#ff454545"/>
+    <com.tencent.mm.ui.openapi.AppPreference android:layout="@layout/app_preference" android:key="addapp_added" android:btn_visibility="gone" android:can_delete="true" android:empty_wording="此处的工具会显示到附件栏"/>
+    <PreferenceCategory android:key="addapp_cat2"/>
+    <com.tencent.mm.ui.base.preference.PluginTextPreference android:layout="@layout/mm_preference_content_plugin_text" android:key="addapp_available_text" android:plugin_icon="@drawable/app_no_icon" android:plugin_text="可显示到附件栏" android:plugin_text_color="#ff454545"/>
+    <com.tencent.mm.ui.openapi.AppPreference android:layout="@layout/app_preference" android:key="addapp_available" android:btn_visibility="gone" android:empty_wording="支持微信附件接口的工具将自动出现在这里"/>
+    <PreferenceCategory android:key="addapp_cat3"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="app_profile.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.openapi.AppHeaderPreference android:layout="@layout/app_profile_header" android:key="app_profile_header"/>
+    <Preference android:layout="@layout/install_btn" android:title="加到附件栏中" android:key="app_profile_add"/>
+    <Preference android:layout="@layout/logout_btn" android:title="从附件栏中移除" android:key="app_profile_remove"/>
+    <PreferenceCategory android:key="app_profile_cat"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="WeChat" android:icon="@drawable/icon" android:accountType="com.tencent.mm.account" android:smallIcon="@drawable/icon" android:accountPreferences="@xml/account_preferences"/>
+    </File>
+    <File file_name="bottle_settings_pref_personal_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HeadImgPreference android:layout="@layout/mm_preference" android:title="设置我的漂流瓶头像" android:key="bottle_settings_change_avatar" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="为你的漂流瓶设置专用的头像" android:key="bottle_settings_change_avatar_tip"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="聊天列表显示收到的瓶子" android:key="bottle_settings_show_at_main"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="bottle_settings_clear_data"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="bottle_wizard_step2.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.base.preference.ChoicePreference mm:layout="@layout/mm_preference_null" android:title="性别" mm:key="settings_sex" mm:entries="@array/sex" mm:entryValues="@array/sex_id"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/mm_preference" android:title="地区" mm:key="settings_district"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/mm_preference" android:title="个性签名" mm:key="settings_signature"/>
+    <Preference mm:layout="@layout/mm_preference_info" android:title="&quot;此部分信息修改后，会同步到&#10;微信个人信息中&quot;" mm:key="bottle_settings_change_avatar_alert"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_bizinfo.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.BizInfoHeaderPreference android:layout="@layout/contact_info_header_bizinfo" android:key="contact_info_header_bizinfo"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="功能介绍" android:key="contact_info_user_desc"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="微信认证" android:key="contact_info_verifyuser"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:title="微信特权" android:key="contact_info_privilege"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="该用户已过期或注销，无法加入关注。" android:key="contact_info_time_expired"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="腾讯微博" android:key="contact_info_verifyuser_weibo" android:widgetLayout="@layout/mm_preference_submenu"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="接收消息" android:key="contact_info_subscribe_bizinfo"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="提供位置信息" android:key="contact_info_locate"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看消息" android:key="contact_info_biz_view" android:widgetLayout="@layout/mm_preference_submenu"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="关注" android:key="contact_info_biz_add" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="取消关注" android:key="contact_info_biz_remove" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_bottlecontact.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.NormalUserHeaderPreference android:layout="@layout/contact_info_header_normal" android:key="contact_info_header_normal"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="个性签名" android:key="contact_info_signature"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.contact.profile.NormalUserFooterPreference android:layout="@layout/contact_info_footer_normal" android:key="contact_info_footer_normal"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_chatroom.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.NormalUserHeaderPreference android:layout="@layout/contact_info_header_normal" android:key="contact_info_header_normal"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_facebookapp.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看朋友" android:key="contact_info_facebookapp_listfriend" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="Connection" android:key="contact_info_facebookapp_connect" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_facebookapp_cat"/>
+    <Preference android:layout="@layout/mm_preference" android:title="Facebook" android:key="contact_info_facebookapp_addr" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="“秀”二维码到Facebook" android:key="contact_info_facebookapp_showqrcode" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_facebookapp_cat2"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_facebookapp_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_facebookapp_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_feedsapp.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看朋友们的照片" android:key="contact_info_plugin_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="朋友圈黑名单" android:key="contact_info_plugin_outsize" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="不看他的照片" android:key="contact_info_plugin_black" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_plugin_install"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_plugin_uninstall"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_floatbottle.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="进入漂流瓶" android:key="contact_info_goto_floatbottle" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_floatbottle_hide_cat"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_floatbottle_clear_data"/>
+    <PreferenceCategory android:key="contact_info_floatbottle_hide_cat2"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="bottle_settings_clear_data"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_floatbottle_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_floatbottle_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_fmessage.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看消息" android:key="contact_info_view_message" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:title="向我推荐QQ好友" android:key="contact_info_recommend_qqfriends_to_me"/>
+    <CheckBoxPreference android:title="向我推荐通讯录朋友" android:key="contact_info_recommend_mobilefriends_to_me"/>
+    <CheckBoxPreference android:title="向我推荐Facebook朋友" android:key="contact_info_recommend_fbfriends_to_me"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="手机通讯录匹配" android:key="contact_info_bind_mobile_entry" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="匹配后可推荐开通了微信的通讯录朋友。" android:key="contact_info_bind_mobile_entry_tip"/>
+    <Preference android:layout="@layout/mm_preference" android:title="绑定QQ号" android:key="contact_info_bind_qq_entry" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="开启后可推荐你的QQ好友。" android:key="contact_info_bind_qq_entry_tip"/>
+    <Preference android:layout="@layout/mm_preference" android:title="Facebook" android:key="contact_info_bind_fb_entry" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="可推荐开通了微信的Facebook朋友。" android:key="contact_info_bind_fb_entry_tip"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_fmessage_clear_data"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_googlecontact.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="添加Google账号联系人" android:key="contact_info_googlecontact_add_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_googlecontact_hide_cat_op"/>
+    <Preference android:layout="@layout/mm_preference" android:title="Google账号设置" android:key="contact_info_googlecontact_setting_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_googlecontact_hide_cat"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_googlecontact_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_googlecontact_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_lbs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="开始查看附近的人" android:key="contact_info_lbs_go_lbs" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/normal_pref_btn" android:title="清除我的位置信息" android:key="contact_info_lbs_clear_info" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_lbs_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_lbs_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_masssend.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_masssend_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="开始群发" android:key="contact_info_masssend_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_masssend_cat"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_masssend_clear_data"/>
+    <PreferenceCategory android:key="contact_info_masssend_cat2"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_masssend_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_masssend_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_medianote.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看记事" android:key="contact_info_medianote_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_medianote_cat"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="同步到QQ邮箱记事本" android:key="contact_info_medianote_sync_to_qqmail"/>
+    <PreferenceCategory android:key="contact_info_medianote_cat2"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_medianote_clear_data"/>
+    <PreferenceCategory android:key="contact_info_medianote_cat3"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_medianote_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_medianote_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_meishiapp.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="接收会员卡优惠提醒" android:key="contact_info_meishiapp_push"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看美食优惠消息" android:key="contact_info_meishiapp_viewmsg" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看美食优惠卡包" android:key="contact_info_meishiapp_viewcard" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_plugin_clear_data"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_plugin_install"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_plugin_uninstall"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_normal.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.NormalUserHeaderPreference android:layout="@layout/contact_info_header_normal" android:key="contact_info_header_normal"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="地区" android:key="contact_info_district"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="个性签名" android:key="contact_info_signature"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="腾讯微博" android:key="contact_info_weibo" android:widgetLayout="@layout/mm_preference_submenu"/>
+    <com.tencent.mm.ui.contact.FriendPreference android:layout="@layout/mm_preference" android:key="contact_info_friend_qq"/>
+    <com.tencent.mm.ui.contact.FriendPreference android:layout="@layout/mm_preference" android:key="contact_info_friend_mobile"/>
+    <com.tencent.mm.ui.contact.FriendPreference android:layout="@layout/mm_preference" android:title="Facebook" android:key="contact_info_facebook"/>
+    <com.tencent.mm.pluginsdk.ui.preference.SnsPreference android:layout="@layout/mm_preference" android:title="个人相册" android:key="contact_info_sns"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="微信认证" android:key="contact_info_verifyuser"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="Google联系人" android:key="contact_info_google_contact"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="来源" android:key="contact_info_source"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.contact.profile.NormalUserFooterPreference android:layout="@layout/contact_info_footer_normal" android:key="contact_info_footer_normal"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_qcontact.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.NormalUserHeaderPreference android:layout="@layout/contact_info_header_normal" android:key="contact_info_header_normal"/>
+    <Preference android:layout="@layout/mm_preference" android:title="性别" android:key="contact_info_qcontact_sex"/>
+    <Preference android:layout="@layout/mm_preference" android:title="年龄" android:key="contact_info_qcontact_age"/>
+    <Preference android:layout="@layout/mm_preference" android:title="出生日期" android:key="contact_info_qcontact_birthday"/>
+    <Preference android:layout="@layout/mm_preference" android:title="地址" android:key="contact_info_qcontact_address"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_qmessage.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_qmessage_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看消息" android:key="contact_info_view_message" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="发QQ消息" android:key="contact_info_qmessage_send_qq_message" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="接收离线消息" android:key="contact_info_qmessage_recv_offline_msg"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="在QQ上显示微信在线" android:key="contact_info_qmessage_display_weixin_online"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_qmessage_clear_data"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_qmessage_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_qqfriend.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看朋友" android:key="contact_info_qqfriend_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_qqfriend_hide_cat"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_qqfriend_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_qqfriend_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_qqmail.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看邮件" android:key="contact_info_qqmailhelper_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="写邮件" android:key="contact_info_qqmailhelper_compose" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="接收邮件提醒" android:key="contact_info_qqmailhelper_recv_remind"/>
+    <Preference android:layout="@layout/mm_preference" android:title="设置提醒文件夹" android:key="contact_info_qqmailhelper_set_files_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="文件下载管理" android:key="contact_info_qqmailhelper_download_mgr_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_qqmailhelper_clear_data"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_qqmailhelper_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_qqmailhelper_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_qqsync.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="进入安全助手" android:key="contact_info_go_to_sync" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="定时提醒备份" android:key="contact_info_remind_me_syncing"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="每14天提醒你备份通讯录" android:key="contact_info_remind_me_syncing_tip"/>
+    <Preference android:layout="@layout/mm_preference" android:title="使用说明" android:key="contact_info_qqsync_intro" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="服务协议" android:key="contact_info_qqsync_agreement" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_qqsync_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_qqsync_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_readerappnews.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="腾讯新闻" android:key="contact_info_readerappnews_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="接收新闻提醒" android:key="contact_info_readerappnews_recv_remind"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_readerappnews_clear_data"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_readerappnews_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_readerappnews_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_readerappweibo.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="微博阅读" android:key="contact_info_readerappweibo_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_readerappweibo_cat"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_readerappweibo_clear_data"/>
+    <PreferenceCategory android:key="contact_info_readerappweibo_cat2"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_readerappweibo_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_readerappweibo_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_shake.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="开始摇一摇" android:key="contact_info_shake_go_shake" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.SwitchKeyValuePreference android:layout="@layout/mm_preference" android:title="摇一摇传图" android:key="contact_info_shake_tran_img" android:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.base.preference.SwitchKeyValuePreference android:layout="@layout/mm_preference" android:title="摇一摇书签" android:key="contact_info_shake_bookmark" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_shake_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_shake_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_tmessage.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HelperHeaderPreference android:layout="@layout/pluginsdk_helper_header" android:key="contact_info_header_helper"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查看消息" android:key="contact_info_view_message" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_tmessage_hide_cat"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="接收私信" android:key="contact_info_tmessage_recv_private_letter"/>
+    <Preference android:layout="@layout/mm_preference" android:title="微博朋友" android:key="contact_info_microblog_friends" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory android:key="contact_info_tmessage_hide_cat2"/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_tmessage_clear_data"/>
+    <PreferenceCategory android:key="contact_info_tmessage_hide_cat3"/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_tmessage_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_tmessage_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_verify.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.VerifyUserHeaderPreference android:layout="@layout/contact_info_header_verify" android:key="contact_info_header_vertfy"/>
+    <PreferenceCategory android:key="contact_info_domainmail_cat"/>
+    <Preference android:layout="@layout/install_btn" android:title="通过验证" android:key="settings_add_btn" android:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.contact.profile.NormalUserFooterPreference android:layout="@layout/contact_info_footer_normal" android:key="contact_info_footer_normal"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_voice_reminder.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="进入语音提醒" android:key="contact_info_voice_reminder_view" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空此功能消息记录" android:key="contact_info_voice_reminder_clear_data"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_voice_reminder_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_voice_reminder_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_voiceinput.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_voiceinput_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_voiceinput_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_voip.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="true" android:title="视频聊天铃声" android:key="contact_info_voip_sound_notify"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭视频铃声后，收到视频聊天请求时不会播放提醒铃声。" android:key="contact_info_voip_sound_tip"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_voip_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_voip_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_pref_voip_audio.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.contact.profile.HelperHeaderPreference android:layout="@layout/contact_info_header_helper" android:key="contact_info_header_helper"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="true" android:title="音频聊天铃声" android:key="contact_info_voipaudio_sound_notify"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭音频铃声后，收到音频聊天请求时不会播放提醒铃声。" android:key="contact_info_voipaudio_sound_tip"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="启用该功能" android:key="contact_info_voipaudio_install" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/logout_btn" android:title="停用" android:key="contact_info_voipaudio_uninstall" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contact_info_stub.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference android:key="contact_list_cache"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+    <ContactsDataKind android:mimeType="vnd.android.cursor.item/vnd.com.tencent.mm.chatting.profile" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+    <ContactsDataKind android:mimeType="vnd.android.cursor.item/vnd.com.tencent.mm.plugin.sns.timeline" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+</ContactsSource>
+    </File>
+    <File file_name="emoji_store_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="settings_category">
+        <Preference android:layout="@layout/mm_preference_info" android:title="聊天面板中的表情" android:key="settings_emoji_downloaded_tip"/>
+    </PreferenceCategory>
+    <Preference android:layout="@layout/mm_preference_info" android:title="未使用的表情" android:key="settings_emoji_donot_download_tip"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="我收藏的表情" android:key="settings_emoji_custom" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="表情购买记录" android:key="settings_emoji_paid" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="facebook_auth.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference_info" android:title="绑定Facebook帐号，你的帐号和密码只用于验证和授权Facebook，微信不会把你的个人信息透露给其他人。" android:key="facebook_auth_tip"/>
+    <PreferenceCategory android:key="facebook_auth_cat"/>
+    <Preference android:layout="@layout/facebook_btn" android:title="Connect To Facebook" android:key="facebook_auth_bind_btn"/>
+    <Preference android:layout="@layout/mm_preference" android:title="已绑定帐号：" android:key="facebook_auth_account"/>
+    <PreferenceCategory android:key="facebook_auth_cat2"/>
+    <Preference android:layout="@layout/normal_pref_btn" android:title="解除绑定" android:key="facebook_auth_unbind_btn" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="facebook_login.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference_info" android:title="绑定Facebook帐号，你的帐号和密码只用于验证和授权Facebook，微信不会把你的个人信息透露给其他人。" android:key="facebook_auth_tip"/>
+    <PreferenceCategory android:key="facebook_auth_cat"/>
+    <Preference android:layout="@layout/facebook_btn" android:title="Connect To Facebook" android:key="facebook_auth_bind_btn"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="find_more_friends.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.friend.FriendSnsPreference android:title="朋友圈" android:key="album_dyna_photo_ui_title"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_scan" android:title="扫一扫" android:key="find_friends_by_qrcode"/>
+    <IconPreference android:icon="@drawable/find_more_friend_shake" android:title="摇一摇" android:key="find_friends_by_shake"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_near_icon" android:title="附近的人" android:key="find_friends_by_near"/>
+    <IconPreference android:icon="@drawable/find_more_friend_bottle" android:title="漂流瓶" android:key="voice_bottle"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/more_game" android:title="游戏" android:key="more_tab_game_recommend"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_addfriend_icon" android:title="添加朋友" android:key="add_more_friends"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="find_more_friends_lite.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <IconPreference android:icon="@drawable/find_friends_by_micromsg" android:title="搜号码" android:key="find_friends_by_micromsg"/>
+    <IconPreference android:icon="@drawable/find_more_friend_scan" android:title="扫一扫" android:key="find_friends_by_qrcode"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_qq_icon" android:title="添加QQ好友" android:key="find_friends_by_qq"/>
+    <IconPreference android:icon="@drawable/find_more_friend_mobile_icon" android:title="添加手机联系人" android:key="find_friends_by_mobile"/>
+    <IconPreference android:icon="@drawable/find_more_friend_mobile_icon" android:title="添加Google联系人" android:key="find_friends_by_google_account"/>
+    <IconPreference android:icon="@drawable/find_more_friend_fb_icon" android:title="添加Facebook朋友" android:key="find_friends_by_facebook"/>
+    <PreferenceCategory/>
+    <IconPreference android:icon="@drawable/find_more_friend_near_icon" android:title="附近的人" android:key="find_friends_by_near"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="invite_recommend_friend.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <IconPreference android:icon="@drawable/share_to_facebook_icon" android:title="邀请Facebook朋友" android:key="settings_invite_facebook_friends"/>
+    <IconPreference android:icon="@drawable/find_more_friend_qq_icon" android:title="邀请QQ好友" android:key="settings_invite_qq_friends"/>
+    <IconPreference android:icon="@drawable/invite_mail_contact" android:title="邀请邮箱联系人" android:key="settings_recommend_by_mail"/>
+    <IconPreference android:icon="@drawable/share_to_weibo_icon" android:title="邀请微博朋友" android:key="settings_recommend_by_mb"/>
+    <IconPreference android:icon="@drawable/invite_mobile_contact" android:title="邀请手机朋友" android:key="settings_invite_mobile_friends"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="mail_receiver_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="名字" android:key="mail_receiver_info_name"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="邮箱地址" android:key="mail_receiver_info_addr"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/install_btn" android:title="写邮件" android:key="mail_compose_btn"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="more_tab_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.ui.setting.AccountInfoPreference mm:layout="@layout/mm_preference" android:title="个人信息" mm:key="more_tab_setting_personal_info" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <IconSummaryPreference mm:icon="@drawable/more_my_safe" android:title="我的帐号" mm:key="settings_account_info"/>
+    <PreferenceCategory/>
+    <IconPreference mm:icon="@drawable/more_my_album" android:title="我的相册" mm:key="settings_my_album"/>
+    <IconPreference mm:icon="@drawable/more_my_favorite" android:title="我的收藏" mm:key="settings_mm_favorite"/>
+    <IconPreference mm:icon="@drawable/more_my_bank_card" android:title="我的银行卡" mm:key="settings_mm_wallet"/>
+    <IconPreference mm:icon="@drawable/more_my_tit_card" android:title="TIT饭卡" mm:key="settings_mm_wallet_tit_card"/>
+    <PreferenceCategory/>
+    <IconPreference mm:icon="@drawable/more_emoji_store" android:title="表情商店" mm:key="settings_emoji_store"/>
+    <PreferenceCategory/>
+    <IconPreference mm:icon="@drawable/more_setting" android:title="设置" mm:key="more_setting"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="more_tab_pref_lite.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.setting.HeadImgNewPreference mm:layout="@layout/mm_preference" android:title="头像" mm:key="settings_change_avatar" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="名字" mm:key="settings_name" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="我的帐号" mm:key="settings_account_info" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="二维码名片" mm:key="settings_qrcode" mm:widgetLayout="@layout/mm_preference_icon_right_qrcode"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.DialogPreference mm:layout="@layout/mm_preference" mm:persistent="false" android:title="性别" mm:key="settings_sex" mm:widgetLayout="@layout/mm_preference_screen" mm:entries="@array/sex" mm:entryValues="@array/sex_id"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="地区" mm:key="settings_district" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.setting.SignaturePreference mm:layout="@layout/mm_preference" android:title="个性签名" mm:key="settings_signature" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="nearby_personal_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference mm:layout="@layout/mm_preference_info" android:title="补充你的个人信息，你填写的信息会显示给其他用户"/>
+    <com.tencent.mm.ui.base.preference.ChoicePreference mm:layout="@layout/mm_preference_null" android:title="性别" mm:key="settings_sex" mm:entries="@array/sex" mm:entryValues="@array/sex_id"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/mm_preference" android:title="地区" mm:key="settings_district"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/mm_preference" android:title="个性签名" mm:key="settings_signature"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="prodect_detail_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm"/>
+    </File>
+    <File file_name="room_more_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="升级群" android:key="room_upgrade" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="room_right_ui.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="群聊人数上限" android:key="settings_room_size"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="你最多可以邀请%d人加入群聊。" android:key="room_right_max_tip"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.setting.RoomGrantPreference android:layout="@layout/mm_preference" android:title="可赠送名额" android:key="settings_room_grant"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/grant_btn" android:title="赠送给朋友" android:key="room_grant_to_friend" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="赠送后，他(她)就能够邀请更多的人加入群聊，直到群聊人数满%d人为止。该权限跟随微信帐号，他(她)可以在任意群聊中使用。" android:key="room_right_grant_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="roominfo_detail_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="聊天中显示群昵称" android:key="room_msg_show_username"/>
+    <com.tencent.mm.ui.setting.SignaturePreference android:layout="@layout/mm_preference" android:title="我的群昵称" android:key="room_name" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="关闭新消息提醒" android:key="room_msg_notify"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="不显示未读数" android:key="room_show_msg_count" android:widgetLayout="@layout/mm_preference_checkbox"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="设置当前聊天背景" android:key="room_set_chatting_background" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空聊天记录" android:key="room_clear_chatting_history" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="roominfo_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <PreferenceCategory/>
+    <com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference android:key="roominfo_contact_anchor"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.setting.SignaturePreference android:layout="@layout/mm_preference" android:title="群聊名称" android:key="room_name" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="群二维码" android:key="room_qr_code" android:widgetLayout="@layout/mm_preference_icon_right_qrcode"/>
+    <Preference android:layout="@layout/mm_preference" android:title="群人数上限" android:key="room_upgrade_entry" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="新消息通知" android:key="room_notify_new_msg"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="保存到通讯录" android:key="room_save_to_contact" android:widgetLayout="@layout/mm_preference_checkbox"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="置顶聊天" android:key="room_placed_to_the_top" android:widgetLayout="@layout/mm_preference_checkbox"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.setting.SignaturePreference android:layout="@layout/mm_preference" android:title="我的群昵称" android:key="room_nickname" android:widgetLayout="@layout/mm_preference_screen"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="聊天中显示群昵称" android:key="room_msg_show_username"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="设置当前聊天背景" android:key="room_set_chatting_background" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="查找聊天记录" android:key="room_search_chatting_content" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空聊天记录" android:key="room_clear_chatting_history"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="投诉群" android:key="room_report_it"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/logout_btn" android:title="删除并退出" android:key="room_del_quit" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="roominfo_single_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <PreferenceCategory/>
+    <com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference android:key="roominfo_contact_anchor"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="置顶聊天" android:key="room_placed_to_the_top" android:widgetLayout="@layout/mm_preference_checkbox"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="新消息通知" android:key="room_notify_new_msg" android:widgetLayout="@layout/mm_preference_checkbox"/>
+    <Preference android:layout="@layout/mm_preference" android:title="设置当前聊天背景" android:key="room_set_chatting_background" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="查找聊天记录" android:key="room_search_chatting_content" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空聊天记录" android:key="room_clear_chatting_history" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="rptselect.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="safe_device_list_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="帐号保护" android:key="safe_device_verify_check"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="开启帐号保护后，在不常用的手机上登录微信，需要验证你的手机号码。" android:key="safe_device_status_tip"/>
+    <Preference android:layout="@layout/mm_preference_my_safe_device" android:title="常用设备" android:key="my_safe_device_list_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_about_privacy.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference_info_bigtext" android:title="通讯录" android:key="settings_add_friends_addressbook_tip"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="加我为朋友时需要验证" android:key="settings_need_verify"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="通过QQ号搜索到我" android:key="settings_find_me_by_QQ"/>
+    <CheckBoxPreference android:title="向我推荐QQ好友" android:key="settings_recommend_qqfriends_to_me"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭后，其他用户不能通过QQ号搜索到你" android:key="settings_qq_recommend_tip"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="通过手机号搜索到我" android:key="settings_find_me_by_mobile"/>
+    <CheckBoxPreference android:title="向我推荐通讯录朋友" android:key="settings_recommend_mobilefriends_to_me"/>
+    <CheckBoxPreference android:persistent="false" android:title="自动添加手机联系人" android:key="settings_autoadd_mobilefriends"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭后，其他用户不能通过手机号搜索到你" android:key="settings_mobile_recommend_tip"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="通过微信号搜索到我" android:key="settings_find_me_by_weixin"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭后，其他用户不能通过微信号找到你" android:key="settings_find_me_tip"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="向我推荐Google通讯录朋友" android:key="settings_find_google_contact"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="通过Google通讯录找到我" android:key="settings_find_me_by_google"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭后,其他用户不能通过微信号找到你" android:key="settings_find_me_by_google_tip"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="通讯录黑名单" android:key="settings_about_blacklist" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference_info_bigtext" android:title="朋友圈" android:key="settings_add_friends_timeline_tip"/>
+    <Preference android:layout="@layout/mm_preference" android:title="朋友圈权限" android:key="settings_about_timeline" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_about_timeline.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:title="朋友圈黑名单" android:key="timline_outside_permiss" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:title="不看他的照片" android:key="timeline_black_permiss" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="允许陌生人查看十张照片" android:key="timeline_stranger_show"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_chatting_background.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="选择背景图" android:key="settings_chatting_bg_select_bg" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="从相册中选择" android:key="settings_chatting_bg_select_from_album" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="拍一张" android:key="settings_chatting_bg_take_photo" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="将当前选择的背景图应用到所有聊天场景" android:key="settings_chatting_bg_apply_to_all" android:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_emoji_manager.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="settings_category">
+        <Preference android:layout="@layout/mm_preference_info" android:title="聊天面板中的表情" android:key="settings_emoji_downloaded_tip"/>
+    </PreferenceCategory>
+    <Preference android:layout="@layout/mm_preference_info" android:title="未使用的表情" android:key="settings_emoji_donot_download_tip"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="我收藏的表情" android:key="settings_emoji_custom" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="表情购买记录" android:key="settings_emoji_paid" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="新消息提醒" android:key="settings_notification_preference" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="隐私" android:key="settings_about_privacy" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="通用" android:key="settings_about_system" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="腾讯软件精品推荐" android:key="settings_push_software" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="流量统计" android:key="settings_traffic_statistic" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="在Facebook上赞我们" android:key="settings_like_facebook" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="在Twitter上关注我们" android:key="settings_follow_twitter" android:widgetLayout="@layout/mm_preference_screen"/>
+    <IconPreference android:title="关于微信" android:key="settings_about_micromsg"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/logout_btn" android:title="退出登录" android:key="settings_logout" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_about_domainmail.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm"/>
+    </File>
+    <File file_name="settings_pref_about_micromsg.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="去评分" android:key="settings_market_ratings" android:widgetLayout="@layout/mm_preference_screen"/>
+    <IconPreference android:title="欢迎页" android:key="funtion_about_wechat"/>
+    <IconPreference android:title="功能介绍" android:key="settings_update"/>
+    <IconPreference android:title="系统通知" android:key="settings_system_notice"/>
+    <Preference android:layout="@layout/mm_preference" android:title="帮助与反馈" android:key="settings_feedback" android:widgetLayout="@layout/mm_preference_screen"/>
+    <IconSummaryPreference android:title="新版更新" android:key="funtion_update"/>
+    <IconPreference android:title="检查新版本" android:key="funtion_check_update"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_account_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="微信号" android:key="settings_username" android:widgetLayout="@layout/mm_preference_widget_empty"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="QQ号" android:key="settings_uin" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="手机号" android:key="settings_mobile" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="邮件地址" android:key="settings_email_addr" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="工作邮箱" android:key="settings_about_domainmail" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="Facebook" android:key="settings_facebook" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.PluginTextPreference android:key="settings_about_vusertitle"/>
+    <com.tencent.mm.ui.setting.SelfVuserPreference android:key="settings_about_vuserinfo"/>
+    <Preference android:layout="@layout/mm_preference" android:title="什么是微信认证？" android:key="settings_about_vuser_about" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="独立密码" android:key="settings_independent_password" android:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.base.preference.IconSwitchKeyValuePreference android:layout="@layout/mm_preference" android:title="帐号保护" android:key="settings_safe_device" android:widgetLayout="@layout/mm_preference_submenu"/>
+    <com.tencent.mm.ui.base.preference.IconSwitchKeyValuePreference android:layout="@layout/mm_preference" android:title="手机安全防护" android:key="settings_phone_security" android:widgetLayout="@layout/mm_preference_submenu"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.IconSummaryPreference android:title="群聊权限" android:key="settings_room_right" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_active_time.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="true" android:title="全天提醒" android:key="settings_active_time_full"/>
+    <Preference android:layout="@layout/mm_preference" android:title="开始时间" android:key="settings_active_begin_time"/>
+    <Preference android:layout="@layout/mm_preference" android:title="结束时间" android:key="settings_active_end_time"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭全天提醒后，消息只在设定时间内提醒" android:key="settings_active_time_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_netstat.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference mm:layout="@layout/mm_preference_info" mm:key="settings_netstat_info"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="移动网络消耗的流量" mm:key="settings_netstat_mobile"/>
+    <com.tencent.mm.ui.setting.NetStatPreference mm:layout="@layout/mm_preference" mm:key="settings_netstat_mobile_detail" mm:src="mobile"/>
+    <PreferenceCategory/>
+    <Preference mm:layout="@layout/mm_preference" android:title="无线局域网消耗的流量" mm:key="settings_netstat_wifi"/>
+    <com.tencent.mm.ui.setting.NetStatPreference mm:layout="@layout/mm_preference" mm:key="settings_netstat_wifi_detail" mm:src="total"/>
+    <Preference mm:layout="@layout/mm_preference_info" android:title="&quot;使用微信会一直连接手机网络，但只消耗很少的流量，请不必担心。如果你不希望微信一直联网，你可以从设置页面的系统菜单中选择退出微信，但为了你能收信及时，建议不要轻易退出。&#10;&#10;微信在同类软件中最省流量，30M流量可以发送几千条语音消息。&quot;" mm:key="settings_netstat_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_notification.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <CheckBoxPreference android:title="接收新消息通知" android:key="settings_new_msg_notification"/>
+    <CheckBoxPreference android:title="声音" android:key="settings_sound" android:dependency="settings_new_msg_notification" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="震动" android:key="settings_shake" android:dependency="settings_new_msg_notification" android:defaultValue="true"/>
+    <PreferenceCategory/>
+    <Preference android:persistent="false" android:title="新消息提示音" android:key="settings_notification_ringtone" android:widgetLayout="@layout/mm_preference_screen" android:dependency="settings_sound"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="后台消息提醒时段" android:key="settings_active_time" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="功能消息免打扰" android:key="settings_plugings_notify" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="设置系统功能消息提示声音和震动时间" android:key="settings_plugings_notify_tip"/>
+    <CheckBoxPreference android:title="朋友圈照片更新" android:key="settings_sns_notify" android:dependency="settings_new_sns_notify" android:defaultValue="true"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="关闭后,有朋友更新照片时,界面下面的发现切换按钮不再出现红点提示" android:key="settings_sns_notify_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_personal_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.pluginsdk.ui.preference.HeadImgPreference mm:layout="@layout/mm_preference" android:title="设置头像" mm:key="settings_change_avatar" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/mm_preference" android:title="名字" mm:key="settings_name" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.base.preference.DialogPreference mm:layout="@layout/mm_preference" android:title="性别" mm:key="settings_sex" mm:widgetLayout="@layout/mm_preference_screen" mm:entries="@array/sex" mm:entryValues="@array/sex_id"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference mm:layout="@layout/mm_preference" android:title="地区" mm:key="settings_district" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.setting.PersonalPreference mm:layout="@layout/mm_preference" android:title="我的二维码" mm:key="settings_my_qrcode" mm:widgetLayout="@layout/mm_preference_screen"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_personal_info_new.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:mm="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.setting.HeadImgNewPreference mm:layout="@layout/mm_preference" android:title="头像" mm:key="settings_change_avatar" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="名字" mm:key="settings_name" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="二维码名片" mm:key="settings_qrcode" mm:widgetLayout="@layout/mm_preference_icon_right_qrcode"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="我的收货地址" mm:key="settings_address" mm:widgetLayout="@layout/mm_preference_submenu"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.DialogPreference mm:layout="@layout/mm_preference" mm:persistent="false" android:title="性别" mm:key="settings_sex" mm:widgetLayout="@layout/mm_preference_screen" mm:entries="@array/sex" mm:entryValues="@array/sex_id"/>
+    <Preference mm:layout="@layout/mm_preference" android:title="地区" mm:key="settings_district" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.setting.SignaturePreference mm:layout="@layout/mm_preference" android:title="个性签名" mm:key="settings_signature" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference mm:layout="@layout/mm_preference" android:title="腾讯微博" mm:key="settings_tweibo" mm:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_plug_notify.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="全天开启" android:key="settings_plugings_disturb_on" android:widgetLayout="@layout/mm_preference_radio"/>
+    <Preference android:layout="@layout/mm_preference" android:title="只在夜间开启" android:key="settings_plugings_disturb_on_night" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="关闭" android:key="settings_plugings_disturb_off" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="&quot;开启免打扰后，功能消息将收不到声音和震动提醒&#10;夜间免打扰时间段 22:00 - 08:00&quot;" android:key="settings_plugings_disturb_time_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_plugins.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm"/>
+    </File>
+    <File file_name="settings_pref_system.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="开启横屏模式" android:key="settings_landscape_mode" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="使用高速录音模式" android:key="settings_voicerecorder_mode" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="使用听筒播放语音" android:key="settings_voice_play_mode" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="回车键发送消息" android:key="settings_enter_button_send" android:defaultValue="false"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="多语言" android:key="settings_language" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="字体大小" android:key="settings_text_size" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="聊天背景" android:key="settings_chatting_bg" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="聊天记录迁移" android:key="settings_bak_chat" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="表情管理" android:key="settings_emoji_manager" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <IconPreference android:title="功能" android:key="settings_plugins"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="微信网页版" android:key="settings_WebWX" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清理微信存储空间" android:key="settngs_clean" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="清空聊天记录" android:key="settings_reset" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_pref_tweibo.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:title="在个人名片中展示腾讯微博" android:key="settings_tweibo_open"/>
+    <Preference android:layout="@layout/mm_preference" android:title="腾讯微博" android:key="settings_tweibo"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="你可以在这里设置你的腾讯微博" android:key="settings_tweibo_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_sns_background.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="从手机相册选择" android:key="settings_sns_bg_select_from_album" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="拍一张" android:key="settings_sns_bg_take_photo" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.plugin.sns.ui.SnsArtistPreference android:layout="@layout/mm_preference" android:title="摄影师作品" android:key="settings_sns_bg_select_bg"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="shake_settings_pref_personal_info.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/mm_preference" android:title="使用默认的背景图片" android:key="shake_item_default_bgimg"/>
+    <Preference android:layout="@layout/mm_preference" android:title="换张背景图片" android:key="shake_item_change_bgimg" android:widgetLayout="@layout/mm_preference_screen"/>
+    <CheckBoxPreference android:layout="@layout/mm_preference" android:persistent="false" android:title="音效" android:key="shake_item_sound"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="打招呼的人" android:key="say_hi_list_shake_title" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="摇到的人" android:key="shake_item_shake_person_list" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="摇到的歌" android:key="shake_item_shake_music_list" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="摇到的网页" android:key="shake_item_shake_webpage_list" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <com.tencent.mm.ui.base.preference.SwitchKeyValuePreference android:layout="@layout/mm_preference" android:title="摇一摇传图功能" android:key="shake_item_shake_tran_img" android:widgetLayout="@layout/mm_preference_screen"/>
+    <com.tencent.mm.ui.base.preference.SwitchKeyValuePreference android:layout="@layout/mm_preference" android:title="摇一摇传图书签" android:key="shake_item_shake_bookmark" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="share_card_to.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <com.tencent.mm.ui.base.preference.EditPreference android:layout="@layout/edit_share_card" android:key="share_to_edit"/>
+    <Preference android:layout="@layout/edit_share_btn" android:title="分享" android:key="share_to"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="share_micromsg_choice.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <IconPreference android:title="分享到腾讯微博" android:key="share_micromsg_qqwb"/>
+    <IconPreference android:title="分享到QQ空间" android:key="share_micromsg_qzone"/>
+    <IconPreference android:title="分享到新浪微博" android:key="share_micromsg_to_sina"/>
+    <IconPreference android:title="分享到Facebook" android:key="share_micromsg_to_fuckbook"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="sns_premission.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory/>
+    <CheckBoxPreference android:persistent="false" android:title="朋友圈黑名单" android:key="sns_outside_permiss" android:defaultValue="false"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="打开后，你在朋友圈发的照片，对方将无法看到。" android:key="sns_outside_permiss_tip"/>
+    <PreferenceCategory/>
+    <CheckBoxPreference android:persistent="false" android:title="不看他的照片" android:key="sns_black_permiss" android:defaultValue="false"/>
+    <Preference android:layout="@layout/mm_preference_info" android:title="打开后，对方发布的照片将不会出现在你的朋友圈里。" android:key="sns_black_permiss_tip"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="sync_contacts.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.tencent.mm.account" android:contentAuthority="com.android.contacts" android:supportsUploading="false"/>
+    </File>
+    <File file_name="tag_detail_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/mm_preference" android:title="名称" android:key="settings_tag_name" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+    <PreferenceCategory/>
+    <com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference android:key="roominfo_contact_anchor"/>
+    <PreferenceCategory/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/logout_btn" android:title="删除分组" android:key="delete_tag_name" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="vcard_contact_info_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <com.tencent.mm.plugin.scanner.ui.VcardContactUserHeaderPreference android:layout="@layout/vcontact_info_header" android:key="v_contact_info_header"/>
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/mm_preference" android:title="照片" android:key="v_contact_info_photo_uri"/>
+    <PreferenceCategory android:key="v_category_photo_uri"/>
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/mm_preference" android:title="电子邮箱" android:key="v_contact_info_email"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="组织" android:key="v_contact_info_org"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="代理人" android:key="v_contact_info_agent"/>
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/mm_preference" android:title="微信ID" android:key="c_contact_info_wx_id"/>
+    <PreferenceCategory android:key="v_category_main"/>
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/mm_preference" android:title="个人主页" android:key="v_contact_info_home_page"/>
+    <PreferenceCategory android:key="v_category_home_page"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="生日" android:key="v_contact_info_birthday"/>
+    <PreferenceCategory android:key="v_category_birthday"/>
+    <com.tencent.mm.ui.base.preference.KeyValuePreference android:layout="@layout/mm_preference" android:title="备注" android:key="v_contact_info_remark"/>
+    <PreferenceCategory android:key="v_category_remark"/>
+    <com.tencent.mm.plugin.scanner.ui.VcardContactLinkPreference android:layout="@layout/mm_preference" android:title="标志" android:key="v_contact_info_logo"/>
+    <PreferenceCategory android:key="v_category_logo"/>
+    <Preference android:layout="@layout/add_vcard_contact" android:title="保存" android:key="add_vcard_contact"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="wallet_password_setting_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm">
+    <Preference android:layout="@layout/mm_preference" android:title="修改支付密码" android:key="wallet_modify_password" android:widgetLayout="@layout/mm_preference_screen"/>
+    <Preference android:layout="@layout/mm_preference" android:title="忘记支付密码" android:key="wallet_forget_password" android:widgetLayout="@layout/mm_preference_screen"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="webwx_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/com.tencent.mm" xmlns:android1="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/webwxlogout"/>
+    <com.tencent.mm.ui.base.preference.MMSwitchButtonPreference android:layout="@layout/mm_preference_webwx_notify" android:persistent="false" android:title="新消息提醒" android:key="webwx_notification"/>
+    <PreferenceCategory/>
+    <Preference android:layout="@layout/logout_btn" android:title="退出" android:key="webwx_logout"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+  </Directory>
 </App>

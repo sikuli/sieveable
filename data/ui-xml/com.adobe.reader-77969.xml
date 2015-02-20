@@ -821,4 +821,52 @@
       <View xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;         &#10;         &#10;    "/>
     </File>
   </Directory>
+  <Directory directory_name="menu">
+    <File file_name="commenting_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/commenting_sticky_note" android:title="Add Sticky Note"/>
+    <item android:id="@id/commenting_highlight" android:title="Highlight"/>
+    <item android:id="@id/add_text_tool" android:title="Add Text Tool"/>
+    <item android:id="@id/pencil_tool" android:title="Pencil Tool"/>
+</menu>
+    </File>
+    <File file_name="document_list_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/delete_file_context_menu" android:title="Delete selected document"/>
+</menu>
+    </File>
+    <File file_name="file_list_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/about" android:title="About Adobe Reader"/>
+</menu>
+    </File>
+    <File file_name="file_open_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/about" android:title="About Adobe Reader"/>
+</menu>
+    </File>
+    <File file_name="menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/about" android:title="About Adobe Reader"/>
+    <item android:icon="@drawable/mp_menuoptionsettings_xl_n" android:id="@id/settings" android:title="Settings"/>
+</menu>
+    </File>
+    <File file_name="split_pane_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/split_pane_about" android:title="About Adobe Reader"/>
+    <item android:icon="@drawable/mp_menuoptionsettings_xl_n" android:id="@id/split_pane_settings" android:title="Settings"/>
+    <item android:icon="@drawable/mp_menuoptionquestion_xl_n" android:id="@id/split_pane_gettingstarted" android:title="Getting Started"/>
+    <item android:icon="@drawable/mp_menuoptionclear_xl_n" android:id="@id/split_pane_clearrecents" android:title="Clear Recent Documents"/>
+    <item android:icon="@drawable/mp_menuoptionclear_xl_n" android:id="@id/split_pane_cloud_signout" android:title="Sign Out"/>
+    <item android:icon="@drawable/mp_g_bookmarkarrowright_n" android:id="@id/split_pane_automation" android:visible="false" android:title="Automation"/>
+    <item android:icon="@drawable/mp_g_bookmarkarrowright_n" android:id="@id/split_pane_unittests" android:visible="false" android:title="Unit Tests"/>
+</menu>
+    </File>
+    <File file_name="text_selection_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/text_select_copy" android:title="Copy"/>
+    <item android:id="@id/text_select_highlight" android:title="Highlight"/>
+</menu>
+    </File>
+  </Directory>
 </App>

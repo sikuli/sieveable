@@ -93,4 +93,62 @@
     </File>
   </Directory>
   <Directory directory_name="layout-ldpi"/>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="When scanning for barcodes, decode…">
+        <CheckBoxPreference android:title="1D barcodes" android:key="preferences_decode_1D" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="QR Codes" android:key="preferences_decode_QR" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Data Matrix" android:key="preferences_decode_Data_Matrix" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="When a barcode is found…">
+        <CheckBoxPreference android:title="Beep" android:key="preferences_play_beep" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Vibrate" android:key="preferences_vibrate" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Copy to clipboard" android:key="preferences_copy_to_clipboard" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Remember duplicates" android:key="preferences_remember_duplicates" android:summary="Store multiple scans of the same barcode in History" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Retrieve more info" android:key="preferences_supplemental" android:summary="Try to retrieve more information about the barcode contents" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Result settings">
+        <EditTextPreference android:title="Custom search URL" android:key="preferences_custom_product_search" android:summary="Substitutions: %s = contents, %f = format, %t = type"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="General settings">
+        <ListPreference android:entries="@array/preferences_front_light_options" android:title="Use front light" android:key="preferences_front_light_mode" android:summary="Improves scanning in low light on some phones, but may cause glare. Does not work on all phones." android:defaultValue="OFF" android:entryValues="@array/preferences_front_light_values"/>
+        <CheckBoxPreference android:title="Use auto focus" android:key="preferences_auto_focus" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Invert scan" android:key="preferences_invert_scan" android:summary="Scan for white barcodes on black background. Not available on some devices." android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Bulk scan mode" android:key="preferences_bulk_mode" android:summary="Scan and save many barcodes continuously" android:defaultValue="false"/>
+        <ListPreference android:entries="@array/country_codes" android:title="Search country" android:key="preferences_search_country" android:defaultValue="-" android:entryValues="@array/country_codes"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Device Bug Workarounds">
+        <CheckBoxPreference android:title="No continuous focus" android:key="preferences_disable_continuous_focus" android:summary="Use only standard focus mode" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Try Barcode Scanner+">
+        <Preference android:title="Try Barcode Scanner+" android:summary="Enhanced with new features and interface">
+            <intent android:action="android.intent.action.VIEW" android:data="market://details?id=com.srowen.bs.android"/>
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="capture.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_share" android:id="@id/menu_share" android:orderInCategory="1" android:title="Share" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@android:drawable/ic_menu_recent_history" android:id="@id/menu_history" android:orderInCategory="2" android:title="History" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menu_settings" android:orderInCategory="3" android:title="Settings" android:showAsAction="withText"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:orderInCategory="4" android:title="Help" android:showAsAction="withText"/>
+</menu>
+    </File>
+    <File file_name="encode.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_share" android:id="@id/menu_share" android:orderInCategory="1" android:title="Share" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@android:drawable/ic_menu_sort_alphabetically" android:id="@id/menu_encode" android:orderInCategory="2" android:title="Use vCard" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="history.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_share" android:id="@id/menu_history_send" android:orderInCategory="1" android:title="Send history" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_history_clear_text" android:orderInCategory="2" android:title="Clear history" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+  </Directory>
 </App>

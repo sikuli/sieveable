@@ -18,4 +18,21 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="general_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Auto-update voices" android:key="auto_update" android:summary="Automatically update voices" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Update voices over Wi-Fi only" android:key="auto_update_wifi" android:summary="Conserves data usage" android:defaultValue="true"/>
+    <Preference android:title="View Open Source Licenses" android:key="open_source_licenses"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="General Settings" android:fragment="com.google.android.tts.settings.GeneralSettingsFragment"/>
+</preference-headers>
+    </File>
+    <File file_name="tts_engine.xml">
+      <tts-engine xmlns:android="http://schemas.android.com/apk/res/android" android:settingsActivity="com.google.android.tts.settings.EngineSettings"/>
+    </File>
+  </Directory>
 </App>

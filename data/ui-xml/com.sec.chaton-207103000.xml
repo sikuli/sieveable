@@ -6843,4 +6843,475 @@
       <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:ellipsize="marquee" android:id="@id/buddy_list_option_menu_item" android:layout_width="fill_parent" android:layout_height="48.0dip" android:singleLine="true" style="?android:attr/spinnerDropDownItemStyle"/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="auth_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="ChatON" android:icon="@drawable/icon" android:background="#00000000" android:accountType="com.sec.chaton" android:smallIcon="@drawable/icon" android:accountPreferences="@xml/auth_preferences"/>
+    </File>
+    <File file_name="contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+    <ContactsDataKind android:icon="@drawable/icon" android:mimeType="vnd.chaton.item/vnd.com.chaton.profile" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+</ContactsSource>
+    </File>
+    <File file_name="layout_mypage_edit_profile.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:key="pref_screen">
+    <PreferenceCategory android:title="Nickname">
+        <com.sec.chaton.userprofile.StatusPreference android:key="pref_item_mypage_nickname"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Status message">
+        <com.sec.chaton.userprofile.StatusPreference android:key="pref_item_mypage_user_created_status"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_alertype.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Sound" android:key="pref_item_sound" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="true" android:contentDescription="Sound"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Vibration" android:key="pref_item_vibration" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="true" android:contentDescription="Vibration"/>
+    <com.sec.chaton.settings.RingtonePreference2 android:layout="@layout/preference" android:title="Notification ringtone" android:key="pref_item_sound_type" android:widgetLayout="@layout/preference_widget_arrow" android:dependency="pref_item_sound" android:showDefault="false" android:showSilent="true" android:contentDescription="Notification ringtone"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_buddies.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Birthday notifications" android:key="pref_item_birthday" android:summary="&quot;Notifies you of your buddies' birthdays&quot;" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="true" android:contentDescription="Birthday notifications"/>
+    <Preference android:layout="@layout/preference" android:title="Block list" android:key="pref_item_blocked" android:widgetLayout="@layout/preference" android:contentDescription="Block list"/>
+    <Preference android:layout="@layout/preference" android:title="Suggestions" android:key="pref_item_suggestions" android:widgetLayout="@layout/preference" android:contentDescription="Suggestions"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_buddies_suggestions.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Suggest buddies" android:key="pref_item_buddy_sugestions" android:summary="I would like to receive buddy suggestions from ChatON" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="true" android:contentDescription="I would like to receive buddy suggestions from ChatON"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Suggest me" android:key="pref_item_exclude_me" android:summary="I would like to be suggested to other people" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="false" android:contentDescription="I would like to be suggested to other people"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_call.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General settings">
+        <Preference android:layout="@layout/preference" android:title="Set reject messages" android:key="pref_item_set_reject_messages" android:summary="Edit reject messages" android:widgetLayout="@layout/preference" android:contentDescription="Set reject messages"/>
+        <Preference android:layout="@layout/preference" android:title="Ringtone" android:key="pref_item_call_ringtone" android:summary="Chaton V" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Ringtone"/>
+        <Preference android:layout="@layout/preference" android:title="Answering / ending calls" android:key="pref_item_answer_call" android:summary="Manage answering / ending call settings" android:widgetLayout="@layout/preference" android:contentDescription="Answering / ending calls"/>
+        <CheckBoxPreference android:layout="@layout/preference" android:title="Turn off screen during calls" android:key="pref_item_screen_state_during_call" android:summary="Proximity sensor turned on in call" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="false" android:contentDescription="Turn off screen during calls"/>
+        <Preference android:layout="@layout/preference" android:title="Call alert" android:key="pref_item_call_alert" android:summary="Set call alerts" android:widgetLayout="@layout/preference" android:contentDescription="Call alert"/>
+        <Preference android:layout="@layout/preference" android:title="Data usage" android:key="pref_item_data_usage" android:summary="Total data usage : %s" android:widgetLayout="@layout/preference" android:contentDescription="Data usage"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Video call settings">
+        <Preference android:layout="@layout/preference" android:title="Video call quality" android:key="pref_item_video_quality" android:summary="low qulity" android:widgetLayout="@layout/preference" android:contentDescription="Video call quality"/>
+        <Preference android:layout="@layout/preference" android:title="Video call image" android:key="pref_item_call_image" android:summary="Set default hide me image" android:widgetLayout="@layout/preference" android:contentDescription="Video call image"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About call">
+        <Preference android:layout="@layout/preference" android:title="Version info" android:key="pref_item_chatonv_version" android:summary="Current Version : %s" android:widgetLayout="@layout/preference" android:contentDescription="Version info"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_chats.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Chat room">
+        <Preference android:layout="@layout/preference" android:title="Bg and bubble styles" android:key="pref_item_change_bubble_background_style" android:widgetLayout="@layout/preference" android:contentDescription="Bubble style"/>
+        <Preference android:layout="@layout/preference" android:title="Font style" android:key="pref_item_font_style" android:widgetLayout="@layout/preference" android:contentDescription="Font style"/>
+        <Preference android:layout="@layout/preference" android:title="Font size" android:key="pref_item_font_size" android:widgetLayout="@layout/preference" android:contentDescription="Font size"/>
+        <CheckBoxPreference android:layout="@layout/preference" android:title="Use the enter key to send" android:key="pref_item_enter_key" android:summary="Send messages using the enter key on your keyboard" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="false" android:contentDescription="Use the enter key to send"/>
+        <CheckBoxPreference android:layout="@layout/preference" android:title="Use walkie talkie" android:key="pref_item_push_to_talk_key" android:summary="Turns the send button into the walkie talkie button" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="false" android:contentDescription="Use walkie talkie"/>
+        <CheckBoxPreference android:layout="@layout/preference" android:title="Auto resend" android:key="pref_item_auto_resend" android:summary="Off" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="false" android:contentDescription="Auto resend"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Display">
+        <Preference android:layout="@layout/preference" android:title="Background colour" android:key="pref_item_change_colours" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Background colour"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_downloads.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="pref_screen">
+    <PreferenceCategory android:title="More apps" android:key="settings_title_more_apps">
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="ChatON V" android:key="pref_item_downloads_chaton_v" android:contentDescription="ChatON V"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="ChatON">
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Notification ringtone" android:key="pref_item_downloads_sound" android:contentDescription="Notification ringtone"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Chat room">
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Anicons" android:key="pref_item_downloads_ticcon" android:contentDescription="Anicons"/>
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Bg and bubble styles" android:key="pref_item_downloads_theme" android:contentDescription="Backgrounds and bubble styles"/>
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Font" android:key="pref_item_downloads_font" android:contentDescription="Font"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Animessage">
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Template" android:key="pref_item_downloads_ams_template" android:contentDescription="Template"/>
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Background" android:key="pref_item_downloads_ams_background" android:contentDescription="Background"/>
+        <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Stamp" android:key="pref_item_downloads_ams_stamp" android:contentDescription="Stamp"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_general.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="pref_screen_general">
+    <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="Notice" android:key="pref_item_noti" android:widgetLayout="@layout/preference" android:contentDescription="Notice"/>
+    <Preference android:layout="@layout/preference" android:title="Help" android:key="pref_item_help" android:widgetLayout="@layout/preference" android:contentDescription="Help"/>
+    <Preference android:layout="@layout/preference" android:title="Contact us" android:key="pref_item_VOC" android:widgetLayout="@layout/preference" android:contentDescription="Contact us"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_manage_accounts.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.chaton.settings.SamsungAccountPreference android:layout="@layout/preference_account_signin" android:title="Samsung account" android:key="pref_item_samsung_account" android:widgetLayout="@layout/preference_account_signin_button" android:contentDescription=""/>
+    <com.sec.chaton.settings.SnsSignInOutPreference android:layout="@layout/preference" android:title="Facebook" android:key="pref_item_facebook" android:widgetLayout="@layout/preference_widget_logout_button" android:contentDescription=""/>
+    <com.sec.chaton.settings.SnsSignInOutPreference android:layout="@layout/preference" android:title="Twitter" android:key="pref_item_twitter" android:widgetLayout="@layout/preference_widget_logout_button" android:contentDescription=""/>
+    <com.sec.chaton.settings.SnsSignInOutPreference android:layout="@layout/preference" android:title="SINA Weibo" android:key="pref_item_weibo" android:widgetLayout="@layout/preference_widget_logout_button" android:contentDescription=""/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_noti.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Push notifications" android:key="pref_item_push_notification" android:summary="Allows message notifications when you are not using ChatON" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="true" android:contentDescription="Push notifications"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Preview" android:key="pref_item_received_message" android:summary="Show part of message when alerted" android:widgetLayout="@layout/preference_widget_checkbox" android:contentDescription="Preview"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Pop-up notifications" android:key="pref_item_blackscreen_popup" android:summary="Pop-ups inform you when messages arrive" android:widgetLayout="@layout/preference_widget_checkbox" android:contentDescription="Pop-up notifications"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Alert for new group chat" android:key="pref_item_alert_group_chat" android:summary="Receive alerts when invited to new group chats" android:widgetLayout="@layout/preference_widget_checkbox" android:contentDescription="Alert for new group chat"/>
+    <Preference android:layout="@layout/preference" android:title="Alert type" android:key="pref_item_type" android:summary="@string/settings_type_summary" android:widgetLayout="@layout/preference" android:contentDescription="Alert type"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_password_lock.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Password lock" android:key="pref_item_password_lock" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="false" android:contentDescription="Password lock"/>
+    <Preference android:layout="@layout/preference" android:title="Change password" android:key="pref_item_change_password_lock" android:widgetLayout="@layout/preference" android:dependency="pref_item_password_lock" android:contentDescription="Change password"/>
+    <Preference android:layout="@layout/preference" android:title="Password hint" android:key="pref_item_hint_password_lock" android:summary="Set password hint" android:widgetLayout="@layout/preference" android:dependency="pref_item_password_lock" android:contentDescription="Password hint"/>
+    <Preference android:enabled="false" android:layout="@layout/layout_preference_password_summary" android:title="If you have forgotten your password, you need to delete your ChatON account. All data will be deleted."/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_privacy.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Show my number" android:key="pref_item_phonenumber" android:widgetLayout="@layout/preference_widget_checkbox" android:contentDescription="Show my number"/>
+    <Preference android:layout="@layout/preference" android:title="Show my profile picture" android:key="pref_item_show_profileimage" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Show my profile picture"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Show my Samsung account" android:key="pref_item_samsung_account" android:widgetLayout="@layout/preference_widget_checkbox" android:contentDescription="Show my Samsung account"/>
+    <Preference android:layout="@layout/preference" android:title="Birthday" android:key="pref_item_birthday" android:widgetLayout="@layout/preference" android:contentDescription="Birthday"/>
+    <Preference android:layout="@layout/preference" android:title="Interaction rank" android:key="pref_item_hide" android:widgetLayout="@layout/preference" android:contentDescription="Interaction rank"/>
+    <Preference android:layout="@layout/preference" android:title="PostON" android:key="pref_item_poston" android:widgetLayout="@layout/preference" android:contentDescription="PostON"/>
+    <Preference android:layout="@layout/preference" android:title="Password lock" android:key="pref_item_password_lock" android:summary="Off" android:widgetLayout="@layout/preference" android:defaultValue="false" android:contentDescription="Password lock"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="layout_setting_recommend.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Suggestions" android:key="pref_item_recommend_normal" android:summary="&quot;Notifies you of your buddies' birthdays&quot;" android:widgetLayout="@layout/preference_widget_checkbox" android:defaultValue="true"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_setting.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Display">
+        <Preference android:title="Change skin" android:key="pref_item_change_skins"/>
+        <Preference android:title="Font size" android:key="pref_item_font_size"/>
+        <CheckBoxPreference android:title="Birthdays" android:key="pref_item_birthday" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="General" android:key="setting_category_general">
+        <com.sec.chaton.settings.AboutNewNotice android:title="About ChatON" android:key="pref_item_about"/>
+        <Preference android:title="Help" android:key="pref_item_help"/>
+        <Preference android:title="Tell friends" android:key="pref_item_invite_friend"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Privacy">
+        <Preference android:title="Block list" android:key="pref_item_blocked"/>
+        <Preference android:title="PostON" android:key="pref_item_buddies_say"/>
+        <Preference android:title="Deregister device" android:key="pref_item_delete"/>
+        <Preference android:title="Hidden interactions" android:key="pref_item_hide"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Notifications">
+        <CheckBoxPreference android:title="Push notifications" android:key="pref_item_push_notification" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/settings_type_options" android:title="Alert type" android:key="pref_item_type" android:summary="@string/settings_type_summary" android:dependency="pref_item_push_notification" android:defaultValue="Vibration and melody" android:dialogTitle="Alert type" android:entryValues="@array/settings_type_options_value"/>
+        <RingtonePreference android:title="Notification ringtone" android:key="pref_item_ringtone" android:dependency="pref_item_push_notification" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="notification" android:showDefault="true" android:showSilent="true"/>
+        <CheckBoxPreference android:title="Preview" android:key="pref_item_received_message" android:summary="Show part of message when alerted"/>
+        <CheckBoxPreference android:title="Pop-up notifications" android:key="pref_item_blackscreen_popup" android:summary="Pop-ups inform you when messages arrive"/>
+        <Preference android:title="Push status" android:key="pref_item_push_status"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Backup and sync" android:key="settings_category_backup_sync">
+        <com.sec.chaton.settings.SyncStatePreference android:title="Sync Contacts" android:key="pref_item_sync_now"/>
+        <PreferenceScreen android:title="Send VOC and Log" android:key="pref_item_send_log"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_setting2.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="pref_screen">
+    <Preference android:layout="@layout/preference" android:title="Manage buddies" android:key="pref_item_Buddies" android:contentDescription="Manage buddies"/>
+    <Preference android:layout="@layout/preference" android:title="Chat room and display settings" android:key="pref_item_Chats" android:contentDescription="Chat room and display settings"/>
+    <Preference android:layout="@layout/preference" android:title="Privacy" android:key="pref_item_Privacy" android:contentDescription="Privacy"/>
+    <Preference android:layout="@layout/preference" android:title="Alerts" android:key="pref_item_Noti" android:contentDescription="Alerts"/>
+    <com.sec.chaton.settings.AboutNewNotice android:layout="@layout/preference" android:title="General" android:key="pref_item_General" android:contentDescription="General"/>
+    <com.sec.chaton.settings.SyncStatePreference android:layout="@layout/preference" android:title="Sync Contacts" android:key="pref_item_sync_now" android:summary="Synchronise contacts in my device with ChatON buddies"/>
+    <PreferenceScreen android:layout="@layout/preference" android:title="Send VOC and Log" android:key="pref_item_send_log"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_setting_phone.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Display">
+        <Preference android:title="Change skin" android:key="pref_item_change_skins"/>
+        <Preference android:title="Font size" android:key="pref_item_font_size"/>
+        <CheckBoxPreference android:title="Birthdays" android:key="pref_item_birthday" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="General" android:key="setting_category_general">
+        <com.sec.chaton.settings.AboutNewNotice android:title="About ChatON" android:key="pref_item_about"/>
+        <Preference android:title="Help" android:key="pref_item_help"/>
+        <Preference android:title="Tell friends" android:key="pref_item_invite_friend"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Privacy">
+        <Preference android:title="Block list" android:key="pref_item_blocked"/>
+        <Preference android:title="Deregister device" android:key="pref_item_delete"/>
+        <Preference android:title="Hidden interactions" android:key="pref_item_hide"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Notifications">
+        <CheckBoxPreference android:title="Push notifications" android:key="pref_item_push_notification" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/settings_type_options" android:title="Alert type" android:key="pref_item_type" android:summary="@string/settings_type_summary" android:dependency="pref_item_push_notification" android:defaultValue="Vibration and melody" android:dialogTitle="Alert type" android:entryValues="@array/settings_type_options_value"/>
+        <RingtonePreference android:title="Notification ringtone" android:key="pref_item_ringtone" android:dependency="pref_item_push_notification" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="notification" android:showDefault="true" android:showSilent="true"/>
+        <CheckBoxPreference android:title="Preview" android:key="pref_item_received_message" android:summary="Show part of message when alerted"/>
+        <Preference android:title="Push status" android:key="pref_item_push_status"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Backup and sync" android:key="settings_category_backup_sync">
+        <com.sec.chaton.settings.SyncStatePreference android:title="Sync Contacts" android:key="pref_item_sync_now"/>
+        <PreferenceScreen android:title="Send VOC and Log" android:key="pref_item_send_log"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_setting_tab.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Display">
+        <Preference android:title="Change skin" android:key="pref_item_change_skins"/>
+        <Preference android:title="Font size" android:key="pref_item_font_size"/>
+        <CheckBoxPreference android:title="Birthdays" android:key="pref_item_birthday" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="General" android:key="setting_category_general">
+        <com.sec.chaton.settings.AboutNewNotice android:title="About ChatON" android:key="pref_item_about"/>
+        <Preference android:title="Help" android:key="pref_item_help"/>
+        <Preference android:title="Tell friends" android:key="pref_item_invite_friend"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Privacy">
+        <Preference android:title="Block list" android:key="pref_item_blocked"/>
+        <Preference android:title="Deregister device" android:key="pref_item_delete"/>
+        <Preference android:title="PostON" android:key="pref_item_buddies_say"/>
+        <Preference android:title="Hidden interactions" android:key="pref_item_hide"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Notifications">
+        <CheckBoxPreference android:title="Push notifications" android:key="pref_item_push_notification" android:defaultValue="true"/>
+        <Preference android:title="Push status" android:key="pref_item_push_status"/>
+        <Preference android:title="Alert type" android:key="pref_item_type" android:summary="Vibration and melody"/>
+        <Preference android:title="Notification ringtone" android:key="pref_item_ringtone" android:defaultValue="content://settings/system/notification_sound" android:showDefault="true"/>
+        <CheckBoxPreference android:title="Preview" android:key="pref_item_received_message" android:summary="Show part of message when alerted"/>
+        <CheckBoxPreference android:title="Pop-up notifications" android:key="pref_item_blackscreen_popup"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/chaton_preference_category" android:title="Backup and sync" android:key="settings_category_backup_sync">
+        <com.sec.chaton.settings.SyncStatePreference android:title="Sync Contacts" android:key="pref_item_sync_now"/>
+        <PreferenceScreen android:title="Send VOC and Log" android:key="pref_item_send_log"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_setting_tellfriends.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/layout_preference_twoline" android:title="Send a download link to your friends so they can install ChatON" android:selectable="false" android:key="pref_item_post_download_link_to_your_facebook_friends"/>
+    <Preference android:layout="@layout/preference" android:title="Messages" android:key="pref_item_viamessage" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Messages"/>
+    <Preference android:layout="@layout/preference" android:title="Facebook" android:key="pref_item_viafacebook" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Facebook"/>
+    <Preference android:layout="@layout/preference" android:title="Twitter" android:key="pref_item_viatwitter" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Twitter"/>
+    <Preference android:layout="@layout/preference" android:title="SINA Weibo" android:key="pref_item_viaweibo" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="SINA Weibo"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_setting_tellfriends_none_sns.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/layout_preference_twoline" android:title="Send a download link to your friends so they can install ChatON" android:key="pref_item_post_download_link_to_your_facebook_friends"/>
+    <Preference android:layout="@layout/preference" android:title="Messages" android:key="pref_item_viamessage" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Messages"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="setting_localbackup.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/preference" android:title="Set up/change password" android:key="pref_setting_backup" android:summary="To use auto backup and back up now, set a password" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Auto backup"/>
+    <CheckBoxPreference android:layout="@layout/preference" android:title="Auto backup" android:key="pref_auto_backup" android:widgetLayout="@layout/preference_widget_checkbox" android:contentDescription="Auto backup"/>
+    <Preference android:layout="@layout/preference" android:title="Back up now" android:key="pref_backup_now" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="Back up now"/>
+    <Preference android:layout="@layout/preference" android:title="View backed up chats" android:key="pref_view_backedup" android:summary="View the chats you backed up before you last reinstalled ChatON" android:widgetLayout="@layout/preference_widget_arrow" android:contentDescription="View backed up chats"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="spellscroll.xml">
+      <spellscroll xmlns:android="http://schemas.android.com/apk/res/android" android:label="ChatON" android:icon="@drawable/icon" android:name="com.sec.chaton" android:hint="Any word">
+    <spell android:label="Command only" android:icon="@drawable/icon" android:name="ChatOn_Launch" android:hint="Open ChatON">
+        <spelleffect>
+            <intent android:targetPackage="com.sec.chaton" android:action="android.intent.action.SPELL" android:targetClass="com.sec.chaton.HomeActivity"/>
+            <extra-attr android:name="flags" android:value="FLAG_ACTIVITY_CLEAR_TOP|FLAG_ACTIVITY_NEW_TASK"/>
+        </spelleffect>
+    </spell>
+    <spell android:label="Recipient" android:icon="@drawable/icon" android:name="ChatOn_Buddy" android:hint="Jump to a conversation with the selected recipient">
+        <spelleffect>
+            <intent android:targetPackage="com.sec.chaton" android:action="android.intent.action.SPELL" android:targetClass="com.sec.chaton.HomeActivity">
+                <intent-filter>
+                    <data android:mimeType="text/plain"/>
+                    <data android:scheme="chaton"/>
+                </intent-filter>
+                <extra android:name="chatonbuddy" android:value="{{NAME}}"/>
+            </intent>
+            <extra-attr android:name="flags" android:value="FLAG_ACTIVITY_CLEAR_TOP|FLAG_ACTIVITY_NEW_TASK"/>
+        </spelleffect>
+        <ingredient android:label="Any word" android:name="NAME" android:inputType="text"/>
+    </spell>
+    <spell android:label="Message" android:icon="@drawable/icon" android:name="ChatOn_Message" android:hint="Jump to your buddies page to select a chat recipient">
+        <spelleffect>
+            <intent android:targetPackage="com.sec.chaton" android:action="android.intent.action.SPELL" android:targetClass="com.sec.chaton.HomeActivity">
+                <extra android:name="chatonmessage" android:value="{{MESSAGE}}"/>
+            </intent>
+            <intent-filter>
+                <data android:mimeType="text/plain"/>
+                <data android:scheme="chaton"/>
+            </intent-filter>
+            <extra-attr android:name="flags" android:value="FLAG_ACTIVITY_CLEAR_TOP|FLAG_ACTIVITY_NEW_TASK"/>
+        </spelleffect>
+        <ingredient android:label="Any word" android:name="MESSAGE" android:inputType="text"/>
+    </spell>
+    <spell android:label="Message" android:icon="@drawable/icon" android:name="ChatOn_Selected_Message" android:hint="Send a message to the selected recipient via ChatON">
+        <spelleffect>
+            <intent android:targetPackage="com.sec.chaton" android:action="android.intent.action.SPELL" android:targetClass="com.sec.chaton.HomeActivity">
+                <extra android:name="chatonbuddy" android:value="{{NAME}}"/>
+                <extra android:name="chatonmessage" android:value="{{MESSAGE}}"/>
+            </intent>
+            <intent-filter>
+                <data android:mimeType="text/plain"/>
+                <data android:scheme="chaton"/>
+            </intent-filter>
+            <extra-attr android:name="flags" android:value="FLAG_ACTIVITY_CLEAR_TOP|FLAG_ACTIVITY_NEW_TASK"/>
+        </spelleffect>
+        <ingredient android:label="Any word" android:name="NAME" android:inputType="text">
+            <extra-attr android:name="screenType" android:value="CONTACT"/>
+        </ingredient>
+        <ingredient android:label="Any word" android:name="MESSAGE" android:inputType="text"/>
+    </spell>
+</spellscroll>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.sec.chaton" android:contentAuthority="com.android.contacts" android:supportsUploading="false"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="actionbar_menu_close.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/list_by" android:id="@id/trunk_menu_listby" android:title="List by"/>
+    <item android:icon="@drawable/refresh" android:id="@id/trunk_menu_refresh" android:title="Refresh"/>
+</menu>
+    </File>
+    <File file_name="ams_ics2_context_menu_my_works.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/context_menu_item_play" android:title="Play"/>
+    <item android:id="@id/context_menu_item_send" android:title="Send"/>
+    <item android:id="@id/context_menu_item_edit" android:title="Edit"/>
+    <item android:id="@id/context_menu_item_delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="ams_ics2_context_menu_samples.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/context_menu_item_play" android:title="Play"/>
+    <item android:id="@id/context_menu_item_send" android:title="Send"/>
+    <item android:id="@id/context_menu_item_edit" android:title="Edit"/>
+</menu>
+    </File>
+    <File file_name="ams_ics2_context_menu_stamp.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/context_menu_item_delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="ams_ics_option_menu_composer.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/menu_group_create_new">
+        <item android:icon="@drawable/creat_new" android:id="@id/menu_item_create_new" android:title="Create"/>
+    </group>
+    <group android:id="@id/menu_group_my_works">
+        <item android:icon="@drawable/mywork" android:id="@id/menu_item_my_works" android:title="My works"/>
+    </group>
+    <group android:id="@id/menu_group_samples">
+        <item android:icon="@drawable/sample" android:id="@id/menu_item_samples" android:title="Samples"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="calllog_contextual_menu_blocked_buddy.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_calllog_delete_contextual" android:title="Delete"/>
+    <item android:id="@id/menu_calllog_unblock" android:title="Unblock"/>
+</menu>
+    </File>
+    <File file_name="calllog_contextual_menu_buddy.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_calllog_voice_call" android:title="Voice call"/>
+    <item android:id="@id/menu_calllog_video_call" android:title="Video call"/>
+    <item android:id="@id/menu_calllog_delete_contextual" android:title="Delete"/>
+    <item android:id="@id/menu_calllog_detail" android:title="&quot;View buddy's profile&quot;"/>
+    <item android:id="@id/menu_calllog_block" android:title="Block"/>
+</menu>
+    </File>
+    <File file_name="calllog_contextual_menu_group.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_calllog_voice_call" android:title="Voice call"/>
+    <item android:id="@id/menu_calllog_video_call" android:title="Video call"/>
+    <item android:id="@id/menu_calllog_delete_contextual" android:title="Delete"/>
+    <item android:id="@id/menu_calllog_view_group_profile" android:title="View group profile"/>
+</menu>
+    </File>
+    <File file_name="calllog_contextual_menu_hided_buddy.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_calllog_delete_contextual" android:title="Delete"/>
+    <item android:id="@id/menu_calllog_add_buddy" android:title="Add buddy"/>
+</menu>
+    </File>
+    <File file_name="calllog_contextual_menu_unsaved_buddy.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_calllog_delete_contextual" android:title="Delete"/>
+    <item android:id="@id/menu_calllog_add_buddy" android:title="Add buddy"/>
+    <item android:id="@id/menu_calllog_block" android:title="Block"/>
+</menu>
+    </File>
+    <File file_name="calllog_contextual_menu_unsaved_group.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_calllog_delete_contextual" android:title="Delete"/>
+    <item android:id="@id/menu_calllog_add_group" android:title="Add group"/>
+</menu>
+    </File>
+    <File file_name="calllog_detail_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+    <item android:icon="@drawable/tw_action_bar_block_selector" android:id="@id/menu_calllog_block" android:title="Block"/>
+</menu>
+    </File>
+    <File file_name="calllog_detail_menu_blocked.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+    <item android:icon="@drawable/tw_action_bar_block_disabled" android:id="@id/menu_calllog_unblock" android:title="Unblock"/>
+</menu>
+    </File>
+    <File file_name="calllog_detail_menu_group.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+    <item android:icon="@drawable/tw_action_bar_show_member_disabled" android:id="@id/menu_calllog_show_member" android:title="Show members"/>
+</menu>
+    </File>
+    <File file_name="calllog_detail_menu_group_not_saved.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+    <item android:icon="@drawable/tw_action_bar_show_member_disabled" android:id="@id/menu_calllog_show_member" android:title="Show members"/>
+</menu>
+    </File>
+    <File file_name="calllog_detail_menu_hide.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="calllog_detail_menu_not_saved.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+    <item android:icon="@drawable/tw_action_bar_block_selector" android:id="@id/menu_calllog_block" android:title="Block"/>
+</menu>
+    </File>
+    <File file_name="calllog_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_listby_white" android:id="@id/menu_calllog_view_by" android:title="View by"/>
+    <item android:icon="@drawable/more_option_delete_white" android:id="@id/menu_calllog_delete" android:title="Delete"/>
+    <item android:icon="@drawable/actionbar_icon_data_usage" android:id="@id/menu_calllog_data_usage" android:title="Data usage"/>
+    <item android:icon="@drawable/more_option_help_white" android:id="@id/menu_calllog_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="calllog_menu_no_list.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/more_option_listby_white" android:id="@id/menu_calllog_view_by" android:title="View by"/>
+    <item android:icon="@drawable/actionbar_icon_data_usage" android:id="@id/menu_calllog_data_usage" android:title="Data usage"/>
+    <item android:icon="@drawable/more_option_help_white" android:id="@id/menu_calllog_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="menu_special_buddy_chat_option.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/menu_option_group">
+        <item android:icon="@drawable/profile" android:id="@id/menu_spbd_option_viewprofile" android:orderInCategory="1" android:title="&quot;Buddy's page&quot;"/>
+        <item android:icon="@drawable/ic_menu_details_notification_program_info" android:id="@id/menu_spbd_option_chatinfo" android:orderInCategory="2" android:title="Chat info"/>
+        <item android:icon="@drawable/close_chat" android:id="@id/menu_spbd_option_closechat" android:orderInCategory="3" android:title="Close chat"/>
+    </group>
+</menu>
+    </File>
+  </Directory>
 </App>

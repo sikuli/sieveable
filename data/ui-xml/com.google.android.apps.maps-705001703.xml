@@ -7334,4 +7334,45 @@
       <RelativeLayout style="&#10;         &#10;         &#10;    "/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="true" android:layout="@layout/preference_multiline_internal" android:title="Switch account" android:key="current_account_name"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Edit home or work" android:key="edit_home_work"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Google location settings" android:key="location_reporting"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Location accuracy tips" android:key="improve_location"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Maps history" android:key="maps_history"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Offer notifications" android:key="offer_notifications"/>
+    <ListPreference android:persistent="true" android:entries="@array/DISTANCE_UNIT_ENTRIES" android:layout="@layout/preference_multiline_internal" android:title="Distance units" android:key="distance_units" android:defaultValue="UNKNOWN" android:dialogTitle="Distance units" android:entryValues="@array/DISTANCE_UNIT_VALUES"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Send feedback" android:key="send_feedback"/>
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/preference_multiline_internal" android:title="Shake to send feedback" android:key="shake_to_send_feedback" android:defaultValue="true"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Tutorials &amp; help" android:key="tutorials_and_help"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="About, terms &amp; privacy" android:key="about"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="offer_details_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/my_offers_menu_item" android:title="Your offers" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offers_core_offer_details_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/offers_core_delete_instance" android:title="Delete" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="place_page_photo_viewer_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/reportAProblem" android:title="Report inappropriate photo" android:showAsAction="never"/>
+    <item android:id="@id/uploadAPhoto" android:title="Add a photo" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="place_page_street_view_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/share" android:title="Share" android:showAsAction="never"/>
+    <item android:id="@id/reportAProblem" android:title="Report a problem" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
 </App>

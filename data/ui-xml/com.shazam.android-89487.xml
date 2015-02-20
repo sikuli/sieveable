@@ -908,4 +908,122 @@
 </RelativeLayout></FrameLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="appwidget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="56.0dip" android:minHeight="56.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_1x1_free" android:previewImage="@drawable/widget_preview" android:resizeMode="horizontal|vertical"/>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="Shazam" android:icon="@drawable/icon_free" android:accountType="com.shazam.android"/>
+    </File>
+    <File file_name="newssummarysyncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.shazam.android" android:contentAuthority="com.shazam.android.persistence.providers.NewsSummarySyncStubContentProvider" android:userVisible="false" android:allowParallelSyncs="false" android:isAlwaysSyncable="true"/>
+    </File>
+    <File file_name="preferences_about.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="settings_key_about">
+    <com.shazam.android.preference.VersionPreference android:title="Application version" android:key="settings_key_buildinfo"/>
+    <com.shazam.android.preference.TermsOfUsePreference android:title="View Terms of Use" android:key="settings_key_terms_of_use"/>
+    <com.shazam.android.preference.SupportPreference android:title="Email Shazam Support" android:key="settings_key_support"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_general.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="settings_key_general">
+    <com.shazam.android.preference.notification.NotificationPreference android:title="Notifications" android:key="settings_key_notifications"/>
+    <CheckBoxPreference android:persistent="true" android:title="Tag on startup" android:key="tagstartup" android:summary="Set Shazam to identify music on app launch." android:defaultValue="false"/>
+    <CheckBoxPreference android:persistent="true" android:title="Vibrate" android:key="vibrate" android:summary="Set Shazam to vibrate once tagging finishes." android:defaultValue="true"/>
+    <CheckBoxPreference android:persistent="true" android:title="Use Location" android:key="pk_l_e" android:summary="Add location data to my tags." android:defaultValue="true"/>
+    <com.shazam.android.preference.DeleteAllTagsDialogPreference android:title="Delete All Tags" android:key="settings_key_delete_all_tags" android:summary="All your tags will be permanently deleted." android:dialogMessage="&quot;Deleting will remove all tags including Tag Chart and track recommendations. &#10;Are you sure you want to delete all tags?&quot;"/>
+    <com.shazam.android.preference.UpgradePreference android:title="Upgrade to Encore" android:key="settings_upgrade_to_encore" android:summary="Experience Shazam without adverts."/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_social.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="settings_key_social">
+    <com.shazam.android.preference.RegistrationPreference android:title="Sign up with Shazam" android:key="settings_register_user"/>
+    <com.shazam.android.preference.SocialSettingsPreference android:title="Shazam Friends" android:key="settings_key_social_settings" android:summary="See what your friends are tagging!"/>
+    <com.shazam.android.preference.RdioPreference android:title="Connect to Rdio" android:key="settings_key_rdio_setup" android:dialogTitle="Disconnect from Rdio" android:dialogMessage="Are you sure you want to disconnect?"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="testmode_prefs_advert.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Enable Static TestIDs and choice of providers" android:key="testmode_enable_test_adverts_key" android:defaultValue="false"/>
+    <CheckBoxPreference android:persistent="true" android:title="Use AdMarvel SDK" android:key="testmode_enable_admarvel_key" android:summary="If unticked, appNexus" android:dependency="testmode_enable_test_adverts_key" android:defaultValue="false"/>
+    <EditTextPreference android:persistent="true" android:title="Advert SiteID" android:key="testmode_advert_siteid_key" android:dependency="testmode_enable_test_adverts_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="testmode_prefs_appinfo.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:testmode="http://schemas.android.com/apk/res-auto">
+    <com.shazam.android.testmode.TestModeListPreference android:title="Endpoints" android:key="testmode_endpoint_key" testmode:entries="@array/endPointNames" testmode:entryValues="@array/endPointUrls"/>
+    <com.shazam.android.testmode.TestModeListPreference android:title="Channel" android:key="testmode_channel_key" testmode:entries="@array/appChanelNames" testmode:entryValues="@array/appChanelIDs"/>
+    <PreferenceCategory android:title="Version Number" android:key="testmode_version_category_key">
+        <CheckBoxPreference android:persistent="true" android:title="Override Version Number" android:key="testmode_version_enabled_key"/>
+        <EditTextPreference android:persistent="true" android:title="Version Number" android:key="testmode_version_number_key" android:dependency="testmode_version_enabled_key" android:dialogMessage="Version number must be in the format of x.x.x"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="testmode_prefs_audio.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:testmode="http://schemas.android.com/apk/res-auto">
+    <com.shazam.android.testmode.TestModeListPreference android:title="Sample Rate" android:key="testmode_audio_sample_rate_key" testmode:entries="@array/sampleRates" testmode:entryValues="@array/sampleRates"/>
+    <CheckBoxPreference android:persistent="true" android:title="Dump Audio Samples" android:key="testmode_audio_dump_sig_key" android:summary="Dump audio samples to SD card" android:defaultValue="false"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="testmode_prefs_data.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="Add track" android:key="testmode_data_add_track" android:summary="Adds a track to the my tags list"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="testmode_prefs_other.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:testmode="http://schemas.android.com/apk/res-auto">
+    <CheckBoxPreference android:enabled="true" android:title="Strict Mode" android:key="testmode_strictmode_key" android:summary="Only valid for android 2.3 and up." android:defaultValue="false"/>
+    <com.shazam.android.testmode.ResetPreferenceDialog android:title="Delete all app data" android:key="testmode_delete_all_key" android:summary="Delete all files from storage."/>
+    <Preference android:title="Data Settings" android:key="testmode_data_key" android:summary="Open System App info screen."/>
+    <CheckBoxPreference android:persistent="true" android:title="Test Tag" android:key="testmode_testtag_key" android:summary="Show the Test Tag menu option in the Tag Now screen." android:defaultValue="false"/>
+    <com.shazam.android.testmode.TestModeListPreference android:title="Web Test Url" android:key="testmode_webtesturl_key" android:summary="- unset -" testmode:entries="@array/webtest_endPointNames" testmode:entryValues="@array/webtest_endPointUrls"/>
+    <Preference android:title="Open Test Page" android:key="testmode_webtestlaunch_key" android:dependency="testmode_webtesturl_key"/>.
+</PreferenceScreen>
+    </File>
+    <File file_name="testmode_prefs_systeminfo.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:testmode="http://schemas.android.com/apk/res-auto">
+    <com.shazam.android.testmode.TestModeListPreference android:title="IMSI" android:key="testmode_imsi_key" testmode:entries="@array/imsiNames" testmode:entryValues="@array/imsiNumbers"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="tracksyncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.shazam.android" android:contentAuthority="com.shazam.android.persistence.providers.TrackSyncStubContentProvider" android:userVisible="false" android:allowParallelSyncs="false" android:isAlwaysSyncable="true"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="home.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_general_preferences" android:orderInCategory="9" android:title="General Settings" android:showAsAction="never"/>
+    <item android:id="@id/menu_social_preferences" android:orderInCategory="10" android:title="Social Settings" android:showAsAction="never"/>
+    <item android:id="@id/menu_about_preferences" android:orderInCategory="11" android:title="About" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="tagmenu_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="?shazam_now_icon" android:id="@id/menu_tag_now" android:orderInCategory="999" android:title="Tag Now" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="tagmenu_music_details_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/plus_icon" android:id="@id/menu_addtotags" android:visible="false" android:orderInCategory="11" android:title="Add to My Tags" android:showAsAction="always"/>
+    <item android:icon="@drawable/remove_icon" android:id="@id/menu_delete" android:visible="false" android:orderInCategory="10" android:title="Delete Tag" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="tagmenu_mytag.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/share_button" android:visible="false" android:title="Share" android:showAsAction="always" android:actionProviderClass="com.shazam.android.widget.share.BeaconingShareActionProvider"/>
+    <item android:icon="?discard_icon" android:id="@id/menu_delete" android:title="Delete Tag" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="tagmenu_notmytag.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/share_button" android:visible="false" android:title="Share" android:showAsAction="always" android:actionProviderClass="com.shazam.android.widget.share.BeaconingShareActionProvider"/>
+    <item android:icon="@drawable/ic_action_new" android:id="@id/menu_addtotags" android:title="Add to My Tags" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="web_content_default.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="?refresh_icon" android:id="@id/menu_refresh" android:orderInCategory="10" android:title="Refresh" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+  </Directory>
 </App>

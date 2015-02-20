@@ -675,4 +675,107 @@
       <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:drawableRight="@android:drawable/ic_menu_more" style="?android:attr/spinnerItemStyle"/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="handwriting_view_buttons.xml">
+      <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyHeight="42.0dip" android:horizontalGap="0.0px" android:verticalGap="0.0px">
+    <Row>
+        <Key android:keyWidth="79.99999%p" android:codes="32" android:isRepeatable="false" android:keyIcon="@drawable/ic_key_space"/>
+        <Key android:keyWidth="20.000004%p" android:codes="-2" android:isRepeatable="true" android:keyIcon="@drawable/ic_key_backspace"/>
+    </Row>
+</Keyboard>
+    </File>
+    <File file_name="settings_data.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Prefer network text-to-speech" android:key="key_prefer_network_tts" android:summary="Use high-quality network text-to-speech whenever available" android:defaultValue="true"/>
+    <com.google.android.apps.translate.pref.NetworkChoicePref android:title="Download offline packages" android:key="key_offline_download_network"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_empty.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="root"/>
+    </File>
+    <File file_name="settings_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="Account &amp; privacy" android:fragment="com.google.android.apps.translate.pref.SubPrefsFragment">
+        <extra android:name="settings" android:value="1"/>
+    </header>
+    <header android:title="Speech input" android:fragment="com.google.android.apps.translate.pref.SubPrefsFragment">
+        <extra android:name="settings" android:value="2"/>
+    </header>
+    <header android:title="Data usage" android:fragment="com.google.android.apps.translate.pref.SubPrefsFragment">
+        <extra android:name="settings" android:value="4"/>
+    </header>
+    <header android:title="Manage offline languages" android:fragment="com.google.android.apps.translate.pref.OfflineFragment"/>
+    <header android:title="About Google Translate" android:fragment="com.google.android.apps.translate.pref.SubPrefsFragment">
+        <extra android:name="settings" android:value="5"/>
+    </header>
+</preference-headers>
+    </File>
+    <File file_name="settings_headers_legacy.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="Account &amp; privacy">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="1"/>
+        </intent>
+    </Preference>
+    <Preference android:title="Speech input" android:key="key_voice_prefs">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="2"/>
+        </intent>
+    </Preference>
+    <Preference android:title="Data usage">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="4"/>
+        </intent>
+    </Preference>
+    <Preference android:title="Manage offline languages">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.OfflineActivity"/>
+    </Preference>
+    <Preference android:title="About Google Translate">
+        <intent android:targetPackage="com.google.android.apps.translate" android:targetClass="com.google.android.apps.translate.pref.PrefsActivity">
+            <extra android:name="settings" android:value="5"/>
+        </intent>
+    </Preference>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_privacy.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.translate.pref.GoogleAccountPref android:title="Google account" android:key="key_google_login"/>
+    <CheckBoxPreference android:title="Improve camera input" android:key="key_enable_camera_logging" android:summary="Allow Google to retain your images related to translation" android:defaultValue="true"/>
+    <com.google.android.apps.translate.pref.ClearHistoryPref android:title="Clear history"/>
+    <Preference android:title="@string/about_privacy">
+        <intent android:action="android.intent.action.VIEW" android:data="http://m.google.com/privacy"/>
+    </Preference>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_speech.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Speak output" android:key="key_auto_speak" android:summary="Automatically speak translated text" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Block offensive words" android:key="key_profanity_filter" android:summary="Hide recognized offensive speech results" android:defaultValue="true"/>
+    <PreferenceCategory android:title="Dialects" android:key="dialects_root"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_phrasebook" android:id="@id/menu_phrasebook" android:title="Phrasebook"/>
+    <item android:icon="@drawable/ic_menu_sms" android:id="@id/menu_sms" android:title="SMS translation"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_clear_history" android:title="Clear history"/>
+    <item android:icon="@drawable/ic_menu_settings" android:id="@id/menu_settings" android:title="Settings"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:title="Help"/>
+    <item android:icon="@drawable/ic_menu_feedback" android:id="@id/menu_feedback" android:title="Send feedback"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_tour" android:title="Product tour"/>
+</menu>
+    </File>
+    <File file_name="result_card_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_copy" android:title="Copy"/>
+    <item android:id="@id/menu_share" android:title="Share"/>
+    <item android:id="@id/menu_fullscreen" android:title="Fullscreen"/>
+    <item android:id="@id/menu_conv" android:title="Start conversation"/>
+    <item android:id="@id/menu_swap" android:title="Reverse translate"/>
+    <item android:id="@id/menu_refresh" android:title="Refresh"/>
+</menu>
+    </File>
+  </Directory>
 </App>

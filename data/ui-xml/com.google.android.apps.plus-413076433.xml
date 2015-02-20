@@ -4778,4 +4778,421 @@
 </RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="about_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/label_preference" android:title="Build version" android:key="build_version"/>
+    <Preference android:layout="@layout/label_preference" android:title="Open source licenses" android:key="license_key" android:summary="License details for open source software"/>
+    <Preference android:layout="@layout/label_preference" android:title="Privacy policy" android:key="privacy_key"/>
+    <Preference android:layout="@layout/label_preference" android:title="Terms of service" android:key="terms_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/label_preference" android:title="Disable Google+" android:key="remove_account_key" android:summary="Open a web page where you can delete your Google+ profile and content"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="accounts_preferences_common.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General Settings" android:key="general_settings_category_key" android:order="1000">
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="64.0dip" android:title="Auto Backup" android:summary="Automatically back up new photos and videos to Google Photos. Backups are for your eyes only." android:order="1000">
+            <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.InstantUploadSettingsActivity"/>
+        </com.google.android.apps.plus.settings.LabelPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Account Settings" android:key="account_settings_preference_key" android:order="3000">
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="64.0dip" android:title="Add account" android:key="add_account" android:order="5000"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="accounts_preferences_photos.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="About" android:key="about_preference_key" android:order="6000">
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="64.0dip" android:title="About Google Photos">
+            <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.AboutSettingsActivity"/>
+        </com.google.android.apps.plus.settings.LabelPreference>
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="64.0dip" android:title="Developer settings" android:key="developer_preference_key"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="accounts_preferences_plus.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="About" android:order="6000">
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="64.0dip" android:title="About Google+">
+            <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.AboutSettingsActivity"/>
+        </com.google.android.apps.plus.settings.LabelPreference>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="auto_backup_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res/com.google.android.apps.plus">
+    <CheckBoxPreference android:persistent="false" android:layout="@layout/label_preference" android:title="Turn on Auto Backup" android:key="photo_instant_upload" android:summary="Automatically back up new photos and videos to Google Photos. Backups are for your eyes only." android:defaultValue="@bool/photo_instant_upload_preference_default_value"/>
+    <PreferenceCategory android:title="Account" android:order="2000">
+        <com.google.android.apps.plus.settings.EsListPreference android:persistent="false" android:layout="@layout/label_preference" android:key="photo_upload_account"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Backup Storage" android:order="4000">
+        <com.google.android.apps.plus.settings.EsListPreference android:persistent="false" android:entries="@array/photo_upload_size_preference_entry_labels" android:layout="@layout/label_preference" android:title="Photo size" android:key="upload_size" android:summary="Full-size (Could not determine storage space available)" android:defaultValue="FULL" android:entryValues="@array/photo_upload_size_preference_entry_values" app:entrySummaries="@array/photo_upload_size_preference_entry_summaries"/>
+        <Preference android:persistent="false" android:layout="@layout/label_preference" android:title="Get more storage" android:key="buy_quota" android:summary="Purchase additional storage for full-size photos"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Backup Settings" android:order="6000">
+        <ListPreference android:persistent="false" android:entries="@array/photo_connection_preference_entry_labels" android:layout="@layout/label_preference" android:title="Back up photos" android:key="photo_connection" android:summary="Only when there is a Wi-Fi connection available" android:defaultValue="WIFI_ONLY" android:entryValues="@array/photo_connection_preference_entry_values"/>
+        <com.google.android.apps.plus.settings.EsListPreference android:persistent="false" android:entries="@array/video_connection_preference_entry_labels" android:layout="@layout/label_preference" android:title="Back up videos" android:key="video_connection" android:summary="Only when there is a Wi-Fi connection available" android:defaultValue="WIFI_ONLY" android:entryValues="@array/video_connection_preference_entry_values" app:entrySummaries="@array/video_connection_preference_entry_summaries"/>
+        <CheckBoxPreference android:persistent="false" android:layout="@layout/label_preference" android:title="Back up local folders" android:key="photo_folder_autobackup" android:defaultValue="@bool/photo_folder_autobackup_preference_default_value"/>
+        <CheckBoxPreference android:persistent="false" android:layout="@layout/label_preference" android:title="Roaming" android:key="photo_roaming" android:summary="Back up photos &amp; videos when roaming on a data network" android:defaultValue="@bool/photo_roaming_upload_preference_default_value"/>
+        <CheckBoxPreference android:persistent="false" android:layout="@layout/label_preference" android:title="While charging only" android:key="photo_on_battery" android:summary="Back up photos &amp; videos only when a charger is connected" android:defaultValue="@bool/photo_on_battery_preference_default_value"/>
+        <Preference android:persistent="false" android:layout="@layout/label_preference" android:title="Back up all" android:key="photo_sync" android:summary="Back up all photos &amp; videos now (if connection settings allow)"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About" android:order="9000">
+        <Preference android:persistent="false" android:layout="@layout/label_preference" android:title="About Auto Backup" android:key="learn_more" android:summary="Learn more about storing photos with Google Photos"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="contacts_sync_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="Improve suggestions" android:key="contact_stats_sync_enable" android:summary="Let Google make suggestions based on who you communicate with most often on this phone."/>
+</PreferenceScreen>
+    </File>
+    <File file_name="debug_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Debug">
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="50.0dip" android:title="Tracing" android:key="tracing_preferences">
+            <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.TracingSettingsActivity"/>
+        </com.google.android.apps.plus.settings.LabelPreference>
+        <ListPreference android:persistent="true" android:title="Frontend Configuration" android:key="debug.plus.frontend.config" android:summary="Set the Frontend Configuration target" android:defaultValue=""/>
+        <EditTextPreference android:persistent="true" android:title="Custom Frontend URL" android:key="debug.plus.frontend.config.custom" android:summary="Set a Custom Frontend URL" android:defaultValue=""/>
+        <Preference android:layout="@layout/label_preference" android:title="Account status" android:key="account_status_key" android:summary="Browse account status"/>
+        <Preference android:layout="@layout/label_preference" android:title="Experiments" android:key="experiments_key" android:summary="Browse experiments"/>
+        <EditTextPreference android:persistent="true" android:title="Override experiments" android:key="experiment_override_key" android:summary="Set experiments for override (example: EnableThing,EnableThing2)"/>
+        <CheckBoxPreference android:persistent="true" android:title="Disable dogfood" android:key="disable_dogfood_key" android:summary="When enabled, debug/dogfood build performs like Prod"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="dream_settings.xml">
+      <dream xmlns:android="http://schemas.android.com/apk/res/android" android:settingsActivity="com.google.android.apps.plus.service.DreamSettingsActivity"/>
+    </File>
+    <File file_name="es_contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="es_froyo_widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="260.0dip" android:minHeight="72.0dip" android:updatePeriodMillis="3600000" android:initialLayout="@layout/widget_froyo_layout" android:previewImage="@drawable/widget_stream_icon"/>
+    </File>
+    <File file_name="es_iu_sync_adapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.apps.plus.iu.EsGoogleIuProvider"/>
+    </File>
+    <File file_name="es_sync_adapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.apps.plus.content.EsProvider" android:supportsUploading="false"/>
+    </File>
+    <File file_name="es_widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="260.0dip" android:minHeight="110.0dip" android:initialLayout="@layout/widget_layout" android:configure="com.google.android.apps.plus.widget.EsWidgetConfigurationActivity" android:previewImage="@drawable/widget_stream_icon" android:resizeMode="horizontal|vertical" android:initialKeyguardLayout="@layout/widget_layout" android:widgetCategory="home_screen|keyguard"/>
+    </File>
+    <File file_name="ingest_device_filter.xml">
+      <resources>
+    <usb-device class="6" subclass="1" protocol="1"/>
+</resources>
+    </File>
+    <File file_name="interestingness_model.xml">
+      <model>
+    <features>
+        <feature name="face.illumination_score" div="0.266008" shift="-0.002776"/>
+        <feature name="sharpness" div="10.406379" shift="-0.586836"/>
+        <feature name="motion_saliency@2" div="0.092929" shift="-0.002740"/>
+        <feature name="motion_saliency@4" div="0.150588" shift="-0.006685"/>
+    </features>
+    <data name="LinearModel">
+        <weights values="0.0187, 0.045, -0.025, 0.0245, 0.0"/>
+    </data>
+</model>
+    </File>
+    <File file_name="locations_widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="main_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_notifications_darkgrey_20" android:minHeight="50.0dip" android:title="Notifications" android:key="notifications_preference">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.NotificationSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_camera_darkgrey_20" android:minHeight="50.0dip" android:title="Photos" android:key="photos">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.PhotosSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_reshare_darkgrey_20" android:minHeight="50.0dip" android:title="Sharing" android:key="sharing_preference_key">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.SharingSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_location_darkgrey_20" android:minHeight="50.0dip" android:title="Location sharing" android:key="device_location_preference">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.locations.HostLocationSharingSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_person_darkgrey_20" android:minHeight="50.0dip" android:title="Contacts" android:key="contacts_preference_key">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.ContactsSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_apps_darkgrey_20" android:minHeight="50.0dip" android:title="Apps with Google+ Sign-In" android:key="apps_preference_key"/>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_gplus_darkgrey_20" android:minHeight="50.0dip" android:title="Account" android:key="account_preference_key">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.AccountSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:minHeight="50.0dip" android:title="Developer settings" android:key="developer_preference_key">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.DeveloperSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+</PreferenceScreen>
+    </File>
+    <File file_name="main_preferences_plus_page.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_notifications_darkgrey_20" android:minHeight="50.0dip" android:title="Notifications" android:key="notifications_preference">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.NotificationSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:icon="@drawable/ic_reshare_darkgrey_20" android:minHeight="50.0dip" android:title="Sharing" android:key="sharing_preference_key">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.SharingSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+    <com.google.android.apps.plus.settings.LabelPreference android:minHeight="50.0dip" android:title="Developer settings" android:key="developer_preference_key">
+        <intent android:targetPackage="com.google.android.apps.plus" android:targetClass="com.google.android.apps.plus.settings.DeveloperSettingsActivity"/>
+    </com.google.android.apps.plus.settings.LabelPreference>
+</PreferenceScreen>
+    </File>
+    <File file_name="network_stats_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Network statistics" android:order="6000">
+        <Preference android:layout="@layout/label_preference" android:title="Network requests" android:key="net_transactions_key" android:summary="View network requests details"/>
+        <Preference android:layout="@layout/label_preference" android:title="Bandwidth usage" android:key="net_stats_key" android:summary="View bandwidth usage"/>
+        <Preference android:layout="@layout/label_preference" android:title="Media uploads" android:key="upload_stats_key" android:summary="View status of uploaded media"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="notifications_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:layout="@layout/label_preference" android:title="Google+ notifications" android:key="notifications_enabled" android:summary="Show when notifications are received" android:defaultValue="@bool/notifications_preference_enabled_default_value"/>
+    <com.google.android.apps.plus.settings.EsRingtonePreference android:persistent="false" android:layout="@layout/label_preference" android:title="Ringtone" android:key="notifications_ringtone" android:summary="Set a ringtone for new notifications" android:ringtoneType="notification"/>
+    <CheckBoxPreference android:persistent="false" android:layout="@layout/label_preference" android:title="Vibrate" android:key="notifications_vibrate" android:defaultValue="@bool/notifications_preference_vibrate_default_value"/>
+    <com.google.android.apps.plus.settings.LabelPreference android:persistent="false" android:autoLink="none" android:layout="@layout/label_preference" android:title="Who can notify me" android:key="notifications_who_can_notify_me"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="photos_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:layout="@layout/label_preference" android:title="Google Drive" android:key="google drive" android:summary="See your Drive photos and videos in Google Photos." android:defaultValue="@bool/notifications_preference_enabled_default_value"/>
+    <CheckBoxPreference android:layout="@layout/label_preference" android:title="Photo Location" android:key="photo_location" android:summary="Show geo location for newly uploaded photos &amp; videos." android:defaultValue="@bool/notifications_preference_enabled_default_value"/>
+    <CheckBoxPreference android:layout="@layout/label_preference" android:title="Auto Enhance" android:key="auto enhance" android:summary="&quot;Automatically enhance new photos. It's easy to revert any photo that's been enhanced.&quot;" android:defaultValue="@bool/notifications_preference_enabled_default_value"/>
+    <PreferenceCategory android:title="Auto Awesome" android:key="auto_awesome_category_key">
+        <CheckBoxPreference android:layout="@layout/label_preference" android:key="auto awesome" android:summary="Create awesome new images and movies from your photos and videos." android:defaultValue="@bool/notifications_preference_enabled_default_value"/>
+        <CheckBoxPreference android:layout="@layout/label_preference" android:key="auto_awesome_movies" android:summary="Use this device to create Auto Awesome movies." android:dependency="auto awesome" android:defaultValue="@bool/photo_preference_auto_awesome_movies_default_value"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Find My Face">
+        <CheckBoxPreference android:layout="@layout/label_preference" android:key="find my face" android:summary="By turning on Find My Face, Google+ can prompt people you know to tag you in photos &amp; videos." android:defaultValue="@bool/notifications_preference_enabled_default_value"/>
+        <com.google.android.apps.plus.settings.LabelPreference android:minHeight="64.0dip" android:title="About Find My Face" android:key="about_fmf_key"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="photos_preferences_offline.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.plus.settings.LabelPreference android:title="You must have a data connection to see some Google+ settings. Please check your connection or try again later." android:key="get_settings"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="settings_about.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="settings_analysis.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="settings_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="settings_playback.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="settings_summarization.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="sharing_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Activity Updates" android:key="sharing_pereference_activity_updates" android:order="5000">
+        <com.google.android.apps.plus.settings.LabelPreference android:selectable="false" android:key="activity_updates_preference_key" android:summary="Sharing your activity helps your friends find cool people and posts. People you select here may see updates about your future Google+ activity. As always, updates from private posts will only be seen by people the post is shared with.&lt;br /&gt;&lt;a href=%s&gt;Learn more&lt;/a&gt;" android:order="6000"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="tracing_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/label_preference" android:title="Tracing" android:key="debug.plus.frontend.tracing" android:summary="Turn it on to receive email with traces." android:defaultValue="false"/>
+    <EditTextPreference android:persistent="true" android:title="Tracing token" android:key="tracing_token_key" android:summary="A token is required. See go/gplus-trace"/>
+    <EditTextPreference android:persistent="true" android:title="Tracing path pattern" android:key="tracing_pattern_key" android:summary="Set path regexp to trace" android:defaultValue=""/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="edit_audience_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/done" android:title="Done" support:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="edit_comment_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_send_holo_light" android:id="@id/menu_post" android:title="Post" support:showAsAction="always"/>
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/menu_discard" android:title="Discard"/>
+</menu>
+    </File>
+    <File file_name="edit_post_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_send_holo_light" android:id="@id/menu_post" android:title="Post" support:showAsAction="always"/>
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/menu_discard" android:title="Discard"/>
+</menu>
+    </File>
+    <File file_name="host_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/progress" android:title="Refresh" support:showAsAction="always" support:actionLayout="@layout/action_bar_progress_indicator"/>
+    <item android:icon="@drawable/ic_refresh" android:id="@id/refresh" android:title="Refresh" support:showAsAction="always"/>
+    <item android:id="@id/cast_button" android:title="" support:showAsAction="always" support:actionViewClass="android.support.v7.app.MediaRouteButton" support:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"/>
+    <group android:id="@id/action_button_group">
+        <item android:icon="@drawable/icn_events_add_photo" android:id="@id/action_add_photo" android:title="Select…" support:showAsAction="ifRoom"/>
+        <item android:icon="@drawable/icn_events_add_comment" android:id="@id/action_add_comment" android:title="Add comment" support:showAsAction="always"/>
+        <item android:icon="@drawable/icn_events_create_event" android:id="@id/action_add_event" android:title="Add event" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_menu_search_holo_light" android:id="@id/action_search_light" android:title="Search" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_menu_search" android:id="@id/action_search_dark" android:title="Search" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_create_movie_20" android:id="@id/action_make_movie" android:title="Create movie" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_menu_search_holo_light" android:id="@id/action_search_photos" android:title="Search for photos" support:showAsAction="always"/>
+        <item android:icon="@drawable/icn_events_add_photo" android:id="@id/action_button_take_photo" android:title="Take photo" support:showAsAction="always"/>
+        <item android:icon="@drawable/icn_add_video" android:id="@id/action_button_take_video" android:title="Record video" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_share_alt_darkgrey_20" android:id="@id/action_reshare" android:title="Share" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_selection_dark_grey_20" android:id="@id/action_select_photos" android:title="Select photos" support:showAsAction="always"/>
+        <item android:icon="@drawable/icn_events_rsvp_invite_more" android:id="@id/action_invite_more" android:title="Invite more" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_add_people_darkgrey_20" android:id="@id/action_button_invite" android:title="Invite people" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_reshare_grey_20" android:id="@id/action_button_share" android:title="Share community" support:showAsAction="always"/>
+        <item android:id="@id/picker_action_done" android:title="SELECT" support:showAsAction="always"/>
+        <item android:id="@id/action_button_view_post" android:title="View post" support:showAsAction="always"/>
+        <item android:id="@id/action_button_done" android:title="Done" support:showAsAction="always"/>
+    </group>
+    <item android:icon="@drawable/ic_dismiss_all_darkgrey_24" android:id="@id/dismiss_all_button" android:title="Dismiss" support:showAsAction="always"/>
+    <item android:id="@id/people_notification_button" android:title="" support:showAsAction="always" support:actionLayout="@layout/people_notification_button"/>
+    <item android:id="@id/notification_button" android:title="" support:showAsAction="always" support:actionLayout="@layout/notification_button"/>
+    <group android:id="@id/fragment_menu_items">
+        <item android:icon="@drawable/ic_selection_dark_grey_20" android:id="@id/select_photos" android:title="Select…" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_trash_dark_grey_20" android:id="@id/empty_trash" android:title="Empty trash" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/edit_tags" android:title="Remove hashtags" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_compose" android:id="@id/post_new" android:title="New post" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_addphotos" android:id="@id/post_photo" android:title="Share photos" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_checkin" android:id="@id/checkin" android:title="Share your location" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_search" android:id="@id/show_photo_details" android:title="Details" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_gallery" android:id="@id/add_to_album" android:title="Copy to album" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_print" android:id="@id/menu_print_photo" android:title="Print" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/edit_photo" android:title="Edit photo" support:showAsAction="never"/>
+        <item android:id="@id/slideshow" android:title="Slideshow" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_set_as_profile" android:id="@id/edit_profile_photo" android:title="Edit profile photo" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_wallpaper" android:id="@id/edit_cover_photo" android:title="Edit cover photo" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/edit_name" android:title="Edit name" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_mute_conversation" android:id="@id/mute" android:title="Mute" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_unmute_conversation" android:id="@id/unmute" android:title="Unmute" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_blocked_user" android:id="@id/block" android:title="Block" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_blocked_user" android:id="@id/unblock" android:title="Unblock" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/remove_post" android:title="Remove post" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_flag_system" android:id="@id/report_abuse" android:title="Report abuse" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_blocked_user" android:id="@id/ban_user" android:title="Ban user" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_pushpin_grey_20" android:id="@id/pin_post" android:title="Pin post" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_close_grey_20" android:id="@id/unpin_post" android:title="Unpin post" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_circle" android:title="Delete circle" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_preferences" android:id="@id/circle_settings" android:title="Circle settings" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_preferences" android:id="@id/blocked_circle" android:title="View blocked" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_search" android:id="@id/search" android:title="Search posts" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_search" android:id="@id/search_photos" android:title="Search photos" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/edit" android:title="Edit" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_map" android:id="@id/show_location" android:title="Map" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_mute" android:id="@id/mute_post" android:title="Mute" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_mute" android:id="@id/unmute_post" android:title="Unmute" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_post" android:title="Delete" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_share_link" android:id="@id/share_link" android:title="Link" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_clipboard" android:id="@id/copy_text" android:title="Copy text" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_edit_event" android:id="@id/edit_event" android:title="Edit this event" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_disable_comments" android:id="@id/disable_comments" android:title="Disable comments" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_enable_comments" android:id="@id/enable_comments" android:title="Enable comments" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_disable_reshares" android:id="@id/disable_reshares" android:title="Disable reshares" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_enable_reshares" android:id="@id/enable_reshares" android:title="Enable reshares" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_delete_event" android:id="@id/delete_event" android:title="Delete this event" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_events_grey_24" android:id="@id/view_event" android:title="View Event" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_add_people" android:id="@id/invite_more" android:title="Invite more" support:showAsAction="always"/>
+        <item android:id="@id/select_item" android:title="Select items" support:showAsAction="always"/>
+        <item android:icon="@drawable/ic_menu_wallpaper" android:id="@id/set_as" android:title="Set as…" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_download" android:id="@id/download" android:title="Download" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_photos" android:title="Delete" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_addphotos" android:id="@id/restore_photo" android:title="Restore" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/permanent_delete_photo" android:title="Permanently delete" support:showAsAction="never"/>
+        <item android:id="@id/remove_deleted_media" android:title="Remove all deleted items" support:showAsAction="never"/>
+        <item android:id="@id/rescan_media" android:title="Rescan media store" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/rename_album" android:title="Rename album" support:showAsAction="never"/>
+        <item android:id="@id/sharing_details" android:title="Sharing details" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_star" android:id="@id/hide_from_highlights" android:title="Hide from highlights" android:checkable="true" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_edit" android:id="@id/album_details" android:title="Album details" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_album" android:title="Delete album" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/delete_folder" android:title="Delete all" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_drive_grey_16" android:id="@id/view_on_drive" android:title="View on Drive" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_delete" android:id="@id/remove_drive_album" android:title="Remove from Google+" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_checkin" android:id="@id/filter_friends_on_map" android:title="Filter map" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_map" android:id="@id/set_satellite_view" android:title="Satellite view" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_map" android:id="@id/set_map_view" android:title="Map view" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_preferences" android:id="@id/location_settings" android:title="Location settings" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_plus_white_20" android:id="@id/join_square" android:title="Join community" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_plus_white_20" android:id="@id/request_to_join_square" android:title="Ask to join" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_checkmark_white_20" android:id="@id/accept_invitation_to_square" android:title="Accept invitation" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_remove_white_20" android:id="@id/cancel_square_join_request" android:title="Cancel join request" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_add_people_white_20" android:id="@id/invite_to_square" android:title="Invite people" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_reshare_white_20" android:id="@id/share_square" android:title="Share community" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_remove_white_20" android:id="@id/decline_invitation" android:title="Decline" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_notifications_on_white_20" android:id="@id/enable_square_notifications" android:title="Turn notifications on" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_notifications_muted_white_20" android:id="@id/disable_square_notifications" android:title="Turn notifications off" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_settings_white_20" android:id="@id/square_settings" android:title="Community settings" support:showAsAction="never"/>
+        <item android:id="@id/make_a_movie" android:title="Create movie" support:showAsAction="never"/>
+        <item android:id="@id/show_all_photos" android:title="Show all photos" support:showAsAction="never"/>
+    </group>
+    <group android:id="@id/general_menu_items">
+        <item android:icon="@drawable/ic_menu_preferences" android:id="@id/settings" android:title="Settings" android:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_account_list" android:id="@id/sign_out" android:title="Sign out" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_translate" android:id="@id/translate" android:title="Translate" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_translate" android:id="@id/show_original_text" android:title="Show original text" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_feedback" android:id="@id/feedback" android:title="Feedback" support:showAsAction="never"/>
+        <item android:icon="@drawable/ic_menu_help" android:id="@id/help" android:title="Help" support:showAsAction="never"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_get_started" android:title="New movie" android:showAsAction="never"/>
+    <item android:id="@id/menu_save" android:title="Save" android:showAsAction="always|withText"/>
+    <item android:icon="@drawable/ic_edit" android:id="@id/menu_edit_storyboard" android:title="Storyboard" android:showAsAction="always"/>
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menu_settings" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="network_statistics_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_terms_and_conditions" android:id="@id/customize" android:title="Customize display" support:showAsAction="always"/>
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/clear" android:title="Clear" support:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="network_transactions_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_delete" android:id="@id/clear" android:title="Clear" support:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="photo_editor.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_compare" android:title="Compare" android:showAsAction="always" android:actionLayout="@layout/action_compare_button"/>
+    <item android:id="@id/action_revert" android:title="Revert" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="photos_settings_preferences_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_signout" android:title="Sign out"/>
+</menu>
+    </File>
+    <File file_name="picker.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_ok" android:title="@android:string/ok" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="post_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_send_holo_light" android:id="@id/menu_post" android:title="Share" support:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="preferences_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_help" android:title="Help"/>
+    <item android:id="@id/menu_signout" android:title="Sign out"/>
+</menu>
+    </File>
+    <File file_name="share_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:support="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_menu_send_holo_light" android:id="@id/menu_post" android:title="Share" support:showAsAction="always|withText"/>
+</menu>
+    </File>
+  </Directory>
 </App>

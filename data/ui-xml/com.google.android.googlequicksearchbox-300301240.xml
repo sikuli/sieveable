@@ -4077,4 +4077,351 @@
 </LinearLayout></LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="app_history_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="App Search Stats">
+    <PreferenceCategory android:title="About App Search Stats"/>
+    <Preference android:summary="App Search Stats are used to improve app search and discovery."/>
+    <com.google.android.search.core.preferences.WrappingSwitchPreference android:persistent="true" android:title="Local App Search Stats" android:key="app_history_reporting_enabled" android:summary="Turning off local App Search Stats may limit or disable features such as App suggest and App search results." android:defaultValue="true"/>
+    <Preference android:persistent="false" android:title="Clear App Search Stats" android:key="app_history_reset_app_history_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="canvas_info_e100.xml">
+      <launcher version="1">
+    <exclude-activity>com.google.android.e100.E100Activity</exclude-activity>
+</launcher>
+    </File>
+    <File file_name="canvas_info_e100_test.xml">
+      <launcher version="1">
+    <exclude-activity>com.google.android.e100.E100Test</exclude-activity>
+</launcher>
+    </File>
+    <File file_name="canvas_info_search.xml">
+      <launcher version="1">
+    <exclude-activity>com.google.android.googlequicksearchbox.SearchActivity</exclude-activity>
+</launcher>
+    </File>
+    <File file_name="canvas_info_voice_search.xml">
+      <launcher version="1">
+    <exclude-activity>com.google.android.googlequicksearchbox.VoiceSearchActivity</exclude-activity>
+</launcher>
+    </File>
+    <File file_name="commute_sharers_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Location updates">
+    <PreferenceCategory android:layout="@layout/preference_header_shared_location" android:title="These people have allowed you to see their location" android:key="settings_category_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="debug_override_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Config Flags" android:key="debug_override_settings"/>
+    </File>
+    <File file_name="default_workspace.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <favorites>
+    <favorite launcher:className="com.google.android.dialer.extensions.GoogleDialtactsActivity" launcher:packageName="com.google.android.dialer" launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.talk.SigningInActivity" launcher:packageName="com.google.android.talk" launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.apps.chrome.Main" launcher:packageName="com.android.chrome" launcher:container="-101" launcher:screen="3" launcher:x="3" launcher:y="0"/>
+    <favorite launcher:className="com.android.camera.CameraLauncher" launcher:packageName="com.google.android.GoogleCamera" launcher:container="-101" launcher:screen="4" launcher:x="4" launcher:y="0"/>
+    <folder launcher:screen="0" launcher:x="0" launcher:y="3" launcher:title="Google">
+        <favorite launcher:className="com.google.android.gm.ConversationListActivityGmail" launcher:packageName="com.google.android.gm"/>
+        <favorite launcher:className="com.google.android.apps.plus.phone.HomeActivity" launcher:packageName="com.google.android.apps.plus"/>
+        <favorite launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" launcher:packageName="com.google.android.apps.plus"/>
+        <favorite launcher:className="com.google.android.maps.MapsActivity" launcher:packageName="com.google.android.apps.maps"/>
+        <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts"/>
+        <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.google.android.calendar"/>
+        <favorite launcher:className="com.google.android.keep.activities.BrowseActivity" launcher:packageName="com.google.android.keep"/>
+        <favorite launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity" launcher:packageName="com.google.android.apps.docs"/>
+        <favorite launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" launcher:packageName="com.google.android.youtube"/>
+        <favorite launcher:className="com.android.music.activitymanagement.TopLevelActivity" launcher:packageName="com.google.android.music"/>
+        <favorite launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" launcher:packageName="com.google.android.play.games"/>
+    </folder>
+    <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="3" launcher:y="3"/>
+</favorites></favorites>
+    </File>
+    <File file_name="default_workspace_generic.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <favorite launcher:className="com.google.android.dialer.extensions.GoogleDialtactsActivity" launcher:packageName="com.google.android.dialer" launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.talk.SigningInActivity" launcher:packageName="com.google.android.talk" launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.apps.chrome.Main" launcher:packageName="com.android.chrome" launcher:container="-101" launcher:screen="3" launcher:x="3" launcher:y="0"/>
+    <favorite launcher:className="com.android.camera.CameraLauncher" launcher:packageName="com.google.android.GoogleCamera" launcher:container="-101" launcher:screen="4" launcher:x="4" launcher:y="0"/>
+    <folder launcher:screen="0" launcher:x="0" launcher:y="3" launcher:title="Google">
+        <favorite launcher:className="com.google.android.gm.ConversationListActivityGmail" launcher:packageName="com.google.android.gm"/>
+        <favorite launcher:className="com.google.android.apps.plus.phone.HomeActivity" launcher:packageName="com.google.android.apps.plus"/>
+        <favorite launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" launcher:packageName="com.google.android.apps.plus"/>
+        <favorite launcher:className="com.google.android.maps.MapsActivity" launcher:packageName="com.google.android.apps.maps"/>
+        <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts"/>
+        <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.google.android.calendar"/>
+        <favorite launcher:className="com.google.android.keep.activities.BrowseActivity" launcher:packageName="com.google.android.keep"/>
+        <favorite launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity" launcher:packageName="com.google.android.apps.docs"/>
+        <favorite launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" launcher:packageName="com.google.android.youtube"/>
+    </folder>
+    <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="3" launcher:y="3"/>
+</favorites>
+    </File>
+    <File file_name="default_workspace_nosim.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <favorite launcher:className="com.google.android.dialer.extensions.GoogleDialtactsActivity" launcher:packageName="com.google.android.dialer" launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.talk.SigningInActivity" launcher:packageName="com.google.android.talk" launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.apps.chrome.Main" launcher:packageName="com.android.chrome" launcher:container="-101" launcher:screen="3" launcher:x="3" launcher:y="0"/>
+    <favorite launcher:className="com.android.camera.CameraLauncher" launcher:packageName="com.google.android.GoogleCamera" launcher:container="-101" launcher:screen="4" launcher:x="4" launcher:y="0"/>
+    <folder launcher:screen="0" launcher:x="0" launcher:y="3" launcher:title="Google">
+        <favorite launcher:className="com.google.android.gm.ConversationListActivityGmail" launcher:packageName="com.google.android.gm"/>
+        <favorite launcher:className="com.google.android.apps.plus.phone.HomeActivity" launcher:packageName="com.google.android.apps.plus"/>
+        <favorite launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" launcher:packageName="com.google.android.apps.plus"/>
+        <favorite launcher:className="com.google.android.maps.MapsActivity" launcher:packageName="com.google.android.apps.maps"/>
+        <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts"/>
+        <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.google.android.calendar"/>
+        <favorite launcher:className="com.google.android.keep.activities.BrowseActivity" launcher:packageName="com.google.android.keep"/>
+        <favorite launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity" launcher:packageName="com.google.android.apps.docs"/>
+        <favorite launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" launcher:packageName="com.google.android.youtube"/>
+        <favorite launcher:className="com.android.music.activitymanagement.TopLevelActivity" launcher:packageName="com.google.android.music"/>
+        <favorite launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" launcher:packageName="com.google.android.play.games"/>
+    </folder>
+    <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="3" launcher:y="3"/>
+</favorites>
+    </File>
+    <File file_name="google_searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Google" android:hint="Google Search" android:searchSuggestAuthority="com.google.android.googlequicksearchbox.google" android:searchSuggestIntentAction="android.intent.action.WEB_SEARCH" android:voiceSearchMode="showVoiceSearchButton|launchWebSearch" android:queryAfterZeroResults="true" android:autoUrlDetect="true"/>
+    </File>
+    <File file_name="ime_method.xml">
+      <input-method xmlns:android="http://schemas.android.com/apk/res/android" android:isDefault="false" android:settingsActivity="com.google.android.voicesearch.ime.ImePreferences">
+    <subtype android:label="Automatic" android:imeSubtypeLocale="" android:imeSubtypeMode="voice" android:isAuxiliary="true" android:overridesImplicitlyEnabledSubtype="true"/>
+</input-method>
+    </File>
+    <File file_name="ime_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Google voice typing settings">
+    <PreferenceCategory android:title="General">
+        <CheckBoxPreference android:title="Block offensive words" android:key="profanityFilter" android:summary="Hide recognized offensive text" android:defaultValue="true"/>
+        <Preference android:persistent="false" android:title="Offline speech recognition" android:key="downloadLanguagePacks" android:summary="Manage downloaded languages"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="internal_api_cards_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Internal API cards">
+    <CheckBoxPreference android:title="Enable experimental cards" android:key="experimental_internal_api_clients_enabled_key"/>
+    <PreferenceCategory android:title="Internal API cards" android:key="settings_category_key"/> /&gt;
+</PreferenceScreen>
+    </File>
+    <File file_name="internal_api_clients_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Internal API cards">
+    <PreferenceCategory android:title="Cards" android:key="settings_category_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="legal_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Legal">
+    <Preference android:persistent="false" android:title="Terms of service" android:key="tos"/>
+    <Preference android:persistent="false" android:title="Location terms of service" android:key="location_tos">
+        <intent android:action="android.intent.action.VIEW" android:data="http://www.google.co.kr/policies/terms/location"/>
+    </Preference>
+    <Preference android:persistent="false" android:title="Privacy policy">
+        <intent android:action="android.intent.action.VIEW" android:data="http://www.google.com/policies/privacy"/>
+    </Preference>
+    <Preference android:persistent="false" android:title="Legal notices">
+        <intent android:action="android.intent.action.VIEW" android:data="http://m.google.com/legalnotices"/>
+    </Preference>
+    <Preference android:persistent="false" android:title="Open source licenses">
+        <intent android:targetPackage="com.google.android.search.core.preferences" android:action="com.google.android.search.core.preferences.OpenSourceLicensesActivity"/>
+    </Preference>
+</PreferenceScreen>
+    </File>
+    <File file_name="my_places_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Places"/>
+    </File>
+    <File file_name="my_sports_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Sports">
+    <PreferenceCategory android:title="Teams" android:key="settings_category_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="my_stocks_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Stocks">
+    <PreferenceCategory android:title="Stocks" android:key="settings_category_key"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="my_stuff_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="My stuff">
+    <PreferenceScreen android:title="Places" android:summary="Home, work…" android:fragment="com.google.android.search.core.preferences.cards.MyPlacesSettingsFragment"/>
+    <PreferenceScreen android:id="@id/my_reminders_header" android:title="Reminders" android:key="my_reminders_key" android:fragment="com.google.android.sidekick.main.RemindersListFragment"/>
+    <PreferenceScreen android:title="Sports" android:key="my_sports_key" android:summary="No teams selected" android:fragment="com.google.android.search.core.preferences.cards.MySportsSettingsFragment"/>
+    <PreferenceScreen android:title="Stocks" android:key="my_stocks_key" android:summary="No stocks selected" android:fragment="com.google.android.search.core.preferences.cards.MyStocksSettingsFragment"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="notifications_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:thegoogle="http://schemas.android.com/apk/res/com.google.android.googlequicksearchbox" android:title="Notifications" android:key="sidekick.notificationOverride">
+    <com.google.android.search.core.preferences.NotificationGroupPreference android:title="Show updates from Google Now" android:key="sidekick.notificationOverride" thegoogle:multiline="true"/>
+    <PreferenceCategory android:title="Urgent updates">
+        <com.google.android.search.core.preferences.RingtonePreferenceWithDefault android:title="Ringtone" android:key="notificationSoundPreference" android:ringtoneType="notification" android:showDefault="true" android:showSilent="true"/>
+        <CheckBoxPreference android:title="Vibrate" android:key="notificationVibratePreference" android:defaultValue="true"/>
+        <Preference android:enabled="false" android:layout="@layout/notifications_settings_message"/>
+    </PreferenceCategory>
+    <PreferenceCategory/>
+</PreferenceScreen>
+    </File>
+    <File file_name="predictive_cards_widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="300.0dip" android:minHeight="250.0dip" android:updatePeriodMillis="86400000" android:initialLayout="@layout/predictive_cards_widget" android:previewImage="@drawable/now_widget_preview" android:resizeMode="horizontal|vertical" android:minResizeWidth="300.0dip" android:minResizeHeight="58.0dip" android:widgetCategory="home_screen|keyguard"/>
+    </File>
+    <File file_name="preferences_features.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Experimental features" android:key="features"/>
+    </File>
+    <File file_name="preferences_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:id="@id/predictive_cards_header" android:title="Google Now"/>
+    <header android:id="@id/search_and_now_section" android:title="Search &amp; Now Cards"/>
+    <header android:icon="@drawable/ic_settings_search" android:id="@id/searchable_items_header" android:title="Phone search" android:fragment="com.google.android.search.core.preferences.SearchableItemsFragment"/>
+    <header android:icon="@drawable/ic_settings_voice" android:title="Voice" android:fragment="com.google.android.search.core.preferences.VoiceSettingsFragment"/>
+    <header android:icon="@drawable/ic_settings_accounts" android:id="@id/account_settings_header" android:title="Accounts &amp; privacy" android:fragment="com.google.android.search.core.preferences.PrivacyAndAccountFragment"/>
+    <header android:icon="@drawable/ic_settings_notification" android:id="@id/notifications_header" android:title="Notifications" android:fragment="com.google.android.search.core.preferences.cards.NotificationsSettingsFragment"/>
+    <header android:icon="@drawable/ic_settings_help" android:id="@id/help_and_feedback_header" android:title="Help &amp; feedback" android:fragment="com.google.android.search.core.preferences.SettingsWebViewFragment"/>
+    <header android:id="@id/dogfood_section" android:title="Dogfood"/>
+    <header android:id="@id/internal_api_cards_header" android:title="Internal API cards" android:fragment="com.google.android.search.core.preferences.cards.InternalAPICardsSettingsFragment"/>
+    <header android:id="@id/debug_section" android:title="[Debug]"/>
+    <header android:id="@id/features_header" android:title="Experimental features" android:fragment="com.google.android.search.core.preferences.FeatureSettingsFragment"/>
+    <header android:id="@id/debug_override_settings_header" android:title="Config Flags" android:fragment="com.google.android.search.core.preferences.DebugOverrideSettingsFragment"/>
+</preference-headers>
+    </File>
+    <File file_name="preferences_searchable_items.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Phone search" android:key="search_sources" android:summary="Choose what to search on the phone"/>
+    </File>
+    <File file_name="privacy_and_account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.search.core.preferences.SelectAccountPreference android:persistent="false" android:title="Google Account" android:key="google_account" android:summary="No accounts set up"/>
+    <Preference android:persistent="false" android:title="Commute sharing" android:key="commute_sharing" android:fragment="com.google.android.search.core.preferences.cards.TrafficCardSettingsFragment"/>
+    <Preference android:persistent="false" android:title="Manage Location History" android:key="manage_location_history">
+        <intent android:targetPackage="com.google.android.apps.maps" android:action="android.intent.action.MANAGE_NETWORK_USAGE" android:targetClass="com.google.android.maps.MapsActivity"/>
+    </Preference>
+    <Preference android:title="Location services" android:key="google_location_settings"/>
+    <com.google.android.search.core.preferences.WrappingSwitchPreference android:persistent="false" android:title="Web History" android:key="cloud_search_history" android:summary="Retrieving settings…" android:defaultValue="false"/>
+    <Preference android:persistent="false" android:enabled="false" android:title="Manage Web History" android:key="manage_search_history" android:summary="No accounts set up"/>
+    <com.google.android.search.core.preferences.WrappingSwitchPreference android:title="Personal results" android:key="personalized_search_bool" android:summary="Personal results help find more relevant content for you, including content and connections that only you can see." android:defaultValue="true"/>
+    <Preference android:persistent="false" android:title="App Search Stats" android:key="app_history_key" android:fragment="com.google.android.search.core.preferences.AppHistoryFragment"/>
+    <CheckBoxPreference android:persistent="true" android:title="Search on google.com" android:key="use_google_com" android:defaultValue="false"/>
+    <ListPreference android:persistent="true" android:entries="@array/debug_search_scheme_override_entries" android:title="[DEBUG] Search Scheme Override" android:key="debug_search_scheme_override" android:entryValues="@array/debug_search_scheme_override_values"/>
+    <EditTextPreference android:persistent="true" android:title="[DEBUG] Search Domain Override" android:key="debug_search_domain_override" android:inputType="textUri"/>
+    <EditTextPreference android:persistent="true" android:title="[DEBUG] Search Host Param" android:key="debug_search_host_param"/>
+    <CheckBoxPreference android:persistent="true" android:title="[DEBUG] Enable remote JS debugging" android:key="debug_js_injection_enabled" android:summary="Allow remote debugging inside the main WebView"/>
+    <EditTextPreference android:persistent="true" android:title="[DEBUG] Remote JS debug server address" android:key="debug_js_server_address" android:dependency="debug_js_injection_enabled"/>
+    <CheckBoxPreference android:persistent="true" android:title="SafeSearch filter" android:key="safe_search" android:defaultValue="false" android:summaryOn="SafeSearch is active" android:summaryOff="SafeSearch is not active"/>
+    <CheckBoxPreference android:persistent="true" android:title="Contact recognition" android:key="contact_upload_for_communication_actions_enabled" android:summary="&quot;Let Google use your device contacts to understand who you're trying to reach&quot;" android:defaultValue="false"/>
+    <Preference android:persistent="false" android:title="Search engine storage" android:key="icing_manage_storage" android:summary="We accelerate search on your phone by providing a search engine for your Apps to use.">
+        <intent android:targetPackage="com.google.android.gms" android:action="com.google.android.gms.icing.STORAGE_SETTINGS"/>
+    </Preference>
+    <PreferenceScreen android:persistent="false" android:title="Legal" android:key="legal" android:fragment="com.google.android.search.core.preferences.LegalFragment"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="recognizer.xml">
+      <recognition-service xmlns:android="http://schemas.android.com/apk/res/android" android:settingsActivity="com.google.android.voicesearch.VoiceSearchPreferences"/>
+    </File>
+    <File file_name="search_widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="280.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/search_widget" android:previewImage="@drawable/search_widget_preview" android:resizeMode="horizontal"/>
+    </File>
+    <File file_name="traffic_card_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Commute sharing">
+    <PreferenceCategory android:title="About Commute Sharing"/>
+    <com.google.android.search.core.preferences.WrappingPreference android:persistent="false" android:title="Learn more" android:key="commute_sharing_learn_more_preference" android:summary="You can use Google Now to share updates with people you care about"/>
+    <PreferenceCategory android:title="Share Updates On Your Commute"/>
+    <com.google.android.search.core.preferences.WrappingPreference android:persistent="false" android:title="Choose who can see your location using Google+" android:key="googleplus_preference"/>
+    <com.google.android.search.core.preferences.cards.PartialSwitchPreference android:title="Let them see your commute updates" android:key="sidekick.trafficCardSharing.shareCommute"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="update_workspace.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <favorite launcher:className="com.android.dialer.DialtactsActivity" launcher:packageName="com.android.dialer" launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0"/>
+    <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0"/>
+    <favorite launcher:className="com.android.mms.ui.ConversationList" launcher:packageName="com.android.mms" launcher:container="-101" launcher:screen="3" launcher:x="3" launcher:y="0"/>
+    <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:screen="4" launcher:x="4" launcher:y="0"/>
+</favorites>
+    </File>
+    <File file_name="voicesearch_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Voice Search settings">
+    <com.google.android.voicesearch.ui.LanguagePreference android:entries="@array/emptyArray" android:title="Language" android:key="language" android:dialogTitle="Language" android:entryValues="@array/emptyArray"/>
+    <ListPreference android:entries="@array/prefEntries_ttsMode" android:title="Speech output" android:key="ttsMode" android:defaultValue="always" android:dialogTitle="Speech output" android:entryValues="@array/prefValues_ttsMode"/>
+    <CheckBoxPreference android:persistent="true" android:title="Block offensive words" android:key="profanityFilter" android:summary="Hide recognized offensive voice results" android:defaultValue="true"/>
+    <CheckBoxPreference android:persistent="true" android:title="Hotword detection" android:key="hotwordDetector" android:defaultValue="true"/>
+    <Preference android:persistent="false" android:title="Offline speech recognition" android:key="downloadLanguagePacks" android:summary="Manage downloaded languages"/>
+    <CheckBoxPreference android:persistent="false" android:title="Personalized recognition" android:key="personalizedResults" android:summary="Improve speech recognition accuracy" android:defaultValue="false"/>
+    <Preference android:title="Google Account dashboard" android:key="managePersonalization" android:summary="Manage your collected data"/>
+    <CheckBoxPreference android:persistent="true" android:title="Bluetooth headset" android:key="bluetoothHeadset" android:summary="Records audio through Bluetooth headset if available." android:defaultValue="false "/>
+    <ListPreference android:title="[Debug] S3 Server" android:key="debugS3Server"/>
+    <CheckBoxPreference android:title="[Debug] S3 debug logging" android:key="debugS3Logging" android:summary="Enables S3 debug logging."/>
+    <EditTextPreference android:title="[Debug] S3 sandbox override" android:key="s3SandboxOverride" android:inputType="textUri"/>
+    <CheckBoxPreference android:title="[Debug] Personalization" android:key="debugPersonalization" android:summary="Makes personalization option visible in voice settings."/>
+    <ListPreference android:title="[Debug] Molino Contacts" android:key="debugTopContacts" android:summary="(Selecting one using the radio buttons has no effect)."/>
+    <ListPreference android:entries="@array/debug_recognition_engine_restrict_entries" android:title="[Debug] Recognition Engine Restrict" android:key="debugRecognitionEngineRestrict" android:defaultValue="both" android:dialogTitle="Recognition Engine Restrict" android:entryValues="@array/debug_recognition_engine_restrict_values"/>
+    <Preference android:title="[Debug] Send configuration by email" android:key="debugConfigurationDate"/>
+    <Preference android:title="[Debug] Configuration experiment" android:key="debugConfigurationExperiment"/>
+    <CheckBoxPreference android:title="[Debug] Log audio and grammar" android:key="audioLoggingEnabled" android:summary="Logs all microphone input and compiled grammars. *** WARNING *** : This might contain personal information and will slow down your app drastically. Use this only to debug quality issues or if requested on a bug report"/>
+    <Preference android:title="[Debug] Send logged audio and grammar." android:key="debugSendLoggedAudio" android:summary="Sends all logged audio and grammar by email."/>
+</PreferenceScreen>
+    </File>
+    <File file_name="workspace_pack1.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <appwidget launcher:className="com.google.android.finsky.widget.consumption.NowPlayingWidgetProvider" launcher:packageName="com.android.vending" launcher:screen="1" launcher:x="0" launcher:y="0" launcher:spanX="4" launcher:spanY="2">
+        <extra launcher:key="type" launcher:value="all"/>
+    </appwidget>
+    <favorite launcher:className="com.android.music.activitymanagement.TopLevelActivity" launcher:packageName="com.google.android.music" launcher:screen="1" launcher:x="0" launcher:y="2"/>
+    <favorite launcher:className="com.google.android.youtube.videos.EntryPoint" launcher:packageName="com.google.android.videos" launcher:screen="1" launcher:x="1" launcher:y="2"/>
+    <favorite launcher:className="com.google.android.apps.books.app.BooksActivity" launcher:packageName="com.google.android.apps.books" launcher:screen="1" launcher:x="2" launcher:y="2"/>
+    <favorite launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" launcher:packageName="com.google.android.play.games" launcher:screen="1" launcher:x="3" launcher:y="2"/>
+</favorites>
+    </File>
+    <File file_name="workspace_pack2.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <appwidget launcher:className="com.google.android.finsky.widget.consumption.NowPlayingWidgetProvider" launcher:packageName="com.android.vending" launcher:screen="1" launcher:x="0" launcher:y="0" launcher:spanX="4" launcher:spanY="2">
+        <extra launcher:key="type" launcher:value="all"/>
+    </appwidget>
+    <favorite launcher:className="com.android.music.activitymanagement.TopLevelActivity" launcher:packageName="com.google.android.music" launcher:screen="1" launcher:x="0" launcher:y="2"/>
+    <favorite launcher:className="com.google.android.apps.books.app.BooksActivity" launcher:packageName="com.google.android.apps.books" launcher:screen="1" launcher:x="1" launcher:y="2"/>
+    <favorite launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" launcher:packageName="com.google.android.play.games" launcher:screen="1" launcher:x="2" launcher:y="2"/>
+</favorites>
+    </File>
+    <File file_name="workspace_pack3.xml">
+      <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <favorite launcher:className="com.android.music.activitymanagement.TopLevelActivity" launcher:packageName="com.google.android.music" launcher:screen="1" launcher:x="0" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.apps.books.app.BooksActivity" launcher:packageName="com.google.android.apps.books" launcher:screen="1" launcher:x="1" launcher:y="0"/>
+    <favorite launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" launcher:packageName="com.google.android.play.games" launcher:screen="1" launcher:x="2" launcher:y="0"/>
+</favorites>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="add_item.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_add" android:id="@id/menu_add_item"/>
+</menu>
+    </File>
+    <File file_name="cab_delete_wallpapers.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_delete" android:title="Delete" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="help.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_help" android:title="Help" android:alphabeticShortcut="H"/>
+</menu>
+    </File>
+    <File file_name="help_menu_with_icon.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_help" android:id="@id/menu_help" android:title="Help" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="photo_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_share" android:title="Share" android:actionProviderClass="android.widget.ShareActionProvider"/>
+    <item android:id="@id/menu_download" android:title="Download"/>
+</menu>
+    </File>
+    <File file_name="photo_navigate_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_navigate_pressed" android:id="@id/menu_navigate" android:visible="false" android:title="Navigate" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="settings.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_preferences" android:id="@id/menu_settings" android:title="Settings" android:alphabeticShortcut="P"/>
+</menu>
+    </File>
+    <File file_name="settings_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_help" android:title="Help" android:alphabeticShortcut="H"/>
+    <item android:id="@id/menu_send_feedback" android:title="Send feedback" android:alphabeticShortcut="F"/>
+</menu>
+    </File>
+  </Directory>
 </App>

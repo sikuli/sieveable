@@ -2133,4 +2133,19 @@
       <com.instagram.android.video.widget.IgScrubberProgressIndicator xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true"/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="find_friends.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <Preference android:title="From my contact list"/>
+        <Preference android:title="Facebook friends"/>
+        <Preference android:title="Twitter friends"/>
+        <Preference android:title="Search names and usernames"/>
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference android:title="Suggested users"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
 </App>

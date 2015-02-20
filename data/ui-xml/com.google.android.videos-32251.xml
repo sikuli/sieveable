@@ -1203,4 +1203,98 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General" android:key="general"/>
+    <CheckBoxPreference android:title="Show cards on pause" android:key="enable_info_cards" android:summary="Show information about the actors and songs featured at the current position in the video" android:defaultValue="true"/>
+    <PreferenceCategory android:title="Captions" android:key="captioning_category"/>
+    <Preference android:title="System settings" android:key="captioning_system_settings" android:summary="Set system-wide preferences for closed captions">
+        <intent android:action="android.settings.CAPTIONING_SETTINGS"/>
+    </Preference>
+    <Preference android:title="Caption settings" android:key="captioning_settings" android:summary="Set preferences for closed captions">
+        <intent android:targetPackage="com.google.android.videos" android:targetClass="com.google.android.videos.activity.CaptionSettingsActivity"/>
+    </Preference>
+    <PreferenceCategory android:title="Streaming on mobile networks" android:key="mobile_network_streaming_category"/>
+    <CheckBoxPreference android:title="Show warning" android:key="warning_streaming_bandwidth" android:summary="Displays a warning before streaming over a mobile network" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Restrict quality" android:key="adaptive_disable_hd_on_mobile_network" android:summary="Limits quality to SD when streaming over a mobile network (uses less data)" android:defaultValue="false"/>
+    <PreferenceCategory android:title="Downloads" android:key="download_category"/>
+    <ListPreference android:entries="@array/download_network_entries" android:title="Network" android:key="download_policy" android:summary="Set network preferences for downloads" android:defaultValue="wifi" android:dialogTitle="Choose download network" android:entryValues="@array/download_network_values"/>
+    <ListPreference android:entries="@array/download_quality_entries" android:title="Quality" android:key="download_quality" android:summary="Set download quality preferences for HD purchases" android:defaultValue="hd" android:dialogTitle="Choose download quality" android:entryValues="@array/download_quality_values"/>
+    <ListPreference android:title="Storage" android:key="download_storage" android:summary="Set the storage for downloads" android:dialogTitle="Choose download storage"/>
+    <PreferenceCategory android:title="Surround Sound" android:key="surround_sound_category"/>
+    <CheckBoxPreference android:title="Enable surround sound" android:key="enable_surround_sound" android:summary="Use 5.1 soundtrack when available" android:defaultValue="true"/>
+    <Preference android:title="Play demo" android:key="surround_sound_demo" android:summary="Play a short demonstration of surround sound"/>
+    <PreferenceCategory android:enabled="false" android:title="About" android:key="about_category"/>
+    <Preference android:title="Open source licenses" android:key="open_source_licenses" android:summary="License details for open source software and fonts"/>
+    <Preference android:enabled="false" android:title="Device ID" android:key="gservices_id"/>
+    <Preference android:enabled="false" android:title="App version" android:key="version"/>
+    <Preference android:enabled="false" android:title="Device" android:key="device_summary"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_caption.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.videos.settings.CaptionPreviewPreference android:key="captioning_preview"/>
+    <CheckBoxPreference android:title="Enable captions" android:key="captioning_enabled" android:defaultValue="false"/>
+    <PreferenceCategory android:title="Standard options" android:key="captioning_standard">
+        <com.google.android.videos.settings.LocalePreference android:title="Language" android:key="captioning_locale"/>
+        <ListPreference android:entries="@array/captioning_font_size_selector_titles" android:title="Text size" android:key="captioning_font_scale" android:entryValues="@array/captioning_font_size_selector_values"/>
+        <com.google.android.videos.settings.PresetPreference android:entries="@array/captioning_preset_selector_titles" android:title="Caption style" android:key="captioning_preset" android:defaultValue="0" android:entryValues="@array/captioning_preset_selector_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Custom options" android:key="captioning_custom">
+        <ListPreference android:entries="@array/captioning_typeface_selector_titles" android:title="Font family" android:key="captioning_typeface" android:entryValues="@array/captioning_typeface_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_color_selector_titles" android:title="Text color" android:key="captioning_foreground_color" android:entryValues="@array/captioning_color_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_opacity_selector_titles" android:title="Text opacity" android:key="captioning_foreground_opacity" android:entryValues="@array/captioning_opacity_selector_values"/>
+        <com.google.android.videos.settings.EdgeTypePreference android:entries="@array/captioning_edge_type_selector_titles" android:title="Edge type" android:key="captioning_edge_type" android:entryValues="@array/captioning_edge_type_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_color_selector_titles" android:title="Edge color" android:key="captioning_edge_color" android:dependency="captioning_edge_type" android:entryValues="@array/captioning_color_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_color_selector_titles" android:title="Background color" android:key="captioning_background_color" android:entryValues="@array/captioning_color_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_opacity_selector_titles" android:title="Background opacity" android:key="captioning_background_opacity" android:dependency="captioning_background_color" android:entryValues="@array/captioning_opacity_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_color_selector_titles" android:title="Window color" android:key="captioning_window_color" android:entryValues="@array/captioning_color_selector_values"/>
+        <com.google.android.videos.settings.ColorPreference android:entries="@array/captioning_opacity_selector_titles" android:title="Window opacity" android:key="captioning_window_opacity" android:dependency="captioning_window_color" android:entryValues="@array/captioning_opacity_selector_values"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="restrictions.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Content Restrictions" android:key="restrictions" android:order="0"/>
+    <Preference android:selectable="false" android:summary="Set limits on what you can watch in the Play Movies &amp; TV app." android:order="1"/>
+    <CheckBoxPreference android:persistent="false" android:title="Allow unrated content" android:key="allow_unrated" android:order="100"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Play Movies" android:icon="@android:drawable/sym_def_app_icon" android:searchSuggestAuthority="com.google.android.videos" android:includeInGlobalSearch="true" android:queryAfterZeroResults="true" android:searchSettingsDescription="Movies in your library"/>
+    </File>
+    <File file_name="service_info.xml">
+      <container version="1"/>
+    </File>
+    <File file_name="sync_adapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.videos.sync" android:supportsUploading="false"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="common_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_settings" android:id="@id/menu_settings" android:title="Settings"/>
+    <item android:icon="@drawable/ic_menu_help" android:id="@id/menu_help_and_feedback" android:title="Help &amp; feedback"/>
+</menu>
+    </File>
+    <File file_name="home_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_refresh" android:id="@id/menu_refresh" android:title="Refresh"/>
+    <item android:icon="@drawable/ic_menu_personal_videos" android:id="@id/menu_personal_videos" android:title="Personal videos"/>
+</menu>
+    </File>
+    <File file_name="show_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_manage" android:id="@id/menu_remove_from_device" android:title="Remove from device"/>
+</menu>
+    </File>
+    <File file_name="watch_details_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_download" android:id="@id/menu_remove_download" android:title="Remove download"/>
+    <item android:icon="@drawable/ic_menu_download" android:id="@id/menu_download" android:title="Download"/>
+    <item android:icon="@drawable/ic_menu_manage" android:id="@id/menu_remove_from_device" android:title="Remove from device"/>
+</menu>
+    </File>
+  </Directory>
 </App>

@@ -2824,4 +2824,203 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="about_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="Help" android:key="help" android:summary="Find answers to your YouTube questions here"/>
+    <Preference android:title="Send feedback" android:key="feedback" android:summary="Help us make YouTube better"/>
+    <Preference android:title="Google Mobile Terms of Service" android:key="mobile_terms" android:summary="Read Google Mobile Terms of Service"/>
+    <Preference android:title="YouTube Terms of Service" android:key="youtube_terms" android:summary="&quot;Read YouTube's Terms of Service&quot;"/>
+    <Preference android:title="Google Mobile Privacy Policy" android:key="mobile_privacy" android:summary="Read Google Mobile Privacy Policy"/>
+    <Preference android:title="YouTube Privacy Policy" android:key="youtube_privacy" android:summary="&quot;Read YouTube's Privacy Policy&quot;"/>
+    <Preference android:title="Open source licenses" android:key="open_source_licenses" android:summary="License details for open source software"/>
+    <Preference android:enabled="false" android:title="App version" android:key="version"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="developer_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/pref_developer_gdata_hostname_entries" android:title="GData server" android:key="gdata_hostname" android:summary="Host %1$s selected" android:defaultValue="0" android:entryValues="@array/pref_developer_gdata_hostname_entries"/>
+    <ListPreference android:title="Apiary backend" android:key="ApiaryHostSelection" android:summary="%1$s selected" android:defaultValue="0"/>
+    <ListPreference android:title="InnerTube API version" android:key="InnerTubeApiSelection" android:summary="API version %1$s selected" android:defaultValue="0"/>
+    <ListPreference android:title="MDX backend" android:key="MdxServerSelection" android:summary="%1$s selected" android:defaultValue="0"/>
+    <CheckBoxPreference android:title="Log API calls" android:key="ApiRequestLogging" android:summary="Logs API requests and response summaries to logcat" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Log full API responses" android:key="FullApiResponseLogging" android:summary="Logs full API responses to logcat. This is very verbose" android:defaultValue="false"/>
+    <Preference android:title="Online ads" android:key="OnlineAd" android:summary="Show online ads preferences for controlling ads requests"/>
+    <CheckBoxPreference android:title="Force offline" android:key="overridable_network_status" android:summary="Makes network status report that it is offline" android:defaultValue="false"/>
+    <Preference android:title="Show offline request queue" android:key="ShowOfflineHttpQueue" android:summary="Show all requests in the offline queue that will be sent when we return online"/>
+    <Preference android:title="Offline Resync" android:key="OfflineResync" android:summary="Enable/disable periodic sync; force sync"/>
+    <Preference android:title="Offline Ads &amp; Frequency Cap" android:key="OfflineAd" android:summary="Show offline ads; edit ad playback counts, expiration, frequency cap"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="dogfood_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:key="ExoPlayer" android:defaultValue="0"/>
+    <CheckBoxPreference android:key="enable_exo_cache" android:defaultValue="true"/>
+    <CheckBoxPreference android:key="show_exo_player_debug_messages" android:defaultValue="false"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="file_provider_exported_paths.xml">
+      <paths>
+    <external-path name="logs" path="logs"/>
+</paths>
+    </File>
+    <File file_name="general_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Limit mobile data usage" android:key="limit_mobile_data_usage" android:summary="Only stream HD video on Wifi"/>
+    <ListPreference android:entries="@array/background_audio_policy_entries" android:title="Background audio" android:key="background_audio_policy" android:entryValues="@array/background_audio_policy_values"/>
+    <ListPreference android:entries="@array/upload_policy_entries" android:title="Uploads" android:key="upload_policy" android:summary="Specify network preferences for uploads" android:defaultValue="wifi" android:entryValues="@array/upload_policy_values"/>
+    <ListPreference android:title="Content localization" android:key="country" android:summary="Prioritize channels and videos from a specific country or region"/>
+    <CheckBoxPreference android:title="Improve YouTube" android:key="dev_retention_enabled" android:summary="Help improve YouTube by sending anonymous usage data" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Notifications" android:key="video_notifications_enabled" android:summary="Receive content notifications" android:defaultValue="true"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="gh_searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Google Help" android:hint="Search help" android:searchSuggestSelection=" ?" android:inputType="textAutoComplete|textNoSuggestions" android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" android:imeOptions="actionSearch"/>
+    </File>
+    <File file_name="offline_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube" android:key="offline_settings">
+    <PreferenceCategory android:title="Internal storage">
+        <com.google.android.apps.youtube.app.ui.StorageBarPreference android:layout="@layout/pref_offline_storage" yt:forSdCard="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="SD card" android:key="offline_category_sdcard_storage">
+        <com.google.android.apps.youtube.app.ui.StorageBarPreference android:layout="@layout/pref_offline_storage" yt:forSdCard="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Options" android:key="offline_category">
+        <ListPreference android:title="Quality" android:key="offline_quality"/>
+        <CheckBoxPreference android:title="Add over Wifi only" android:key="offline_policy" android:defaultValue="true"/>
+        <Preference android:title="Insert an SD card" android:key="offline_insert_sd_card" android:summary="Insert an SD card to enable selection of location to store offline content"/>
+        <CheckBoxPreference android:title="Use SD card" android:key="offline_use_sd_card" android:summary="Store offline videos to the SD card" android:defaultValue="true"/>
+        <Preference android:title="Offline help" android:key="offline_help" android:summary="Find answers to your questions about offline"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="pair_with_tv_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="Add a TV" android:key="pair_with_youtube_tv" android:summary="Pair this device with your TV"/>
+    <Preference android:title="Edit TVs" android:key="edit_tvs" android:summary="You can rename or remove your paired TVs at any time"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="General" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$GeneralPrefsFragment"/>
+    <header android:title="Connected TVs" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$SendToTvPrefsFragment"/>
+    <header android:title="Search" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$SearchPrefsFragment"/>
+    <header android:title="Offline" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$OfflinePrefsFragment"/>
+    <header android:title="Captions" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$SubtitlesPrefsFragment"/>
+    <header android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$DogfoodPrefsFragment"/>
+    <header android:title="Developer" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$DeveloperPrefsFragment"/>
+    <header android:title="About" android:fragment="com.google.android.apps.youtube.app.honeycomb.SettingsActivity$AboutPrefsFragment"/>
+</preference-headers>
+    </File>
+    <File file_name="search_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="Clear search history" android:key="clear_history" android:summary="Clear previous YouTube searches from showing in the Search box"/>
+    <CheckBoxPreference android:title="Never remember history" android:key="no_search_history" android:summary="Never store YouTube search history"/>
+    <Preference android:title="SafeSearch filtering" android:key="safety_mode" android:summary="Block videos containing restricted content from showing in search results"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="YouTube" android:icon="@drawable/ic_searchable" android:hint="Search YouTube" android:searchSuggestAuthority="com.google.android.youtube.SuggestionProvider" android:searchSuggestIntentAction="android.intent.action.SEARCH" android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" android:voiceLanguageModel="com.google.android.youtube.LANGUAGE_MODEL" android:imeOptions="actionSearch"/>
+    </File>
+    <File file_name="subtitles_prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:yt="http://schemas.android.com/apk/res/com.google.android.youtube" android:key="subtitles_settings">
+    <PreferenceCategory android:title="Standard Options" android:key="subtitles_standard_options">
+        <ListPreference android:title="Text size" android:key="subtitles_scale"/>
+        <ListPreference android:title="Subtitles style" android:key="subtitles_style"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Custom Options" android:key="subtitles_custom_options">
+        <ListPreference android:title="Font family" android:key="subtitles_font"/>
+        <com.google.android.apps.youtube.app.ui.SubtitlesColorListPreference android:title="Text color" android:key="subtitles_text_color"/>
+        <ListPreference android:title="Text opacity" android:key="subtitles_text_opacity"/>
+        <ListPreference android:title="Edge type" android:key="subtitles_edge_type"/>
+        <com.google.android.apps.youtube.app.ui.SubtitlesColorListPreference android:title="Edge color" android:key="subtitles_edge_color"/>
+        <com.google.android.apps.youtube.app.ui.SubtitlesColorListPreference android:title="Background color" android:key="subtitles_background_color"/>
+        <ListPreference android:title="Background opacity" android:key="subtitles_background_opacity"/>
+        <com.google.android.apps.youtube.app.ui.SubtitlesColorListPreference android:title="Window color" android:key="subtitles_window_color"/>
+        <ListPreference android:title="Window opacity" android:key="subtitles_window_opacity"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.youtube.provider" android:userVisible="false" android:supportsUploading="false" android:allowParallelSyncs="false" android:isAlwaysSyncable="true"/>
+    </File>
+    <File file_name="widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="170.0dip" android:minHeight="110.0dip" android:updatePeriodMillis="28800000" android:initialLayout="@layout/widget_layout" android:previewImage="@drawable/youtube_widget_preview" android:autoAdvanceViewId="@id/widget_teasers"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="browse_channel_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:id="@id/menu_upload" android:title="Upload" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="browse_playlist_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_delete_playlist" android:title="Delete playlist"/>
+</menu>
+    </File>
+    <File file_name="gh_click_to_call_activity_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/gh_send_button_selector" android:id="@id/gh_click_to_call_action_submit" android:title="Request a call" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="gh_contact_activity_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/gh_send_button_selector" android:id="@id/gh_contact_action_submit" android:title="SEND" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="gh_help_action_bar.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/gh_menu_feedback" android:title="Feedback" android:showAsAction="ifRoom|withText" android:textAllCaps="true"/>
+    <item android:id="@id/gh_menu_feedback_and_support" android:title="Feedback &amp; Support" android:showAsAction="ifRoom|withText" android:textAllCaps="true">
+        <menu>
+            <item android:id="@id/gh_menu_feedback_and_support_send_feedback" android:title="Send feedback"/>
+            <item android:id="@id/gh_menu_feedback_and_support_phone_support" android:title="Call support"/>
+            <item android:id="@id/gh_menu_feedback_and_support_c2c_support" android:title="Request a call"/>
+            <item android:id="@id/gh_menu_feedback_and_support_email_support" android:title="Email support"/>
+        </menu>
+    </item>
+    <item android:id="@id/gh_menu_play_store" android:title="View in Google Play Store"/>
+    <item android:id="@id/gh_menu_print" android:title="Print…"/>
+    <item android:id="@id/gh_menu_clear_history" android:title="Clear help history"/>
+</menu>
+    </File>
+    <File file_name="home_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_sign_in_out" android:orderInCategory="150" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_cast" android:title="Play on" android:showAsAction="always" android:actionLayout="@layout/castmediaroutebutton"/>
+    <item android:icon="@drawable/ic_menu_search" android:id="@id/menu_search" android:orderInCategory="50" android:title="Search" android:imeOptions="actionSearch" android:showAsAction="always|collapseActionView" android:actionViewClass="android.widget.SearchView"/>
+    <item android:icon="@drawable/ic_menu_settings" android:id="@id/menu_settings" android:orderInCategory="101" android:title="Settings" android:showAsAction="never"/>
+    <item android:id="@id/menu_feedback" android:orderInCategory="102" android:title="Send feedback" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_help" android:id="@id/menu_help" android:orderInCategory="103" android:title="Help" android:showAsAction="never"/>
+    <item android:id="@id/menu_home" android:visible="false"/>
+    <item android:id="@id/menu_browse" android:visible="false"/>
+    <item android:id="@id/menu_my_channel" android:visible="false"/>
+</menu>
+    </File>
+    <File file_name="menu_upload.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:enabled="false" android:id="@id/menu_upload_activity_done" android:title="Upload" android:showAsAction="always|withText"/>
+</menu>
+    </File>
+    <File file_name="my_uploads_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:id="@id/menu_upload" android:title="Upload" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="offline_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_clear_offline" android:title="Clear Offline"/>
+</menu>
+    </File>
+    <File file_name="watch_history_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_clear_history" android:title="Clear History"/>
+</menu>
+    </File>
+  </Directory>
 </App>

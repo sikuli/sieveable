@@ -1403,4 +1403,296 @@
 </LinearLayout></LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:orderingFromXml="false">
+    <ListPreference android:persistent="false" android:entries="@array/inboxTypeEntries" android:title="Inbox type" android:key="inbox-type" android:order="0" android:defaultValue="default" android:entryValues="@array/inboxTypeEntryValues"/>
+    <PreferenceScreen android:title="Inbox categories" android:key="inbox-categories" android:order="1" android:fragment="com.google.android.gm.preference.InboxSectionsPreferenceFragment"/>
+    <CheckBoxPreference android:title="Notifications" android:key="notifications-enabled" android:order="2" android:defaultValue="true"/>
+    <PreferenceScreen android:title="Inbox sound &amp; vibrate" android:key="inbox-settings" android:order="3" android:dependency="notifications-enabled"/>
+    <EditTextPreference android:singleLine="false" android:title="Signature" android:key="signature" android:order="4" android:dialogTitle="Signature"/>
+    <PreferenceScreen android:title="Vacation responder" android:key="vacation-responder" android:order="5"/>
+    <PreferenceCategory android:title="Data usage" android:key="data-usage" android:order="6">
+        <CheckBoxPreference android:title="Sync Gmail" android:key="sync_status" android:defaultValue="true"/>
+        <com.google.android.gm.preference.IntegerPickerPreference android:title="Days of mail to sync" android:key="number-picker"/>
+        <PreferenceScreen android:title="Manage labels" android:key="manage-labels"/>
+        <CheckBoxPreference android:title="Download attachments" android:key="prefetch-attachments" android:summary="Auto-download attachments to recent messages via Wi-Fi" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/showImagesEntries" android:title="Images" android:key="show-images-in-cv" android:entryValues="@array/showImagesValues"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="experimental_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="Cross-device notification sync" android:key="notification-requires-us" android:summary="Notifications will require the ^us label, so viewing your inbox on another device (or platform) will dismiss your inbox notification on this device. Dismissing a notification will clear ^us, causing it dismiss everywhere." android:defaultValue="false"/>
+    <CheckBoxPreference android:persistent="false" android:title="Alternative parallax speed" android:key="ap-parallax-speed" android:summary="Causes attachment previews to parallax at an alternative speed. Restart the app to take effect." android:defaultValue="false"/>
+    <CheckBoxPreference android:persistent="false" android:title="Alternative parallax direction" android:key="ap-parallax-direction" android:summary="Causes attachment previews to parallax at an alternative direction. Restart the app to take effect." android:defaultValue="false"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="experimental_preferences_header.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="Experiments" android:fragment="com.google.android.gm.preference.ExperimentalPrefsFragment"/>
+</preference-headers>
+    </File>
+    <File file_name="general_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gm="http://schemas.android.com/apk/res/com.google.android.gm">
+    <com.google.android.gm.preference.FancySummaryListPreference android:persistent="false" android:entries="@array/prefEntries_removal_action" android:title="Archive &amp; delete actions" android:key="removal-action" android:defaultValue="archive" android:dialogTitle="Archive &amp; delete actions" android:entryValues="@array/prefValues_removal_action" gm:entrySummaries="@array/prefSummaries_removal_action_summary"/>
+    <CheckBoxPreference android:persistent="false" android:title="Swipe to archive" android:key="conversation-list-swipe" android:summary="In conversation list" android:defaultValue="true"/>
+    <CheckBoxPreference android:persistent="false" android:title="Sender image" android:key="conversation-list-sender-image" android:summary="Show beside name in conversation list" android:defaultValue="true"/>
+    <CheckBoxPreference android:persistent="false" android:title="Reply all" android:key="default-reply-all" android:summary="@string/preferences_default_reply_all_summary_impl" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Auto-fit messages" android:key="conversation-mode2" android:summary="Shrink messages to fit the screen" android:defaultValue="true"/>
+    <com.google.android.gm.preference.FancySummaryListPreference android:persistent="false" android:entries="@array/prefEntries_autoAdvance" android:title="Auto-advance" android:key="auto-advance-key" android:defaultValue="list" android:dialogTitle="Advance to" android:entryValues="@array/prefValues_autoAdvance" gm:entrySummaries="@array/prefSummaries_autoAdvance"/>
+    <com.google.android.gm.preference.FancySummaryListPreference android:persistent="false" android:entries="@array/prefEntries_messageTextSizeName" android:title="Message text size" android:key="message-text-key" android:defaultValue="1.0" android:dialogTitle="Message text size" android:entryValues="@array/prefValues_messageTextSize" gm:entrySummaries="@array/prefEntries_messageTextSizeSummary"/>
+    <com.google.android.gm.preference.FancySummaryListPreference android:entries="@array/prefEntries_snapHeader" android:title="Message actions" android:key="snap-headers" android:defaultValue="never" android:dialogTitle="Message actions" android:entryValues="@array/prefValues_snapHeader" gm:entrySummaries="@array/prefSummaries_snapHeader"/>
+    <PreferenceCategory android:title="Action Confirmations">
+        <CheckBoxPreference android:persistent="false" android:title="Confirm before deleting" android:key="confirm-actions-delete" android:defaultValue="true"/>
+        <CheckBoxPreference android:persistent="false" android:title="Confirm before archiving" android:key="confirm-actions-archive" android:defaultValue="true"/>
+        <CheckBoxPreference android:persistent="false" android:title="Confirm before sending" android:key="confirm-actions-send" android:defaultValue="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="gmail_widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="180.0dip" android:minHeight="180.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget" android:configure="com.google.android.gm.ui.MailboxSelectionActivityGmail" android:previewImage="@drawable/gmail_widget_preview" android:resizeMode="horizontal|vertical" android:minResizeWidth="180.0dip" android:minResizeHeight="110.0dip" android:widgetCategory="home_screen|keyguard"/>
+    </File>
+    <File file_name="inbox_section_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:icon="@drawable/ic_menu_inbox_main_holo_light" android:persistent="false" android:title="@string/label_inbox_section_personal" android:key="inbox-category-personal" android:summary="&quot;Person-to-person conversations and messages that don't appear in other categories. To receive all mail in one inbox, uncheck all others.&quot;"/>
+    <CheckBoxPreference android:icon="@drawable/ic_menu_inbox_social_holo_light" android:persistent="false" android:title="@string/label_inbox_section_social" android:key="inbox-category-social" android:summary="Messages from social networks, media sharing sites, online dating services"/>
+    <CheckBoxPreference android:icon="@drawable/ic_menu_inbox_promotions_holo_light" android:persistent="false" android:title="@string/label_inbox_section_promo" android:key="inbox-category-promo" android:summary="Deals, offers, and other marketing email"/>
+    <CheckBoxPreference android:icon="@drawable/ic_menu_inbox_notifications_holo_light" android:persistent="false" android:title="@string/label_inbox_section_notification" android:key="inbox-category-notification" android:summary="Personal, auto-generated updates, including confirmations, receipts, bills, and statements"/>
+    <CheckBoxPreference android:icon="@drawable/ic_menu_inbox_forums_holo_light" android:persistent="false" android:title="@string/label_inbox_section_group" android:key="inbox-category-group" android:summary="Messages from online groups, discussion boards, and mailing lists"/>
+    <PreferenceCategory android:title="Messages">
+        <CheckBoxPreference android:persistent="false" android:title="Include starred in Primary" android:key="inbox-sections-starred-in-personal" android:summary="Messages"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="label_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gm="http://schemas.android.com/apk/res/com.google.android.gm">
+    <Preference android:persistent="false" android:title="Sync messages" android:key="label-sync"/>
+    <PreferenceCategory android:persistent="false" android:title="Notifications" android:key="label-notifications-category"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="General settings" android:fragment="com.google.android.gm.preference.GeneralPrefsFragment"/>
+    <header android:id="@id/about_fragment" android:title="About Gmail" android:fragment="com.google.android.gm.preference.AboutFragment"/>
+</preference-headers>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Gmail" android:icon="@drawable/ic_menu_search_holo_light" android:hint="Search mail" android:searchSuggestAuthority="com.google.android.gmail.SuggestionsProvider" android:searchSuggestSelection="query LIKE ?" android:searchSuggestIntentAction="android.intent.action.SEARCH" android:imeOptions="actionSearch"/>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="gmail-ls" android:allowParallelSyncs="true"/>
+    </File>
+    <File file_name="widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="180.0dip" android:minHeight="180.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget" android:configure="com.android.mail.ui.MailboxSelectionActivity" android:previewImage="@drawable/mail_widget_preview" android:resizeMode="horizontal|vertical" android:minResizeWidth="180.0dip" android:minResizeHeight="110.0dip" android:widgetCategory="home_screen|keyguard"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="ad_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_trash_holo_light" android:id="@id/delete_ad" android:title="Delete" android:showAsAction="always"/>
+    <item android:id="@id/settings" android:title="Settings" android:showAsAction="never"/>
+    <item android:id="@id/feedback_menu_item" android:title="Send feedback" android:showAsAction="never"/>
+    <item android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="compose_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/send" android:id="@id/send" android:title="Send" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_attachment_holo_light" android:id="@id/add_photo_attachment" android:title="Attach picture" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_attachment_holo_light" android:id="@id/add_file_attachment" android:title="Attach file" android:showAsAction="never"/>
+    <item android:id="@id/add_cc_bcc" android:title="Add Cc/Bcc" android:showAsAction="never"/>
+    <item android:id="@id/save" android:title="Save draft" android:showAsAction="never"/>
+    <item android:icon="@drawable/trash" android:id="@id/discard" android:title="Discard" android:showAsAction="never"/>
+    <item android:id="@id/settings" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="conversation_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/archive" android:id="@id/archive" android:title="Archive" android:alphabeticShortcut="y" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_remove_label" android:id="@id/remove_folder" android:visible="false" android:title="Remove from %1$s" android:alphabeticShortcut="y" android:showAsAction="never"/>
+    <item android:icon="@drawable/trash" android:id="@id/delete" android:title="Delete" android:showAsAction="never"/>
+    <item android:icon="@drawable/trash" android:id="@id/discard_drafts" android:visible="false" android:title="Discard drafts" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_mark_unread_holo_light" android:id="@id/inside_conversation_unread" android:title="Mark unread" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_move_to_holo_light" android:id="@id/move_to" android:title="Move to" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_folders_holo_light" android:id="@id/change_folders" android:title="Change labels" android:showAsAction="never"/>
+    <item android:id="@id/move_to_inbox" android:title="Move to Inbox" android:showAsAction="never"/>
+    <item android:id="@id/mark_important" android:title="Mark important"/>
+    <item android:id="@id/mark_not_important" android:visible="false" android:title="Mark not important"/>
+    <item android:id="@id/mute" android:title="Mute"/>
+    <item android:id="@id/print_all" android:visible="false" android:title="Print all"/>
+    <item android:id="@id/show_original" android:title="Revert auto-sizing"/>
+    <item android:id="@id/report_spam" android:title="Report spam"/>
+    <item android:id="@id/mark_not_spam" android:visible="false" android:title="Report not spam"/>
+    <item android:id="@id/report_phishing" android:visible="false" android:title="Report phishing"/>
+    <item android:id="@id/settings" android:title="Settings"/>
+    <item android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    <item android:id="@id/help_info_menu_item" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="conversation_list_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_compose_normal_holo_light" android:id="@id/compose" android:title="Compose" android:alphabeticShortcut="c" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_search_holo_light" android:id="@id/search" android:title="Search" android:showAsAction="ifRoom|collapseActionView" android:actionLayout="@layout/mail_actionbar_searchview"/>
+    <item android:icon="@drawable/ic_menu_trash_holo_light" android:id="@id/empty_trash" android:title="Empty Trash" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_trash_holo_light" android:id="@id/empty_spam" android:title="Empty Spam" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_refresh_holo_light" android:id="@id/refresh" android:title="Refresh" android:alphabeticShortcut="u" android:showAsAction="never"/>
+    <item android:id="@id/folder_options" android:title="Label settings" android:showAsAction="never"/>
+    <item android:id="@id/settings" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="conversation_list_search_results_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_compose_normal_holo_light" android:id="@id/compose" android:title="Compose" android:alphabeticShortcut="c" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_search_holo_light" android:id="@id/search" android:title="Search" android:showAsAction="ifRoom|collapseActionView" android:actionLayout="@layout/mail_actionbar_searchview"/>
+    <item android:icon="@drawable/ic_menu_refresh_holo_light" android:id="@id/refresh" android:title="Refresh" android:alphabeticShortcut="u" android:showAsAction="never"/>
+    <item android:id="@id/settings" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="conversation_list_selection_actions_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/archive" android:id="@id/archive" android:title="Archive" android:alphabeticShortcut="y" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_remove_label" android:id="@id/remove_folder" android:visible="false" android:title="Remove from %1$s" android:alphabeticShortcut="y" android:showAsAction="never"/>
+    <item android:icon="@drawable/trash" android:id="@id/delete" android:title="Delete" android:showAsAction="never"/>
+    <item android:icon="@drawable/trash" android:id="@id/discard_drafts" android:visible="false" android:title="Discard drafts" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_mark_read_holo_light" android:id="@id/read" android:title="Mark read" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_mark_unread_holo_light" android:id="@id/unread" android:title="Mark unread" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_move_to_holo_light" android:id="@id/move_to" android:title="Move to" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_folders_holo_light" android:id="@id/change_folders" android:title="Change labels" android:showAsAction="never"/>
+    <item android:id="@id/move_to_inbox" android:title="Move to Inbox" android:showAsAction="never"/>
+    <item android:id="@id/star" android:title="Add star" android:showAsAction="never"/>
+    <item android:id="@id/remove_star" android:title="Remove star" android:showAsAction="never"/>
+    <item android:id="@id/mark_important" android:title="Mark important" android:showAsAction="never"/>
+    <item android:id="@id/mark_not_important" android:title="Mark not important" android:showAsAction="never"/>
+    <item android:id="@id/mute" android:title="Mute" android:showAsAction="never"/>
+    <item android:id="@id/report_spam" android:title="Report spam" android:showAsAction="never"/>
+    <item android:id="@id/mark_not_spam" android:title="Report not spam" android:showAsAction="never"/>
+    <item android:id="@id/report_phishing" android:title="Report phishing" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="email_copy_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/mail_context_menu_id" android:title="Send email"/>
+    <item android:id="@id/copy_mail_context_menu_id" android:title="Copy"/>
+</menu>
+    </File>
+    <File file_name="eml_viewer_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/print_message" android:title="Print" android:showAsAction="never"/>
+    <item android:id="@id/settings" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="general_prefs_fragment_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/clear_search_history_menu_item" android:title="Clear search history" android:showAsAction="never"/>
+    <item android:id="@id/clear_picture_approvals_menu_item" android:title="Clear picture approvals" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="label_options_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/preferences" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback" android:showAsAction="never"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="message_footer_overflow_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/preview_attachment" android:title="Preview"/>
+    <item android:id="@id/save_attachment" android:title="Save"/>
+    <item android:id="@id/download_again" android:title="Download again"/>
+</menu>
+    </File>
+    <File file_name="message_header_overflow_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/reply" android:title="Reply"/>
+    <item android:id="@id/reply_all" android:title="Reply all"/>
+    <item android:id="@id/forward" android:title="Forward"/>
+    <item android:id="@id/print_message" android:title="Print"/>
+    <item android:id="@id/report_rendering_problem" android:title="Looks bad"/>
+    <item android:id="@id/report_rendering_improvement" android:title="Looks good"/>
+</menu>
+    </File>
+    <File file_name="message_header_overflow_menu_land_or_tablet_v19.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/reply" android:title="Reply"/>
+    <item android:id="@id/reply_all" android:title="Reply all"/>
+    <item android:id="@id/print_message" android:title="Print"/>
+    <item android:id="@id/report_rendering_problem" android:title="Looks bad"/>
+    <item android:id="@id/report_rendering_improvement" android:title="Looks good"/>
+</menu>
+    </File>
+    <File file_name="photo_view_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/photo_view_menu_group">
+        <item android:id="@id/menu_save" android:title="Save" android:showAsAction="never"/>
+        <item android:id="@id/menu_save_all" android:title="Save all" android:showAsAction="never"/>
+        <item android:id="@id/menu_share" android:title="Share" android:showAsAction="never"/>
+        <item android:id="@id/menu_share_all" android:title="Share all" android:showAsAction="never"/>
+        <item android:id="@id/menu_download_again" android:title="Download again" android:showAsAction="never"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="settings_fragment_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="settings_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="vacation_responder_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_cancel_holo_light" android:id="@id/action_cancel" android:title="Cancel" android:alphabeticShortcut="c" android:showAsAction="always|withText"/>
+    <item android:icon="@drawable/ic_menu_done_holo_light" android:id="@id/action_done" android:title="Done" android:alphabeticShortcut="d" android:showAsAction="always|withText"/>
+</menu>
+    </File>
+    <File file_name="wait_mode_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_refresh_holo_light" android:id="@id/refresh" android:title="Refresh" android:alphabeticShortcut="u"/>
+    <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="webview_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/PHONE_MENU">
+        <item android:id="@id/dial_context_menu_id" android:title="Dial…"/>
+        <item android:id="@id/sms_context_menu_id" android:title="SMS…"/>
+        <item android:id="@id/add_contact_context_menu_id" android:title="Add contact"/>
+        <item android:id="@id/copy_phone_context_menu_id" android:title="Copy"/>
+    </group>
+    <group android:id="@id/EMAIL_MENU">
+        <item android:id="@id/email_context_menu_id" android:title="Send email"/>
+        <item android:id="@id/copy_mail_context_menu_id" android:title="Copy"/>
+    </group>
+    <group android:id="@id/GEO_MENU">
+        <item android:id="@id/map_context_menu_id" android:title="Map"/>
+        <item android:id="@id/copy_geo_context_menu_id" android:title="Copy"/>
+    </group>
+    <group android:id="@id/ANCHOR_MENU">
+        <item android:id="@id/open_context_menu_id" android:title="Open in Browser"/>
+        <item android:id="@id/copy_link_context_menu_id" android:title="Copy link URL"/>
+        <item android:id="@id/share_link_context_menu_id" android:title="Share link"/>
+    </group>
+    <group android:id="@id/HELP_FEEDBACK_GROUP">
+        <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help_info_menu_item" android:title="Help"/>
+        <item android:icon="@android:drawable/ic_menu_send" android:id="@id/feedback_menu_item" android:title="Send feedback"/>
+    </group>
+</menu>
+    </File>
+  </Directory>
 </App>

@@ -2520,4 +2520,98 @@
       <com.google.android.youtube.app.honeycomb.ui.CustomMediaRouteButton xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="Play on" style="&#10;         &#10;         &#10;    "/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="froyo_widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="72.0dip" android:updatePeriodMillis="28800000" android:initialLayout="@layout/froyo_widget_layout"/>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="YouTube" android:icon="@drawable/ic_searchable" android:hint="Search YouTube" android:searchSuggestAuthority="com.google.android.youtube.SuggestionProvider" android:searchSuggestIntentAction="android.intent.action.SEARCH" android:voiceSearchMode="showVoiceSearchButton|launchRecognizer" android:voiceLanguageModel="com.google.android.youtube.LANGUAGE_MODEL" android:imeOptions="actionSearch"/>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.youtube.autosync" android:userVisible="true" android:supportsUploading="true"/>
+    </File>
+    <File file_name="widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="170.0dip" android:minHeight="110.0dip" android:updatePeriodMillis="28800000" android:initialLayout="@layout/widget_layout" android:previewImage="@drawable/youtube_widget_preview" android:autoAdvanceViewId="@id/widget_teasers"/>
+    </File>
+    <File file_name="youtube_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General" android:key="general_category">
+        <CheckBoxPreference android:title="High quality on mobile" android:key="default_hq" android:summary="Start videos in high quality when connected to a mobile network. Startup may take longer."/>
+        <ListPreference android:entries="@array/subtitles_size_entries" android:title="Caption font size" android:key="subtitles_size" android:summary="Sets the font size to use for captions" android:defaultValue="18" android:entryValues="@array/subtitles_size_values"/>
+        <ListPreference android:entries="@array/upload_policy_entries" android:title="Uploads" android:key="upload_policy" android:summary="Specify network preferences for uploads" android:defaultValue="wifi" android:entryValues="@array/upload_policy_values"/>
+        <ListPreference android:title="Content localization" android:key="country" android:summary="Prioritize channels and videos from a specific country or region"/>
+        <CheckBoxPreference android:title="Improve YouTube" android:key="dev_retention_enabled" android:summary="Help improve YouTube by sending anonymous usage data" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Connected TVs">
+        <Preference android:title="Add a TV" android:key="pair_with_youtube_tv" android:summary="Pair this device with your TV"/>
+        <Preference android:title="Edit TVs" android:key="edit_tvs" android:summary="You can rename or remove your paired TVs at any time"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Search">
+        <Preference android:title="Clear search history" android:key="clear_history" android:summary="Clear previous YouTube searches from showing in the Search box"/>
+        <CheckBoxPreference android:title="Never remember history" android:key="no_search_history" android:summary="Never store YouTube search history"/>
+        <Preference android:title="SafeSearch filtering" android:key="safe_search" android:summary="Block videos containing restricted content from showing in search results"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Preloading" android:key="prefetch_category">
+        <Preference android:layout="@layout/preload_summary"/>
+        <CheckBoxPreference android:title="Preload subscriptions" android:key="prefetch_subscriptions"/>
+        <CheckBoxPreference android:title="Preload watch later" android:key="prefetch_watch_later"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Developer" android:key="developer_category">
+        <ListPreference android:entries="@array/pref_developer_gdata_hostname_entries" android:title="GData server" android:key="gdata_hostname" android:summary="Choose the GData server" android:defaultValue="0" android:entryValues="@array/pref_developer_gdata_hostname_entries"/>
+        <CheckBoxPreference android:title="Log requests" android:key="log_http_requests" android:summary="Control logging of network requests" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About">
+        <Preference android:title="Help" android:key="help" android:summary="Find answers to your YouTube questions here"/>
+        <Preference android:title="Feedback" android:key="feedback" android:summary="Help us make YouTube better"/>
+        <Preference android:title="Google Mobile Terms of Service" android:key="mobile_terms" android:summary="Read Google Mobile Terms of Service"/>
+        <Preference android:title="YouTube Terms of Service" android:key="youtube_terms" android:summary="&quot;Read YouTube's Terms of Service&quot;"/>
+        <Preference android:title="Google Mobile Privacy Policy" android:key="mobile_privacy" android:summary="Read Google Mobile Privacy Policy"/>
+        <Preference android:title="YouTube Privacy Policy" android:key="youtube_privacy" android:summary="&quot;Read YouTube's Privacy Policy&quot;"/>
+        <Preference android:title="Open source licenses" android:key="open_source_licenses" android:summary="License details for open source software"/>
+        <Preference android:enabled="false" android:title="App version" android:key="version"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="account_layer_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:id="@id/menu_upload" android:title="Upload" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="home_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_sign_in_out" android:orderInCategory="150" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_media_route" android:title="Play on" android:showAsAction="always" android:actionLayout="@layout/castmediaroutebutton"/>
+    <item android:id="@id/menu_cast" android:title="Play on" android:showAsAction="always" android:actionLayout="@layout/castmediaroutebutton"/>
+    <item android:id="@id/menu_media_route_overflow" android:title="Play on" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_search" android:id="@id/menu_search" android:orderInCategory="50" android:title="Search" android:imeOptions="actionSearch" android:showAsAction="always|collapseActionView" android:actionViewClass="android.widget.SearchView"/>
+    <item android:icon="@drawable/ic_menu_settings" android:id="@id/menu_settings" android:orderInCategory="101" android:title="Settings" android:showAsAction="never"/>
+    <item android:id="@id/menu_feedback" android:orderInCategory="102" android:title="Feedback" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_help" android:id="@id/menu_help" android:orderInCategory="103" android:title="Help" android:showAsAction="never"/>
+    <item android:id="@id/menu_home" android:visible="false"/>
+    <item android:id="@id/menu_browse" android:visible="false"/>
+    <item android:id="@id/menu_my_channel" android:visible="false"/>
+</menu>
+    </File>
+    <File file_name="menu_upload.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:enabled="false" android:id="@id/menu_upload_activity_done" android:title="Upload" android:showAsAction="always|withText"/>
+</menu>
+    </File>
+    <File file_name="my_playlists_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_add" android:id="@id/menu_add_playlist" android:title="Create playlist" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="my_uploads_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:id="@id/menu_upload" android:title="Upload" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+  </Directory>
 </App>

@@ -3495,4 +3495,46 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="Tango" android:icon="@drawable/icon" android:accountType="com.sgiggle.production.account" android:smallIcon="@drawable/icon" android:accountPreferences="@xml/account_preferences"/>
+    </File>
+    <File file_name="contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+    <ContactsDataKind android:icon="@drawable/icon_38x38" android:mimeType="com.android.htccontacts/chat_capability" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+</ContactsSource>
+    </File>
+    <File file_name="searchablecontact.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Tango"/>
+    </File>
+    <File file_name="sync_contacts.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.sgiggle.production.account" android:contentAuthority="com.android.contacts" android:supportsUploading="false"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="conversation_detail.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_tc_settings" android:id="@id/menu_group_chat_settings" android:orderInCategory="1" android:title="Group Settings" android:showAsAction="always"/>
+    <item android:icon="@drawable/ic_tc_adduser" android:id="@id/menu_group_chat_adduser" android:orderInCategory="1" android:title="Add users" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="new_friends_list_options_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/social_filter_icon" android:id="@id/filter" android:title="Filter" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="profile_view.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_gear" android:id="@id/social_profile_edit" android:title="Edit" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="social_picture_preview_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/btn_social_aviary" android:id="@id/social_picture_preview_edit_image" android:title="Edit image" app:showAsAction="always"/>
+</menu>
+    </File>
+  </Directory>
 </App>

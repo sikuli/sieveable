@@ -4008,4 +4008,98 @@
 </RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="act_type.xml">
+      <act_type>
+    <activity name="com.keniu.security.main.MainActivity">1</activity>
+    <activity name="com.keniu.security.main.AddDesktopShortcutActivity">2</activity>
+    <activity name="com.cleanmaster.processcleaner.ProcessCleanerActivity">3</activity>
+    <activity name="com.cleanmaster.ui.process.ProcessManagerActivity">4</activity>
+    <activity name="com.cleanmaster.functionactivity.AppUninstallActivity">5</activity>
+    <activity name="com.cleanmaster.functionactivity.PrivacyCleanActivity">7</activity>
+    <activity name="com.cleanmaster.functionactivity.MonitorUninstallActivity">8</activity>
+    <activity name="com.cleanmaster.functionactivity.AppManagerActivity">11</activity>
+    <activity name="com.cleanmaster.functionactivity.AppAPKActivity">12</activity>
+    <activity name="com.cleanmaster.commonactivity.SmsItemManagerActivity">13</activity>
+    <activity name="com.cleanmaster.commonactivity.SmsGroupManagerActivity">14</activity>
+    <activity name="com.cleanmaster.commonactivity.SearchHistoryCleanerActivity">15</activity>
+    <activity name="com.cleanmaster.commonactivity.CallLogGroupManagerActivity">16</activity>
+    <activity name="com.cleanmaster.functionactivity.AppMoveActivity">17</activity>
+    <activity name="com.cleanmaster.functionactivity.AppSystemMoveActivity">17</activity>
+    <activity name="com.cleanmaster.functionactivity.JunkManagerActivity">18</activity>
+    <activity name="com.cleanmaster.settings.SettingsActivity">21</activity>
+    <service name="com.cleanmaster.service.PermanentService">1</service>
+</act_type>
+    </File>
+    <File file_name="gobackup_widget_black_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="50.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/gowidget_1_base_black" android:previewImage="@drawable/black_widget_preview"/>
+    </File>
+    <File file_name="gobackup_widget_white_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="50.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/gowidget_1_base" android:previewImage="@drawable/white_widget_preview"/>
+    </File>
+    <File file_name="preference_processmanagersettingsactivity.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="内存清理提醒" android:summary="xxx"/>
+    <ListPreference android:title="设置占用提醒" android:summary="xxx"/>
+    <CheckBoxPreference android:title="锁屏时自动杀进程"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General Settings">
+        <EditTextPreference android:title="Home folder" android:key="pref_key_primary_folder" android:summary="The folder that appears when the app starts, and current value is %1$s" android:defaultValue="/mnt/sdcard"/>
+        <CheckBoxPreference android:title="Read root" android:key="pref_key_read_root" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Display real path" android:key="pref_key_show_real_path" android:summary="Show real path in navigation bar" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Search Files" android:hint="Search Files" android:searchSuggestAuthority="media" android:searchSuggestPath="external/otherfile/search" android:searchSuggestIntentAction="android.intent.action.VIEW" android:includeInGlobalSearch="true"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main_nogmail.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/menuicon_update" android:id="@id/menuUpdate" android:orderInCategory="0" android:title="Update"/>
+    <item android:icon="@drawable/menuicon_rateus" android:id="@id/menuRateUs" android:orderInCategory="1" android:title="Rate us"/>
+    <item android:icon="@drawable/menuicon_likeus" android:id="@id/menuLikeUs" android:orderInCategory="2" android:title="Like us"/>
+    <item android:icon="@drawable/menuicon_about" android:id="@id/menuAbout" android:orderInCategory="3" android:title="About"/>
+</menu>
+    </File>
+    <File file_name="main_nogmail_gplay.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/menuicon_update" android:id="@id/menuUpdate" android:orderInCategory="0" android:title="Update"/>
+    <item android:icon="@drawable/menuicon_likeus" android:id="@id/menuLikeUs" android:orderInCategory="1" android:title="Like us"/>
+    <item android:icon="@drawable/menuicon_about" android:id="@id/menuAbout" android:orderInCategory="2" android:title="About"/>
+</menu>
+    </File>
+    <File file_name="main_nogplay.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/menuicon_update" android:id="@id/menuUpdate" android:orderInCategory="0" android:title="Update"/>
+    <item android:icon="@drawable/menuicon_likeus" android:id="@id/menuLikeUs" android:orderInCategory="1" android:title="Like us"/>
+    <item android:icon="@drawable/menuicon_feedback" android:id="@id/menuFeedback" android:orderInCategory="2" android:title="Feedback"/>
+    <item android:icon="@drawable/menuicon_about" android:id="@id/menuAbout" android:orderInCategory="3" android:title="About"/>
+</menu>
+    </File>
+    <File file_name="main_withgmail_gplay.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/menuicon_update" android:id="@id/menuUpdate" android:orderInCategory="0" android:title="Update"/>
+    <item android:icon="@drawable/menuicon_rateus" android:id="@id/menuRateUs" android:orderInCategory="1" android:title="Rate us"/>
+    <item android:icon="@drawable/menuicon_likeus" android:id="@id/menuLikeUs" android:orderInCategory="2" android:title="Like us"/>
+    <item android:icon="@drawable/menuicon_feedback" android:id="@id/menuFeedback" android:orderInCategory="3" android:title="Feedback"/>
+    <item android:icon="@drawable/menuicon_about" android:id="@id/menuAbout" android:orderInCategory="4" android:title="About"/>
+</menu>
+    </File>
+    <File file_name="operation_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/operation_button_delete" android:id="@id/action_delete" android:title="Delete" android:showAsAction="always"/>
+    <item android:icon="@drawable/operation_button_copy" android:id="@id/action_copy" android:title="Copy" android:showAsAction="always"/>
+    <item android:icon="@drawable/operation_button_move" android:id="@id/action_move" android:title="Move"/>
+    <item android:icon="@drawable/operation_button_send" android:id="@id/action_send" android:title="Send"/>
+    <item android:id="@id/action_copy_path" android:title="Copy file path"/>
+    <item android:icon="@drawable/operation_button_selectall" android:id="@id/action_select_all" android:title="Select All"/>
+    <item android:icon="@drawable/operation_button_cancel" android:id="@id/action_cancel" android:title="Cancel"/>
+</menu>
+    </File>
+  </Directory>
 </App>

@@ -4724,4 +4724,399 @@
 </RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General Settings"/>
+    <PreferenceScreen android:title="Account Settings" android:key="account_settings" android:summary="Sync frequency, notifications, etc.">
+        <intent android:targetPackage="com.viber.voip" android:action="fm.last.android.activity.Preferences.ACCOUNT_SETUP" android:targetClass="com.viber.voip.Settings"/>
+    </PreferenceScreen>
+</PreferenceScreen>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="Viber" android:icon="@drawable/ic_launcher_viber" android:accountType="com.viber.voip.account" android:smallIcon="@drawable/ic_launcher_viber" android:accountPreferences="@xml/account_preferences"/>
+    </File>
+    <File file_name="contact_widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="40.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/contact_widget" android:configure="com.viber.voip.contacts.ui.ContactsListActivity"/>
+    </File>
+    <File file_name="contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+    <ContactsDataKind android:icon="@drawable/ic_launcher_viber" android:mimeType="vnd.android.cursor.item/vnd.com.viber.voip.call" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+    <ContactsDataKind android:icon="@drawable/contact_face" android:mimeType="vnd.android.cursor.item/vnd.com.viber.voip.message" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+</ContactsSource>
+    </File>
+    <File file_name="messages_widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="80.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/contact_widget" android:configure="com.viber.voip.contacts.ui.ContactsListActivity"/>
+    </File>
+    <File file_name="recent_calls_widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="40.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/recent_widget"/>
+    </File>
+    <File file_name="settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:viber="http://schemas.android.com/apk/res/com.viber.voip" android:cacheColorHint="#00000000">
+    <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Contact joined Viber" android:key="contact_joined_viber" android:defaultValue="true" android:summaryOn="Show joined notification" android:summaryOff="&quot;Don't show joined notification&quot;"/>
+    <Preference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Facebook connect" android:key="pref_facebook_connect_key"/>
+    <Preference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Twitter connect" android:key="pref_twitter_connect_key"/>
+    <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Show all contacts" android:key="contact_show_all" android:defaultValue="true" android:summaryOn="On" android:summaryOff="Off"/>
+    <com.viber.voip.widget.PreferenceWithImage android:title="Default background" android:key="pref_default_background" android:defaultValue="false" android:summaryOn="Change default background" android:summaryOff="Set default background"/>
+    <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Use system sounds" android:key="use_system_ringtone" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off"/>
+    <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:visible="false" android:title="Vibrate when ringing" android:key="vibrate_when_ringing" android:defaultValue="true" android:summaryOn="On" android:summaryOff="Off"/>
+    <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Viber account" android:key="account_and_sync" android:defaultValue="true" android:summaryOn="Show viber contacts at native contact book" android:summaryOff="&quot;Don't show viber contacts at native contact book&quot;"/>
+    <PreferenceCategory android:layout="@layout/pref_category" android:title=" " android:key="pref_category_1">
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Show message preview" android:key="show_preview" android:defaultValue="true" android:summaryOn="On" android:summaryOff="Off"/>
+        <CheckBoxPreference android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="New message popup" android:key="popup_enabled" android:defaultValue="true" android:summaryOn="Popup is enabled" android:summaryOff="Popup is disabled"/>
+        <CheckBoxPreference android:textAppearance="?android:textAppearanceSmall" android:ellipsize="end" android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Light screen for messages" android:key="light_up_screen" android:defaultValue="true" android:summaryOn="The screen will light up for incoming messages" android:summaryOff="The screen will not light up for incoming messages"/>
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Unlock for popups" android:key="unlock_screen_for_popup" android:dependency="popup_enabled" android:defaultValue="true" android:summaryOn="Popup will unlock the screen" android:summaryOff="Popup will keep the screen locked"/>
+        <com.viber.voip.widget.CustomPreferencesCheckbox android:title="Free reply with Viber" android:key="pref_use_viber_for_sms_key" android:summary="When possible, use Viber for SMS replies" viber:title_max_lines="5"/>
+        <Preference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Email message history" android:key="pref_email_msg_history_key"/>
+        <Preference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Clear message history" android:key="pref_clear_msg_history_key"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/pref_category" android:title=" " android:key="pref_category_2">
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Show Viber status icon" android:key="notification_icon" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off"/>
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Google analytics" android:key="pref_google_analytics_key" android:summary="Send anonymous data, help improve Viber" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/pref_category" android:title=" ">
+        <Preference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Restore Viber defaults" android:key="pref_restore_defaults_key"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/pref_category" android:title=" " android:key="pref_category_4">
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Show translation" android:key="pref_language" android:defaultValue="true" android:summaryOn="&quot;The device's language is being used&quot;" android:summaryOff="English is being used"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/pref_category" android:title=" " android:key="pref_category_ptt">
+        <Preference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Delete voice messages" android:key="pref_ptt_forceclean_key" android:summary="&quot;This will delete all your Viber voice messages from your device's memory. Related messages will not be removed.&quot;"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/pref_category" android:title=" " android:key="pref_category_5">
+        <com.viber.voip.widget.CustomPreferencesCheckbox android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Display my online status" android:key="pref_last_online_key" android:summary="Turning your Last online status OFF will hide your status and the status of other users from you." android:defaultValue="true" viber:title_max_lines="5" viber:summary_max_lines="10"/>
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Send Seen Status" android:key="pref_read_status_key" android:summary="&quot;Turning this setting off will hide others 'Seen' status from you&quot;" android:defaultValue="true"/>
+        <CheckBoxPreference android:layout="@layout/_ics_custom_checkbox_preference_layout" android:title="Viber-In Calls" android:key="pref_viber_calls_in_key" android:summary="Receive regular incoming calls with Viber when possible" android:defaultValue="true"/>
+        <com.viber.voip.widget.CustomPreferencesCheckbox android:title="Auto download photos on 3G" android:key="pref_auto_receive_photos_key" android:defaultValue="true" viber:title_max_lines="5" viber:summary_max_lines="10"/>
+        <com.viber.voip.widget.CustomPreferencesCheckbox android:title="Auto download videos on 3G" android:key="pref_auto_receive_videos_key" android:defaultValue="false" viber:title_max_lines="5" viber:summary_max_lines="10"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="smswhitelist.xml">
+      <smswhitelist>
+    <device manufacturer="Samsung" model="GT-I9100" model_name="Galaxy S II"/>
+    <device manufacturer="Samsung" model="SGH-T999" model_name="Galaxy SIII"/>
+    <device manufacturer="Samsung" model="GT-S5360" model_name="Galaxy Y"/>
+    <device manufacturer="Samsung" model="SGH-I317" model_name="Galaxy Note II"/>
+    <device manufacturer="Samsung" model="GT-N7100" model_name="Galaxy Note II"/>
+    <device manufacturer="Samsung" model="GT-N7000" model_name="Galaxy Note"/>
+    <device manufacturer="Samsung" model="GT-S5830" model_name="Galaxy Ace"/>
+    <device manufacturer="Samsung" model="GT-I9505" model_name="Galaxy S IV"/>
+    <device manufacturer="Samsung" model="SGH-I337" model_name="Galaxy S IV"/>
+    <device manufacturer="Samsung" model="GT-I9000" model_name="Galaxy S"/>
+    <device manufacturer="Samsung" model="GT-S5830i" model_name="Galaxy Ace"/>
+    <device manufacturer="Samsung" model="SPH-L710" model_name="Galaxy SIII"/>
+    <device manufacturer="Samsung" model="SGH-T989" model_name="Galaxy SII"/>
+    <device manufacturer="Samsung" model="Galaxy Nexus" model_name="Galaxy Nexus"/>
+    <device manufacturer="Samsung" model="GT-N7105" model_name="Galaxy Note II"/>
+    <device manufacturer="Samsung" model="GT-I9500" model_name="Galaxy S IV"/>
+    <device manufacturer="Samsung" model="GT-S5300" model_name="Galaxy Pocket"/>
+    <device manufacturer="Samsung" model="GT-S5839i" model_name="Galaxy Ace"/>
+    <device manufacturer="Samsung" model="SGH-T999V" model_name="Galaxy SIII"/>
+    <device manufacturer="SonyEricsson" model="ST25i" model_name="Xperia U"/>
+    <device manufacturer="LGE" model="Nexus 4" model_name="Nexus 4"/>
+    <device manufacturer="Motorola" model="MOTXT912B" model_name="Droid Razr 4G"/>
+    <device manufacturer="HTC" model="PJ83100" model_name="One X"/>
+    <device manufacturer="SonyEricsson" model="LT18i" model_name="Xperia Arc"/>
+</smswhitelist>
+    </File>
+    <File file_name="sound_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Sound Settings">
+    <PreferenceScreen android:title="Audio unit">
+        <ListPreference android:entries="@array/sound_settings_audio_driver_entries" android:title="Audio driver" android:key="sound_settings_audio_driver" android:entryValues="@array/sound_settings_audio_driver_values"/>
+        <ListPreference android:enabled="false" android:entries="@array/sound_settings_hw_agc_entries" android:title="HW AGC (if supported)" android:key="sound_settings_hw_agc_key" android:entryValues="@array/sound_settings_hw_agc_values"/>
+        <ListPreference android:enabled="false" android:entries="@array/sound_settings_hw_iir_entries" android:title="HW IIR (if supported)" android:key="sound_settings_hw_iir_key" android:entryValues="@array/sound_settings_hw_iir_values"/>
+        <ListPreference android:enabled="false" android:entries="@array/sound_settings_hw_ns_entries" android:title="HW NS (if supported)" android:key="sound_settings_hw_ns_key" android:entryValues="@array/sound_settings_hw_ns_values"/>
+        <ListPreference android:enabled="false" android:entries="@array/sound_settings_sw_agc_entries" android:title="SW AGC Effect (if supported)" android:key="sound_settings_sw_agc_key" android:entryValues="@array/sound_settings_sw_agc_values"/>
+        <ListPreference android:enabled="false" android:entries="@array/sound_settings_sw_aec_entries" android:title="SW AEC Effect (if supported)" android:key="sound_settings_sw_aec_key" android:entryValues="@array/sound_settings_sw_aec_values"/>
+        <ListPreference android:enabled="false" android:entries="@array/sound_settings_sw_ns_entries" android:title="SW NS Effect (if supported)" android:key="sound_settings_sw_ns_key" android:entryValues="@array/sound_settings_sw_ns_values"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Filters/Earpiece mode">
+        <ListPreference android:entries="@array/sound_settings_aec_entries" android:title="AEC" android:key="sound_settings_aec_key" android:entryValues="@array/sound_settings_aec_values"/>
+        <ListPreference android:entries="@array/sound_settings_agc_entries" android:title="Automatic Gain Control" android:key="sound_settings_agc_key" android:entryValues="@array/sound_settings_agc_values"/>
+        <ListPreference android:entries="@array/sound_settings_agc_entries" android:title="RX Automatic Gain Control" android:key="sound_settings_rxagc_key" android:entryValues="@array/sound_settings_agc_values"/>
+        <ListPreference android:entries="@array/sound_settings_ns_entries" android:title="Noise Suppression" android:key="sound_settings_ns_key" android:entryValues="@array/sound_settings_ns_values"/>
+        <ListPreference android:entries="@array/sound_settings_ns_entries" android:title="RX Noise Suppression" android:key="sound_settings_rxns_key" android:entryValues="@array/sound_settings_ns_values"/>
+        <ListPreference android:entries="@array/sound_settings_vad_entries" android:title="Voice Activity Detection" android:key="sound_settings_vad_key" android:entryValues="@array/sound_settings_vad_values"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Filters/LoudSpeaker mode">
+        <ListPreference android:entries="@array/sound_settings_aec_entries" android:title="AEC" android:key="sound_settings_speaker_aec_key" android:entryValues="@array/sound_settings_aec_values"/>
+        <ListPreference android:entries="@array/sound_settings_agc_entries" android:title="Automatic Gain Control" android:key="sound_settings_speaker_agc_key" android:entryValues="@array/sound_settings_agc_values"/>
+        <ListPreference android:entries="@array/sound_settings_agc_entries" android:title="RX Automatic Gain Control" android:key="sound_settings_speaker_rxagc_key" android:entryValues="@array/sound_settings_agc_values"/>
+        <ListPreference android:entries="@array/sound_settings_ns_entries" android:title="Noise Suppression" android:key="sound_settings_speaker_ns_key" android:entryValues="@array/sound_settings_ns_values"/>
+        <ListPreference android:entries="@array/sound_settings_ns_entries" android:title="RX Noise Suppression" android:key="sound_settings_speaker_rxns_key" android:entryValues="@array/sound_settings_ns_values"/>
+        <ListPreference android:entries="@array/sound_settings_vad_entries" android:title="Voice Activity Detection" android:key="sound_settings_speaker_vad_key" android:entryValues="@array/sound_settings_vad_values"/>
+    </PreferenceScreen>
+    <ListPreference android:title="Voice Codec" android:key="sound_settings_codec_key"/>
+    <ListPreference android:entries="@array/sound_settings_htc_hwaec_entries" android:title="HTC Hardware AEC control" android:key="sound_settings_htc_hwaec" android:defaultValue="0" android:entryValues="@array/sound_settings_htc_hwaec_values"/>
+    <ListPreference android:entries="@array/sound_settings_video_entries" android:title="Experimental video support" android:key="sound_settings_video" android:defaultValue="1" android:entryValues="@array/sound_settings_video_values"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="sync_contacts.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.viber.voip.account" android:contentAuthority="com.android.contacts" android:userVisible="true" android:supportsUploading="false" android:isAlwaysSyncable="true"/>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.viber.voip.account" android:contentAuthority="com.android.contacts" android:userVisible="true" android:supportsUploading="false"/>
+    </File>
+    <File file_name="usage_statistics.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Viber Voice Network Statistic" android:key="data_statistic">
+        <android.preference.Preference android:title="3G" android:key="3g_data"/>
+        <android.preference.Preference android:title="WiFi" android:key="wifi_data"/>
+        <android.preference.Preference android:enabled="false" android:widgetLayout="@layout/statistic_warning_msg"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Messages">
+        <android.preference.Preference android:title="Sent" android:key="msg_sent"/>
+        <android.preference.Preference android:title="Received" android:key="msg_received"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="user_data_preference.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.preference.Preference android:title="Display Name on Viber:" android:key="name" android:summary="Unknown"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="_ics_contacts.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_search" android:id="@id/menu_search" android:orderInCategory="2" android:title="Search" android:showAsAction="always|collapseActionView" android:iconifiedByDefault="true" android:actionViewClass="com.actionbarsherlock.widget.SearchView"/>
+    <item android:icon="@drawable/_ics_ic_ab_new_contact" android:id="@id/menu_new_contact" android:orderInCategory="1" android:title="New Contact" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_more" android:id="@id/menu_more_options" android:orderInCategory="3" android:title="More options" android:showAsAction="always"/>
+    <item android:icon="@drawable/ic_menu_details_delete" android:id="@id/menu_debug_options" android:title="Debug options">
+        <menu>
+            <item android:id="@id/menu_remove_contacts" android:title="Remove all"/>
+            <item android:id="@id/menu_remove_viber_contacts" android:title="Remove viber"/>
+            <item android:id="@id/menu_reset_first_sync" android:title="Reset sync"/>
+            <item android:id="@id/menu_show_sync_screen" android:title="Show sync screen"/>
+            <item android:id="@id/menu_show_sync_viber_faild_screen" android:title="Show sync viber faild screen"/>
+            <item android:id="@id/menu_show_no_contacts_screen" android:title="Show no contacts screen"/>
+            <item android:id="@id/menu_show_no_viber_contacts_screen" android:title="Show no viber contacts screen"/>
+            <item android:id="@id/menu_show_no_contacts_found_screen" android:title="Show no contacts found screen"/>
+            <item android:id="@id/menu_remove_screen" android:title="Close additional screens"/>
+            <item android:id="@id/menu_show_top_loading_view" android:title="Open/Close loading bar"/>
+            <item android:id="@id/menu_clear_images" android:title="Remove cached images"/>
+            <item android:id="@id/menu_clear_vo_counters" android:title="Clear vo filter counters"/>
+        </menu>
+    </item>
+</menu>
+    </File>
+    <File file_name="_ics_countries.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_search" android:id="@id/menu_search" android:title="Search" android:showAsAction="always|collapseActionView" android:iconifiedByDefault="true" android:actionViewClass="com.actionbarsherlock.widget.SearchView"/>
+</menu>
+    </File>
+    <File file_name="_ics_menu_contacts_compose.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_done" android:visible="false" android:title="Done" android:showAsAction="always|withText" android:actionLayout="@layout/abs__action_menu_item_layout"/>
+</menu>
+    </File>
+    <File file_name="_ics_menu_conversation_edit.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="_ics_menu_messages_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_cab_selectall" android:id="@id/menu_select_all" android:title="Select All" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/_ics_ic_cab_delete" android:id="@id/menu_delete" android:title="Delete" android:showAsAction="ifRoom"/>
+    <item android:id="@id/menu_conversation_system_info" android:visible="false" android:title="System Item (Debug only)" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="_ics_menu_view_location.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_share" android:id="@id/menu_share" android:title="Share" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="_ics_messages.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_search" android:id="@id/menu_search" android:orderInCategory="2" android:title="Search" android:showAsAction="ifRoom|collapseActionView" android:actionViewClass="com.actionbarsherlock.widget.SearchView"/>
+    <item android:icon="@drawable/_ics_ic_ab_compose" android:id="@id/menu_compose" android:orderInCategory="1" android:title="Compose" android:showAsAction="always"/>
+    <item android:icon="@drawable/ic_menu_more" android:id="@id/menu_more_options" android:orderInCategory="3" android:title="More options" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="_ics_phone.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_open_keypad" android:showAsAction="always" android:actionLayout="@layout/_ics_open_keypad_layout"/>
+    <item android:icon="@drawable/ic_menu_more" android:id="@id/menu_more_options" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="background_gallery_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_gallery" android:id="@id/menu_photo_gallery" android:title="Select photo from gallery" android:showAsAction="always"/>
+    <item android:icon="@drawable/_ics_ic_ab_camera" android:id="@id/menu_take_photo" android:title="Take Photo" android:showAsAction="always"/>
+    <item android:id="@id/menu_remove_background" android:title="Remove background" android:showAsAction="ifRoom|withText"/>
+    <item android:id="@id/menu_clear_backgrounds" android:title="(debug) Delete all backgrounds" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="call_details_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_new_contact" android:id="@id/menu_add" android:title="Add" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="call_outgoing_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_update" android:id="@id/menu_call_swap" android:title="Swap"/>
+    <item android:icon="@drawable/ic_menu_merge_calls" android:id="@id/menu_call_merge" android:title="Merge"/>
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/menu_call_add" android:title="Add"/>
+    <item android:icon="@drawable/ic_menu_end_call" android:id="@id/menu_call_end" android:title="End"/>
+    <item android:icon="@drawable/button_onoff_indicator_off" android:id="@id/menu_call_hold" android:title="Hold"/>
+    <item android:icon="@drawable/button_onoff_indicator_off" android:id="@id/menu_call_mute" android:title="Mute"/>
+    <item android:icon="@drawable/button_onoff_indicator_off" android:id="@id/menu_call_speaker" android:title="Speaker"/>
+    <item android:icon="@drawable/button_onoff_indicator_off" android:id="@id/menu_call_bluetooth" android:title="Bluetooth"/>
+</menu>
+    </File>
+    <File file_name="contact_details_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_favorite_not" android:id="@id/menu_favorite" android:title="Add to Favorite" android:showAsAction="always"/>
+    <item android:icon="@drawable/_ics_ic_ab_edit" android:id="@id/menu_contact_edit" android:title="Edit" android:alphabeticShortcut="e" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/_ics_ic_ab_new_contact" android:id="@id/menu_add" android:title="Add" android:showAsAction="always"/>
+    <item android:icon="@drawable/ic_menu_details_delete" android:id="@id/menu_contact_delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="contacts_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_contact_edit" android:title="Edit"/>
+    <item android:id="@id/menu_contact_delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="conversation_options_change_bg.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/group_conversation_bg">
+        <item android:id="@id/menu_options_photo" android:title="Take Photo"/>
+        <item android:id="@id/menu_options_load_photo" android:title="Select photo from gallery"/>
+        <item android:id="@id/menu_options_remove" android:title="Remove"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="default_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/actionbar_info" android:orderInCategory="10" android:showAsAction="always"/>
+    <item android:id="@id/actionbar_settings" android:orderInCategory="20" android:title="Settings" android:showAsAction="ifRoom"/>
+    <item android:id="@id/actionbar_close" android:orderInCategory="4" android:title="Back to Chat" android:showAsAction="ifRoom"/>
+    <item android:id="@id/actionbar_shop_settings" android:orderInCategory="8" android:title="Settings" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="doodle_image_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/take_pic" android:title="Take photo"/>
+    <item android:id="@id/select_pic" android:title="Photo gallery"/>
+    <item android:id="@id/remove_pic" android:title="Remove current"/>
+</menu>
+    </File>
+    <File file_name="link_message_option.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_message_call" android:title="Call"/>
+    <item android:id="@id/menu_message_send" android:title="Message"/>
+    <item android:id="@id/menu_message_add" android:title="Add to contacts"/>
+</menu>
+    </File>
+    <File file_name="map_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_map_open_map" android:title="Open in maps"/>
+    <item android:id="@id/menu_map_send_mail" android:title="Send by email"/>
+    <item android:id="@id/menu_map_forward" android:title="Forward via Viber"/>
+</menu>
+    </File>
+    <File file_name="market_activity_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_conversation_info" android:id="@id/menu_settings" android:title="Settings" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="media_send_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_send" android:title="Send" android:showAsAction="always|withText" android:actionLayout="@layout/abs__action_menu_item_layout"/>
+</menu>
+    </File>
+    <File file_name="media_view_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_facebook" android:id="@id/menu_facebook" android:title="Share on Facebook" android:showAsAction="always"/>
+    <item android:icon="@drawable/_ics_ic_ab_share" android:id="@id/menu_social" android:showAsAction="always">
+        <menu>
+            <item android:id="@id/menu_view_image_mail" android:title="Send by email"/>
+            <item android:id="@id/menu_share_on_twitter" android:title="Share on Twitter"/>
+            <item android:id="@id/menu_view_image_forward" android:title="Forward via Viber"/>
+        </menu>
+    </item>
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/menu_save_to_gallery" android:visible="false" android:title="Save to Gallery" android:showAsAction="ifRoom"/>
+    <item android:id="@id/delete_menu" android:visible="false" android:title="Delete"/>
+    <item android:id="@id/menu_set_lock_screen" android:visible="false" android:title="Lock Screen"/>
+    <item android:id="@id/menu_set_wallpaper_screen" android:visible="false" android:title="Home Screen"/>
+    <item android:id="@id/menu_view_image_background" android:visible="false" android:title="Use as Background"/>
+    <item android:id="@id/menu_doodle" android:visible="false" android:title="Doodle on this photo"/>
+</menu>
+    </File>
+    <File file_name="menu_home.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/help_android" android:id="@id/zoobe_action_info" android:title="Info" android:showAsAction="always"/>
+    <item android:icon="@drawable/viber_settings_icon" android:id="@id/zoobe_action_settings" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@drawable/z_gen_ic_close_states" android:id="@id/zoobe_action_close" android:title="Back to Chat" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="menu_shop.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/viber_settings_icon" android:id="@id/zoobe_action_settings" android:title="Settings" android:showAsAction="always"/>
+</menu>
+    </File>
+    <File file_name="message_options_context_lite.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_options_photo" android:title="Take Photo"/>
+    <item android:id="@id/menu_options_load_photo" android:title="Choose from Library"/>
+    <item android:id="@id/menu_options_send_location" android:title="Send Location"/>
+</menu>
+    </File>
+    <File file_name="messages_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_message_copy" android:title="Copy"/>
+    <item android:id="@id/menu_message_view" android:title="View"/>
+    <item android:id="@id/menu_message_delete" android:title="Delete"/>
+    <item android:id="@id/menu_message_forward" android:title="Forward via Viber"/>
+    <item android:id="@id/menu_view_image_facebook" android:title="Share on Facebook"/>
+    <item android:id="@id/menu_share_on_twitter" android:title="Share on Twitter"/>
+    <item android:id="@id/menu_get_sticker" android:title="Get it"/>
+    <item android:id="@id/menu_system_info" android:title="System Info"/>
+</menu>
+    </File>
+    <File file_name="msg_conversation_options.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_ab_viber_call" android:id="@id/menu_viber_call" android:title="Free Call" android:showAsAction="always"/>
+    <item android:icon="@drawable/_ics_ic_ab_conversation_info" android:id="@id/menu_conversation_info" android:title="Info" android:showAsAction="always"/>
+    <item android:icon="@drawable/_ics_ic_ab_new_contact" android:id="@id/menu_add" android:visible="false" android:title="Add to contacts"/>
+    <item android:icon="@drawable/ic_menu_edit" android:id="@id/menu_edit" android:visible="false" android:title="Edit Messages"/>
+    <item android:icon="@drawable/ic_menu_details_delete" android:id="@id/menu_delete" android:visible="false" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="recent_call_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/_ics_ic_cab_selectall" android:id="@id/menu_select_all" android:title="Select All" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/_ics_ic_cab_delete" android:id="@id/menu_delete" android:title="Delete" android:showAsAction="ifRoom"/>
+    <item android:id="@id/menu_recent_system_info" android:visible="false" android:title="System Info" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="set_wallpaper_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_set_lock_screen" android:title="Lock Screen"/>
+    <item android:id="@id/menu_set_wallpaper_screen" android:title="Home Screen"/>
+    <item android:id="@id/menu_set_both_screen" android:title="Set Both"/>
+</menu>
+    </File>
+    <File file_name="testing_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/z_gen_ic_info_enabled" android:id="@id/actionbar_info" android:orderInCategory="10" android:title="Info" android:showAsAction="always"/>
+    <item android:id="@id/actionbar_settings" android:orderInCategory="20" android:title="Settings" android:showAsAction="ifRoom"/>
+    <item android:id="@id/actionbar_shop" android:orderInCategory="30" android:title="Shop" android:showAsAction="ifRoom"/>
+    <item android:id="@id/actionbar_close" android:orderInCategory="4" android:title="Back to Chat" android:showAsAction="ifRoom"/>
+    <item android:id="@id/actionbar_shop_settings" android:orderInCategory="8" android:title="Settings" android:showAsAction="ifRoom"/>
+    <item android:id="@id/actionbar_test_forceclose" android:orderInCategory="99" android:title="Force close" android:showAsAction="ifRoom"/> /&gt;
+<item android:id="@id/actionbar_test_audiointerrupt" android:orderInCategory="99" android:title="Audio Interrupt" android:showAsAction="ifRoom"/> /&gt;
+<item android:id="@id/actionbar_test_crash" android:orderInCategory="99" android:title="Simulate crash" android:showAsAction="ifRoom"/> /&gt;
+<item android:id="@id/actionbar_test_videocreate" android:orderInCategory="99" android:title="Simulate video created" android:showAsAction="ifRoom"/> /&gt;
+</menu>
+    </File>
+    <File file_name="user_details_image.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/user_take_pic" android:title="Take photo"/>
+    <item android:id="@id/user_select_pic" android:title="Choose photo from gallery"/>
+    <item android:id="@id/user_remove_pic" android:title="Remove photo"/>
+</menu>
+    </File>
+  </Directory>
 </App>

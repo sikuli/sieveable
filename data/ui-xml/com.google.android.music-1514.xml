@@ -2421,4 +2421,78 @@
 </LinearLayout></RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="music_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" android:title="Music settings" android:key="stream_settings">
+    <PreferenceCategory android:title="GENERAL" android:key="settings_catergory_general_key">
+        <PreferenceScreen android:title="Google account" android:key="account_settings_key" android:summary="Touch to choose account"/>
+        <PreferenceScreen android:title="Refresh" android:key="refresh_key" android:summary="Refresh music from Google Play"/>
+        <PreferenceScreen android:key="account_type_settings_key"/>
+        <PreferenceScreen android:key="manage_nautilus_settings_key"/>
+        <PreferenceScreen android:title="My devices" android:key="my_devices_setting_key">
+            <intent android:action="com.google.android.music.DeviceManagement"/>
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Equalizer" android:key="equalizer_settings_key" android:summary="Fine tune your audio settings"/>
+        <CheckBoxPreference android:persistent="false" android:title="Block explicit songs in radio" android:key="content_filter_key" android:disableDependentsState="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="DOWNLOADING" android:key="settings_catergory_download_key">
+        <CheckBoxPreference android:persistent="false" android:title="Cache during playback" android:key="cache_streamed_key" android:summary="Temporarily store music while streaming"/>
+        <CheckBoxPreference android:persistent="false" android:title="Automatically cache" android:key="autocache_key" android:summary="Automatically cache music while charging and on Wi-Fi" android:dependency="cache_streamed_key"/>
+        <PreferenceScreen android:title="Clear Cache" android:key="clear_cache_settings_key" android:summary="Clear stored music"/>
+        <CheckBoxPreference android:persistent="false" android:title="Download via Wi-Fi only" android:key="offlinedl_on_wifi_key" android:summary="&quot;To reduce carrier data charges, don't download over mobile networks&quot;" android:disableDependentsState="true"/>
+        <PreferenceScreen android:title="View download queue" android:key="download_queue_key" android:summary="List of music currently downloading"/>
+        <PreferenceScreen android:title="Storage location" android:key="download_location_key" android:summary="Set where to store downloaded and cached music."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="STREAMING" android:key="settings_catergory_streaming_key">
+        <CheckBoxPreference android:persistent="false" android:title="Stream via Wi-Fi only" android:key="stream_only_on_wifi_key" android:summary="&quot;To reduce carrier data charges, don't stream over mobile networks&quot;" android:disableDependentsState="true"/>
+        <PreferenceScreen android:persistent="false" android:title="Mobile networks stream quality" android:key="stream_quality_key" android:summary="Normal" android:dependency="stream_only_on_wifi_key"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="DEVELOPER" android:key="settings_catergory_developer_key">
+        <CheckBoxPreference android:persistent="false" android:title="Use debug logs" android:key="debug_logs_key" android:summary="Use debug logs" android:disableDependentsState="true"/>
+        <PreferenceScreen android:title="Open source licenses" android:key="licenses">
+            <intent android:action="com.google.android.music.LICENSES"/>
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Music version" android:key="music_version_key" android:summary="Unknown version"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Search" android:searchSuggestAuthority="com.google.android.music.MusicContent" android:searchSuggestPath="search" android:searchSuggestIntentAction="android.intent.action.SEARCH_RESULT" android:searchSuggestThreshold="2" android:includeInGlobalSearch="true" android:searchSettingsDescription="Artists, albums, and tracks"/>
+    </File>
+    <File file_name="service_info.xml">
+      <container version="1.0"/>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.music.MusicContent"/>
+    </File>
+    <File file_name="widget_nowplaying_large.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="250.0dip" android:minHeight="250.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_nowplaying_large" android:previewImage="@drawable/widget_preview_music"/>
+    </File>
+    <File file_name="widget_nowplaying_small.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="250.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_nowplaying_small" android:previewImage="@drawable/widget_preview_music"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="download_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/manage_download" android:orderInCategory="1" android:title="PAUSE DOWNLOADS" app:showAsAction="always|withText"/>
+</menu>
+    </File>
+    <File file_name="explore_genre_radio.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_radio_start_white" android:id="@id/genre_radio" android:orderInCategory="1" android:title="Start genre radio" app:showAsAction="always|withText"/>
+</menu>
+    </File>
+    <File file_name="home_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_search_white" android:id="@id/search" android:orderInCategory="2" android:title="Search" app:showAsAction="always"/>
+    <item android:id="@id/media_route_picker" app:showAsAction="always" app:actionProviderClass="com.google.android.music.ui.mrp.MusicMediaRouteActionProvider"/>
+</menu>
+    </File>
+    <File file_name="radio_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_radio_create" android:id="@id/new_station" android:orderInCategory="1" android:title="STATION" app:showAsAction="always|withText"/>
+</menu>
+    </File>
+  </Directory>
 </App>

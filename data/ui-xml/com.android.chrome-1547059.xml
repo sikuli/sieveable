@@ -1664,4 +1664,284 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="about_chrome_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="Application version" android:key="application_version"/>
+    <PreferenceScreen android:title="OS" android:key="os_version"/>
+    <PreferenceScreen android:title="WebKit version" android:key="webkit_version"/>
+    <PreferenceScreen android:title="JavaScript version" android:key="javascript_version"/>
+    <PreferenceScreen android:title="Executable path" android:key="executable_path"/>
+    <PreferenceScreen android:title="Profile path" android:key="profile_path"/>
+    <PreferenceScreen android:title="Legal information" android:key="legal_information" android:summary="Copyright 2006-2013 Google Inc. All Rights Reserved." android:fragment="com.google.android.apps.chrome.preferences.LegalInformationPreferences"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="accessibility_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.chrome.preferences.FontSizePreview android:title="Preview"/>
+    <com.google.android.apps.chrome.preferences.SeekBarPreference android:title="Text scaling" android:key="text_scale" android:defaultValue="1.0" app:min="0.5" app:max="2.0" app:step="0.05"/>
+    <com.google.android.apps.chrome.preferences.SeekBarLinkedCheckBoxPreference android:title="Force enable zoom" android:key="force_enable_zoom" android:summary="&quot;Override a website's request to prevent zooming in&quot;" android:defaultValue="false"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="autofill_settings_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:enabled="true" android:title="Autofill profiles" android:key="autofill_profiles"/>
+    <PreferenceScreen android:title="Add profile" android:key="autofill_create_profile" android:fragment="com.google.android.apps.chrome.autofill.AutoFillProfileEditor"/>
+    <PreferenceCategory android:enabled="true" android:title="Autofill credit cards" android:key="autofill_credit_cards"/>
+    <PreferenceScreen android:title="Add credit card" android:key="autofill_create_credit_card" android:fragment="com.google.android.apps.chrome.autofill.AutoFillCreditCardEditor"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="bandwidth_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.chrome.preferences.PrefetchBandwidthPreference android:title="Preload webpages" android:key="prefetch_bandwidth" android:defaultValue="prefetch_on_wifi"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Preload webpages" android:key="prefetch_bandwidth_no_cellular" android:defaultValue="true"/>
+    <PreferenceScreen android:id="@id/reduce_data_usage_settings" android:title="Reduce data usage" android:key="reduce_data_usage_settings" android:fragment="com.google.android.apps.chrome.preferences.BandwidthReductionPreferences"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="bandwidth_reduction_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:key="bandwidth_reduction_preference_screen">
+    <com.google.android.apps.chrome.preferences.BandwidthStatisticsPreferenceCategory android:id="@id/data_usage_statistics_category" android:layout="@layout/data_reduction_statistics_layout" android:title="Data savings" android:key="data_usage_statistics_category"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="bandwidth_reduction_preferences_off.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:key="bandwidth_reduction_preference_screen">
+    <com.google.android.apps.chrome.preferences.TextMessagePreferenceCategory android:id="@id/reduce_data_usage_category" android:layout="@layout/preference_text_message" android:title="When this feature is turned on, Chrome will use Google servers to compress pages you visit before downloading them. SSL and Incognito pages will not be included." android:key="reduce_data_usage_category"/>
+    <com.google.android.apps.chrome.preferences.TextMessagePreferenceCategory android:id="@id/safe_browsing_subclause_category" android:layout="@layout/preference_text_message" android:title="&quot;Chrome's Safe Browsing system will also be used to detect malicious pages and protect you from phishing, malware, and harmful downloads.&quot;" android:key="safe_browsing_subclause_category"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="basics_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:id="@id/search_engine" android:title="Search engine" android:key="search_engine" android:fragment="com.google.android.apps.chrome.preferences.SearchEnginePreference"/>
+    <PreferenceScreen android:id="@id/autofill_settings" android:title="Autofill forms" android:key="autofill_settings" android:fragment="com.google.android.apps.chrome.preferences.AutofillPreferences"/>
+    <PreferenceScreen android:id="@id/manage_saved_passwords" android:title="Save passwords" android:key="manage_saved_passwords" android:fragment="com.google.android.apps.chrome.preferences.ManageSavedPasswordsPreferences"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="bookmarkthumbnailwidget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="180.0dip" android:minHeight="110.0dip" android:updatePeriodMillis="86400000" android:initialLayout="@layout/bookmarkthumbnailwidget" android:previewImage="@drawable/bookmark_widget_preview" android:resizeMode="horizontal|vertical" android:minResizeWidth="110.0dip" android:minResizeHeight="40.0dip"/>
+    </File>
+    <File file_name="content_settings_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Accept cookies" android:key="accept_cookies" android:summary="Allow sites to save and read cookie data" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Enable location" android:key="enable_location" android:summary="Allow sites to request access to your location" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Enable JavaScript" android:key="enable_javascript" android:summary="Allow sites to run JavaScript" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Block pop-ups" android:key="block_popups" android:summary="Block pop-ups from all sites" android:defaultValue="false"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Voice and Video calling" android:key="voice_and_video_calling" android:summary="Allow sites to access microphone and camera" android:defaultValue="true"/>
+    <PreferenceScreen android:title="Google Translate" android:key="translate" android:fragment="com.google.android.apps.chrome.preferences.TranslatePreferences"/>
+    <PreferenceScreen android:title="Google location settings" android:key="google_location_settings" android:summary="Allow sites to request access to your location"/>
+    <PreferenceScreen android:title="Website settings" android:key="website_settings" android:summary="Advanced settings for individual websites" android:fragment="com.google.android.apps.chrome.preferences.WebsiteSettingsPreferences"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="dev_tools_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Enable Tilt Scrolling" android:key="enable_tilt_scroll" android:summary="&quot;Allow scrolling of the stack view by flinging the device. Changes won't take effect until Chrome is restarted.&quot;" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Enable USB Web debugging" android:key="enable_remote_debugging" android:summary="Debug web pages from Chrome Desktop via USB" android:defaultValue="false"/>
+    <com.google.android.apps.chrome.preferences.HyperlinkPreference android:title="Learn more about using USB Web debugging" android:key="learn_remote_debugging" app:url="https://developers.google.com/chrome/mobile/docs/debugging"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="do_not_track_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/do_not_track"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="language_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="legal_information_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.chrome.preferences.HyperlinkPreference android:title="Open source licenses" android:key="open_source_license" app:url="chrome://credits"/>
+    <com.google.android.apps.chrome.preferences.HyperlinkPreference android:title="Google Chrome terms of service" android:key="terms_of_service" app:url="chrome://terms"/>
+    <com.google.android.apps.chrome.preferences.HyperlinkPreference android:title="Privacy policy" android:key="privacy_policy" app:url="http://www.google.com/policies/privacy"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="popup_exceptions_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="Add Popup Exception" android:key="add_popup_exceptions" android:fragment="com.google.android.apps.chrome.preferences.ManagePopupExceptions"/>
+    <PreferenceCategory android:title="Pop-up Exceptions" android:key="popup_exceptions"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preference_headers_phone.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="Basics"/>
+    <header android:id="@id/search_engine" android:title="Search engine" android:key="search_engine" android:fragment="com.google.android.apps.chrome.preferences.SearchEnginePreference"/>
+    <header android:id="@id/autofill_settings" android:title="Autofill forms" android:key="autofill_settings" android:fragment="com.google.android.apps.chrome.preferences.AutofillPreferences"/>
+    <header android:id="@id/manage_saved_passwords" android:title="Save passwords" android:key="manage_saved_passwords" android:fragment="com.google.android.apps.chrome.preferences.ManageSavedPasswordsPreferences"/>
+    <header android:title="Advanced"/>
+    <header android:title="Privacy" android:key="privacy" android:fragment="com.google.android.apps.chrome.preferences.PrivacyPreferences"/>
+    <header android:id="@id/accessibility" android:title="Accessibility" android:key="accessibility" android:fragment="com.google.android.apps.chrome.preferences.AccessibilityPreferences"/>
+    <header android:title="Content settings" android:key="content_settings" android:fragment="com.google.android.apps.chrome.preferences.ContentSettingsPreferences"/>
+    <header android:id="@id/bandwidth" android:title="Bandwidth management" android:key="bandwidth" android:fragment="com.google.android.apps.chrome.preferences.BandwidthPreferences"/>
+    <header android:title="Developer tools" android:key="dev_tools" android:fragment="com.google.android.apps.chrome.preferences.DevToolsPreferences"/>
+</preference-headers>
+    </File>
+    <File file_name="preference_headers_tablet.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="Basics" android:key="basics" android:fragment="com.google.android.apps.chrome.preferences.BasicsPreferences"/>
+    <header android:title="Advanced" android:key="under_the_hood" android:fragment="com.google.android.apps.chrome.preferences.UnderTheHoodPreferences"/>
+</preference-headers>
+    </File>
+    <File file_name="privacy_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Navigation error suggestions" android:key="navigation_error" android:summary="Show suggestions for alternatives when a web address does not resolve or a connection cannot be made" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Search and URL suggestions" android:key="search_suggestions" android:summary="Use a prediction service to show related queries and popular websites as you type in the address bar" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Network action predictions" android:key="network_predictions" android:summary="Improve page load performance" android:defaultValue="true"/>
+    <com.google.android.apps.chrome.preferences.CrashDumpUploadPreference android:entries="@array/crash_upload_entries" android:title="Usage and crash reports" android:key="crash_dump_upload" android:defaultValue="crash_dump_never_upload" android:entryValues="@array/crash_upload_values"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:title="Usage and crash reports" android:key="crash_dump_upload_no_cellular" android:defaultValue="false"/>
+    <PreferenceScreen android:id="@id/do_not_track" android:title="&quot;'Do Not Track'&quot;" android:key="do_not_track" android:fragment="com.google.android.apps.chrome.preferences.DoNotTrackPreference"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="search_engine_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Chrome" android:searchSuggestAuthority="com.android.chrome.browser" android:searchSuggestSelection="url LIKE ?" android:searchSuggestIntentAction="android.intent.action.VIEW" android:includeInGlobalSearch="true" android:searchSettingsDescription="Bookmarks and web history"/>
+    </File>
+    <File file_name="sign_in_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Services" android:key="services">
+        <Preference android:title="Sync" android:key="sync"/>
+        <CheckBoxPreference android:title="Chrome to Mobile" android:key="send_to_device"/>
+        <CheckBoxPreference android:title="Auto sign-in" android:key="auto_login"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="single_website_settings_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="site_title"/>
+    <com.google.android.apps.chrome.preferences.ClearWebsiteStorage android:title="Clear stored data" android:key="clear_data" android:dialogMessage="All data stored by this website will be deleted" android:dialogIcon="@android:drawable/ic_dialog_alert" android:positiveButtonText="Clear all" android:negativeButtonText="Cancel"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:checked="false" android:title="Location access" android:key="location_access" android:summaryOn="This site can access your location" android:summaryOff="&quot;This site can't access your location&quot;"/>
+    <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:checked="false" android:title="Allow pop-ups" android:key="popup_permission" android:summaryOn="This site allows popups" android:summaryOff="This site blocks popups"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="sync_customization_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Data types" android:key="sync_data_types">
+        <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="Sync everything" android:key="sync_everything"/>
+        <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="Autofill" android:key="sync_autofill"/>
+        <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="Bookmarks" android:key="sync_bookmarks"/>
+        <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="History" android:key="sync_omnibox"/>
+        <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="Passwords" android:key="sync_passwords"/>
+        <com.google.android.apps.chrome.preferences.ChromeBaseCheckBoxPreference android:persistent="false" android:title="Open tabs" android:key="sync_recent_tabs"/>
+    </PreferenceCategory>
+    <Preference android:title="Encryption" android:key="encryption"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.android.chrome"/>
+    </File>
+    <File file_name="translate_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/translate_pref_message" android:title="Category Title"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="under_the_hood_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="Privacy" android:key="privacy" android:fragment="com.google.android.apps.chrome.preferences.PrivacyPreferences"/>
+    <PreferenceScreen android:title="Accessibility" android:key="accessibility" android:fragment="com.google.android.apps.chrome.preferences.AccessibilityPreferences"/>
+    <PreferenceScreen android:title="Content settings" android:key="content_settings" android:fragment="com.google.android.apps.chrome.preferences.ContentSettingsPreferences"/>
+    <PreferenceScreen android:id="@id/bandwidth" android:title="Bandwidth management" android:key="bandwidth" android:fragment="com.google.android.apps.chrome.preferences.BandwidthPreferences"/>
+    <PreferenceScreen android:title="Developer tools" android:key="dev_tools" android:fragment="com.google.android.apps.chrome.preferences.DevToolsPreferences"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="website_settings_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Website settings"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="contextmenu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/ANCHOR_MENU">
+        <item android:id="@id/open_in_new_tab_context_menu_id" android:title="Open in new tab"/>
+        <item android:id="@id/open_in_incognito_tab_context_menu_id" android:title="Open in incognito tab"/>
+        <item android:id="@id/copy_link_address_context_menu_id" android:title="Copy link address"/>
+        <item android:id="@id/copy_link_text_context_menu_id" android:title="Copy link text"/>
+        <item android:id="@id/save_link_as_context_menu_id" android:title="Save link"/>
+    </group>
+    <group android:id="@id/IMAGE_MENU">
+        <item android:id="@id/save_image_context_menu_id" android:title="Save image"/>
+        <item android:id="@id/open_image_context_menu_id" android:title="Open image"/>
+        <item android:id="@id/open_image_in_new_tab_context_menu_id" android:title="Open image in new tab"/>
+        <item android:id="@id/open_original_image_in_new_tab_context_menu_id" android:title="Open original image in new tab"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="mainmenu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/PAGE_MENU" android:visible="false">
+        <item android:id="@id/new_tab_menu_id" android:title="New tab"/>
+        <item android:id="@id/new_incognito_tab_menu_id" android:title="New incognito tab"/>
+        <item android:id="@id/all_bookmarks_menu_id" android:title="Bookmarks"/>
+        <item android:id="@id/open_tabs_menu_id" android:title="Other devices"/>
+        <item android:id="@id/open_history_menu_id" android:title="History"/>
+        <item android:id="@id/share_page_id" android:title="Share..."/>
+        <item android:id="@id/find_in_page_id" android:title="Find in page..."/>
+        <item android:icon="?android:listChoiceIndicatorMultiple" android:id="@id/request_desktop_site_id" android:title="Request desktop site" android:checkable="true"/>
+        <item android:id="@id/preferences_id" android:title="Settings"/>
+        <item android:id="@id/help_id" android:title="Help"/>
+    </group>
+    <group android:id="@id/PHONE_ICON_MENU_ITEMS" android:visible="false">
+        <item android:id="@id/back_menu_id"/>
+        <item android:id="@id/forward_menu_id"/>
+        <item android:id="@id/bookmark_this_page_id"/>
+    </group>
+    <group android:id="@id/PHONE_OVERVIEW_MODE_MENU" android:visible="false">
+        <item android:id="@id/new_tab_menu_id" android:title="New tab"/>
+        <item android:id="@id/new_incognito_tab_menu_id" android:title="New incognito tab"/>
+        <item android:id="@id/close_all_tabs_menu_id" android:title="Close all tabs"/>
+        <item android:id="@id/close_all_incognito_tabs_menu_id" android:title="Close incognito tabs"/>
+        <item android:id="@id/preferences_id" android:title="Settings"/>
+    </group>
+    <group android:id="@id/TABLET_EMPTY_MODE_MENU" android:visible="false">
+        <item android:id="@id/new_tab_menu_id" android:title="New tab"/>
+        <item android:id="@id/new_incognito_tab_menu_id" android:title="New incognito tab"/>
+        <item android:id="@id/preferences_id" android:title="Settings"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="settingsmenu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/DEFAULT_MENU" android:visible="false">
+        <item android:id="@id/menu_id_help_default"/>
+    </group>
+    <group android:id="@id/TOP_LEVEL_MENU" android:visible="false">
+        <item android:id="@id/menu_id_sign_in_to_chrome"/>
+        <item android:id="@id/menu_id_send_feedback"/>
+        <item android:id="@id/menu_id_help_settings"/>
+        <item android:id="@id/menu_id_about_chrome"/>
+        <item android:id="@id/menu_id_import_bookmarks"/>
+    </group>
+    <group android:id="@id/TRANSLATE_MENU" android:visible="false">
+        <item android:id="@id/menu_id_clear_translate_data"/>
+        <item android:id="@id/menu_id_translate_help"/>
+    </group>
+    <group android:id="@id/PRIVACY_MENU" android:visible="false">
+        <item android:id="@id/menu_id_clear_browsing_data"/>
+        <item android:id="@id/menu_id_help_privacy"/>
+    </group>
+    <group android:id="@id/SYNC_ACCOUNT_MENU" android:visible="false">
+        <item android:id="@id/menu_id_disconnect_sync_account"/>
+        <item android:id="@id/menu_id_help_sync_account"/>
+    </group>
+    <group android:id="@id/SYNC_MENU" android:visible="false">
+        <item android:id="@id/menu_id_reset_sync"/>
+    </group>
+    <group android:id="@id/DEVELOPERS_TOOLS_MENU" android:visible="false">
+        <item android:id="@id/menu_id_help_developers_tools"/>
+    </group>
+    <group android:id="@id/DO_NOT_TRACK_MENU" android:visible="false">
+        <item android:id="@id/menu_id_do_not_track_learn"/>
+    </group>
+    <group android:id="@id/BANDWIDTH_REDUCTION_MENU" android:visible="false">
+        <item android:id="@id/menu_id_reduce_data_usage_learn"/>
+    </group>
+    <group android:id="@id/SAFE_BROWSING_MENU" android:visible="false">
+        <item android:id="@id/menu_id_safe_browsing_learn"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="textselectionmenu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/copy_url" android:title="Copy url" android:showAsAction="always|withText"/>
+</menu>
+    </File>
+  </Directory>
 </App>

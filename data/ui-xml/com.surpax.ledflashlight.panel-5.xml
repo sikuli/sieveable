@@ -82,4 +82,19 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="panel_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="40.0dip" android:minHeight="40.0dip" android:updatePeriodMillis="864000" android:initialLayout="@layout/panel_widget_layout" android:previewImage="@drawable/smallwidget_bg1"/>
+    </File>
+    <File file_name="panel_provider_large.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="250.0dip" android:minHeight="250.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/panel_widget_layout_lock" android:previewImage="@drawable/smallwidget_bg1"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="options_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/setting" android:title="Settings"/>
+</menu>
+    </File>
+  </Directory>
 </App>

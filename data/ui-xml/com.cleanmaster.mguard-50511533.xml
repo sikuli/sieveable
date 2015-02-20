@@ -7729,4 +7729,46 @@
       <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="74.0dip" android:minHeight="80.0dip"/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="act_type.xml">
+      <act_type>
+    <activity name="com.keniu.security.main.MainActivity">1</activity>
+    <activity name="com.keniu.security.main.AddDesktopShortcutActivity">2</activity>
+    <activity name="com.cleanmaster.processcleaner.ProcessCleanerActivity">3</activity>
+    <activity name="com.cleanmaster.ui.process.ProcessManagerActivity">4</activity>
+    <activity name="com.cleanmaster.ui.app.NewAppUninstallActivity">5</activity>
+    <activity name="com.cleanmaster.functionactivity.PrivacyCleanActivity">7</activity>
+    <activity name="com.cleanmaster.functionactivity.MonitorUninstallActivity">8</activity>
+    <activity name="com.cleanmaster.functionactivity.AppManagerActivity">11</activity>
+    <activity name="com.cleanmaster.functionactivity.AppAPKActivity">12</activity>
+    <activity name="com.cleanmaster.commonactivity.SmsItemManagerActivity">13</activity>
+    <activity name="com.cleanmaster.commonactivity.SmsGroupManagerActivity">14</activity>
+    <activity name="com.cleanmaster.commonactivity.SearchHistoryCleanerActivity">15</activity>
+    <activity name="com.cleanmaster.commonactivity.CallLogGroupManagerActivity">16</activity>
+    <activity name="com.cleanmaster.functionactivity.AppMoveActivity">17</activity>
+    <activity name="com.cleanmaster.functionactivity.AppSystemMoveActivity">17</activity>
+    <activity name="com.cleanmaster.functionactivity.JunkManagerActivity">18</activity>
+    <activity name="com.cleanmaster.settings.SettingsActivity">21</activity>
+    <activity name="com.cleanmaster.ui.app.market.MarketPicksActivity">22</activity>
+    <activity name="com.cleanmaster.security.scan.ui.SecurityScanActivity">23</activity>
+    <activity name="com.cleanmaster.security.scan.result.SecurityMainActivity">24</activity>
+    <service name="com.cleanmaster.service.PermanentService">1</service>
+</act_type>
+    </File>
+    <File file_name="gobackup_widget_black_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="50.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/gowidget_1_base_black" android:previewImage="@drawable/black_widget_preview"/>
+    </File>
+    <File file_name="gobackup_widget_white_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="50.0dip" android:updatePeriodMillis="900000" android:initialLayout="@layout/gowidget_1_base" android:previewImage="@drawable/white_widget_preview"/>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General Settings">
+        <EditTextPreference android:title="Home folder" android:key="pref_key_primary_folder" android:summary="The folder that appears when the app starts, and current value is %1$s" android:defaultValue="/mnt/sdcard"/>
+        <CheckBoxPreference android:title="Read root" android:key="pref_key_read_root" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Display real path" android:key="pref_key_show_real_path" android:summary="Show real path in navigation bar" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
 </App>

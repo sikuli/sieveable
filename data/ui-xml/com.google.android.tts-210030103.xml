@@ -23,4 +23,34 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="general_settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Auto-update voices" android:key="auto_update" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Use Wi-Fi only" android:key="auto_update_wifi" android:summary="Download voices data using only Wi-Fi. Conserves data usage." android:defaultValue="true"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_headers.xml">
+      <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header android:title="General Settings" android:fragment="com.google.android.tts.settings.GeneralSettingsFragment"/>
+</preference-headers>
+    </File>
+    <File file_name="tts_engine.xml">
+      <tts-engine xmlns:android="http://schemas.android.com/apk/res/android" android:settingsActivity="com.google.android.tts.settings.EngineSettings"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="installer_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:title="Options"/>
+    <item android:id="@id/action_licenses" android:title="Open Source licenses"/>
+</menu>
+    </File>
+    <File file_name="voice_pack_overflow.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_voice_pack_update" android:title="Update"/>
+    <item android:id="@id/action_voice_pack_uninstall" android:title="Uninstall"/>
+</menu>
+    </File>
+  </Directory>
 </App>

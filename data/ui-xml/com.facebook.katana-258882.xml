@@ -8211,4 +8211,144 @@
 </RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="appwidget_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="144.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_clear_view"/>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="Facebook" android:icon="@drawable/ic_facebook_selected" android:accountType="com.facebook.auth.login" android:smallIcon="@drawable/ic_fb_minitab_selected"/>
+    </File>
+    <File file_name="contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+    <Picture android:priority="5"/>
+    <ContactsDataKind android:icon="@drawable/icon_katana" android:mimeType="vnd.android.cursor.item/vnd.facebook.profile" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+    <ContactsDataKind android:icon="@drawable/launcher_messenger_icon_katana" android:mimeType="vnd.android.cursor.item/vnd.facebook.presence" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+</ContactsSource>
+    </File>
+    <File file_name="controlwidget_provider.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="10.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_control_view" android:previewImage="@drawable/control_widget_icon" android:resizeMode="vertical"/>
+    </File>
+    <File file_name="default_dock_shortcuts.xml">
+      <shortcuts xmlns:launchables="http://schemas.android.com/apk/res-auto">
+    <shortcut launchables:launchables_class_name="com.android.contacts.activities.DialtactsActivity" launchables:launchables_package_name="com.android.contacts" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_x="0" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.facebook.orca.auth.StartScreenActivity" launchables:launchables_package_name="com.facebook.orca" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_x="1" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.google.android.apps.chrome.Main" launchables:launchables_package_name="com.android.chrome" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_x="2" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.android.camera.CameraLauncher" launchables:launchables_package_name="com.android.gallery3d" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_x="3" launchables:launchables_y="0"/>
+</shortcuts>
+    </File>
+    <File file_name="default_shortcuts.xml">
+      <shortcuts xmlns:launchables="http://schemas.android.com/apk/res-auto">
+    <shortcut launchables:launchables_class_name="fb4a" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="0" launchables:launchables_y="0" launchables:launchables_is_internal="true"/>
+    <shortcut launchables:launchables_class_name="com.google.android.googlequicksearchbox.SearchActivity" launchables:launchables_package_name="com.google.android.googlequicksearchbox" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="1" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.google.android.maps.MapsActivity" launchables:launchables_package_name="com.google.android.apps.maps" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="2" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.android.vending.AssetBrowserActivity" launchables:launchables_package_name="com.android.vending" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="3" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.instagram.android.activity.MainTabActivity" launchables:launchables_package_name="com.instagram.android" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="0" launchables:launchables_y="1"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CALENDAR" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="1" launchables:launchables_y="1"/>
+    <shortcut launchables:launchables_class_name="com.android.gallery3d.app.Gallery" launchables:launchables_package_name="com.android.gallery3d" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="2" launchables:launchables_y="1"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_EMAIL" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="3" launchables:launchables_y="1"/>
+    <shortcut launchables:launchables_class_name="com.android.deskclock.DeskClock" launchables:launchables_package_name="com.android.deskclock" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="0" launchables:launchables_y="2"/>
+    <shortcut launchables:launchables_class_name="com.att.mobile.android.vvm.screen.WelcomeActivity" launchables:launchables_package_name="com.att.mobile.android.vvm" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="1" launchables:launchables_y="2"/>
+    <shortcut launchables:launchables_class_name="fb_home_settings" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="2" launchables:launchables_y="2" launchables:launchables_is_internal="true"/>
+    <shortcut launchables:launchables_class_name="com.android.settings.Settings" launchables:launchables_package_name="com.android.settings" launchables:launchables_container="-100" launchables:launchables_screen="1" launchables:launchables_x="3" launchables:launchables_y="2"/>
+</shortcuts>
+    </File>
+    <File file_name="import_fallback_dock_shortcuts.xml">
+      <shortcuts xmlns:launchables="http://schemas.android.com/apk/res-auto">
+    <shortcut launchables:launchables_intent_action="android.intent.action.VIEW" launchables:launchables_intent_extra_data="tel:" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_class_name="com.facebook.orca.auth.StartScreenActivity" launchables:launchables_package_name="com.facebook.orca" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_BROWSER" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_intent_action="android.media.action.IMAGE_CAPTURE" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_EMAIL" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_y="0"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MUSIC" launchables:launchables_container="-101" launchables:launchables_screen="-201" launchables:launchables_y="0"/>
+</shortcuts>
+    </File>
+    <File file_name="import_fallback_shortcuts.xml">
+      <shortcuts xmlns:launchables="http://schemas.android.com/apk/res-auto">
+    <shortcut launchables:launchables_intent_action="android.intent.action.VIEW" launchables:launchables_intent_extra_data="tel:" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MESSAGING" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_BROWSER" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_EMAIL" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CONTACTS" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CALENDAR" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MAPS" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.media.action.IMAGE_CAPTURE" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_GALLERY" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MARKET" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_MUSIC" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_class_name="fb4a" launchables:launchables_container="-100" launchables:launchables_is_internal="true"/>
+    <shortcut launchables:launchables_class_name="com.facebook.orca.auth.StartScreenActivity" launchables:launchables_package_name="com.facebook.orca" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_class_name="com.instagram.android.activity.MainTabActivity" launchables:launchables_package_name="com.instagram.android" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_class_name="com.google.android.googlequicksearchbox.SearchActivity" launchables:launchables_package_name="com.google.android.googlequicksearchbox" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_intent_action="android.intent.action.MAIN" launchables:launchables_intent_category="android.intent.category.APP_CALCULATOR" launchables:launchables_container="-100"/>
+    <shortcut launchables:launchables_class_name="com.android.settings.Settings" launchables:launchables_package_name="com.android.settings" launchables:launchables_container="-100"/>
+</shortcuts>
+    </File>
+    <File file_name="mms_config.xml">
+      <mms_config version="4">
+    <bool name="enabledMMS">true</bool>
+    <int name="maxMessageSize">614400</int>
+    <int name="maxImageHeight">1200</int>
+    <int name="maxImageWidth">1600</int>
+    <int name="defaultSMSMessagesPerThread">500</int>
+    <int name="defaultMMSMessagesPerThread">50</int>
+    <int name="minMessageCountPerThread">10</int>
+    <int name="maxMessageCountPerThread">5000</int>
+    <int name="recipientLimit">-1</int>
+    <int name="smsToMmsTextThreshold">4</int>
+    <bool name="enableMultipartSMS">true</bool>
+    <bool name="enableSlideDuration">true</bool>
+    <int name="maxMessageTextSize">-1</int>
+</mms_config>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.facebook.auth.login" android:contentAuthority="com.android.contacts" android:supportsUploading="false"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="message_view_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/orca_ic_menu_delete" android:id="@id/delete" android:orderInCategory="200" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="orca_chat_heads_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/open_full_view" android:orderInCategory="0" android:title="Open in Messenger"/>
+    <item android:id="@id/refresh" android:orderInCategory="1" android:title="Refresh"/>
+</menu>
+    </File>
+    <File file_name="page_identity_more_actions.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/page_identity_message_menu_item" android:title="Message"/>
+    <item android:id="@id/page_identity_follow_menu_item" android:title="Follow"/>
+    <item android:id="@id/page_identity_share_menu_item" android:title="Share"/>
+    <item android:id="@id/page_identity_copy_link_menu_item" android:title="Copy Link"/>
+    <item android:id="@id/page_identity_suggest_edit_menu_item" android:title="Suggest An Edit"/>
+    <item android:id="@id/page_identity_report_generic_menu_item" android:title="Report"/>
+    <item android:id="@id/page_identity_report_place_menu_item" android:title="Report">
+        <menu>
+            <item android:id="@id/page_identity_inappropriate_content_menu_item" android:title="Inappropriate Content"/>
+            <item android:id="@id/page_identity_not_public_menu_item" android:title="Not a Public Place"/>
+            <item android:id="@id/page_identity_closed_menu_item" android:title="Closed Permanently"/>
+            <item android:id="@id/page_identity_incorrect_info_menu_item" android:title="Incorrect Information"/>
+        </menu>
+    </item>
+</menu>
+    </File>
+    <File file_name="thread_list_fragment_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/send_message" android:orderInCategory="10"/>
+    <item android:id="@id/create_group" android:orderInCategory="10"/>
+    <item android:id="@id/broadcast" android:orderInCategory="10"/>
+    <item android:icon="@drawable/orca_ic_menu_refresh" android:id="@id/refresh" android:orderInCategory="200" android:title="Refresh"/>
+</menu>
+    </File>
+    <File file_name="thread_view_fragment_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/orca_ic_menu_refresh" android:id="@id/refresh" android:orderInCategory="200" android:title="Refresh"/>
+    <item android:icon="@drawable/orca_ic_menu_archive" android:id="@id/archive" android:orderInCategory="210" android:title="Archive"/>
+    <item android:icon="@drawable/orca_ic_menu_spam" android:id="@id/mark_as_spam" android:orderInCategory="220" android:title="Mark as spam"/>
+    <item android:icon="@drawable/orca_ic_menu_delete" android:id="@id/delete" android:orderInCategory="230" android:title="Delete"/>
+</menu>
+    </File>
+  </Directory>
 </App>

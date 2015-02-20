@@ -1064,4 +1064,63 @@
       <View xmlns:android="http://schemas.android.com/apk/res/android" style="&#10;         &#10;         &#10;         &#10;    "/>
     </File>
   </Directory>
+  <Directory directory_name="menu">
+    <File file_name="commenting_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/commenting_sticky_note" android:title="Add Sticky Note"/>
+    <item android:id="@id/commenting_highlight" android:title="Highlight"/>
+    <item android:id="@id/add_text_tool" android:title="Add Text Tool"/>
+    <item android:id="@id/pencil_tool" android:title="Pencil Tool"/>
+</menu>
+    </File>
+    <File file_name="file_list_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/about" android:title="About Adobe Reader"/>
+</menu>
+    </File>
+    <File file_name="file_open_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/about" android:title="About Adobe Reader"/>
+</menu>
+    </File>
+    <File file_name="menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/mp_menuoptionabout_xl_n" android:id="@id/about" android:title="About Adobe Reader"/>
+    <item android:icon="@drawable/mp_menuoptionsettings_xl_n" android:id="@id/settings" android:title="Settings"/>
+</menu>
+    </File>
+    <File file_name="split_pane_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:AdobeReader="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/create_pdf_image_selector" android:id="@id/split_pane_create_pdf" android:title="Convert To PDF" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/export_pdf_image_selector" android:id="@id/split_pane_export_document" android:title="Export From PDF" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/delete_image_selector" android:id="@id/split_pane_delete" android:title="Delete" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/mp_acrobatservices_md_n_dk" android:id="@id/split_pane_save_to_acrobat_dot_com" android:title="Save To Acrobat.com" AdobeReader:showAsAction="never"/>
+    <item android:icon="@drawable/move_image_selector" android:id="@id/split_pane_move" android:title="Move To Folder" AdobeReader:showAsAction="never"/>
+    <item android:icon="@drawable/rename_image_selector" android:id="@id/split_pane_rename" android:title="Rename" AdobeReader:showAsAction="never"/>
+    <item android:icon="@drawable/duplicate_image_selector" android:id="@id/split_pane_duplicate" android:title="Create Duplicate" AdobeReader:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="split_pane_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:AdobeReader="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/clear_list_image_selector" android:id="@id/split_pane_clearrecents" android:title="Clear List" AdobeReader:showAsAction="always"/>
+    <item android:id="@id/split_pane_search" android:title="Search PDF Documents" AdobeReader:showAsAction="always" AdobeReader:actionViewClass="android.support.v7.widget.SearchView"/>
+    <item android:icon="@drawable/mp_addfolder_md_n_dk" android:id="@id/split_pane_create_directory" android:title="Create Folder" AdobeReader:showAsAction="always"/>
+    <item android:id="@id/split_pane_settings" android:title="Settings" AdobeReader:showAsAction="never"/>
+    <item android:id="@id/split_pane_about" android:title="About Adobe Reader" AdobeReader:showAsAction="never"/>
+    <item android:id="@id/split_pane_cloud_signin" android:title="Sign In" AdobeReader:showAsAction="always"/>
+    <item android:id="@id/split_pane_cloud_signout" android:title="Sign Out" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/mp_refresh_md_n_dk" android:id="@id/split_pane_refresh" android:title="Refresh" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/mp_refresh_md_n_dk" android:id="@id/split_pane_retry" android:title="Retry pending items" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/clear_list_image_selector" android:id="@id/split_pane_clearoutbox" android:title="Clear List" AdobeReader:showAsAction="always"/>
+    <item android:icon="@drawable/mp_g_bookmarkarrowright_n" android:id="@id/split_pane_automation" android:title="Automation" AdobeReader:showAsAction="never"/>
+    <item android:icon="@drawable/mp_g_bookmarkarrowright_n" android:id="@id/split_pane_unittests" android:title="Unit Tests" AdobeReader:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="text_selection_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/text_select_copy" android:title="Copy"/>
+    <item android:id="@id/text_select_highlight" android:title="Highlight"/>
+</menu>
+    </File>
+  </Directory>
 </App>

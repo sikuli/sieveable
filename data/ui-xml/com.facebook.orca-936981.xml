@@ -2712,4 +2712,104 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="menu">
+    <File file_name="divehead_peopletab_contact_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/open_timeline" android:title="View Timeline"/>
+    <item android:id="@id/open_contact_info_dialog" android:title="Contact Info"/>
+</menu>
+    </File>
+    <File file_name="message_view_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/orca_ic_menu_delete" android:id="@id/delete" android:orderInCategory="200" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="messenger_base_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/orca_new_message_action" android:id="@id/action_compose" android:title="Send a new message" fb:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="messenger_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/orca_ic_menu_preferences" android:id="@id/preferences" android:orderInCategory="100" android:title="Settings"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help" android:orderInCategory="310" android:title="Help"/>
+    <item android:icon="@drawable/orca_ic_menu_bug" android:id="@id/report_bug" android:orderInCategory="320" android:title="Report a problem"/>
+    <item android:id="@id/internal" android:orderInCategory="500" android:title="Internal">
+        <menu>
+            <item android:icon="@drawable/orca_ic_menu_bug" android:id="@id/send_log_menu_item" android:title="Send Debug"/>
+            <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/force_crash_menu_item" android:title="Crash"/>
+        </menu>
+    </item>
+    <item android:icon="@drawable/orca_ic_menu_bug" android:id="@id/reflex_debug" android:orderInCategory="600" android:title="Reflex debug settings"/>
+</menu>
+    </File>
+    <File file_name="messenger_menu_logged_out.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help" android:orderInCategory="310" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="messenger_people_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/orca_search_action" android:id="@id/action_search" android:title="Search" fb:showAsAction="ifRoom|collapseActionView" fb:actionViewClass="android.support.v7.widget.SearchView"/>
+    <item android:icon="@drawable/orca_add_contact_action" android:id="@id/action_add_contact" android:title="Add Contact" fb:showAsAction="ifRoom|collapseActionView"/>
+</menu>
+    </File>
+    <File file_name="notification_preference_activity_menu_neue.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/toggle_switch" fb:showAsAction="always" fb:actionLayout="@layout/orca_me_action_bar_switch"/>
+</menu>
+    </File>
+    <File file_name="orca_edit_favorites_search_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:fb="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/orca_light_search_action" android:id="@id/action_search" android:title="Search" fb:showAsAction="ifRoom|collapseActionView" fb:actionViewClass="android.support.v7.widget.SearchView"/>
+</menu>
+    </File>
+    <File file_name="peopletab_contact_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/open_chat_head" android:title="Pop out chat head"/>
+    <item android:id="@id/open_timeline" android:title="View Timeline"/>
+    <item android:id="@id/open_contact_info_dialog" android:title="Contact Info"/>
+</menu>
+    </File>
+    <File file_name="photo_view_activity_save_img_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_item_save_image" android:title="Save Image"/>
+</menu>
+    </File>
+    <File file_name="thread_list_item_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/menu_group_thread_list">
+        <item android:id="@id/notifications" android:title="Mute"/>
+        <item android:id="@id/archive" android:title="Archive"/>
+        <item android:id="@id/leave_conversation" android:title="Leave Conversation"/>
+        <item android:id="@id/mark_as_spam" android:title="Mark as spam"/>
+        <item android:id="@id/delete" android:title="Delete"/>
+        <item android:id="@id/show_chat_head" android:title="Pop out chat head"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="thread_view_fragment_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/orca_ic_menu_refresh" android:id="@id/refresh" android:orderInCategory="200" android:title="Refresh"/>
+    <item android:icon="@drawable/orca_ic_menu_archive" android:id="@id/archive" android:orderInCategory="210" android:title="Archive"/>
+    <item android:icon="@drawable/orca_ic_menu_spam" android:id="@id/mark_as_spam" android:orderInCategory="220" android:title="Mark as spam"/>
+    <item android:icon="@drawable/orca_ic_menu_delete" android:id="@id/delete" android:orderInCategory="230" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="thread_view_fragment_menu_neue.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/notifications" android:orderInCategory="200" android:title="Mute"/>
+    <item android:id="@id/open_chat_head" android:orderInCategory="210" android:title="Pop out chat head"/>
+    <item android:id="@id/open_full_view" android:orderInCategory="215" android:title="Open in Messenger"/>
+    <item android:id="@id/timeline" android:orderInCategory="220" android:title="View Timeline"/>
+    <item android:enabled="false" android:id="@id/voip_call" android:orderInCategory="230" android:title="Free Call"/>
+    <item android:id="@id/name_thread" android:orderInCategory="240" android:title="Name Conversation"/>
+    <item android:id="@id/view_people" android:orderInCategory="250" android:title="View People"/>
+    <item android:id="@id/add_people" android:orderInCategory="260" android:title="Add People"/>
+    <item android:id="@id/set_photo" android:orderInCategory="270" android:title="Set Group Photo"/>
+    <item android:id="@id/leave_conversation" android:orderInCategory="280" android:title="Leave Conversation"/>
+    <item android:id="@id/delete" android:orderInCategory="290" android:title="Delete"/>
+</menu>
+    </File>
+  </Directory>
 </App>

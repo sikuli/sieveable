@@ -38,4 +38,15 @@
 </LinearLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="analytics.xml">
+      <resources>
+    <integer name="ga_sessionTimeout">300</integer>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <screenName name="app"> Pou App
+</screenName>
+    <string name="ga_trackingId">UA-50760647-1</string>
+</resources>
+    </File>
+  </Directory>
 </App>

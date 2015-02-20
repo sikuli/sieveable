@@ -2417,4 +2417,135 @@
 </RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="account_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="WhatsApp" android:icon="@drawable/icon" android:accountType="com.whatsapp" android:smallIcon="@drawable/icon" android:accountPreferences="@xml/account_preferences"/>
+    </File>
+    <File file_name="contacts.xml">
+      <ContactsSource xmlns:android="http://schemas.android.com/apk/res/android">
+    <ContactsDataKind android:icon="@drawable/icon" android:mimeType="vnd.android.cursor.item/vnd.com.whatsapp.profile" android:summaryColumn="data2" android:detailColumn="data3" android:detailSocialSummary="true"/>
+</ContactsSource>
+    </File>
+    <File file_name="place_searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="WhatsApp" android:hint="Search places" android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"/>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Settings">
+    <com.whatsapp.preference.WaPreference android:icon="@drawable/settings_help" android:title="Help" android:key="settings_help"/>
+    <com.whatsapp.preference.WaPreference android:icon="@drawable/settings_profile" android:title="Profile" android:key="profile_info"/>
+    <com.whatsapp.preference.WaPreference android:icon="@drawable/settings_account" android:title="Account" android:key="account_info"/>
+    <com.whatsapp.preference.WaPreference android:icon="@drawable/settings_chat" android:title="Chat settings" android:key="settings_chat"/>
+    <com.whatsapp.preference.WaPreference android:icon="@drawable/settings_notifications" android:title="Notifications" android:key="notifications"/>
+    <com.whatsapp.preference.WaPreference android:icon="@drawable/settings_contacts" android:title="Contacts" android:key="contact_info"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_account.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Account" android:key="account_info_screen">
+    <com.whatsapp.preference.WaPreference android:title="Privacy" android:key="privacy"/>
+    <com.whatsapp.preference.WaPreference android:title="Payment info" android:key="account_info"/>
+    <com.whatsapp.preference.WaPreference android:title="Change number" android:key="change_number"/>
+    <com.whatsapp.preference.WaPreference android:title="Delete my account" android:key="delete_account"/>
+    <com.whatsapp.preference.WaPreference android:title="Network usage" android:key="network_usage"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_autodownload.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Media auto-download" android:key="autodownload">
+    <com.whatsapp.preference.WaMultiSelectListPreference android:persistent="false" android:entries="@array/autodownload" android:title="When using mobile data" android:key="autodownload_cellular" android:defaultValue="@array/autodownload_cellular_defaults" android:entryValues="@array/autodownload_values"/>
+    <com.whatsapp.preference.WaMultiSelectListPreference android:persistent="false" android:entries="@array/autodownload" android:title="When connected on Wi-Fi" android:key="autodownload_wifi" android:defaultValue="@array/autodownload_wifi_defaults" android:entryValues="@array/autodownload_values"/>
+    <com.whatsapp.preference.WaMultiSelectListPreference android:persistent="false" android:entries="@array/autodownload" android:title="When roaming" android:key="autodownload_roaming" android:defaultValue="@array/autodownload_roaming_defaults" android:entryValues="@array/autodownload_values"/>
+    <Preference android:layout="@layout/settings_autodownload_message" android:selectable="false" android:key="autodownload_message"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_chat.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Chat settings" android:key="settings_chat">
+    <com.whatsapp.preference.WaCheckBoxPreference android:title="Enter is send" android:key="input_enter_send" android:defaultValue="true" android:summaryOn="Enter key will send your message" android:summaryOff="Enter key will add a new line"/>
+    <com.whatsapp.preference.WaPreference android:title="Media auto-download" android:key="settings_autodownload"/>
+    <com.whatsapp.preference.WaFontListPreference android:entries="@array/font_size" android:title="Font size" android:key="interface_font_size" android:summary="Font size for conversation screen" android:defaultValue="0" android:entryValues="@array/font_size_values"/>
+    <com.whatsapp.preference.WaPreference android:title="Wallpaper" android:key="settings_wallpaper"/>
+    <com.whatsapp.preference.WaPreference android:title="Email conversation" android:key="email_chat_history"/>
+    <com.whatsapp.preference.WaPreference android:title="Backup conversations" android:key="msgstore_backup_now" android:summary="Last backup: %1$s"/>
+    <com.whatsapp.preference.WaPreference android:title="Delete all conversations" android:key="msgstore_delete_all_chats"/>
+    <com.whatsapp.preference.WaPreference android:title="Clear all conversations" android:key="msgstore_clear_all_chats"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_contacts.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Contacts" android:key="contact_info">
+    <com.whatsapp.preference.WaPreference android:title="Tell a friend" android:key="tell_a_friend"/>
+    <com.whatsapp.preference.WaPreference android:title="Pay for a friend" android:key="pay_for_a_friend"/>
+    <com.whatsapp.preference.WaCheckBoxPreference android:title="Show all contacts" android:key="show_all_contacts" android:summary="Enable to also use hidden contacts" android:defaultValue="false"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_help.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Help" android:key="settings_help">
+    <com.whatsapp.preference.WaPreference android:title="About" android:key="about"/>
+    <com.whatsapp.preference.WaPreference android:title="FAQ" android:key="help"/>
+    <com.whatsapp.preference.WaPreference android:title="System status" android:key="system_status"/>
+    <com.whatsapp.preference.WaPreference android:title="Contact us" android:key="contact_us" android:summary="Questions? Comments? Need help?"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_network_usage.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Network usage" android:key="network_usage">
+    <com.whatsapp.preference.WaPreference android:title="Messages sent:" android:key="network_usage_messages_sent" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Messages received:" android:key="network_usage_messages_received" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Media bytes sent:" android:key="network_usage_media_bytes_sent" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Media bytes received:" android:key="network_usage_media_bytes_received" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Message bytes sent:" android:key="network_usage_message_bytes_sent" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Message bytes received:" android:key="network_usage_message_bytes_received" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Total bytes sent:" android:key="network_usage_total_bytes_sent" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaPreference android:title="Total bytes received:" android:key="network_usage_total_bytes_received" android:summary="Unknown"/>
+    <com.whatsapp.preference.WaDialogPreference android:title="Reset Statistics" android:key="network_usage_reset" android:dialogMessage="Are you sure you want to reset statistics?" android:positiveButtonText="Reset" android:negativeButtonText="Cancel"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_notifications.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Notifications" android:key="notifications">
+    <com.whatsapp.preference.WaCheckBoxPreference android:title="Conversation tones" android:key="conversation_sound" android:summary="Play sounds for incoming and outgoing messages." android:defaultValue="true"/>
+    <com.whatsapp.preference.WaPreferenceCategory android:title="Message notifications" android:key="notification">
+        <com.whatsapp.preference.WaRingtonePreference android:title="Notification tone" android:key="notify_ringtone" android:summary="Select a sound to play for a new notification message" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="all" android:showDefault="true" android:showSilent="true"/>
+        <com.whatsapp.preference.WaCheckBoxPreference android:title="Contact ringtone" android:key="custom_ringtone" android:summary="&quot;Use contact's custom ringtone as the notification ringtone&quot;" android:defaultValue="true"/>
+        <com.whatsapp.preference.WaListPreference android:entries="@array/vibrate_lengths" android:title="Vibrate" android:key="notify_vibrate_length" android:summary="Vibrate device when new message arrives while application is running." android:defaultValue="1" android:entryValues="@array/vibrate_values"/>
+        <com.whatsapp.preference.WaListPreference android:entries="@array/popup_mode" android:title="Popup notification" android:key="notify_popup_mode" android:summary="Popup a notification dialog when application is in background." android:defaultValue="0" android:entryValues="@array/popup_mode_values"/>
+        <com.whatsapp.preference.WaListPreference android:entries="@array/led_colors" android:title="Light" android:key="notify_light_color" android:summary="Choose a color to blink the notification light when a new message is received." android:defaultValue="FFFFFF" android:entryValues="@array/led_color_values"/>
+    </com.whatsapp.preference.WaPreferenceCategory>
+    <com.whatsapp.preference.WaPreferenceCategory android:title="Group notifications" android:key="group_notification">
+        <com.whatsapp.preference.WaRingtonePreference android:title="Notification tone" android:key="group_notify_tone" android:summary="Select a sound to play for a new notification message" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="all" android:showDefault="true" android:showSilent="true"/>
+        <com.whatsapp.preference.WaListPreference android:entries="@array/vibrate_lengths" android:title="Vibrate" android:key="group_notify_vibrate_length" android:summary="Vibrate device when new message arrives while application is running." android:defaultValue="1" android:entryValues="@array/vibrate_values"/>
+        <com.whatsapp.preference.WaListPreference android:entries="@array/popup_mode" android:title="Popup notification" android:key="group_notify_popup_mode" android:summary="Popup a notification dialog when application is in background." android:defaultValue="0" android:entryValues="@array/popup_mode_values"/>
+        <com.whatsapp.preference.WaListPreference android:entries="@array/led_colors" android:title="Light" android:key="group_notify_light_color" android:summary="Choose a color to blink the notification light when a new message is received." android:defaultValue="FFFFFF" android:entryValues="@array/led_color_values"/>
+    </com.whatsapp.preference.WaPreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="preferences_privacy.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:title="Privacy" android:key="privacy">
+    <com.whatsapp.preference.WaPreferenceCategory android:title="Who can see my personal info" android:key="personal_info_visibility">
+        <com.whatsapp.preference.WaPrivacyPreference android:persistent="false" android:entries="@array/privacy_levels" android:title="Last seen" android:key="privacy_last_seen" android:widgetLayout="@layout/privacy_progress" android:defaultValue="0" android:entryValues="@array/privacy_values"/>
+        <com.whatsapp.preference.WaPrivacyPreference android:persistent="false" android:entries="@array/privacy_levels" android:title="Profile photo" android:key="privacy_profile_photo" android:widgetLayout="@layout/privacy_progress" android:defaultValue="0" android:entryValues="@array/privacy_values"/>
+        <com.whatsapp.preference.WaPrivacyPreference android:persistent="false" android:entries="@array/privacy_levels" android:title="Status" android:key="privacy_status" android:widgetLayout="@layout/privacy_progress" android:defaultValue="0" android:entryValues="@array/privacy_values"/>
+    </com.whatsapp.preference.WaPreferenceCategory>
+    <com.whatsapp.preference.WaPreferenceCategory android:title="Messaging">
+        <com.whatsapp.preference.WaPreference android:title="Blocked contacts: %s" android:key="block_list" android:summary="List of contacts that you have blocked."/>
+    </com.whatsapp.preference.WaPreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="sync_contacts.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.whatsapp" android:contentAuthority="com.android.contacts" android:supportsUploading="false"/>
+    </File>
+    <File file_name="widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="250.0dip" android:minHeight="110.0dip" android:updatePeriodMillis="86400000" android:initialLayout="@layout/widget" android:previewImage="@drawable/widget_preview" android:resizeMode="horizontal|vertical" android:minResizeWidth="40.0dip" android:minResizeHeight="40.0dip" android:initialKeyguardLayout="@layout/widget" android:widgetCategory="home_screen|keyguard"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="gallery_picker.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:enabled="true" android:id="@id/default_item" android:visible="true" android:title="" android:titleCondensed="" android:showAsAction="always"/>
+    <item android:icon="@drawable/abs__ic_menu_moreoverflow_normal_holo_dark" android:enabled="true" android:id="@id/more" android:visible="true" android:title="More" android:titleCondensed="More" android:showAsAction="always">
+        <menu>
+            <item android:id="@id/item1" android:title="Placeholder"/>
+        </menu>
+    </item>
+</menu>
+    </File>
+  </Directory>
 </App>

@@ -1185,4 +1185,58 @@
 </RelativeLayout>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="appwidget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="110.0dip" android:minHeight="180.0dip" android:updatePeriodMillis="86400000" android:initialLayout="@layout/appwidget_main" android:previewImage="@drawable/book_widget_preview"/>
+    </File>
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="Books" android:searchSuggestAuthority="com.google.android.apps.books" android:searchSuggestIntentAction="com.google.android.apps.books.intent.action.READ" android:searchSuggestIntentData="content://com.google.android.apps.books/volumes" android:includeInGlobalSearch="true" android:searchSettingsDescription="Books in your library"/>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="com.google" android:contentAuthority="com.google.android.apps.books" android:supportsUploading="true"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="fragment_home.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="?menuSearchDrawable" android:id="@id/menu_search" android:title="Search" android:showAsAction="always|collapseActionView"/>
+    <item android:id="@id/menu_sort" android:title="Sort" android:showAsAction="never"/>
+    <item android:id="@id/menu_refresh" android:title="Refresh" android:showAsAction="never"/>
+    <item android:id="@id/menu_testing_options" android:title="Testing options" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="fragment_reader.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="?menuSearchDrawable" android:id="@id/menu_search" android:title="Search" android:showAsAction="always|collapseActionView" android:actionLayout="@layout/search_view"/>
+    <group android:id="@id/reader_items">
+        <item android:icon="?menuMoPlayDrawable" android:id="@id/menu_mo_play" android:title="Play" android:showAsAction="never"/>
+        <item android:icon="?menuSettingsDrawable" android:id="@id/menu_reader_settings" android:title="Display options" android:showAsAction="never" android:actionLayout="@layout/action_display_options"/>
+        <item android:id="@id/menu_reader_mode" android:title="Original pages" android:showAsAction="never"/>
+        <item android:id="@id/menu_book_buy" android:title="Buy" android:showAsAction="never"/>
+        <item android:id="@id/menu_about_this_book" android:title="About this book" android:showAsAction="never"/>
+        <item android:id="@id/menu_share" android:title="Share" android:showAsAction="never"/>
+        <item android:id="@id/menu_bookmark" android:title="Add bookmark" android:showAsAction="never"/>
+        <item android:id="@id/menu_read_aloud" android:title="Read aloud" android:showAsAction="never"/>
+        <item android:id="@id/menu_app_settings" android:title="Settings" android:showAsAction="never"/>
+        <item android:id="@id/menu_help" android:title="Help &amp; feedback" android:showAsAction="never"/>
+    </group>
+    <group android:id="@id/search_items">
+        <item android:id="@id/menu_reader_search_exit" android:title="Done with this search" android:showAsAction="never"/>
+    </group>
+</menu>
+    </File>
+    <File file_name="text_select_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_pick_highlight_color" android:title="Pick highlight color" android:showAsAction="always" android:actionLayout="@layout/pick_highlight_action_layout"/>
+    <item android:icon="?menuIconAddNote" android:id="@id/menu_note" android:title="Note" android:showAsAction="always"/>
+    <item android:icon="?menuIconShare" android:id="@id/menu_share" android:title="Share" android:showAsAction="ifRoom"/>
+    <item android:icon="?menuIconCopy" android:id="@id/menu_copy" android:title="Copy" android:showAsAction="ifRoom"/>
+    <item android:icon="?menuIconTranslate" android:id="@id/menu_translate" android:title="Translate" android:showAsAction="never"/>
+    <item android:id="@id/menu_search_web" android:title="Search web" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="translate_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+  </Directory>
 </App>

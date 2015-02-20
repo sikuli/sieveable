@@ -8840,4 +8840,84 @@
       <RelativeLayout style="&#10;         &#10;         &#10;    "/>
     </File>
   </Directory>
+  <Directory directory_name="xml">
+    <File file_name="settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="true" android:layout="@layout/preference_multiline_internal" android:title="Switch account" android:key="current_account_name"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Edit home or work" android:key="edit_home_work"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Google location settings" android:key="location_reporting"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Location accuracy tips" android:key="improve_location"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Maps history" android:key="maps_history"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Offer notifications" android:key="offer_notifications"/>
+    <ListPreference android:persistent="true" android:entries="@array/DISTANCE_UNIT_ENTRIES" android:layout="@layout/preference_multiline_internal" android:title="Distance units" android:key="distance_units" android:defaultValue="" android:dialogTitle="Distance units" android:entryValues="@array/DISTANCE_UNIT_VALUES"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Send feedback" android:key="send_feedback"/>
+    <CheckBoxPreference android:persistent="true" android:layout="@layout/preference_multiline_internal" android:title="Shake to send feedback" android:key="shake_to_send_feedback" android:defaultValue="true"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="Tutorials &amp; help" android:key="tutorials_and_help"/>
+    <Preference android:persistent="false" android:layout="@layout/preference_multiline_internal" android:title="About, terms &amp; privacy" android:key="about"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="instance_bundle_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_refresh" android:title="Refresh" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offer_details_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/my_offers_menu_item" android:title="Your offers" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offers_at_a_place_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_refresh" android:title="Refresh" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offers_core_cpg_link_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_cpg_link" android:title="Add or update your loyalty program" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offers_core_delete_instance_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/offers_core_delete_instance" android:title="Delete" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offers_core_my_offers_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@id/menu_group_mode" android:checkableBehavior="none">
+        <item android:id="@id/menu_mode_active" android:title="Show active" android:showAsAction="never"/>
+        <item android:id="@id/menu_mode_history" android:title="Show history" android:showAsAction="never"/>
+    </group>
+    <item android:id="@id/menu_sort" android:title="Sort" android:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@id/menu_sort_saved_date" android:title="Saved date" android:showAsAction="never"/>
+                <item android:id="@id/menu_sort_nearest" android:title="Nearest" android:showAsAction="never"/>
+                <item android:id="@id/menu_sort_expiration_date" android:title="Expiration date" android:showAsAction="never"/>
+                <item android:id="@id/menu_sort_business_name" android:title="Business name" android:showAsAction="never"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@id/menu_refresh" android:title="Refresh" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="offers_push_notifications_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/offers_notification_help_item" android:title="Help" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="place_page_photo_viewer_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/reportAProblem" android:title="Report inappropriate photo" android:showAsAction="never"/>
+    <item android:id="@id/uploadAPhoto" android:title="Add a photo" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="place_page_street_view_fragment.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/share" android:title="Share" android:showAsAction="never"/>
+    <item android:id="@id/reportAProblem" android:title="Report a problem" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
 </App>
