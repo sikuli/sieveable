@@ -8,7 +8,7 @@
 Custom UI components (widgets or layouts) are created by subclassing the prebuilt widgets or layouts and overriding their methods. There are two ways to use a custom UI component:
 (1) If the custom UI component is defined as an inner class within an Activity class, then it can be used in the XML layout files as a generic view with the _class_ attribute specifying it in the full qualifed package name.
 
-Example:
+Example 1:
 
 ```
 <view
@@ -18,7 +18,7 @@ Example:
 ```
 (2) If the custom UI component is not defined as an inner class, then it can be used as an XML element whose name is the full qualifed package name.
 
-Example:
+Example 2:
 
 ```
 <com.android.notepad.MyEditText
@@ -46,7 +46,7 @@ Example:
 ### Q3: Find apps with navigation drawers?
 Navigation drawers are declared in the layout file with a _DrawerLayout_ element as a root with two children, the first child is the primary layout and the second child contains the contents of the navigation drawer. It can be also defined as a View element with the _class_ attribute set to the _DrawerLayout_ class.
 
-Example:
+Example 1:
 
 ```
 <android.support.v4.widget.DrawerLayout
@@ -65,8 +65,9 @@ Example:
 Example 2:
 
 ```
-<view android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent" class="android.support.v4.widget.DrawerLayout"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<view android:id="@id/drawer_container"
+      class="android.support.v4.widget.DrawerLayout"
+      xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/cards_container" >
         <ViewStub android:id="@id/read_now_home_view" android:layout="@layout/read_now_home_view" />
         <ViewStub android:id="@id/my_library_home_view" android:layout="@layout/my_library_home_view" />
