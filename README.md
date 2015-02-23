@@ -44,7 +44,7 @@ Example:
 
 
 ### Q3: Find apps with navigation drawers?
-Navigation drawers are declared in the layout file with a _DrawerLayout_ element as a root with two children, the first child is the primary layout and the second child contains the contents of the navigation drawer.
+Navigation drawers are declared in the layout file with a _DrawerLayout_ element as a root with two children, the first child is the primary layout and the second child contains the contents of the navigation drawer. It can be also defined as a View element with the _class_ attribute set to the _DrawerLayout_ class.
 
 Example:
 
@@ -60,6 +60,25 @@ Example:
     <ListView android:id="@+id/left_drawer"
         .../>
 </android.support.v4.widget.DrawerLayout>
+```
+
+Example 2:
+
+```
+<view android:id="@id/drawer_container" android:layout_width="fill_parent" android:layout_height="fill_parent" class="android.support.v4.widget.DrawerLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/cards_container" >
+        <ViewStub android:id="@id/read_now_home_view" android:layout="@layout/read_now_home_view" />
+        <ViewStub android:id="@id/my_library_home_view" android:layout="@layout/my_library_home_view" />
+        <RelativeLayout >
+            <ProgressBar android:id="@id/progress" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@android:id/empty">
+        <TextView android:text="@string/welcome_title" />
+        <TextView android:text="@string/welcome_text" />
+    </LinearLayout>
+</view>
 ```
 
 ### Q4: Find apps that use tab layouts with TabHost for navigation?
