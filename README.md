@@ -28,7 +28,7 @@ Example:
 
 ### Q2: Find home screen widgets that support resizing?
 
-Home screen widgets can be defined using the . In order to support resiziable home screen widgets (horizontally and/or vertically), developers should use the resizeMode attribute of the <appwidget-provider> element, which is created inside the res/xml/ folder.
+Home screen widgets can be defined using the _<appwidget-provider>_ element in an XML resource  inside the _res/xml_ folder. In order to support resiziable home screen widgets (horizontally and/or vertically), developers should use the resizeMode attribute of the _<appwidget-provider>_ element, which is created inside the _res/xml/_ folder.
 
 Example:
 
