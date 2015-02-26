@@ -87,6 +87,32 @@ render(ast, locals)
     return 'done';
 ```
 
+# Q5+
+
+Design 1
+
+```
+// before.xml
+<X>
+    <Y/>
+    <Y/>
+    <Y/>
+</X>
+
+// after.xml
+<X>
+    <Y/>
+    <Y/>
+    <Y/>
+    <Y/>
+</X>
+```
+
+```
+find('before.xml','after.xml', {X: 'LinearLayout', Y: 'Button'})
+```
+
+
 
 
 # Q6
