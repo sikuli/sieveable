@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
 var program = require('commander'),
-    fs = require('fs'),
-	parser = require('../lib/parser.js');
+    fs = require('fs')
+	// parser = require('../lib/parser.js');
+
+var parse = require('../lib/parse')	
+var db    = require('../lib/db')	
 
 var ensureFileExists = function(file) {
 	if (!fs.existsSync(file) || !fs.lstatSync(file).isFile()) {
@@ -19,9 +22,16 @@ program
 	.description("")
 	.action(function(xml_file) {
 		ensureFileExists(xml_file);
-		parser(xml_file, function(result, error) {
-			console.log(result);
-		});
+
+		var text = fs.readFileSync(xml_file, 'utf8')
+		var q = parse(text)
+		db.find(q, function(err, result){
+			console.log(result.length)
+		})
+
+		// parser(xml_file, function(result, error) {
+		// 	console.log(result);
+		// });
 	});
 
 program.parse(process.argv);
@@ -29,3 +39,4 @@ program.parse(process.argv);
 if (!program.args.length){
 	program.help();
 }
+
