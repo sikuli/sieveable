@@ -21,7 +21,25 @@ describe('db', function() {
             name: 'LinearLayout',
             children: [{
                 type: 'tag',
-                name: 'Button'
+                name: 'Button',
+            }]
+        }
+
+        db.find(q)
+
+    })
+
+    it('find apps with a LinearLayout that contains exactly two buttons', function() {
+
+        var q = {
+            type: 'tag',
+            name: 'LinearLayout',
+            children: [{
+                type: 'tag',
+                name: 'Button',
+            }, {
+                type: 'tag',
+                name: 'Button',
             }]
         }
 
