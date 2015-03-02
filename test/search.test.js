@@ -18,8 +18,8 @@ describe('db', function() {
     })
 
 
-    it.skip('find apps with a LinearLayout that contains exactly one button', function() {
-
+    it.skip('find apps with a LinearLayout that contains exactly one button', function(done) {
+        this.timeout(10000);
         var q = {
             type: 'tag',
             name: 'LinearLayout',
@@ -29,12 +29,15 @@ describe('db', function() {
             }]
         }
 
-        db.find(q)
+        db.find(q, function(error, results){
+            console.log(results.length);
+            done();
+        });
 
     })
 
-    it('find apps with a LinearLayout that contains exactly two buttons', function() {
-
+    it('find apps with a LinearLayout that contains exactly two buttons', function(done) {
+        this.timeout(10000);
         var q = {
             type: 'tag',
             name: 'LinearLayout',
@@ -47,7 +50,10 @@ describe('db', function() {
             }]
         }
 
-        db.find(q)
+        db.find(q, function(error, results){
+             console.log(results.length);
+             done();
+        });
 
     })
 })
