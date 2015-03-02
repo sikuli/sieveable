@@ -14,7 +14,7 @@
     "mocha": "^2.1.0"
   },
  "bin": {
-    "apps": "./bin/diff_apps"
+    "apps": "./bin/diff_apps.js"
   },  
   "dependencies": {
     "cheerio": "^0.18.0",
