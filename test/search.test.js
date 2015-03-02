@@ -11,7 +11,7 @@ describe('db', function() {
 
         db.find(q, function(error, results){
 
-            console.log(results)
+            console.log(results.length)
             done()
         })
 
