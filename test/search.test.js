@@ -2,19 +2,23 @@ var db = require('../lib/db')
 
 describe('db', function() {
 
-    it('find apps with at least one particular tag', function() {
-
+    it('find apps with at least one particular tag', function(done) {
+        this.timeout(10000);
         var q = {
             type: 'tag',
             name: 'LinearLayout'
         }
 
-        db.find(q)
+        db.find(q, function(error, results){
+
+            console.log(results)
+            done()
+        })
 
     })
 
 
-    it('find apps with a LinearLayout that contains exactly one button', function() {
+    it.skip('find apps with a LinearLayout that contains exactly one button', function() {
 
         var q = {
             type: 'tag',
