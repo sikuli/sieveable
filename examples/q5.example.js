@@ -8,14 +8,12 @@ console.time('q5')
 glob.glob('../data/ui-xml/*', function(err, files) {
 
     var apps = files.map(function(file) {
-
         var app = {
             xml: fs.readFileSync(file, 'utf8')
         }
-
         return app
     })
-    var result = q5(apps, n);
+    var result = q5(apps, null,'Button', n);
     console.log(result)
     console.timeEnd('q5')
 

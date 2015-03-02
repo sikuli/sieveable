@@ -1,0 +1,10 @@
+<!-- q5.xml -->
+<X>
+    <Y/>
+    <Y/>
+    <Y/>
+    <Y+/>
+</X>
+
+X = LinearLayout
+Y = Button
