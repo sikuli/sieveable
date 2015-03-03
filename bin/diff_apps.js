@@ -26,9 +26,9 @@ program
 		var text = fs.readFileSync(xml_file, 'utf8')
 		var q = parse(text)
 		db.find(q, function(err, result){
-			console.log(result.length)
+			console.log(result)
 		})
-
+console.log(q);
 		// parser(xml_file, function(result, error) {
 		// 	console.log(result);
 		// });

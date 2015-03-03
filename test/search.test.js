@@ -45,7 +45,7 @@ describe('db', function() {
             children: [{
                 type: 'tag',
                 name: 'Button',
-                count: 2
+                count: 3 
             }]
         }
 
