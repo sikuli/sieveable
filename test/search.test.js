@@ -26,6 +26,7 @@ describe('db', function() {
             children: [{
                 type: 'tag',
                 name: 'Button',
+                count: 1
             }]
         }
 
@@ -44,9 +45,7 @@ describe('db', function() {
             children: [{
                 type: 'tag',
                 name: 'Button',
-            }, {
-                type: 'tag',
-                name: 'Button',
+                count: 2
             }]
         }
 
