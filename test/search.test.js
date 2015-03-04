@@ -3,7 +3,7 @@ var db = require('../lib/db')
 describe('db', function() {
 
     it('find apps with at least one particular tag', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'LinearLayout'
@@ -19,7 +19,7 @@ describe('db', function() {
 
 
     it.skip('find apps with a LinearLayout that contains exactly one button', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'LinearLayout',
@@ -38,14 +38,14 @@ describe('db', function() {
     })
 
     it('find apps with a LinearLayout that contains exactly two buttons', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'LinearLayout',
             children: [{
                 type: 'tag',
                 name: 'Button',
-                count: 3
+                count: 2
             }]
         }
 
@@ -57,7 +57,7 @@ describe('db', function() {
     })
 
     it('find apps with a LinearLayout that contains exactly two buttons and two image views', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'LinearLayout',
@@ -80,7 +80,7 @@ describe('db', function() {
     })
 
     it('find apps with two siblings that are a button and an image view', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = [{
             type: 'tag',
             name: 'Button',
@@ -99,7 +99,7 @@ describe('db', function() {
     })
 
     it('find apps with THREE siblings that are ONE button and TWO image views', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = [{
             type: 'tag',
             name: 'Button',
@@ -118,7 +118,7 @@ describe('db', function() {
     })
 
     it('find apps with AT LEAST 20 buttons', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'Button',
@@ -133,7 +133,7 @@ describe('db', function() {
     })
 
     it('find apps with AT MOST 5 buttons', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'Button',
@@ -148,7 +148,7 @@ describe('db', function() {
     })
 
     it('find apps with a TextView with android:fadingEdge="horizontal"', function(done) {
-        this.timeout(10000);
+        this.timeout(0);
         var q = {
             type: 'tag',
             name: 'Button',
