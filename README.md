@@ -130,7 +130,7 @@ To implement horizontal paging, the most common approach is to use a ViewPager v
 
 ### Q7: Find apps that use settings/preferences subscreens?
 
-Settings or preferences can be grouped into different subscreens and statically implemented using the _Preference_ API. Preferences are defined in a file inside _/res/xml_ directory. The root node for the XML file must be a ```<PreferenceScreen>``` element. Inside this element, a another ```<PreferenceScreen>``` element is used to hold a group of preferences objects that subclass the Preference class such as _CheckBoxPreference, EditTextPreference, ListPreference, MultiSelectListPreference, PreferenceCategory, PreferenceScreen, SwitchPreference, DialogPreference, PreferenceGroup, RingtonePreference_, and _TwoStatePreference_.
+Settings or preferences can be grouped into different subscreens and statically implemented using the _Preference_ API. Preferences are defined in a file inside _/res/xml_ directory. The root node for the XML file must be a ```<PreferenceScreen>``` element. Inside this element, another ```<PreferenceScreen>``` element is used to hold a group of preferences objects that subclass the Preference class such as _CheckBoxPreference, EditTextPreference, ListPreference, MultiSelectListPreference, PreferenceCategory, PreferenceScreen, SwitchPreference, DialogPreference, PreferenceGroup, RingtonePreference_, and _TwoStatePreference_.
 
 Example:
 
