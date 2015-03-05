@@ -1,0 +1,4 @@
+<LinearLayout>
+    <RatingBar/>
+    <ImageView/>
+</LinearLayout>
