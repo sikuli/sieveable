@@ -1,7 +1,7 @@
 <RelativeLayout>
     <GridView>
-        <?>
-            <+/>
-        </?>
+        <__ __name="?">
+            <__ __name="?" __count="1+"/>
+        </__>
     </GridView>
 </RelativeLayout>

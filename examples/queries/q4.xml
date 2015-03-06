@@ -1,5 +1,5 @@
 <TabHost>
-    <?>
-       <TabWidget/>
-    </?>
+    <__ __name="?">
+        <TabWidget/>
+    </__>
 </TabHost>
