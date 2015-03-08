@@ -17,6 +17,7 @@
     "apps": "./bin/diff_apps.js"
   },
   "dependencies": {
+    "archy": "^1.0.0",
     "cheerio": "^0.18.0",
     "commander": "^2.6.0",
     "glob": "^4.3.5",
