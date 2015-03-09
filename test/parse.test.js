@@ -12,8 +12,7 @@ describe('parse', function () {
         var actual = parse(q)
         var expected = {
             type: 'tag',
-            name: 'LinearLayout',
-            attributes: {}
+            name: 'LinearLayout'
         }
 
         actual.should.deep.equal(expected)
@@ -44,11 +43,10 @@ describe('parse', function () {
         var expected = {
             type: 'tag',
             name: 'LinearLayout',
-            attributes: {},
             children: [{
                 type: 'tag',
                 name: 'Button',
-                attributes: {}
+                count: 1
             }]
         }
 
@@ -65,23 +63,17 @@ describe('parse', function () {
         var expected = {
             type: 'tag',
             name: 'LinearLayout',
-            attributes: {},
             children: [{
                 type: 'tag',
                 name: 'Button',
-                attributes: {}
+                count: 2
             },
-                {
-                    type: 'tag',
-                    name: 'Button',
-                    attributes: {}
-                },
             ]
         }
         actual.should.deep.equal(expected)
     })
 
-    it('a parent with exactly two children with all tags have attributes', function () {
+    it('a parent with exactly two children that have different attributes', function () {
 
         var q = '<LinearLayout android:layout_width="match_parent"' +
             ' android:layout_height="match_parent"> ' +
@@ -120,5 +112,38 @@ describe('parse', function () {
         actual.should.deep.equal(expected)
 
     })
+
+    it('a parent with exactly four children that have the same attributes', function () {
+
+        var q = '<LinearLayout android:layout_width="match_parent"' +
+            ' android:layout_height="match_parent"> ' +
+            '<TextView android:layout_width="fill_parent" android:layout_height="wrap_content"/>' +
+            '<TextView android:layout_width="fill_parent" android:layout_height="wrap_content"/>' +
+            '<TextView android:layout_width="fill_parent" android:layout_height="wrap_content"/>' +
+            '<TextView android:layout_width="fill_parent" android:layout_height="wrap_content"/>/>' +
+            '</LinaerLayout>'
+        var actual = parse(q)
+        var expected = {
+            type: 'tag',
+            name: 'LinearLayout',
+            attributes: [{
+                name: 'android:layout_width', value: 'match_parent'
+            },
+                {name: 'android:layout_height', value: 'match_parent'}
+            ],
+            children: [{
+                type: 'tag',
+                name: 'TextView',
+                attributes: [{name: 'android:layout_width', value: 'fill_parent'},
+                    {name:'android:layout_height', value:'wrap_content'}],
+                count:4
+
+            }]
+        }
+
+        actual.should.deep.equal(expected)
+
+    })
+
 
 })
