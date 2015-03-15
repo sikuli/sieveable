@@ -1,12 +1,11 @@
-var chai = require('chai')
+var expect = require('chai').expect
 
-chai.should()
 
 var parse = require('../lib/parse')
 
 describe('parse', function () {
 
-    it('the simplest query', function () {
+    it('The simplest query', function () {
 
         var q = '<LinearLayout></LinaerLayout>'
         var actual = parse(q)
@@ -14,9 +13,7 @@ describe('parse', function () {
             type: 'tag',
             name: 'LinearLayout'
         }
-
-        actual.should.deep.equal(expected)
-
+        expect(actual).to.deep.equal(expected);
     })
 
     it('A simple tag with an attribute', function () {
@@ -31,10 +28,10 @@ describe('parse', function () {
             }
             ]
         }
-        actual.should.deep.equal(expected)
+        expect(actual).to.deep.equal(expected)
     })
 
-    it('a parent-child relationship', function () {
+    it('A parent-child relationship', function () {
 
         var q = '<LinearLayout><Button></Button></LinaerLayout>'
 
@@ -49,12 +46,11 @@ describe('parse', function () {
                 count: 1
             }]
         }
-
-        actual.should.deep.equal(expected)
+        expect(actual).to.deep.equal(expected)
 
     })
 
-    it('a parent with exactly two children', function () {
+    it('A parent with exactly two children', function () {
 
         var q = '<LinearLayout><Button></Button><Button></Button></LinaerLayout>'
 
@@ -70,10 +66,10 @@ describe('parse', function () {
             },
             ]
         }
-        actual.should.deep.equal(expected)
+        expect(actual).to.deep.equal(expected)
     })
 
-    it('a parent with exactly two children that have different attributes', function () {
+    it('A parent with exactly two children that have different attributes', function () {
 
         var q = '<LinearLayout android:layout_width="match_parent"' +
             ' android:layout_height="match_parent"> ' +
@@ -86,34 +82,31 @@ describe('parse', function () {
         var expected = {
             type: 'tag',
             name: 'LinearLayout',
-            attributes: [{
-                name: 'android:layout_width', value: 'match_parent'
-            },
-                {name: 'android:layout_height', value: 'match_parent'}
+            attributes: [{name: 'android:layout_height', value: 'match_parent'},
+                {name: 'android:layout_width', value: 'match_parent'}
             ],
             children: [{
                 type: 'tag',
                 name: 'Button',
-                attributes: [{name: 'android:text', value: '@string/send'}]
+                attributes: [{name: 'android:text', value: '@string/send'}],
+                count: 1
             },
                 {
                     type: 'tag',
                     name: 'Button',
-                    attributes: [{
-                        name: 'android:layout_width',
-                        value: '100dp'
-                    },
+                    attributes: [
+                        {name: 'android:layout_gravity', value: 'right'},
                         {name: 'android:layout_height', value: 'wrap_content'},
-                        {name: 'android:layout_gravity', value: 'right'}
-                    ]
+                        {name: 'android:layout_width', value: '100dp'}
+                    ],
+                    count: 1
                 }]
         }
-
-        actual.should.deep.equal(expected)
+        expect(actual).to.deep.equal(expected)
 
     })
 
-    it('a parent with exactly four children that have the same attributes', function () {
+    it('A parent with exactly four children that have the same attributes', function () {
 
         var q = '<LinearLayout android:layout_width="match_parent"' +
             ' android:layout_height="match_parent"> ' +
@@ -126,22 +119,27 @@ describe('parse', function () {
         var expected = {
             type: 'tag',
             name: 'LinearLayout',
-            attributes: [{
-                name: 'android:layout_width', value: 'match_parent'
-            },
-                {name: 'android:layout_height', value: 'match_parent'}
+            attributes: [
+                {name: 'android:layout_height', value: 'match_parent'}, {
+                    name: 'android:layout_width', value: 'match_parent'
+                }
             ],
             children: [{
                 type: 'tag',
                 name: 'TextView',
-                attributes: [{name: 'android:layout_width', value: 'fill_parent'},
-                    {name:'android:layout_height', value:'wrap_content'}],
-                count:4
+                attributes: [{
+                    name: 'android:layout_height',
+                    value: 'wrap_content'
+                }, {
+                    name: 'android:layout_width',
+                    value: 'fill_parent'
+                }
+                ],
+                count: 4
 
             }]
         }
-
-        actual.should.deep.equal(expected)
+        expect(actual).to.deep.equal(expected)
 
     })
 
