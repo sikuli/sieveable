@@ -1,6 +1,6 @@
 # diff-apps
 
-
+[![Build Status](https://travis-ci.org/sikuli/diff-apps.svg?branch=master)](http://travis-ci.org/sikuli/diff-apps)
 ## Android UI Design Questions
 
 ### Q1: Find the number of custom UI components for each app?
