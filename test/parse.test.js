@@ -143,5 +143,59 @@ describe('parse', function () {
 
     })
 
+    it('Two simple siblings', function () {
+        var q = "<Button/> <ImageView/>"
+        var actual = parse(q)
+        var expected = [{
+            type: 'tag',
+            name: 'Button'
+        }, {
+            type: 'tag',
+            name: 'ImageView'
+        }]
+        expect(actual).to.deep.equal(expected)
+    })
+
+    it('Four siblings, two of which have similar tags and two similar attributes', function () {
+        var q = '<Button android:layout_width="wrap_content" android:layout_height="wrap_content"/> ' +
+            '<ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"/> ' +
+            '<Button android:layout_width="wrap_content" android:layout_height="wrap_content"/> ' +
+            '<ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"/>'
+        var actual = parse(q)
+        var expected = [{
+            type: 'tag',
+            name: 'Button',
+            attributes: [
+                {name: "android:layout_height", value: "wrap_content"},
+                {name: "android:layout_width", value: "wrap_content"}
+            ]
+        }, {
+            type: 'tag',
+            name: 'ImageButton',
+            attributes: [
+                {name: "android:layout_height", value: "wrap_content"},
+                {name: "android:layout_width", value: "wrap_content"}
+            ]
+        },
+            {
+                type: 'tag',
+                name: 'Button',
+                attributes: [
+                    {name: "android:layout_height", value: "wrap_content"},
+                    {name: "android:layout_width", value: "wrap_content"}
+                ]
+            },
+            {
+                type: 'tag',
+                name: 'ImageButton',
+                attributes: [
+                    {name: "android:layout_height", value: "wrap_content"},
+                    {name: "android:layout_width", value: "wrap_content"}
+                ]
+            }
+        ]
+        expect(actual).to.deep.equal(expected)
+    })
+
 
 })
