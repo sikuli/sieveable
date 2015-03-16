@@ -1,4 +1,5 @@
 var expect = require('chai').expect
+var inspect = require('eyes').inspector()
 
 
 var parse = require('../lib/parse')
@@ -11,7 +12,8 @@ describe('parse', function () {
         var actual = parse(q)
         var expected = {
             type: 'tag',
-            name: 'LinearLayout'
+            name: 'LinearLayout',
+            count: 1
         }
         expect(actual).to.deep.equal(expected);
     })
@@ -25,8 +27,9 @@ describe('parse', function () {
             attributes: [{
                 name: 'android:layout_width',
                 value: 'match_parent'
-            }
-            ]
+            }            
+            ],
+            count: 1
         }
         expect(actual).to.deep.equal(expected)
     })
@@ -44,8 +47,9 @@ describe('parse', function () {
                 type: 'tag',
                 name: 'Button',
                 count: 1
-            }]
-        }
+            }],
+            count: 1
+        }        
         expect(actual).to.deep.equal(expected)
 
     })
@@ -64,7 +68,8 @@ describe('parse', function () {
                 name: 'Button',
                 count: 2
             },
-            ]
+            ],
+            count: 1
         }
         expect(actual).to.deep.equal(expected)
     })
@@ -100,7 +105,8 @@ describe('parse', function () {
                         {name: 'android:layout_width', value: '100dp'}
                     ],
                     count: 1
-                }]
+                }],
+                count: 1
         }
         expect(actual).to.deep.equal(expected)
 
@@ -124,6 +130,7 @@ describe('parse', function () {
                     name: 'android:layout_width', value: 'match_parent'
                 }
             ],
+            count: 1,
             children: [{
                 type: 'tag',
                 name: 'TextView',
@@ -148,10 +155,12 @@ describe('parse', function () {
         var actual = parse(q)
         var expected = [{
             type: 'tag',
-            name: 'Button'
+            name: 'Button',
+            count: 1
         }, {
             type: 'tag',
-            name: 'ImageView'
+            name: 'ImageView',
+            count: 1
         }]
         expect(actual).to.deep.equal(expected)
     })
@@ -168,31 +177,17 @@ describe('parse', function () {
             attributes: [
                 {name: "android:layout_height", value: "wrap_content"},
                 {name: "android:layout_width", value: "wrap_content"}
-            ]
+            ],
+            count: 2
         }, {
             type: 'tag',
             name: 'ImageButton',
             attributes: [
                 {name: "android:layout_height", value: "wrap_content"},
                 {name: "android:layout_width", value: "wrap_content"}
-            ]
-        },
-            {
-                type: 'tag',
-                name: 'Button',
-                attributes: [
-                    {name: "android:layout_height", value: "wrap_content"},
-                    {name: "android:layout_width", value: "wrap_content"}
-                ]
-            },
-            {
-                type: 'tag',
-                name: 'ImageButton',
-                attributes: [
-                    {name: "android:layout_height", value: "wrap_content"},
-                    {name: "android:layout_width", value: "wrap_content"}
-                ]
-            }
+            ],
+            count: 2
+        }        
         ]
         expect(actual).to.deep.equal(expected)
     })
