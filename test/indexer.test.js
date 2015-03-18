@@ -10,8 +10,6 @@ var build = require('../lib/indexer/build')
 var extract = require('../lib/indexer/extract')
 var search = require('../lib/indexer/search')
 
-// indexer lucene
-
 describe('indexer', function() {
 
     var doc1, doc2, big
@@ -95,7 +93,7 @@ describe('indexer', function() {
         var index = build([doc1, doc2, doc3], extract)
 
         var actual = index['LinearLayout']
-            // inspect(actual)
+        // inspect(actual)
         var expected =
             [{
                 id: 1,
