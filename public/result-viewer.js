@@ -19,11 +19,13 @@ var ResultViewer = React.createClass({
 
             return (
                 <div className="row" key={index}>
-                    <div className="col-md-8">
-                        {result.app}-
+                    <div className="col-md-6">
+                        {result.packageName}
+                    </div>                  
+                    <div className="col-md-2">
                         {result.version}
-                    </div>                    
-                    <div className="col-md-4">
+                    </div>
+                    <div className="col-md-2">
                         <a href={'/view/xml/'+ result.app + '/' + result.version} target="xml">xml</a>
                     </div>
                 </div>
