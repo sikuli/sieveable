@@ -2,11 +2,11 @@ var gulp = require('gulp'),
     through2 = require('through2')
 
 
-var indexer = require('./lib/indexer')
+var buildIndex = require('./lib/plugins/tagname/searchIndex/build-stream')
 
-gulp.task('build-index', function() {
+gulp.task('build:tagname', function() {
     
     gulp.src('data/ui-xml/*')
-        .pipe(indexer.buildStream())    
-        .pipe(gulp.dest('build/'))
+        .pipe(buildIndex())    
+        .pipe(gulp.dest('indexes/tagname'))
 })
