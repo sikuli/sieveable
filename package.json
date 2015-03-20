@@ -19,11 +19,15 @@
   },
   "dependencies": {
     "archy": "^1.0.0",
+    "body-parser": "^1.12.0",
     "cheerio": "^0.18.0",
     "commander": "^2.6.0",
     "eyes": "^0.1.8",
+    "express": "^4.12.2",
     "glob": "^4.3.5",
+    "jade": "^1.9.2",
     "lodash": "^3.0.0",
+    "pretty-data": "^0.40.0",
     "string": "^3.0.0"
   }
 }
