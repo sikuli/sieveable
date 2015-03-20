@@ -1,8 +1,10 @@
 language: node_js
+before_install:
+  - gulp build:tagname
 node_js:
-- '0.12'
-- '0.11'
-- '0.10'
+  - '0.12'
+  - '0.11'
+  - '0.10'
 sudo: false
 notifications:
   email: false
