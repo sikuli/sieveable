@@ -1,5 +1,6 @@
 language: node_js
 before_install:
+  - npm install -g gulp
   - gulp build:tagname
 node_js:
   - '0.12'
