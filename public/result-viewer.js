@@ -26,7 +26,7 @@ var ResultViewer = React.createClass({
                         {result.version}
                     </div>
                     <div className="col-md-2">
-                        <a href={'/view/xml/'+ result.app + '/' + result.version} target="xml">xml</a>
+                        <a href={'/view/xml/'+ result.packageName + '/' + result.version} target="xml">xml</a>
                     </div>
                 </div>
             )
