@@ -9,6 +9,7 @@ chai.should()
 var DB = require('../lib/db/index')
 
 describe('db', function() {
+    this.timeout(20000)
 
     it('can open', function() {
 
