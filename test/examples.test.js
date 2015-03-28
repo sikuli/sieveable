@@ -9,7 +9,7 @@ chai.use(require('chai-things'));
 chai.should();
 
 //TODO: Validate results manually.
-describe('examples: Answers to 10 design by example questions', function () {
+describe('examples: Answers to 10 design by example questions.', function () {
     this.timeout(20000)
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
@@ -113,6 +113,45 @@ describe('examples: Answers to 10 design by example questions', function () {
                     res.body.should.have.length(13)
                     res.body.should.include.something.that.deep.equals(expected_q2[0])
                     res.body.should.include.something.that.deep.equals(expected_q2[1])
+                    done()
+                });
+        })
+
+    it('q3-a it should search for the given example (' + query_xml_q3_a +
+        ' ) and find 4 apps:' +
+        '"com.google.android.apps.translate", versions: "30000023" and "30000028"'
+        + ' "com.google.android.gm", versions: "4720010" and "4800250" ',
+        function (done) {
+            var q = parse(query_xml_q3_a);
+            var expected_q3_a = [{
+                id: 20, packageName: "com.google.android.apps.translate",
+                version: "30000023"
+            },
+                {
+                    id: 21, packageName: "com.google.android.apps.translate",
+                    version: "30000028"
+                },
+                {
+                    id: 22, packageName: "com.google.android.gm",
+                    version: "4720010"
+                },
+                {
+                    id: 23, packageName: "com.google.android.gm",
+                    version: "4800250"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q3_a})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(4)
+                    res.body.should.include.something.that.deep.equals(expected_q3_a[0])
+                    res.body.should.include.something.that.deep.equals(expected_q3_a[1])
+                    res.body.should.include.something.that.deep.equals(expected_q3_a[2])
+                    res.body.should.include.something.that.deep.equals(expected_q3_a[3])
                     done()
                 });
         })
