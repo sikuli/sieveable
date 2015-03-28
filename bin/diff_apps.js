@@ -2,8 +2,7 @@
 
 var program = require('commander'),
     fs = require('fs'),
-    parse = require('../lib/parse'),
-    db = require('../lib/db')
+    parse = require('../lib/parse');
 
 var ensureFileExists = function (file) {
     if (!fs.existsSync(file) || !fs.lstatSync(file).isFile()) {
@@ -23,9 +22,7 @@ program
 
         var text = fs.readFileSync(xml_file, 'utf8')
         var q = parse(text);
-        db.find(q, function (err, result) {
-            console.log(result);
-        })
+        console.log(q)
     });
 program
     .command('*')
