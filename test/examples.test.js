@@ -156,4 +156,44 @@ describe('examples: Answers to 10 design by example questions.', function () {
                 });
         })
 
+    it('q4 it should search for the given example (' + query_xml_q4 +
+        ' ) and find 9 apps, four of which are:' +
+        '"com.facebook.katana", versions: "666397" and "258882"' +
+        ' "com.android.chrome", versions: "1547059"' +
+        ' "com.sgiggle.production", versions: "1386724633',
+        function (done) {
+            var q = parse(query_xml_q4);
+            var expected_q4 = [{
+                id: 9, packageName: "com.facebook.katana",
+                version: "666397"
+            },
+                {
+                    id: 8, packageName: "com.facebook.katana",
+                    version: "258882"
+                },
+                {
+                    id: 2, packageName: "com.android.chrome",
+                    version: "1547059"
+                },
+                {
+                    id: 46, packageName: "com.sgiggle.production",
+                    version: "1386724633"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q4})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(9)
+                    res.body.should.include.something.that.deep.equals(expected_q4[0])
+                    res.body.should.include.something.that.deep.equals(expected_q4[1])
+                    res.body.should.include.something.that.deep.equals(expected_q4[2])
+                    res.body.should.include.something.that.deep.equals(expected_q4[3])
+                    done()
+                });
+        })
+
 })
