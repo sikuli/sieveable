@@ -89,7 +89,7 @@ describe('examples: Answers to 10 design by example questions.', function () {
 
     it('q2 it should search for the given example (' + query_xml_q2 +
         ' ) and find 13 apps, two of which are:' +
-        '"com.google.android.apps.plus", version: "413076433" and "413148638"',
+        '"com.google.android.apps.plus, versions: 413076433 and 413148638"',
         function (done) {
             var q = parse(query_xml_q2);
             var expected_q2 = [{
@@ -119,8 +119,8 @@ describe('examples: Answers to 10 design by example questions.', function () {
 
     it('q3-a it should search for the given example (' + query_xml_q3_a +
         ' ) and find 4 apps:' +
-        '"com.google.android.apps.translate", versions: "30000023" and "30000028"'
-        + ' "com.google.android.gm", versions: "4720010" and "4800250" ',
+        '"com.google.android.apps.translate, versions: 30000023 and 30000028"\n'
+        +'"com.google.android.gm, versions: "4720010 and 4800250"',
         function (done) {
             var q = parse(query_xml_q3_a);
             var expected_q3_a = [{
@@ -158,9 +158,9 @@ describe('examples: Answers to 10 design by example questions.', function () {
 
     it('q4 it should search for the given example (' + query_xml_q4 +
         ' ) and find 9 apps, four of which are:' +
-        '"com.facebook.katana", versions: "666397" and "258882"' +
-        ' "com.android.chrome", versions: "1547059"' +
-        ' "com.sgiggle.production", versions: "1386724633',
+        ' "com.facebook.katana, version: 666397 and 258882"\n' +
+        ' "com.android.chrome, version: 1547059"\n' +
+        ' "com.sgiggle.production, version: 1386724633"\n',
         function (done) {
             var q = parse(query_xml_q4);
             var expected_q4 = [{
@@ -192,6 +192,47 @@ describe('examples: Answers to 10 design by example questions.', function () {
                     res.body.should.include.something.that.deep.equals(expected_q4[1])
                     res.body.should.include.something.that.deep.equals(expected_q4[2])
                     res.body.should.include.something.that.deep.equals(expected_q4[3])
+                    done()
+                });
+        })
+
+    it('q5 it should search for the given example (' + query_xml_q5 +
+        ' ) and find 24 apps, four of which are:\n' +
+        ' "com.facebook.katana, version: 666397"\n' +
+        ' "com.tencent.mm, versions: 361"\n' +
+        ' "com.android.chrome, version: 1547059"\n' +
+        ' "com.whatsapp, version: 48364"',
+        function (done) {
+            var q = parse(query_xml_q5);
+            var expected_q5 = [{
+                id: 9, packageName: "com.facebook.katana",
+                version: "666397"
+            },
+                {
+                    id: 52, packageName: "com.tencent.mm",
+                    version: "361"
+                },
+                {
+                    id: 2, packageName: "com.android.chrome",
+                    version: "1547059"
+                },
+                {
+                    id: 56, packageName: "com.whatsapp",
+                    version: "48364"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q5})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(24)
+                    res.body.should.include.something.that.deep.equals(expected_q5[0])
+                    res.body.should.include.something.that.deep.equals(expected_q5[1])
+                    res.body.should.include.something.that.deep.equals(expected_q5[2])
+                    res.body.should.include.something.that.deep.equals(expected_q5[3])
                     done()
                 });
         })
