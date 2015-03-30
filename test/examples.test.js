@@ -120,7 +120,7 @@ describe('examples: Answers to 10 design by example questions.', function () {
     it('q3-a it should search for the given example (' + query_xml_q3_a +
         ' ) and find 4 apps:' +
         '"com.google.android.apps.translate, versions: 30000023 and 30000028"\n'
-        +'"com.google.android.gm, versions: "4720010 and 4800250"',
+        + '"com.google.android.gm, versions: "4720010 and 4800250"',
         function (done) {
             var q = parse(query_xml_q3_a);
             var expected_q3_a = [{
@@ -233,6 +233,47 @@ describe('examples: Answers to 10 design by example questions.', function () {
                     res.body.should.include.something.that.deep.equals(expected_q5[1])
                     res.body.should.include.something.that.deep.equals(expected_q5[2])
                     res.body.should.include.something.that.deep.equals(expected_q5[3])
+                    done()
+                });
+        })
+
+    it('q6 it should search for the given example (' + query_xml_q6 +
+        ' ) and find 32 apps, four of which are:\n' +
+        ' "com.viber.voip-37, version: 666397"\n' +
+        ' "com.sgiggle.production, versions: 68"\n' +
+        ' "com.outfit7.talkingtom2free, version: 142"\n' +
+        ' "com.google.android.music-1317, version: 48364"',
+        function (done) {
+            var q = parse(query_xml_q5);
+            var expected_q6 = [{
+                id: 54, packageName: "com.viber.voip",
+                version: "37"
+            },
+                {
+                    id: 47, packageName: "com.sgiggle.production",
+                    version: "68"
+                },
+                {
+                    id: 42, packageName: "com.outfit7.talkingtom2free",
+                    version: "142"
+                },
+                {
+                    id: 26, packageName: "com.google.android.music",
+                    version: "1317"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q6})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(32)
+                    res.body.should.include.something.that.deep.equals(expected_q6[0])
+                    res.body.should.include.something.that.deep.equals(expected_q6[1])
+                    res.body.should.include.something.that.deep.equals(expected_q6[2])
+                    res.body.should.include.something.that.deep.equals(expected_q6[3])
                     done()
                 });
         })
