@@ -156,6 +156,41 @@ describe('examples: Answers to 10 design by example questions.', function () {
                 });
         })
 
+    it('q3-b it should search for the given example (' + query_xml_q3_b +
+        ' ) and find 3 apps:' +
+        '"com.google.android.apps.books, version: 20921"\n'
+        + '"com.google.android.music, versions: "1317 and 1514"\n',
+        function (done) {
+            var q = parse(query_xml_q3_b);
+            var expected_q3_b = [{
+                id: 14, packageName: "com.google.android.apps.books",
+                version: "20921"
+            },
+                {
+                    id: 26, packageName: "com.google.android.music",
+                    version: "1317"
+                },
+                {
+                    id: 27, packageName: "com.google.android.music",
+                    version: "1514"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q3_b})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(3)
+                    res.body.should.include.something.that.deep.equals(expected_q3_b[0])
+                    res.body.should.include.something.that.deep.equals(expected_q3_b[1])
+                    res.body.should.include.something.that.deep.equals(expected_q3_b[2])
+                    done()
+                });
+        }
+    )
+
     it('q4 it should search for the given example (' + query_xml_q4 +
         ' ) and find 9 apps, four of which are:' +
         ' "com.facebook.katana, version: 666397 and 258882"\n' +
@@ -295,7 +330,8 @@ describe('examples: Answers to 10 design by example questions.', function () {
                     version: "4720010"
                 },
                 {
-                    id: 24, packageName: "com.google.android.googlequicksearchbox",
+                    id: 24,
+                    packageName: "com.google.android.googlequicksearchbox",
                     version: "300301240"
                 },
                 {
@@ -315,6 +351,29 @@ describe('examples: Answers to 10 design by example questions.', function () {
                     res.body.should.include.something.that.deep.equals(expected_q7[1])
                     res.body.should.include.something.that.deep.equals(expected_q7[2])
                     res.body.should.include.something.that.deep.equals(expected_q7[3])
+                    done()
+                });
+        })
+
+    it('q8 it should search for the given example (' + query_xml_q8 +
+        ' ) and find 1 app:\n' +
+        ' "com.google.android.youtube, version: 5738."\n',
+        function (done) {
+            var q = parse(query_xml_q8);
+            var expected_q8 = [{
+                id: 33, packageName: "com.google.android.youtube",
+                version: "5738"
+            }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q8})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(1)
+                    res.body.should.include.something.that.deep.equals(expected_q8[0])
                     done()
                 });
         })
