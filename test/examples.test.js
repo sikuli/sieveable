@@ -244,7 +244,7 @@ describe('examples: Answers to 10 design by example questions.', function () {
         ' "com.outfit7.talkingtom2free, version: 142"\n' +
         ' "com.google.android.music-1317, version: 48364"',
         function (done) {
-            var q = parse(query_xml_q5);
+            var q = parse(query_xml_q6);
             var expected_q6 = [{
                 id: 54, packageName: "com.viber.voip",
                 version: "37"
@@ -274,6 +274,47 @@ describe('examples: Answers to 10 design by example questions.', function () {
                     res.body.should.include.something.that.deep.equals(expected_q6[1])
                     res.body.should.include.something.that.deep.equals(expected_q6[2])
                     res.body.should.include.something.that.deep.equals(expected_q6[3])
+                    done()
+                });
+        })
+
+    it('q7 it should search for the given example (' + query_xml_q7 +
+        ' ) and find 9 apps, four of which are:\n' +
+        ' "com.android.chrome, version: 1547059"\n' +
+        ' "com.google.android.gm, versions: 4720010"\n' +
+        ' "com.google.android.googlequicksearchbox, version: 300301240"\n' +
+        ' "com.sec.chaton, version: 207103000"',
+        function (done) {
+            var q = parse(query_xml_q7);
+            var expected_q7 = [{
+                id: 2, packageName: "com.android.chrome",
+                version: "1547059"
+            },
+                {
+                    id: 22, packageName: "com.google.android.gm",
+                    version: "4720010"
+                },
+                {
+                    id: 24, packageName: "com.google.android.googlequicksearchbox",
+                    version: "300301240"
+                },
+                {
+                    id: 44, packageName: "com.sec.chaton",
+                    version: "207103000"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q7})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(9)
+                    res.body.should.include.something.that.deep.equals(expected_q7[0])
+                    res.body.should.include.something.that.deep.equals(expected_q7[1])
+                    res.body.should.include.something.that.deep.equals(expected_q7[2])
+                    res.body.should.include.something.that.deep.equals(expected_q7[3])
                     done()
                 });
         })
