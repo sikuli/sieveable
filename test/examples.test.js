@@ -9,7 +9,7 @@ chai.use(require('chai-things'));
 chai.should();
 
 //TODO: Validate results manually.
-describe('examples: Answers to 10 design by example questions.', function () {
+describe('examples: Answers to multiple design by example questions.', function () {
     this.timeout(20000)
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
@@ -24,8 +24,10 @@ describe('examples: Answers to 10 design by example questions.', function () {
     '/../examples/queries/q3-b.xml', 'utf-8');
     var query_xml_q4 = fs.readFileSync(__dirname +
     '/../examples/queries/q4.xml', 'utf-8');
-    var query_xml_q5 = fs.readFileSync(__dirname +
-    '/../examples/queries/q5.xml', 'utf-8');
+    var query_xml_q5_a = fs.readFileSync(__dirname +
+    '/../examples/queries/q5-a.xml', 'utf-8');
+    var query_xml_q5_b = fs.readFileSync(__dirname +
+    '/../examples/queries/q5-b.xml', 'utf-8');
     var query_xml_q6 = fs.readFileSync(__dirname +
     '/../examples/queries/q6.xml', 'utf-8');
     var query_xml_q7 = fs.readFileSync(__dirname +
@@ -231,15 +233,15 @@ describe('examples: Answers to 10 design by example questions.', function () {
                 });
         })
 
-    it('q5 it should search for the given example (' + query_xml_q5 +
+    it('q5-a it should search for the given example (' + query_xml_q5_a +
         ' ) and find 24 apps, four of which are:\n' +
         ' "com.facebook.katana, version: 666397"\n' +
         ' "com.tencent.mm, versions: 361"\n' +
         ' "com.android.chrome, version: 1547059"\n' +
         ' "com.whatsapp, version: 48364"',
         function (done) {
-            var q = parse(query_xml_q5);
-            var expected_q5 = [{
+            var q = parse(query_xml_q5_a);
+            var expected_q5_a = [{
                 id: 9, packageName: "com.facebook.katana",
                 version: "666397"
             },
@@ -257,17 +259,58 @@ describe('examples: Answers to 10 design by example questions.', function () {
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q5})
+                .query({q: query_xml_q5_a})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
                     res.body.should.have.length(24)
-                    res.body.should.include.something.that.deep.equals(expected_q5[0])
-                    res.body.should.include.something.that.deep.equals(expected_q5[1])
-                    res.body.should.include.something.that.deep.equals(expected_q5[2])
-                    res.body.should.include.something.that.deep.equals(expected_q5[3])
+                    res.body.should.include.something.that.deep.equals(expected_q5_a[0])
+                    res.body.should.include.something.that.deep.equals(expected_q5_a[1])
+                    res.body.should.include.something.that.deep.equals(expected_q5_a[2])
+                    res.body.should.include.something.that.deep.equals(expected_q5_a[3])
+                    done()
+                });
+        })
+
+    it('q5-b it should search for the given example (' + query_xml_q5_b +
+        ' ) and find 12 apps, four of which are:\n' +
+        ' "com.facebook.katana, version: 666397"\n' +
+        ' "com.google.android.youtube , versions: 5021"\n' +
+        ' "com.sec.chaton , version: 207103000"\n' +
+        ' "com.tencent.mm, version: 405"',
+        function (done) {
+            var q = parse(query_xml_q5_b);
+            var expected_q5_b = [{
+                id: 9, packageName: "com.facebook.katana",
+                version: "666397"
+            },
+                {
+                    id: 32, packageName: "com.google.android.youtube",
+                    version: "5021"
+                },
+                {
+                    id: 44, packageName: "com.sec.chaton",
+                    version: "207103000"
+                },
+                {
+                    id: 53, packageName: "com.tencent.mm",
+                    version: "405"
+                }]
+            request(app)
+                .get('/q/json')
+                .query({q: query_xml_q5_b})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(12)
+                    res.body.should.include.something.that.deep.equals(expected_q5_b[0])
+                    res.body.should.include.something.that.deep.equals(expected_q5_b[1])
+                    res.body.should.include.something.that.deep.equals(expected_q5_b[2])
+                    res.body.should.include.something.that.deep.equals(expected_q5_b[3])
                     done()
                 });
         })
