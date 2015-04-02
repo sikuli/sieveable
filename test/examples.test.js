@@ -44,6 +44,7 @@ describe('examples: Answers to multiple design by example questions.', function 
         ' ) and find two versions of "com.whatsapp", version: "48364" and "48450"',
         function (done) {
             var q = parse(query_xml_q1_a);
+            var listing_query = '{"developer" : "WhatsApp Inc."}'
             var expected_q1_a = [{
                 id: 56,
                 packageName: "com.whatsapp",
@@ -52,7 +53,7 @@ describe('examples: Answers to multiple design by example questions.', function 
                 {id: 57, packageName: "com.whatsapp", version: "48450"}]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q1_a})
+                .query({ui: query_xml_q1_a, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
@@ -68,6 +69,7 @@ describe('examples: Answers to multiple design by example questions.', function 
         ' ) and find two versions of "com.whatsapp", version: "48364" and "48450"',
         function (done) {
             var q = parse(query_xml_q1_b);
+            var listing_query = '{"developer" : "WhatsApp Inc."}'
             var expected_q1_b = [{
                 id: 56,
                 packageName: "com.whatsapp",
@@ -76,7 +78,7 @@ describe('examples: Answers to multiple design by example questions.', function 
                 {id: 57, packageName: "com.whatsapp", version: "48450"}]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q1_b})
+                .query({ui: query_xml_q1_b, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
@@ -94,6 +96,7 @@ describe('examples: Answers to multiple design by example questions.', function 
         '"com.google.android.apps.plus, versions: 413076433 and 413148638"',
         function (done) {
             var q = parse(query_xml_q2);
+            var listing_query = '{"download" : 500000000}'
             var expected_q2 = [{
                 id: 18,
                 packageName: "com.google.android.apps.plus",
@@ -106,13 +109,13 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q2})
+                .query({ui: query_xml_q2, listing:listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(13)
+                    res.body.should.have.length(6)
                     res.body.should.include.something.that.deep.equals(expected_q2[0])
                     res.body.should.include.something.that.deep.equals(expected_q2[1])
                     done()
@@ -125,6 +128,7 @@ describe('examples: Answers to multiple design by example questions.', function 
         + '"com.google.android.gm, versions: "4720010 and 4800250"',
         function (done) {
             var q = parse(query_xml_q3_a);
+            var listing_query = '{"developer": "Google Inc."}'
             var expected_q3_a = [{
                 id: 20, packageName: "com.google.android.apps.translate",
                 version: "30000023"
@@ -143,7 +147,7 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q3_a})
+                .query({ui: query_xml_q3_a, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
@@ -164,6 +168,7 @@ describe('examples: Answers to multiple design by example questions.', function 
         + '"com.google.android.music, versions: "1317 and 1514"\n',
         function (done) {
             var q = parse(query_xml_q3_b);
+            var listing_query = '{"download": 100000000}'
             var expected_q3_b = [{
                 id: 14, packageName: "com.google.android.apps.books",
                 version: "20921"
@@ -178,7 +183,7 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q3_b})
+                .query({ui: query_xml_q3_b, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
@@ -194,12 +199,13 @@ describe('examples: Answers to multiple design by example questions.', function 
     )
 
     it('q4 it should search for the given example (' + query_xml_q4 +
-        ' ) and find 9 apps, four of which are:' +
+        ' ) and find 6 app, four of which are:' +
         ' "com.facebook.katana, version: 666397 and 258882"\n' +
-        ' "com.android.chrome, version: 1547059"\n' +
+        ' "com.instagram.android, version: 639564"\n' +
         ' "com.sgiggle.production, version: 1386724633"\n',
         function (done) {
             var q = parse(query_xml_q4);
+            var listing_query = '{"category": "Social"}'
             var expected_q4 = [{
                 id: 9, packageName: "com.facebook.katana",
                 version: "666397"
@@ -209,8 +215,8 @@ describe('examples: Answers to multiple design by example questions.', function 
                     version: "258882"
                 },
                 {
-                    id: 2, packageName: "com.android.chrome",
-                    version: "1547059"
+                    id: 36, packageName: "com.instagram.android",
+                    version: "639564"
                 },
                 {
                     id: 46, packageName: "com.sgiggle.production",
@@ -218,13 +224,13 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q4})
+                .query({ui: query_xml_q4, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(9)
+                    res.body.should.have.length(6)
                     res.body.should.include.something.that.deep.equals(expected_q4[0])
                     res.body.should.include.something.that.deep.equals(expected_q4[1])
                     res.body.should.include.something.that.deep.equals(expected_q4[2])
@@ -234,20 +240,21 @@ describe('examples: Answers to multiple design by example questions.', function 
         })
 
     it('q5-a it should search for the given example (' + query_xml_q5_a +
-        ' ) and find 24 apps, four of which are:\n' +
-        ' "com.facebook.katana, version: 666397"\n' +
-        ' "com.tencent.mm, versions: 361"\n' +
+        ' ) and find 10 apps, four of which are:\n' +
+        ' "com.viber.voip-47, version: 47"\n' +
+        ' "com.sec.chaton, versions: 207103000"\n' +
         ' "com.android.chrome, version: 1547059"\n' +
         ' "com.whatsapp, version: 48364"',
         function (done) {
             var q = parse(query_xml_q5_a);
+            var listing_query = '{"category": "Communication"}'
             var expected_q5_a = [{
-                id: 9, packageName: "com.facebook.katana",
-                version: "666397"
+                id: 55, packageName: "com.viber.voip",
+                version: "47"
             },
                 {
-                    id: 52, packageName: "com.tencent.mm",
-                    version: "361"
+                    id: 44, packageName: "com.sec.chaton",
+                    version: "207103000"
                 },
                 {
                     id: 2, packageName: "com.android.chrome",
@@ -259,13 +266,13 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q5_a})
+                .query({ui: query_xml_q5_a, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(24)
+                    res.body.should.have.length(10)
                     res.body.should.include.something.that.deep.equals(expected_q5_a[0])
                     res.body.should.include.something.that.deep.equals(expected_q5_a[1])
                     res.body.should.include.something.that.deep.equals(expected_q5_a[2])
@@ -275,20 +282,21 @@ describe('examples: Answers to multiple design by example questions.', function 
         })
 
     it('q5-b it should search for the given example (' + query_xml_q5_b +
-        ' ) and find 12 apps, four of which are:\n' +
-        ' "com.facebook.katana, version: 666397"\n' +
-        ' "com.google.android.youtube , versions: 5021"\n' +
+        ' ) and find 4 apps:\n' +
+        ' "com.facebook.orca, version: 936981"\n' +
+        ' "com.sec.chaton , versions: 302115000"\n' +
         ' "com.sec.chaton , version: 207103000"\n' +
         ' "com.tencent.mm, version: 405"',
         function (done) {
             var q = parse(query_xml_q5_b);
+            var listing_query = '{"category": "Communication"}'
             var expected_q5_b = [{
-                id: 9, packageName: "com.facebook.katana",
-                version: "666397"
+                id: 11, packageName: "com.facebook.orca",
+                version: "936981"
             },
                 {
-                    id: 32, packageName: "com.google.android.youtube",
-                    version: "5021"
+                    id: 45, packageName: "com.sec.chaton",
+                    version: "302115000"
                 },
                 {
                     id: 44, packageName: "com.sec.chaton",
@@ -300,13 +308,13 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q5_b})
+                .query({ui: query_xml_q5_b, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(12)
+                    res.body.should.have.length(4)
                     res.body.should.include.something.that.deep.equals(expected_q5_b[0])
                     res.body.should.include.something.that.deep.equals(expected_q5_b[1])
                     res.body.should.include.something.that.deep.equals(expected_q5_b[2])
@@ -316,13 +324,15 @@ describe('examples: Answers to multiple design by example questions.', function 
         })
 
     it('q6 it should search for the given example (' + query_xml_q6 +
-        ' ) and find 32 apps, four of which are:\n' +
+        ' ) and find 18 apps, four of which are:\n' +
         ' "com.viber.voip-37, version: 666397"\n' +
         ' "com.sgiggle.production, versions: 68"\n' +
         ' "com.outfit7.talkingtom2free, version: 142"\n' +
         ' "com.google.android.music-1317, version: 48364"',
         function (done) {
-            var q = parse(query_xml_q6);
+            var q = parse(query_xml_q6)
+            var listing_query = '{"download": 100000000}'
+
             var expected_q6 = [{
                 id: 54, packageName: "com.viber.voip",
                 version: "37"
@@ -341,13 +351,13 @@ describe('examples: Answers to multiple design by example questions.', function 
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q6})
+                .query({ui: query_xml_q6, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(32)
+                    res.body.should.have.length(18)
                     res.body.should.include.something.that.deep.equals(expected_q6[0])
                     res.body.should.include.something.that.deep.equals(expected_q6[1])
                     res.body.should.include.something.that.deep.equals(expected_q6[2])
@@ -357,39 +367,40 @@ describe('examples: Answers to multiple design by example questions.', function 
         })
 
     it('q7 it should search for the given example (' + query_xml_q7 +
-        ' ) and find 9 apps, four of which are:\n' +
+        ' ) and find 5 apps, four of which are:\n' +
         ' "com.android.chrome, version: 1547059"\n' +
-        ' "com.google.android.gm, versions: 4720010"\n' +
-        ' "com.google.android.googlequicksearchbox, version: 300301240"\n' +
-        ' "com.sec.chaton, version: 207103000"',
+        ' "om.sec.chaton, versions: 207103000"\n' +
+        ' "com.viber.voip, version: 37"\n' +
+        ' "com.viber.voip, version: 47"',
         function (done) {
             var q = parse(query_xml_q7);
+            var listing_query = '{"download": 100000000}'
             var expected_q7 = [{
                 id: 2, packageName: "com.android.chrome",
                 version: "1547059"
             },
                 {
-                    id: 22, packageName: "com.google.android.gm",
-                    version: "4720010"
-                },
-                {
-                    id: 24,
-                    packageName: "com.google.android.googlequicksearchbox",
-                    version: "300301240"
-                },
-                {
                     id: 44, packageName: "com.sec.chaton",
                     version: "207103000"
+                },
+                {
+                    id: 54,
+                    packageName: "com.viber.voip",
+                    version: "37"
+                },
+                {
+                    id: 55, packageName: "com.viber.voip",
+                    version: "47"
                 }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q7})
+                .query({ui: query_xml_q7, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(9)
+                    res.body.should.have.length(5)
                     res.body.should.include.something.that.deep.equals(expected_q7[0])
                     res.body.should.include.something.that.deep.equals(expected_q7[1])
                     res.body.should.include.something.that.deep.equals(expected_q7[2])
@@ -402,14 +413,15 @@ describe('examples: Answers to multiple design by example questions.', function 
         ' ) and find 1 app:\n' +
         ' "com.google.android.youtube, version: 5738."\n',
         function (done) {
-            var q = parse(query_xml_q8);
+            var q = parse(query_xml_q8)
+            var listing_query = '{"total_permissions": 16}'
             var expected_q8 = [{
                 id: 33, packageName: "com.google.android.youtube",
                 version: "5738"
             }]
             request(app)
                 .get('/q/json')
-                .query({q: query_xml_q8})
+                .query({ui: query_xml_q8, listing: listing_query})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
