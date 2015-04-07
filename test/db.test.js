@@ -54,7 +54,7 @@ describe('db', function() {
 
             var env = {}
 
-            var findBy = require('../lib/findBy/example')
+            var findBy = require('../lib/findBy/ui')
 
             before(function() {
                 return findBy
