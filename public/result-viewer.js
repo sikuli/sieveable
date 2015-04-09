@@ -33,7 +33,14 @@ var ResultViewer = React.createClass({
 
         })
 
+        if (resultNodes.length > 0){
+            var total = resultNodes.length
+            var n = Math.min(total, 10)
+            var summary = <span>Showing {n} of {total} results</span>
+        }
+
     return (<div className="resultList">
+                {summary}
                 {resultNodes}
            </div>)
     }
