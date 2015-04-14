@@ -1,8 +1,6 @@
-var expect = require('chai').expect
-var inspect = require('eyes').inspector()
-
-
-var parse = require('../lib/parse')
+var expect = require('chai').expect,
+    eyes = require('eyes'),
+    parse = require('../lib/parse')
 
 describe('parse', function () {
 
@@ -15,7 +13,16 @@ describe('parse', function () {
             name: 'LinearLayout',
             count: 1
         }
-        expect(actual).to.deep.equal(expected);
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
     })
 
     it('A simple tag with an attribute', function () {
@@ -27,11 +34,20 @@ describe('parse', function () {
             attributes: [{
                 name: 'android:layout_width',
                 value: 'match_parent'
-            }            
+            }
             ],
             count: 1
         }
-        expect(actual).to.deep.equal(expected)
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
     })
 
     it('A parent-child relationship', function () {
@@ -49,8 +65,17 @@ describe('parse', function () {
                 count: 1
             }],
             count: 1
-        }        
-        expect(actual).to.deep.equal(expected)
+        }
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
 
     })
 
@@ -71,7 +96,16 @@ describe('parse', function () {
             ],
             count: 1
         }
-        expect(actual).to.deep.equal(expected)
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
     })
 
     it('A parent with exactly two children that have different attributes', function () {
@@ -106,9 +140,18 @@ describe('parse', function () {
                     ],
                     count: 1
                 }],
-                count: 1
+            count: 1
         }
-        expect(actual).to.deep.equal(expected)
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
 
     })
 
@@ -162,7 +205,16 @@ describe('parse', function () {
             name: 'ImageView',
             count: 1
         }]
-        expect(actual).to.deep.equal(expected)
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
     })
 
     it('Four siblings, two of which have similar tags and two similar attributes', function () {
@@ -187,9 +239,112 @@ describe('parse', function () {
                 {name: "android:layout_width", value: "wrap_content"}
             ],
             count: 2
-        }        
+        }
         ]
-        expect(actual).to.deep.equal(expected)
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
+    })
+
+    it('A parent with one child, which is also a parent of another child', function () {
+        var q = '<LinearLayout> ' +
+            '<FrameLayout> ' +
+            '<Button></Button> ' +
+            '</FrameLayout>' +
+            '</LinearLayout>'
+        var actual = parse(q)
+        var expected = {
+            type: 'tag',
+            name: 'LinearLayout',
+            count: 1,
+            children: [{
+                type: 'tag',
+                name: 'FrameLayout',
+                count: 1,
+                children: [
+                    {
+                        type: 'tag',
+                        name: 'Button',
+                        count: 1
+                    }
+                ]
+            }
+            ]
+        }
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
+
+    })
+
+    it('A parent with one child, which is also a parent of another child, and every node has its own attributes', function () {
+        var q = '<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"> ' +
+            '<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"> ' +
+            '<Button android:layout_width="wrap_content" android:layout_height="wrap_content"/> ' +
+            '</FrameLayout>' +
+            '</LinearLayout>'
+        var actual = parse(q)
+        var expected = {
+            type: 'tag',
+            name: 'LinearLayout',
+            attributes: [
+                {name: "android:layout_height", value: "wrap_content"},
+                {name: "android:layout_width", value: "wrap_content"}
+            ],
+            count: 1,
+            children: [{
+                type: 'tag',
+                name: 'FrameLayout',
+                attributes: [
+                    {name: "android:layout_height", value: "wrap_content"},
+                    {name: "android:layout_width", value: "wrap_content"}
+                ],
+                count: 1,
+                children: [
+                    {
+                        type: 'tag',
+                        name: 'Button',
+                        attributes: [
+                            {
+                                name: "android:layout_height",
+                                value: "wrap_content"
+                            },
+                            {
+                                name: "android:layout_width",
+                                value: "wrap_content"
+                            }
+                        ],
+                        count: 1
+                    }
+                ]
+            }
+            ]
+        }
+        try {
+            expect(actual).to.deep.equal(expected)
+        }
+        catch (e) {
+            console.log('Expected:')
+            eyes.inspect(expected)
+            console.log('Actual:')
+            eyes.inspect(actual)
+            throw e
+        }
+
     })
 
 
