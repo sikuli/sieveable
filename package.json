@@ -12,11 +12,14 @@
     "chai": "^1.10.0",
     "chai-things": "^0.2.0",
     "debug": "^2.1.1",
+    "decompress-tarbz2": "^3.1.0",
     "gulp": "^3.8.11",
     "mocha": "^2.1.0",
     "pretty-data": "^0.40.0",
+    "run-sequence": "^1.0.2",
     "should": "^5.2.0",
-    "supertest": "^0.15.0"
+    "supertest": "^0.15.0",
+    "vinyl-assign": "^1.1.0"
   },
   "bin": {
     "apps": "./bin/diff_apps.js"
@@ -37,6 +40,7 @@
     "pretty-data": "^0.40.0",
     "through2": "^0.6.3",
     "vinyl": "^0.4.6",
+    "xml2js": "^0.4.6",
     "xmlbuilder": "^2.6.2"
   }
 }
