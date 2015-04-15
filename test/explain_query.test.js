@@ -1,5 +1,6 @@
-var should = require('chai').should(),
-    explainQuery = require('../lib/explain_query');
+var should = require('chai').should();
+var explainQuery = require('../lib/explain_query');
+var eyes = require('eyes');
 
 describe('explain query', function () {
 
@@ -8,14 +9,23 @@ describe('explain query', function () {
             "WHERE\n" +
             '<LinearLayout android:orientation="vertical"></LinearLayout>\n' +
             "RETURN app";
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
             ui: '<LinearLayout android:orientation="vertical"/>',
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
@@ -24,14 +34,23 @@ describe('explain query', function () {
             "WHERE\n" +
             '<Button $exactly="70"/>' +
             "RETURN app";
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
             ui: '<Button $exactly="70"/>',
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
@@ -43,7 +62,7 @@ describe('explain query', function () {
             '<ProgressBar></ProgressBar>\n' +
             '</LinearLayout>\n' +
             'RETURN app';
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
             ui: '<LinearLayout>' +
@@ -53,7 +72,16 @@ describe('explain query', function () {
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
@@ -63,15 +91,24 @@ describe('explain query', function () {
             '<store-category>Communication</store-category>\n' +
             '<developer>Google Inc.</developer>\n' +
             'RETURN app';
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
-            listing: '<store-category>Communication</store-category>' +
-            '<developer>Google Inc.</developer>',
+            listing: '<cat>Communication</cat>' +
+            '<crt>Google Inc.</crt>',
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
@@ -82,7 +119,7 @@ describe('explain query', function () {
             '<activity $min="20" />\n' +
             '<uses-sdk android:minSdkVersion="11"/> \n' +
             'RETURN app';
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
             manifest: '<uses-permission android:name="android.permission.CAMERA"/>' +
@@ -91,7 +128,16 @@ describe('explain query', function () {
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
@@ -101,7 +147,7 @@ describe('explain query', function () {
             '<Code type="invoked" class="android.hardware.Camera" method="takePicture" />\n' +
             '<Code type="defined" method="createCameraPreviewSession" />\n' +
             'RETURN app';
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
             code: '<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>' +
@@ -109,7 +155,16 @@ describe('explain query', function () {
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
@@ -121,17 +176,26 @@ describe('explain query', function () {
             '<Button $exactly="70"/>\n' +
             '<Code type="invoked" class="android.hardware.Camera" method="takePicture" />\n' +
             'RETURN app';
-        var result = explainQuery(query);
+        var actual = explainQuery(query);
         var expected = {
             match: ['app'],
-            listing:'<downloads>10000</downloads>',
+            listing:'<dct>10000</dct>',
             ui:'<Button $exactly="70"/>',
             manifest:'<uses-permission android:name="android.permission.CAMERA"/>',
             code:'<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>',
             return: ['app'],
             limit: 100
         };
-        result.should.deep.equal(expected);
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
         done();
     })
 
