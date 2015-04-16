@@ -51,10 +51,11 @@ gulp.task('insert:listing', function () {
             var doc = JSON.parse(file.contents.toString());
             mongo.upsertOne('listings', doc, doc)
                 .then(function () {
-                    cb()
+                    mongo.close();
+                    cb();
                 })
                 .error(function (e) {
-                    console.error(e.message);
+                    console.error('Error in insert:listing task: ' + e.message);
                 });
             ;
         }));
@@ -67,33 +68,30 @@ gulp.task('insert:listingId', function () {
             var id = {id: doc.n + '-' + doc.verc};
             mongo.upsertOne('listings', doc, id)
                 .then(function () {
-                    cb()
+                    mongo.close();
+                    cb();
                 })
                 .error(function (e) {
-                    console.error(e.message);
+                    console.error('Error in insert:listingId task: ' + e.message);
                 });
             ;
         }));
 });
 
-gulp.task('mongoIndex', function () {
+gulp.task('mongoIndex', function (done) {
     mongo.createIndex('listings', {id: 1}, {unique: true})
         .then(function () {
             mongo.close();
         })
         .error(function (e) {
-            console.error(e.message);
+            console.error('Error in mongoIndex task: ' + e.message);
         });
 });
 
-gulp.task('close:connection', function () {
-    mongo.close();
-    console.log("MongoDB connection closed.");
-})
 
-gulp.task('load:db', ['insert:listing', 'insert:listingId', 'mongoIndex', 'close:connection']);
+gulp.task('load:db', ['insert:listing', 'insert:listingId', 'mongoIndex']);
 
 gulp.task('default', function (callback) {
-    runSequence('extract:archives', 'build:tagname', 'start:db',
+    runSequence('extract:archives', 'build:tagname',
         'load:db', callback);
 });
