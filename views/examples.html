@@ -38,12 +38,34 @@ RETURN app
 <!--
 MATCH app
 WHERE
-    <downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>
-    <LinearLayout>
-        <ImageButton></ImageButton>
-        <ImageButton></ImageButton>
-        <ImageButton></ImageButton>
-    </LinearLayout>
+        <uses-permission name="android.permission.RECORD_AUDIO"/>
+        <Button>
+                <callpath from_method="onClick"/>
+        </Button>
+RETURN app, Button
+-->
+    </div>
+</div>
+
+<div class="example">
+    <div class="query">
+<!--
+MATCH app
+WHERE
+    <callpath from_method="onRestart" uses-permission="android.permission.CAMERA/>
+RETURN app
+-->
+    </div>
+</div>
+
+
+<div class="example">
+    <div class="query">
+<!--
+MATCH app
+WHERE
+    <package-name>com.example.instantreplay</package-name>
+    <call creates="CameraActivity"/>
 RETURN app
 -->
     </div>
