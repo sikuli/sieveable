@@ -1,13 +1,17 @@
 <div class="example">
     <div class="query">
+
 <!--
+MATCH app
+WHERE
 <LinearLayout>
-    <ImageButton></ImageButton>
-    <ImageButton></ImageButton>
-    <ImageButton></ImageButton>
-    <ImageButton></ImageButton>
-    <ImageButton></ImageButton>
+   <ImageButton></ImageButton>
+   <ImageButton></ImageButton>
+   <ImageButton></ImageButton>
+   <ImageButton></ImageButton>
+   <ImageButton></ImageButton>
 </LinearLayout>
+RETURN app
 -->
     </div>
 </div>
@@ -15,11 +19,32 @@
 <div class="example">
     <div class="query">
 <!--
-<LinearLayout>
-    <ImageButton></ImageButton>
-    <ImageButton></ImageButton>
-    <ImageButton></ImageButton>
-</LinearLayout>
+MATCH app
+WHERE
+    <package-name>com.android.chrome</package-name>
+    <LinearLayout>
+        <ImageButton></ImageButton>
+        <ImageButton></ImageButton>
+        <ImageButton></ImageButton>
+    </LinearLayout>
+RETURN app
+-->
+    </div>
+</div>
+
+
+<div class="example">
+    <div class="query">
+<!--
+MATCH app
+WHERE
+    <downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>
+    <LinearLayout>
+        <ImageButton></ImageButton>
+        <ImageButton></ImageButton>
+        <ImageButton></ImageButton>
+    </LinearLayout>
+RETURN app
 -->
     </div>
 </div>
