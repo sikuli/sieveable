@@ -8,8 +8,6 @@ var exec = require('child_process').exec;
 var buildIndex = require('./lib/findBy/tagname/searchIndex/build-stream');
 var Promise = require("bluebird");
 var mongo = require('./lib/db/connection');
-var fs = require("fs");
-Promise.promisifyAll(fs);
 
 gulp.task('build:tagname', function () {
 
@@ -48,22 +46,54 @@ gulp.task('start:db', function (callback) {
 })
 
 gulp.task('insert:listing', function () {
-    gulp.src('fixtures/listing/*.json').pipe(new through2.obj(function (file, enc, cb) {
-        var doc = JSON.parse(file.contents.toString());
-        mongo.upsertOne('listings', doc);
-        cb();
-    }));
-
+    gulp.src('fixtures/listing/*.json')
+        .pipe(new through2.obj(function (file, enc, cb) {
+            var doc = JSON.parse(file.contents.toString());
+            mongo.upsertOne('listings', doc, doc)
+                .then(function () {
+                    cb()
+                })
+                .error(function (e) {
+                    console.error(e.message);
+                });
+            ;
+        }));
 })
+
+gulp.task('insert:listingId', function () {
+    gulp.src('fixtures/listing/*.json')
+        .pipe(new through2.obj(function (file, enc, cb) {
+            var doc = JSON.parse(file.contents.toString());
+            var id = {id: doc.n + '-' + doc.verc};
+            mongo.upsertOne('listings', doc, id)
+                .then(function () {
+                    cb()
+                })
+                .error(function (e) {
+                    console.error(e.message);
+                });
+            ;
+        }));
+});
+
+gulp.task('mongoIndex', function () {
+    mongo.createIndex('listings', {id: 1}, {unique: true})
+        .then(function () {
+            mongo.close();
+        })
+        .error(function (e) {
+            console.error(e.message);
+        });
+});
 
 gulp.task('close:connection', function () {
     mongo.close();
     console.log("MongoDB connection closed.");
 })
 
-gulp.task('load:db', ['insert:listing', 'close:connection']);
+gulp.task('load:db', ['insert:listing', 'insert:listingId', 'mongoIndex', 'close:connection']);
 
 gulp.task('default', function (callback) {
     runSequence('extract:archives', 'build:tagname', 'start:db',
-        'insert:listing', 'close:connection', callback);
+        'load:db', callback);
 });
