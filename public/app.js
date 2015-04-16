@@ -1,4 +1,6 @@
-var defaultQuery = "<LinearLayout>\n\t<ImageButton></ImageButton>\n\t<ImageButton></ImageButton>\n</LinearLayout>"
+var defaultQuery = 'MATCH app\n' + 'WHERE\n' +
+    '<LinearLayout>\n\t<ImageButton></ImageButton>\n\t<ImageButton></ImageButton>\n</LinearLayout>\n' +
+        'RETURN app'
 
 var App = React.createClass({
 
@@ -7,12 +9,12 @@ var App = React.createClass({
 
     handleSearch: function(){
 
-        var query_xml = this.refs.editor.getValue()
-        console.log('submit query:', query_xml)
+        var query_text = this.refs.editor.getValue()
+        console.log('submit query:', query_text)
 
         $.ajax({
             url: '/q/json',
-            data: {q: query_xml},
+            data: {queryText: query_text},
             dataType: 'json',
             success: function(data) {
                 console.log('got search result from server:', data)
