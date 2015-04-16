@@ -3,6 +3,8 @@ before_install:
   - npm install -g gulp
 before_script:
   - gulp build:tagname
+services:
+  - mongodb
 node_js:
   - '0.12'
   - '0.11'
