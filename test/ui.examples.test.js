@@ -5,6 +5,7 @@ var app = require('../lib/server/server');
 var should = require('should');
 var chai = require("chai");
 var pd = require('pretty-data').pd;
+var eyes = require('eyes');
 
 chai.use(require('chai-things'));
 chai.should();
