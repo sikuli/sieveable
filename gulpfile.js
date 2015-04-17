@@ -48,16 +48,19 @@ gulp.task('start:db', function (callback) {
 gulp.task('insert:listing', function () {
     gulp.src('fixtures/listing/*.json')
         .pipe(new through2.obj(function (file, enc, cb) {
-            var doc = JSON.parse(file.contents.toString());
+            var doc = JSON.parse(file.contents);
+            console.log(doc)
             mongo.upsertOne('listings', doc, doc)
                 .then(function () {
-                    mongo.close();
+                    //mongo.close();
                     cb();
                 })
                 .error(function (e) {
                     console.error('Error in insert:listing task: ' + e.message);
                 });
             ;
+        }, function(){
+            mongo.close()
         }));
 })
 
@@ -68,20 +71,21 @@ gulp.task('insert:listingId', function () {
             var id = {id: doc.n + '-' + doc.verc};
             mongo.upsertOne('listings', doc, id)
                 .then(function () {
-                    mongo.close();
                     cb();
                 })
                 .error(function (e) {
                     console.error('Error in insert:listingId task: ' + e.message);
                 });
             ;
-        }));
+        }, function(){
+            mongo.close()
+        }))
 });
 
 gulp.task('mongoIndex', function (done) {
     mongo.createIndex('listings', {id: 1}, {unique: true})
         .then(function () {
-            mongo.close();
+            //mongo.close();
         })
         .error(function (e) {
             console.error('Error in mongoIndex task: ' + e.message);
@@ -89,7 +93,9 @@ gulp.task('mongoIndex', function (done) {
 });
 
 
-gulp.task('load:db', ['insert:listing', 'insert:listingId', 'mongoIndex']);
+gulp.task('load:db', function(callback) {
+    runSequence('insert:listing', 'insert:listingId', 'mongoIndex', callback)
+});
 
 gulp.task('default', function (callback) {
     runSequence('extract:archives', 'build:tagname',
