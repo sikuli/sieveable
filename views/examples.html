@@ -1,5 +1,44 @@
 <div class="example">
     <div class="query">
+        <!--
+        <callpath from="onRestart"/>
+        -->
+    </div>
+</div>
+
+<div class="example">
+    <div class="query">
+<!--
+<callpath from="onClick"
+uses-permission="AUDIO"/>
+-->
+    </div>
+</div>
+
+<div class="example">
+    <div class="query">
+<!--
+<callpath from="^on"
+uses-permission="AUDIO"/>
+-->
+    </div>
+</div>
+
+
+<div class="example">
+    <div class="query">
+<!--
+MATCH app
+WHERE
+<callpath from="onRestart"
+   permission="CAMERA"/>
+RETURN app
+-->
+    </div>
+</div>
+
+<div class="example">
+    <div class="query">
 
 <!--
 MATCH app

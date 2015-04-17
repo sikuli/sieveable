@@ -16,25 +16,6 @@ var findByDataset = require('../lib/findBy/dataset')
 
 describe('#Perm' , function () {
 
-    it('it should integrate well with the whole thing',
-        function (done) {
-            var listing_query = '<callpath from="^on" uses-permission="AUDIO"></callpath>'
-            var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
-            var expected = []
-            request(app)
-                .get('/q/json')
-                .query({queryText: q})
-                .set('Accept', 'application/json')
-                .expect(200)
-                .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(10)
-                    done()
-                });
-        })
-
-    // mock 'env' that doesn't do anything
     var env = {
         apps: require('../lib/db/apps')
     }
@@ -49,6 +30,25 @@ describe('#Perm' , function () {
             })
     })
 
+    //it('it should integrate well with the whole thing',
+    //    function (done) {
+    //        var listing_query = '<callpath from="^on" uses-permission="AUDIO"></callpath>'
+    //        var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
+    //        var expected = []
+    //        request(app)
+    //            .get('/q/json')
+    //            .query({queryText: q})
+    //            .set('Accept', 'application/json')
+    //            .expect(200)
+    //            .end(function (err, res) {
+    //                should.not.exist(err)
+    //                should.exist(res.body)
+    //                res.body.should.have.length(10)
+    //                done()
+    //            });
+    //    })
+
+
     it('it should run independently',
         function () {
             var options = {scope: all}
@@ -56,7 +56,7 @@ describe('#Perm' , function () {
             return findByPerm
                 .find(env, query, options)
                 .then(function(results){
-                    inspect(results.length)
+                    inspect(results)
                 })
 
         })
