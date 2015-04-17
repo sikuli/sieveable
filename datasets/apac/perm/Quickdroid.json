@@ -1,0 +1,337 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.quickdroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+    
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.quickdroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.quickdroid.Quickdroid.9",
+        "methodName": "onFocusChange"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.webkit.WebView",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.quickdroid",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.quickdroid.Quickdroid"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake7",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "label112",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListPreference",
+          "id": "__fake47",
+          "text": "UNKNOWN TEXT",
+          "file": "preferences.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "search_widget_thumbnail3",
+          "text": "UNKNOWN TEXT",
+          "file": "search_widget.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "PreferenceScreen",
+          "id": "__fake42",
+          "text": "UNKNOWN TEXT",
+          "file": "preferences.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "search_plate2",
+          "text": "UNKNOWN TEXT",
+          "file": "search_widget.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "com.quickdroid.utils.NumberPickerPreference",
+          "id": "__fake46",
+          "text": "UNKNOWN TEXT",
+          "file": "preferences.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "infoText113",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake9",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "search_widget_text4",
+          "text": "UNKNOWN TEXT",
+          "file": "search_widget.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "clearSearchText13",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noSuggestions38",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "android.gesture.GestureOverlayView",
+          "id": "gestures35",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "thumbnail110",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "textContainer111",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBoxPreference",
+          "id": "__fake45",
+          "text": "UNKNOWN TEXT",
+          "file": "preferences.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake109",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake37",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "search_widget.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "com.quickdroid.SearchTextView",
+          "id": "searchText10",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "speechRecognizer12",
+          "text": "UNKNOWN TEXT",
+          "file": "quickdroid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "PreferenceCategory",
+          "id": "__fake43",
+          "text": "UNKNOWN TEXT",
+          "file": "preferences.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.quickdroid.HistoryAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "label112",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "infoText113",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "thumbnail110",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "textContainer111",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake109",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.quickdroid.ResultAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "label112",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "infoText113",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "thumbnail110",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "textContainer111",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake109",
+          "text": "UNKNOWN TEXT",
+          "file": "launchable.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

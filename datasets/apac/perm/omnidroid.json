@@ -1,0 +1,1884 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.omnidroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.omnidroid.view.simple.Main",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.omnidroid.view.simple.Settings"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.omnidroid.view.simple.LogTabs",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.omnidroid.view.simple.Settings"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.omnidroid.view.simple.SavedRules",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.omnidroid.view.simple.Settings"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.omnidroid.view.simple.SavedRules",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.omnidroid.view.simple.ChooseRootEvent"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.omnidroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.view.simple.DlgActionInput.DlgAttributes.1",
+        "methodName": "onItemClick"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.webkit.WebView",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.omnidroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.HandlerService",
+        "methodName": "onStart"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.HandlerService",
+        "methodName": "addGlobalAttributesToIntent"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.HandlerService",
+        "methodName": "insertLocationData"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.omnidroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.external.actions.OmniActionService",
+        "methodName": "onStart"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.external.actions.OmniActionService",
+        "methodName": "turnOffWifi"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.WifiManager",
+        "methodName": "setWifiEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.omnidroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.external.actions.OmniActionService",
+        "methodName": "onStart"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.controller.external.actions.OmniActionService",
+        "methodName": "turnOffWifi"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.IWifiManager.Stub.Proxy",
+        "methodName": "setWifiEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.omnidroid",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.view.simple.model.ModelLog",
+        "methodName": "getLog"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.view.simple.DlgLog",
+        "methodName": "onCreate"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.model.CoreEventLogsDbHelper",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.model.LogDb",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.model.db.DbMigration",
+        "methodName": "migrateToLatest"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.model.db.DbMigration",
+        "methodName": "initialVersion"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 7
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "java.net.URLConnection",
+        "methodName": "getInputStream"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 9
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.view.simple.DlgLog",
+        "methodName": "initializeUI"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.view.simple.App",
+        "methodName": "runTask"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 8
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.omnidroid.model.db.DbHelper",
+        "methodName": "onUpgrade"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.omnidroid",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.Main"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake48",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake49",
+          "text": "Welcome to Omnidroid",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnLogs57",
+          "text": "Logs",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnHelp58",
+          "text": "Help",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "__fake51",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake52",
+          "text": "Omnidroid has been disabled.",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnCreateRule55",
+          "text": "Create Rule",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnViewRules56",
+          "text": "View Rules",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_main_omnidroidDisabled50",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.ChooseFiltersAndActions"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake176",
+          "text": "Select an item from the list below, then add filters or actions:",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_choosefiltersandactions_btnSaveRule184",
+          "text": "Save",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake175",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_choosefiltersandactions_btnAddFilter182",
+          "text": "Add Filter",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_choosefiltersandactions_llBottomButtons180",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_choosefiltersandactions_btnAddAction183",
+          "text": "Add Action",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_choosefiltersandactions_frame_list177",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_choosefiltersandactions_listview178",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_choosefiltersandactions_llButtons181",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.SavedRules.RuleListAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "actions_add197",
+          "text": "Add Action",
+          "file": "actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_ll_main127",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_rule_name_tv_info_name84",
+          "text": "Enter a rule name below:",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_login_input_btnOk130",
+          "text": "OK",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_input_btnOk139",
+          "text": "OK",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake176",
+          "text": "Select an item from the list below, then add filters or actions:",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_logs_main70",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_rule_name_btnOk89",
+          "text": "OK",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_lgos_frame_list72",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake2",
+          "text": "UNKNOWN TEXT",
+          "file": "save_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_log_info114",
+          "text": "",
+          "file": "activity_dlg_log.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text144",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_saved_rules.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake48",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "activity_dlg_rule_name_et_rule_description87",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_input_btnHelp141",
+          "text": "Help",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "save_dialog_name3",
+          "text": "UNKNOWN TEXT",
+          "file": "save_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_login_input_btnHelp131",
+          "text": "Help",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake136",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_ll_main134",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_choosefiltersandactions_btnSaveRule184",
+          "text": "Save",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "filters_list8",
+          "text": "UNKNOWN TEXT",
+          "file": "filters.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake122",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "filters_add_data5",
+          "text": "UNKNOWN TEXT",
+          "file": "filters_add_data.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_list_selector_ll_main115",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_chooserootevent_listview173",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake175",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_choosefiltersandactions_btnAddFilter182",
+          "text": "Add Filter",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_filter_input_btnHelp124",
+          "text": "Help",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake49",
+          "text": "Welcome to Omnidroid",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "activity_dlg_rule_name_et_rule_name85",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake83",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_log_ll_main113",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_log.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_filter_input_llDynamicContent121",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_dlg_list_selector_frame_list117",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ExpandableListView",
+          "id": "list75",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TabHost",
+          "id": "__fake60",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Preference",
+          "id": "__fake18",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_settings.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_llDynamicContent137",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake170",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake129",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_chooserootevent_frame_list172",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnLogs57",
+          "text": "Logs",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_filter_input_ll_main120",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_list_selector_tv_info1116",
+          "text": "",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_choosefiltersandactions_llBottomButtons180",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_filter_input_btnOk123",
+          "text": "OK",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake135",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake171",
+          "text": "Pick a root event from the list below to start building your rule:",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_logs_llDynamicContent80",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnHelp58",
+          "text": "Help",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_choosefiltersandactions_btnAddAction183",
+          "text": "Add Action",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "dlg_attributes_for_action_listview14",
+          "text": "UNKNOWN TEXT",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_rule_name_tv_info_description86",
+          "text": "Enter a rule description below:",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "actions_save198",
+          "text": "Save",
+          "file": "actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "actions_list196",
+          "text": "UNKNOWN TEXT",
+          "file": "actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake61",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "filters_done10",
+          "text": "Done",
+          "file": "filters.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TabWidget",
+          "id": "__fake63",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "checked_list41",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_saved_rules.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake82",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "filters_add9",
+          "text": "Add Filter",
+          "file": "filters.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_logs_listview73",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "dlg_attributes_for_action_tv_info112",
+          "text": "",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "__fake51",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "PreferenceScreen",
+          "id": "__fake17",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_settings.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text245",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_saved_rules.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake52",
+          "text": "Omnidroid has been disabled.",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_dlg_list_selector_listview118",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "checkbox42",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_saved_rules.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnCreateRule55",
+          "text": "Create Rule",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_choosefiltersandactions_frame_list177",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake65",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_rule_name_ll_main81",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_main_btnViewRules56",
+          "text": "View Rules",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake16",
+          "text": "UNKNOWN TEXT",
+          "file": "default_linear.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_input_btnAttributes140",
+          "text": "Attributes",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "dlg_attributes_for_action_frame_list13",
+          "text": "UNKNOWN TEXT",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake195",
+          "text": "UNKNOWN TEXT",
+          "file": "actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TwoLineListItem",
+          "id": "textarea43",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_saved_rules.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_choosefiltersandactions_listview178",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListPreference",
+          "id": "__fake37",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_settings.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake71",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_llDynamicContent128",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "save_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_choosefiltersandactions_llButtons181",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_filters_and_actions.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake4",
+          "text": "UNKNOWN TEXT",
+          "file": "filters_add_data.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "dlg_attributes_for_action_ll_main11",
+          "text": "UNKNOWN TEXT",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditTextPreference",
+          "id": "__fake30",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_settings.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_main_omnidroidDisabled50",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "filters_add_done6",
+          "text": "Done",
+          "file": "filters_add_data.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake7",
+          "text": "UNKNOWN TEXT",
+          "file": "filters.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBoxPreference",
+          "id": "__fake20",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_settings.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgApplicationLoginInput"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_ll_main127",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_login_input_btnOk130",
+          "text": "OK",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_login_input_btnHelp131",
+          "text": "Help",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake129",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_login_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_llDynamicContent128",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_login_input.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgAttributes"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_list_selector_ll_main115",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_list_selector_tv_info1116",
+          "text": "",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_dlg_list_selector_frame_list117",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_dlg_list_selector_listview118",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgFilters"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_list_selector_ll_main115",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_list_selector_tv_info1116",
+          "text": "",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_dlg_list_selector_frame_list117",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_dlg_list_selector_listview118",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgActionInput.DlgAttributes"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "dlg_attributes_for_action_ll_main11",
+          "text": "UNKNOWN TEXT",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "dlg_attributes_for_action_tv_info112",
+          "text": "",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "dlg_attributes_for_action_frame_list13",
+          "text": "UNKNOWN TEXT",
+          "file": "dlg_attributes_for_action.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "dlg_attributes_for_action_listview14",
+          "text": "UNKNOWN TEXT",
+          "file": "dlg_attributes_for_action.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgApplications"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_list_selector_ll_main115",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_list_selector_tv_info1116",
+          "text": "",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_dlg_list_selector_frame_list117",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_dlg_list_selector_listview118",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.LogTabs"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_logs_main70",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_lgos_frame_list72",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ExpandableListView",
+          "id": "list75",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_logs_llDynamicContent80",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_logs_listview73",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake71",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_log_tab.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgLog"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_log_ll_main113",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_log.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_log_info114",
+          "text": "",
+          "file": "activity_dlg_log.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.ChooseRootEvent"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake170",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake171",
+          "text": "Pick a root event from the list below to start building your rule:",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_chooserootevent_frame_list172",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_root_event.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_chooserootevent_listview173",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_choose_root_event.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgFilterInput"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake122",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_filter_input_btnHelp124",
+          "text": "Help",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_filter_input_llDynamicContent121",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_filter_input_ll_main120",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_filter_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_filter_input_btnOk123",
+          "text": "OK",
+          "file": "activity_dlg_filter_input.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.Logs"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TabHost",
+          "id": "__fake60",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake61",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TabWidget",
+          "id": "__fake63",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake65",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_logs.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgRuleName"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_rule_name_tv_info_name84",
+          "text": "Enter a rule name below:",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_rule_name_btnOk89",
+          "text": "OK",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "activity_dlg_rule_name_et_rule_description87",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "activity_dlg_rule_name_et_rule_name85",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake83",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_rule_name_tv_info_description86",
+          "text": "Enter a rule description below:",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake82",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_rule_name_ll_main81",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_rule_name.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgActions"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_list_selector_ll_main115",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activity_dlg_list_selector_tv_info1116",
+          "text": "",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "activity_dlg_list_selector_frame_list117",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "activity_dlg_list_selector_listview118",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_list_selector.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.omnidroid.view.simple.DlgActionInput"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_input_btnOk139",
+          "text": "OK",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_input_btnHelp141",
+          "text": "Help",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake136",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_ll_main134",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "activity_dlg_action_input_llDynamicContent137",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake135",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_dlg_action_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "activity_dlg_action_input_btnAttributes140",
+          "text": "Attributes",
+          "file": "activity_dlg_action_input.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})
