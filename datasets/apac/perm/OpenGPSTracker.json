@@ -1,0 +1,3539 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_NETWORK_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.actions.tasks.OsmSharing",
+        "methodName": "requestOpenstreetmapOauthToken"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.oauth.PrepareRequestTokenActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.ApplicationPreferenceActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.CommonLoggerMap",
+        "methodName": "onCreate"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.OsmLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.CommonLoggerMap",
+        "methodName": "onCreate"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.MapQuestLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.ControlTracking"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateMapProvider"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.MapQuestLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.InsertNote"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.CommonLoggerMap",
+        "methodName": "onCreate"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.TrackList"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.Statistics"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.About"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.TrackList",
+        "methodName": "onContextItemSelected"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.Statistics"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.widget.ControlWidgetProvider",
+        "methodName": "onReceive"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.ControlTracking"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.TrackList",
+        "methodName": "displayIntent"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateMapProvider"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.adapter.BreadcrumbsAdapter",
+        "methodName": "requestBreadcrumbsOauthToken"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.oauth.PrepareRequestTokenActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.actions.ControlTracking.1",
+        "methodName": "onClick"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.NameTrack"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateMapProvider"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.OsmLoggerMap"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "nl.sogeti.android.gpstracker.widget.ControlWidgetProvider",
+        "methodName": "onReceive"
+      },
+      "_2": {
+        "className": "nl.sogeti.android.gpstracker.actions.InsertNote"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.tasks.GpxParser",
+        "methodName": "onPreExecute"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 12
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.ShareTrack.2",
+        "methodName": "onItemSelected"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 14
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.TrackList",
+        "methodName": "started"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 13
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.DescribeTrack",
+        "methodName": "setUiEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 16
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "setSatelliteOverlay"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 7
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.Statistics",
+        "methodName": "access$1"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 10
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.Statistics",
+        "methodName": "drawTrackingStatistics"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 11
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.webkit.WebView",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 17
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.9",
+        "methodName": "onCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.DescribeTrack",
+        "methodName": "onCreateDialog"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 15
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.actions.Statistics.3",
+        "methodName": "onUnitsChange"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 9
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "onLayerCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.UnitsI18n.1",
+        "methodName": "onSharedPreferenceChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 8
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.WifiManager",
+        "methodName": "getWifiServiceMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "java.net.URL",
+        "methodName": "openStream"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.OsmLoggerMap",
+        "methodName": "enableMyLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 11
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "setSatelliteOverlay"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 7
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "access$19"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 9
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.9",
+        "methodName": "onCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateLocationDisplayVisibility"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 10
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.11",
+        "methodName": "onSharedPreferenceChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 8
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 12
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "onLayerCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.nsd.NsdManager",
+        "methodName": "getMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "org.apache.http.impl.client.DefaultHttpClient",
+        "methodName": "execute"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.MapQuestLoggerMap",
+        "methodName": "enableMyLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 11
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "setSatelliteOverlay"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 7
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "access$19"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 9
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "isProviderEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 12
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.9",
+        "methodName": "onCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateLocationDisplayVisibility"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 10
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.11",
+        "methodName": "onSharedPreferenceChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 8
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "onLayerCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.nsd.INsdManager.Stub.Proxy",
+        "methodName": "getMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_NETWORK_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "_handleMessage"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "isNetworkConnected"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.ConnectivityManager",
+        "methodName": "getActiveNetworkInfo"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "access$22"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread.1",
+        "methodName": "handleMessage"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_NETWORK_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "_handleMessage"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.IConnectivityManager.Stub.Proxy",
+        "methodName": "getActiveNetworkInfo"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "isNetworkConnected"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "access$22"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread.1",
+        "methodName": "handleMessage"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "java.net.URLConnection",
+        "methodName": "getInputStream"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.IWifiManager.Stub.Proxy",
+        "methodName": "getWifiServiceMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.MapQuestLoggerMap",
+        "methodName": "enableMyLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 11
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "setSatelliteOverlay"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 7
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "access$19"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 9
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.ILocationManager.Stub.Proxy",
+        "methodName": "isProviderEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 12
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.9",
+        "methodName": "onCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateLocationDisplayVisibility"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 10
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.11",
+        "methodName": "onSharedPreferenceChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 8
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "onLayerCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.nsd.NsdManager",
+        "methodName": "init"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "java.net.URL",
+        "methodName": "openConnection"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.OsmLoggerMap",
+        "methodName": "enableMyLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 11
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "setSatelliteOverlay"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 7
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getProviders"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 12
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.BitmapSegmentsOverlay",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.AsyncOverlay.SegmentMapQuestOverlay",
+        "methodName": "onTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "access$19"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 9
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.overlay.SegmentRendering",
+        "methodName": "commonOnTap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.9",
+        "methodName": "onCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper",
+        "methodName": "updateLocationDisplayVisibility"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 10
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper.11",
+        "methodName": "onSharedPreferenceChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 8
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap",
+        "methodName": "onLayerCheckedChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "_handleMessage"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.util.ProgressFilterInputStream",
+        "methodName": "read"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "addGpsStatusListener"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService",
+        "methodName": "access$22"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "nl.sogeti.android.gpstracker.logger.GPSLoggerService.GPSLoggerServiceThread.1",
+        "methodName": "handleMessage"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "nl.sogeti.android.gpstracker",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.actions.ShareTrack"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake68",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "TextView170",
+          "text": "Sharing creates a track export with as much of the recorded data as possible.",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "LinearLayout169",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake67",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "tweetField78",
+          "text": "",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "cancelshare_button116",
+          "text": "Cancel",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "TextView373",
+          "text": "Means of sharing:",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "buttonBar115",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "shareTypeSpinner72",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "imageView79",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "shareTargetSpinner74",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "closeImageView80",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "TextView475",
+          "text": "Name of export:",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "fileNameField76",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okayshare_button117",
+          "text": "OK",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "tweet_progress77",
+          "text": "UNKNOWN TEXT",
+          "file": "sharedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "TextView271",
+          "text": "Choose format of shared track:",
+          "file": "sharedialog.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.TrackList"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "LinearLayout01271",
+          "text": "UNKNOWN TEXT",
+          "file": "namedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake3",
+          "text": "UNKNOWN TEXT",
+          "file": "tracklist.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "nameField272",
+          "text": "UNKNOWN TEXT",
+          "file": "namedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake5",
+          "text": "No tracks stored",
+          "file": "tracklist.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "tracklist.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.actions.Statistics"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake44",
+          "text": "Last time",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.actions.utils.GraphCanvas",
+          "id": "graph_distancealtitude62",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_maximumspeed30",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.actions.utils.ViewFlipper",
+          "id": "flipper58",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake359",
+          "text": "UNKNOWN TEXT",
+          "file": "graphtype.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake24",
+          "text": "Average speed",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_ascension55",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_distance15",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake49",
+          "text": "Elapsed",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableLayout",
+          "id": "__fake12",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake54",
+          "text": "Total elevation",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.util.DateView",
+          "id": "stat_starttime40",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableRow",
+          "id": "__fake13",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake14",
+          "text": "Tracked distance",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_waypoints35",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.actions.utils.GraphCanvas",
+          "id": "graph_timespeed59",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.actions.utils.GraphCanvas",
+          "id": "graph_timealtitude61",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "graphtype_distancespeed361",
+          "text": "Speed over distance",
+          "file": "graphtype.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_averagespeed25",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.actions.utils.GraphCanvas",
+          "id": "graph_distancespeed60",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake39",
+          "text": "Start time",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake29",
+          "text": "Maximum speed",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake19",
+          "text": "Travel speed",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "graphtype_timealtitude362",
+          "text": "Altitude over time",
+          "file": "graphtype.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake34",
+          "text": "Waypoints",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "graphtype_timespeed360",
+          "text": "Speed over time",
+          "file": "graphtype.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_overallaveragespeed20",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "graphtype_distancealtitude363",
+          "text": "Altitude over distance",
+          "file": "graphtype.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.util.DateView",
+          "id": "stat_endtime45",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "stat_elapsedtime50",
+          "text": "UNKNOWN TEXT",
+          "file": "statistics.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.oauth.PrepareRequestTokenActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake263",
+          "text": "UNKNOWN TEXT",
+          "file": "oauthentication.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "progressBar1264",
+          "text": "UNKNOWN TEXT",
+          "file": "oauthentication.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail265",
+          "text": "Connecting to…",
+          "file": "oauthentication.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "loading266",
+          "text": "Loading…",
+          "file": "oauthentication.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.actions.InsertNote"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "LinearLayout01267",
+          "text": "UNKNOWN TEXT",
+          "file": "notetextdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "noteinsert_text355",
+          "text": "Write Text",
+          "file": "insertnote.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "noteinsert_picture357",
+          "text": "Take Picture",
+          "file": "insertnote.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "noteinsert_video358",
+          "text": "Record Video",
+          "file": "insertnote.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "notename270",
+          "text": "UNKNOWN TEXT",
+          "file": "notenamedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "noteinsert_name354",
+          "text": "Mark with a name",
+          "file": "insertnote.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "LinearLayout01269",
+          "text": "UNKNOWN TEXT",
+          "file": "notenamedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake353",
+          "text": "UNKNOWN TEXT",
+          "file": "insertnote.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "notetext268",
+          "text": "UNKNOWN TEXT",
+          "file": "notetextdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "noteinsert_voice356",
+          "text": "Record Speech",
+          "file": "insertnote.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.adapter.BreadcrumbsAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake386",
+          "text": "UNKNOWN TEXT",
+          "file": "breadcrumbs_track.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "from_textview388",
+          "text": "Tracked on:",
+          "file": "breadcrumbs_track.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "listitem_name387",
+          "text": "Name of something",
+          "file": "breadcrumbs_track.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "listitem_name392",
+          "text": "Bundlename here",
+          "file": "breadcrumbs_bundle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "top391",
+          "text": "UNKNOWN TEXT",
+          "file": "breadcrumbs_bundle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "listitem_name390",
+          "text": "Sectionname here",
+          "file": "breadcrumbs_connect.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "nl.sogeti.android.gpstracker.util.DateView",
+          "id": "listitem_from389",
+          "text": "UNKNOWN TEXT",
+          "file": "breadcrumbs_track.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.LoggerMapHelper"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "layer_location318",
+          "text": "My Location",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "layer_altitude315",
+          "text": "Altitude",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "osm_backgrounds306",
+          "text": "UNKNOWN TEXT",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "google_backgrounds301",
+          "text": "UNKNOWN TEXT",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "layer_speed314",
+          "text": "Speed",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "google_overlays324",
+          "text": "UNKNOWN TEXT",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "layer_traffic325",
+          "text": "Traffic",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake384",
+          "text": "UNKNOWN TEXT",
+          "file": "contrib.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "layer_google_regular302",
+          "text": "Normal map",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Gallery",
+          "id": "gallery273",
+          "text": "UNKNOWN TEXT",
+          "file": "mediachooser.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "layer_google_satellite303",
+          "text": "Satellite",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "layer_osm_cloudmade307",
+          "text": "CloudMade maps",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "layer_osm_bicycle309",
+          "text": "OpenCycleMap",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "contrib_view385",
+          "text": "UNKNOWN TEXT",
+          "file": "contrib.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "layer_osm_maknik308",
+          "text": "Mapnik",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "shared_layers313",
+          "text": "UNKNOWN TEXT",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake299",
+          "text": "UNKNOWN TEXT",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake300",
+          "text": "UNKNOWN TEXT",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "layer_distance316",
+          "text": "Distance",
+          "file": "layerdialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "layer_compass317",
+          "text": "Compass",
+          "file": "layerdialog.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.About"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "android.webkit.WebView",
+          "id": "contribution_body405",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView2398",
+          "text": "An application that can record, by GPS, the travels of your device.",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView3399",
+          "text": "Copyright©2010 Sogeti Nederland B.V.",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake394",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "image1395",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "android.webkit.WebView",
+          "id": "license_body402",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake400",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake393",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "android.webkit.WebView",
+          "id": "notices_body408",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "TextView03407",
+          "text": "Notices",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView4404",
+          "text": "Contributions",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "version397",
+          "text": "Open GPS Tracker",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "TextView01401",
+          "text": "License",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView1396",
+          "text": "Open GPS Tracker",
+          "file": "about.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.actions.NameTrack"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "LinearLayout01271",
+          "text": "UNKNOWN TEXT",
+          "file": "namedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "nameField272",
+          "text": "UNKNOWN TEXT",
+          "file": "namedialog.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.actions.DescribeTrack"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView1371",
+          "text": "Activity",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "activity366",
+          "text": "UNKNOWN TEXT",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "description368",
+          "text": "UNKNOWN TEXT",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "progressSpinner370",
+          "text": "UNKNOWN TEXT",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake364",
+          "text": "UNKNOWN TEXT",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "bundle367",
+          "text": "UNKNOWN TEXT",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "public_checkbox369",
+          "text": "Public posting",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView3372",
+          "text": "Bundle",
+          "file": "describedialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "RelativeLayout1365",
+          "text": "UNKNOWN TEXT",
+          "file": "describedialog.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.MapQuestLoggerMap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "mapScreen288",
+          "text": "UNKNOWN TEXT",
+          "file": "map_mapquest.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "com.mapquest.android.maps.MapView",
+          "id": "myMapView289",
+          "text": "UNKNOWN TEXT",
+          "file": "map_mapquest.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "",
+          "id": "UNKNOWN TEXT",
+          "text": "",
+          "file": "map_widgets.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.actions.ControlTracking"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "logcontrol_stop298",
+          "text": "Stop tracking",
+          "file": "logcontrol.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "logcontrol_pause296",
+          "text": "Pause tracking",
+          "file": "logcontrol.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "logcontrol_start295",
+          "text": "Start tracking",
+          "file": "logcontrol.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake294",
+          "text": "UNKNOWN TEXT",
+          "file": "logcontrol.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "logcontrol_resume297",
+          "text": "Resume tracking",
+          "file": "logcontrol.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.GoogleLoggerMap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "mapScreen291",
+          "text": "UNKNOWN TEXT",
+          "file": "map_google.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "com.google.android.maps.MapView",
+          "id": "myMapView292",
+          "text": "UNKNOWN TEXT",
+          "file": "map_google.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "",
+          "id": "UNKNOWN TEXT",
+          "text": "",
+          "file": "map_widgets.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "nl.sogeti.android.gpstracker.viewer.map.OsmLoggerMap"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "mapScreen285",
+          "text": "UNKNOWN TEXT",
+          "file": "map_osm.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "org.osmdroid.views.MapView",
+          "id": "myMapView286",
+          "text": "UNKNOWN TEXT",
+          "file": "map_osm.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "",
+          "id": "UNKNOWN TEXT",
+          "text": "",
+          "file": "map_widgets.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

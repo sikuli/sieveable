@@ -1,0 +1,291 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.example.autoquiet",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.autoquiet.LocListActivity",
+        "methodName": "onListItemClick"
+      },
+      "_2": {
+        "className": "com.example.autoquiet.LocActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.autoquiet.MainActivity.1",
+        "methodName": "onClick"
+      },
+      "_2": {
+        "className": "com.example.autoquiet.LocListActivity"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.example.autoquiet",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.autoquiet.ComCntrlService",
+        "methodName": "onCreate"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.autoquiet.ComCntrlService",
+        "methodName": "getLastBestLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.example.autoquiet",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.autoquiet.LocListActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake2",
+          "text": "UNKNOWN TEXT",
+          "file": "loc_list_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.autoquiet.LocActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "editTextAddr5",
+          "text": "UNKNOWN TEXT",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "buttonClose14",
+          "text": "Close",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake3",
+          "text": "UNKNOWN TEXT",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "checkBoxBluetooth12",
+          "text": "Bluetooth Enabled",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "buttonSave13",
+          "text": "Save",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "checkBoxNFC11",
+          "text": "NFC Enabled",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textViewSettingsHeading6",
+          "text": "Settings for this Location",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textViewName8",
+          "text": "Name",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "checkBoxWifi9",
+          "text": "Wifi Enabled",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "checkBoxCellData10",
+          "text": "Cellular Data Enabled",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "editTextLocName4",
+          "text": "UNKNOWN TEXT",
+          "file": "loc.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textViewAddr7",
+          "text": "Address",
+          "file": "loc.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.autoquiet.LocAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake15",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "locName16",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.autoquiet.MainActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake17",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "listlocsbtn18",
+          "text": "Location List",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ToggleButton",
+          "id": "toggleButtonQuiet19",
+          "text": "ToggleButton",
+          "file": "activity_main.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

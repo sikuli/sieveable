@@ -17,17 +17,32 @@ var ResultViewer = React.createClass({
 
         var resultNodes = this.state.results.map(function(result,index){
 
+
+            console.log('perm',result.perm)
+
+            var perm = result.perm.map(function(p){
+
+                console.log('p.views',p.views)
+                var views = p.views.map(function(v){
+
+
+                    var vvs = v.views.elems.map(function(el){
+                        return <span className='label label-info'>{el.text}</span>
+                    })
+
+                    return <li><span className='label label-warning'>{v.methodName.className}</span> <span className='label label-danger'>{v.methodName.methodName}</span> {vvs}</li>
+                })
+
+                return <div>
+                            <div><b>permission:</b> {p.permission[0].value}</div>
+                            <div><ul>{views} </ul></div>
+                       </div>
+            })
+
             return (
                 <div className="row" key={index}>
-                    <div className="col-md-6">
-                        {result.packageName}
-                    </div>                  
-                    <div className="col-md-2">
-                        {result.version}
-                    </div>
-                    <div className="col-md-2">
-                        <a href={'/view/xml/'+ result.packageName + '/' + result.version} target="xml">xml</a>
-                    </div>
+                    <h3>{result.id}</h3>
+                    {perm}
                 </div>
             )
 
@@ -36,7 +51,7 @@ var ResultViewer = React.createClass({
         if (resultNodes.length > 0){
             var total = resultNodes.length
             var n = Math.min(total, 10)
-            var summary = <span>Showing {n} of {total} results</span>
+            var summary = <b>Showing {n} of {total} results</b>
         }
 
     return (<div className="resultList">

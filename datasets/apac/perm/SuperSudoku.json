@@ -1,0 +1,182 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "org.darpa.supersudoku",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+    
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "org.darpa.supersudoku.MainMenu.1",
+        "methodName": "onClick"
+      },
+      "_2": {
+        "className": "org.darpa.supersudoku.NewPuzzle"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "org.darpa.supersudoku.MainMenu.2",
+        "methodName": "onClick"
+      },
+      "_2": {
+        "className": "org.darpa.supersudoku.SolvePuzzle"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "org.darpa.supersudoku",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.darpa.supersudoku.NewPuzzle"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake2",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_new_puzzle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "new_puzzle_button6",
+          "text": "Create New Puzzle",
+          "file": "activity_main_menu.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "editText13",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_new_puzzle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake4",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main_menu.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_solve_puzzle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "solve_puzzle_buton5",
+          "text": "Solve Puzzle",
+          "file": "activity_main_menu.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.darpa.supersudoku.SolvePuzzle"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake2",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_new_puzzle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "new_puzzle_button6",
+          "text": "Create New Puzzle",
+          "file": "activity_main_menu.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "editText13",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_new_puzzle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake4",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main_menu.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_solve_puzzle.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "solve_puzzle_buton5",
+          "text": "Solve Puzzle",
+          "file": "activity_main_menu.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.darpa.supersudoku.MainMenu"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake4",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main_menu.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "solve_puzzle_buton5",
+          "text": "Solve Puzzle",
+          "file": "activity_main_menu.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "new_puzzle_button6",
+          "text": "Create New Puzzle",
+          "file": "activity_main_menu.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

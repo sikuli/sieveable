@@ -1,0 +1,232 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "goldenshorestechnologies.brightestflashlight.free",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+    
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "goldenshorestechnologies.brightestflashlight.free",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.DisplaySettingsUI",
+        "methodName": "onTouchEvent"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.BrightestFlashlightMain",
+        "methodName": "turnOnSamsungMomentCameraFlashLED"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.DisplaySettingsUI",
+        "methodName": "receivedUpWhileSelected"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.hardware.Camera",
+        "methodName": "open"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.DisplaySettingsUI",
+        "methodName": "cameraLEDCheckboxTapped"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.BrightestFlashlightMain",
+        "methodName": "turnOnCameraFlashLED"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "goldenshorestechnologies.brightestflashlight.free",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.BrightestFlashlightMain",
+        "methodName": "onResume"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "goldenshorestechnologies.brightestflashlight.free",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "goldenshorestechnologies.brightestflashlight.free.BrightestFlashlightMain"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "layout1",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "VideoView",
+          "id": "surface_view2",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "android.view.SurfaceView",
+          "id": "preview3",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

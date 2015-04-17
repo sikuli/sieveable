@@ -1,0 +1,1245 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "_2": {
+        "className": "com.apac.sentinel.gui.LockActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.apac.sentinel.gui.MainActivity",
+        "methodName": "onConfigureSentinel"
+      },
+      "_2": {
+        "className": "com.apac.sentinel.gui.UpdateICCIDActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.apac.sentinel.gui.MainActivity",
+        "methodName": "onViewLog"
+      },
+      "_2": {
+        "className": "com.apac.sentinel.gui.ViewLogActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.apac.sentinel.gui.ViewLogActivity",
+        "methodName": "onListItemClick"
+      },
+      "_2": {
+        "className": "com.apac.sentinel.gui.ViewLogEntryActivity"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.webkit.WebView",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.WifiManager",
+        "methodName": "getWifiServiceMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.Tasks.WifiTask",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.Utils",
+        "methodName": "getCurrentNetworkName"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.IWifiManager.Stub.Proxy",
+        "methodName": "getConnectionInfo"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.nsd.NsdManager",
+        "methodName": "getMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "isProviderEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedharness.GeneratedAndroidHarness.AllStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.gui.MainActivity",
+        "methodName": "registerGPS"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedstubs.GeneratedAndroidManifestCallbackStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.gui.MainActivity",
+        "methodName": "onApplySettings"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.nsd.INsdManager.Stub.Proxy",
+        "methodName": "getMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.gui.SilentImageActivity",
+        "methodName": "surfaceCreated"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.hardware.Camera",
+        "methodName": "open"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CHANGE_WIFI_STATE"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.IWifiManager.Stub.Proxy",
+        "methodName": "getWifiServiceMessenger"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedharness.GeneratedAndroidHarness.AllStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.gui.MainActivity",
+        "methodName": "registerGPS"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 5
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedstubs.GeneratedAndroidManifestCallbackStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.gui.MainActivity",
+        "methodName": "onApplySettings"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.ILocationManager.Stub.Proxy",
+        "methodName": "isProviderEnabled"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 6
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_WIFI_STATE"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.Tasks.WifiTask",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.Utils",
+        "methodName": "getCurrentNetworkName"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.wifi.WifiManager",
+        "methodName": "getConnectionInfo"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.apac.sentinel",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.INTERNET"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.TheftMonitorService.MonitorThread",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.apac.sentinel.SystemState",
+        "methodName": "stateHasChanged"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.net.nsd.NsdManager",
+        "methodName": "init"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.apac.sentinel",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.apac.sentinel.gui.UpdateICCIDActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "editTextCurrentICCID11",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_update_iccid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView314",
+          "text": "Updating will save the current device ICCID to the Reference database. A theft alarm may be triggered if\/when this changes. Return to this configuration screen to update the reference database.",
+          "file": "activity_update_iccid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView110",
+          "text": "Current Device ICCID",
+          "file": "activity_update_iccid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "editTextSavedICCID13",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_update_iccid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "button115",
+          "text": "Update",
+          "file": "activity_update_iccid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView212",
+          "text": "Currently Saved ICCID",
+          "file": "activity_update_iccid.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake9",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_update_iccid.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.apac.sentinel.gui.MainActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "__fake22",
+          "text": "View Log",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "btnConfigureSentinel24",
+          "text": "Configure ICCID",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake21",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "btnClearLog23",
+          "text": "Clear Log",
+          "file": "activity_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "btnTestBind25",
+          "text": "Apply Settings",
+          "file": "activity_main.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.apac.sentinel.gui.SentinelHomeActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake18",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_sentinel_home.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "imageView119",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_sentinel_home.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "btnManageSentinel20",
+          "text": "Manage Sentinel",
+          "file": "activity_sentinel_home.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.apac.sentinel.gui.SilentImageActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake16",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_silent_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "SurfaceView",
+          "id": "surfaceView17",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_silent_image.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.apac.sentinel.gui.ViewLogEntryActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake6",
+          "text": "Timestamp",
+          "file": "activity_view_log_entry.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "txtTitle5",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_view_log_entry.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "txtTimeStamp7",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_view_log_entry.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake3",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_view_log_entry.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake4",
+          "text": "title",
+          "file": "activity_view_log_entry.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "btnDelete8",
+          "text": "Delete this Entry",
+          "file": "activity_view_log_entry.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.apac.sentinel.gui.LockActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "txtReason32",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake31",
+          "text": "Reason:",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "txtWhat30",
+          "text": "What has happened",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "btnCheckPasscode34",
+          "text": "OK",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake28",
+          "text": "The following issue has been detected and requires your attention.",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake26",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake29",
+          "text": "What:",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake27",
+          "text": "!!!ALERT!!!",
+          "file": "activity_lock.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "txtPassword33",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_lock.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

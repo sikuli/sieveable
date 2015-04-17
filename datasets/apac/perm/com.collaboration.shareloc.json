@@ -1,0 +1,106 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.collaboration.shareloc",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+    
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+    
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.collaboration.shareloc",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.collaboration.shareloc.Sharelocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "com.google.android.maps.MapView",
+          "id": "MapView7",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "AboutTextView11",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "ProgressBar013",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "acquiring_signal_layout2",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "acquiring_signal_label4",
+          "text": "Acquiring location",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "SendButton8",
+          "text": "Send Location",
+          "file": "main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "AboutLayout9",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "CloseButton13",
+          "text": "Close",
+          "file": "about.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "ScrollView0110",
+          "text": "UNKNOWN TEXT",
+          "file": "about.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

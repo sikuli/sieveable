@@ -172,6 +172,7 @@ describe('explain query', function () {
         var query = 'MATCH app\n' +
             'WHERE\n' +
             '<downloads>10000</downloads>\n' +
+            '<callpath/>\n' +
             '<uses-permission android:name="android.permission.CAMERA" />\n' +
             '<Button $exactly="70"/>\n' +
             '<Code type="invoked" class="android.hardware.Camera" method="takePicture" />\n' +
@@ -183,6 +184,7 @@ describe('explain query', function () {
             ui:'<Button $exactly="70"/>',
             manifest:'<uses-permission android:name="android.permission.CAMERA"/>',
             code:'<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>',
+            perm:'<callpath/>',
             return: ['app'],
             limit: 100
         };

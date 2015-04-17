@@ -1,0 +1,467 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "org.memotis",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "org.memotis.MemoManager",
+        "methodName": "createMemo"
+      },
+      "_2": {
+        "className": "org.memotis.EditMemoActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "org.memotis.MemoManager",
+        "methodName": "editMemo"
+      },
+      "_2": {
+        "className": "org.memotis.EditMemoActivity"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "org.memotis",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "org.memotis.EditMemo",
+        "methodName": "onCreateView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "org.memotis.KeywordSubstitution",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "org.memotis.KeywordSubstitution.LocationKeyword",
+        "methodName": "<init>"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "org.memotis",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.memotis.VerifyAccount"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "verify_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "verify_account_message2",
+          "text": "UNKNOWN TEXT",
+          "file": "verify_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "login3",
+          "text": "Login",
+          "file": "verify_account.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.memotis.GetMemo"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "memo_secret38",
+          "text": "UNKNOWN TEXT",
+          "file": "get_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "memo_revision_auto_save41",
+          "text": "Latest automatic save",
+          "file": "get_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake36",
+          "text": "UNKNOWN TEXT",
+          "file": "get_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "memo_name_to_get37",
+          "text": "UNKNOWN TEXT",
+          "file": "get_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "memo_revision_to_get39",
+          "text": "UNKNOWN TEXT",
+          "file": "get_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "memo_revision_explicit40",
+          "text": "Latest explicit save",
+          "file": "get_memo.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.memotis.MemoListAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake10",
+          "text": "UNKNOWN TEXT",
+          "file": "memo_list_item_frame.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "__fake9",
+          "text": "UNKNOWN TEXT",
+          "file": "memo_loading_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake5",
+          "text": "UNKNOWN TEXT",
+          "file": "memo_name_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "__fake4",
+          "text": "UNKNOWN TEXT",
+          "file": "new_memo_item.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.memotis.MemoManager"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake6",
+          "text": "UNKNOWN TEXT",
+          "file": "memo_manager.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "logged_in_as7",
+          "text": "UNKNOWN TEXT",
+          "file": "memo_manager.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "GridView",
+          "id": "memos8",
+          "text": "UNKNOWN TEXT",
+          "file": "memo_manager.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.memotis.EditMemo"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "memo_message60",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "org.memotis.PasswordStrengthMeter",
+          "id": "secret_meter52",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "memo_name_choice47",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "memo_name_preset48",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "memo_name46",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "secret51",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake44",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "memo61",
+          "text": "UNKNOWN TEXT",
+          "file": "edit_memo.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "org.memotis.LoginOrCreateAccount"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "account_how15",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Space",
+          "id": "__fake22",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake23",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "account_how_new17",
+          "text": "Create a new account",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "new_account_info20",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "password14",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "accept_terms_of_use_label25",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "account_required12",
+          "text": "An account is required in order to keep track of which notes are yours. (But the content of the notes is still completely private!)",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "login_or_create_account35",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "account_how_existing16",
+          "text": "Log in to an existing account",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "accept_terms_of_use24",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "email_address21",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "username13",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake11",
+          "text": "UNKNOWN TEXT",
+          "file": "login_or_create_account.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

@@ -1,0 +1,645 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.example.instantreplay",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.RECORD_AUDIO"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.GalleryFragment.3",
+        "methodName": "onItemClick"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.VideoPlayerActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.CameraActivity.4",
+        "methodName": "onMenuItemClick"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.GalleryActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.GalleryActivity",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.CameraActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.GalleryActivity",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.HelpActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.CameraActivity.4",
+        "methodName": "onMenuItemClick"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.SettingsActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.CameraActivity.4",
+        "methodName": "onMenuItemClick"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.HelpActivity"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "com.example.instantreplay.GalleryActivity",
+        "methodName": "onOptionsItemSelected"
+      },
+      "_2": {
+        "className": "com.example.instantreplay.SettingsActivity"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.example.instantreplay",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "onRestart"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "initializeCameraPreview"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "getCameraInstance"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.hardware.Camera",
+        "methodName": "open"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.example.instantreplay",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.RECORD_AUDIO"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedharness.GeneratedAndroidHarness.AllStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.media.MediaRecorder",
+        "methodName": "setAudioSource"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "recordButtonPress"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "prepareVideoRecorder"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedstubs.GeneratedAndroidManifestCallbackStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.example.instantreplay",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.CAMERA"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.media.MediaRecorder",
+        "methodName": "setVideoSource"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 4
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedharness.GeneratedAndroidHarness.AllStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "recordButtonPress"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.instantreplay.CameraActivity",
+        "methodName": "prepareVideoRecorder"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "generatedstubs.GeneratedAndroidManifestCallbackStubs",
+        "methodName": "callManifestRegisteredCallback"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.example.instantreplay",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.instantreplay.GalleryActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "fragment_gallery28",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_gallery.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.instantreplay.MediaAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake2",
+          "text": "UNKNOWN TEXT",
+          "file": "layout_icon.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "image_icon3",
+          "text": "UNKNOWN TEXT",
+          "file": "layout_icon.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text_icon4",
+          "text": "UNKNOWN TEXT",
+          "file": "layout_icon.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.instantreplay.CameraActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake31",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text_total_time35",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "button_reset_split38",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "view_touch_camera33",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text_rec_time32",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "button_menu36",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "button_timer37",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake29",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "camera_preview30",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "text_event34",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "list_splits39",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "button_record40",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_camera.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.instantreplay.TimeStandardManager.EventPickerDialogFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "check_enable_standard_comp20",
+          "text": "Compare splits to time standards",
+          "file": "dialog_event_picker.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake9",
+          "text": "UNKNOWN TEXT",
+          "file": "dialog_event_picker.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Switch",
+          "id": "switch_course_units11",
+          "text": "UNKNOWN TEXT",
+          "file": "dialog_event_picker.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Switch",
+          "id": "switch_course_length12",
+          "text": "UNKNOWN TEXT",
+          "file": "dialog_event_picker.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "NumberPicker",
+          "id": "picker_group16",
+          "text": "UNKNOWN TEXT",
+          "file": "dialog_event_picker.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "NumberPicker",
+          "id": "picker_event_name17",
+          "text": "UNKNOWN TEXT",
+          "file": "dialog_event_picker.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.instantreplay.GalleryFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake6",
+          "text": "UNKNOWN TEXT",
+          "file": "fragment_gallery.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "list_gallery7",
+          "text": "UNKNOWN TEXT",
+          "file": "fragment_gallery.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text_no_items8",
+          "text": "No videos found.",
+          "file": "fragment_gallery.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.instantreplay.VideoPlayerActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "VideoView",
+          "id": "video_player22",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_video_player.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "list_video_splits25",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_video_player.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "layout_video_overlay23",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_video_player.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text_video_total_time24",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_video_player.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake21",
+          "text": "UNKNOWN TEXT",
+          "file": "activity_video_player.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

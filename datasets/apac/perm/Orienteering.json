@@ -1,0 +1,847 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.bbn.apac.orienteering",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+    
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.bbn.apac.orienteering",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.bbn.apac.orienteering.gps.gps.GPSService",
+        "methodName": "onCreate"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.bbn.apac.orienteering",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.map.GoogleMapConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "map_id_title30",
+          "text": "Factory ID",
+          "file": "map_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "map_name_title32",
+          "text": "Factory Name",
+          "file": "map_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "map_id_field31",
+          "text": " ",
+          "file": "map_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake29",
+          "text": "UNKNOWN TEXT",
+          "file": "map_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "map_name_field33",
+          "text": " ",
+          "file": "map_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "map_key_field35",
+          "text": " ",
+          "file": "map_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "map_key_title34",
+          "text": "map_key_text",
+          "file": "map_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.ui.ConfigureFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "configure_main_editbutton93",
+          "text": "Edit…",
+          "file": "configure_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "configure_main_scrollview90",
+          "text": "UNKNOWN TEXT",
+          "file": "configure_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "configure_main_applybutton94",
+          "text": "Apply",
+          "file": "configure_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "configure_main_grid91",
+          "text": "UNKNOWN TEXT",
+          "file": "configure_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "configure_main_newbutton89",
+          "text": "Load…",
+          "file": "configure_main.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "GridLayout",
+          "id": "configure_main_root88",
+          "text": "UNKNOWN TEXT",
+          "file": "configure_main.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.ui.DetailActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "detail_target55",
+          "text": "Set as Target",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_data_title59",
+          "text": "Data:",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_distance_field62",
+          "text": "UNKNOWN TEXT",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "detail_pane58",
+          "text": "UNKNOWN TEXT",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "detail_source56",
+          "text": "Set as Source",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_data_field60",
+          "text": "UNKNOWN TEXT",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_images_title65",
+          "text": "Images:",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "detail_scroll57",
+          "text": "UNKNOWN TEXT",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_notes_title63",
+          "text": "Notes:",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_notes_field64",
+          "text": "UNKNOWN TEXT",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "detail_distance_title61",
+          "text": "Distance\/Bearing:",
+          "file": "details.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "GridLayout",
+          "id": "detail_root54",
+          "text": "UNKNOWN TEXT",
+          "file": "details.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.ui.MapFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "map_root36",
+          "text": "UNKNOWN TEXT",
+          "file": "map.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.file.FileWaypointListConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "file_waypoint_file_button53",
+          "text": "Choose File...",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_file_title51",
+          "text": "File Name:",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_id_field48",
+          "text": " ",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake46",
+          "text": "UNKNOWN TEXT",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_name_field50",
+          "text": " ",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_name_title49",
+          "text": "Factory Name",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "file_waypoint_file_field52",
+          "text": "UNKNOWN TEXT",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_id_title47",
+          "text": "Factory ID",
+          "file": "file_waypoint_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.ui.NavFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "nav_fragment_root24",
+          "text": "UNKNOWN TEXT",
+          "file": "nav.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "nav_fragment_DistBearing25",
+          "text": "UNKNOWN TEXT",
+          "file": "nav.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "scrollView126",
+          "text": "UNKNOWN TEXT",
+          "file": "nav.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "nav_fragment_WPList27",
+          "text": "UNKNOWN TEXT",
+          "file": "nav.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.ui.ManifestFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "manifest_fragment_scroll37",
+          "text": "UNKNOWN TEXT",
+          "file": "manifest_good.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "manifest_fragment_root38",
+          "text": "UNKNOWN TEXT",
+          "file": "manifest_good.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.gps.GPSConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "gps_id_field43",
+          "text": " ",
+          "file": "gps_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake41",
+          "text": "UNKNOWN TEXT",
+          "file": "gps_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "gps_name_title44",
+          "text": "Factory Name",
+          "file": "gps_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "gps_id_title42",
+          "text": "Factory ID",
+          "file": "gps_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "gps_name_field45",
+          "text": " ",
+          "file": "gps_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.ui.NavActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "nav_activity_root39",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.web.WebWaypointConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_port_title8",
+          "text": "Port Number:",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_name_title4",
+          "text": "Factory Name",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_name_field5",
+          "text": " ",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "web_waypoint_port_field9",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_id_title2",
+          "text": "Factory ID",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_id_field3",
+          "text": " ",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "web_waypoint_host_field7",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "web_waypoint_file_field11",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_file_title10",
+          "text": "File Name:",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_host_title6",
+          "text": "Address:",
+          "file": "web_waypoint_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.web.WebWaypointListConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_port_title8",
+          "text": "Port Number:",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_name_title4",
+          "text": "Factory Name",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_name_field5",
+          "text": " ",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "web_waypoint_port_field9",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_id_title2",
+          "text": "Factory ID",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_id_field3",
+          "text": " ",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "web_waypoint_host_field7",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "web_waypoint_file_field11",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_file_title10",
+          "text": "File Name:",
+          "file": "web_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "web_waypoint_host_title6",
+          "text": "Address:",
+          "file": "web_waypoint_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.file.FileWaypointConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "file_waypoint_file_button53",
+          "text": "Choose File...",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_file_title51",
+          "text": "File Name:",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_id_field48",
+          "text": " ",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake46",
+          "text": "UNKNOWN TEXT",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_name_field50",
+          "text": " ",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_name_title49",
+          "text": "Factory Name",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "file_waypoint_file_field52",
+          "text": "UNKNOWN TEXT",
+          "file": "file_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "file_waypoint_id_title47",
+          "text": "Factory ID",
+          "file": "file_waypoint_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.bbn.apac.orienteering.udp.UDPWaypointConfigView"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "udp_waypoint_parent_field22",
+          "text": "UNKNOWN TEXT",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "udp_waypoint_host_field18",
+          "text": "UNKNOWN TEXT",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_name_title15",
+          "text": "Factory Name",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_id_field14",
+          "text": " ",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "udp_waypoint_port_field20",
+          "text": "UNKNOWN TEXT",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_parent_title21",
+          "text": "Parent Factory:",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "udp_waypoint_parent_button23",
+          "text": "Choose Parent Factory...",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_port_title19",
+          "text": "Port:",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_name_field16",
+          "text": " ",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake12",
+          "text": "UNKNOWN TEXT",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_host_title17",
+          "text": "Address: ",
+          "file": "udp_waypoint_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "udp_waypoint_id_title13",
+          "text": "Factory ID",
+          "file": "udp_waypoint_view.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

@@ -1,0 +1,3987 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "net.bible.android.activity",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+    
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.search.SearchIndex",
+        "methodName": "monitorProgress"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.search.SearchIndexProgressStatus"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReading",
+        "methodName": "showDay"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReading"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.search.SearchIndexProgressStatus",
+        "methodName": "jobFinished"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.search.SearchResults"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.search.SearchIndexProgressStatus",
+        "methodName": "jobFinished"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.search.Search"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.readingplan.ReadingPlanSelectorList",
+        "methodName": "onListItemClick"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReading"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReadingList",
+        "methodName": "itemSelected"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReading"
+      }
+    },
+      {
+      "$type": "scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]",
+      "_1": {
+        "className": "net.bible.android.view.activity.download.EnsureBibleDownloaded",
+        "methodName": "gotoMainScreen"
+      },
+      "_2": {
+        "className": "net.bible.android.view.activity.page.MainBibleActivity"
+      }
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "net.bible.android.activity",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.download.EnsureBibleDownloaded"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake212",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBible213",
+          "text": "Please wait for the bible to finish downloading. You will then be taken to the main screen.",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer214",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBibleNotYet215",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReading"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableRow",
+          "id": "__fake118",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftTitlePanel2",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel141",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableLayout",
+          "id": "reading_container140",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "doneButton143",
+          "text": "Done",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton122",
+          "text": "Speak",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake142",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_message132",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "date128",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "passage120",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "day129",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "description126",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "readButton121",
+          "text": "Passage",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "tick119",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake123",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "dates127",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "top_text125",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.navigation.GridChoosePassageChapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake240",
+          "text": "UNKNOWN TEXT",
+          "file": "buttongrid_button_preview.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickCommentaryChange13",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel67",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "downloadButton68",
+          "text": "Download",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "submit85",
+          "text": "Find verses",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "queue38",
+          "text": "Queue",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake167",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake149",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "wordsGroup84",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "WebView",
+          "id": "webView20",
+          "text": "UNKNOWN TEXT",
+          "file": "strongs_ref.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text1148",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_list_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "bibleSectionGroup75",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "SeekBar",
+          "id": "__fake172",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableRow",
+          "id": "__fake118",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "icon191",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake241",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake247",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake201",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake170",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer214",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftTitlePanel2",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake216",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "labelSpinner242",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer152",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text24",
+          "text": "\"Press the MENU key for actions\n\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger\"",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "newLabel252",
+          "text": "New Label",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake184",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake168",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBible213",
+          "text": "Please wait for the bible to finish downloading. You will then be taken to the main screen.",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning63",
+          "text": "There are no tasks currently being executed.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "warningText182",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel141",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableLayout",
+          "id": "reading_container140",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchAllBible77",
+          "text": "Whole bible",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchNewTestament79",
+          "text": "New Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "doneButton143",
+          "text": "Done",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake239",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters331",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning151",
+          "text": "There are no tasks currently being executed.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "centreAreaContainer74",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake61",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_top_text23",
+          "text": "\"\n\\\"And God said, 'Let there be light,' and there was light.\\\"\nGenesis 1:3\"",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "quickSpeak10",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "documentTypeSpinner228",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake65",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake225",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters230",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton122",
+          "text": "Speak",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton57",
+          "text": "Speak",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel220",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake160",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text207",
+          "text": "Navigation\"\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger \nDouble-tap toggles Fullscreen on\/off. \n\n\"Menu\" \nPress the MENU key for actions \n\nTo download more documents press Menu\/More\/Download Documents \n\n\"Speech\"\nPress Speak to access a dialog to start or stop reading \n\n\"My Note\"\nNotes can be added via the My Note menu item on the verse context menu. The list of existing notes can be accessed via the main menu. \n\n\"Bookmarks\"\nBookmarks can be added via the verse context menu. The Bookmark Manager is accessed via the main menu. The Bookmark Manager context menu allows bookmarks to be grouped using labels. \n\n\"Search\"\nSearch text can include special characters like *, ?, AND, OR, NOT (see Apache Lucene - Query Parser Syntax for more details) \n\n\"Context Menus\" \nLong press on the bible view to open the context menu for actions affecting the current verse. \nLong press on a document in the document selector to delete it or view information. \nLong press the Back button to access the History list \"",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "allWords86",
+          "text": "All words",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake142",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel250",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "mainBibleView188",
+          "text": "UNKNOWN TEXT",
+          "file": "main_bible_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel153",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightTitlePanel9",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ToggleButton",
+          "id": "strongsToggle11",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_message132",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "repeat39",
+          "text": "Repeat",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "date128",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters129",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "status_icon161",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel56",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText208",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightPanel37",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake212",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake236",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "passage120",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake72",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake112",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake26",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake185",
+          "text": "UNKNOWN TEXT",
+          "file": "mynote_edit.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "createButton69",
+          "text": "Create",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "day129",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake244",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchOldTestament78",
+          "text": "Old Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText25",
+          "text": "UNKNOWN TEXT",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "myNoteText187",
+          "text": "UNKNOWN TEXT",
+          "file": "mynote_edit.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "numChapters28",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBibleNotYet215",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer64",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickBibleChange12",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "sectionGroupPrompt76",
+          "text": "Search Where",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage62",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText237",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "status_progress164",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "moreButton221",
+          "text": "More",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "progressCircular5",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake204",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake203",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "stopButton58",
+          "text": "Stop",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "submit113",
+          "text": "Find",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton251",
+          "text": "OK",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "title_text206",
+          "text": "Help",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_title_text22",
+          "text": "And Bible",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "description126",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "titleDocument3",
+          "text": "And Bible",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "titlePassage4",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning218",
+          "text": "There are no tasks currently being executed.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake193",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake21",
+          "text": "UNKNOWN TEXT",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake246",
+          "text": "No items to display",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickDictionaryChange14",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake233",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_general_book_key.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage150",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake249",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "net.bible.android.view.util.widget.TwoLineListItemWithImage",
+          "id": "__fake190",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake154",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_text163",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "anyWord87",
+          "text": "Any word",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters432",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "phrase88",
+          "text": "Phrase",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake232",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "readButton121",
+          "text": "Passage",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake235",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_general_book_key.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText73",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "tick119",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton222",
+          "text": "OK",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake123",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake181",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "dates127",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton155",
+          "text": "OK",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer219",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftPanel27",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage217",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "languageSpinner227",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel111",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake205",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "top_text125",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "titleBar1",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "indexCreationRequired66",
+          "text": "\"An index is required to search.\n\nIndexes may be downloaded from the internet or created locally.\n\nDownloading is much quicker and downloaded indexes have more search features.\n\nAn internet connection is required to download indexes.\n\"",
+          "file": "search_index.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.download.ProgressStatus"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake149",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer152",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning151",
+          "text": "There are no tasks currently being executed.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel153",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage150",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake154",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton155",
+          "text": "OK",
+          "file": "progress_status.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.search.SearchIndexProgressStatus"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake61",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage62",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning63",
+          "text": "There are no tasks currently being executed.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer64",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.help.Help"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text207",
+          "text": "Navigation\"\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger \nDouble-tap toggles Fullscreen on\/off. \n\n\"Menu\" \nPress the MENU key for actions \n\nTo download more documents press Menu\/More\/Download Documents \n\n\"Speech\"\nPress Speak to access a dialog to start or stop reading \n\n\"My Note\"\nNotes can be added via the My Note menu item on the verse context menu. The list of existing notes can be accessed via the main menu. \n\n\"Bookmarks\"\nBookmarks can be added via the verse context menu. The Bookmark Manager is accessed via the main menu. The Bookmark Manager context menu allows bookmarks to be grouped using labels. \n\n\"Search\"\nSearch text can include special characters like *, ?, AND, OR, NOT (see Apache Lucene - Query Parser Syntax for more details) \n\n\"Context Menus\" \nLong press on the bible view to open the context menu for actions affecting the current verse. \nLong press on a document in the document selector to delete it or view information. \nLong press the Back button to access the History list \"",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText208",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake204",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "title_text206",
+          "text": "Help",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake205",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.navigation.ChooseDictionaryWord"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake236",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText237",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake239",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.page.MainBibleActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "mainBibleView188",
+          "text": "UNKNOWN TEXT",
+          "file": "main_bible_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftTitlePanel2",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.readingplan.DailyReadingList"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.comparetranslations.CompareTranslations"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.speak.Speak"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "queue38",
+          "text": "Queue",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters331",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters230",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton57",
+          "text": "Speak",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "repeat39",
+          "text": "Repeat",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters129",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel56",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightPanel37",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake26",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "numChapters28",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "stopButton58",
+          "text": "Stop",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters432",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftPanel27",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.bookmark.Bookmarks"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake241",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "labelSpinner242",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake244",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake246",
+          "text": "No items to display",
+          "file": "bookmarks.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.search.Search"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "submit85",
+          "text": "Find verses",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "wordsGroup84",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "bibleSectionGroup75",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchAllBible77",
+          "text": "Whole bible",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchNewTestament79",
+          "text": "New Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "centreAreaContainer74",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "allWords86",
+          "text": "All words",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake72",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake112",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchOldTestament78",
+          "text": "Old Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "sectionGroupPrompt76",
+          "text": "Search Where",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "submit113",
+          "text": "Find",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "anyWord87",
+          "text": "Any word",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "phrase88",
+          "text": "Phrase",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText73",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel111",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.mynote.MyNotes"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.search.SearchIndex"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel67",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "downloadButton68",
+          "text": "Download",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake65",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "createButton69",
+          "text": "Create",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "indexCreationRequired66",
+          "text": "\"An index is required to search.\n\nIndexes may be downloaded from the internet or created locally.\n\nDownloading is much quicker and downloaded indexes have more search features.\n\nAn internet connection is required to download indexes.\n\"",
+          "file": "search_index.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.navigation.History"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake201",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake203",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.navigation.GridChoosePassageBook"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake240",
+          "text": "UNKNOWN TEXT",
+          "file": "buttongrid_button_preview.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickCommentaryChange13",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel67",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "downloadButton68",
+          "text": "Download",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "submit85",
+          "text": "Find verses",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "queue38",
+          "text": "Queue",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake167",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake149",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "wordsGroup84",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "WebView",
+          "id": "webView20",
+          "text": "UNKNOWN TEXT",
+          "file": "strongs_ref.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text1148",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_list_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "bibleSectionGroup75",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "SeekBar",
+          "id": "__fake172",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableRow",
+          "id": "__fake118",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "icon191",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake241",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake247",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake201",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake170",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer214",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftTitlePanel2",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake216",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "labelSpinner242",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer152",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text24",
+          "text": "\"Press the MENU key for actions\n\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger\"",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "newLabel252",
+          "text": "New Label",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake184",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake168",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBible213",
+          "text": "Please wait for the bible to finish downloading. You will then be taken to the main screen.",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning63",
+          "text": "There are no tasks currently being executed.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "warningText182",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel141",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableLayout",
+          "id": "reading_container140",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchAllBible77",
+          "text": "Whole bible",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchNewTestament79",
+          "text": "New Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "doneButton143",
+          "text": "Done",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake239",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters331",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning151",
+          "text": "There are no tasks currently being executed.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "centreAreaContainer74",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake61",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_top_text23",
+          "text": "\"\n\\\"And God said, 'Let there be light,' and there was light.\\\"\nGenesis 1:3\"",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "quickSpeak10",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "documentTypeSpinner228",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake65",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake225",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters230",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton122",
+          "text": "Speak",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton57",
+          "text": "Speak",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel220",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake160",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text207",
+          "text": "Navigation\"\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger \nDouble-tap toggles Fullscreen on\/off. \n\n\"Menu\" \nPress the MENU key for actions \n\nTo download more documents press Menu\/More\/Download Documents \n\n\"Speech\"\nPress Speak to access a dialog to start or stop reading \n\n\"My Note\"\nNotes can be added via the My Note menu item on the verse context menu. The list of existing notes can be accessed via the main menu. \n\n\"Bookmarks\"\nBookmarks can be added via the verse context menu. The Bookmark Manager is accessed via the main menu. The Bookmark Manager context menu allows bookmarks to be grouped using labels. \n\n\"Search\"\nSearch text can include special characters like *, ?, AND, OR, NOT (see Apache Lucene - Query Parser Syntax for more details) \n\n\"Context Menus\" \nLong press on the bible view to open the context menu for actions affecting the current verse. \nLong press on a document in the document selector to delete it or view information. \nLong press the Back button to access the History list \"",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "allWords86",
+          "text": "All words",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake142",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel250",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "mainBibleView188",
+          "text": "UNKNOWN TEXT",
+          "file": "main_bible_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel153",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightTitlePanel9",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ToggleButton",
+          "id": "strongsToggle11",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_message132",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "repeat39",
+          "text": "Repeat",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "date128",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters129",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "status_icon161",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel56",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText208",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightPanel37",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake212",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake236",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "passage120",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake72",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake112",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake26",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake185",
+          "text": "UNKNOWN TEXT",
+          "file": "mynote_edit.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "createButton69",
+          "text": "Create",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "day129",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake244",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchOldTestament78",
+          "text": "Old Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText25",
+          "text": "UNKNOWN TEXT",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "myNoteText187",
+          "text": "UNKNOWN TEXT",
+          "file": "mynote_edit.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "numChapters28",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBibleNotYet215",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer64",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickBibleChange12",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "sectionGroupPrompt76",
+          "text": "Search Where",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage62",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText237",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "status_progress164",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "moreButton221",
+          "text": "More",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "progressCircular5",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake204",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake203",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "stopButton58",
+          "text": "Stop",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "submit113",
+          "text": "Find",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton251",
+          "text": "OK",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "title_text206",
+          "text": "Help",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_title_text22",
+          "text": "And Bible",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "description126",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "titleDocument3",
+          "text": "And Bible",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "titlePassage4",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning218",
+          "text": "There are no tasks currently being executed.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake193",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake21",
+          "text": "UNKNOWN TEXT",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake246",
+          "text": "No items to display",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickDictionaryChange14",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake233",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_general_book_key.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage150",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake249",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "net.bible.android.view.util.widget.TwoLineListItemWithImage",
+          "id": "__fake190",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake154",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_text163",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "anyWord87",
+          "text": "Any word",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters432",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "phrase88",
+          "text": "Phrase",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake232",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "readButton121",
+          "text": "Passage",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake235",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_general_book_key.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText73",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "tick119",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton222",
+          "text": "OK",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake123",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake181",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "dates127",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton155",
+          "text": "OK",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer219",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftPanel27",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage217",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "languageSpinner227",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel111",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake205",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "top_text125",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "titleBar1",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "indexCreationRequired66",
+          "text": "\"An index is required to search.\n\nIndexes may be downloaded from the internet or created locally.\n\nDownloading is much quicker and downloaded indexes have more search features.\n\nAn internet connection is required to download indexes.\n\"",
+          "file": "search_index.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.readingplan.ReadingPlanSelectorList"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.bookmark.BookmarkLabels"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake247",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "newLabel252",
+          "text": "New Label",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel250",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton251",
+          "text": "OK",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake249",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.navigation.GridChoosePassageVerse"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake240",
+          "text": "UNKNOWN TEXT",
+          "file": "buttongrid_button_preview.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickCommentaryChange13",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel67",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "downloadButton68",
+          "text": "Download",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "submit85",
+          "text": "Find verses",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "queue38",
+          "text": "Queue",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake167",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake149",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "wordsGroup84",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "WebView",
+          "id": "webView20",
+          "text": "UNKNOWN TEXT",
+          "file": "strongs_ref.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "text1148",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_list_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "bibleSectionGroup75",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "SeekBar",
+          "id": "__fake172",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableRow",
+          "id": "__fake118",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "icon191",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake241",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake247",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake201",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake170",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer214",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftTitlePanel2",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake216",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "labelSpinner242",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer152",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text24",
+          "text": "\"Press the MENU key for actions\n\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger\"",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "newLabel252",
+          "text": "New Label",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake184",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake168",
+          "text": "UNKNOWN TEXT",
+          "file": "preference_seekbar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBible213",
+          "text": "Please wait for the bible to finish downloading. You will then be taken to the main screen.",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning63",
+          "text": "There are no tasks currently being executed.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "warningText182",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel141",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TableLayout",
+          "id": "reading_container140",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchAllBible77",
+          "text": "Whole bible",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchNewTestament79",
+          "text": "New Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "doneButton143",
+          "text": "Done",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake239",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters331",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning151",
+          "text": "There are no tasks currently being executed.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "centreAreaContainer74",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake61",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_top_text23",
+          "text": "\"\n\\\"And God said, 'Let there be light,' and there was light.\\\"\nGenesis 1:3\"",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "quickSpeak10",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "documentTypeSpinner228",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake65",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake225",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters230",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton122",
+          "text": "Speak",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "speakButton57",
+          "text": "Speak",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel220",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake160",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_help_text207",
+          "text": "Navigation\"\nGo to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger \nDouble-tap toggles Fullscreen on\/off. \n\n\"Menu\" \nPress the MENU key for actions \n\nTo download more documents press Menu\/More\/Download Documents \n\n\"Speech\"\nPress Speak to access a dialog to start or stop reading \n\n\"My Note\"\nNotes can be added via the My Note menu item on the verse context menu. The list of existing notes can be accessed via the main menu. \n\n\"Bookmarks\"\nBookmarks can be added via the verse context menu. The Bookmark Manager is accessed via the main menu. The Bookmark Manager context menu allows bookmarks to be grouped using labels. \n\n\"Search\"\nSearch text can include special characters like *, ?, AND, OR, NOT (see Apache Lucene - Query Parser Syntax for more details) \n\n\"Context Menus\" \nLong press on the bible view to open the context menu for actions affecting the current verse. \nLong press on a document in the document selector to delete it or view information. \nLong press the Back button to access the History list \"",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "allWords86",
+          "text": "All words",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake142",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel250",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "mainBibleView188",
+          "text": "UNKNOWN TEXT",
+          "file": "main_bible_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel153",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightTitlePanel9",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ToggleButton",
+          "id": "strongsToggle11",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_message132",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "repeat39",
+          "text": "Repeat",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "date128",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters129",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "status_icon161",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel56",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText208",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "rightPanel37",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake212",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake236",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "passage120",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake72",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake112",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake26",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake185",
+          "text": "UNKNOWN TEXT",
+          "file": "mynote_edit.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "createButton69",
+          "text": "Create",
+          "file": "search_index.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "day129",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake244",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "searchOldTestament78",
+          "text": "Old Testament",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "versionText25",
+          "text": "UNKNOWN TEXT",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "myNoteText187",
+          "text": "UNKNOWN TEXT",
+          "file": "mynote_edit.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioGroup",
+          "id": "numChapters28",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "waitForBibleNotYet215",
+          "text": "UNKNOWN TEXT",
+          "file": "ensure_bible_downloaded.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer64",
+          "text": "UNKNOWN TEXT",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickBibleChange12",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "sectionGroupPrompt76",
+          "text": "Search Where",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage62",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "search_index_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText237",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_dictionary_page.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "status_progress164",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "moreButton221",
+          "text": "More",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "progressCircular5",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake204",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake203",
+          "text": "UNKNOWN TEXT",
+          "file": "history.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "stopButton58",
+          "text": "Stop",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "submit113",
+          "text": "Find",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton251",
+          "text": "OK",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "title_text206",
+          "text": "Help",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "splash_title_text22",
+          "text": "And Bible",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "description126",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "titleDocument3",
+          "text": "And Bible",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "titlePassage4",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning218",
+          "text": "There are no tasks currently being executed.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake193",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake21",
+          "text": "UNKNOWN TEXT",
+          "file": "startup_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake246",
+          "text": "No items to display",
+          "file": "bookmarks.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "quickDictionaryChange14",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake233",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_general_book_key.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage150",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake249",
+          "text": "UNKNOWN TEXT",
+          "file": "bookmark_labels.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "net.bible.android.view.util.widget.TwoLineListItemWithImage",
+          "id": "__fake190",
+          "text": "UNKNOWN TEXT",
+          "file": "list_item_2_image.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake154",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "status_text163",
+          "text": "UNKNOWN TEXT",
+          "file": "progress_notification.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "anyWord87",
+          "text": "Any word",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "numChapters432",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RadioButton",
+          "id": "phrase88",
+          "text": "Phrase",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake232",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "readButton121",
+          "text": "Passage",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake235",
+          "text": "UNKNOWN TEXT",
+          "file": "choose_general_book_key.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "searchText73",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "tick119",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_reading.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton222",
+          "text": "OK",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake123",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake181",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "dates127",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton155",
+          "text": "OK",
+          "file": "progress_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer219",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "leftPanel27",
+          "text": "UNKNOWN TEXT",
+          "file": "speak.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage217",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Spinner",
+          "id": "languageSpinner227",
+          "text": "UNKNOWN TEXT",
+          "file": "document_selection.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel111",
+          "text": "UNKNOWN TEXT",
+          "file": "search.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake205",
+          "text": "UNKNOWN TEXT",
+          "file": "help.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "top_text125",
+          "text": "UNKNOWN TEXT",
+          "file": "reading_plan_one_day.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "titleBar1",
+          "text": "UNKNOWN TEXT",
+          "file": "title_bar.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "indexCreationRequired66",
+          "text": "\"An index is required to search.\n\nIndexes may be downloaded from the internet or created locally.\n\nDownloading is much quicker and downloaded indexes have more search features.\n\nAn internet connection is required to download indexes.\n\"",
+          "file": "search_index.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.download.DownloadStatus"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake216",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "button_panel220",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "moreButton221",
+          "text": "More",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "noTasksRunning218",
+          "text": "There are no tasks currently being executed.",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "Button",
+          "id": "okButton222",
+          "text": "OK",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "progressControlContainer219",
+          "text": "UNKNOWN TEXT",
+          "file": "download_status.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "progressStatusMessage217",
+          "text": "These long running tasks may terminate if you switch to another application before they finish.",
+          "file": "download_status.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.search.SearchResults"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake196",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake198",
+          "text": "UNKNOWN TEXT",
+          "file": "list.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake200",
+          "text": "No items to display",
+          "file": "list.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "net.bible.android.view.activity.footnoteandref.FootnoteAndRefActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake181",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "warningText182",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake184",
+          "text": "UNKNOWN TEXT",
+          "file": "notes.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

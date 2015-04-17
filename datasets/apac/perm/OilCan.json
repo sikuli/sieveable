@@ -1,0 +1,96 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "org.jsharkey.oilcan",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+    
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+    
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "org.jsharkey.oilcan",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.android.contacts.ContactsEmailListActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake9",
+          "text": "UNKNOWN TEXT",
+          "file": "contacts_list_content.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "com.android.contacts.FastScrollView",
+          "id": "__fake10",
+          "text": "UNKNOWN TEXT",
+          "file": "contacts_list_content.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ListView",
+          "id": "__fake12",
+          "text": "UNKNOWN TEXT",
+          "file": "contacts_list_content.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "__fake14",
+          "text": "UNKNOWN TEXT",
+          "file": "contacts_list_content.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.oilcan.BrowserActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "__fake24",
+          "text": "UNKNOWN TEXT",
+          "file": "act_browse.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "WebView",
+          "id": "browse_webview25",
+          "text": "UNKNOWN TEXT",
+          "file": "act_browse.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "browse_zoom26",
+          "text": "UNKNOWN TEXT",
+          "file": "act_browse.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})

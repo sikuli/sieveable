@@ -1,9 +1,4 @@
-var defaultQuery1 = 'MATCH app\n' + 'WHERE\n' +
-    '<LinearLayout>\n\t<ImageButton></ImageButton>\n\t<ImageButton></ImageButton>\n</LinearLayout>\n' +
-    'RETURN app';
-var defaultQuery2 = 'MATCH app\n' + 'WHERE\n' +
-    '<LinearLayout>\n\t<ImageButton></ImageButton></LinearLayout>\n' +
-    'RETURN app';
+var defaultQuery1 = '<callpath from="onClick" \n\tuses-permission="AUDIO"/>'
 
 function Frame() {
     this.id = Frame.prototype.count
@@ -24,9 +19,9 @@ var NoteBook = React.createClass({
 
     handleSearchDidComplete: function (frame) {
         console.log('did complete', frame)
-        if (frame.props.isFirst) {
-            this.addNewFrame()
-        }
+        //if (frame.props.isFirst) {
+        //    this.addNewFrame()
+        //}
     },
 
     handleCopyToTop: function (frame) {
@@ -183,6 +178,7 @@ var FrameComponent = React.createClass({
 
         var viewerStyle = {
             maxHeight: 300,
+            paddingLeft: 30,
             overflow: 'scroll'
         }
 

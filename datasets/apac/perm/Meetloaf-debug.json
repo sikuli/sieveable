@@ -1,0 +1,601 @@
+JSONPickle({
+  "$type": "edu.colorado.permgrep.appData",
+  "packageName": "com.example.meetloaf",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "activityTransition": {
+    "$type": "scala.collection.immutable.Set[scala.Tuple2[edu.colorado.permgrep.data.method,edu.colorado.permgrep.data.clazz]]",
+    "elems": [
+    
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.onePerm",
+  "packageName": "com.example.meetloaf",
+  "permissions": {
+    "$type": "scala.collection.immutable.Set[java.lang.String]",
+    "elems": [
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_FINE_LOCATION"
+    },
+      {
+      "$type": "java.lang.String",
+      "value": "android.permission.ACCESS_COARSE_LOCATION"
+    }
+    ]
+  },
+  "views": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+    "elems": [
+    
+    ]
+  },
+  "path": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.methodView]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.meetloaf.ui.handlers.LocationHandler.RetryRunnable",
+        "methodName": "run"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 0
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.meetloaf.ui.handlers.LocationHandler",
+        "methodName": "access$100"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 1
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "com.example.meetloaf.ui.handlers.LocationHandler",
+        "methodName": "setProvider"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 2
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.methodView",
+      "methodName": {
+        "className": "android.location.LocationManager",
+        "methodName": "getLastKnownLocation"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+        
+        ]
+      },
+      "index": 3
+    }
+    ]
+  }
+})
+JSONPickle({
+  "$type": "edu.colorado.permgrep.allViews",
+  "packageName": "com.example.meetloaf",
+  "activityViews": {
+    "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.inflatedViews]",
+    "elems": [
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.HelpFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "helpFragment70",
+          "text": "UNKNOWN TEXT",
+          "file": "help_view.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "WebView",
+          "id": "helpText71",
+          "text": "Help",
+          "file": "help_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.adapters.MeetingCursorAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "meetingListItem10",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "meetingListProgress15",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "meetingListButton13",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingListEventCount14",
+          "text": "",
+          "file": "meeting_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingListTimeRange12",
+          "text": "",
+          "file": "meeting_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingListName11",
+          "text": "",
+          "file": "meeting_item.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.PersonEventInputFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "personInputLayout3",
+          "text": "UNKNOWN TEXT",
+          "file": "person_event_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "personPhone7",
+          "text": "UNKNOWN TEXT",
+          "file": "person_event_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "personName5",
+          "text": "UNKNOWN TEXT",
+          "file": "person_event_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView26",
+          "text": "Phone:",
+          "file": "person_event_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView14",
+          "text": "Name:",
+          "file": "person_event_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "personEmail9",
+          "text": "UNKNOWN TEXT",
+          "file": "person_event_input.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView38",
+          "text": "Email:",
+          "file": "person_event_input.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.ImageEventViewFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageView",
+          "id": "imageView69",
+          "text": "UNKNOWN TEXT",
+          "file": "image_event_view.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.MeetloafActivity"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "mainActivityLayout68",
+          "text": "UNKNOWN TEXT",
+          "file": "main.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.adapters.MeetingEventCursorAdapter"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingEventTimeRange44",
+          "text": "",
+          "file": "meeting_event_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingEventSummaryText45",
+          "text": "",
+          "file": "meeting_event_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "meetingEventItem42",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_event_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingEventSource43",
+          "text": "",
+          "file": "meeting_event_item.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ProgressBar",
+          "id": "meetingEventProgress46",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_event_item.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.TextEventInputFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "intputEditText2",
+          "text": "UNKNOWN TEXT",
+          "file": "text_event_input.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.MeetingEventFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "FrameLayout",
+          "id": "__fake54",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_event_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TabHost",
+          "id": "meetingEventTabHost49",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_event_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake47",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_event_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TabWidget",
+          "id": "__fake52",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_event_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "meetingName48",
+          "text": "",
+          "file": "meeting_event_fragment.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.EditMeetingDialog"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "refreshStartTimeButton23",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "startTime22",
+          "text": "\"                \"",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "refreshLocationButton30",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "initialLocation29",
+          "text": "unknown",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "locationPrompt27",
+          "text": "Location:",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "CheckBox",
+          "id": "startMeetingCheckbox34",
+          "text": "Start Meeting",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "vertical_separator.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "startTimePrompt20",
+          "text": "Meeting Start Time:",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake16",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "EditText",
+          "id": "meetingName18",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_input_dialog.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "textView217",
+          "text": "Meeting name:",
+          "file": "meeting_input_dialog.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.MeetingFragment"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "__fake35",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "newMeetingButton37",
+          "text": "UNKNOWN TEXT",
+          "file": "meeting_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "activeMeetingName38",
+          "text": "",
+          "file": "meeting_fragment.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "__fake1",
+          "text": "UNKNOWN TEXT",
+          "file": "vertical_separator.xml"
+        }
+        ]
+      }
+    },
+      {
+      "$type": "edu.colorado.permgrep.data.inflatedViews",
+      "activityName": {
+        "className": "com.example.meetloaf.ui.fragments.EventInputFragmentBase"
+      },
+      "views": {
+        "$type": "scala.collection.immutable.Set[edu.colorado.permgrep.data.view]",
+        "elems": [
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "TextView",
+          "id": "eventTitle74",
+          "text": "",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "discardEvent81",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "eventSpecificView77",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "bottomSeparator79",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ScrollView",
+          "id": "__fake72",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "ImageButton",
+          "id": "saveEvent80",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "RelativeLayout",
+          "id": "eventInfoPanel73",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "LinearLayout",
+          "id": "eventSpecificLayout76",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        },
+          {
+          "$type": "edu.colorado.permgrep.data.view",
+          "handlerType": "View",
+          "id": "topSeparator75",
+          "text": "UNKNOWN TEXT",
+          "file": "event_input_container.xml"
+        }
+        ]
+      }
+    }
+    ]
+  }
+})
