@@ -1,0 +1,207 @@
+<App name="com.example.creations" version_code="1">
+  <Directory directory_name="layout-v14">
+    <File file_name="abc_activity_chooser_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/activity_chooser_view_content" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/activityChooserViewStyle">
+    
+    <FrameLayout android:layout_gravity="center" android:id="@id/expand_activities_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/default_activity_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-v11">
+    <File file_name="abc_action_bar_decor.xml">
+      <android.support.v7.internal.widget.NativeActionModeAwareLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/action_bar_root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <android.support.v7.internal.widget.ActionBarContainer android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle">
+        <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+        <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </android.support.v7.internal.widget.ActionBarContainer>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</android.support.v7.internal.widget.NativeActionModeAwareLayout>
+    </File>
+    <File file_name="abc_simple_decor.xml">
+      <android.support.v7.internal.widget.NativeActionModeAwareLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/action_bar_root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:windowContentOverlay"/>
+</android.support.v7.internal.widget.NativeActionModeAwareLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout">
+    <File file_name="abc_list_menu_item_icon.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="-8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="centerInside"/>
+    </File>
+    <File file_name="abc_action_bar_tab.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" class="android.support.v7.internal.widget.ScrollingTabContainerView$TabView" style="?attr/actionBarTabStyle"/>
+    </File>
+    <File file_name="abc_action_bar_title_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:enabled="false" android:orientation="horizontal" android:background="?actionBarItemBackground" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="left|center" android:id="@id/up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?homeAsUpIndicator"/>
+    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:id="@id/action_bar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:ellipsize="end" android:id="@id/action_bar_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:layout_marginBottom="5.0dip" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_search_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/search_bar" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorPrimary" android:gravity="center_vertical" android:id="@id/search_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="2.0dip" android:drawablePadding="0.0dip"/>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/search_button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewSearchIcon" android:contentDescription="Search" style="?attr/actionButtonStyle"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_edit_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="4.0dip" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/search_mag_icon" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="?searchViewSearchIcon" android:scaleType="centerInside"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_plate" android:background="?searchViewTextField" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <view android:ellipsize="end" android:layout_gravity="bottom" android:id="@id/search_src_text" android:background="@null" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="0.0dip" android:layout_height="36.0dip" android:minWidth="160.0dip" android:singleLine="true" android:layout_weight="1.0" android:inputType="textAutoComplete|textNoSuggestions" android:dropDownAnchor="@id/search_edit_frame" android:imeOptions="actionSearch" android:contentDescription="Search query" android:dropDownHeight="wrap_content" android:dropDownHorizontalOffset="0.0dip" android:dropDownVerticalOffset="0.0dip" class="android.support.v7.widget.SearchView$SearchAutoComplete" style="?attr/searchViewAutoCompleteTextView"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_close_btn" android:background="?selectableItemBackground" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewCloseIcon" android:contentDescription="Clear query"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/submit_area" android:background="?searchViewTextFieldRight" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_go_btn" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewGoIcon" android:contentDescription="Submit query"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/search_voice_btn" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="?searchViewVoiceIcon" android:contentDescription="Voice search"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_bar_tabbar.xml">
+      <android.support.v7.internal.widget.LinearLayoutICS xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/actionBarTabBarStyle"/>
+    </File>
+    <File file_name="activity_list_effects.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_mode_close_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/action_mode_close_button" android:paddingLeft="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="16.0dip" android:contentDescription="Done" style="?attr/actionModeCloseButtonStyle">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="?actionModeCloseDrawable" android:scaleType="fitCenter"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_list_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ListMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="?listPreferredItemHeightSmall">
+    <RelativeLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="?listPreferredItemPaddingLeft" android:layout_marginRight="?listPreferredItemPaddingRight" android:layout_weight="1.0">
+        <TextView android:textAppearance="?textAppearanceListItemSmall" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/shortcut" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title"/>
+    </RelativeLayout>
+</android.support.v7.internal.view.menu.ListMenuItemView>
+    </File>
+    <File file_name="abc_action_bar_decor_overlay.xml">
+      <android.support.v7.internal.widget.ActionBarOverlayLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/action_bar_overlay_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <LinearLayout android:layout_gravity="top" android:id="@id/top_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <android.support.v7.internal.widget.ActionBarContainer android:gravity="top" android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="?attr/actionBarStyle">
+            <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+            <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+        </android.support.v7.internal.widget.ActionBarContainer>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="?android:windowContentOverlay" android:scaleType="fitXY"/>
+    </LinearLayout>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:layout_gravity="bottom" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</android.support.v7.internal.widget.ActionBarOverlayLayout>
+    </File>
+    <File file_name="abc_action_bar_view_list_nav_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?attr/actionBarTabBarStyle"/>
+    </File>
+    <File file_name="abc_list_menu_item_checkbox.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/checkbox" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_action_mode_bar.xml">
+      <android.support.v7.internal.widget.ActionBarContextView xmlns:android="http://schemas.android.com/apk/res/android" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </File>
+    <File file_name="support_simple_spinner_dropdown_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:ellipsize="marquee" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:singleLine="true" style="?attr/spinnerDropDownItemStyle"/>
+    </File>
+    <File file_name="activity_show_image.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/image" android:padding="8.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_menu_layout.xml">
+      <android.support.v7.internal.view.menu.ActionMenuView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:divider="?actionBarDivider" app:dividerPadding="12.0dip"/>
+    </File>
+    <File file_name="abc_activity_chooser_view.xml">
+      <android.support.v7.internal.widget.LinearLayoutICS xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/activity_chooser_view_content" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?attr/activityChooserViewStyle">
+    
+    <FrameLayout android:layout_gravity="center" android:id="@id/expand_activities_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/default_activity_button" android:background="?actionBarItemBackground" android:focusable="true" android:addStatesFromChildren="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:paddingLeft="12.0dip" android:paddingTop="2.0dip" android:paddingRight="12.0dip" android:paddingBottom="2.0dip" android:layout_width="56.0dip" android:layout_height="36.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+    </FrameLayout>
+</android.support.v7.internal.widget.LinearLayoutICS>
+    </File>
+    <File file_name="abc_action_bar_decor.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    
+    <android.support.v7.internal.widget.ActionBarContainer android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle">
+        <android.support.v7.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarStyle"/>
+        <android.support.v7.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionModeStyle"/>
+    </android.support.v7.internal.widget.ActionBarContainer>
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:foreground="?android:windowContentOverlay" android:layout_weight="1.0" android:foregroundGravity="fill_horizontal|top|center"/>
+    <android.support.v7.internal.widget.ActionBarContainer android:gravity="center" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?attr/actionBarSplitStyle"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_expanded_menu_layout.xml">
+      <android.support.v7.internal.view.menu.ExpandedMenuView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/expanded_menu" android:layout_width="?panelMenuListWidth" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="abc_list_menu_item_radio.xml">
+      <RadioButton xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@id/radio" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="activity_main.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="abc_action_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ActionMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?actionMenuTextAppearance" android:textColor="?actionMenuTextColor" android:gravity="center" android:layout_gravity="center" android:paddingLeft="8.0dip" android:paddingTop="4.0dip" android:paddingRight="8.0dip" android:paddingBottom="4.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?attr/actionButtonStyle"/>
+    </File>
+    <File file_name="abc_activity_chooser_view_list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/list_item" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:minWidth="196.0dip">
+    <LinearLayout android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="8.0dip"/>
+        <TextView android:textAppearance="?textAppearanceLargePopupMenu" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="abc_popup_menu_item_layout.xml">
+      <android.support.v7.internal.view.menu.ListMenuItemView xmlns:android="http://schemas.android.com/apk/res/android" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="?dropdownListPreferredItemHeight" android:minWidth="196.0dip">
+    <RelativeLayout android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="?textAppearanceLargePopupMenu" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <TextView android:textAppearance="?textAppearanceSmallPopupMenu" android:id="@id/shortcut" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/title" android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</android.support.v7.internal.view.menu.ListMenuItemView>
+    </File>
+    <File file_name="fragment_main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="20.0sp" android:gravity="center" android:id="@id/hint" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="" android:alpha="0.7"/>
+    <ImageView android:gravity="center" android:id="@id/editimage" android:padding="8.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="3.0" android:contentDescription="@null"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/tools_footer" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_weight="1.0">
+        <TextView android:gravity="center" android:id="@id/browsefilestxt" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Open" android:drawableTop="@drawable/directory_icon"/>
+        <TextView android:gravity="center" android:id="@id/viewimagetxt" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="View" android:drawableTop="@drawable/creations_view"/>
+        <TextView android:gravity="center" android:id="@id/shareimagetxt" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Share" android:drawableTop="@drawable/creations_share"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="activity_view_creations.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@id/listViewResults" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="abc_action_bar_home.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:background="?actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" class="android.support.v7.internal.widget.ActionBarView$HomeView">
+    <ImageView android:layout_gravity="left|center" android:id="@id/up" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-8.0dip" android:src="?homeAsUpIndicator"/>
+    <ImageView android:layout_gravity="center" android:id="@id/home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+</view>
+    </File>
+    <File file_name="abc_search_dropdown_item_icons_2line.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="8.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="?searchResultListItemHeight">
+    <ImageView android:id="@android:id/icon1" android:visibility="invisible" android:layout_width="32.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@id/edit_query" android:background="?searchViewEditQueryBackground" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="?searchViewEditQuery" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <ImageView android:id="@android:id/icon2" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:layout_toLeftOf="@id/edit_query" android:layout_alignParentTop="true" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true"/>
+    <TextView android:textAppearance="?textAppearanceSearchResultSubtitle" android:gravity="top" android:id="@android:id/text2" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="29.0dip" android:singleLine="true" android:layout_toLeftOf="@android:id/icon2" android:layout_toRightOf="@android:id/icon1" android:layout_alignParentBottom="true" android:layout_alignWithParentIfMissing="true" style="?android:attr/dropDownItemStyle"/>
+    <TextView android:textAppearance="?textAppearanceSearchResultTitle" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@android:id/icon2" android:layout_toRightOf="@android:id/icon1" android:layout_above="@android:id/text2" android:layout_centerVertical="true" style="?android:attr/dropDownItemStyle"/>
+</RelativeLayout>
+    </File>
+    <File file_name="abc_simple_decor.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/action_bar_root" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/action_bar_activity_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="?android:windowContentOverlay"/>
+</LinearLayout>
+    </File>
+  </Directory>
+</App>

@@ -1,0 +1,561 @@
+<App name="com.darshancomputing.BatteryIndicatorPro" version_code="3092">
+  <Directory directory_name="layout-v11">
+    <File file_name="divider_after_hint.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <View android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip"/></LinearLayout>
+    </File>
+    <File file_name="hint.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    </File>
+  </Directory>
+  <Directory directory_name="layout">
+    <File file_name="other_settings_help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Logging" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enable Logging" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;If enabled, Battery Indicator will log battery state changes (e.g., the device is unplugged or becomes fully charged). You can view the logs from the main window (press MENU and then select Logs; on tablets, MENU isn't necessary).&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Log Everything" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If enabled, Battery Indicator will also log every change in the charge level, as well (e.g., going from 57% to 56% or vice versa)." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Maximum Log Age" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If logging is enabled, then whenever you plug in your device, logs older than this will be deleted." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Lock Screen / Keyguard" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Android allows apps to disable and reenable what it calls the \&quot;keyguard\&quot;, which you probably think of as the lock screen. Beyond simply disabling and reenabling it, however, there is no more control — I can't control which keys turn the screen on, for example.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Notify When Disabled" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If checked, a separate notification will be shown indicating when the app is disabling the lock screen." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Confirm Manual Disable" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;If checked, a confirmation dialog will pop up when you try to manually disable the lock screen. This is primarily intended to prevent new users from accidentally disabling their lock screen without knowing it. If you disable the lock screen with any regularity, you'll probably want to turn this off.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Exit After Toggling" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;If you're someone for whom every keystroke (or touchscreen press) matters, you'll probably want to enable this. If your goal is to simply disable or reenable the lock screen and then get back to what you're doing, this keeps you from having to press the BACK key. Just pull down the notification bar, press on Battery Indicator, and press the button to toggle the lock screen: three screen presses and you're back to what you were doing.&#10; &#10;For obvious reasons, you can only enable this if the previous setting is disabled, and vice versa.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Auto-disable Lock Screen" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;If checked, then whenever the device is plugged in, Battery Indicator with disable the lock screen, and whenever the device is unplugged, it will enable it again.&#10; &#10;Note that with this option enabled, you will still have to manually pass through the lock screen once before it will be auto-disabled.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Disallow Manual Disable" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If you have an alternative lock screen that allows access to the notification tray when the screen is locked, you might want to enabled this option for security reasons." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Notification Priority" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;On Jelly Bean and up (Android 4.1 and over), notifications can have a priority set. The effect(s) of changing the priority are not guaranteed, but in general:&#10; &#10;• Setting it to \&quot;Minimum\&quot; should in most cases remove the status bar icon but still show the notification in the pull-down notification tray.&#10; &#10;• Setting it to \&quot;Low\&quot; should allow other notifications, such as new email, to appear above the Battery Indicator notification. This is nice in cases like email where the notification is expandable (expandable notifications are automatically expanded when they are the top notification).&#10; &#10;Priorities \&quot;Default\&quot; and above seem to usually leave Battery Indicator as the top notification, but I imagine there are edge cases where the higher priorities make a difference.&#10; &#10;Again, the exact behavior may vary between devices and is not guaranteed.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Main Notification Priority" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Set the priority of the main notification. Alarms, plugins, and any other notifications are not affected by this setting, but they may in the future have configurable priority." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Battery Use" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Exit After Launching" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;If you're someone for whom every keystroke (or touchscreen press) matters, you might want to enable this. Enabling this preserves the old behavior of closing Battery Indicator's main window immediately after launching the Battery Use screen.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Temperature Unit" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Convert to Fahrenheit" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Android reports the battery temperature in degrees Celsius. If you prefer to see the battery temperature in degrees Fahrenheit, check this option, and the app will convert for you." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Autostart" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Autostart at Boot" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Controls whether Battery Indicator should start itself automatically when the device boots up.&#10; &#10;The \&quot;If Running on Shutdown\&quot; option works with regard to whether you've most recently manually started or stopped Battery Indicator. So if you kill Battery Indicator through some other means, like a task killer, then Battery Indicator doesn't know you stopped it, and it will still start at boot up if you have it set to this.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Textual Charge Level" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Textual Charge Level" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;I've had a few users with poorer eyesight ask me to add this option, whereby the charge level is displayed as text (which is a bit larger and easier to read) right next to the icon when you pull down the notification area. The actual icon won't be any different, so this will only help when you pull down the notification tray, but it's better than nothing, and easy enough to add for those that want it. It is particularly useful for those using a screen reader.&#10; &#10;On some devices, enabling this cuts off the rightmost portion of the notification text.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="One-percent hack" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="One-percent hack" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/one_percent_hack" android:text="&quot;This hack appears to work for all Motorola devices that default to 10% increments, other than the original Droid.&#10; &#10;Most devices do not need this. If your device already shows one-percent increments, do not enable this hack.&#10; &#10;If the option is grayed-out and not able to be turned on, then your device is not capable of using this hack.&#10; &#10;See the &quot; &quot; wiki page for more info. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="none.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    </File>
+    <File file_name="alarm_settings_help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Alarms Overview" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;This page allows you to add new alarms, quickly enable or disable existing alarms, or delete alarms.&#10; &#10;To add a new alarm, press \&quot;Add alarm\&quot; — this will create a new alarm and take you to the alarm settings page, where you can control the settings for the new alarm. See the help on that page for more details.&#10; &#10;Below the \&quot;Add alarm\&quot; button is a list of any alarms you have created.&#10; &#10;• To edit an existing alarm, just press it. &#10;• To delete an alarm, long-press it, then select \&quot;Delete Alarm\&quot;. (You can also delete an alarm from the individual alarm settings page by pressing MENU then \&quot;Delete Alarm\&quot;.) &#10;• To quickly toggle whether an alarm is enabled, press the alarm clock icon to the left of the alarm text. (You can also enable or disable an alarm from the individual alarm settings page.)&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="time_remaining_estimate_small.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="color_preview_pref.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@android:id/title" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    <ImageView android:gravity="fill_horizontal" android:id="@id/color_preview_bar_v" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="30.0dip" android:src="@drawable/color_preview_bar"/>
+    <ImageView android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+</LinearLayout>
+    </File>
+    <File file_name="logs_header.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="18.0dip" android:textStyle="bold" android:gravity="center_horizontal" android:id="@id/header_text" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <ImageView android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+</LinearLayout>
+    </File>
+    <File file_name="help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Version" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/version" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Changelog" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/changelog" android:text="&quot; See the &quot; &quot;. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Introduction" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/introduction" android:text="This is  , the \&quot;Pro\&quot; version of the popular free app,  &quot;. It's available for purchase from the Android Market, but it's an open source project, which means you can download the source for free from &quot; &quot;. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Summary" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot; is a lightweight battery indicator for the Android™ mobile operating system. Its core feature is that it provides an icon that lives in the status bar and shows you the percentage of battery charge left.&#10; &#10;This Pro version offers a great deal more utility than that, however. Besides offering red, amber, and green icons, it also has the following key features as of version 3.0:&#10; &#10;• Fully configurable estimated charge/discharge time left. &#10;• Downloadable icon plugins. &#10;• Logging of battery state. &#10;• Themes for the main window (including a full-size window with large, easy-to-read text). &#10;• Manually disable/reenable the device lock screen, with the option to automatically disable it when plugged in and reenable it when unplugged. &#10;• Many more useful things that you'll discover throughout. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Limitations" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/limitations" android:text="( &quot;)&#10; &#10;• There's no way to remove the built-in battery icon. &#10;• The notification icon in the status bar and the message you see in the notification tray are tied together — you can't have one without the other. &#10;• Many apps should allow installation to removable storage (SD card); some should not. Battery Indicator is of the latter group. See &quot; &quot; if you'd like further explanation. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Features" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;• Small, simple, and easy to read. &#10;• It doesn't do any polling. It receives a broadcast message from the OS when the battery status changes, then it simply updates the icon and goes back to sleep. What this means is that it will take up a small amount of RAM, but essentially 0 CPU cycles, so it can't drain your battery. I estimate that it will cost you about 1 minute of usage time off of a full discharge as a worst case scenario. If you are experiencing anything worse than that, you probably have another app (such as a \&quot;task killer\&quot; app of some kind) interfering with Battery Indicator's normal operation. &#10;• Easy access to Battery Use screen (requires Android 1.6+). &#10;• Configure to always start on boot, never start on boot, or start on boot if the app was running on shutdown. &#10;• Lots more that I'm either forgetting or seem too minor to mention on their on, but that add up to a great app. &#10;• The satisfaction of supporting the developer. (I really appreciate it!)&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="No Warranty" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.&#10; &#10;While I do my best to make sure that it works well and does not cause problems, I am not responsible for any damage or inconvenience it may cause under any circumstance.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Acknowledgments" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/acknowledgments" android:text="&quot;This app would only be available in English without the generous assistance of the volunteer translators. Thanks!&#10; &#10;Many thanks are due to Google and all of the open-source coders who made the Android platform and this app possible.&#10; &#10;The launcher icon (the upright battery you see in the Market) is based on an icon from &quot;  and used under the  &quot;. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Translations" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/translations" android:text="I need help translating this app to other languages. If you would like to help, please send me an  &quot;. (This address is only for translation; see Contact section below for all other inquiries.) Unless you prefer me not to, I will add your name to this section in acknowledgment of your assistance. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Translators" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Matthew McBaul(包明) &#10;Gonzalo Rodríguez Píriz &#10;skwt &#10;Gabriele Ravanetti &#10;Paul Fiorentino &#10;Petr BOEHM &#10;Korenisko &#10;Gabor Kovacs &#10;Rudy Baardman &#10;Boudewijn &#10;Miltos (Κύπρος)&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Contact" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/contact" android:text="If you have a question or a problem, please see  &quot; for how to contact me.&#10; &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="list_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:scrollbarStyle="outsideOverlay" android:id="@android:id/list" android:background="#ff000000" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <ImageView android:gravity="fill_horizontal" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+</LinearLayout>
+    </File>
+    <File file_name="main_frame_full_dark.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff111111" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="top|center" android:id="@id/main_frame" android:background="#ff111111" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_content" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="280.0dip" android:layout_height="wrap_content">
+            <TextView android:textSize="28.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/title_t" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_full_name"/>
+            <TextView android:textSize="18.0sp" android:textColor="#ffa4c639" android:gravity="center_horizontal" android:id="@id/status_since_t" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            <View android:layout_width="fill_parent" android:layout_height="5.0dip"/>
+            <Button android:textSize="20.0sp" android:layout_gravity="center_horizontal" android:id="@id/battery_use_b" android:layout_width="fill_parent" android:layout_height="66.0dip" android:text="View Battery Use"/>
+            <View android:layout_width="fill_parent" android:layout_height="6.0dip"/>
+            <Button android:textSize="20.0sp" android:layout_gravity="center_horizontal" android:id="@id/toggle_lock_screen_b" android:layout_width="fill_parent" android:layout_height="66.0dip"/>
+            <View android:layout_width="fill_parent" android:layout_height="5.0dip"/>
+            <View android:layout_width="fill_parent" android:layout_height="5.0dip"/>
+            <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:paddingLeft="4.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Press BACK to leave."/>
+            <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:paddingLeft="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Press MENU for more items."/>
+            <View android:layout_width="fill_parent" android:layout_height="2.0dip"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="186.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="72.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="186.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="72.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="186.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="72.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="186.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="72.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="186.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="72.0dip" android:layout_height="wrap_content"/>
+</LinearLayout></LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="alarms.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+        <LinearLayout android:orientation="horizontal" android:id="@id/add_alarm" android:background="@drawable/list_selector_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:gravity="center" android:duplicateParentState="true" android:layout_width="68.0dip" android:layout_height="68.0dip" android:src="@drawable/add_alarm" android:scaleType="center"/>
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/list_item" android:layout_gravity="center_vertical" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add alarm"/>
+        </LinearLayout>
+        <ImageView android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+        <LinearLayout android:orientation="vertical" android:id="@id/alarms_list" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:textColor="#ffa4c639" android:gravity="center_horizontal" android:id="@android:id/title" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Hint: Press MENU for help." android:singleLine="true"/></LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="main_frame_default.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/main_frame" android:background="@drawable/panel_background" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_content" android:layout_width="220.0dip" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;         &#10;         &#10;    ">
+            <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/title_t" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_full_name"/>
+            <TextView android:textSize="14.0dip" android:textColor="#ffa4c639" android:gravity="center_horizontal" android:id="@id/status_since_t" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            <View android:layout_width="fill_parent" android:layout_height="3.0dip"/>
+            <Button android:textSize="16.0sp" android:layout_gravity="center_horizontal" android:id="@id/battery_use_b" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="View Battery Use"/>
+            <View android:layout_width="fill_parent" android:layout_height="4.0dip"/>
+            <Button android:textSize="16.0sp" android:layout_gravity="center_horizontal" android:id="@id/toggle_lock_screen_b" android:layout_width="fill_parent" android:layout_height="56.0dip"/>
+            <View android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:paddingLeft="4.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Press BACK to leave."/>
+            <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:paddingLeft="4.0dip" android:layout_width="fill_parent" android:layout_height="18.0sp" android:text="Press MENU for more items." style="main_window_menu_hint"/>
+            <View android:layout_width="fill_parent" android:layout_height="2.0dip"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout></LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    </File>
+    <File file_name="hidden.xml">
+      <View xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip"/>
+    </File>
+    <File file_name="main_frame_colorful.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/main_frame" android:background="@drawable/colorful_theme_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/main_content" android:paddingLeft="7.0dip" android:paddingTop="5.0dip" android:paddingRight="7.0dip" android:paddingBottom="5.0dip" android:layout_width="220.0dip" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/title_t" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_full_name"/>
+            <TextView android:textSize="12.0sp" android:textColor="#ffa4c639" android:gravity="center_horizontal" android:id="@id/status_since_t" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            <View android:layout_width="fill_parent" android:layout_height="2.0dip"/>
+            <Button android:layout_gravity="center_horizontal" android:id="@id/battery_use_b" android:layout_width="fill_parent" android:layout_height="43.0dip" android:text="View Battery Use"/>
+            <View android:layout_width="fill_parent" android:layout_height="3.0dip"/>
+            <Button android:layout_gravity="center_horizontal" android:id="@id/toggle_lock_screen_b" android:layout_width="fill_parent" android:layout_height="56.0dip"/>
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:paddingLeft="4.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Press BACK to leave."/>
+            <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:paddingLeft="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Press MENU for more items."/>
+            <View android:layout_width="fill_parent" android:layout_height="2.0dip"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout><LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14.0dip" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="135.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="53.0dip" android:layout_height="wrap_content"/>
+</LinearLayout></LinearLayout>
+    </ScrollView>
+</LinearLayout>
+    </File>
+    <File file_name="alarm_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:focusable="false" android:clickable="false" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/indicator" android:background="@drawable/list_selector_background" android:focusable="true" android:clickable="true" android:longClickable="true" style="&#10;         &#10;         &#10;    ">
+            <ImageView android:layout_gravity="center" android:id="@id/clock_onoff" android:focusable="false" android:clickable="false" android:longClickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:src="@drawable/indicator_clock_onoff"/>
+            <ImageView android:layout_gravity="center" android:id="@id/bar_onoff" android:paddingTop="4.0dip" android:focusable="false" android:clickable="false" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_off"/>
+        </LinearLayout>
+        <ImageView android:gravity="fill_vertical" android:background="?android:windowBackground" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/divider_vertical_dark" android:scaleType="fitXY"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/alarm_summary_box" android:background="@drawable/list_selector_background" android:focusable="true" android:clickable="true" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="16.0sp" android:textColor="@color/list_item" android:layout_gravity="center_vertical" android:id="@id/alarm_summary" android:padding="6.0dip" android:focusable="false" android:clickable="false" android:longClickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+</LinearLayout>
+    </File>
+    <File file_name="main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    "/>
+    </File>
+    <File file_name="main_settings_help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Overview" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;The settings are organized into four separate pages, as described below. Each page has its own help page describing the settings on that page. Simply press MENU then Help (on tablets, MENU isn't necessary) to get help from whatever settings page you are on.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Colors and Themes" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="You can change the theme for the main window and control if and when the notification icon changes color." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Time Settings" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Here you can control when the notification switches from saying exactly when the device's status changed (unplugged, for example) to stating approximately how many hours ago the change happened.&#10; &#10;You also can set whether or not to show the timestamp in the notification.&#10; &#10;Last, you can control which estimates you want to see for the time remaining for USB/AC charging and light/normal/heavy/constant usage, and adjust the basis for these estimates.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Alarms" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="You can have Battery Indicator notify you when your battery level reaches a certain point (e.g., the battery becomes fully charged, the battery level drops below 20%)." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Other Settings" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="All other settings are on this page, including logging, lock screen, temperature unit, autostart, and more." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="my_divider.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/>
+    </File>
+    <File file_name="divider_after_hint.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:gravity="fill_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/my_divider" android:scaleType="fitXY"/></LinearLayout>
+    </File>
+    <File file_name="alarm_edit_help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Enable Alarm" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If you want to temporarily disable an alarm without having to recreate it when you want it again, you can turn it off and on either here or on the main alarms page." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Alarm Conditions" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="This is where you can control what conditions trigger the alarm." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Alarm Type" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;There are currently five types of alarm that you can choose from.&#10; &#10;The \&quot;Becomes fully charged\&quot; alarm will notify you when the status of your battery changes from \&quot;Charging\&quot; to \&quot;Fully Charged\&quot;. Note that on many devices, this isn't necessarily the same thing as being at 100% charge.&#10; &#10;The charge and temperature alarms require you to set a threshold below, after choosing that alarm type.&#10; &#10;The \&quot;Health Fails\&quot; alarm will notify you if your battery health becomes something other than \&quot;Unknown\&quot; or \&quot;Good Health\&quot;, as reported by Android.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Threshold" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="For charge and temperature alarms, you need to set the temperature or charge level that will trigger the alarm." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Notification Settings" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="This is where you can control various aspects of the alarm notification that is created to notify you when an alarm has been triggered." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Ringtone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Here you can control which sound to play when the alarm is triggered. Select 'Silent' if you don't want a sound to be played.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Vibrate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If all goes well, setting this option will make the device vibrate when the alarm is triggered, unless the device is in Silent Mode, unless you have the device set up to vibrate even in Silent Mode. In other words, it should do what you expect. Please email me if something goes astray." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Flash Lights" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Sets whether the notification should enable the device's default lights. This generally flashes an LED or trackball. Note that every Android device I've used has been slightly buggy in this department. If you have this checked, then the notification will request Android to flash lights, but it might not always actually happen.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="color_settings_help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Themes" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Main Window Theme" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Sets the theme for the main window. By default, the theme will roughly match a standard Android dialog, like Battery Indicator always has. The Full Window theme is useful if you like things big and easy to read. Other themes are just for fun." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Icon Plugin" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;If you have any Battery Indicator Pro icon plugins installed (press MENU then Get Plugins to get free plugins), you can choose among them here. At this time, the plugins don't offer any options, so the icon color settings below will disappear if you choose anything other than \&quot;None\&quot;. The trade-off, of course, is that there will hopefully be many plugins available so you should be able to find one that does exactly what you want.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Icon Color" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;In order to keep the binary package for Battery Indicator reasonably small, there are some limitations for the colors. At the time of writing, you can have a red icon as high as 30%, an amber icon as high as 50%, and a green icon as low as 20%. I think these are reasonable compromises that should work for 99% of users.&#10; &#10;To give you maximum control, the colors can be turned on or off independently. This means that you can have as much as a four-tiered color scheme, where the icon is green when it is very full, then grayscale, then amber, then red. Of course, most people probably have the amber and green thresholds set to the same value, so that the icon is never grayscale.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Color Preview" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;The color preview will hopefully make it really easy to visualize what effect your color settings will have.&#10; &#10;This doesn't exist in 10% mode, because it just wouldn't make sense.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Use Red Icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to use a red icon below the specified threshold." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Red Threshold" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Specifies the charge level which the icon should turn red below (or  &quot;, in 10% Mode).&#10; &#10;The options for the red threshold include all the values (in multiples of 5) for which there are red icons available.&#10; &#10;In 10% Mode, things work slightly differently but should be self-explanatory. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Use Amber Icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to use an amber icon below the specified threshold." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Amber Threshold" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Specifies the charge level which the icon should turn amber below (or  &quot;, in 10% Mode).&#10; &#10;The options for the amber threshold include all the values (in multiples of 5) for which there are amber icons available, starting 5 percentage points above the red threshold (if there is one). For example, if you have the red threshold set to 15, then your lowest option here will be 20.&#10; &#10;In 10% Mode, things work slightly differently but should be self-explanatory. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Use Green Icon" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to use a green icon at or above the specified threshold." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Green Threshold" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;Specifies the charge level which the icon should be green at or above.&#10; &#10;The options for the green threshold include all the values (in multiples of 5) for which there are green icons available, starting at the highest active threshold you have set for red or amber. For example, if you have the amber threshold set to 40, then your lowest option here will be 40.&#10; &#10;In 10% Mode, things work slightly differently but should be self-explanatory.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="10% Mode" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot; Checking or unchecking this will reset your icon color settings!&#10; &#10;This setting cleans up the Icon Color settings to make more sense on devices that only show their charge level in 10% increments. According to user reports, that includes these devices:&#10; &#10;• Motorola Droid (original) &#10;• Motorola Droid X &#10;• Motorola Droid 2 &#10;• Motorola Defy &#10;• Samsung Moment&#10; &#10;As far as I'm aware, all other devices report every 1%, and so should &quot; &quot; turn this on. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="log_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:padding="5.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="18.0dip" android:textStyle="bold" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"/>
+        <TextView android:textSize="18.0dip" android:id="@id/percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:padding="5.0dip" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0dip" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true"/>
+        <TextView android:textSize="16.0dip" android:id="@id/temp_volt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="time_settings_help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="12.0dip" android:paddingTop="12.0dip" android:paddingRight="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:text="Status Duration (For/Since...)" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="When to Approximate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Determines when the notification switches from saying, e.g., \&quot;Unplugged Since 1:10 PM\&quot; to saying something like \&quot;Unplugged for 1 Hour\&quot;. The first way is more accurate, because it tells you exactly (to the minute) when the status changed, but many people prefer the simpler to comprehend approximation of the number of elapsed hours, so they make that happen sooner than the default of 12 hours." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Notification Time" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Show Notification Time" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;By default, Android shows a timestamp indicating exactly when a notification was created. This takes up space that can make it hard for the rest of the notification to fit on some devices. It can be distracting, as it is usually not of any interest to most users. The important time is when the status actually changed, and I show that anyway. So by default, this is now disabled, but power users may wish to reenable it here.&#10; &#10;&quot; &quot; This is off by default, and turning it on works instantaneously. However, turning it back off may require restarting the app after un-checking the box. &quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <View style="&#10;         &#10;         &#10;    "/>
+        <TextView android:text="Time Remaining Estimates" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="&quot;I've done these time remaining estimates a bit differently than you might be used to, but I think for the better. You control what the app uses as a basis to estimate battery life, so if you think it's wrong, you can fix it. I've used what I think are reasonable defaults, but devices vary quite a bit, and how we use our devices varies even more, so you're going to have to tweak these settings. But that's a good thing, because only you know what \&quot;Normal Usage\&quot; (et al) means to you, and you can actually put in times that work for you, rather than being annoyed if the estimates are wrong.&quot;" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Show Charge Time" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="If enabled, then while the device is charging, the main window will show an estimate (based on your settings below) as to how long it will be until the device is fully charged." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="USB Charge" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enter how long you think your battery would take to completely charge from 0% to 100% on USB power." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="AC Charge" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enter how long you think your battery would take to completely charge from 0% to 100% on AC power." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Show Light Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to show an estimate (in the main window) as to how long it will take to drain your battery at whatever you consider \&quot;Light Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Light Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enter how long you think your battery would take to completely discharge from 100% to 0% at whatever you consider \&quot;Light Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Show Normal Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to show an estimate (in the main window) as to how long it will take to drain your battery at whatever you consider \&quot;Normal Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Normal Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enter how long you think your battery would take to completely discharge from 100% to 0% at whatever you consider \&quot;Normal Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Show Heavy Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to show an estimate (in the main window) as to how long it will take to drain your battery at whatever you consider \&quot;Heavy Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Heavy Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enter how long you think your battery would take to completely discharge from 100% to 0% at whatever you consider \&quot;Heavy Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Show Constant Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Whether or not to show an estimate (in the main window) as to how long it will take to drain your battery at whatever you consider \&quot;Constant Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Constant Usage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:text="Enter how long you think your battery would take to completely discharge from 100% to 0% at whatever you consider \&quot;Constant Usage\&quot;." style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="hint.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="18.0sp" android:textColor="#ffa4c639" android:gravity="center_horizontal" android:id="@android:id/title" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Hint: Press MENU for help." android:singleLine="true"/>
+    </File>
+    <File file_name="first_run_message.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_root" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:textColor="#ffffffff" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:bufferType="spannable" android:text="Thanks for your donation/purchase!  &quot;&#10; &#10;• If you have a \&quot;&quot; \&quot; / process manager of some kind, you should either uninstall it or try to get it to ignore Battery Indicator Pro. Even if you have it set to ignore the free version,  &quot; !&#10; &#10;• If your device only shows the battery level in 10% increments by default (&quot; &quot;), then you should turn on the \&quot;One-percent Hack\&quot; in \&quot;Other Settings\&quot; to enable one-percent increments. &quot;" android:lineSpacingMultiplier="1.1"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="time_remaining_estimate_full.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0sp" android:gravity="left" android:id="@id/label" android:paddingBottom="3.0dip" android:layout_width="186.0dip" android:layout_height="wrap_content"/>
+    <TextView android:textSize="18.0sp" android:gravity="right" android:id="@id/time" android:paddingBottom="3.0dip" android:layout_width="72.0dip" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="color_pref_screen.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:enabled="false" android:layout="@layout/hint" android:title="Hint: Press MENU for help." android:selectable="false"/>
+    <PreferenceCategory android:title="Themes">
+        <ListPreference android:entries="@array/mw_theme_pref_entries" android:title="Main Window Theme" android:key="main_window_theme" android:defaultValue="default" android:entryValues="@array/mw_theme_pref_values"/>
+        <ListPreference android:title="Icon Plugin" android:key="icon_plugin" android:defaultValue="none"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Plugin Settings" android:key="category_plugin_settings">
+        <Preference android:enabled="false" android:title="Plugin Settings" android:key="plugin_settings" android:summary="Edit settings for this plugin"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Icon Color" android:key="category_color">
+        <com.darshancomputing.BatteryIndicatorPro.ColorPreviewPreference android:enabled="false" android:layout="@layout/color_preview_pref" android:title="Color Preview" android:selectable="false" android:key="color_preview"/>
+        <CheckBoxPreference android:title="Use Red Icon" android:key="use_red" android:summary="Use red icon when charge is low?" android:defaultValue="true"/>
+        <ListPreference android:title="Red Threshold" android:key="red_threshold" android:defaultValue="15" android:dialogTitle="Red icon below what charge percentage:"/>
+        <CheckBoxPreference android:title="Use Amber Icon" android:key="use_amber" android:summary="Use amber icon when charge is medium?" android:defaultValue="true"/>
+        <ListPreference android:title="Amber Threshold" android:key="amber_threshold" android:defaultValue="40" android:dialogTitle="Amber icon below what charge percentage:"/>
+        <CheckBoxPreference android:title="Use Green Icon" android:key="use_green" android:summary="Use green icon when charge is high?" android:defaultValue="false"/>
+        <ListPreference android:title="Green Threshold" android:key="green_threshold" android:defaultValue="@string/default_amber_thresh" android:dialogTitle="Green icon at or above what charge percentage:"/>
+        <CheckBoxPreference android:title="10% Mode" android:key="ten_percent_mode" android:summary="Read the help first!" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="main_pref_screen.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:enabled="false" android:layout="@layout/hint" android:title="Hint: Press MENU for help." android:selectable="false"/>
+    <Preference android:enabled="false" android:layout="@layout/divider_after_hint" android:selectable="false"/>
+    <Preference android:title="Colors and Themes" android:key="color_settings" android:summary="Control icon colors and window themes"/>
+    <Preference android:title="Time Settings" android:key="time_settings" android:summary="Control time estimates and approximations"/>
+    <Preference android:title="Alarms" android:key="alarm_settings" android:summary="Control notifications for low/full battery"/>
+    <Preference android:title="Other Settings" android:key="other_settings"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="alarm_pref_screen.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:enabled="false" android:layout="@layout/hint" android:title="Hint: Press MENU for help." android:selectable="false"/>
+    <Preference android:enabled="false" android:layout="@layout/my_divider" android:selectable="false"/>
+    <CheckBoxPreference android:persistent="false" android:title="Enable Alarm" android:key="enabled"/>
+    <PreferenceCategory android:title="Alarm Conditions">
+        <ListPreference android:persistent="false" android:entries="@array/alarm_type_entries" android:title="Alarm Type" android:key="type" android:dialogTitle="Trigger alarm when battery:" android:entryValues="@array/alarm_type_values"/>
+        <ListPreference android:persistent="false" android:title="Threshold" android:key="threshold" android:dialogTitle="Alarm threshold:"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notification Settings">
+        <com.darshancomputing.BatteryIndicatorPro.AlarmRingtonePreference android:persistent="false" android:title="Ringtone" android:key="ringtone" android:ringtoneType="notification|alarm" android:showDefault="true" android:showSilent="true"/>
+        <CheckBoxPreference android:persistent="false" android:title="Vibrate" android:key="vibrate"/>
+        <CheckBoxPreference android:persistent="false" android:title="Flash Lights" android:key="lights"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="other_pref_screen.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:enabled="false" android:layout="@layout/hint" android:title="Hint: Press MENU for help." android:selectable="false"/>
+    <PreferenceCategory android:title="Logging">
+        <CheckBoxPreference android:title="Enable Logging" android:key="enable_logging" android:summary="Log battery state changes?" android:defaultValue="false"/>
+        <CheckBoxPreference android:enabled="true" android:title="Log Everything" android:key="log_everything" android:summary="Log charge changes, too?" android:defaultValue="false"/>
+        <ListPreference android:entries="@array/max_log_age_entries" android:title="Maximum Log Age" android:key="max_log_age" android:defaultValue="672" android:dialogTitle="Delete logs older than:" android:entryValues="@array/max_log_age_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Lock Screen / Keyguard">
+        <CheckBoxPreference android:title="Notify When Disabled" android:key="notify_when_kg_disabled" android:summary="Indicate when lock screen is disabled?" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Confirm Manual Disable" android:key="confirm_disable_lock_screen" android:summary="Confirm when manually disabling lock screen?" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Exit After Toggling" android:key="finish_after_toggle_lock" android:summary="Exit main window immediately after dis/reenabling?" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Auto-disable Lock Screen" android:key="auto_disable_lock_screen" android:summary="Disable the lock screen when charging?" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Disallow Manual Disable" android:key="disallow_disable_lock_screen" android:summary="Disallow use of the disable lock screen button?" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notification Priority">
+        <ListPreference android:enabled="false" android:entries="@array/notification_priority_entries" android:title="Main Notification Priority" android:key="main_notification_priority" android:defaultValue="-1" android:dialogTitle="@string/pref_main_notification_priority" android:entryValues="@array/notification_priority_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Battery Use">
+        <CheckBoxPreference android:title="Exit After Launching" android:key="finish_after_battery_use" android:summary="Exit main window immediately after launching Battery Use?" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Temperature Unit">
+        <CheckBoxPreference android:title="Convert to Fahrenheit" android:key="convert_to_fahrenheit" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Autostart">
+        <ListPreference android:entries="@array/boot_pref_entries" android:title="Autostart at Boot" android:key="autostart" android:defaultValue="auto" android:dialogTitle="Start Battery Indicator when device boots:" android:entryValues="@array/boot_pref_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Textual Charge Level">
+        <CheckBoxPreference android:title="Textual Charge Level" android:key="charge_as_text" android:summary="Show as text next to icon?" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="One-percent hack">
+        <CheckBoxPreference android:enabled="false" android:title="One-percent hack" android:key="one_percent_hack" android:summary="Use workaround for devices that show only multiples of 10%?" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="time_pref_screen.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:enabled="false" android:layout="@layout/hint" android:title="Hint: Press MENU for help." android:selectable="false"/>
+    <PreferenceCategory android:title="Status Duration (For/Since...)">
+        <ListPreference android:entries="@array/status_dur_est_entries" android:title="When to Approximate" android:key="status_dur_est" android:defaultValue="12" android:dialogTitle="Start approximating hours since status change:" android:entryValues="@array/status_dur_est_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notification Time">
+        <CheckBoxPreference android:title="Show Notification Time" android:key="show_notification_time" android:summary="Show the time at which the notification was triggered?" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Time Remaining Estimates">
+        <CheckBoxPreference android:title="Show Charge Time" android:key="show_charge_time" android:summary="Show charge time remaining while charging?" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/time_entries" android:title="USB Charge" android:key="usb_charge_time" android:defaultValue="360" android:dialogTitle="USB charge time from 0% to 100% in hours:" android:entryValues="@array/time_values"/>
+        <ListPreference android:entries="@array/time_entries" android:title="AC Charge" android:key="ac_charge_time" android:defaultValue="180" android:dialogTitle="AC charge time from 0% to 100% in hours:" android:entryValues="@array/time_values"/>
+        <CheckBoxPreference android:title="Show Light Usage" android:key="show_light_usage" android:summary="Show light usage time remaining?" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/time_entries" android:title="Light Usage" android:key="light_usage_time" android:defaultValue="2160" android:dialogTitle="Light usage time from 100% to 0% in hours:" android:entryValues="@array/time_values"/>
+        <CheckBoxPreference android:title="Show Normal Usage" android:key="show_normal_usage" android:summary="Show normal usage time remaining?" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/time_entries" android:title="Normal Usage" android:key="normal_usage_time" android:defaultValue="960" android:dialogTitle="Normal usage time from 100% to 0% in hours:" android:entryValues="@array/time_values"/>
+        <CheckBoxPreference android:title="Show Heavy Usage" android:key="show_heavy_usage" android:summary="Show heavy usage time remaining?" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/time_entries" android:title="Heavy Usage" android:key="heavy_usage_time" android:defaultValue="480" android:dialogTitle="Heavy usage time from 100% to 0% in hours:" android:entryValues="@array/time_values"/>
+        <CheckBoxPreference android:title="Show Constant Usage" android:key="show_constant_usage" android:summary="Show constant usage time remaining?" android:defaultValue="true"/>
+        <ListPreference android:entries="@array/time_entries" android:title="Constant Usage" android:key="constant_usage_time" android:defaultValue="240" android:dialogTitle="Constant usage time from 100% to 0% in hours:" android:entryValues="@array/time_values"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="alarm_edit.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_delete" android:title="Delete Alarm"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="logs.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menu_clear" android:title="Clear"/>
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/menu_export" android:title="Export CSV"/>
+    <item android:icon="@android:drawable/ic_menu_revert" android:id="@id/menu_reverse" android:title="Reverse Order"/>
+</menu>
+    </File>
+    <File file_name="color_settings.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/menu_get_plugins" android:title="Get Plugins"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="settings.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_recent_history" android:enabled="true" android:id="@id/menu_logs" android:title="Logs"/>
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menu_settings" android:title="Settings"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/menu_close" android:title="Close"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/menu_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="alarm_item_context.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/delete_alarm" android:title="Delete Alarm"/>
+</menu>
+    </File>
+  </Directory>
+</App>

@@ -1,0 +1,168 @@
+<App name="com.example.shyguycrm" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="task_detail_fragment.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/deadlineLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:text="Deadline:" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/detailDeadline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deadline" android:layout_toRightOf="@id/deadlineLabel" android:layout_alignParentTop="true"/>
+    <ImageButton android:id="@id/detailContactPicture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_contact_picture" android:layout_below="@id/deadlineLabel" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/detailContactName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Name" android:layout_toRightOf="@id/detailContactPicture" android:layout_alignTop="@id/detailContactPicture"/>
+    <View android:id="@id/HR01" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_below="@id/detailContactPicture"/>
+    <TextView android:id="@id/detailNotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Notes" android:layout_below="@id/HR01" android:layout_alignLeft="@id/detailContactPicture"/>
+    <Button android:id="@id/newFollowonButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Follow-on Task" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <LinearLayout android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/newFollowonButton" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@id/emailButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_dialog_email" android:layout_weight="1.0"/>
+        <ImageButton android:id="@id/phoneButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/sym_action_call" android:layout_weight="1.0"/>
+        <ImageButton android:id="@id/meetingButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_menu_my_calendar" android:layout_weight="1.0"/>
+    </LinearLayout>
+    <View android:id="@id/HR02" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/linearLayout1" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailContactPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone Number" android:layout_toRightOf="@id/detailContactPicture" android:layout_below="@id/detailContactName"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailContactEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:layout_toRightOf="@id/detailContactPicture" android:layout_below="@id/detailContactPhone"/>
+</RelativeLayout>
+    </File>
+    <File file_name="contacts_list_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@android:id/text1" android:layout_width="260.0dip" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="activity_contact_list.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:name="com.example.shyguycrm.ContactListFragment" android:id="@id/task_list_frag" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</RelativeLayout>
+    </File>
+    <File file_name="task_edit_fragment.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/deadlineLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:text="Deadline:" android:layout_below="@id/detailTitleLabel"/>
+    <ImageView android:id="@id/detailContactPicture" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_contact_picture" android:layout_below="@id/deadlineLabel" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/detailContactName" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Name" android:layout_toRightOf="@id/detailContactPicture" android:layout_alignTop="@id/detailContactPicture"/>
+    <View android:id="@id/HR01" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_below="@id/detailContactPicture"/>
+    <EditText android:textAppearance="?android:textAppearanceSmall" android:gravity="top|left|center" android:id="@id/detailNotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Notes" android:layout_above="@id/HR02" android:layout_below="@id/HR01" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:inputType="textMultiLine" android:textIsSelectable="true">
+        <requestFocus/>
+    </EditText>
+    <View android:id="@id/HR02" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_above="@id/newFollowonButton"/>
+    <Button android:id="@id/newFollowonButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Follow-on Task" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/detailDeadline" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Deadline" android:layout_toRightOf="@id/deadlineLabel" android:layout_below="@id/detailTitleLabel"/>
+    <EditText android:id="@id/detailTitleEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_alignLeft="@id/detailDeadline" android:layout_alignParentTop="true"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/detailTitleLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title:" android:layout_alignBaseline="@id/detailTitleEdit" android:layout_alignLeft="@id/deadlineLabel" android:layout_alignBottom="@id/detailTitleEdit"/>
+</RelativeLayout>
+    </File>
+    <File file_name="contact_detail_fragment.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/detailContactPicture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_contact_picture" android:layout_below="@id/deadlineLabel" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/detailContactName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Name" android:layout_toRightOf="@id/detailContactPicture" android:layout_alignTop="@id/detailContactPicture"/>
+    <TextView android:id="@id/detailNotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact notes" android:layout_below="@id/HR01" android:layout_alignLeft="@id/detailContactPicture"/>
+    <Button android:id="@id/newTaskButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Associated Task" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <LinearLayout android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/newTaskButton" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@id/emailButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_dialog_email" android:layout_weight="1.0"/>
+        <ImageButton android:id="@id/phoneButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/sym_action_call" android:layout_weight="1.0"/>
+        <ImageButton android:id="@id/meetingButton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/ic_menu_my_calendar" android:layout_weight="1.0"/>
+    </LinearLayout>
+    <View android:id="@id/HR02" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/linearLayout1" android:layout_alignParentLeft="true"/>
+    <View android:id="@id/HR01" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignBottom="@id/lastContactedLabel" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailLastContacted" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="Last Contacted" android:layout_toRightOf="@id/lastContactedLabel" android:layout_alignBottom="@id/HR01"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailContactPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone Number" android:layout_below="@id/detailContactName" android:layout_alignLeft="@id/detailContactName"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailContactEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:layout_toRightOf="@id/detailContactPicture" android:layout_below="@id/detailContactPhone"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lastContactedLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Contacted:" android:layout_below="@id/detailContactPicture" android:layout_alignLeft="@id/detailContactPicture"/>
+</RelativeLayout>
+    </File>
+    <File file_name="contact_edit_fragment.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageButton android:id="@id/detailContactPicture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_contact_picture" android:layout_below="@id/deadlineLabel" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/detailContactName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Name" android:layout_toRightOf="@id/detailContactPicture" android:layout_alignTop="@id/detailContactPicture"/>
+    <EditText android:textAppearance="?android:textAppearanceSmall" android:gravity="top|left|center" android:id="@id/detailNotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Notes" android:layout_above="@id/newTaskButton" android:layout_below="@id/HR01" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:inputType="textMultiLine" android:textIsSelectable="true">
+        <requestFocus/>
+    </EditText>
+    <Button android:id="@id/newTaskButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Associated Task" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    <View android:id="@id/HR02" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/linearLayout1" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailContactPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone Number" android:layout_below="@id/detailContactName" android:layout_alignLeft="@id/detailContactName"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailContactEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:layout_toRightOf="@id/detailContactPicture" android:layout_below="@id/detailContactPhone"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/detailLastContacted" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="Last Contacted" android:layout_toRightOf="@id/lastContactedLabel" android:layout_alignBaseline="@id/lastContactedLabel" android:layout_alignBottom="@id/lastContactedLabel"/>
+    <View android:id="@id/HR01" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignBottom="@id/lastContactedLabel" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lastContactedLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Contacted:" android:layout_below="@id/detailContactPicture" android:layout_alignLeft="@id/detailContactPicture"/>
+</RelativeLayout>
+    </File>
+    <File file_name="attachment_list_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:layout_weight="1.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="contact_list_fragment.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/detailContactPhone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="List of Contacts"/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="share_target_activity.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select task to attach to..."/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/attachCancelButton" android:layout_below="@id/textView1" android:layout_alignParentLeft="true"/>
+    <Button android:id="@id/attachCancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="task_list_entry.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/taskTitleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Title" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/taskDeadline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Task Deadline" android:layout_below="@id/taskTitleText" android:layout_alignParentLeft="true"/>
+    <ImageView android:id="@id/imgTaskChecked" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/checkbox_on_background" android:layout_alignBottom="@id/taskDeadline" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="task_detail_activity.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/detail_frag_holder" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="activity_task_list.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:name="com.example.shyguycrm.MainTaskListFragment" android:id="@id/task_list_frag" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/attachCancelButton"/>
+</RelativeLayout>
+    </File>
+    <File file_name="task_list_fragment.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="false" android:layout_weight="1.0"/>
+    <Switch android:id="@id/switchTaskView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Done" android:textOff="To Do" android:text="Task View"/>
+</LinearLayout>
+    </File>
+    <File file_name="contact_detail_activity.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/detail_frag_holder" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="vcard_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/vcardName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Firstname Lastname" android:ems="10" android:inputType="textPersonName">
+        <requestFocus/>
+    </EditText>
+    <EditText android:id="@id/vcardEmail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="user@example.com" android:ems="10" android:inputType="textEmailAddress"/>
+    <EditText android:id="@id/vcardPhone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="(800) 555-1212" android:ems="10" android:inputType="phone"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="task_list_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+    <item android:id="@id/populateData" android:title="Create Fake Data"/>
+    <item android:id="@id/dumpDB" android:title="Dump DB"/>
+    <item android:id="@id/createVcard" android:title="Create vCard"/>
+    <item android:icon="@drawable/ic_menu_add" android:id="@id/newTask" android:title="New Task" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_allfriends" android:id="@id/viewContacts" android:title="View Contacts" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="contact_detail_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_attachment" android:id="@id/menu_detailViewAttachments" android:title="Attachments" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_edit" android:id="@id/menu_detailEditContact" android:title="Edit" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_revert" android:id="@id/menu_cancelEditContact" android:visible="false" android:title="Cancel" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_save" android:id="@id/menu_detailSaveContact" android:visible="false" android:title="Edit" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="task_detail_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_attachment" android:id="@id/menu_detailViewAttachments" android:title="Attachments" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_edit" android:id="@id/menu_detailEditTask" android:title="Edit" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_revert" android:id="@id/menu_cancelEditTask" android:visible="false" android:title="Cancel" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/ic_menu_save" android:id="@id/menu_detailSaveTask" android:visible="false" android:title="Edit" android:showAsAction="ifRoom"/>
+</menu>
+    </File>
+    <File file_name="contact_list_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+    <item android:id="@id/populateData" android:title="Create Fake Data"/>
+    <item android:id="@id/dumpDB" android:title="Dump DB"/>
+</menu>
+    </File>
+  </Directory>
+</App>

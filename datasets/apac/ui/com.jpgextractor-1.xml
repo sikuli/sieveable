@@ -1,0 +1,17 @@
+<App name="com.jpgextractor" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_jpgextractor.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/jpg_extractor_take_pic_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Take Pic"/>
+    <Button android:id="@id/jpg_extractor_share_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Share"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_jpgextractor.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

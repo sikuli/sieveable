@@ -1,0 +1,192 @@
+<App name="com.example.dvorakime" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="input.xml">
+      <com.example.dvorakime.DvorakKeyboardView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/keyboard" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="math_symbols.xml">
+      <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="10.000002%p" android:keyHeight="55.0dip" android:horizontalGap="0.0px" android:verticalGap="0.0px">
+    <Row>
+        <Key android:codes="126" android:keyEdgeFlags="left" android:keyLabel="~"/>
+        <Key android:codes="96" android:keyLabel="`"/>
+        <Key android:codes="124" android:keyLabel="|"/>
+        <Key android:codes="8226" android:keyLabel="•"/>
+        <Key android:codes="8730" android:keyLabel="√"/>
+        <Key android:codes="960" android:keyLabel="π"/>
+        <Key android:codes="247" android:keyLabel="÷"/>
+        <Key android:codes="215" android:keyLabel="×"/>
+        <Key android:codes="123" android:keyLabel="{"/>
+        <Key android:codes="125" android:keyEdgeFlags="right" android:keyLabel="}"/>
+    </Row>
+    <Row>
+        <Key android:codes="8677" android:keyEdgeFlags="left" android:keyLabel="⇥"/>
+        <Key android:codes="163" android:keyLabel="£"/>
+        <Key android:codes="162" android:keyLabel="¢"/>
+        <Key android:codes="8364" android:keyLabel="€"/>
+        <Key android:codes="176" android:keyLabel="°"/>
+        <Key android:codes="94" android:keyLabel="^"/>
+        <Key android:codes="95" android:keyLabel="_"/>
+        <Key android:codes="61" android:keyLabel="="/>
+        <Key android:codes="91" android:keyLabel="["/>
+        <Key android:codes="93" android:keyEdgeFlags="right" android:keyLabel="]"/>
+    </Row>
+    <Row>
+        <Key android:keyWidth="14.999998%p" android:codes="-102" android:keyEdgeFlags="left" android:keyLabel="\?123"/>
+        <Key android:codes="8482" android:keyLabel="™"/>
+        <Key android:codes="174" android:keyLabel="®"/>
+        <Key android:codes="169" android:keyLabel="©"/>
+        <Key android:codes="182" android:keyLabel="¶"/>
+        <Key android:codes="92" android:keyLabel="\\"/>
+        <Key android:codes="60" android:keyLabel="&lt;"/>
+        <Key android:codes="62" android:keyLabel="&gt;"/>
+        <Key android:keyWidth="14.999998%p" android:codes="-5" android:keyEdgeFlags="right" android:isRepeatable="true" android:keyIcon="@drawable/sym_keyboard_delete"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:keyWidth="14.999998%p" android:codes="-2" android:keyEdgeFlags="left" android:keyLabel="ABC"/>
+        <Key android:codes="8222" android:keyLabel="„"/>
+        <Key android:keyWidth="50.0%p" android:codes="32" android:isRepeatable="true" android:keyLabel=" "/>
+        <Key android:codes="8230" android:keyLabel="…"/>
+        <Key android:keyWidth="14.999998%p" android:codes="10" android:keyEdgeFlags="right" android:keyIcon="@drawable/sym_keyboard_return"/>
+    </Row>
+</Keyboard>
+    </File>
+    <File file_name="macro_popup.xml">
+      <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="14.999998%p" android:keyHeight="56.0dip" android:horizontalGap="0.0px" android:verticalGap="0.0px">
+    <Row>
+        <Key android:codes="-111" android:keyLabel="QR1"/>
+        <Key android:codes="-112" android:keyLabel="QR2"/>
+        <Key android:codes="-113" android:keyLabel="QR3"/>
+        <Key android:codes="-114" android:keyLabel="QR4"/>
+        <Key android:codes="-115" android:keyLabel="QR5"/>
+    </Row>
+</Keyboard>
+    </File>
+    <File file_name="dvorak.xml">
+      <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="9.899998%p" android:keyHeight="55.0dip" android:horizontalGap="0.0px" android:verticalGap="0.0px">
+    <Row>
+        <Key android:keyWidth="12.5%p" android:codes="-5" android:keyEdgeFlags="left" android:isRepeatable="true" android:keyIcon="@drawable/sym_keyboard_delete"/>
+        <Key android:keyWidth="12.5%p" android:codes="-110" android:popupKeyboard="@xml/macro_popup" android:keyLabel="QR"/>
+        <Key android:codes="112" android:keyLabel="p"/>
+        <Key android:codes="121" android:keyLabel="y"/>
+        <Key android:codes="102" android:keyLabel="f"/>
+        <Key android:codes="103" android:keyLabel="g"/>
+        <Key android:codes="99" android:keyLabel="c"/>
+        <Key android:codes="114" android:keyLabel="r"/>
+        <Key android:codes="108" android:keyEdgeFlags="right" android:keyLabel="l"/>
+    </Row>
+    <Row>
+        <Key android:codes="97" android:keyEdgeFlags="left" android:keyLabel="a"/>
+        <Key android:codes="111" android:keyLabel="o"/>
+        <Key android:codes="101" android:keyLabel="e"/>
+        <Key android:codes="117" android:keyLabel="u"/>
+        <Key android:codes="105" android:keyLabel="i"/>
+        <Key android:codes="100" android:keyLabel="d"/>
+        <Key android:codes="104" android:keyLabel="h"/>
+        <Key android:codes="116" android:keyLabel="t"/>
+        <Key android:codes="110" android:keyLabel="n"/>
+        <Key android:codes="115" android:keyEdgeFlags="right" android:keyLabel="s"/>
+    </Row>
+    <Row>
+        <Key android:keyWidth="13.900005%p" android:codes="-1" android:keyEdgeFlags="left" android:isModifier="true" android:isSticky="true" android:keyIcon="@drawable/sym_keyboard_shift"/>
+        <Key android:codes="113" android:keyLabel="q"/>
+        <Key android:codes="106" android:keyLabel="j"/>
+        <Key android:codes="107" android:keyLabel="k"/>
+        <Key android:codes="120" android:keyLabel="x"/>
+        <Key android:codes="98" android:keyLabel="b"/>
+        <Key android:codes="109" android:keyLabel="m"/>
+        <Key android:codes="119" android:keyLabel="w"/>
+        <Key android:codes="118" android:keyLabel="v"/>
+        <Key android:codes="122" android:keyEdgeFlags="right" android:keyLabel="z"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:keyWidth="14.999998%p" android:codes="-2" android:keyEdgeFlags="left" android:keyLabel="\?123"/>
+        <Key android:codes="44" android:keyLabel=","/>
+        <Key android:keyWidth="50.0%p" android:codes="32" android:isRepeatable="true" android:keyLabel=" "/>
+        <Key android:codes="46" android:keyLabel="."/>
+        <Key android:keyWidth="14.999998%p" android:codes="10" android:keyEdgeFlags="right" android:keyIcon="@drawable/sym_keyboard_return"/>
+    </Row>
+</Keyboard>
+    </File>
+    <File file_name="symbols.xml">
+      <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="10.000002%p" android:keyHeight="55.0dip" android:horizontalGap="0.0px" android:verticalGap="0.0px">
+    <Row>
+        <Key android:codes="49" android:keyEdgeFlags="left" android:keyLabel="1"/>
+        <Key android:codes="50" android:keyLabel="2"/>
+        <Key android:codes="51" android:keyLabel="3"/>
+        <Key android:codes="52" android:keyLabel="4"/>
+        <Key android:codes="53" android:keyLabel="5"/>
+        <Key android:codes="54" android:keyLabel="6"/>
+        <Key android:codes="55" android:keyLabel="7"/>
+        <Key android:codes="56" android:keyLabel="8"/>
+        <Key android:codes="57" android:keyLabel="9"/>
+        <Key android:codes="48" android:keyEdgeFlags="right" android:keyLabel="0"/>
+    </Row>
+    <Row>
+        <Key android:codes="64" android:keyEdgeFlags="left" android:keyLabel="\@"/>
+        <Key android:codes="35" android:keyLabel="\#"/>
+        <Key android:codes="36" android:keyLabel="$"/>
+        <Key android:codes="37" android:keyLabel="%"/>
+        <Key android:codes="38" android:keyLabel="&amp;"/>
+        <Key android:codes="42" android:keyLabel="*"/>
+        <Key android:codes="45" android:keyLabel="-"/>
+        <Key android:codes="43" android:keyLabel="+"/>
+        <Key android:codes="40" android:keyLabel="("/>
+        <Key android:codes="41" android:keyEdgeFlags="right" android:keyLabel=")"/>
+    </Row>
+    <Row>
+        <Key android:keyWidth="14.999998%p" android:codes="-103" android:keyEdgeFlags="left" android:keyLabel="=\\&lt;"/>
+        <Key android:codes="33" android:keyLabel="!"/>
+        <Key android:codes="34" android:keyLabel="&quot;"/>
+        <Key android:codes="39" android:keyLabel="'"/>
+        <Key android:codes="58" android:keyLabel=":"/>
+        <Key android:codes="59" android:keyLabel=";"/>
+        <Key android:codes="47" android:keyLabel="/"/>
+        <Key android:codes="63" android:keyLabel="\?"/>
+        <Key android:keyWidth="14.999998%p" android:codes="-5" android:keyEdgeFlags="right" android:isRepeatable="true" android:keyIcon="@drawable/sym_keyboard_delete"/>
+    </Row>
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:keyWidth="14.999998%p" android:codes="-2" android:keyEdgeFlags="left" android:keyLabel="ABC"/>
+        <Key android:codes="44" android:keyLabel=","/>
+        <Key android:keyWidth="50.0%p" android:codes="32" android:isRepeatable="true" android:keyLabel=" "/>
+        <Key android:codes="46" android:keyLabel="."/>
+        <Key android:keyWidth="14.999998%p" android:codes="10" android:keyEdgeFlags="right" android:keyIcon="@drawable/sym_keyboard_return"/>
+    </Row>
+</Keyboard>
+    </File>
+    <File file_name="method.xml">
+      <input-method xmlns:android="http://schemas.android.com/apk/res/android" android:settingsActivity=".Preferences">
+    <subtype android:label="English (US)" android:icon="@drawable/icon_en_us" android:imeSubtypeLocale="en_US" android:imeSubtypeMode="keyboard"/>
+</input-method>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Keyboard">
+        <CheckBoxPreference android:title="Show key previews" android:key="pref_key_key_preview" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Haptic feedback" android:key="pref_key_haptic_feedback" android:summary="Vibrate when keys are pressed" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Quick Response Macros">
+        <CheckBoxPreference android:title="Enable macros" android:key="pref_key_enable_quick_response" android:defaultValue="true"/>
+        <PreferenceScreen android:title="Set macros" android:dependency="pref_key_enable_quick_response">
+            <EditTextPreference android:title="QR1" android:key="pref_key_macro1" android:defaultValue="&quot;I'm on my way, see you soon!&quot;"/>
+            <EditTextPreference android:title="QR2" android:key="pref_key_macro2" android:defaultValue="&quot;I'm driving right now; talk to you later.&quot;"/>
+            <EditTextPreference android:title="QR3" android:key="pref_key_macro3" android:defaultValue="&quot;I'm running late.&quot;"/>
+            <EditTextPreference android:title="QR4" android:key="pref_key_macro4" android:defaultValue="OK"/>
+            <EditTextPreference android:title="QR5" android:key="pref_key_macro5" android:defaultValue="No"/>
+        </PreferenceScreen>
+        <SwitchPreference android:title="One-touch macro" android:key="pref_key_one_touch_macro" android:dependency="pref_key_enable_quick_response" android:defaultValue="true" android:summaryOn="&quot;Tapping the 'QR' key will act as 'QR1'&quot;" android:summaryOff="One-touch Quick Response is off"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Dictionary">
+        <Preference android:title="Reset dictionary" android:key="pref_key_reset_dictionary" android:summary="Forget all learned words for word completion"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

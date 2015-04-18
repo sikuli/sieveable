@@ -1,0 +1,130 @@
+<App name="com.example.mypolicy" version_code="3">
+  <Directory directory_name="layout">
+    <File file_name="activity_map.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/address" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@id/search" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Search" android:layout_below="@id/address"/>
+    <com.google.android.maps.MapView android:id="@id/map" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/search" android:apiKey="04j09TrzSqNvCrpgEAPsrUmQpXBrkjjvB3RjgDA"/>
+</RelativeLayout>
+    </File>
+    <File file_name="resetpw.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#ddaaaaaa" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/reset"/>
+    <TextView android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Password is Expired.\n You need to reset your password for the security" android:layout_toRightOf="@id/image"/>
+</RelativeLayout>
+    </File>
+    <File file_name="fragment_info.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/info" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_gcmsetting.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/tv" android:paddingBottom="15.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="User id will be used, when you want to lock your device remotely.\nWebsite is www.example.com:8080"/>
+    <TextView android:id="@id/tvid" android:paddingTop="15.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="User ID" android:layout_below="@id/tv"/>
+    <EditText android:id="@id/usrid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/tvid" android:layout_below="@id/tv"/>
+    <Button android:id="@id/enable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="enable admin" android:layout_below="@id/usrid" android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:id="@id/title" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.example.mypolicy.AdminFragment"/>
+</FrameLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-land">
+    <File file_name="fragment_info.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/info" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:id="@id/title" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0" class="com.example.mypolicy.AdminFragment"/>
+    <FrameLayout android:id="@id/info" android:background="?android:detailsElementBackground" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="2.0"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="device_admin.xml">
+      <device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <limit-password/>
+        <watch-login/>
+        <reset-password/>
+        <force-lock/>
+        <wipe-data/>
+        <expire-password/>
+        <encrypted-storage/>
+        <disable-camera/>
+        <disable-keyguard-features/>
+    </uses-policies>
+</device-admin>
+    </File>
+    <File file_name="data.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="WIPE SETTING">
+        <CheckBoxPreference android:title="WIPE DATA" android:key="wipedata" android:summary="This will wipe all data like a factory reset"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="ENCRYPTION SETTING">
+        <CheckBoxPreference android:title="Activate Encryption" android:key="encryption" android:summary="This will encrypt your device for the security"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="lock.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="SCREEN LOCK SETTING">
+        <CheckBoxPreference android:title="Set time to lock" android:key="settime" android:summary="We will lock your screen after 5 minutes you touched/click the screen."/>
+        <PreferenceScreen android:title="LOCK NOW" android:key="locknow"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="password.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="PASSWORD SETTING">
+        <PreferenceScreen android:title="Set Password" android:key="setpw"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="PASSWORD QUALITY">
+        <CheckBoxPreference android:title="Password rule" android:key="pwrule" android:summary=" You need to check the box before set new password\n Minimum password length is 8 characters.\n Password should contain at least a letter, a numerical digit and a special symbol."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="PASSWORD EXPIRATION">
+        <CheckBoxPreference android:title="Limit password" android:key="history" android:summary="You cannot set one of the last 5 passwords.\n"/>
+        <CheckBoxPreference android:title="Wrong password attempt" android:key="pwattempt" android:summary="If you attempt wrong password over 10 times, we will wipe your data.\n"/>
+        <CheckBoxPreference android:title="Password expiration" android:key="expiration" android:summary="You need to change your password every 5 days"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="camera.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="CAMERA SETTING">
+        <CheckBoxPreference android:enabled="false" android:title="Disable Camera" android:key="disablecamera" android:summary="We will disable your camera."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="SET LOCATION">
+        <ListPreference android:entries="@array/location" android:title="Set Location" android:key="location" android:dialogTitle="Select Option" android:entryValues="@array/locationvalue"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_map.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_info.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="gcmsetting.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

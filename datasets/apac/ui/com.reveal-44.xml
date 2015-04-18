@@ -1,0 +1,130 @@
+<App name="com.reveal" version_code="44">
+  <Directory directory_name="layout">
+    <File file_name="donate.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_donate"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Donate: If you like this app, you can buy me a beer."/>
+</LinearLayout>
+    </File>
+    <File file_name="help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="24.0sp" android:typeface="monospace" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Help"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Interface" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:id="@id/helpView" android:layout_width="fill_parent" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Hosts discovery" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;The method that is being used, does not need to have root privileges. In future release there will be more advanced techniques, once the non-root ones are polished.&#10;&#10;Here is how it works: &#10;1. Calculate the subnetwork range&#10;2. Iterate thought IP and query them&#10;3. First it sends an ICMP ping or Echo on tcp/7 (with InetAddress.isReachable())&#10;4. If it does not work, it tries to connect() on well known open tcp ports such as: 135, 139, 22, 111, 80&#10;5. If none of the above is successful, the host is not discovered&quot;" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Port scan" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;Port scan is event driven, using Java's Selector and SocketChannel.&#10;There is a fake timeout by registrering the time in ms at socket's creation and checking regularly this value.&#10;The port scan method, as discovery, uses full tcp connection check. (will be more granular in the future with root features.)&#10;&#10;A maximum of 127 Sockets are opened at a time, so this is not always accurate, but quite fast. Again, a new feature is coming that will adapt times between requests according to host response time (kind of software network congestion control)&#10;&#10;A port is considered open when tcp connect() is fully successful, closed when no service is listening on the other end, or filtered when the timeout is reached.&quot;" style="&#10;         &#10;         &#10;    "/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Links" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <TextView android:autoLink="web" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;- TCP connect scan: http://nmap.org/book/man-port-scanning-techniques.html#id421401&#10;&#10;- Host discovery: http://nmap.org/book/man-host-discovery.html&quot;" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="file_dialog_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/relativeLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/fdLinearLayoutList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/fdLinearLayoutSelect" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:id="@id/fdButtonCancelSelect" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="0.3"/>
+                <Button android:id="@id/fdButtonNew" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="New" android:layout_weight="0.7"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/fdLinearLayoutCreate" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:id="@id/textViewFilename" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="File name:"/>
+            <EditText android:id="@id/fdEditTextFile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:hint="new file"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:id="@id/fdButtonCancelCreate" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Cancel" android:layout_weight="0.3"/>
+                <Button android:id="@id/fdButtonCreate" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Create" android:layout_weight="0.7"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/fdLinearLayoutList">
+        <TextView android:id="@id/path" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <TextView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="No Data"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="command_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/LinearLayout1" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip">
+        <Button android:gravity="center" android:id="@id/buttonExec" android:background="@drawable/ic_menu_play_clip" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <Button android:gravity="center" android:id="@id/buttonCompile" android:background="@drawable/compile" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true"/>
+        <Button android:gravity="center" android:id="@id/buttonStop" android:background="@drawable/ic_menu_stop" android:visibility="invisible" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="12.0sp" android:typeface="monospace" android:textStyle="bold" android:textColor="#ffff9900" android:id="@id/info_ip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/buttonExec" android:layout_toRightOf="@id/buttonCompile" android:layout_alignParentTop="true"/>
+        <TextView android:textSize="12.0sp" android:typeface="monospace" android:textStyle="bold" android:textColor="#ffff9900" android:id="@id/info_in" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Wifi state unknown" android:layout_toLeftOf="@id/buttonExec" android:layout_toRightOf="@id/buttonCompile" android:layout_below="@id/info_ip"/>
+        <TextView android:textSize="12.0sp" android:typeface="monospace" android:textStyle="bold" android:textColor="#ffff9900" android:id="@id/info_mo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/buttonExec" android:layout_toRightOf="@id/buttonCompile" android:layout_below="@id/info_in"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip">
+        <Button android:gravity="center" android:id="@id/buttonDelete" android:background="@drawable/ic_input_delete" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true"/>
+        <AutoCompleteTextView android:id="@id/autoCompleteTextView" android:paddingBottom="16.0dip" android:scrollbars="horizontal|vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter command" android:scrollHorizontally="true" android:layout_toRightOf="@id/buttonDelete" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:inputType="textAutoComplete"/>
+    </RelativeLayout>
+    <ScrollView android:id="@id/scrollView" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="0.86">
+        <TextView android:id="@id/textView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Results shown here" android:scrollHorizontally="true"/>
+    </ScrollView>
+    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="9.0dip" android:layout_weight="0.02">
+        <Button android:id="@id/buttonClear" android:background="@drawable/ic_input_delete" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:src="@drawable/install" android:layout_centerInParent="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="file_dialog_row.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/fdrowimage" android:paddingLeft="3.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_alignParentLeft="true"/>
+    <TextView android:textSize="16.0dip" android:gravity="center_vertical" android:id="@id/fdrowtext" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="@id/fdrowtext" android:layout_toRightOf="@id/fdrowimage" android:layout_alignTop="@id/fdrowimage" android:layout_alignBottom="@id/fdrowimage"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Options">
+        <PreferenceScreen android:title="General" android:summary="">
+            <ListPreference android:title="Network interface" android:key="interface" android:summary="Choose which interface to use" android:defaultValue="0" android:dialogTitle="Network interface"/>
+            <CheckBoxPreference android:title="Resolve Hostname" android:key="resolve_name" android:summary="Use system DNS to resolve ip addresses" android:defaultValue="true"/>
+            <CheckBoxPreference android:title="Vibrate" android:key="vibrate_finish" android:summary="Vibrate when Scan is completed" android:defaultValue="false"/>
+            <Preference android:title="Update NIC Database" android:key="resetdb" android:summary="Pull and update MAC addresses database" android:defaultValue="1"/>
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Discovery" android:summary="">
+            <ListPreference android:entries="@array/method_discover_name" android:title="Discover Method" android:key="discovery_method" android:summary="Change to different method of host discovery" android:defaultValue="0" android:dialogTitle="Choose a method" android:entryValues="@array/method_discover_value"/>
+            <CheckBoxPreference android:title="Custom IP range" android:key="ip_custom" android:summary="Manually set start/end IPs" android:defaultValue="false"/>
+            <EditTextPreference android:title="IP start" android:key="ip_start" android:summary="First IP address to scan" android:dependency="ip_custom" android:inputType="phone"/>
+            <EditTextPreference android:title="IP end" android:key="ip_end" android:summary="Last IP address to scan" android:dependency="ip_custom" android:inputType="phone"/>
+            <CheckBoxPreference android:title="Custom CIDR" android:key="cidr_custom" android:summary="Manually set CIDR (defines subnet)" android:defaultValue="false"/>
+            <EditTextPreference android:title="Change CIDR" android:key="cidr" android:summary="Change CIDR" android:dependency="cidr_custom" android:inputType="number"/>
+            <CheckBoxPreference android:title="Rate control" android:key="ratecontrol_enable" android:summary="Enable automatic rate detection" android:defaultValue="true"/>
+            <EditTextPreference android:title="Custom rate" android:key="timeout_discover" android:summary="Rate of discovery in millisecondes" android:defaultValue="500" android:inputType="number"/>
+            <CheckBoxPreference android:title="Allow mobile discovery" android:key="allow_mobile" android:summary="Scan over edge/3g/... usually leading to strange results, if any" android:defaultValue="false"/>
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Port Scan" android:summary="">
+            <CheckBoxPreference android:title="Services banners" android:key="banner" android:summary="Read banner from a connected socket (ex.: SSH-2.0-OpenSSH_5.1p1)" android:defaultValue="true"/>
+            <EditTextPreference android:title="First Port" android:key="port_start" android:summary="First TCP Port to scan. 1-65535" android:defaultValue="1" android:inputType="number"/>
+            <EditTextPreference android:title="Last Port" android:key="port_end" android:summary="Last TCP Port to scan. 1-65535" android:defaultValue="1024" android:inputType="number"/>
+            <EditTextPreference android:title="SSH User" android:key="ssh_user" android:summary="Username for the SSH connection" android:defaultValue="root"/>
+            <CheckBoxPreference android:title="Custom timeout" android:key="timeout_force" android:summary="Manually set connect timeout" android:defaultValue="false"/>
+            <EditTextPreference android:title="Connect timeout" android:key="timeout_portscan" android:summary="Timeout of a port connection in millisecondes" android:dependency="timeout_force" android:defaultValue="500" android:inputType="number"/>
+        </PreferenceScreen>
+        <Preference android:title="Wifi" android:key="wifi"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Credits">
+        <Preference android:layout="@layout/donate" android:key="donate"/>
+        <Preference android:title="Website" android:key="website"/>
+        <Preference android:title="Contact" android:key="email"/>
+        <Preference android:title="Version" android:key="version"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

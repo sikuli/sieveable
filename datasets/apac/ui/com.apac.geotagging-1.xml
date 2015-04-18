@@ -1,0 +1,47 @@
+<App name="com.apac.geotagging" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="geo_fragment.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="26.0sp" android:gravity="center" android:id="@id/titleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upload Tag" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    <EditText android:id="@id/usernameEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_toRightOf="@id/usernameView" android:layout_alignBaseline="@id/usernameView" android:layout_alignBottom="@id/usernameView"/>
+    <TextView android:textSize="16.0sp" android:id="@id/usernameView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="48.0dip" android:text="Username:" android:layout_below="@id/titleView" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/passwordView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password:" android:layout_alignLeft="@id/usernameView" android:layout_alignBottom="@id/EditText01"/>
+    <EditText android:id="@id/tagText" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:maxLines="2" android:ems="10" android:layout_above="@id/submitButton" android:layout_alignLeft="@id/passwordView" android:layout_alignRight="@id/EditText01"/>
+    <TextView android:id="@id/serverView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="31.0dip" android:text="Server:" android:layout_below="@id/passwordView" android:layout_alignLeft="@id/passwordView"/>
+    <EditText android:id="@id/serverText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_alignLeft="@id/EditText01" android:layout_alignBottom="@id/serverView"/>
+    <EditText android:id="@id/EditText01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:ems="10" android:layout_below="@id/usernameEdit" android:layout_alignLeft="@id/usernameEdit"/>
+    <TextView android:textSize="20.0sp" android:gravity="center" android:id="@id/codeView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tag Identifier" android:layout_above="@id/tagText" android:layout_centerHorizontal="true"/>
+    <Button android:gravity="center" android:id="@id/submitButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="Submit" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:id="@id/mainFragment" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.apac.geotagging.GeoFragmentActivity"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="nfctech.xml">
+      <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <tech-list>
+        <tech>android.nfc.tech.IsoDep</tech>
+        <tech>android.nfc.tech.NfcA</tech>
+        <tech>android.nfc.tech.NfcB</tech>
+        <tech>android.nfc.tech.NfcF</tech>
+        <tech>android.nfc.tech.NfcV</tech>
+        <tech>android.nfc.tech.Ndef</tech>
+        <tech>android.nfc.tech.NdefFormatable</tech>
+        <tech>android.nfc.tech.MifareClassic</tech>
+        <tech>android.nfc.tech.MifareUltralight</tech>
+    </tech-list>
+</resources>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

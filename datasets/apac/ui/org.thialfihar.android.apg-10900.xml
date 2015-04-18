@@ -1,0 +1,461 @@
+<App name="org.thialfihar.android.apg" version_code="10900">
+  <Directory directory_name="layout">
+    <File file_name="mailbox_message_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="3.0dip" android:paddingTop="3.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ic_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/encrypted"/>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/subject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subject"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/emailAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="user@somewhere.com"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="key_server_preference.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@android:attr/theme" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+        <RelativeLayout android:background="@android:drawable/menuitem_background" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0sp" android:layout_marginTop="6.0sp" android:layout_marginRight="6.0sp" android:layout_marginBottom="6.0sp" android:layout_weight="1.0">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title"/>
+        </RelativeLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/add" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="6.0dip" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <View android:id="@id/separator" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+    <ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/editors" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <Button android:id="@id/btn_ok" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/ok" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/cancel" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="pass_phrase.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <EditText android:id="@id/passPhrase" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+    <EditText android:id="@id/passPhraseAgain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+</LinearLayout>
+    </File>
+    <File file_name="edit_key_user_id_item.xml">
+      <org.thialfihar.android.apg.ui.widget.UserIdEditor xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <View android:id="@id/separator" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+    <RadioButton android:id="@id/isMainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="Main User ID"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_weight="1.0">
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_name" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name"/>
+                <EditText android:id="@id/name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="textPersonName|textCapWords"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_email" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email"/>
+                <EditText android:id="@id/email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="textEmailAddress"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_comment" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Comment"/>
+                <EditText android:id="@id/comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+            </TableRow>
+        </TableLayout>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/delete" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</org.thialfihar.android.apg.ui.widget.UserIdEditor>
+    </File>
+    <File file_name="general.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ListView android:id="@id/options" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <Button android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="dummy" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@android:string/cancel" android:layout_weight="2.0"/>
+        <Button android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="dummy" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="create_key.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TableLayout android:paddingLeft="6.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="?android:scrollbarSize" android:stretchColumns="1">
+        <TableRow>
+            <TextView android:layout_gravity="center_vertical" android:id="@id/label_algorithm" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Algorithm"/>
+            <Spinner android:id="@id/algorithm" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:layout_gravity="center_vertical" android:id="@id/label_size" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Key Size"/>
+            <EditText android:gravity="right" android:id="@id/size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="1024" android:numeric="integer"/>
+        </TableRow>
+    </TableLayout>
+</ScrollView>
+    </File>
+    <File file_name="select_public_key_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="3.0dip" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:singleLine="true">
+    <CheckBox android:id="@id/selected" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/mainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User ID"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/mainUserIdRest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&lt;user@somewhere.com&gt;"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:paddingLeft="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="90.0dip">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:typeface="monospace" android:id="@id/keyId" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="BBBBBBBB"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="italic" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="expired"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="info.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true">
+    <TextView android:textColor="#ffffffff" android:autoLink="all" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</ScrollView>
+    </File>
+    <File file_name="edit_key.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="?android:scrollbarSize">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+                <Button android:id="@id/btn_change_pass_phrase" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Set Pass Phrase" android:layout_weight="2.0"/>
+                <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <Button android:id="@id/btn_save" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Save" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_discard" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Cancel" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="filter_info.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/filterInfo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+    <Button android:id="@id/btn_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear Filter"/>
+</LinearLayout>
+    </File>
+    <File file_name="main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <ListView android:id="@id/accounts" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/btn_encryptFile" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Encrypt File" android:layout_weight="1.0"/>
+            <Button android:id="@id/btn_decryptFile" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Decrypt File" android:layout_weight="1.0"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/btn_encryptMessage" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Encrypt Message" android:layout_weight="1.0"/>
+            <Button android:id="@id/btn_decryptMessage" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Decrypt Message" android:layout_weight="1.0"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="key_list_child_item_master_key.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true">
+    <LinearLayout android:orientation="horizontal" android:paddingRight="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/ic_masterKey" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/key_small"/>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:typeface="monospace" android:id="@id/keyId" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Key ID"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/keyDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(RSA, 1024bit)"/>
+        <LinearLayout android:gravity="right" android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ic_encryptKey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/encrypted_small"/>
+            <ImageView android:id="@id/ic_signKey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/signed_small"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="decrypt.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/sourcePrevious" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_previous"/>
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ffffffff" android:gravity="center" android:id="@id/sourceLabel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Message" android:layout_weight="1.0"/>
+                <ImageView android:id="@id/sourceNext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_next"/>
+            </LinearLayout>
+            <ViewFlipper android:id="@id/source" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/sourceMessage" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <EditText android:gravity="top" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollHorizontally="true" android:inputType="textLongMessage|textCapSentences|textMultiLine"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/sourceFile" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <EditText android:id="@id/filename" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+                        <ImageButton android:id="@id/btn_browse" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_launcher_folder_small"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_deleteAfterDecryption" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Delete After Decryption" android:layout_weight="1.0"/>
+                        <CheckBox android:layout_gravity="center_vertical" android:id="@id/deleteAfterDecryption" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ViewFlipper>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/signature" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ic_signature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/signed_large"/>
+            <ImageView android:id="@id/ic_signature_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/overlay_error"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="left" android:id="@id/mainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User Id"/>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="left" android:id="@id/mainUserIdRest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User Id Rest"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <Button android:id="@id/btn_reply" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Reply" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_decrypt" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Decrypt" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="select_secret_key.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+<LinearLayout android:orientation="horizontal" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/filterInfo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+    <Button android:id="@id/btn_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear Filter"/>
+</LinearLayout></LinearLayout>
+    </File>
+    <File file_name="edit_key_section.xml">
+      <org.thialfihar.android.apg.ui.widget.SectionView xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Section Name" android:singleLine="true" android:layout_weight="1.0"/>
+        <ImageView android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/editors" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</org.thialfihar.android.apg.ui.widget.SectionView>
+    </File>
+    <File file_name="account_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_gravity="center_vertical" android:id="@id/accountName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="someone@gmail.com"/>
+</LinearLayout>
+    </File>
+    <File file_name="add_account_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <EditText android:id="@id/input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+</LinearLayout>
+    </File>
+    <File file_name="key_list_group_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/mainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User ID"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/mainUserIdRest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&lt;user@somewhere.com&gt;"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="select_secret_key_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="3.0dip" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:singleLine="true">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/mainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User ID"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/mainUserIdRest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&lt;user@somewhere.com&gt;"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:paddingLeft="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="90.0dip">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:typeface="monospace" android:id="@id/keyId" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="BBBBBBBB"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="italic" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="expired"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="edit_key_key_item.xml">
+      <org.thialfihar.android.apg.ui.widget.KeyEditor xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <View android:id="@id/separator" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TableLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:stretchColumns="1" android:layout_weight="1.0">
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_keyId" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Key ID"/>
+                <TextView android:typeface="monospace" android:id="@id/keyId" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00000000 00000000"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_algorithm" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Algorithm"/>
+                <TextView android:id="@id/algorithm" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_creation" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Creation"/>
+                <TextView android:id="@id/creation" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_expiry" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expiry"/>
+                <Button android:id="@id/expiry" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            </TableRow>
+            <TableRow>
+                <TextView android:layout_gravity="center_vertical" android:id="@id/label_usage" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Usage"/>
+                <Spinner android:id="@id/usage" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            </TableRow>
+        </TableLayout>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/delete" android:layout_width="wrap_content" android:layout_height="wrap_content" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</org.thialfihar.android.apg.ui.widget.KeyEditor>
+    </File>
+    <File file_name="file_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/input" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/btn_browse" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_launcher_folder_small"/>
+    </LinearLayout>
+    <CheckBox android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="key_list.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ExpandableListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:isScrollContainer="true"/>
+<LinearLayout android:orientation="horizontal" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/filterInfo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+    <Button android:id="@id/btn_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear Filter"/>
+</LinearLayout></LinearLayout>
+    </File>
+    <File file_name="key_server_editor.xml">
+      <org.thialfihar.android.apg.ui.widget.KeyServerEditor xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip">
+        <EditText android:id="@id/server" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="textUri"/>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@id/delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" style="&#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+    <View android:id="@id/separator" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+</org.thialfihar.android.apg.ui.widget.KeyServerEditor>
+    </File>
+    <File file_name="key_server_query_result_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="3.0dip" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/mainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User ID"/>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/mainUserIdRest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&lt;user@somewhere.com&gt;"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="vertical" android:paddingLeft="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="90.0dip">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:typeface="monospace" android:id="@id/keyId" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="BBBBBBBB"/>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/algorithm" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffee0000" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip"/>
+</LinearLayout>
+    </File>
+    <File file_name="select_public_key.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="multipleChoice" android:layout_weight="1.0"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <Button android:id="@id/btn_ok" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/ok" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_cancel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@android:string/cancel" android:layout_weight="1.0"/>
+    </LinearLayout>
+<LinearLayout android:orientation="horizontal" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:ellipsize="end" android:id="@id/filterInfo" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+    <Button android:id="@id/btn_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear Filter"/>
+</LinearLayout></LinearLayout>
+    </File>
+    <File file_name="key_server_query_result_user_id.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceSmall" android:paddingRight="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true"/>
+    </File>
+    <File file_name="key_server_query_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Spinner android:id="@id/keyServer" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:id="@id/query" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Search"/>
+    </LinearLayout>
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="key_list_child_item_sub_key.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="40.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true">
+    <LinearLayout android:orientation="horizontal" android:paddingRight="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:typeface="monospace" android:id="@id/keyId" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Key ID"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/keyDetails" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(RSA, 1024bit)"/>
+        <LinearLayout android:gravity="right" android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ic_encryptKey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/encrypted_small"/>
+            <ImageView android:id="@id/ic_signKey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/signed_small"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="key_list_child_item_user_id.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="40.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:layout_marginRight="?android:scrollbarSize" android:singleLine="true">
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/userId" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="User ID"/>
+</LinearLayout>
+    </File>
+    <File file_name="encrypt.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/sourcePrevious" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_previous"/>
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ffffffff" android:gravity="center" android:id="@id/sourceLabel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Message" android:layout_weight="1.0"/>
+                <ImageView android:id="@id/sourceNext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_next"/>
+            </LinearLayout>
+            <ViewFlipper android:id="@id/source" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/sourceMessage" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <EditText android:gravity="top" android:id="@id/message" android:layout_width="fill_parent" android:layout_height="fill_parent" android:inputType="textLongMessage|textCapSentences|textMultiLine"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/sourceFile" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <EditText android:id="@id/filename" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+                        <ImageButton android:id="@id/btn_browse" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_launcher_folder_small"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_fileCompression" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="File Compression" android:layout_weight="1.0"/>
+                        <Spinner android:layout_gravity="center_vertical" android:id="@id/fileCompression" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_deleteAfterEncryption" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Delete After Encryption" android:layout_weight="1.0"/>
+                        <CheckBox android:layout_gravity="center_vertical" android:id="@id/deleteAfterEncryption" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_asciiArmour" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="ASCII Armour" android:layout_weight="1.0"/>
+                        <CheckBox android:layout_gravity="center_vertical" android:id="@id/asciiArmour" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ViewFlipper>
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="5.0dip"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/modePrevious" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_previous"/>
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ffffffff" android:gravity="center" android:id="@id/modeLabel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Public Key" android:layout_weight="1.0"/>
+                <ImageView android:id="@id/modeNext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_next"/>
+            </LinearLayout>
+            <ViewFlipper android:id="@id/mode" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/modeAsymmetric" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_sign" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Sign" android:layout_weight="1.0"/>
+                        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="right" android:id="@id/mainUserId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User Id"/>
+                            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="right" android:id="@id/mainUserIdRest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main User Id Rest"/>
+                        </LinearLayout>
+                        <CheckBox android:layout_gravity="center_vertical" android:id="@id/sign" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_selectPublicKeys" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Public Key(s)" android:layout_weight="1.0"/>
+                        <Button android:layout_gravity="center_vertical" android:id="@id/btn_selectEncryptKeys" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Select Recipients"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TableLayout android:id="@id/modeSymmetric" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1">
+                    <TableRow>
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_passPhrase" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pass Phrase"/>
+                        <EditText android:id="@id/passPhrase" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+                    </TableRow>
+                    <TableRow>
+                        <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_gravity="center_vertical" android:id="@id/label_passPhraseAgain" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Again"/>
+                        <EditText android:id="@id/passPhraseAgain" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+                    </TableRow>
+                </TableLayout>
+            </ViewFlipper>
+            <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="5.0dip"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <Button android:id="@id/btn_encryptToClipboard" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Encrypt To Clipboard" android:layout_weight="1.0"/>
+        <Button android:id="@id/btn_encrypt" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Encrypt" android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="searchable_secret_keys.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="APG" android:hint="Search Secret Keys"/>
+    </File>
+    <File file_name="apg_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+        <ListPreference android:entries="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    " android:title="Language" android:key="language" android:dialogTitle="Language" android:entryValues="@array/language_values"/>
+        <org.thialfihar.android.apg.ui.widget.IntegerListPreference android:persistent="false" android:entries="@array/pass_phrase_cache_ttl_entries" android:title="Pass Phrase Cache" android:key="passPhraseCacheTtl" android:entryValues="@array/pass_phrase_cache_ttl_values"/>
+        <PreferenceScreen android:persistent="false" android:title="Key Servers" android:key="keyServers"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Defaults">
+        <org.thialfihar.android.apg.ui.widget.IntegerListPreference android:persistent="false" android:title="Encryption Algorithm" android:key="defaultEncryptionAlgorithm"/>
+        <org.thialfihar.android.apg.ui.widget.IntegerListPreference android:persistent="false" android:title="Hash Algorithm" android:key="defaultHashAlgorithm"/>
+        <org.thialfihar.android.apg.ui.widget.IntegerListPreference android:persistent="false" android:title="Message Compression" android:key="defaultMessageCompression"/>
+        <org.thialfihar.android.apg.ui.widget.IntegerListPreference android:persistent="false" android:title="File Compression" android:key="defaultFileCompression"/>
+        <CheckBoxPreference android:persistent="false" android:title="ASCII Armour" android:key="defaultAsciiArmour"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Advanced">
+        <CheckBoxPreference android:persistent="false" android:title="Force V3 Signatures" android:key="forceV3Signatures"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="searchable_public_keys.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="APG" android:hint="Search Public Keys"/>
+    </File>
+  </Directory>
+</App>

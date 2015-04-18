@@ -1,0 +1,17 @@
+<App name="com.fivedirections.yarr" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_main_reddit.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@id/redditListView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"/>
+    <Button android:id="@id/RefreshButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Refresh" android:onClick="refreshRedditRSS"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main_reddit.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

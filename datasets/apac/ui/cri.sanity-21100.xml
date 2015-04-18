@@ -1,0 +1,581 @@
+<App name="cri.sanity" version_code="21100">
+  <Directory directory_name="layout">
+    <File file_name="img_devices.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_devices"/>
+    </File>
+    <File file_name="img_groups.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_slideshow"/>
+    </File>
+    <File file_name="img_vibra.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_vibra"/>
+    </File>
+    <File file_name="img_answer.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_answer"/>
+    </File>
+    <File file_name="img_proximity.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_proximity"/>
+    </File>
+    <File file_name="img_vol.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_vol"/>
+    </File>
+    <File file_name="img_prefix.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_revert"/>
+    </File>
+    <File file_name="alert_text.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/alert_text" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/alert_text_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:scrollHorizontally="true" android:singleLine="true" android:capitalize="none" android:autoText="false" android:inputType="text"/>
+</LinearLayout>
+    </File>
+    <File file_name="alert_time.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/alert_time" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/alert_time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&quot; Hours    Minutes&quot;" android:singleLine="true" android:layout_centerHorizontal="true"/>
+    <TimePicker android:id="@id/alert_time_picker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/alert_time_text" android:layout_centerHorizontal="true"/>
+    <SeekBar android:id="@id/alert_time_bar" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/alert_time_picker"/>
+</RelativeLayout>
+    </File>
+    <File file_name="img_rec.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_rec"/>
+    </File>
+    <File file_name="img_delete.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+    </File>
+    <File file_name="img_backup.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_rotate"/>
+    </File>
+    <File file_name="img_profiles.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_profiles"/>
+    </File>
+    <File file_name="img_contacts.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_gallery"/>
+    </File>
+    <File file_name="alert_pwd_ask.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/alert_pwd_ask" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/alert_pwd_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password" android:singleLine="true" android:layout_centerHorizontal="true"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/alert_pwd_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:scrollHorizontally="true" android:singleLine="true" android:capitalize="none" android:autoText="false" android:layout_below="@id/alert_pwd_label" android:inputType="textPassword"/>
+    <CheckBox android:textAppearance="?android:textAppearanceSmall" android:id="@id/alert_pwd_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="show readable text" android:layout_below="@id/alert_pwd_edit" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="img_block.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_block"/>
+    </File>
+    <File file_name="img_notify.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_notify"/>
+    </File>
+    <File file_name="img_tts.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_tts"/>
+    </File>
+    <File file_name="img_urgent.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_urgent"/>
+    </File>
+    <File file_name="checkbox_star.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@android:id/checkbox" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:button="@android:drawable/btn_star"/>
+    </File>
+    <File file_name="alert_pwd_choose.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/alert_pwd_choose" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/alert_pwd_label_old" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Old password" android:singleLine="true" android:layout_centerHorizontal="true"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/alert_pwd_edit_old" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="20.0dip" android:scrollHorizontally="true" android:singleLine="true" android:capitalize="none" android:autoText="false" android:layout_below="@id/alert_pwd_label_old" android:inputType="textPassword"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/alert_pwd_label_new1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New password" android:singleLine="true" android:layout_below="@id/alert_pwd_edit_old" android:layout_centerHorizontal="true"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/alert_pwd_edit_new1" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:scrollHorizontally="true" android:singleLine="true" android:capitalize="none" android:autoText="false" android:layout_below="@id/alert_pwd_label_new1" android:inputType="textPassword"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/alert_pwd_label_new2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirm password" android:singleLine="true" android:layout_below="@id/alert_pwd_edit_new1" android:layout_centerHorizontal="true"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/alert_pwd_edit_new2" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:scrollHorizontally="true" android:singleLine="true" android:capitalize="none" android:autoText="false" android:layout_below="@id/alert_pwd_label_new2" android:inputType="textPassword"/>
+    <CheckBox android:textAppearance="?android:textAppearanceSmall" android:id="@id/alert_pwd_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="show readable text" android:layout_below="@id/alert_pwd_edit_new2" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="img_list.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_agenda"/>
+    </File>
+    <File file_name="img_browse.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_browse"/>
+    </File>
+    <File file_name="checkbox_radio.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:id="@android:id/checkbox" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:button="@android:drawable/btn_radio"/>
+    </File>
+    <File file_name="img_secure.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_preferences"/>
+    </File>
+    <File file_name="img_call.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_call"/>
+    </File>
+    <File file_name="img_speaker.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_speaker"/>
+    </File>
+    <File file_name="img_help.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_help"/>
+    </File>
+    <File file_name="img_anonym.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_anonym"/>
+    </File>
+    <File file_name="img_about.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_about"/>
+    </File>
+    <File file_name="img_general.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/menu_general"/>
+    </File>
+    <File file_name="img_history.xml">
+      <ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@android:drawable/ic_menu_recent_history"/>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="filter_nums.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="User list" android:key="filter_nums"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_speaker.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Handsfree">
+        <CheckBoxPreference android:title="Automatic handsfree" android:key="auto_speaker" android:summary="Automatically enable/disable handsfree when the phone is far/close to your ear."/>
+        <cri.sanity.pref.PList android:entries="@array/disable_delay_labels" android:title="Enable delay" android:key="delay_speaker_s" android:summary="Delay time for automatically turning ON handsfree when the phone is NOT close to your ear." android:dependency="auto_speaker" android:entryValues="@array/disable_delay_values"/>
+        <cri.sanity.pref.PList android:entries="@array/speaker_call_labels" android:title="Enable on call start" android:key="speaker_call_s" android:summary="Enable handsfree when the call begins." android:entryValues="@array/speaker_call_values"/>
+        <cri.sanity.pref.PList android:entries="@array/disable_delay_labels" android:title="Delay on start" android:key="delay_speaker_call_s" android:summary="Delay time for automatically turning ON the handsfree when call begins." android:entryValues="@array/disable_delay_values"/>
+        <cri.sanity.pref.PList android:title="Speaker volume" android:key="vol_speaker_s" android:summary="Volume to set when the handsfree is automatically enabled."/>
+        <CheckBoxPreference android:title="Silent call end" android:key="silent_end_speaker" android:summary="Turn off handsfree on call end, just before the call end sound is played."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Under the Hood">
+        <cri.sanity.pref.PList android:entries="@array/speaker_count_labels" android:title="Limit to Enable" android:key="speaker_on_count_s" android:summary="How many times up to automatically enable the handsfree during one call when the phone is far from ear." android:dependency="auto_speaker" android:entryValues="@array/speaker_count_values"/>
+        <cri.sanity.pref.PList android:entries="@array/speaker_count_labels" android:title="Limit to Disable" android:key="speaker_off_count_s" android:summary="How many times up to automatically disable the handsfree during one call when the phone is close to ear." android:dependency="auto_speaker" android:entryValues="@array/speaker_count_values"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_notify.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Notification">
+        <CheckBoxPreference android:title="Notify timeout" android:key="notify_timeout" android:summary="Notify when automatic restoration from silent/airplane mode is active."/>
+        <CheckBoxPreference android:title="Notify turning off" android:key="notify_disable" android:summary="Notify when devices are automatically turned off by Sanity."/>
+        <CheckBoxPreference android:title="Notify restoring" android:key="notify_enable" android:summary="Notify when devices are automatically restored by Sanity."/>
+        <CheckBoxPreference android:title="Notify running" android:key="notify_activity" android:summary="Notify if Sanity is running when a phone call starts."/>
+        <CheckBoxPreference android:title="Notify volume" android:key="notify_volume" android:summary="Notify when volume is automatically changed by Sanity."/>
+        <CheckBoxPreference android:title="Notify headsets" android:key="notify_headset" android:summary="Notify when headsets are connected or disconnected."/>
+        <CheckBoxPreference android:title="Notify recording" android:key="notify_rec_stop" android:summary="Notify when audio recording is stopped by Sanity."/>
+        <CheckBoxPreference android:title="Notify call blocking" android:key="block_notify" android:summary="Notify the last blocked call on the status bar."/>
+        <CheckBoxPreference android:title="Notify SMS blocking" android:key="blocksms_notify" android:summary="Notify the last blocked SMS on the status bar."/>
+        <CheckBoxPreference android:title="Notify if anonymous" android:key="anonym_notify" android:summary="&quot;Notify when the outgoing call is anonymous (in all cases you won't be notified when not anonymous).&quot;"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_tts.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Announce caller">
+        <CheckBoxPreference android:title="Enable announce" android:key="tts" android:summary="&quot;Speak the caller's name when a call is received (while the phone rings).&quot;"/>
+        <Preference android:persistent="false" android:title="Global settings" android:key="tts_global" android:summary="Tap here to open the Android global settings about the \&quot;text to speech\&quot; engine." android:dependency="tts"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Audio options">
+        <CheckBoxPreference android:title="Headset only" android:key="tts_headset" android:summary="Enable announce only if the headsets are connected." android:dependency="tts"/>
+        <CheckBoxPreference android:title="Skip if silent" android:key="tts_skip" android:summary="&quot;Don't announce the caller when the phone is in silent mode.&quot;" android:dependency="tts"/>
+        <CheckBoxPreference android:title="Mute ringtone" android:key="tts_solo" android:summary="&quot;Mute the ringtone when announcing the caller's name.&quot;" android:dependency="tts"/>
+        <cri.sanity.pref.PList android:title="Announcement volume" android:key="tts_vol_s" android:summary="Choose the volume level used to announce calls." android:dependency="tts"/>
+        <cri.sanity.pref.PList android:entries="@array/tts_tone_labels" android:title="Voice tone" android:key="tts_tone_s" android:summary="&quot;Choose the voice tone for announcing the caller's name.&quot;" android:dependency="tts" android:entryValues="@array/tts_tone_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Repeat and pause the announce">
+        <cri.sanity.pref.PList android:entries="@array/tts_repeat_labels" android:title="Repeat" android:key="tts_repeat_s" android:summary="&quot;How many times the caller's name will be spoken when ringing.&quot;" android:dependency="tts" android:entryValues="@array/tts_repeat_values"/>
+        <cri.sanity.pref.PList android:entries="@array/tts_pause_labels" android:title="Pause between repeats" android:key="tts_pause_s" android:summary="&quot;How long to wait before announcing again the caller's name.&quot;" android:dependency="tts" android:entryValues="@array/tts_pause_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="What to announce">
+        <cri.sanity.pref.PEdit android:singleLine="true" android:title="Prefix" android:key="tts_prefix" android:summary="&quot;Choose what to speak BEFORE the caller's name.&quot;" android:dependency="tts" suffix=" "/>
+        <cri.sanity.pref.PEdit android:singleLine="true" android:title="Suffix" android:key="tts_suffix" android:summary="&quot;Choose what to speak AFTER the caller's name.&quot;" android:dependency="tts" prefix=" "/>
+        <cri.sanity.pref.PEdit android:singleLine="true" android:title="Anonymous" android:key="tts_anonym" android:summary="Type the word \&quot;Anonymous\&quot; in your language to announce anonymous calls." android:dependency="tts"/>
+        <cri.sanity.pref.PEdit android:singleLine="true" android:title="Unknown" android:key="tts_unknown" android:summary="Type the word \&quot;Unknown\&quot; in your language to announce caller is not in contacts." android:dependency="tts"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Under the Hood">
+        <CheckBoxPreference android:title="Alternate audio" android:key="tts_stream" android:summary="Use an alternate audio stream for announcing. Enable this option only if you cannot hear the announcement (try it hereunder)." android:dependency="tts"/>
+        <Preference android:persistent="false" android:title="Test" android:key="tts_test" android:summary="Tap here to try announcing using current options." android:widgetLayout="@layout/img_speaker" android:dependency="tts"/>
+        <cri.sanity.pref.PFilter android:key="filter_tts" android:dependency="tts"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Announce sender of SMS">
+        <CheckBoxPreference android:title="Enable announce SMS" android:key="ttsms" android:summary="&quot;Speak the name of the sender when receiving a SMS (only the sender's name is announced, NOT the message content).&quot;" android:dependency="tts"/>
+        <cri.sanity.pref.PList android:title="SMS Volume" android:key="ttsms_vol_s" android:summary="Choose the volume level used to announce SMS." android:dependency="ttsms"/>
+        <cri.sanity.pref.PEdit android:singleLine="true" android:title="Prefix (SMS)" android:key="ttsms_prefix" android:summary="&quot;Choose what to speak BEFORE the sender's name.&quot;" android:dependency="ttsms" suffix=" "/>
+        <cri.sanity.pref.PEdit android:singleLine="true" android:title="Suffix (SMS)" android:key="ttsms_suffix" android:summary="&quot;Choose what to speak AFTER the sender's name.&quot;" android:dependency="ttsms" prefix=" "/>
+        <CheckBoxPreference android:persistent="false" android:title="Shared filter (TTS)" android:key="ttsms_shared" android:summary="If activated, use the filter of the call announcer. Otherwise you can choose a specific filter to announce SMS." android:dependency="ttsms"/>
+        <cri.sanity.pref.PFilter android:key="filter_ttsms" android:dependency="ttsms"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_browse.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Browse recorded files" android:key="rec_browse"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="filter_datetime.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Date and time" android:key="group">
+        <CheckBoxPreference android:persistent="false" android:title="Choose date and time" android:key="filter_dt" android:summary="If disabled, the filter will be always enabled."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Date">
+        <Preference android:persistent="false" android:title="All days" android:key="alldays" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Monday" android:key="filter_dt_day2" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Tuesday" android:key="filter_dt_day3" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Wednesday" android:key="filter_dt_day4" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Thursday" android:key="filter_dt_day5" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Friday" android:key="filter_dt_day6" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Saturday" android:key="filter_dt_day7" android:dependency="filter_dt"/>
+        <CheckBoxPreference android:persistent="false" android:title="Sunday" android:key="filter_dt_day1" android:dependency="filter_dt"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Time" android:key="times">
+        <Preference android:persistent="false" android:title="New range" android:key="add" android:summary="&quot;Tap here to create a new time range. If you don't create time ranges, the filter will be enabled for the entire day.&quot;" android:dependency="filter_dt"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_volume.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Volume">
+        <cri.sanity.pref.PList android:title="Phone volume" android:key="vol_phone_s" android:summary="Volume to automatically set during a call while no headsets are used."/>
+        <cri.sanity.pref.PList android:title="Wired headsets" android:key="vol_wired_s" android:summary="Volume to automatically set during a call while using wired headsets."/>
+        <cri.sanity.pref.PList android:title="Bluetooth headsets" android:key="vol_bt_s" android:summary="Volume to automatically set during a call while using wireless headsets."/>
+        <CheckBoxPreference android:title="Conversation only" android:key="vol_solo" android:summary="Play only the audio of the conversation, muting any other audio stream during phone calls."/>
+        <cri.sanity.pref.PList android:title="Announcement volume" android:key="tts_vol_s" android:summary="Choose the volume level used to announce calls."/>
+        <cri.sanity.pref.PList android:title="SMS Volume" android:key="ttsms_vol_s" android:summary="Choose the volume level used to announce SMS."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="admin.xml">
+      <device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <force-lock/>
+    </uses-policies>
+</device-admin>
+    </File>
+    <File file_name="prefs_proximity.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Proximity">
+        <CheckBoxPreference android:title="Turn off in proximity" android:key="disable_proximity" android:summary="Turn OFF devices only when the phone is close to your ear. (If disabled, turn off when call start.)"/>
+        <cri.sanity.pref.PList android:entries="@array/disable_delay_labels" android:title="Turn off delay" android:key="disable_delay_s" android:summary="Delay time for turning OFF devices when your ear is close to phone." android:dependency="disable_proximity" android:entryValues="@array/disable_delay_values"/>
+        <CheckBoxPreference android:title="Turn on if far" android:key="enable_proximity" android:summary="Turn ON devices (turned off by Sanity) during a call when the phone is NOT close to your ear." android:dependency="disable_proximity"/>
+        <cri.sanity.pref.PList android:entries="@array/enable_delay_labels" android:title="Restore delay" android:key="enable_delay_s" android:summary="Delay time for turning ON devices when the phone is NOT close to your ear." android:dependency="enable_proximity" android:entryValues="@array/enable_delay_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Screen">
+        <CheckBoxPreference android:persistent="false" android:title="Administrator" android:key="admin" android:summary="Use administrator privileges for turning off screen when you put the phone close to your ear during a call."/>
+        <CheckBoxPreference android:title="Turn off screen" android:key="screen_off" android:summary="Force to turn OFF the screen during call when the phone is close to your ear." android:dependency="admin"/>
+        <CheckBoxPreference android:title="Turn on screen" android:key="screen_on" android:summary="Force to turn ON the screen during call when the phone is far from your ear."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_vibra.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Vibration">
+        <CheckBoxPreference android:title="Vibrate at the beginning" android:key="vibrate_pickup" android:summary="Vibrate when an outgoing call begins."/>
+        <CheckBoxPreference android:title="Vibrate at the end" android:key="vibrate_end" android:summary="Vibrate when a phone call ends."/>
+        <cri.sanity.pref.PList android:entries="@array/vibrate_mode_labels" android:title="Vibration mode" android:key="vibrate_mode_s" android:summary="Choose how to vibrate the phone." android:entryValues="@array/vibrate_mode_values"/>
+        <Preference android:persistent="false" android:title="Vibration test" android:key="vibrate_test" android:summary="Tap here to test the vibration mode."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_answer.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Auto answer">
+        <CheckBoxPreference android:title="Enable auto answer" android:key="answer" android:summary="Enable automatic answering on incoming calls."/>
+        <CheckBoxPreference android:title="Headset only" android:key="answer_headset" android:summary="Enable automatic answering only if the headsets are connected." android:dependency="answer"/>
+        <CheckBoxPreference android:title="Skip if silent" android:key="answer_skip" android:summary="&quot;Don't answer automatically when the phone is in silent mode.&quot;" android:dependency="answer"/>
+        <cri.sanity.pref.PList android:entries="@array/disable_delay_labels" android:title="Delay of answer" android:key="answer_delay_s" android:summary="Delay time before answering automatically." android:dependency="answer" android:entryValues="@array/disable_delay_values"/>
+        <cri.sanity.pref.PFilter android:key="filter_answer" android:dependency="answer"/>
+        <CheckBoxPreference android:title="Alternative answer" android:key="answer_alt" android:summary="&quot;Use an alternative way to answer. Check it only if the automatic answer doesn't work on your phone.&quot;" android:dependency="answer"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_urgent.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Urgent calls">
+        <CheckBoxPreference android:persistent="false" android:title="Enable urgent calls" android:key="urgent" android:summary="&quot;If disabled, your phone will never ring when it's in silent mode. If enabled, you can choose which calls will always ring or vibrate.&quot;"/>
+        <CheckBoxPreference android:title="Skip if vibrate" android:key="urgent_skip" android:summary="&quot;Don't enable urgent calls if the phone is set to vibrate in silent mode.&quot;" android:dependency="urgent"/>
+        <cri.sanity.pref.PList android:entries="@array/urgent_mode_labels" android:title="Urgent mode" android:key="urgent_mode_s" android:summary="Choose if ring or vibrate on urgent incoming calls." android:dependency="urgent" android:entryValues="@array/urgent_mode_values"/>
+        <cri.sanity.pref.PFilter android:key="filter_urgent" android:dependency="urgent"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="filter_groups.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Groups list" android:key="filter_groups"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="filter_contacts.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Contacts list" android:key="filter_header">
+        <Preference android:title="Fast search" android:key="filter_search" android:summary="Tap here for fast searching of a contact."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Contacts list" android:key="filter_contacts"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Preferences">
+        <Preference android:persistent="false" android:title="General" android:key="screen_general" android:summary="Application main options." android:widgetLayout="@layout/img_general"/>
+        <Preference android:persistent="false" android:title="Recorder" android:key="screen_record" android:summary="Options for recording call audio on memory card." android:widgetLayout="@layout/img_rec"/>
+        <Preference android:persistent="false" android:title="Call blocker" android:key="screen_block" android:summary="Block incoming calls and SMS filtering out the phone number of the caller." android:widgetLayout="@layout/img_block"/>
+        <Preference android:persistent="false" android:title="Announce caller" android:key="screen_tts" android:summary="Speak the name of the caller when receiving a call or a SMS." android:widgetLayout="@layout/img_tts"/>
+        <Preference android:persistent="false" android:title="Urgent calls" android:key="screen_urgent" android:summary="&quot;Choose what phone numbers your phone will ring or vibrate also when it's in silent mode.&quot;" android:widgetLayout="@layout/img_urgent"/>
+        <Preference android:persistent="false" android:title="Auto answer" android:key="screen_answer" android:summary="Rules to answer automatically on incoming calls." android:widgetLayout="@layout/img_answer"/>
+        <Preference android:persistent="false" android:title="Anonymous calls" android:key="screen_anonym" android:summary="Rules to dial anonymous call (automatically hide your caller ID)." android:widgetLayout="@layout/img_anonym"/>
+        <Preference android:persistent="false" android:title="Handsfree" android:key="screen_speaker" android:summary="Options for automatic handsfree activation." android:widgetLayout="@layout/img_speaker"/>
+        <Preference android:persistent="false" android:title="Devices" android:key="screen_devices" android:summary="Which devices should be enabled or disabled to reduce electromagnetic waves during a call." android:widgetLayout="@layout/img_devices"/>
+        <Preference android:persistent="false" android:title="Proximity" android:key="screen_proximity" android:summary="Options for enabling and disabling devices during a call by checking proximity sensor." android:widgetLayout="@layout/img_proximity"/>
+        <Preference android:persistent="false" android:title="Volume" android:key="screen_volume" android:summary="Options for automatic volume setting during a call." android:widgetLayout="@layout/img_vol"/>
+        <Preference android:persistent="false" android:title="Vibration" android:key="screen_vibra" android:summary="Choose which the special events which vibrate the phone." android:widgetLayout="@layout/img_vibra"/>
+        <Preference android:persistent="false" android:title="Notification" android:key="screen_notify" android:summary="Choose when Sanity should show notifications." android:widgetLayout="@layout/img_notify"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Miscellaneous">
+        <Preference android:persistent="false" android:title="About and contacts" android:key="screen_about" android:summary="Information about this application and tools for contacting the developer." android:widgetLayout="@layout/img_about"/>
+        <Preference android:persistent="false" android:title="How to uninstall" android:key="uninstall" android:summary="Tap here to show instructions for uninstalling Sanity (useful only on Android Froyo 2.2 or greater)."/>
+        <Preference android:persistent="false" android:title="Donate" android:key="donate" android:summary="Sanity is free. If you like this application, support the development with a donation."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_block.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Call blocker">
+        <CheckBoxPreference android:persistent="false" android:title="Enable call blocker" android:key="block" android:summary="Enable call blocking system to refuse incoming calls."/>
+        <cri.sanity.pref.PFilter android:key="filter_block" android:dependency="block"/>
+        <Preference android:persistent="false" android:title="Choice of method" android:key="block_help" android:summary="Tap here to show the description of all call block methods." android:widgetLayout="@layout/img_help" android:dependency="block"/>
+        <cri.sanity.pref.PList android:entries="@array/block_mode_labels" android:title="Block method" android:key="block_mode_s" android:summary="Choose how to block incoming calls." android:dependency="block" android:entryValues="@array/block_mode_values"/>
+        <cri.sanity.pref.PList android:entries="@array/block_resume_labels" android:title="Restore the signal" android:key="block_resume_s" android:summary="Choose when to restore the signal after the call has been blocked." android:dependency="block" android:entryValues="@array/block_resume_values"/>
+        <CheckBoxPreference android:title="Pick up before block" android:key="block_pickup" android:summary="Pick up (answer) the incoming calls just before block. It may be useful to prevent diversions to voicemail." android:dependency="block"/>
+        <CheckBoxPreference android:title="Skip if silent" android:key="block_skip" android:summary="&quot;Don't block incoming calls when the phone is in silent mode.&quot;" android:dependency="block"/>
+        <CheckBoxPreference android:title="Notify call blocking" android:key="block_notify" android:summary="Notify the last blocked call on the status bar." android:dependency="block"/>
+        <Preference android:persistent="false" android:title="History" android:key="block_history" android:summary="Show the detailed list of all blocked calls." android:widgetLayout="@layout/img_history"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="SMS blocker">
+        <CheckBoxPreference android:title="Enable SMS blocker" android:key="blocksms" android:summary="Enable SMS blocking system to automatically delete unwanted messages." android:dependency="block"/>
+        <CheckBoxPreference android:title="Notify SMS blocking" android:key="blocksms_notify" android:summary="Notify the last blocked SMS on the status bar." android:dependency="blocksms"/>
+        <CheckBoxPreference android:persistent="false" android:title="Shared filter (SMS)" android:key="blocksms_shared" android:summary="If activated, use the filter of the call blocker to block the SMS also. Otherwise you can choose a specific filter to block SMS." android:dependency="blocksms"/>
+        <cri.sanity.pref.PFilter android:key="filter_blocksms" android:dependency="blocksms"/>
+        <cri.sanity.pref.PList android:entries="@array/blocksms_max_labels" android:title="History size" android:key="blocksms_max_s" android:summary="Choose how many blocked SMS should be kept in the history." android:dependency="blocksms" android:entryValues="@array/blocksms_max_values"/>
+        <Preference android:persistent="false" android:title="History" android:key="blocksms_history" android:summary="Show the detailed list of recent blocked SMS messages." android:widgetLayout="@layout/img_history"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_anonym.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Anonymous calls">
+        <CheckBoxPreference android:title="Enable anonymous calls" android:key="anonym" android:summary="Choose to enable or disable automatic anonymous outgoing calls completely."/>
+        <CheckBoxPreference android:title="Confirm calls" android:key="anonym_confirm" android:summary="If enabled, Sanity will ask you to confirm if the outgoing call should be anonymous." android:dependency="anonym"/>
+        <CheckBoxPreference android:title="Notify if anonymous" android:key="anonym_notify" android:summary="&quot;Notify when the outgoing call is anonymous (in all cases you won't be notified when not anonymous).&quot;" android:dependency="anonym"/>
+        <cri.sanity.pref.PList android:persistent="false" android:entries="@array/anonym_country_labels" android:title="Country" android:key="anonym_country" android:summary="Choose your country to set the dialing prefix used for hiding your caller ID." android:dependency="anonym" android:entryValues="@array/anonym_country_values"/>
+        <cri.sanity.pref.PEdit android:title="Anonymous prefix" android:key="anonym_prefix" android:summary="&quot;The custom prefix used for hiding your caller ID. If you don't know it, choose your country.&quot;" android:dependency="anonym"/>
+        <cri.sanity.pref.PFilter android:key="filter_anonym" android:dependency="anonym"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_filter.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Call filter" android:key="filter">
+        <CheckBoxPreference android:persistent="false" android:title="Enable filtering" android:key="filter_enable" android:summary="Enable phone number filtering."/>
+        <Preference android:persistent="false" android:title="Date and time" android:key="filter_dt" android:summary="Choose when this filter should be enabled." android:widgetLayout="@layout/img_history" android:dependency="filter_enable"/>
+        <cri.sanity.pref.PList android:persistent="false" android:entries="@array/filter_mode_labels" android:title="Filter mode" android:key="filter_mode" android:summary="Choose to include or exclude the phone numbers in the following list." android:dependency="filter_enable" android:entryValues="@array/filter_mode_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="List of phone numbers" android:key="filter_list">
+        <CheckBoxPreference android:persistent="false" android:title="All numbers" android:key="filter_all" android:summary="All phone numbers." android:dependency="filter_enable"/>
+        <CheckBoxPreference android:persistent="false" android:title="Anonymous" android:key="filter_anonym" android:summary="All anonymous phone numbers." android:dependency="filter_enable"/>
+        <CheckBoxPreference android:persistent="false" android:title="All unknowns" android:key="filter_unknown" android:summary="&quot;All non-anonymous unknown phone numbers (don't stored in contacts).&quot;" android:dependency="filter_enable"/>
+        <Preference android:persistent="false" android:title="User list" android:key="filter_nums" android:summary="&quot;List of phone numbers don't stored in contacts.&quot;" android:widgetLayout="@layout/img_list" android:dependency="filter_enable"/>
+        <CheckBoxPreference android:persistent="false" android:title="All contacts" android:key="filter_allcontacts" android:summary="All phone numbers in contacts." android:dependency="filter_enable"/>
+        <CheckBoxPreference android:persistent="false" android:title="All favourites" android:key="filter_star" android:summary="All contacts you tagged as favourites." android:widgetLayout="@layout/checkbox_star" android:dependency="filter_enable"/>
+        <Preference android:persistent="false" android:title="Contacts list" android:key="filter_contacts" android:summary="Choose the phone contacts in this list." android:widgetLayout="@layout/img_contacts" android:dependency="filter_enable"/>
+        <Preference android:persistent="false" android:title="Groups list" android:key="filter_groups" android:summary="Choose the groups of contacts in this list." android:widgetLayout="@layout/img_groups" android:dependency="filter_enable"/>
+        <Preference android:persistent="false" android:title="Prefixes" android:key="filter_prefix" android:summary="Choose the phone number prefixes in this list." android:widgetLayout="@layout/img_prefix" android:dependency="filter_enable"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_history.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="History" android:key="history_main">
+        <Preference android:persistent="false" android:title="Clear all" android:key="clear" android:summary="Remove all history entries." android:widgetLayout="@layout/img_delete"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="History" android:key="history"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_profile.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Profiles" android:key="profile"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_general.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="General">
+        <CheckBoxPreference android:title="Enable Sanity" android:key="enabled" android:summary="&quot;Enable or disable whole Sanity system. If disabled, this application won't affect phone calls.&quot;"/>
+        <CheckBoxPreference android:title="Quick start" android:key="quick_start" android:summary="Quick start of Sanity during calls and SMS (the application process will always stay in memory as background service)." android:dependency="enabled"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Manage phone state">
+        <CheckBoxPreference android:title="SMS alert" android:key="sms_alert" android:summary="Show each new incoming SMS asking you to reply." android:dependency="enabled"/>
+        <CheckBoxPreference android:title="Silent mode Timeout" android:key="silent_limit" android:summary="Each time you activate the Silent mode, Sanity will ask you to choose a timeout for restoring automatically the Normal mode." android:dependency="enabled"/>
+        <CheckBoxPreference android:title="Airplane mode Timeout" android:key="airplane_limit" android:summary="Each time you activate the Ariplane mode, Sanity will ask you to choose a timeout for restoring automatically the Normal mode." android:dependency="enabled"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Troubleshoots">
+        <CheckBoxPreference android:persistent="false" android:title="Administrator" android:key="admin" android:summary="Use administrator privileges for turning off screen when you put the phone close to your ear during a call."/>
+        <CheckBoxPreference android:title="Force BT audio" android:key="force_bt_audio" android:summary="Force bluetooth audio device to be correctly handled by Sanity." android:dependency="enabled"/>
+        <CheckBoxPreference android:title="Reverse proximity" android:key="reverse_proximity" android:summary="Check this option only if Sanity enable/disable handsfree or devices in a wrong way when the phone is far/close to your ear." android:dependency="enabled"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Manage preferences">
+        <Preference android:persistent="false" android:title="Profiles" android:key="profile" android:summary="Manage settings profiles to quickly change more preferences in one fell swoop." android:widgetLayout="@layout/img_profiles"/>
+        <Preference android:persistent="false" android:title="Backup and Restore" android:key="backup_prefs" android:summary="Tap here to backup/restore all current preferences to/from memory card." android:widgetLayout="@layout/img_backup"/>
+        <Preference android:persistent="false" android:title="Delete filters" android:key="delete_filters" android:summary="Delete all call filters currently configured."/>
+        <Preference android:persistent="false" android:title="Reset to default" android:key="reset_prefs" android:summary="Set default values for all application preferences."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Security">
+        <cri.sanity.pref.PPwd android:title="Password" android:key="pwd" android:summary="Set a global password for changing the options and for accessing to the resources of Sanity."/>
+        <CheckBoxPreference android:title="Visible passwords" android:key="pwd_clear" android:summary="Always show passwords using readable text."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_record.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Recorder">
+        <Preference android:persistent="false" android:enabled="false" android:title="Legal notes" android:selectable="false" android:summary="Attention please: in some countries call recording is forbidden by government laws. The author disagrees every illegal use of Sanity. Be aware, use it at your risk!"/>
+        <CheckBoxPreference android:title="Enable recorder" android:key="rec" android:summary="Put recording notification on statusbar during phone call: tap that notification to start/stop call recording."/>
+        <Preference android:persistent="false" android:title="Browse recorded files" android:key="rec_browse" android:summary="Show list of audio files recorded by Sanity (stored in \&quot;Sanity\&quot; folder inside memory card)." android:widgetLayout="@layout/img_browse" android:dependency="rec"/>
+        <CheckBoxPreference android:persistent="false" android:title="Multimedia scanner" android:key="rec_scan" android:summary="Allow system multimedia scanner to track audio files recorded by Sanity." android:dependency="rec"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_fmt_labels" android:title="Audio format" android:key="rec_fmt_s" android:summary="Select file format used to save audio file recordings." android:dependency="rec" android:entryValues="@array/rec_fmt_values"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_src_labels" android:title="Audio source" android:key="rec_src_s" android:summary="Select the source device used for recording audio. Attention: many phones are limited to Microphone as only working one!" android:dependency="rec" android:entryValues="@array/rec_src_values"/>
+        <Preference android:persistent="false" android:enabled="false" android:title="Important notes" android:selectable="false" android:summary="Android recording system is very limited: actually you can record calls only when HANDSFREE IS TURNED ON!"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Automatic start rules">
+        <CheckBoxPreference android:title="Automatic start" android:key="rec_start" android:summary="&quot;Enable automatic START recording. If disabled, Sanity won't start recording automatically.&quot;" android:dependency="rec"/>
+        <cri.sanity.pref.PList android:entries="@array/disable_delay_labels" android:title="Start delay" android:key="rec_start_delay_s" android:summary="Delay time for starting audio recording automatically." android:dependency="rec_start" android:entryValues="@array/disable_delay_values"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_start_dir_labels" android:title="Call type" android:key="rec_start_dir_s" android:summary="Choose call directions for starting audio recording." android:dependency="rec_start" android:entryValues="@array/rec_start_dir_values"/>
+        <cri.sanity.pref.PFilter android:key="filter_rec" android:dependency="rec_start"/>
+        <CheckBoxPreference android:title="Handsfree ON" android:key="rec_start_speaker" android:summary="Automatic start audio recording when handsfree is turned on by Sanity." android:dependency="rec_start"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_start_headset_labels" android:title="Headsets (start)" android:key="rec_start_headset_s" android:summary="Headset rules about automatic start audio recording." android:dependency="rec_start" android:entryValues="@array/rec_headset_values"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_start_times_labels" android:title="Max start times" android:key="rec_start_times_s" android:summary="Maximum times to start automatic recording during a single call." android:dependency="rec_start" android:entryValues="@array/rec_start_times_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Automatic stop rules">
+        <CheckBoxPreference android:title="Automatic stop" android:key="rec_stop" android:summary="&quot;Enable automatic STOP recording. If disabled, you'll have to stop manually.&quot;" android:dependency="rec"/>
+        <cri.sanity.pref.PList android:entries="@array/disable_delay_labels" android:title="Stop delay" android:key="rec_stop_delay_s" android:summary="Delay for stopping audio recording automatically." android:dependency="rec_stop" android:entryValues="@array/disable_delay_values"/>
+        <CheckBoxPreference android:title="Handsfree OFF" android:key="rec_stop_speaker" android:summary="Automatic stop audio recording when handsfree is turned off by Sanity." android:dependency="rec_stop"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_stop_headset_labels" android:title="Headsets (stop)" android:key="rec_stop_headset_s" android:summary="Headset rules about automatic stop audio recording." android:dependency="rec_stop" android:entryValues="@array/rec_headset_values"/>
+        <cri.sanity.pref.PList android:entries="@array/rec_stop_limit_labels" android:title="Time limit" android:key="rec_stop_limit_s" android:summary="Choose the maximum duration of one audio recording. Sanity will stop the recording after this time." android:dependency="rec_stop" android:entryValues="@array/rec_stop_limit_values"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Under the Hood">
+        <cri.sanity.pref.PList android:entries="@array/rec_autoremove_labels" android:title="Automatic removal" android:key="rec_autoremove_s" android:summary="Automatically remove the old recordings. Choose how long to keep the recordings." android:dependency="rec" android:entryValues="@array/rec_autoremove_values"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_about.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="About and contacts">
+        <Preference android:persistent="false" android:title="Recent changes" android:key="changelog" android:summary="Show recent changes about last Sanity versions."/>
+        <Preference android:persistent="false" android:title="Official Forum" android:key="forum" android:summary="&quot;Tap here to open the official website of the developer's forum. You can also use the forum for reporting bugs and for requesting features.&quot;"/>
+        <Preference android:persistent="false" android:title="Leave a comment" android:key="comment" android:summary="&quot;You are invited to leave a comment about Sanity on Market. Tap here to open Market. Please don't report bugs in Market comments.&quot;"/>
+        <Preference android:persistent="false" android:title="Mail to developer" android:key="mail" android:summary="Tap here to write an email to the developer. Use the FORUM for any question about Sanity!"/>
+        <Preference android:persistent="false" android:title="PayPal donate" android:key="paypal" android:summary="In addition to Market, you can donate using PayPal. Once you complete the donation, the author will send you the donation version. Tap here to open the PayPal site."/>
+        <Preference android:persistent="false" android:title="License GNU GPL v3" android:key="eula" android:summary="Tap here to open the official web site of the GNU General Public License version 3."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="filter_prefix.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Prefixes" android:key="filter_prefix"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="prefs_devices.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="logo"/>
+    <PreferenceCategory android:title="Devices">
+        <CheckBoxPreference android:title="Turn off Mobile Data" android:key="mobdata" android:summary="Disable Mobile Data (2G/3G) during a call (it will be restored at call end). It works with many phone models, but not with all."/>
+        <CheckBoxPreference android:title="Turn off Wifi" android:key="wifi" android:summary="Disable Wifi during a call (it will be restored at call end)."/>
+        <CheckBoxPreference android:title="Turn off Bluetooth" android:key="bt" android:summary="Disable Bluetooth during a call (it will be restored at call end)."/>
+        <CheckBoxPreference android:title="Turn off GPS" android:key="gps" android:summary="Disable GPS during a call (it will be restored at call end). It works with many phone models, but not with all."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Exceptions">
+        <CheckBoxPreference android:title="Skip BT if connected" android:key="bt_skip" android:summary="Skip automatic Bluetooth disabling during a call if there are Bluetooth devices connected to phone." android:dependency="bt"/>
+        <CheckBoxPreference android:title="Skip Mobile Data if GPS" android:key="mobdata_skip" android:summary="Skip automatic Mobile Data (2G/3G) disabling during a call when GPS is enabled."/>
+        <CheckBoxPreference android:title="Skip if Hotspot Wifi" android:key="hotspot_skip" android:summary="Skip automatic Mobile Data (2G/3G) and Wifi disabling during a call if phone is configured like Router Wifi."/>
+        <CheckBoxPreference android:title="Skip if Tethering USB" android:key="tether_skip" android:summary="Skip automatic Mobile Data disabling during a call if Tethering USB is enabled." android:dependency="mobdata"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Under the Hood">
+        <CheckBoxPreference android:title="Turn on Bluetooth" android:key="bt_reverse" android:summary="Turn on Bluetooth when call starts. This can be helpful for automatic Bluetooth headsets connection."/>
+        <cri.sanity.pref.PList android:entries="@array/bt_reverse_timeout_labels" android:title="Bluetooth Timeout" android:key="bt_reverse_timeout_s" android:summary="Timeout for turning off Bluetooth if no headsets were connected." android:dependency="bt_reverse" android:entryValues="@array/bt_reverse_timeout_values"/>
+        <CheckBoxPreference android:title="Always turn BT off" android:key="bt_off" android:summary="In all cases Bluetooth will be turned off when call ends."/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="prefix.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_manage" android:id="@id/addnew" android:title="New"/>
+    <item android:icon="@android:drawable/ic_menu_edit" android:id="@id/change" android:title="Modify"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/del" android:title="Delete"/>
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/selall" android:title="Select all"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/selnone" android:title="Deselect all"/>
+    <item android:icon="@android:drawable/ic_lock_power_off" android:id="@id/canc" android:title="Cancel"/>
+</menu>
+    </File>
+    <File file_name="nums.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_manage" android:id="@id/addnew" android:title="New"/>
+    <item android:icon="@android:drawable/ic_menu_call" android:id="@id/callog" android:title="Call Log"/>
+    <item android:icon="@android:drawable/ic_menu_edit" android:id="@id/change" android:title="Modify"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/del" android:title="Delete"/>
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/selall" android:title="Select all"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/selnone" android:title="Deselect all"/>
+    <item android:icon="@android:drawable/ic_lock_power_off" android:id="@id/canc" android:title="Cancel"/>
+</menu>
+    </File>
+    <File file_name="contacts.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/search" android:title="Search"/>
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/selall" android:title="Select all"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/selnone" android:title="Deselect all"/>
+    <item android:icon="@android:drawable/ic_lock_power_off" android:id="@id/canc" android:title="Cancel"/>
+</menu>
+    </File>
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/menu_general" android:id="@id/menu_general" android:title="General"/>
+    <item android:icon="@drawable/menu_rec" android:id="@id/menu_rec" android:title="Recorder"/>
+    <item android:icon="@drawable/menu_block" android:id="@id/menu_block" android:title="Call blocker"/>
+    <item android:icon="@drawable/menu_tts" android:id="@id/menu_tts" android:title="Announce caller"/>
+    <item android:icon="@drawable/menu_urgent" android:id="@id/menu_urgent" android:title="Urgent calls"/>
+    <item android:icon="@drawable/menu_answer" android:id="@id/menu_answer" android:title="Auto answer"/>
+    <item android:icon="@drawable/menu_anonym" android:id="@id/menu_anonym" android:title="Anonymous calls"/>
+    <item android:icon="@drawable/menu_speaker" android:id="@id/menu_speaker" android:title="Handsfree"/>
+    <item android:icon="@drawable/menu_devices" android:id="@id/menu_devices" android:title="Devices"/>
+    <item android:icon="@drawable/menu_proximity" android:id="@id/menu_proximity" android:title="Proximity"/>
+    <item android:icon="@drawable/menu_vol" android:id="@id/menu_vol" android:title="Volume"/>
+    <item android:icon="@drawable/menu_notify" android:id="@id/menu_notify" android:title="Notification"/>
+    <item android:icon="@drawable/menu_vibra" android:id="@id/menu_vibra" android:title="Vibration"/>
+    <item android:icon="@drawable/menu_about" android:id="@id/menu_about" android:title="About and contacts"/>
+</menu>
+    </File>
+    <File file_name="browse.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_media_play" android:id="@id/open" android:title="Open"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/del" android:title="Delete"/>
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/selall" android:title="Select all"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/selnone" android:title="Deselect all"/>
+</menu>
+    </File>
+    <File file_name="profile.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_add" android:id="@id/addnew" android:title="New"/>
+    <item android:icon="@android:drawable/ic_media_play" android:id="@id/activate" android:title="Activate"/>
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/saveas" android:title="Save"/>
+    <item android:icon="@android:drawable/ic_menu_edit" android:id="@id/rename" android:title="Rename"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/delete" android:title="Delete"/>
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/show" android:title="Show"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/help" android:title="Help"/>
+</menu>
+    </File>
+  </Directory>
+</App>

@@ -1,0 +1,128 @@
+<App name="com.example.instantreplay" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="fragment_gallery.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:layout_gravity="center" android:id="@id/list_gallery" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="20.0dip" android:divider="@null" android:dividerHeight="20.0dip" android:fastScrollEnabled="true"/>
+    <TextView android:layout_gravity="center" android:id="@id/text_no_items" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No videos found." android:layout_centerInParent="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_camera.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true">
+    <FrameLayout android:id="@id/camera_preview" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:id="@id/text_rec_time" android:background="@drawable/record_timer" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:alpha="0.85"/>
+        <View android:id="@id/view_touch_camera" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="touchCameraPress"/>
+        <Button android:textSize="20.0sp" android:textStyle="italic" android:textColor="#ffffffff" android:id="@id/text_event" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:onClick="eventTextPress" android:alpha="0.85"/>
+        <TextView android:textSize="64.0sp" android:textColor="#ffffffff" android:id="@id/text_total_time" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawablePadding="0.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:alpha="0.85"/>
+        <Button android:id="@id/button_menu" android:background="@drawable/menu_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:onClick="menuButtonPress" android:alpha="0.85"/>
+        <Button android:id="@id/button_timer" android:background="@drawable/play_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="startTimerButtonPress" android:alpha="0.85"/>
+        <Button android:id="@id/button_reset_split" android:background="@drawable/reset_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/button_timer" android:layout_alignParentBottom="true" android:onClick="resetSplitButtonPress" android:alpha="0.85"/>
+        <ListView android:id="@id/list_splits" android:scrollbars="none" android:layout_width="170.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:transcriptMode="alwaysScroll" android:divider="@null" android:layout_above="@id/button_timer" android:layout_below="@id/text_total_time" android:layout_alignParentLeft="true"/>
+        <Button android:id="@id/button_record" android:background="@drawable/rec_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:onClick="recordButtonPress" android:alpha="0.85"/>
+    </RelativeLayout>
+</FrameLayout>
+    </File>
+    <File file_name="layout_icon.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="?android:activatedBackgroundIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@id/image_icon" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginRight="10.0dip"/>
+    <TextView android:layout_gravity="center" android:id="@id/text_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="dialog_event_picker.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <Switch android:id="@id/switch_course_units" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textOn="Yards" android:textOff="Meters"/>
+        <Switch android:id="@id/switch_course_length" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textOn="Long" android:textOff="Short"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <NumberPicker android:id="@id/picker_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip"/>
+        <NumberPicker android:id="@id/picker_event_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip"/>
+    </LinearLayout>
+    <CheckBox android:id="@id/check_enable_standard_comp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Compare splits to time standards"/>
+</LinearLayout>
+    </File>
+    <File file_name="layout_split_row.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="24.0sp" android:textColor="#ffffffff" android:id="@id/text_split_entry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.85"/>
+    </File>
+    <File file_name="gallery_nav_row.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="20.0sp" android:id="@id/gallery_nav_row" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="20.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="activity_gallery.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/fragment_gallery" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="activity_video_player.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true">
+    <VideoView android:id="@id/video_player" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <RelativeLayout android:id="@id/layout_video_overlay" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="64.0sp" android:textColor="#ffffffff" android:id="@id/text_video_total_time" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:drawablePadding="0.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:alpha="0.85"/>
+        <ListView android:id="@id/list_video_splits" android:scrollbars="none" android:layout_width="150.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:transcriptMode="alwaysScroll" android:divider="@null" android:layout_below="@id/text_video_total_time" android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</FrameLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Camera" android:key="pref_key_camera_settings">
+        <CheckBoxPreference android:title="Take pictures" android:key="pref_take_picture" android:summary="Touch the screen to take a picture" android:defaultValue="true"/>
+        <CheckBoxPreference android:title="Volume buttons zoom" android:key="pref_key_vol_zoom" android:summary="Use volume up and down keys to zoom in and out" android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Timer" android:key="pref_key_timer_settings">
+        <CheckBoxPreference android:title="Save timer overlay" android:key="pref_save_overlay" android:summary="Save the timer overlay with the video" android:defaultValue="true"/>
+        <PreferenceScreen android:persistent="false" android:title="Swim meet standards" android:key="pref_key_swim_standards">
+            <CheckBoxPreference android:title="Compare to standard" android:key="pref_key_comp_standard" android:summary="Compare splits to time standards" android:defaultValue="false"/>
+            <SwitchPreference android:title="Course measurement units" android:key="pref_key_course_units" android:summaryOn="Yards" android:summaryOff="Meters" android:switchTextOn="Yards" android:switchTextOff="Meters"/>
+            <SwitchPreference android:title="Course length" android:key="pref_key_swim_course_length" android:summaryOn="Long course" android:summaryOff="Short course" android:switchTextOn="Long" android:switchTextOff="Short"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Video playback" android:key="pref_key_playback_settings">
+        <CheckBoxPreference android:title="Show timer overlay" android:key="pref_key_timer_overlay" android:summary="Show timer and lap times with videos" android:defaultValue="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="help_action_bar.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/content_email" android:id="@id/option_contact" android:title="Contact"/>
+    <item android:icon="@drawable/action_about" android:id="@id/option_about" android:title="About"/>
+</menu>
+    </File>
+    <File file_name="context_menu_video_gallery.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/menu_video_gallery">
+    <item android:id="@id/option_select_all" android:title="Select all"/>
+    <item android:icon="@drawable/social_share" android:id="@id/option_share" android:title="Share" android:actionProviderClass="android.widget.ShareActionProvider"/>
+    <item android:icon="@drawable/content_discard" android:id="@id/option_delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="activity_camera.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="gallery_action_bar.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/device_access_video" android:id="@id/option_record_video" android:title="Record video" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/action_search" android:id="@id/option_search" android:title="Search" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/action_settings" android:id="@id/option_settings" android:title="Settings"/>
+    <item android:icon="@drawable/action_settings" android:id="@id/option_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="context_menu_settings.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android"/>
+    </File>
+    <File file_name="context_menu_camera.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/social_share" android:id="@id/option_context_share" android:title="Share" android:actionProviderClass="android.widget.ShareActionProvider"/>
+    <item android:icon="@drawable/content_picture" android:id="@id/option_context_gallery" android:title="Gallery"/>
+    <item android:icon="@drawable/action_settings" android:id="@id/option_context_settings" android:title="Settings"/>
+    <item android:icon="@drawable/action_help" android:id="@id/option_context_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

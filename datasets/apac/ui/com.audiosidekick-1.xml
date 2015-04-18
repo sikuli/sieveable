@@ -1,0 +1,67 @@
+<App name="com.audiosidekick" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_note_editor.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Note Title"/>
+    <EditText android:enabled="false" android:id="@id/txtTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Creation Timestamp"/>
+    <EditText android:enabled="false" android:id="@id/txtTimeStamp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="File on Storage"/>
+    <EditText android:enabled="false" android:id="@id/txtFileName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    <Button android:id="@id/btnDelete" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Delete this Note" android:onClick="onDelete"/>
+    <Button android:id="@id/btnPlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Play" android:onClick="onPlay"/>
+    <Button android:enabled="false" android:id="@id/btnPausePlayback" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pause" android:onClick="onPausePlayback"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_recorder.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/btnStart" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Start Recording"/>
+    <Button android:id="@id/btnStop" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Stop Recording"/>
+</LinearLayout>
+    </File>
+    <File file_name="notes_entry.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="28.0sp" android:id="@id/record_title" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_create_remote_account.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/btnSignUp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sign up" android:onClick="onSignUp"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/btnManage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Manage Notes" android:onClick="onClickManageNotes"/>
+    <Button android:id="@id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Create Remote Account" android:onClick="onCreateRemoteAccount"/>
+    <Button android:id="@id/btnDeleteAllNotes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Delete All Notes" android:onClick="onDeleteAllNotes"/>
+    <Button android:id="@id/btnLaunchRecorder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Launch Recorder" android:onClick="onLaunchRecorder"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="authenticator.xml">
+      <account-authenticator xmlns:android="http://schemas.android.com/apk/res/android" android:label="Audio Sidekick" android:icon="@drawable/ic_launcher" android:accountType="example.com" android:smallIcon="@drawable/ic_launcher"/>
+    </File>
+    <File file_name="settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="User Profile">
+        <EditTextPreference android:title="UserName" android:key="prefUsername" android:summary="Set your username"/>
+        <EditTextPreference android:title="Password" android:key="prefPassword" android:summary="Set your password" android:inputType="textPassword"/>
+        <EditTextPreference android:title="Sync Server" android:key="prefServer" android:summary="Set the sync server address"/>
+        <EditTextPreference android:title="Sync Port" android:key="prefPort" android:summary="Set the sync server port" android:inputType="number"/>
+        <EditTextPreference android:title="Watermark Key" android:key="perfWatermarkKey" android:summary="Value to be watermarked. Empty means no watermark" android:defaultValue=""/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="syncadapter.xml">
+      <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android" android:accountType="example.com" android:contentAuthority="com.audiosidekick.provider" android:userVisible="false" android:supportsUploading="true" android:allowParallelSyncs="false" android:isAlwaysSyncable="true"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

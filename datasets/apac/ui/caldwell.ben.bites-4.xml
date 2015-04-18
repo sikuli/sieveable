@@ -1,0 +1,131 @@
+<App name="caldwell.ben.bites" version_code="4">
+  <Directory directory_name="layout">
+    <File file_name="dialog_recipename.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/recipename_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="Recipe name" android:scrollHorizontally="true" android:capitalize="words" android:autoText="true"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/recipeauthor_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="Recipe author" android:scrollHorizontally="true" android:capitalize="words" android:autoText="true"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/recipedescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="Recipe description" android:capitalize="sentences" android:autoText="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="methodlist_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="5.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/methodstep" android:padding="5.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="&#10;         &#10;    "/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/methodtext" android:padding="5.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/methodstep" android:layout_alignParentTop="true" style="&#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="contactlist.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:gravity="center_horizontal" android:id="@id/status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Contacts"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/buttonSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" android:width="0.0dip" android:layout_weight="1.0" android:onClick="clickHandler"/>
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice"/>
+</LinearLayout>
+    </File>
+    <File file_name="ingredients.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/bites_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000">
+    <TextView android:textSize="25.0sp" android:textColor="#ff11ff11" android:id="@id/ingredientheader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000"/>
+    <TextView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:text="No ingredients" style="&#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="dialog_ingredient.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/ingredient_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="Ingredient" android:scrollHorizontally="true" android:capitalize="sentences" android:autoText="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="dialog_received.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left" android:id="@id/received_recipe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"/>
+</LinearLayout>
+    </File>
+    <File file_name="spinrow.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello world!"/>
+</LinearLayout>
+    </File>
+    <File file_name="dialog_method.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/method_step" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="Step number" android:scrollHorizontally="true" android:numeric="integer" android:capitalize="none" android:autoText="false"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/method_edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:hint="Method" android:scrollHorizontally="true" android:capitalize="sentences" android:autoText="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="recipelist_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="5.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/recipetitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" style="&#10;         &#10;    "/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/recipetitle" android:layout_alignParentLeft="true" style="&#10;         &#10;         &#10;    "/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/author" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="dialog_confirm.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left" android:id="@id/dialog_confirm_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_add.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/editTextName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:hint="Name" android:ems="10" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+        <requestFocus/>
+    </EditText>
+    <EditText android:id="@id/editTextPhoneNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Phone Number" android:ems="10" android:layout_below="@id/editTextName" android:layout_alignLeft="@id/editTextName" android:layout_alignParentLeft="true" android:inputType="phone"/>
+    <EditText android:id="@id/editTextEmailAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Email" android:ems="10" android:layout_below="@id/spinnerPhoneType" android:layout_alignLeft="@id/editTextPhoneNumber" android:inputType="textEmailAddress"/>
+    <Spinner android:id="@id/spinnerPhoneType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/editTextPhoneNumber" android:layout_below="@id/editTextName" android:layout_alignParentLeft="false"/>
+    <Spinner android:id="@id/spinnerEmailType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/editTextEmailAddress" android:layout_below="@id/spinnerPhoneType" android:layout_alignParentLeft="false"/>
+    <Button android:id="@id/buttonCancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="49.0dip" android:text="Cancel" android:layout_below="@id/spinnerEmailType" android:layout_alignLeft="@id/spinnerEmailType" android:onClick="clickHandler"/>
+    <Button android:id="@id/buttonAdd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:text="OK" android:layout_alignBaseline="@id/buttonCancel" android:layout_alignBottom="@id/buttonCancel" android:layout_alignParentLeft="true" android:onClick="clickHandler"/>
+</RelativeLayout>
+    </File>
+    <File file_name="methods.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/bites_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000">
+    <TextView android:textSize="25.0sp" android:textColor="#ff11ff11" android:id="@id/methodheader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000"/>
+    <TextView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:text="No methods" style="&#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="contactrow.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:baselineAligned="false">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:baselineAligned="false" android:layout_weight="1.0">
+        <TextView android:id="@id/report" android:paddingLeft="36.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="recipes.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/bites_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000">
+    <TextView android:textSize="25.0sp" android:textColor="#ff11ff11" android:id="@id/recipeheader" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=""/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textFilterEnabled="true" android:cacheColorHint="#00000000"/>
+    <TextView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" android:text="No Recipes" style="&#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="ingredientlist_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="left|center" android:id="@id/ingredienttext" android:padding="5.0sp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" style="&#10;         &#10;    "/>
+    <CheckBox android:textAppearance="?android:textAppearanceMedium" android:gravity="right|center" android:id="@id/ingredientcheck" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:entries="@array/sort_order" android:title="Recipes Sort Order" android:key="Recipe sort order" android:summary="The order recipes are sorted in" android:dialogTitle="Recipes Sort Order" android:entryValues="@array/recipe_sort_values"/>
+    <ListPreference android:entries="@array/ingredient_check" android:title="Ingredient Check State" android:key="Needed ingredients check state" android:summary="The check state of ingredients that should be added to the shopping list" android:dialogTitle="Ingredient Check State" android:entryValues="@array/ingredient_check_values"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="contact_list.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="add.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_add.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

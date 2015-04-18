@@ -1,0 +1,28 @@
+<App name="com.example.metascraper" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="taglist_layout.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="left|center" android:id="@id/taglist_layout" android:paddingLeft="30.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:onClick="onCheckboxClicked"/>
+    </File>
+    <File file_name="activity_data_in_motion.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/activity_data_in_motion" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="Thumbnail Image"/>
+        <Button android:id="@id/send_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" android:onClick="onSelect"/>
+        <Button android:id="@id/checkall_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Check All" android:layout_toRightOf="@id/send_button" android:layout_alignParentTop="true" android:onClick="onCheckall" style="?android:attr/buttonStyleSmall"/>
+    </RelativeLayout>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select the EXIF tags to include:"/>
+    <ListView android:id="@id/tag_listview" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="taglist_header.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/taglist_header" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Select the EXIF tags to include:"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="data_in_motion.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

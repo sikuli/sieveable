@@ -1,0 +1,46 @@
+<App name="com.sip.voip.net.phone" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="frag_list_custom_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/icon" android:layout_width="60.0dip" android:layout_height="60.0dip"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ff000000" android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@id/label"/>
+        <TextView android:textSize="15.0sp" android:textColor="#ff000000" android:id="@id/text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@id/label1"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/activityRoot" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:orientation="vertical" android:id="@id/mainlayout" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:id="@id/sipLabel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</FrameLayout>
+    </File>
+    <File file_name="frag_dialer.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="200.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@string/dialerfrag_contentdescription"/>
+    <EditText android:id="@id/autocomplete_calls" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Hint: thetestcall@sip2sip.info"/>
+    <TextView android:id="@id/call_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:layout_marginRight="45.0dip" android:text=""/>
+    <Button android:id="@id/button1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="45.0dip" android:layout_marginRight="16.0dip" android:text="Call" android:layout_toLeftOf="@id/imageView1" android:layout_below="@id/autocomplete_calls" android:onClick="makeCall"/>
+    <Button android:id="@id/button2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hang up" android:layout_alignBaseline="@id/button1" android:layout_alignLeft="@id/imageView1" android:layout_alignBottom="@id/button1" android:onClick="hangUp"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:name="SIP Username" android:title="Enter Username" android:key="name_pref" android:summary="Username for your SIP Account" android:defaultValue=""/>
+    <EditTextPreference android:name="SIP Domain" android:hint="Hint: domainname.TLD" android:title="Enter Domain" android:key="domain_pref" android:summary="Domain for your SIP Account" android:defaultValue=""/>
+    <EditTextPreference android:name="Outbound proxy" android:hint="Hint: proxy.domain.TLD" android:title="Enter Outbound domain" android:key="outbound_pref" android:summary="Domain for the outbound proxy" android:defaultValue=""/>
+    <EditTextPreference android:name="SIP Password" android:password="true" android:title="Enter Password" android:key="pass_pref" android:summary="Password for your SIP Account" android:defaultValue=""/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

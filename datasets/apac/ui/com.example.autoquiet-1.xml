@@ -1,0 +1,42 @@
+<App name="com.example.autoquiet" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="loc.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/editTextLocName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:ems="10" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    <EditText android:id="@id/editTextAddr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_below="@id/editTextLocName" android:layout_alignLeft="@id/editTextLocName" android:inputType="textPostalAddress">
+        <requestFocus/>
+    </EditText>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textViewSettingsHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings for this Location" android:layout_below="@id/editTextAddr" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/textViewAddr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address" android:layout_alignBaseline="@id/editTextAddr" android:layout_alignBottom="@id/editTextAddr" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/textViewName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Name" android:layout_alignBaseline="@id/editTextLocName" android:layout_alignBottom="@id/editTextLocName" android:layout_alignParentLeft="true"/>
+    <CheckBox android:id="@id/checkBoxWifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wifi Enabled" android:layout_below="@id/textViewSettingsHeading" android:layout_alignParentLeft="true"/>
+    <CheckBox android:id="@id/checkBoxCellData" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cellular Data Enabled" android:layout_below="@id/checkBoxWifi" android:layout_alignParentLeft="true"/>
+    <CheckBox android:id="@id/checkBoxNFC" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="23.0dip" android:text="NFC Enabled" android:layout_above="@id/checkBoxCellData" android:layout_alignRight="@id/editTextAddr"/>
+    <CheckBox android:id="@id/checkBoxBluetooth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bluetooth Enabled" android:layout_below="@id/checkBoxCellData" android:layout_alignParentLeft="true"/>
+    <Button android:id="@id/buttonSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save" android:layout_alignRight="@id/editTextAddr" android:layout_centerVertical="true"/>
+    <Button android:id="@id/buttonClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Close" android:layout_alignBaseline="@id/buttonSave" android:layout_alignLeft="@id/checkBoxNFC" android:layout_alignBottom="@id/buttonSave"/>
+</RelativeLayout>
+    </File>
+    <File file_name="loc_list_view.xml">
+      <ListView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@android:id/list" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/locName" android:layout_width="wrap_content" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/listlocsbtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Location List" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <ToggleButton android:id="@id/toggleButtonQuiet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textOn="Resume" android:textOff="Quiet Now" android:text="ToggleButton" android:layout_below="@id/listlocsbtn" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

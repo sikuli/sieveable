@@ -1,0 +1,33 @@
+<App name="com.example.backupHelper" version_code="18">
+  <Directory directory_name="layout">
+    <File file_name="main.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ExpandableListView android:layout_gravity="fill" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawSelectorOnTop="false"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="No backups found - press menu-key to create some."/>
+</FrameLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Hide data warnings" android:key="hideincompletedatawarnings" android:summary="Hide warnings about incomplete data before im- and export"/>
+    <PreferenceCategory android:title="Cyclic behavior">
+        <ListPreference android:entries="@array/settings_cyclecountvalues" android:numeric="integer" android:title="Cycle count (experimental)" android:key="cyclecount" android:summary="Max. number of backups of one type" android:defaultValue="0" android:entryValues="@array/settings_cyclecounts"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Storage">
+        <EditTextPreference android:hint="Standard external storage" android:title="Storage location" android:key="storage.location" android:summary="Location of the backup files"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/menu_export" android:title="Export …" android:showAsAction="withText"/>
+    <item android:icon="@android:drawable/ic_menu_directions" android:id="@id/menu_exporteverything" android:title="Export everything"/>
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/menu_settings" android:title="Settings"/>
+    <item android:icon="@android:drawable/ic_menu_info_details" android:id="@id/menu_about" android:title="About"/>
+</menu>
+    </File>
+  </Directory>
+</App>

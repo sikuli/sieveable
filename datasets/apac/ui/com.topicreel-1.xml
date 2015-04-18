@@ -1,0 +1,51 @@
+<App name="com.topicreel" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="search_suggestions_footer.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateOnly="true"/>
+</FrameLayout>
+    </File>
+    <File file_name="welcome.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/welcome_must_log_in" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:gravity="start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TopicReel requires an account in order to provide you with the highest quality videos on the topics of your choice."/>
+        <EditText android:id="@id/email_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Email address" android:inputType="textEmailAddress"/>
+        <EditText android:id="@id/password" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Password" android:password="true" android:inputType="textPassword"/>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Create account" android:onClick="createAccount"/>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Login" android:onClick="loginExistingAccount"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/welcome_verify_account" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:gravity="start" android:id="@id/verify_account_message" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Login" android:onClick="loginNewAccount"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/welcome_logged_in" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:gravity="end" android:id="@id/logged_in_as" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="logout"/>
+        <EditText android:id="@id/search_terms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="What do you want to see today?" android:singleLine="true"/>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Show me!" android:onClick="searchManual"/>
+        <ListView android:id="@id/search_suggestions" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Preferences" android:onClick="setPreferences"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="player.xml">
+      <VideoView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:id="@id/video_player" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="search_suggestions_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="searchSuggested"/>
+    </File>
+    <File file_name="search_suggestions_header.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Suggested Video Topics"/>
+    </File>
+    <File file_name="dialog_datepicker.xml">
+      <DatePicker xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/dialog_datepicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:spinnersShown="true" android:calendarViewShown="false"/>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.topicreel.DatePickerPreference android:title="Date of birth" android:key="date_of_birth" android:summary="Enter your date of birth to enable age-restricted content."/>
+    <EditTextPreference android:title="Authorization Code" android:key="authz_code" android:summary="For a code to stream more videos, mail a family heirloom worth US$20 or more to Iorek Byrnison, Kongegata 128, 9171 Longyearbyen, Norway." android:defaultValue="@string/authz_code_default" android:inputType="textVisiblePassword"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+</App>

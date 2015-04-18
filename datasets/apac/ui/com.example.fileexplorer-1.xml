@@ -1,0 +1,151 @@
+<App name="com.example.fileexplorer" version_code="1">
+  <Directory directory_name="layout-large">
+    <File file_name="activity_main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/outer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="7.0">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/curDir" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="67.0"/>
+            <Button android:id="@id/upbutton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="40.0dip" android:minHeight="30.0dip" android:text="Up" android:layout_weight="13.0" style="?android:attr/buttonStyleSmall"/>
+        </LinearLayout>
+        <Spinner android:id="@id/spinnerDir" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/sectionLabel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Selection:" android:layout_weight="20.0"/>
+            <TextView android:id="@id/selection" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="60.0"/>
+        </LinearLayout>
+        <ListView android:id="@id/list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="95.0"/>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/chooseokbutton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="OK" android:layout_weight="40.0" style="?android:attr/buttonStyleSmall"/>
+            <Button android:id="@id/choosercancelbutton" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Cancel" android:layout_weight="40.0" style="?android:attr/buttonStyleSmall"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/divider" android:background="#aa000000" android:visibility="gone" android:layout_width="2.0dip" android:layout_height="fill_parent"/>
+    <FrameLayout android:id="@id/sidebar" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.0"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="layout">
+    <File file_name="dirinfo.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textStyle="bold" android:id="@id/labeldirname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Directory:" android:layout_alignBaseline="@id/dirnametext" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/dirnametext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignLeft="@id/dirsize" android:layout_alignParentTop="true" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labeldirsize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:text="&quot;File size (kb):     &quot;" android:layout_below="@id/labeldirname" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/dirsize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/labeldirsize" android:layout_alignBaseline="@id/labeldirsize" android:layout_alignBottom="@id/labeldirsize" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labelitemcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:text="Item Count" android:layout_below="@id/labeldirsize" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/itemcount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBaseline="@id/labelitemcount" android:layout_alignLeft="@id/dirsize" android:layout_alignBottom="@id/labelitemcount" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labelfilecount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="75.0dip" android:text="File Count" android:layout_below="@id/labelitemcount" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/filecount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBaseline="@id/labelfilecount" android:layout_alignLeft="@id/itemcount" android:layout_alignBottom="@id/labelfilecount" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labeldircount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90.0dip" android:text="Dir Count" android:layout_below="@id/labelfilecount" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/dircount" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBaseline="@id/labeldircount" android:layout_alignLeft="@id/filecount" android:layout_alignBottom="@id/labeldircount" android:textIsSelectable="false"/>
+</RelativeLayout>
+    </File>
+    <File file_name="listview_item_row.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:gravity="center_vertical" android:id="@id/imgIconFileType" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="shows either a file or folder icon depending on file type"/>
+    <TextView android:textStyle="bold" android:gravity="center_vertical" android:id="@id/txtFile" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textIsSelectable="false"/>
+</LinearLayout>
+    </File>
+    <File file_name="fileinfo.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textStyle="bold" android:id="@id/labelname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="File name:" android:layout_alignBaseline="@id/filename" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/filename" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignLeft="@id/dirname" android:layout_alignParentTop="true" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labelsize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" android:text="&quot;File size (kb):     &quot;" android:layout_below="@id/labelmod" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/filesize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/labelmod" android:layout_alignBaseline="@id/labelsize" android:layout_alignBottom="@id/labelsize" android:layout_alignParentBottom="true" android:textIsSelectable="false"/>
+    <TextView android:id="@id/lastmod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/labelsize" android:layout_alignLeft="@id/filesize" android:layout_alignParentRight="true" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labeldir" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="41.0dip" android:text="Directory:" android:layout_below="@id/labelname" android:layout_alignRight="@id/labelname" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/dirname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/labelmod" android:layout_alignLeft="@id/lastmod" android:layout_alignParentTop="false" android:layout_alignParentRight="true" android:layout_alignParentBottom="false" android:textIsSelectable="false"/>
+    <TextView android:textStyle="bold" android:id="@id/labelmod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="41.0dip" android:text="&quot;Last modified:     &quot;" android:layout_below="@id/labeldir" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="editfile.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/fileLabel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Filename:" android:layout_weight="20.0"/>
+        <TextView android:id="@id/filename" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="78.0"/>
+    </LinearLayout>
+    <TextView android:id="@id/line" android:layout_width="fill_parent" android:layout_height="5.0dip" style="?android:attr/listSeparatorTextViewStyle"/>
+    <EditText android:gravity="top|left|center" android:id="@id/editor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Enter Text"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/curDir" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="67.0"/>
+        <Button android:id="@id/upbutton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minWidth="40.0dip" android:minHeight="30.0dip" android:text="Up" android:layout_weight="13.0" style="?android:attr/buttonStyleSmall"/>
+    </LinearLayout>
+    <Spinner android:id="@id/spinnerDir" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/selectionLabel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Selection:" android:layout_weight="20.0"/>
+        <TextView android:id="@id/selection" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="77.0"/>
+    </LinearLayout>
+    <ListView android:id="@id/list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="95.0"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/choosercancelbutton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Cancel" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/chooseokbutton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="OK" style="?android:attr/buttonStyleSmall"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Indicates if hidden files are visible." android:key="Show Hidden Files" android:summary="Select to show hidden files" android:defaultValue="false"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:enabled="true" android:id="@id/General" android:visible="true" android:title="General" android:showAsAction="always">
+        <menu>
+            <group android:id="@id/GeneralGroup">
+                <item android:id="@id/menu_copy" android:title="Copy" android:showAsAction="always"/>
+                <item android:id="@id/menu_cut" android:title="Cut" android:showAsAction="always"/>
+                <item android:id="@id/menu_info" android:title="Info" android:showAsAction="always"/>
+                <item android:id="@id/menu_paste" android:title="Paste" android:showAsAction="always|collapseActionView"/>
+                <item android:id="@id/menu_edit" android:title="Edit" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_delete" android:title="Delete" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:enabled="true" android:id="@id/menu_rename" android:title="Rename" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_createfile" android:title="Create File" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_createdir" android:title="Create Directory"/>
+            </group>
+        </menu>
+    </item>
+    <item android:enabled="true" android:id="@id/Advanced" android:visible="true" android:title="Advanced" android:showAsAction="always">
+        <menu>
+            <group android:id="@id/AdvancedGroup">
+                <item android:id="@id/menu_zip" android:title="Create Archive" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_unzip" android:title="Extract" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_compress" android:title="Compress" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_uncompress" android:title="Uncompress" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:id="@id/menu_diskusage" android:title="Disk Usage" android:checkable="false" android:showAsAction="ifRoom|collapseActionView"/>
+                <item android:enabled="true" android:id="@id/editPrefs" android:title="Edit Preferences" android:checkable="false" android:showAsAction="ifRoom|collapseActionView"/>
+            </group>
+        </menu>
+    </item>
+</menu>
+    </File>
+    <File file_name="editor_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:enabled="true" android:id="@id/file" android:visible="true" android:title="File" android:showAsAction="always">
+        <menu>
+            <group android:enabled="true" android:id="@id/filegroup" android:visible="true" android:checkableBehavior="single">
+                <item android:enabled="true" android:id="@id/open" android:title="Open" android:showAsAction="always"/>
+                <item android:enabled="true" android:id="@id/close" android:title="Close" android:showAsAction="always"/>
+                <item android:enabled="true" android:id="@id/save" android:title="Save" android:showAsAction="always"/>
+                <item android:id="@id/saveas" android:title="Save As" android:showAsAction="always"/>
+            </group>
+        </menu>
+    </item>
+    <item android:enabled="true" android:id="@id/edit" android:visible="true" android:title="Edit" android:showAsAction="always">
+        <menu>
+            <group android:enabled="true" android:id="@id/editgroup" android:visible="true" android:checkableBehavior="single">
+                <item android:enabled="true" android:id="@id/copy" android:title="Copy" android:showAsAction="always"/>
+                <item android:enabled="true" android:id="@id/paste" android:title="Paste" android:showAsAction="always"/>
+                <item android:enabled="true" android:id="@id/cut" android:title="Cut" android:showAsAction="always"/>
+            </group>
+        </menu>
+    </item>
+</menu>
+    </File>
+  </Directory>
+</App>

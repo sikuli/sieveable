@@ -1,0 +1,43 @@
+<App name="com.example.udonlauncher" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="fragment_main_dummy.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/section_label" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</RelativeLayout>
+    </File>
+    <File file_name="fragment_accessories.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/btn_reload" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Reload" style="?android:attr/buttonStyleSmall"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_gravity="left|center" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_launch_counter.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ExpandableListView android:id="@id/expandableListView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="accessory_filter.xml">
+      <resources>
+    <usb-accessory model="PwnDock" manufacturer="Google"/>
+</resources>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="launch_counter.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+    <item android:id="@id/action_launchcount" android:title="Show Launch Count"/>
+</menu>
+    </File>
+  </Directory>
+</App>

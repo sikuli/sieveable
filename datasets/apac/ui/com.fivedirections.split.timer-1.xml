@@ -1,0 +1,22 @@
+<App name="com.fivedirections.split.timer" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_timer.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="40.0dip" android:id="@id/txtTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:000" android:singleLine="true" android:layout_centerHorizontal="true"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/FrameLayout01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/txtTime">
+        <Button android:textSize="15.0sp" android:id="@id/btnPause" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pause" android:layout_weight="1.0"/>
+        <Button android:textSize="15.0sp" android:id="@id/btnClear" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Clear List" android:layout_weight="1.0"/>
+    </LinearLayout>
+    <Button android:textSize="35.0sp" android:id="@id/btnStart" android:layout_width="fill_parent" android:layout_height="100.0dip" android:text="Start" android:layout_below="@id/FrameLayout01" android:layout_alignParentLeft="true"/>
+    <ListView android:id="@id/timesList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/btnStart" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_timer.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

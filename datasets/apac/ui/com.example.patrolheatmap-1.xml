@@ -1,0 +1,39 @@
+<App name="com.example.patrolheatmap" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="new_map.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/mapHolderNew" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/clear"/>
+    <Button android:id="@id/accept" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Accept" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="saveMap"/>
+    <Button android:id="@id/clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:onClick="resetMap"/>
+</RelativeLayout>
+    </File>
+    <File file_name="new_patrol_dialog_layout.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/new_patrol_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Patrol Name" android:ems="10">
+        <requestFocus/>
+    </EditText>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/mapHolder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/textView1"/>
+    <Button android:id="@id/finishPatrol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Finish Patrol" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:onClick="onFinishPatrol"/>
+    <Button android:id="@id/startPatrol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start Patrol" android:layout_above="@id/finishPatrol" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:onClick="onStartPatrol"/>
+    <TextView android:id="@id/currentLocation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Acquiring Location" android:layout_above="@id/startPatrol" android:layout_alignLeft="@id/mapHolder"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Current Location" android:layout_above="@id/currentLocation" android:layout_alignLeft="@id/mapHolder"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+    <item android:icon="@drawable/ic_menu_upload" android:id="@id/menu_upload" android:title="Upload Patrol Data" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_menu_refresh" android:id="@id/menu_download" android:title="Download Patrol Data" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_menu_btn_add" android:id="@id/menu_generate" android:title="Generate Patrol Data" android:showAsAction="never"/>
+    <item android:id="@id/new_map" android:orderInCategory="99" android:title="New Map" android:showAsAction="never"/>
+    <item android:id="@id/switch_map" android:orderInCategory="99" android:title="Switch Map" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

@@ -1,0 +1,142 @@
+<App name="com.example.expenses" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_edit_expense.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add to report"/>
+            <Spinner android:id="@id/spinner_expense_report" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date"/>
+            <EditText android:id="@id/text_expense_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:inputType="none" android:onClick="expenseDateButtonPress"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/button_receipt_picture" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/device_access_camera" android:onClick="receiptPictureButtonPress" android:contentDescription="Receipt photo"/>
+        </LinearLayout>
+        <EditText android:id="@id/text_expense_merchant" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Merchant" android:inputType="textCapSentences"/>
+        <EditText android:id="@id/text_expense_location" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="City, State" android:inputType="textPostalAddress"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Category"/>
+            <Spinner android:entries="@array/array_expense_categories" android:id="@id/spinner_expense_category" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Spinner android:entries="@array/array_expense_currencies" android:id="@id/text_expense_currency" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@id/text_expense_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="0.00" android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <CheckBox android:id="@id/check_is_reimbursable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reimbursable"/>
+        <CheckBox android:id="@id/check_is_billable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Billable"/>
+        <EditText android:id="@id/text_expense_comments" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Comments" android:inputType="textCapSentences"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="text_list_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="18.0sp" android:textColor="#ffffffff" android:paddingLeft="3.0dip" android:paddingTop="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="list_item_report.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="?android:activatedBackgroundIndicator" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="24.0sp" android:id="@id/title_report" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_alignParentLeft="true"/>
+    <TextView android:textSize="24.0sp" android:id="@id/text_report_total_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_alignParentRight="true"/>
+    <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="$" android:layout_toLeftOf="@id/text_report_total_cost" android:layout_alignBaseline="@id/text_report_total_cost"/>
+    <TextView android:textSize="14.0sp" android:id="@id/text_report_date_range" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/title_report" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_expenses.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ListView android:id="@id/list_expenses" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:fastScrollEnabled="true"/>
+        <TextView android:layout_gravity="center" android:id="@id/text_no_expenses" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No expenses found." android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <View android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip"/>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="5.0">
+        <TextView android:textSize="24.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Total:" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+        <TextView android:textSize="24.0sp" android:id="@id/text_report_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Total:" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:layout_toLeftOf="@id/text_report_total" android:layout_alignBaseline="@id/text_report_total"/>
+        <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Reimbursable" android:layout_below="@id/text_report_total" android:layout_alignParentLeft="true"/>
+        <TextView android:textSize="18.0sp" android:id="@id/text_report_reimbursable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_below="@id/text_report_total" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="14.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:layout_toLeftOf="@id/text_report_reimbursable" android:layout_alignBaseline="@id/text_report_reimbursable"/>
+        <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Billable" android:layout_below="@id/text_report_reimbursable" android:layout_alignParentLeft="true"/>
+        <TextView android:textSize="18.0sp" android:id="@id/text_report_billable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_below="@id/text_report_reimbursable" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="14.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:layout_toLeftOf="@id/text_report_billable" android:layout_alignBaseline="@id/text_report_billable"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="activity_reports.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@id/list_reports" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:fastScrollEnabled="true"/>
+    <TextView android:layout_gravity="center" android:id="@id/text_no_reports" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No reports found." android:layout_centerInParent="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/button_report_activity" android:layout_width="0.0dip" android:layout_height="150.0dip" android:text="Reports" android:layout_weight="1.0" android:onClick="menuReportsButtonPress"/>
+    <Button android:id="@id/button_expense_activity" android:layout_width="0.0dip" android:layout_height="150.0dip" android:text="Expenses" android:layout_weight="1.0" android:onClick="menuExpensesButtonPress"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_receipt.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/image_receipt" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="Receipt photo"/>
+</RelativeLayout>
+    </File>
+    <File file_name="list_item_expense.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:background="?android:activatedBackgroundIndicator" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textSize="24.0sp" android:id="@id/text_list_expense_merchant" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_alignParentLeft="true"/>
+    <TextView android:textSize="24.0sp" android:id="@id/text_list_expense_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_alignParentRight="true"/>
+    <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:layout_toLeftOf="@id/text_list_expense_cost" android:layout_alignBaseline="@id/text_list_expense_cost"/>
+    <TextView android:textSize="14.0sp" android:id="@id/text_list_expense_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/text_list_expense_merchant" android:layout_alignParentLeft="true"/>
+    <TextView android:textSize="14.0sp" android:id="@id/text_list_billable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/text_list_expense_cost" android:layout_alignBaseline="@id/text_list_expense_date" android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="dialog_new_report.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/text_new_report_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Title" android:inputType="textCapWords"/>
+    <CheckBox android:id="@id/check_use_per_diem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use GSA per diem"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="action_bar_report_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/content_new" android:id="@id/option_new_report" android:title="New report" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="action_bar_edit_expense_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/content_save" android:id="@id/option_save_expense" android:title="Save" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="context_menu_expense_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/context_menu_report_list">
+    <item android:id="@id/option_select_all_expenses" android:title="Select all"/>
+    <item android:icon="@drawable/content_discard" android:id="@id/option_delete_expense" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="action_bar_expense_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/content_import_export" android:id="@id/option_export_report" android:title="Export" android:showAsAction="always|withText"/>
+    <item android:icon="@drawable/content_new" android:id="@id/option_new_expense" android:title="New expense" android:showAsAction="always|withText"/>
+</menu>
+    </File>
+    <File file_name="action_bar_report_viewer_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/social_share" android:id="@id/option_share_report" android:title="Share" android:showAsAction="always|withText" android:actionProviderClass="android.widget.ShareActionProvider"/>
+</menu>
+    </File>
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="action_bar_receipt_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/device_access_camera" android:id="@id/option_capture_receipt" android:title="Retake photo" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="context_menu_report_activity.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/context_menu_report_list">
+    <item android:id="@id/option_select_all_reports" android:title="Select all"/>
+    <item android:icon="@drawable/content_discard" android:id="@id/option_delete_report" android:title="Delete"/>
+</menu>
+    </File>
+  </Directory>
+</App>

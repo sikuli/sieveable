@@ -1,0 +1,124 @@
+<App name="net.lp.androidsfortune" version_code="18">
+  <Directory directory_name="layout">
+    <File file_name="widget_cookie_monospace.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:scrollbars="none" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <TextView android:autoLink="web" android:id="@id/cookie" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:lineSpacingMultiplier="0.9" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/watermark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/cookie_matte" android:minWidth="30.0dip" android:minHeight="30.0dip" android:layout_below="@id/cookie"/>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_cookie_sans.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:scrollbars="none" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <TextView android:autoLink="web" android:id="@id/cookie" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:lineSpacingMultiplier="0.9" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/watermark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/cookie_matte" android:minWidth="30.0dip" android:minHeight="30.0dip" android:layout_below="@id/cookie"/>
+</RelativeLayout>
+    </File>
+    <File file_name="simple_list_item_multiple_choice.xml">
+      <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceSmall" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="?android:listChoiceIndicatorMultiple"/>
+    </File>
+    <File file_name="main_ts.xml">
+      <TextSwitcher xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/tv_quote" android:paddingRight="?android:scrollbarSize" android:paddingBottom="?android:scrollbarSize" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="12.0pt" android:typeface="serif" android:autoLink="web" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="12.0pt" android:typeface="serif" android:autoLink="web" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</TextSwitcher>
+    </File>
+    <File file_name="main_wrap.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/sv_scroll" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextSwitcher android:id="@id/tv_quote" android:paddingRight="?android:scrollbarSize" android:paddingBottom="?android:scrollbarSize" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="12.0pt" android:typeface="serif" android:autoLink="web" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="12.0pt" android:typeface="serif" android:autoLink="web" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</TextSwitcher></ScrollView>
+    </File>
+    <File file_name="main.xml">
+      <view xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/sv_fscroll" android:scrollbars="horizontal|vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" class="net.lp.androidsfortune.utils.FullScrollView">
+    <TextSwitcher android:id="@id/tv_quote" android:paddingRight="?android:scrollbarSize" android:paddingBottom="?android:scrollbarSize" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textSize="12.0pt" android:typeface="serif" android:autoLink="web" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="12.0pt" android:typeface="serif" android:autoLink="web" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</TextSwitcher></view>
+    </File>
+    <File file_name="widget_message.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:scrollbars="none" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <TextView android:id="@id/message" android:padding="2.0dip" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Loading a cookie..." android:includeFontPadding="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:lineSpacingMultiplier="0.9" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/watermark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/cookie" android:tint="#aaff0000" android:minWidth="30.0dip" android:minHeight="30.0dip" android:layout_below="@id/message"/>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_dialog_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/ll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <Button android:id="@id/b_refresh" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Refresh" android:layout_weight="1.0"/>
+    <Button android:id="@id/b_show_cookie" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Show cookie" android:layout_weight="1.0"/>
+    <Button android:id="@id/b_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="Cancel" android:layout_weight="1.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="widget_cookie.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:scrollbars="none" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <TextView android:autoLink="web" android:id="@id/cookie" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:lineSpacingMultiplier="0.9" style="&#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    <ImageView android:id="@id/watermark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:src="@drawable/cookie_matte" android:minWidth="30.0dip" android:minHeight="30.0dip" android:layout_below="@id/cookie"/>
+</RelativeLayout>
+    </File>
+    <File file_name="versioncheck.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0px">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cookie"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;Android's Fortune&quot;" style="@android:style/TextAppearance.Large"/>
+    </LinearLayout>
+    <TextView android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_margin="10.0px" android:text="Would you like to update this application to the newest version?" android:layout_weight="1.0" style="@android:style/TextAppearance.Medium"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/yes" android:layout_width="0.0px" android:layout_height="wrap_content" android:text="@android:string/yes" android:layout_weight="1.0"/>
+        <Button android:id="@id/no" android:layout_width="0.0px" android:layout_height="wrap_content" android:text="@android:string/no" android:layout_weight="1.0"/>
+    </LinearLayout>
+    <CheckBox android:id="@id/stop" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;Don't notify me of this update again&quot;"/>
+</LinearLayout>
+    </File>
+    <File file_name="preference_child.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17.0sp" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textColor="?android:textColorSecondary" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title"/>
+    </RelativeLayout>
+    <LinearLayout android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="widget.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="146.0dip" android:minHeight="146.0dip" android:initialLayout="@layout/widget_message"/>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Resources">
+        <EditTextPreference android:layout="@layout/preference_child" android:title="Folder containing cookie files" android:key="ep_folder" android:summary="Enter the folder where you have stored your cookie files." android:dialogTitle="Enter the folder containing the cookie files"/>
+        <PreferenceScreen android:layout="@layout/preference_child" android:title="Cookie files" android:key="ps_files" android:summary="Select the cookie files to be used from the folder above (do not include .num files).">
+            <intent android:name="android.intent.category.DEFAULT" android:mimeType="text/plain" android:action="android.intent.action.PICK"/>
+        </PreferenceScreen>
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="Equal chances between cookie files" android:key="cp_equal" android:summary="Whether the chance that a cookie is displayed from a particular cookie file is equal between cookie files, irrespective of the cookie files sizes." android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Display">
+        <ListPreference android:entries="@array/entries_lp_font" android:layout="@layout/preference_child" android:title="Font style" android:key="lp_font" android:summary="Monospace can be useful for ascii-art cookies." android:defaultValue="serif" android:dialogTitle="Change the font style" android:entryValues="@array/entryvalues_lp_font"/>
+        <EditTextPreference android:layout="@layout/preference_child" android:title="Font size" android:key="ep_fontsize" android:summary="Font size in points." android:defaultValue="12" android:dialogTitle="Change the font size"/>
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="Wrap text" android:key="cp_wrap" android:summary="Fits the cookie text on the screen. Disable to correctly view cookie texts formatted with linebreaks and ascii-art." android:defaultValue="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Widget">
+        <ListPreference android:entries="@array/entries_lp_font" android:layout="@layout/preference_child" android:title="Font style" android:key="lp_widget_font" android:summary="@string/summary_lp_widget_font" android:defaultValue="serif" android:dialogTitle="Change the widget font style" android:entryValues="@array/entryvalues_lp_font"/>
+        <EditTextPreference android:layout="@layout/preference_child" android:title="Widget update period" android:key="ep_widget_period" android:summary="Time period in minutes in between widget refreshes." android:defaultValue="60" android:dialogTitle="Change widget update period"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notifications">
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="Notification at startup" android:key="cp_notif_boot" android:summary="Suggest a cookie at system startup." android:defaultValue="true"/>
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="Periodic notifications" android:key="cp_notif_time" android:summary="Suggest cookies at time intervals." android:defaultValue="true"/>
+        <EditTextPreference android:layout="@layout/preference_child" android:title="Time period" android:key="ep_time" android:summary="Time period in minutes in between notifications." android:dependency="cp_notif_time" android:defaultValue="60" android:dialogTitle="Change time period"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Updates Checking">
+        <PreferenceScreen android:layout="@layout/preference_child" android:title="Updates checking" android:key="ps_versioncheck" android:summary="Automated self-checking for updates.">
+            <intent android:name="android.intent.category.DEFAULT" android:action="net.lp.androidsfortune.SHOW_VC_PREFERENCES"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+    <File file_name="versioncheck_preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Updates Checking">
+        <CheckBoxPreference android:layout="@layout/preference_child" android:title="Enabled" android:key="enabled" android:summary="Whether checking for app updates is enabled or not." android:defaultValue="true"/>
+        <EditTextPreference android:layout="@layout/preference_child" android:singleLine="true" android:title="Check URI" android:key="check_uri" android:summary="The URI which will be checked for app updates." android:dependency="enabled" android:defaultValue="http://bazaar.launchpad.net/%7Epjv/androidsfortune/trunk/download/head:/androidsfortune.xml-20081003215357-77py3411h119elj2-40/AndroidsFortune.xml?file_id=androidsfortune.xml-20081003215357-77py3411h119elj2-40"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+</App>

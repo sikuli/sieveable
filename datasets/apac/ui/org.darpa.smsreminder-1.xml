@@ -1,0 +1,63 @@
+<App name="org.darpa.smsreminder" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_alarm_details.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone Number:" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/phone_number_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:layout_below="@id/textView1" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+    <TextView android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="Date and Time:" android:layout_below="@id/phone_number_view" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/date_time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:layout_below="@id/textView3" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+    <TextView android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:text="Message:" android:layout_below="@id/date_time_view" android:layout_alignParentLeft="true"/>
+    <TextView android:id="@id/message_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." android:layout_below="@id/textView5" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+    <Button android:id="@id/cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel Alarm" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_alarm_viewer.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@id/alarms_list_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enter Phone Number of Recipient"/>
+    <EditText android:id="@id/txtPhoneNo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="phone"/>
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enter Message"/>
+    <EditText android:gravity="top" android:id="@id/txtMessage" android:layout_width="fill_parent" android:layout_height="50.0dip" android:inputType="textLongMessage"/>
+    <Button android:id="@id/btnSendSMS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Set Alarm"/>
+    <Button android:id="@id/btnViewAlarms" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="View Alarms"/>
+    <TimePicker android:id="@id/alarmTimePicker" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_settings.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <CheckBox android:id="@id/repeat_check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Repeat reminders until a response is received" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    <TextView android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="How many minutes to wait between repeated reminders" android:layout_toLeftOf="@id/repeat_delay_text" android:layout_below="@id/repeat_check_box" android:layout_alignParentLeft="true"/>
+    <EditText android:id="@id/repeat_delay_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="3" android:layout_alignTop="@id/textView1" android:layout_alignParentRight="true" android:inputType="number">
+        <requestFocus/>
+    </EditText>
+    <Button android:id="@id/save_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save Settings" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_alarm_details.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_alarm_viewer.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="main_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_settings.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

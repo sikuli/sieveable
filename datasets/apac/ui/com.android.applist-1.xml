@@ -1,0 +1,128 @@
+<App name="com.android.applist" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="details.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="3.0dip">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/lbl_version" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Version"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lbl_val_version" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:text=""/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/lbl_versioncode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Version code"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lbl_val_versioncode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:text=""/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/lbl_installed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="First installed"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lbl_val_installed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:text=""/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/lbl_updated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Last updated"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lbl_val_updated" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:text=""/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/lbl_uid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="User ID"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lbl_val_uid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:text=""/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/lbl_datadir" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Data directory"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/lbl_val_datadir" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:text=""/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_template_editor.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:gravity="center" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="20.0dip" android:text="A template consists of the list item (to be filled with app info), as well as an optional header and footer. All parts will be concatenated \&quot;as-is\&quot;, with the item being repeated once per app. Supply newlines as needed. The following variables may be used in the item: ${packagename}, ${displayname}, ${source}, ${comment}, ${uid}, ${version}, ${versioncode}, ${firstinstalled}, ${lastupdated}, ${datadir}, ${targetsdk}, ${tags} and ${marketid}. The following variables may be used in the header/footer: ${now} and ${count}" android:textIsSelectable="true"/>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Template Name:" android:layout_alignLeft="@id/header" android:layout_alignTop="@id/tmpl_name" android:layout_alignBottom="@id/tmpl_name"/>
+        <EditText android:id="@id/tmpl_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="25.0dip" android:ems="10" android:singleLine="true" android:layout_toRightOf="@id/textView2" android:layout_below="@id/header" android:layout_alignRight="@id/header" android:inputType="text">
+            <requestFocus/>
+        </EditText>
+        <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout2" android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tmpl_name">
+            <EditText android:id="@id/tmpl_header" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="List header, may be blank" android:ems="10" android:inputType="textMultiLine"/>
+            <EditText android:id="@id/tmpl_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Item format, may not be blank" android:ems="10" android:inputType="textMultiLine"/>
+            <EditText android:id="@id/tmpl_footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="List footer, may be blank" android:ems="10" android:inputType="textMultiLine"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+    </File>
+    <File file_name="activity_annotations.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:gravity="center" android:id="@id/tags" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="25.0dip" android:text="Annotations can be referenced in templates as ${comment} and may themselves contain other variables (${packagename}, ${displayname}, ${source}, ${uid}, ${version}, ${versioncode}, ${firstinstalled}, ${lastupdated}, ${datadir}, $targetsdk}, ${tags} and ${marketid}). Annotations are kept when their app is deinstalled in case it gets reinstalled later. Tags allow for grouping apps for faster selection." android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:textIsSelectable="true"/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tags" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="applist_activity.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+    <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select applications for list" android:layout_weight="0.0"/>
+    <ListView android:id="@id/appList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+    <TextView android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Count shown here" android:layout_weight="0.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="annotionsdialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:id="@id/comment_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:hint="My notes"/>
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:id="@id/tag_input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:hint="Tags (comma separated)"/>
+</LinearLayout>
+    </File>
+    <File file_name="app_list_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/RelativeLayout1" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="@android:dimen/app_icon_size" android:layout_height="@android:dimen/app_icon_size" android:layout_marginRight="11.0dip" android:scaleType="fitCenter"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/appname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/icon"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/apppackage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/icon" android:layout_below="@id/appname" android:layout_alignRight="@id/appname"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center_vertical" android:id="@id/format_as" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Copy/Share as:" android:layout_alignBottom="@id/format_select" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <Spinner android:id="@id/format_select" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/format_as" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    <LinearLayout android:gravity="center" android:id="@id/nest" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/format_as">
+        <CheckBox android:id="@id/always_gplay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Always link to Google Play, even if the app does not come from there"/>
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/nest" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_templates.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:gravity="center" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="25.0dip" android:text="Templates define how lists will be formated. You can create as many as you like, but you must have at least one." android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/empty" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="app_item_annotation.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/RelativeLayout1" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="@android:dimen/app_icon_size" android:layout_height="@android:dimen/app_icon_size" android:layout_marginRight="11.0dip" android:scaleType="fitCenter"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/appname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/icon"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/apppackage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/icon" android:layout_below="@id/appname"/>
+    <TextView android:id="@id/comments" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="" android:ems="10" android:layout_below="@id/apppackage" android:layout_alignLeft="@id/icon" android:layout_alignParentRight="true"/>
+    <TextView android:textStyle="italic" android:gravity="right" android:id="@id/tags" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/comments" android:layout_alignParentLeft="true" android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="app_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/RelativeLayout1" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:layout_width="@android:dimen/app_icon_size" android:layout_height="@android:dimen/app_icon_size" android:layout_marginRight="11.0dip" android:scaleType="fitCenter"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/appname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_toLeftOf="@id/selected" android:layout_toRightOf="@id/icon"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/apppackage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_toRightOf="@id/icon" android:layout_below="@id/appname" android:layout_alignRight="@id/appname"/>
+    <CheckBox android:id="@id/selected" android:paddingLeft="10.0dip" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_centerVertical="true"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="annotations.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_help" android:id="@id/item_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="templates.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_add" android:id="@id/item_add" android:title="Add" android:showAsAction="ifRoom|withText"/>
+</menu>
+    </File>
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_copy" android:id="@id/copy" android:title="@android:string/copy" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_action_share" android:id="@id/share" android:title="Share" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_action_browse" android:id="@id/browse" android:title="Browse" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_action_select_all" android:id="@id/select_all" android:title="@android:string/selectAll"/>
+    <item android:id="@id/bytag" android:title="Select by tag"/>
+    <item android:icon="@drawable/ic_action_deselect_all" android:id="@id/deselect_all" android:title="Deselect all"/>
+    <item android:icon="@drawable/ic_action_annotations" android:id="@id/annotations" android:title="Annotations"/>
+    <item android:icon="@drawable/ic_action_templates" android:id="@id/edit_templates" android:title="Template Editor"/>
+    <item android:icon="@drawable/ic_action_provider" android:id="@id/provider" android:title="Display/Update Provider"/>
+    <item android:icon="@drawable/ic_action_help" android:id="@id/item_help" android:title="Help"/>
+</menu>
+    </File>
+    <File file_name="template_editor.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_action_save" android:id="@id/save" android:title="Save" android:showAsAction="ifRoom|withText"/>
+    <item android:icon="@drawable/ic_action_remove" android:id="@id/remove" android:title="Remove"/>
+    <item android:icon="@drawable/ic_action_help" android:id="@id/item_help" android:title="Help"/>
+</menu>
+    </File>
+  </Directory>
+</App>

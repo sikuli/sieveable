@@ -1,0 +1,625 @@
+<App name="com.todo.todo" version_code="26">
+  <Directory directory_name="layout-ru">
+    <File file_name="configure.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select tag"/>
+        <Spinner android:id="@id/conf_tags" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Todo items filtering"/>
+        <CheckBox android:id="@id/conf_hide_completed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Hide completed"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Show only…"/>
+        <CheckBox android:id="@id/conf_show_only_due" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Due items"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip">
+            <CheckBox android:id="@id/conf_show_only_due_x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Due in"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip">
+                <Spinner android:id="@id/conf_days_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="days"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sorting"/>
+        <Button android:id="@id/conf_sorting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Priority, Due date, Summary"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+            <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6"/>
+            <Button android:id="@id/conf_ok" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="0.3"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    </File>
+  </Directory>
+  <Directory directory_name="layout">
+    <File file_name="widget_2x4.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="alert_text_entry.xml">
+      <EditText xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/text_entry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:autoText="false" android:imeOptions="actionDone"/>
+    </File>
+    <File file_name="widget_4x2.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_4x4.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="import_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <EditText android:textAppearance="?android:textAppearanceMedium" android:gravity="fill_horizontal" android:id="@id/text_entry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:autoText="false" android:inputType="text" android:imeOptions="actionDone"/>
+    <CheckBox android:id="@id/wipe_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Wipe existing data"/>
+</LinearLayout>
+    </File>
+    <File file_name="title.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/titleLeft" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:id="@id/titleRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="file_row.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    </File>
+    <File file_name="widget_loading.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <TextView android:gravity="center_horizontal" android:id="@id/loading" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loading widget…" android:includeFontPadding="false" style="&#10;         &#10;    "/>
+</LinearLayout>
+    </File>
+    <File file_name="main.xml">
+      <com.todo.todo.SlidingView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kos="http://schemas.android.com/apk/res/com.todo.todo" android:id="@id/sliding_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <Spinner android:id="@id/tags" android:nextFocusRight="@id/tags" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            <com.todo.todo.MyListView android:id="@android:id/list" android:nextFocusRight="@android:id/list" android:layoutAnimation="@anim/list_slide_left" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scrollingCache="false" android:choiceMode="none" android:layout_weight="1.0" kos:maxThrowVelocity="1500" kos:vibrateOnTearOff="20"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+                <EditText android:id="@id/add_task" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_weight="5.0" android:inputType="text" android:imeOptions="actionDone"/>
+                <com.todo.todo.SlideLeftImageButton android:id="@id/add_task_button" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_menu_mark" android:contentDescription="Add" kos:maxThrowVelocity="1500"/>
+                <Button android:id="@id/default_due_txt_button" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.1" android:contentDescription="Default due date"/>
+                <ImageButton android:id="@id/default_due_img_button" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_menu_my_calendar" android:contentDescription="Default due date"/>
+                <Button android:id="@id/default_prio_button" android:padding="4.0dip" android:nextFocusRight="@id/default_prio_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <com.todo.todo.AnimatedVisibilityButton android:id="@id/undelete_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="Undelete" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Spinner android:id="@id/item_tag" android:nextFocusLeft="@id/item_tag" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@id/edit_task_summary" android:nextFocusLeft="@id/edit_task_summary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:inputType="text" android:imeOptions="actionDone"/>
+        <EditText android:gravity="top" android:autoLink="none" android:id="@id/edit_task_body" android:scrollbars="vertical" android:nextFocusLeft="@id/edit_task_body" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="false" android:autoText="true" android:layout_weight="1.0" android:inputType="textMultiLine" android:imeOptions="actionDone"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+            <com.todo.todo.SliderButton android:id="@id/prio_sliding_button" android:nextFocusLeft="@id/prio_sliding_button" android:nextFocusDown="@id/prio_sliding_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Priority" android:layout_weight="1.0" kos:valuesList="1,2,3,4,5" kos:separator=" "/>
+            <com.todo.todo.SliderButton android:id="@id/progress_sliding_button" android:nextFocusDown="@id/progress_sliding_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Progress" android:layout_weight="1.0" kos:valuesList="0,10,20,30,40,50,60,70,80,90,100" kos:valueSuffix="%" kos:separator=" "/>
+            <ImageButton android:id="@id/due_date_img_button" android:padding="4.0dip" android:nextFocusDown="@id/due_date_img_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_menu_my_calendar" android:layout_weight="0.1" android:contentDescription="Due date"/>
+            <Button android:id="@id/due_date_txt_button" android:visibility="gone" android:nextFocusDown="@id/due_date_txt_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.1" android:contentDescription="Due date"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.todo.todo.SlidingView>
+    </File>
+    <File file_name="todo_item.xml">
+      <com.todo.todo.TodoItemView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kos="http://schemas.android.com/apk/res/com.todo.todo" android:textAppearance="?android:textAppearanceMedium" android:typeface="sans" android:gravity="center_vertical" android:id="@id/todo_item" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="?android:textCheckMark" android:minHeight="40.0sp" kos:prio0Color="#00000000" kos:prio1Color="#ffdc0000" kos:prio2Color="#ffffff00" kos:prio3Color="#ff00ffcc" kos:prio4Color="#ff99ff33" kos:prio5Color="#ffcccccc" kos:progress0Color="#00000000" kos:progress100Color="#ff3a3a3a" kos:dueDateColor="#ffbfbfbf" kos:todayDueDateColor="#ffffcc00" kos:expiredDueDateColor="#ffff1f4f" kos:notesDrawable="@drawable/ball_drawable" kos:prioStripeWidth="1.0dip" kos:prioFontSize="10.0sp" kos:notesPrioMarginRight="6.0dip" kos:prioMarginTop="4.0dip" kos:notesDueMarginBottom="4.0dip" kos:dueFontSize="10.0sp" kos:dueMarginRight="4.0dip"/>
+    </File>
+    <File file_name="edit_tags.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:kos="http://schemas.android.com/apk/res/com.todo.todo" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.todo.todo.MyListView android:id="@android:id/list" android:layoutAnimation="@anim/list_slide_left" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="singleChoice" android:layout_weight="1.0" kos:maxThrowVelocity="1500" kos:vibrateOnTearOff="20"/>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+        <EditText android:id="@id/add_tag_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionDone"/>
+        <Button android:id="@id/add_tag_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="widget_2x2.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_2x1.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="configure.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select tag"/>
+        <Spinner android:id="@id/conf_tags" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Todo items filtering"/>
+        <CheckBox android:id="@id/conf_hide_completed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Hide completed"/>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Show only…"/>
+        <CheckBox android:id="@id/conf_show_only_due" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Due items"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+            <CheckBox android:id="@id/conf_show_only_due_x" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Due in"/>
+            <Spinner android:id="@id/conf_days_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="days" android:singleLine="true"/>
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sorting"/>
+        <Button android:id="@id/conf_sorting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="Priority, Due date, Summary"/>
+        <TextView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@android:style/ButtonBar">
+            <TextView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.6"/>
+            <Button android:id="@id/conf_ok" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="0.3"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    </File>
+  </Directory>
+  <Directory directory_name="layout-land">
+    <File file_name="widget_2x4.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_4x2.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_4x4.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_2x2.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="widget_2x1.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/widget" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" style="&#10;         &#10;    ">
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_tag_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/widget_app_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@id/widget_tag" android:paddingTop="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="tag" android:layout_weight="1.0" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_setup_icon" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/widget_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/widget_tag_bar">
+        <TextView android:id="@id/widget_item1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="recreate" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item1_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="me" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item2_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item3" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item3" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item3_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item4" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item4" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item4_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item5" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item5" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item5_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item6" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item6" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item6_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item7" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item7" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item7_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item8" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item8_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item9" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item9_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item10" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item10_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item11" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item11_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item12" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item12_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item13" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item13_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item14" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item14_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item15" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item15_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item16" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item16_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item17" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ImageView android:id="@id/widget_item17_line" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:scaleType="fitXY" android:tint="#f07e7efa"/>
+        <TextView android:id="@id/widget_item18" android:paddingLeft="300.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="item8" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="appwidget_2x4_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="146.0dip" android:minHeight="294.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_loading" android:configure="com.todo.todo.widget.ConfigureActivity"/>
+    </File>
+    <File file_name="appwidget_2x1_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="146.0dip" android:minHeight="72.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_loading" android:configure="com.todo.todo.widget.ConfigureActivity"/>
+    </File>
+    <File file_name="appwidget_2x2_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="146.0dip" android:minHeight="146.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_loading" android:configure="com.todo.todo.widget.ConfigureActivity"/>
+    </File>
+    <File file_name="appwidget_4x2_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="146.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_loading" android:configure="com.todo.todo.widget.ConfigureActivity"/>
+    </File>
+    <File file_name="appwidget_4x4_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="294.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/widget_loading" android:configure="com.todo.todo.widget.ConfigureActivity"/>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="Delete by fling" android:key="delByFling" android:summary="Delete items by throwing them to the right" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Slide to edit" android:key="slideToEdit" android:summary="Edit items by sliding them to the left" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Click anywhere to check" android:key="clickAnywhereToCheck" android:summary="Click anywhere or on the checkmark only to check/uncheck items" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Due date as days left" android:key="dueAsDaysLeft" android:summary="Show due dates as days left" android:defaultValue="false"/>
+    <ListPreference android:entries="@array/main_list_font_sizes" android:title="List font size" android:key="mainListFontSize" android:summary="Todo list items font size" android:defaultValue="default" android:entryValues="@array/main_list_font_sizes"/>
+    <PreferenceScreen android:title="Colors">
+        <android.preference.PreferenceCategory android:title="Priority colors">
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Priority 1 color" android:key="prio1Color" android:defaultValue="0xffdc0000"/>
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Priority 2 color" android:key="prio2Color" android:defaultValue="0xffffff00"/>
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Priority 3 color" android:key="prio3Color" android:defaultValue="0xff00ffcc"/>
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Priority 4 color" android:key="prio4Color" android:defaultValue="0xff99ff33"/>
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Priority 5 color" android:key="prio5Color" android:defaultValue="0xffcccccc"/>
+        </android.preference.PreferenceCategory>
+        <android.preference.PreferenceCategory android:title="Due date colors" android:key="dueColors">
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Due date color" android:key="dueDateColor" android:defaultValue="0xffbfbfbf"/>
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Due today color" android:key="dueTodayColor" android:defaultValue="0xffffcc00"/>
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Overdue color" android:key="overdueColor" android:defaultValue="0xffff1f4f"/>
+        </android.preference.PreferenceCategory>
+        <android.preference.PreferenceCategory android:title="Progress bar color" android:key="progressColors">
+            <net.margaritov.preference.colorpicker.ColorPickerPreference android:title="Progress bar color" android:key="progressColor" android:defaultValue="0xff3a3a3a"/>
+        </android.preference.PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>
+    </File>
+  </Directory>
+</App>

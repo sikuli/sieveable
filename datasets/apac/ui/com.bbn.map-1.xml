@@ -1,0 +1,52 @@
+<App name="com.bbn.map" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <com.bbn.map.MapViewGroup android:id="@id/mapViewGroup" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.bbn.map.MapView android:id="@id/mapView" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <com.bbn.map.RotatingImageButton android:id="@id/compassBtn" android:background="#00000000" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/north_up" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <ProgressBar android:id="@id/dataProgress" android:background="#00000000" android:padding="4.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:indeterminateDrawable="@anim/progress" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:visible="false" android:color="#ff000000"/>
+        <LinearLayout android:id="@id/controls" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <com.bbn.map.RotatingImageButton android:id="@id/zoomOutBtn" android:background="@drawable/map_button_state" android:padding="40.0dip" android:layout_width="75.0dip" android:layout_height="75.0dip" android:layout_marginRight="4.0dip"/>
+            <com.bbn.map.RotatingImageButton android:id="@id/zoomInBtn" android:background="@drawable/map_button_state" android:layout_width="75.0dip" android:layout_height="75.0dip" android:layout_marginRight="4.0dip"/>
+        </LinearLayout>
+    </com.bbn.map.MapViewGroup>
+</RelativeLayout>
+    </File>
+    <File file_name="layer_list_item.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@id/row" android:background="@drawable/white_capsule" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageButton android:id="@id/eyeBtn" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/eye" android:hapticFeedbackEnabled="true"/>
+        <TextView android:textSize="10.0sp" android:textColor="#ff333333" android:id="@id/layerVisibility" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Visible" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="20.0sp" android:textColor="#ff333333" android:gravity="center_vertical" android:id="@id/layerName" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Layer Name" android:shadowColor="#ffffffff" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_weight="1.0"/>
+    <ImageButton android:id="@id/gearBtn" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cog" android:hapticFeedbackEnabled="true"/>
+</LinearLayout>
+    </File>
+    <File file_name="layer_settings.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@id/layerSettings" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="#ffaaaaaa" android:background="@drawable/textlines" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Layer Settings"/>
+        <LinearLayout android:orientation="vertical" android:id="@id/selectedRegions" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        <TextView android:textColor="#ffaaaaaa" android:background="@drawable/textlines" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Downloaded Regions"/>
+        <LinearLayout android:orientation="vertical" android:id="@id/downloadedRegions" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="searchable.xml">
+      <searchable xmlns:android="http://schemas.android.com/apk/res/android" android:label="AndroidMap" android:hint="Search for location" android:searchSuggestAuthority="com.bbn.harborfinder.SearchProvider" android:searchSuggestIntentAction="android.intent.action.SEARCH" android:searchSuggestIntentData="content://com.bbn.harborfinder/"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="map.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_mylocation" android:id="@id/centerOnLocation" android:title="Center on Location"/>
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/search" android:title="Search"/>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:id="@id/clearGPS" android:title="Clear GPS Track"/>
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/prefs" android:title="Settings"/>
+</menu>
+    </File>
+  </Directory>
+</App>

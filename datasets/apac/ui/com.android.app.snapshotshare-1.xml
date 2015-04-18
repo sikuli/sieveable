@@ -1,0 +1,68 @@
+<App name="com.android.app.snapshotshare" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="main_activity.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:id="@id/mySurfaceView" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <android.view.SurfaceView android:id="@id/sv" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+        <Button android:layout_gravity="right|center" android:id="@id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="take picture" android:onClick="takePicture"/>
+        <ImageView android:layout_gravity="bottom|right|center" android:id="@id/myImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/action_settings" android:onClick="clickSettings"/>
+        <ImageView android:layout_gravity="right|center" android:id="@id/zoom_in" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" android:src="@drawable/zoom_in" android:onClick="changeZoomIn"/>
+        <ImageView android:layout_gravity="right|center" android:id="@id/zoom_out" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:src="@drawable/zoom_out" android:onClick="changeZoomOut"/>
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/flipcam" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/action_switch_camera" android:onClick="switchCamera"/>
+    </FrameLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="login.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/login_firstname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="First Name" android:ems="10" android:inputType="textCapWords">
+        <requestFocus/>
+    </EditText>
+    <EditText android:id="@id/login_lastname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Last Name" android:ems="10" android:inputType="textCapWords"/>
+    <EditText android:id="@id/login_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Email" android:ems="10" android:inputType="textEmailAddress"/>
+    <Button android:id="@id/button_complete" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Complete" android:onClick="onClickLoginComplete"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_aperture.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="16.0dip" android:paddingTop="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello world!"/>
+</RelativeLayout>
+    </File>
+    <File file_name="dialoglist.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceLarge" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="6.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?android:listPreferredItemHeight" android:layout_weight="1.0"/>
+    </File>
+    <File file_name="dialog.xml">
+      <ListView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/listView1" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000"/>
+    </File>
+    <File file_name="dialogslider.xml">
+      <SeekBar xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/seekbar" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000"/>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="settings_pref.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Account Info" android:key="pref_key_storage_settings">
+        <PreferenceScreen android:persistent="false" android:title="Dropbox" android:key="dropbox_category_key" android:summary="Use your Dropbox account to sync photos">
+            <PreferenceScreen android:persistent="false" android:title="Account Credentials" android:key="dropbox_credentials" android:summary="Enter your account information"/>
+            <CheckBoxPreference android:title="Enable" android:key="dropbox_sync_enable" android:summary="Allows you to toggle this account for syncing" android:defaultValue="false"/>
+        </PreferenceScreen>
+        <PreferenceScreen android:persistent="false" android:enabled="false" android:title="SugarSync" android:key="sugarsync_category_key" android:summary="This feature will be available in the next version"/>
+        <PreferenceScreen android:persistent="false" android:enabled="false" android:title="SkyDrive" android:key="sky_category_key" android:summary="This feature will be available in the next version"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Push/Sync" android:key="pref_key_connection_settings_Sync">
+        <CheckBoxPreference android:title="Sync on Wi-Fi Connection Only" android:key="pref_key_wifi_sync" android:summary="Photos will only sync when the device is connected Wi-Fi" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Sync only when battery is connected" android:key="pref_key_power_sync" android:summary="Photos will only sync when the device is connected to a power source" android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About" android:key="pref_key_storage_settings_Sync">
+        <PreferenceScreen android:title="Application Details" android:key="pref_key_details" android:summary="Click to View" android:defaultValue="false"/>
+    </PreferenceCategory>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="aperture.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

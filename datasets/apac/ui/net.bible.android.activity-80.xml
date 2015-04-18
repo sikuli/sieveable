@@ -1,0 +1,386 @@
+<App name="net.bible.android.activity" version_code="80">
+  <Directory directory_name="layout">
+    <File file_name="main_bible_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/mainBibleView" android:fadingEdgeLength="0.0sp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <RelativeLayout android:id="@id/titleBar" android:background="#ff848284" android:layout_width="fill_parent" android:layout_height="28.0dip">
+    <LinearLayout android:orientation="horizontal" android:id="@id/leftTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rightTitlePanel" android:layout_alignParentLeft="true">
+        <Button android:id="@id/titleDocument" android:text="And Bible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/titlePassage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progressCircular" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:max="10000" style="?android:attr/progressBarStyleSmallTitle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/rightTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageButton android:id="@id/quickSpeak" android:visibility="gone" android:layout_width="wrap_content" android:src="@drawable/ic_menu_happy_21" android:contentDescription="Speak" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ToggleButton android:textStyle="italic" android:id="@id/strongsToggle" android:visibility="gone" android:checked="true" android:textOn="nnnn" android:textOff="nnnn" style="&#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickBibleChange" android:visibility="invisible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickCommentaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickDictionaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout></LinearLayout>
+    </File>
+    <File file_name="list.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    <TextView android:textStyle="bold" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="No items to display"/>
+</LinearLayout>
+    </File>
+    <File file_name="help.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/title_text" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Help" style="@android:style/TextAppearance.Large"/>
+        <TextView android:id="@id/splash_help_text" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;&#10;Go to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger &#10;Double-tap toggles Fullscreen on/off. &#10;&#10;&quot; &quot; &#10;Press the MENU key for actions &#10;&#10;To download more documents press Menu/More/Download Documents &#10;&#10;&quot; &quot;&#10;Press Speak to access a dialog to start or stop reading &#10;&#10;&quot; &quot;&#10;Notes can be added via the My Note menu item on the verse context menu. The list of existing notes can be accessed via the main menu. &#10;&#10;&quot; &quot;&#10;Bookmarks can be added via the verse context menu. The Bookmark Manager is accessed via the main menu. The Bookmark Manager context menu allows bookmarks to be grouped using labels. &#10;&#10;&quot; &quot;&#10;Search text can include special characters like *, ?, AND, OR, NOT (see Apache Lucene - Query Parser Syntax for more details) &#10;&#10;&quot; &quot; &#10;Long press on the bible view to open the context menu for actions affecting the current verse. &#10;Long press on a document in the document selector to delete it or view information. &#10;Long press the Back button to access the History list &quot;" android:layout_below="@id/title_text" style="@android:style/TextAppearance.Medium"/>
+        <TextView android:id="@id/versionText" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/TextAppearance.Small"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="strongs_ref.xml">
+      <WebView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="notes.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/warningText" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="title_bar.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/titleBar" android:background="#ff848284" android:layout_width="fill_parent" android:layout_height="28.0dip">
+    <LinearLayout android:orientation="horizontal" android:id="@id/leftTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rightTitlePanel" android:layout_alignParentLeft="true">
+        <Button android:id="@id/titleDocument" android:text="And Bible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/titlePassage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progressCircular" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:max="10000" style="?android:attr/progressBarStyleSmallTitle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/rightTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageButton android:id="@id/quickSpeak" android:visibility="gone" android:layout_width="wrap_content" android:src="@drawable/ic_menu_happy_21" android:contentDescription="Speak" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ToggleButton android:textStyle="italic" android:id="@id/strongsToggle" android:visibility="gone" android:checked="true" android:textOn="nnnn" android:textOff="nnnn" style="&#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickBibleChange" android:visibility="invisible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickCommentaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickDictionaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="buttongrid_button_preview.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="18.0sp" android:textColor="?android:textColorPrimaryInverse" android:gravity="center" android:background="@drawable/buttongrid_button_feedback" android:layout_width="wrap_content" android:layout_height="40.0dip" android:minWidth="32.0dip"/>
+    </File>
+    <File file_name="mynote_edit.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:gravity="top" android:id="@id/myNoteText" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:layout_below="@id/titleBar" android:inputType="textMultiLine"/>
+<RelativeLayout android:id="@id/titleBar" android:background="#ff848284" android:layout_width="fill_parent" android:layout_height="28.0dip">
+    <LinearLayout android:orientation="horizontal" android:id="@id/leftTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rightTitlePanel" android:layout_alignParentLeft="true">
+        <Button android:id="@id/titleDocument" android:text="And Bible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/titlePassage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progressCircular" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:max="10000" style="?android:attr/progressBarStyleSmallTitle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/rightTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageButton android:id="@id/quickSpeak" android:visibility="gone" android:layout_width="wrap_content" android:src="@drawable/ic_menu_happy_21" android:contentDescription="Speak" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ToggleButton android:textStyle="italic" android:id="@id/strongsToggle" android:visibility="gone" android:checked="true" android:textOn="nnnn" android:textOff="nnnn" style="&#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickBibleChange" android:visibility="invisible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickCommentaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickDictionaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout></RelativeLayout>
+    </File>
+    <File file_name="ensure_bible_downloaded.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/waitForBible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="Please wait for the bible to finish downloading. You will then be taken to the main screen."/>
+    <LinearLayout android:orientation="vertical" android:id="@id/progressControlContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_below="@id/waitForBible"/>
+    <TextView android:id="@id/waitForBibleNotYet" android:layout_width="fill_parent" android:layout_height="110.0dip" android:layout_margin="20.0dip" android:layout_below="@id/progressControlContainer"/>
+</RelativeLayout>
+    </File>
+    <File file_name="search_index.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/indexCreationRequired" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;An index is required to search.&#10;&#10;Indexes may be downloaded from the internet or created locally.&#10;&#10;Downloading is much quicker and downloaded indexes have more search features.&#10;&#10;An internet connection is required to download indexes.&#10;&quot;" style="&#10;         &#10;    "/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/downloadButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Download" android:layout_weight="2.0" android:onClick="onDownload"/>
+        <Button android:id="@id/createButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Create" android:layout_weight="1.0" android:onClick="onIndex"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="bookmarks.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Spinner android:id="@id/labelSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <ListView android:id="@android:id/list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice"/>
+    <TextView android:textStyle="bold" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="No items to display"/>
+</LinearLayout>
+    </File>
+    <File file_name="search.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/searchText" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/centreAreaContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/searchText">
+        <RadioGroup android:id="@id/bibleSectionGroup" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/sectionGroupPrompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Search Where"/>
+            <RadioButton android:id="@id/searchAllBible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="Whole bible"/>
+            <RadioButton android:id="@id/searchOldTestament" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Old Testament"/>
+            <RadioButton android:id="@id/searchNewTestament" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Testament"/>
+        </RadioGroup>
+        <RadioGroup android:id="@id/wordsGroup" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/submit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Find verses"/>
+            <RadioButton android:id="@id/allWords" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="All words"/>
+            <RadioButton android:id="@id/anyWord" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Any word" android:layout_below="@id/allWords"/>
+            <RadioButton android:id="@id/phrase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phrase" android:layout_below="@id/anyWord"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+        <Button android:id="@id/submit" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Find" android:layout_weight="2.0" android:onClick="onSearch"/>
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="bookmark_labels.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" android:layout_above="@id/button_panel"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/okButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="1.0" android:onClick="onOkay"/>
+        <Button android:id="@id/newLabel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="New Label" android:layout_weight="1.0" android:onClick="onNewLabel"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="list_item_2_image.xml">
+      <net.bible.android.view.util.widget.TwoLineListItemWithImage xmlns:android="http://schemas.android.com/apk/res/android" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight" android:mode="twoLine">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_alignParentLeft="true"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@android:id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" android:layout_toRightOf="@id/icon"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@android:id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/text1" android:layout_alignLeft="@android:id/text1"/>
+</net.bible.android.view.util.widget.TwoLineListItemWithImage>
+    </File>
+    <File file_name="choose_dictionary_page.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/searchText" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Search dictionary"/>
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice"/>
+</LinearLayout>
+    </File>
+    <File file_name="preference_seekbar.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:paddingRight="?android:scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="6.0dip" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceSmallInverse" android:gravity="bottom" android:id="@android:attr/theme" android:layout_width="wrap_content" android:layout_height="40.0dip" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title"/>
+        <SeekBar android:id="@android:attr/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:attr/theme" android:layout_alignLeft="@android:attr/theme"/>
+        <TextView android:textAppearance="?android:textAppearanceSmallInverse" android:id="@android:attr/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@android:attr/label" android:layout_alignLeft="@android:attr/label"/>
+    </RelativeLayout>
+</LinearLayout>
+    </File>
+    <File file_name="reading_plan_one_reading.xml">
+      <TableRow xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@id/tick" android:layout_marginRight="5.0dip" android:src="@drawable/btn_check_buttonless_off" android:contentDescription="Tick"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/passage"/>
+    <Button android:id="@id/readButton" android:text="Passage"/>
+    <Button android:id="@id/speakButton" android:text="Speak"/>
+</TableRow>
+    </File>
+    <File file_name="download_status.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/progressStatusMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="These long running tasks may terminate if you switch to another application before they finish." android:layout_alignParentTop="true"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/noTasksRunning" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="There are no tasks currently being executed." android:layout_below="@id/progressStatusMessage"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/progressControlContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="20.0dip" android:layout_below="@id/noTasksRunning"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/moreButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="More" android:layout_weight="1.0" android:onClick="onMore"/>
+        <Button android:id="@id/okButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="1.0" android:onClick="onOkay"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="reading_plan_list_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceLarge" android:gravity="center_vertical" android:id="@id/text1" android:paddingLeft="?android:expandableListPreferredItemPaddingLeft" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"/>
+    </File>
+    <File file_name="startup_view.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/background_blue_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:gravity="center" android:id="@id/splash_title_text" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="And Bible" android:layout_alignParentTop="true" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:gravity="right" android:id="@id/splash_top_text" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;&#10;\&quot;And God said, 'Let there be light,' and there was light.\&quot;&#10;Genesis 1:3&quot;" android:layout_below="@id/splash_title_text" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:gravity="left" android:id="@id/splash_help_text" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="&quot;Press the MENU key for actions&#10;&#10;Go to the next or previous chapter by using the track-ball, D-pad or swiping the screen with your finger&quot;" android:layout_below="@id/splash_top_text" android:layout_centerVertical="true" style="&#10;         &#10;         &#10;         &#10;    "/>
+    <TextView android:gravity="right" android:id="@id/versionText" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="&#10;         &#10;         &#10;         &#10;    "/>
+</RelativeLayout>
+    </File>
+    <File file_name="speak.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@id/leftPanel" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RadioGroup android:id="@id/numChapters" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RadioButton android:id="@id/numChapters1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+            <RadioButton android:id="@id/numChapters2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioButton android:id="@id/numChapters3" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioButton android:id="@id/numChapters4" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RadioGroup>
+        <LinearLayout android:orientation="vertical" android:id="@id/rightPanel" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <CheckBox android:id="@id/queue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Queue"/>
+            <CheckBox android:id="@id/repeat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Repeat"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <Button android:id="@id/speakButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Speak" android:layout_weight="1.0" android:onClick="onSpeak"/>
+        <Button android:id="@id/stopButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Stop" android:layout_weight="1.0" android:onClick="onStop"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="history.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+</LinearLayout>
+    </File>
+    <File file_name="progress_notification.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ImageView android:id="@id/status_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true"/>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toRightOf="@id/status_icon">
+        <TextView android:id="@id/status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"/>
+        <ProgressBar android:id="@id/status_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@android:drawable/progress_horizontal" android:layout_below="@id/status_text" style="?android:attr/progressBarStyleHorizontal"/>
+    </RelativeLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="reading_plan_one_day.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/top_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_below="@id/titleBar">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/description" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="horizontal" android:id="@id/dates" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="right" android:id="@id/day" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/status_message" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TableLayout android:id="@id/reading_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:stretchColumns="1,2,3" android:shrinkColumns="1" android:layout_below="@id/top_text"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+        <Button android:id="@id/doneButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Done" android:layout_weight="2.0" android:onClick="onDone"/>
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+    </LinearLayout>
+<RelativeLayout android:id="@id/titleBar" android:background="#ff848284" android:layout_width="fill_parent" android:layout_height="28.0dip">
+    <LinearLayout android:orientation="horizontal" android:id="@id/leftTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toLeftOf="@id/rightTitlePanel" android:layout_alignParentLeft="true">
+        <Button android:id="@id/titleDocument" android:text="And Bible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/titlePassage" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progressCircular" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:max="10000" style="?android:attr/progressBarStyleSmallTitle"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/rightTitlePanel" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <ImageButton android:id="@id/quickSpeak" android:visibility="gone" android:layout_width="wrap_content" android:src="@drawable/ic_menu_happy_21" android:contentDescription="Speak" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <ToggleButton android:textStyle="italic" android:id="@id/strongsToggle" android:visibility="gone" android:checked="true" android:textOn="nnnn" android:textOff="nnnn" style="&#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickBibleChange" android:visibility="invisible" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickCommentaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+        <Button android:id="@id/quickDictionaryChange" android:visibility="gone" style="&#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;         &#10;    "/>
+    </LinearLayout>
+</RelativeLayout></RelativeLayout>
+    </File>
+    <File file_name="document_selection.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Spinner android:id="@id/languageSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="50.0"/>
+        <Spinner android:entries="@array/documentTypes" android:id="@id/documentTypeSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="50.0"/>
+    </LinearLayout>
+    <ListView android:id="@android:id/list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice"/>
+</LinearLayout>
+    </File>
+    <File file_name="search_index_status.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/progressStatusMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="These long running tasks may terminate if you switch to another application before they finish." android:layout_alignParentTop="true" style="&#10;         &#10;    "/>
+    <TextView android:id="@id/noTasksRunning" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="There are no tasks currently being executed." android:layout_below="@id/progressStatusMessage" style="&#10;         &#10;    "/>
+    <LinearLayout android:orientation="vertical" android:id="@id/progressControlContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip" android:layout_below="@id/noTasksRunning"/>
+</RelativeLayout>
+    </File>
+    <File file_name="choose_general_book_key.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice"/>
+</LinearLayout>
+    </File>
+    <File file_name="progress_status.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/progressStatusMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="These long running tasks may terminate if you switch to another application before they finish." android:layout_alignParentTop="true"/>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/noTasksRunning" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="There are no tasks currently being executed." android:layout_below="@id/progressStatusMessage"/>
+    <LinearLayout android:orientation="vertical" android:id="@id/progressControlContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="20.0dip" android:layout_below="@id/noTasksRunning"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" style="@android:style/ButtonBar">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+        <Button android:id="@id/okButton" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="OK" android:layout_weight="2.0" android:onClick="onOkay"/>
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="settings.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" android:key="bible_display_pref">
+    <CheckBoxPreference android:title="Night mode" android:key="night_mode_pref" android:summary="For easier reading in the dark" android:defaultValue="false"/>
+    <ListPreference android:entries="@array/prefs_night_mode_descriptions" android:title="Night mode" android:key="night_mode_pref2" android:summary="For easier reading in the dark" android:defaultValue="false" android:entryValues="@array/prefs_night_mode_values"/>
+    <CheckBoxPreference android:title="Verse numbers" android:key="show_verseno_pref" android:summary="Show verse numbers" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="One verse per line" android:key="verse_per_line_pref" android:summary="Show each verse on a different line" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Show bookmark icons" android:key="show_bookmarks_pref" android:summary="Show icon in bookmarked verses" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Show My Note icons" android:key="show_mynotes_pref" android:summary="Show icon in verses with My Note" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Footnotes and x-refs" android:key="show_notes_pref" android:summary="Show footnotes and cross-references" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="&quot;Show Strong's numbers&quot;" android:key="show_strongs_pref" android:summary="Links to Greek &amp; Hebrew definitions" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Morphological codes" android:key="show_morphology_pref" android:summary="&quot;Show Robinson's Greek morphology&quot;" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Section titles" android:key="section_title_pref" android:summary="Show non-canonical section titles" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Red Letter" android:key="red_letter_pref" android:summary="Show words of Christ in red" android:defaultValue="false"/>
+    <net.bible.android.view.util.TextSizePreference android:max="34" android:title="Text size" android:key="text_size_pref" android:summary="See more or see more clearly" android:defaultValue="16"/>
+    <CheckBoxPreference android:title="Tilt to scroll" android:key="tilt_to_scroll_pref" android:summary="Tilt device to scroll page down" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Navigate to verse" android:key="navigate_to_verse_pref" android:summary="Choose verse (and chapter) when selecting a passage" android:defaultValue="false"/>
+    <ListPreference android:entries="@array/prefs_interface_locale_descriptions" android:title="Application language" android:key="locale_pref" android:summary="Select custom user interface language" android:defaultValue="" android:entryValues="@array/prefs_interface_locale_values"/>
+</PreferenceScreen>
+    </File>
+    <File file_name="key_grid_layout.xml">
+      <Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="16.66%p" android:keyHeight="7.8999996%p" android:horizontalGap="0.0px" android:verticalGap="0.0px"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="document_viewer_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/myNoteAddEdit" android:title="Add My Note"/>
+    <item android:id="@id/add_bookmark" android:title="Add bookmark"/>
+    <item android:id="@id/notes" android:title="Footnotes and references"/>
+    <item android:id="@id/compareTranslations" android:title="Compare translations"/>
+    <item android:id="@id/shareVerse" android:title="Share current verse ..."/>
+    <item android:id="@id/copy" android:title="Copy current verse"/>
+    <item android:id="@id/selectText" android:title="Select text"/>
+</menu>
+    </File>
+    <File file_name="usernote_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_today" android:id="@id/selectPassageButton" android:title="Passage"/>
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/chooseBookButton" android:title="Document"/>
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/searchButton" android:title="Find"/>
+    <item android:icon="@drawable/ic_menu_bookmarks" android:id="@id/bookmarksButton" android:title="Bookmarks"/>
+    <item android:icon="@drawable/ic_menu_usernotes" android:id="@id/mynotesButton" android:title="My Notes"/>
+    <item android:icon="@android:drawable/ic_menu_help" android:id="@id/helpButton" android:title="Help"/>
+    <item android:icon="@android:drawable/ic_menu_save" android:id="@id/backupMainMenu" android:title="Backup">
+        <menu>
+            <item android:icon="@android:drawable/ic_menu_save" android:id="@id/backup" android:title="Backup"/>
+            <item android:icon="@android:drawable/ic_menu_set_as" android:id="@id/restore" android:title="Restore"/>
+        </menu>
+    </item>
+    <item android:icon="@android:drawable/ic_menu_recent_history" android:id="@id/historyButton" android:title="History"/>
+    <item android:icon="@android:drawable/ic_menu_preferences" android:id="@id/settingsButton" android:title="Settings"/>
+    <item android:icon="@drawable/ic_menu_goto" android:id="@id/downloadButton" android:title="Download Documents"/>
+    <item android:icon="@android:drawable/ic_menu_month" android:id="@id/dailyReadingPlanButton" android:title="Reading Plan"/>
+    <item android:icon="@drawable/ic_menu_happy" android:id="@id/speakButton" android:title="Speak"/>
+</menu>
+    </File>
+    <File file_name="reading_plan_list_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/reset" android:title="Reset"/>
+</menu>
+    </File>
+    <File file_name="reading_plan.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/btn_check_buttonless_on" android:id="@id/done" android:title="Done"/>
+    <item android:icon="@android:drawable/ic_menu_day" android:id="@id/setStartToJan1" android:title="Start Jan 1"/>
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/reset" android:title="Reset"/>
+</menu>
+    </File>
+    <File file_name="bookmark_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/assign_labels" android:title="Assign labels"/>
+    <item android:id="@id/delete" android:title="Delete"/>
+</menu>
+    </File>
+    <File file_name="document_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/about" android:title="About"/>
+    <item android:id="@id/delete" android:title="Delete"/>
+    <item android:id="@id/delete_index" android:title="Delete search index"/>
+</menu>
+    </File>
+    <File file_name="download_documents.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_refresh" android:id="@id/refresh" android:title="Refresh"/>
+</menu>
+    </File>
+    <File file_name="bookmark_labels_context_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/delete" android:title="Delete"/>
+</menu>
+    </File>
+  </Directory>
+</App>

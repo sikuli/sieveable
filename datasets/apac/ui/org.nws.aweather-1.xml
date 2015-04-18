@@ -1,0 +1,41 @@
+<App name="org.nws.aweather" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="setserver.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Set the server location or click Default to restore default."/>
+    <EditText android:id="@id/enterurl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="&lt;Enter url&gt;"/>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/defaultButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Default"/>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/setUrlButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Set URL"/>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/CancelButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel"/>
+</LinearLayout>
+    </File>
+    <File file_name="main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Spinner android:id="@id/locationChooser" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/image1" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textStyle="bold" android:id="@id/day" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button android:id="@id/refreshButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refresh"/>
+</LinearLayout>
+    </File>
+    <File file_name="servicelauncher.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="This service allows updating of location weather awareness."/>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/startButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start Service"/>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/stopButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Stop Service"/>
+</LinearLayout>
+    </File>
+    <File file_name="addlocation.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextView android:id="@id/enterLocationInstruction" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enter a city and state, eg: \&quot;Omaha, NE\&quot; and hit the Add Location button"/>
+    <EditText android:id="@id/enterLocation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Enter Location"/>
+    <Button android:id="@id/fireLocationLookup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Add location"/>
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select from your saved locations:"/>
+    <Spinner android:id="@id/locationSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <TextView android:id="@id/log" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@id/buttonShowWeather" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Show Weather"/>
+</LinearLayout>
+    </File>
+  </Directory>
+</App>

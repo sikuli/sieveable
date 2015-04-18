@@ -1,0 +1,97 @@
+<App name="com.quickdroid" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="quickdroid.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="4.0dip" android:paddingTop="4.0dip" android:paddingRight="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:measureAllChildren="true">
+            <com.quickdroid.SearchTextView android:layout_gravity="center_vertical" android:id="@id/searchText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:drawableRight="@drawable/clear_search_text" android:imeOptions="actionGo"/>
+            <LinearLayout android:layout_gravity="right|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip">
+                <ImageButton android:id="@id/speechRecognizer" android:background="@drawable/transparent_background_image" android:visibility="invisible" android:clickable="false" android:layout_width="32.0dip" android:layout_height="wrap_content" android:src="@drawable/speech_recognizer"/>
+                <ImageButton android:id="@id/clearSearchText" android:background="@drawable/transparent_background_image" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:src="@drawable/clear_search_text"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <android.gesture.GestureOverlayView android:orientation="vertical" android:id="@id/gestures" android:layout_width="fill_parent" android:layout_height="fill_parent" android:gestureStrokeType="multiple" android:eventsInterceptionEnabled="true">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:headerDividersEnabled="false" android:footerDividersEnabled="false"/>
+        <TextView android:id="@id/noSuggestions" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </android.gesture.GestureOverlayView>
+</LinearLayout>
+    </File>
+    <File file_name="search_widget.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_plate" android:background="@drawable/search_widget_background" android:paddingRight="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageButton android:id="@id/search_widget_thumbnail" android:background="@drawable/search_widget_thumbnail_background" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:focusable="true" android:clickable="true" android:layout_width="50.0dip" android:layout_height="fill_parent" android:src="@drawable/android_with_black_skateboard" android:scaleType="centerInside"/>
+        <TextView android:textSize="18.0sp" android:textStyle="normal" android:textColor="@android:color/primary_text_light" android:textColorHint="#ff808080" android:ellipsize="end" android:gravity="left|center" android:id="@id/search_widget_text" android:background="@drawable/search_text_background" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:hint="Quickdroid" android:singleLine="true" android:editable="false" android:drawableRight="@drawable/search" android:layout_weight="1.0" android:inputType="none"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="launchable.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="54.0dip">
+    <ImageView android:gravity="center_vertical" android:id="@id/thumbnail" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="36.0dip" android:layout_height="36.0dip"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/textContainer" android:paddingLeft="4.0dip" android:layout_width="fill_parent" android:layout_height="54.0dip">
+        <TextView android:textSize="20.0dip" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+        <TextView android:textSize="12.0dip" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/infoText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="preferences.xml">
+      <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:quickdroid="http://schemas.android.com/apk/res/com.quickdroid" android:key="preferences">
+    <PreferenceCategory android:title="Search categories"/>
+    <PreferenceScreen android:title="Applications" android:key="appsSettings" android:summary="@string/appsSettingsSummary">
+        <CheckBoxPreference android:title="Search for applications" android:key="searchApps" android:defaultValue="true"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="appsNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchApps" android:defaultValue="4" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="appsPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchApps" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Contacts" android:key="contactsSettings" android:summary="@string/contactsSettingsSummary">
+        <CheckBoxPreference android:title="Search for contacts" android:key="searchContacts" android:defaultValue="true"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="contactsNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchContacts" android:defaultValue="4" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="contactsPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchContacts" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+        <CheckBoxPreference android:title="Contact groups" android:key="allContactGroups" android:summary="Show contacts from all groups" android:dependency="searchContacts" android:defaultValue="false"/>
+        <CheckBoxPreference android:title="Contact photos" android:key="contactPhotos" android:summary="Show contact photos" android:dependency="searchContacts" android:defaultValue="false"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Phone Numbers" android:key="phoneNumbersSettings" android:summary="@string/phoneNumbersSettingsSummary">
+        <CheckBoxPreference android:title="Search for phone numbers" android:key="searchPhoneNumbers" android:defaultValue="true"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="phoneNumbersNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchPhoneNumbers" android:defaultValue="4" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="phoneNumbersPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchPhoneNumbers" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Bookmarks" android:key="bookmarksSettings" android:summary="@string/bookmarksSettingsSummary">
+        <CheckBoxPreference android:title="Search for bookmarks" android:key="searchBookmarks" android:defaultValue="true"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="bookmarksNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchBookmarks" android:defaultValue="4" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="bookmarksPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchBookmarks" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Artists" android:key="artistsSettings" android:summary="@string/artistsSettingsSummary">
+        <CheckBoxPreference android:title="Search for artists" android:key="searchArtists" android:defaultValue="false"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="artistsNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchArtists" android:defaultValue="2" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="artistsPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchArtists" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Albums" android:key="albumsSettings" android:summary="@string/albumsSettingsSummary">
+        <CheckBoxPreference android:title="Search for albums" android:key="searchAlbums" android:defaultValue="false"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="albumsNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchAlbums" android:defaultValue="2" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="albumsPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchAlbums" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Songs" android:key="songsSettings" android:summary="@string/songsSettingsSummary">
+        <CheckBoxPreference android:title="Search for songs" android:key="searchSongs" android:defaultValue="false"/>
+        <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Suggestions" android:key="songsNumSuggestions" android:summary="Set the number of suggestions that may show up for this category" android:dependency="searchSongs" android:defaultValue="2" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="100"/>
+        <ListPreference android:entries="@array/patternMatchingLevels" android:title="Search pattern matching" android:key="songsPatternMatchingLevel" android:summary="Set the pattern matching level to be used for suggestions of this category" android:dependency="searchSongs" android:defaultValue="2" android:dialogTitle="Suggestions need to ..." android:negativeButtonText="Cancel" android:entryValues="@array/patternMatchingLevelValues"/>
+    </PreferenceScreen>
+    <PreferenceCategory android:title="Search history"/>
+    <CheckBoxPreference android:title="Search history" android:key="searchHistory" android:summary="Enable the search history" android:defaultValue="true"/>
+    <com.quickdroid.utils.NumberPickerPreference android:singleLine="true" android:title="Search history size" android:key="maxSearchHistorySize" android:summary="Set the search history size" android:dependency="searchHistory" android:defaultValue="10" android:positiveButtonText="OK" android:negativeButtonText="Cancel" android:inputType="number" quickdroid:minValue="1" quickdroid:maxValue="20"/>
+    <PreferenceCategory android:title="Miscellaneous"/>
+    <CheckBoxPreference android:title="Quick launch" android:key="quickLaunch" android:summary="Provide permanent access to Quickdroid via a status bar symbol" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Learning aptitude" android:key="searchFavoriteItems" android:summary="&quot;Give the user's favorite items a high ranking within the search results&quot;" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Gesture recognizer" android:key="gestureRecognizer" android:summary="Recognize alphabet gestures and control commands" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Speech recognizer" android:key="speechRecognizer" android:summary="Recognize speech input" android:defaultValue="false"/>
+    <CheckBoxPreference android:title="Soft keyboard" android:key="showSoftKeyboard" android:summary="Automatically show the soft keyboard" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Clear search text" android:key="clearSearchTextOnResume" android:summary="Clear the search text whenever Quickdroid is resumed" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Task and back stack behavior" android:key="backStackBehavior" android:summary="Keep Quickdroid in the back stack after launching something" android:defaultValue="true"/>
+    <CheckBoxPreference android:title="Back key handling" android:key="backKeyHandling" android:summary="Exit Quickdroid by pressing the back key once" android:defaultValue="true"/>
+</PreferenceScreen>
+    </File>
+  </Directory>
+  <Directory directory_name="xml">
+    <File file_name="search_widget_info.xml">
+      <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="294.0dip" android:minHeight="72.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/search_widget"/>
+    </File>
+  </Directory>
+</App>

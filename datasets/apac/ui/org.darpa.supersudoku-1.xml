@@ -1,0 +1,37 @@
+<App name="org.darpa.supersudoku" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_solve_puzzle.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="activity_new_puzzle.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/editText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:inputType="number">
+        <requestFocus/>
+    </EditText>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main_menu.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/solve_puzzle_buton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="43.0dip" android:layout_marginTop="76.0dip" android:text="Solve Puzzle" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <Button android:id="@id/new_puzzle_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="68.0dip" android:text="Create New Puzzle" android:layout_below="@id/solve_puzzle_buton" android:layout_alignLeft="@id/solve_puzzle_buton"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_solve_puzzle.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_new_puzzle.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_main_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

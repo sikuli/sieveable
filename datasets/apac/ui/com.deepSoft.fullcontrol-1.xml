@@ -1,0 +1,101 @@
+<App name="com.deepSoft.fullcontrol" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="time_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/cat_detail_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medium Text"/>
+        <TimePicker android:id="@id/timePicker1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="1">
+            <Button android:layout_gravity="right" android:id="@id/cancelTimer" android:layout_column="0" android:text="Cancel Timer" android:layout_row="0"/>
+            <Button android:layout_gravity="left" android:id="@id/setTimer" android:layout_column="0" android:text="Set Timer" android:onClick="timeSetter" android:layout_row="0"/>
+        </GridLayout>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="fragment_cat_detail.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/cat_detail" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?android:attr/textAppearanceLarge"/>
+    </File>
+    <File file_name="music_controls.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/radio_detail" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/nextTrack" android:tag="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Next Track" android:onClick="changePlay" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/previousTrack" android:tag="2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Previous Track" android:onClick="changePlay" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/playMusic" android:tag="3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Play Music" android:onClick="changePlay" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/pauseMusic" android:tag="4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pause Music" android:onClick="changePlay" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/stopMusic" android:tag="5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Stop Music" android:onClick="changePlay" style="?android:attr/buttonStyleSmall"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="audio_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/audio_detail" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Get Current Values" android:onClick="initiateAudio"/>
+        <ToggleButton android:id="@id/audioAll" android:tag="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="All sounds muted" android:textOff="Click to mute all" android:onClick="muter"/>
+        <ToggleButton android:id="@id/audioRinger" android:tag="2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Ringer muted" android:textOff="Ringer on" android:onClick="muter"/>
+        <ToggleButton android:id="@id/audioNotifications" android:tag="3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Notifications muted" android:textOff="Notifications on" android:onClick="muter"/>
+        <ToggleButton android:id="@id/audioPrimary" android:tag="4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="System Volume muted" android:textOff="System Volume on" android:onClick="muter"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="activity_cat_list.xml">
+      <fragment xmlns:android="http://schemas.android.com/apk/res/android" android:name="com.deepSoft.fullcontrol.catListFragment" android:id="@id/cat_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip"/>
+    </File>
+    <File file_name="activity_cat_twopane.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+    <fragment android:name="com.deepSoft.fullcontrol.catListFragment" android:id="@id/cat_list" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+    <FrameLayout android:id="@id/cat_detail_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="timer_action_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/cat_detail_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ScrollView android:id="@id/scroll" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ToggleButton android:id="@id/autoMasterMute" android:tag="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Master volume muted" android:textOff="Master volume on" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoRinger" android:tag="2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Ringer muted" android:textOff="Ringer on" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoNotification" android:tag="3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Notifications muted" android:textOff="Notifications on" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoSysvol" android:tag="4" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="System Volume muted" android:textOff="System Volume on" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoAirplane" android:tag="5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Airplane Mode On" android:textOff="Airplane Mode Off" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoWifi" android:tag="6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Wi-Fi On" android:textOff="Wi-Fi Off" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoBluetooth" android:tag="7" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Bluetooth On" android:textOff="Bluetooth Off" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoLockscreen" android:tag="8" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Lockscreen deactivated" android:textOff="Lockscreen on" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoTorch" android:tag="9" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Torch On" android:textOff="Torch Off" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoNextTrack" android:tag="10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Start Next Track" android:textOff="&quot;Don't Start Next Track&quot;" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoPreviousTrack" android:tag="11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Start Previous Track" android:textOff="&quot;Don't Start Previous Track&quot;" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoPlayMusic" android:tag="12" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Start Music" android:textOff="&quot;Don't Start Music&quot;" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoPauseMusic" android:tag="13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Pause Music" android:textOff="&quot;Don't Pause Music&quot;" android:onClick="auto_set"/>
+            <ToggleButton android:id="@id/autoStopMusic" android:tag="14" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Stop Music" android:textOff="&quot;Don't Stop Music&quot;" android:onClick="auto_set"/>
+            <Button android:id="@id/autoComplete" android:tag="15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Finished Editing" android:onClick="auto_set" style="?android:attr/buttonStyleSmall"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
+    </File>
+    <File file_name="cal_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/cat_detail_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <CalendarView android:id="@id/calendarView" android:layout_width="fill_parent" android:layout_height="400.0dip" android:showWeekNumber="false"/>
+        <Button android:id="@id/calSet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Set Date" style="?android:attr/buttonStyleSmall"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="misc_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/radio_detail" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/lockscreenOff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Disable Lockscreen" android:onClick="lockscreen" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/launchApp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Launch Appliation" android:onClick="launchApp" style="?android:attr/buttonStyleSmall"/>
+        <Button android:id="@id/torch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Toggle Torch" android:onClick="torchMode" style="?android:attr/buttonStyleSmall"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+    <File file_name="radio_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/radio_detail" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Get Current Values" android:onClick="initiateRadio"/>
+        <ToggleButton android:id="@id/radioAirplane" android:tag="1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Airplane Mode On" android:textOff="Airplane Mode Off" android:onClick="radios"/>
+        <ToggleButton android:id="@id/radioWiFi" android:tag="2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Wi-Fi On" android:textOff="Wi-Fi Off" android:onClick="radios"/>
+        <ToggleButton android:id="@id/radioBluetooth" android:tag="3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textOn="Bluetooth On" android:textOff="Bluetooth Off" android:onClick="radios"/>
+    </LinearLayout>
+</FrameLayout>
+    </File>
+  </Directory>
+</App>

@@ -1,0 +1,394 @@
+<App name="org.entomologistproject.trac" version_code="2">
+  <Directory directory_name="layout">
+    <File file_name="gd_thumbnail_item_view.xml">
+      <greendroid.widget.itemview.ThumbnailItemView xmlns:android="http://schemas.android.com/apk/res/android" android:paddingLeft="?gdItemViewPreferredPaddingLeft" android:layout_height="wrap_content" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdThumbnailItemViewStyle">
+    <greendroid.widget.AsyncImageView android:id="@id/gd_thumbnail" android:layout_height="?gdItemViewPreferredHeight" android:scaleType="centerInside" style="?attr/gdThumbnailItemViewStyleThumbnail"/>
+    <TextView android:ellipsize="end" android:gravity="bottom" android:id="@id/gd_text" android:layout_width="fill_parent" android:singleLine="true" android:layout_toRightOf="@id/gd_thumbnail" style="?attr/gdThumbnailItemViewStyleText"/>
+    <TextView android:ellipsize="end" android:gravity="top" android:id="@id/gd_subtitle" android:layout_width="fill_parent" android:singleLine="true" android:layout_toRightOf="@id/gd_thumbnail" android:layout_below="@id/gd_text" android:layout_alignLeft="@id/gd_text" android:layout_alignParentBottom="true" style="?attr/gdThumbnailItemViewStyleSubtitle"/>
+</greendroid.widget.itemview.ThumbnailItemView>
+    </File>
+    <File file_name="comment_tab_view.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:gravity="bottom" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/newCommentLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/newCommentLabel" android:background="@drawable/detail_header" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="New Comment" android:onClick="toggleNewComment"/>
+        <EditText android:gravity="top" android:id="@id/newCommentEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:minLines="3"/>
+        <Button android:layout_gravity="right" android:id="@id/newCommentSave" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Submit"/>
+    </LinearLayout>
+    <ListView android:id="@id/commentList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:layout_above="@id/newCommentLayout" android:layout_alignParentTop="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="gd_tab_indicator.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:ellipsize="end" android:gravity="center" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="0.0dip" android:singleLine="true" android:layout_weight="1.0" style="?attr/gdTabIndicatorStyle"/>
+    </File>
+    <File file_name="gd_tab_content.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TabHost android:id="@android:id/tabhost" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TabWidget android:id="@android:id/tabs" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-2.0dip" android:layout_marginRight="-2.0dip"/>
+                <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+            </LinearLayout>
+        </TabHost>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_separator_item_view.xml">
+      <greendroid.widget.itemview.SeparatorItemView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:id="@id/gd_separator_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?gdSeparatorItemViewPreferredHeight" style="?attr/gdSeparatorItemViewStyle"/>
+    </File>
+    <File file_name="bug_detail_view.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TabHost android:id="@android:id/tabhost" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TabWidget android:id="@android:id/tabs" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-2.0dip" android:layout_marginRight="-2.0dip"/>
+                <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+            </LinearLayout>
+        </TabHost>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_subtitle_item_view.xml">
+      <greendroid.widget.itemview.SubtitleItemView xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="?gdItemViewPreferredPaddingLeft" android:layout_height="wrap_content" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdSubtitleItemViewStyle">
+    <TextView android:ellipsize="end" android:gravity="bottom|left|center" android:id="@id/gd_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="0.5" style="?attr/gdSubtitleItemViewStyleText"/>
+    <TextView android:ellipsize="end" android:gravity="top|left|center" android:id="@id/gd_subtitle" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="0.5" style="?attr/gdSubtitleItemViewStyleSubtitle"/>
+</greendroid.widget.itemview.SubtitleItemView>
+    </File>
+    <File file_name="login.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+            <TextView android:id="@id/account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose Account"/>
+            <Spinner android:id="@id/accounts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip"/>
+            <TextView android:textColor="#ffcc0000" android:layout_gravity="center" android:id="@id/error" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            <TextView android:id="@id/password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password"/>
+            <EditText android:id="@id/passwordEdit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+            <CheckBox android:id="@id/rememberMe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remember me"/>
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <Button android:id="@id/accountButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="New Account" android:layout_alignParentLeft="true"/>
+                <Button android:id="@id/loginButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Login" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_action_bar_item_base.xml">
+      <ImageButton xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/gd_action_bar_item" android:layout_height="fill_parent" android:scaleType="center" style="?attr/gdActionBarItemStyle"/>
+    </File>
+    <File file_name="gd_progress_item_view.xml">
+      <greendroid.widget.itemview.ProgressItemView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdProgressItemViewStyle">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/gd_progress_bar" android:indeterminate="true" style="?attr/gdProgressItemViewStyleProgressBar"/>
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/gd_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="?attr/gdProgressItemViewStyleText"/>
+    </LinearLayout>
+</greendroid.widget.itemview.ProgressItemView>
+    </File>
+    <File file_name="status_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/linearLayout1" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="350.0dip">
+    <TextView android:textSize="20.0sp" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status"/>
+    <Spinner android:id="@id/statusSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <TextView android:textSize="20.0sp" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resolution"/>
+    <Spinner android:id="@id/resolutionSpinner" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:layout_gravity="right" android:id="@id/statusDialogOkButton" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OK"/>
+</LinearLayout>
+    </File>
+    <File file_name="gd_text_item_view.xml">
+      <greendroid.widget.itemview.TextItemView xmlns:android="http://schemas.android.com/apk/res/android" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/gd_text" android:paddingLeft="?gdItemViewPreferredPaddingLeft" android:layout_height="?gdItemViewPreferredHeight" android:minHeight="?gdItemViewPreferredHeight" android:singleLine="true" style="?attr/gdTextItemViewStyle"/>
+    </File>
+    <File file_name="accounts.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+            <RelativeLayout android:id="@id/relativeLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:id="@id/settingsUrl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="URL" android:layout_alignLeft="@id/urlEdit" android:layout_alignParentTop="true"/>
+                <TextView android:id="@id/settingsPort" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Port" android:layout_alignLeft="@id/portEdit" android:layout_alignParentTop="true"/>
+                <Spinner android:entries="@array/protocols" android:id="@id/protocolEdit" android:nextFocusDown="@id/urlEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/settingsUrl" android:layout_alignParentLeft="true"/>
+                <EditText android:id="@id/portEdit" android:nextFocusDown="@id/usernameEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/settingsPort" android:layout_alignParentRight="true" android:inputType="number"/>
+                <EditText android:id="@id/urlEdit" android:nextFocusDown="@id/portEdit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/portEdit" android:layout_toRightOf="@id/protocolEdit" android:layout_below="@id/settingsUrl" android:inputType="textUri">
+                    <requestFocus/>
+                </EditText>
+            </RelativeLayout>
+            <TextView android:id="@id/username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Username"/>
+            <EditText android:id="@id/usernameEdit" android:nextFocusDown="@id/passwordEdit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="text"/>
+            <TextView android:id="@id/password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Password"/>
+            <EditText android:id="@id/passwordEdit" android:nextFocusDown="@id/rememberMe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+            <CheckBox android:id="@id/rememberMe" android:nextFocusDown="@id/settingsSaveButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remember me"/>
+            <Button android:layout_gravity="bottom|right|center" android:id="@id/settingsSaveButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save"/>
+        </LinearLayout>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="changelog_layout.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/ScrollView01" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/changelogTextView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Changelog"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="gd_expandable_list_content_normal.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ExpandableListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="settings.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+            <LinearLayout android:orientation="horizontal" android:id="@id/linearLayout2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <CheckBox android:id="@id/updateCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Update every"/>
+                <Spinner android:id="@id/updateUnit" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <CheckBox android:id="@id/onlyOverWifiCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Only connect over WiFi"/>
+            <TextView android:id="@id/session" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Session Length"/>
+            <Spinner android:id="@id/sessionTime" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+            <Button android:layout_gravity="bottom|right|center" android:id="@id/settingsSaveButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save"/>
+        </LinearLayout>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_quick_action_grid_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:singleLine="true" style="?attr/gdQuickActionGridItemStyle"/>
+    </File>
+    <File file_name="gd_list_content_normal.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_content_empty.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" style="&#10;         &#10;    "/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_long_text_item_view.xml">
+      <greendroid.widget.itemview.DescriptionItemView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:id="@id/gd_text" android:paddingLeft="?gdItemViewPreferredPaddingLeft" android:layout_height="wrap_content" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdLongTextItemViewStyle"/>
+    </File>
+    <File file_name="main.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_content_dashboard.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" style="&#10;         &#10;    "/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_content_normal.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip"/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"/>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="summary_tab_view.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/summaryScrollView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:id="@id/summaryTabView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/textView10" android:background="@drawable/detail_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Status"/>
+        <LinearLayout android:orientation="horizontal" android:id="@id/statusLayout" android:background="@drawable/detail_value" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:onClick="statusClick">
+            <TextView android:textSize="20.0dip" android:id="@id/statusId" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Open" android:onClick="statusClick"/>
+            <TextView android:textSize="20.0dip" android:id="@id/resolutionId" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NONE"/>
+        </LinearLayout>
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/textView1" android:background="@drawable/detail_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Reported By"/>
+        <TextView android:textSize="20.0dip" android:id="@id/reportedById" android:background="@drawable/detail_value" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Reporter" android:onClick="reportedClick"/>
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/textView2" android:background="@drawable/detail_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Assigned To"/>
+        <TextView android:textSize="20.0dip" android:id="@id/assignedToEdit" android:background="@drawable/detail_value" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Reporter" android:onClick="assignedToClick"/>
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/textView3" android:background="@drawable/detail_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Summary"/>
+        <TextView android:textSize="20.0dip" android:id="@id/summaryId" android:background="@drawable/detail_value" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Summary" android:onClick="summaryClick"/>
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/textView4" android:background="@drawable/detail_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Description"/>
+        <FrameLayout android:id="@id/frameLayout1" android:background="@drawable/detail_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+            <TextView android:textSize="20.0dip" android:id="@id/descriptionId" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Description"/>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="attachment_row.xml">
+      <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/tableLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="1">
+    <TableRow android:id="@id/tableRow1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/attachmentFilename" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Filename"/>
+        <TextView android:textSize="20.0dip" android:gravity="right" android:id="@id/attachmentSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Size"/>
+    </TableRow>
+    <TableRow android:id="@id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0dip" android:id="@id/attachmentSubmitter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Username"/>
+        <TextView android:textSize="20.0dip" android:gravity="right" android:id="@id/attachmentTimestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11/11/2010 14:45"/>
+    </TableRow>
+    <TableRow android:id="@id/tableRow3" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0dip" android:id="@id/attachmentDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_span="2" android:text="Description"/>
+    </TableRow>
+</TableLayout>
+    </File>
+    <File file_name="gd_description_item_view.xml">
+      <greendroid.widget.itemview.DescriptionItemView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:id="@id/gd_description" android:paddingLeft="?gdItemViewPreferredPaddingLeft" android:layout_height="wrap_content" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdDescriptionItemViewStyle"/>
+    </File>
+    <File file_name="gd_expandable_list_content_dashboard.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" style="&#10;         &#10;    "/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ExpandableListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_expandable_list_content_empty.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" style="&#10;         &#10;    "/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ExpandableListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_list_content_empty.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" style="&#10;         &#10;    "/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="details_tab_view.xml">
+      <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/detailsTabView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:stretchColumns="1">
+    <TableRow/>
+    <TableRow/>
+    <TableRow android:id="@id/typeRow">
+        <TextView android:textSize="20.0dip" android:layout_gravity="center_vertical" android:id="@id/typeLabelId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Type:"/>
+        <Spinner android:id="@id/typeSpinner" android:layout_width="100.0dip" android:layout_height="wrap_content" android:prompt="Bug Type"/>
+    </TableRow>
+    <TableRow android:id="@id/priorityRow">
+        <TextView android:textSize="20.0dip" android:layout_gravity="center_vertical" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Priority:"/>
+        <Spinner android:id="@id/prioritySpinner" android:layout_width="100.0dip" android:layout_height="wrap_content" android:prompt="Priority"/>
+    </TableRow>
+    <TableRow android:id="@id/componentRow">
+        <TextView android:textSize="20.0dip" android:layout_gravity="center_vertical" android:id="@id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Component:"/>
+        <Spinner android:id="@id/componentSpinner" android:layout_width="100.0dip" android:layout_height="wrap_content" android:prompt="Component"/>
+    </TableRow>
+    <TableRow android:id="@id/versionRow">
+        <TextView android:textSize="20.0dip" android:layout_gravity="center_vertical" android:id="@id/textView5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Version:"/>
+        <Spinner android:id="@id/versionSpinner" android:layout_width="100.0dip" android:layout_height="wrap_content" android:prompt="Version"/>
+    </TableRow>
+    <TableRow android:id="@id/milestoneRow">
+        <TextView android:textSize="20.0dip" android:layout_gravity="center_vertical" android:id="@id/milestoneLabelId" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Milestone:"/>
+        <Spinner android:id="@id/milestoneSpinner" android:layout_width="100.0dip" android:layout_height="wrap_content" android:prompt="Milestone"/>
+    </TableRow>
+</TableLayout>
+    </File>
+    <File file_name="about.xml">
+      <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="@android:color/white" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@android:color/black" android:id="@id/about" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="About"/>
+    </LinearLayout>
+</ScrollView>
+    </File>
+    <File file_name="spinner_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="20.0dip" android:textColor="#ff000000" android:id="@android:id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="comment_row.xml">
+      <TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/commentRowTableLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stretchColumns="1">
+    <TableRow android:id="@id/commentRowTableRowTop" android:background="@drawable/comment_header" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="20.0dip" android:textStyle="bold" android:id="@id/commenter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Anonymous"/>
+    </TableRow>
+    <TableRow android:id="@id/commentRowTableRowDescription" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0dip" android:id="@id/comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_span="2" android:text="A Comment Here"/>
+    </TableRow>
+    <TableRow android:id="@id/commentRowTableRowBottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="#ff737d58" android:gravity="right" android:id="@id/commentDate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_span="2" android:text="1/1/1970 12:43:00"/>
+    </TableRow>
+</TableLayout>
+    </File>
+    <File file_name="gd_segment.xml">
+      <CheckBox xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="?gdSegmentTextSize" android:textColor="?gdSegmentTextColor" android:ellipsize="marquee" android:background="?gdSegmentBackground" android:layout_width="0.0dip" android:layout_height="wrap_content" android:button="?gdSegmentCheckmark" android:singleLine="true" android:layout_weight="1.0"/>
+    </File>
+    <File file_name="gd_quick_action_bar_item.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:focusable="true" android:clickable="true" android:singleLine="true" style="?attr/gdQuickActionBarItemStyle"/>
+    </File>
+    <File file_name="gd_quick_action_bar.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout android:id="@id/gdi_header" android:background="@drawable/gd_quick_action_top_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0px" android:layout_below="@id/gdi_arrow_up"/>
+    <HorizontalScrollView android:id="@id/gdi_scroll" android:background="@drawable/gd_quick_action_bar_background" android:scrollbars="none" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/gdi_header">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/gdi_rack" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <View android:background="@drawable/gd_quick_action_bar_grip_left" android:layout_width="wrap_content" android:layout_height="fill_parent"/>
+            <LinearLayout android:id="@id/gdi_quick_action_items" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <View android:background="@drawable/gd_quick_action_bar_grip_right" android:layout_width="wrap_content" android:layout_height="fill_parent"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <FrameLayout android:id="@id/gdi_footer" android:background="@drawable/gd_quick_action_bar_bottom_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/gdi_scroll"/>
+    <ImageView android:id="@id/gdi_arrow_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gd_quick_action_arrow_up"/>
+    <ImageView android:id="@id/gdi_arrow_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0px" android:src="@drawable/gd_quick_action_bar_arrow_down" android:layout_below="@id/gdi_footer"/>
+</RelativeLayout>
+    </File>
+    <File file_name="gd_subtext_item_view.xml">
+      <greendroid.widget.itemview.SubtextItemView xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="?gdItemViewPreferredPaddingLeft" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdSubtextItemViewStyle">
+    <TextView android:ellipsize="end" android:gravity="bottom|left|center" android:id="@id/gd_text" android:layout_width="fill_parent" android:layout_height="0.0dip" android:singleLine="true" android:layout_weight="0.5" style="?attr/gdSubtextItemViewStyleText"/>
+    <TextView android:gravity="top|left|center" android:id="@id/gd_subtext" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.5" style="?attr/gdSubtextItemViewStyleSubtext"/>
+</greendroid.widget.itemview.SubtextItemView>
+    </File>
+    <File file_name="gd_action_bar_item_loader.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:layout_gravity="center" android:id="@id/gd_action_bar_item_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleSmallInverse"/>
+<ImageButton android:id="@id/gd_action_bar_item" android:layout_height="fill_parent" android:scaleType="center" style="?attr/gdActionBarItemStyle"/></FrameLayout>
+    </File>
+    <File file_name="gd_drawable_item_view.xml">
+      <greendroid.widget.itemview.DrawableItemView xmlns:android="http://schemas.android.com/apk/res/android" android:padding="?gdItemViewPreferredPaddingLeft" android:layout_height="wrap_content" android:minHeight="?gdItemViewPreferredHeight" style="?attr/gdDrawableItemViewStyle">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/gd_drawable" style="?attr/gdDrawableItemViewStyleDrawable"/>
+    <TextView android:gravity="center_vertical" android:id="@id/gd_text" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:layout_weight="1.0" style="?attr/gdDrawableItemViewStyleText"/>
+</greendroid.widget.itemview.DrawableItemView>
+    </File>
+    <File file_name="gd_list_content_dashboard.xml">
+      <greendroid.widget.ActionBarHost xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/gd_action_bar_host" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <greendroid.widget.GDActionBar android:id="@id/gd_action_bar" android:background="?gdActionBarBackground" android:layout_width="fill_parent" android:layout_height="45.0dip" style="&#10;         &#10;    "/>
+    <FrameLayout android:id="@id/gd_action_bar_content_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </FrameLayout>
+</greendroid.widget.ActionBarHost>
+    </File>
+    <File file_name="gd_quick_action_grid.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <FrameLayout android:id="@id/gdi_header" android:background="@drawable/gd_quick_action_top_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0px" android:layout_below="@id/gdi_arrow_up"/>
+    <GridView android:id="@id/gdi_grid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-1.0px" android:layout_below="@id/gdi_header" style="?attr/gdQuickActionGridStyle"/>
+    <FrameLayout android:id="@id/gdi_footer" android:background="@drawable/gd_quick_action_grid_bottom_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/gdi_grid"/>
+    <ImageView android:id="@id/gdi_arrow_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gd_quick_action_arrow_up"/>
+    <ImageView android:id="@id/gdi_arrow_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0px" android:src="@drawable/gd_quick_action_grid_arrow_down" android:layout_below="@id/gdi_footer"/>
+</RelativeLayout>
+    </File>
+    <File file_name="bug_list_item.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/relativeLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="#ff474747" android:id="@id/bugNumberId" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123"/>
+    <TextView android:textSize="10.0dip" android:textStyle="bold" android:textColor="#ffff0000" android:id="@id/bugUpdated" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Updated" android:layout_toRightOf="@id/bugNumberId"/>
+    <TextView android:textSize="18.0dip" android:textColor="#ff000000" android:ellipsize="end" android:id="@id/bugSummaryId" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TextView" android:layout_below="@id/bugNumberId"/>
+</RelativeLayout>
+    </File>
+    <File file_name="attachment_tab_view.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/attachmentTabView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@id/attachmentList" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="details_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_upload" android:id="@id/menu_upload" android:title="Upload Changes"/>
+    <item android:icon="@drawable/ic_menu_edit" android:id="@id/menu_new_comment" android:title="New Comment"/>
+</menu>
+    </File>
+    <File file_name="system_menu.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_menu_preferences" android:id="@id/menu_settings" android:title="Settings"/>
+    <item android:icon="@drawable/ic_menu_edit" android:id="@id/menu_accounts" android:title="Edit Account"/>
+    <item android:icon="@drawable/ic_menu_help" android:id="@id/menu_about" android:title="About"/>
+    <item android:icon="@drawable/ic_menu_logout" android:id="@id/menu_logout" android:title="Logout"/>
+</menu>
+    </File>
+  </Directory>
+</App>

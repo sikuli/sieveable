@@ -1,0 +1,42 @@
+<App name="com.deryl.newscollator" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="activity_add_feed.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/feedNameEditText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="86.0dip" android:ems="10" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:inputType="text">
+        <requestFocus/>
+    </EditText>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/feedAddressTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="47.0dip" android:text="Feed Name" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <EditText android:id="@id/feedAddressEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="130.0dip" android:text="http://www." android:ems="10" android:layout_below="@id/feedNameEditText" android:layout_alignParentLeft="true" android:inputType="text"/>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/feedNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="62.0dip" android:text="Feed Address" android:layout_alignBottom="@id/feedAddressEditText" android:layout_centerHorizontal="true"/>
+    <Button android:id="@id/activate_feed_button" android:layout_width="200.0dip" android:layout_height="wrap_content" android:layout_marginBottom="49.0dip" android:text="Add Feed" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_item_detail.xml">
+      <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/item_detail_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <TextureView android:scrollbarStyle="insideOverlay" android:id="@id/textureView1" android:scrollbars="vertical" android:clickable="false" android:longClickable="false" android:layout_width="266.0dip" android:layout_height="wrap_content"/>
+</FrameLayout>
+    </File>
+    <File file_name="activity_item_twopane.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:divider="?android:dividerHorizontal" android:showDividers="middle">
+    <fragment android:name="com.deryl.newscollator.ItemListFragment" android:id="@id/item_list" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"/>
+    <FrameLayout android:id="@id/item_detail_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="3.0"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_item_list.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/LinearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:name="com.deryl.newscollator.ItemListFragment" android:id="@id/item_list" android:layout_width="270.0dip" android:layout_height="145.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_weight="0.83"/>
+    <Button android:gravity="bottom" android:id="@id/add_feed_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Add Feed"/>
+</LinearLayout>
+    </File>
+    <File file_name="fragment_item_detail.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/item_detail" android:padding="16.0dip" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?android:attr/textAppearanceLarge"/>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_add_feed.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

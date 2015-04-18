@@ -1,0 +1,82 @@
+<App name="com.deryl.wordhelper" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="layout_clear_data.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center" android:orientation="vertical" android:background="#ffcfd59e" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <Button android:gravity="center" android:id="@id/buttonYes" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Yes" android:layout_weight="2.0"/>
+        <Button android:gravity="center" android:id="@id/buttonNo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No" android:layout_weight="2.0"/>
+    </LinearLayout>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_tile_rack.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff932c77" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <EditText android:id="@id/editText1" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="82.0dip" android:ems="10" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/minLetters" android:background="#ffd0a6c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Minimum Length of generated words" android:layout_below="@id/editText1" android:layout_centerHorizontal="true"/>
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/tileContents" android:background="#ffd0a6c5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:text="Contents of the tile rack" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <NumberPicker android:id="@id/numberPicker1" android:background="#ffd0a6c5" android:layout_width="wrap_content" android:layout_height="150.0dip" android:layout_marginTop="36.0dip" android:layout_below="@id/minLetters" android:layout_centerHorizontal="true"/>
+    <Button android:id="@id/buttonLetterAccept" android:background="#ffcfd59e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="44.0dip" android:text="Accept" android:layout_below="@id/numberPicker1" android:layout_alignRight="@id/editText1"/>
+    <Button android:id="@id/buttonLetterCancel" android:background="#ffcfd59e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:layout_alignBaseline="@id/buttonLetterAccept" android:layout_alignLeft="@id/editText1" android:layout_alignBottom="@id/buttonLetterAccept"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_word_display.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff932c77" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ProgressBar android:id="@id/progressBarWords" android:background="#ffd0a6c5" android:layout_width="260.0dip" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" style="?android:attr/progressBarStyleHorizontal"/>
+    <Button android:id="@id/wordsMainButton" android:background="#ffcfd59e" android:layout_width="130.0dip" android:layout_height="wrap_content" android:layout_marginRight="14.0dip" android:layout_marginBottom="15.0dip" android:text="Main" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    <TextView android:id="@id/wordsView" android:background="#ffffffff" android:layout_width="260.0dip" android:layout_height="320.0dip" android:layout_marginTop="22.0dip" android:layout_below="@id/progressBarWords" android:layout_alignLeft="@id/progressBarWords"/>
+    <Button android:id="@id/generateButton" android:background="#ffcfd59e" android:layout_width="130.0dip" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginBottom="15.0dip" android:text="Generate" android:layout_alignBaseline="@id/wordsMainButton" android:layout_alignBottom="@id/wordsMainButton" android:layout_alignParentLeft="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff932c77" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:id="@id/buttonSetupSpaces" android:background="#ffcfd59e" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginTop="49.0dip" android:text="Setup Spaces" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <Button android:id="@id/buttonViewResults" android:background="#ffcfd59e" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginTop="140.0dip" android:text="View Words" android:layout_below="@id/buttonSetupSpaces" android:layout_alignLeft="@id/buttonSetupSpaces"/>
+    <Button android:id="@id/buttonTileRack" android:background="#ffcfd59e" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginTop="46.0dip" android:text="Tile Rack" android:layout_below="@id/buttonSetupSpaces" android:layout_centerHorizontal="true"/>
+    <Button android:id="@id/buttonClearData" android:background="#ffcfd59e" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginTop="46.0dip" android:text="Clear Data" android:layout_below="@id/buttonViewResults" android:layout_alignLeft="@id/buttonViewResults"/>
+</RelativeLayout>
+    </File>
+    <File file_name="activity_used_spaces.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="#ff932c77" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <CheckBox android:gravity="center" android:id="@id/lockedBox0" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="40.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox1" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="21.0dip" android:layout_toRightOf="@id/lockedBox0" android:layout_alignBaseline="@id/lockedBox0" android:layout_alignBottom="@id/lockedBox0"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox2" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/lockedBox1" android:layout_alignBaseline="@id/lockedBox1" android:layout_alignBottom="@id/lockedBox1"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox3" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="26.0dip" android:layout_toRightOf="@id/lockedBox2" android:layout_alignBaseline="@id/lockedBox2" android:layout_alignBottom="@id/lockedBox2"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox4" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/lockedBox3" android:layout_alignBottom="@id/lockedBox3" android:layout_centerHorizontal="true"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox5" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="30.0dip" android:layout_toRightOf="@id/lockedBox4" android:layout_alignBaseline="@id/lockedBox4" android:layout_alignBottom="@id/lockedBox4"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox6" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="28.0dip" android:layout_toRightOf="@id/lockedBox5" android:layout_alignBaseline="@id/lockedBox5" android:layout_alignBottom="@id/lockedBox5"/>
+    <CheckBox android:gravity="center" android:id="@id/lockedBox7" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/lockedBox6" android:layout_alignBaseline="@id/lockedBox6" android:layout_alignBottom="@id/lockedBox6"/>
+    <Spinner android:id="@id/letterSpinner0" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginBottom="15.0dip" android:layout_above="@id/lockedBox0" android:layout_alignLeft="@id/lockedBox0"/>
+    <Spinner android:id="@id/letterSpinner1" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner0" android:layout_alignLeft="@id/lockedBox1" android:layout_alignBottom="@id/letterSpinner0"/>
+    <Spinner android:id="@id/letterSpinner2" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner1" android:layout_alignLeft="@id/lockedBox2" android:layout_alignBottom="@id/letterSpinner1"/>
+    <Spinner android:id="@id/letterSpinner3" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner2" android:layout_alignLeft="@id/lockedBox3" android:layout_alignBottom="@id/letterSpinner2"/>
+    <Spinner android:id="@id/letterSpinner4" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner3" android:layout_alignLeft="@id/lockedBox4" android:layout_alignBottom="@id/letterSpinner3"/>
+    <Spinner android:id="@id/letterSpinner5" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner4" android:layout_alignLeft="@id/lockedBox5" android:layout_alignBottom="@id/letterSpinner4"/>
+    <Spinner android:id="@id/letterSpinner6" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner5" android:layout_alignLeft="@id/lockedBox6" android:layout_alignBottom="@id/letterSpinner5"/>
+    <Spinner android:id="@id/letterSpinner7" android:background="#ffffffff" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_alignBaseline="@id/letterSpinner6" android:layout_alignLeft="@id/lockedBox7" android:layout_alignBottom="@id/letterSpinner6"/>
+    <Button android:id="@id/buttonAccept" android:background="#ffcfd59e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:text="Accept" android:layout_alignLeft="@id/lockedBox1" android:layout_alignParentBottom="true"/>
+    <Button android:id="@id/buttonCancel" android:background="#ffcfd59e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:layout_alignBaseline="@id/buttonAccept" android:layout_alignLeft="@id/lockedBox5" android:layout_alignBottom="@id/buttonAccept"/>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_tile_rack.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_word_display.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+    <File file_name="activity_used_spaces.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>

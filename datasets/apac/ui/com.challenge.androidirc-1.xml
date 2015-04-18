@@ -1,0 +1,89 @@
+<App name="com.challenge.androidirc" version_code="1">
+  <Directory directory_name="layout">
+    <File file_name="join_channel_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip">
+    <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Channel Name" android:layout_weight="0.3"/>
+    <EditText android:id="@id/dialog_channel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="channel" android:layout_weight="0.7" android:inputType="text"/>
+</LinearLayout>
+    </File>
+    <File file_name="user_row_layout.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="10.0sp" android:textStyle="italic" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="chat_fragment.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:background="@drawable/rounded_box" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="4.0dip"/>
+</LinearLayout>
+    </File>
+    <File file_name="main.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <fragment android:name="com.challenge.androidirc.ChannelFragment" android:id="@id/channel_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal" android:id="@id/users_and_chat" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.8">
+        <fragment android:name="com.challenge.androidirc.UserListFragment" android:id="@id/user_list_fragment" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.2"/>
+        <fragment android:name="com.challenge.androidirc.ChatFragment" android:id="@id/chat_fragment" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.8"/>
+    </LinearLayout>
+    <fragment android:name="com.challenge.androidirc.TextEntryFragment" android:id="@id/text_entry_fragment" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+    </File>
+    <File file_name="chat_row_layout.xml">
+      <TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="10.0sp" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"/>
+    </File>
+    <File file_name="user_list_fragment.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <ListView android:id="@android:id/list" android:background="@drawable/rounded_box" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="4.0dip"/>
+</LinearLayout>
+    </File>
+    <File file_name="channel_fragment.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <TextView android:textStyle="italic" android:layout_gravity="center_vertical" android:id="@id/serverName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Disconnected" android:layout_weight="0.4"/>
+    <Spinner android:layout_gravity="center_vertical" android:id="@id/channel_spinner" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.4"/>
+    <ImageButton android:layout_gravity="center_vertical" android:id="@id/join_channel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/add" android:layout_weight="0.1" android:contentDescription="Add Channel" style="?android:attr/borderlessButtonStyle"/>
+    <ImageButton android:layout_gravity="center_vertical" android:id="@id/leave_channel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/close" android:layout_weight="0.1" android:contentDescription="Leave Channel" style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>
+    </File>
+    <File file_name="activity_main.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@id/linearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <ListView android:id="@id/listViewUsers" android:layout_width="100.0dip" android:layout_height="433.0dip"/>
+    </LinearLayout>
+    <EditText android:id="@id/editTextChat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:ems="10" android:layout_toRightOf="@id/linearLayout1" android:layout_alignBottom="@id/linearLayout1" android:layout_alignParentRight="true" android:inputType="textMultiLine"/>
+    <EditText android:id="@id/editTextMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Enter Text" android:ems="10" android:layout_toLeftOf="@id/buttonSend" android:layout_alignTop="@id/buttonSend" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <requestFocus/>
+    </EditText>
+    <Button android:id="@id/buttonSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    </File>
+    <File file_name="connect_dialog.xml">
+      <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip">
+        <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Server:" android:layout_weight="0.3"/>
+        <EditText android:id="@id/dialog_server" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="Name or IP Address" android:layout_weight="0.7" android:inputType="text"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip">
+        <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Port:" android:layout_weight="0.3"/>
+        <EditText android:id="@id/dialog_port" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.7" android:inputType="text"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="4.0dip">
+        <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Username:" android:layout_weight="0.3"/>
+        <EditText android:id="@id/dialog_username" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.7" android:inputType="text"/>
+    </LinearLayout>
+</LinearLayout>
+    </File>
+    <File file_name="text_entry_fragment.xml">
+      <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <Button android:textSize="10.0sp" android:id="@id/send_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    <EditText android:textSize="10.0sp" android:id="@id/text_entry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Enter Text" android:ems="10" android:layout_toLeftOf="@id/send_button" android:layout_alignBaseline="@id/send_button" android:layout_alignBottom="@id/send_button" android:layout_alignParentLeft="true">
+        <requestFocus/>
+    </EditText>
+</RelativeLayout>
+    </File>
+  </Directory>
+  <Directory directory_name="menu">
+    <File file_name="activity_main.xml">
+      <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/green_phone" android:id="@id/menu_connect" android:title="Connect to server" android:showAsAction="ifRoom"/>
+    <item android:icon="@drawable/red_phone" android:id="@id/menu_disconnect" android:title="Disconnect" android:showAsAction="ifRoom"/>
+    <item android:id="@id/menu_settings" android:orderInCategory="100" android:title="Settings" android:showAsAction="never"/>
+</menu>
+    </File>
+  </Directory>
+</App>
