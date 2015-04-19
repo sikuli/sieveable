@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.fun.draw" versionName="2.2" versionCode="2">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:label="@string/app_name">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name=".Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="Draw" android:name=".Draw"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="View Source" android:name=".ViewSource"/>
+    </application>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="8"/></manifest>

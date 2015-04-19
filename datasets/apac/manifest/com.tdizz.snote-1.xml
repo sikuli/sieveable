@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.tdizz.snote" versionName="1.0" versionCode="1">
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:debuggable="true" android:icon="@drawable/task_manager" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name=".SuperNoteActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Recorder" android:name=".recorder.RecorderActivity"/>
+        <activity android:label="Keyboard Notes" android:name=".keyboardnotes.NoteList"/>
+        <activity android:label="New Text" android:name=".keyboardnotes.NewText"/>
+        <activity android:label="Note Edit" android:name=".keyboardnotes.NoteEdit"/>
+        <activity android:label="Help" android:name=".keyboardnotes.Help"/>
+        <activity android:label="SMS" android:name=".smsnotes.SmsNotes"/>
+        <activity android:label="Email" android:name=".emailnotes.EmailActivity"/>
+        <activity android:label="Draw" android:name=".drawnotes.DrawActivity"/>
+    </application>
+<uses-sdk android:minSdkVersion="15"/></manifest>

@@ -1,0 +1,93 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="org.thialfihar.android.apg" versionName="1.0.9 beta 00" versionCode="10900">
+    <application android:debuggable="true" android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_managePublicKeys" android:launchMode="singleTop" android:name=".PublicKeyListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable_public_keys"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_manageSecretKeys" android:launchMode="singleTop" android:name=".SecretKeyListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable_secret_keys"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_editKey" android:name=".EditKeyActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_selectRecipients" android:launchMode="singleTop" android:name=".SelectPublicKeyListActivity">
+            <intent-filter>
+                <action android:name="org.thialfihar.android.apg.intent.SELECT_PUBLIC_KEYS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable_public_keys"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_selectSignature" android:launchMode="singleTop" android:name=".SelectSecretKeyListActivity">
+            <intent-filter>
+                <action android:name="org.thialfihar.android.apg.intent.SELECT_SECRET_KEY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable_secret_keys"/>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_encrypt" android:name=".EncryptActivity">
+            <intent-filter>
+                <action android:name="org.thialfihar.android.apg.intent.ENCRYPT"/>
+                <action android:name="org.thialfihar.android.apg.intent.ENCRYPT_FILE"/>
+                <action android:name="org.thialfihar.android.apg.intent.ENCRYPT_AND_RETURN"/>
+                <action android:name="org.thialfihar.android.apg.intent.GENERATE_SIGNATURE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_decrypt" android:name=".DecryptActivity">
+            <intent-filter>
+                <action android:name="org.thialfihar.android.apg.intent.DECRYPT"/>
+                <action android:name="org.thialfihar.android.apg.intent.DECRYPT_FILE"/>
+                <action android:name="org.thialfihar.android.apg.intent.DECRYPT_AND_RETURN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/app_name" android:name=".GeneralActivity" android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*" android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/*" android:scheme=""/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_mailInbox" android:name=".MailListActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_keyServerQuery" android:name=".KeyServerQueryActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_preferences" android:name=".PreferencesActivity"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/title_keyServerPreference" android:name=".KeyServerPreferenceActivity"/>
+        <service android:name=".Service"/>
+        <provider android:authorities="org.thialfihar.android.apg.provider" android:name="org.thialfihar.android.apg.provider.DataProvider" android:readPermission="org.thialfihar.android.apg.permission.READ_KEY_DETAILS"/>
+    </application>
+    <permission android:description="@string/permission_read_key_details_description" android:label="@string/permission_read_key_details_label" android:name="org.thialfihar.android.apg.permission.READ_KEY_DETAILS" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="com.google.android.providers.gmail.permission.READ_GMAIL"/>
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.fsck.k9.permission.READ_ATTACHMENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+<uses-sdk android:targetSdkVersion="5" android:minSdkVersion="3"/></manifest>

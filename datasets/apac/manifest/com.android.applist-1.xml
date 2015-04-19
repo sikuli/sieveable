@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.applist" versionName="1.0" versionCode="1">
+    <application android:allowBackup="true" android:icon="@drawable/applist" android:label="@string/app_name" android:theme="@android:style/Theme.Holo">
+        <activity android:label="@string/app_name" android:name="com.android.applist.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_templates" android:name="com.android.applist.TemplatesActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:label="@string/title_activity_template_editor" android:name="com.android.applist.TemplateEditorActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".TemplatesActivity"/>
+        </activity>
+        <activity android:label="@string/title_activity_annotations" android:name="com.android.applist.AnnotationsActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <activity android:label="@string/title_activity_applist" android:name="com.android.applist.AppListActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity"/>
+        </activity>
+        <provider android:authorities="com.android.applist.packages" android:exported="true" android:name="com.android.applist.PackageContentProvider" android:readPermission="true" android:writePermission="false"/>
+    </application>
+<uses-sdk android:targetSdkVersion="19" android:minSdkVersion="19"/></manifest>

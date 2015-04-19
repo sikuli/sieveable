@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.autoquiet" versionName="1.0" versionCode="1">
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <application android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="MyApp" android:theme="@style/AppTheme">
+        <activity android:label="@string/title_activity_main" android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.autoquiet.LocListActivity"/>
+        <activity android:name="com.example.autoquiet.LocActivity"/>
+        <service android:name="com.example.autoquiet.ComCntrlService">
+            <intent-filter>
+                <action android:name="com.apac.ComCntrlService"/>
+            </intent-filter>
+        </service>
+    </application>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="15"/></manifest>

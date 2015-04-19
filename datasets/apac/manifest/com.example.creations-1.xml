@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.creations" versionName="1.0" versionCode="1">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application android:allowBackup="true" android:debuggable="true" android:icon="@drawable/creations_launcher" android:label="@string/app_name" android:largeHeap="true" android:name=".App" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <activity android:label="@string/app_name" android:name=".ui.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_share_to_google_drive" android:name=".ui.BaseGoogleApiActivity"/>
+        <activity android:label="@string/title_activity_view_creations" android:name=".ui.ViewCreationsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_share_to_google_drive" android:name=".ui.ShareToGoogleDriveActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_list_effects" android:name=".ui.ListEffectsActivity" android:parentActivityName="android.app.ListActivity" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="android.app.ListActivity"/>
+        </activity>
+        <activity android:name=".ui.FileExplorerActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_show_image" android:name="com.example.creations.ui.ShowImageActivity" android:screenOrientation="portrait"/>
+    </application>
+<uses-sdk android:targetSdkVersion="19" android:minSdkVersion="19"/></manifest>

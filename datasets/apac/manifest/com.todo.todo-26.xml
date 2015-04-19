@@ -1,0 +1,53 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.todo.todo" versionName="1.6.5" versionCode="26">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:backupAgent="com.todo.todo.MyBackupAgent" android:debuggable="true" android:icon="@drawable/icon" android:label="@string/app_name">
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAIEBz6YvAP7vPDajfXEpDWoYAwRrANAakiO3xJCw"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name=".KTodo" android:theme="@style/MyTheme" android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.todo.todo.SHOW_WIDGET_DATA"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/edit_tags" android:launchMode="standard" android:name=".EditTags" android:windowSoftInputMode="adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/widget_configure_title" android:launchMode="singleTop" android:name=".widget.ConfigureActivity" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/prefs_title" android:name=".preferences.Preferences"/>
+        <receiver android:label="@string/widget_2x2" android:name=".widget.KTodoWidget22">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_2x2_info"/>
+        </receiver>
+        <receiver android:label="@string/widget_2x1" android:name=".widget.KTodoWidget21">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_2x1_info"/>
+        </receiver>
+        <receiver android:label="@string/widget_2x4" android:name=".widget.KTodoWidget24">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_2x4_info"/>
+        </receiver>
+        <receiver android:label="@string/widget_4x2" android:name=".widget.KTodoWidget42">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_4x2_info"/>
+        </receiver>
+        <receiver android:label="@string/widget_4x4" android:name=".widget.KTodoWidget44">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_4x4_info"/>
+        </receiver>
+        <service android:name=".widget.UpdateService"/>
+    </application>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="14"/></manifest>

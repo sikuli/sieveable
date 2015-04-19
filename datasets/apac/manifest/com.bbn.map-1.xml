@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bbn.map" versionName="1.0" versionCode="1">
+    <provider android:authorities="com.bbn.harborfinder.SearchProvider" android:name="com.bbn.map.SearchProvider"/>
+    <supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <service android:name=".GPSService"/>
+        <activity android:label="Layers" android:name=".LayerListActivity"/>
+        <activity android:label="GPS Track" android:name=".layer.config.GPSLayerConfig"/>
+        <activity android:label="@string/app_name" android:launchMode="singleTop" android:name=".DefaultMapActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+        </activity>
+    </application>
+<uses-sdk android:minSdkVersion="7"/></manifest>

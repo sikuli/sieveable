@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.android.SMSBlocker" versionName="1.0" versionCode="1">
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name">
+        <activity android:label="@string/app_name" android:name=".SMSBlockerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/user_rules" android:name="SMSUserRulesActivity"/>
+        <activity android:label="@string/auto_rules" android:name="SMSAutoRulesActivity"/>
+        <activity android:label="@string/add_user_rule" android:name="SMSAddUserRuleActivity"/>
+        <receiver android:enabled="true" android:exported="true" android:name="SMSBlockerReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.SMSBlocker.SMSBlockerReceiver.filter_switch_on"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="android.SMSBlocker.SMSBlockerReceiver.filter_switch_off"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:name="SMSBlockerService"/>
+    </application>
+<uses-sdk android:minSdkVersion="15"/></manifest>

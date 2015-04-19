@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.bbn.apac.orienteering" versionName="1.0" versionCode="1">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:icon="@drawable/compass" android:label="@string/app_name" android:persistent="false">
+        <activity android:label="@string/app_name" android:name="com.bbn.apac.orienteering.ui.NavActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name=".ui.service.NavigationService" android:process=":NavigationServiceProcess" android:stopWithTask="true"/>
+        <service android:name=".gps.gps.GPSService" android:process=":GPSServiceProcess"/>
+        <service android:name=".gps.compass.CompassService" android:process=":CompassServiceProcess"/>
+        <uses-library android:name="com.google.android.maps"/>
+        <activity android:name=".ui.DetailActivity" android:screenOrientation="portrait"/>
+    </application>
+<uses-sdk android:minSdkVersion="15"/></manifest>

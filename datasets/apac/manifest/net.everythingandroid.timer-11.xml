@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="net.everythingandroid.timer" versionName="1.1.0" versionCode="11">
+    <application android:debuggable="true" android:icon="@drawable/alarm_icon" android:label="@string/app_name">
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:launchMode="singleTask" android:name=".TimerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name=".Preferences"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleInstance" android:name=".TimerAlarmActivity" android:screenOrientation="user" android:theme="@android:style/Theme.Dialog"/>
+        <receiver android:name=".TimerAlarmReceiver"/>
+        <receiver android:name=".ClearAllReceiver"/>
+    </application>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="3"/></manifest>

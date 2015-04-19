@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="com.darshancomputing.BatteryIndicatorPro" package="com.darshancomputing.BatteryIndicatorPro" versionName="6.0.2" versionCode="3092">
+    <application android:backupAgent="SharedPrefsBackupAgent" android:hardwareAccelerated="true" android:icon="@drawable/battery" android:label="@string/app_full_name" android:process="com.darshancomputing.BatteryIndicatorPro">
+        <activity android:excludeFromRecents="true" android:label="@string/app_launcher_name" android:launchMode="singleTask" android:name=".BatteryIndicator" android:screenOrientation="unspecified" android:stateNotNeeded="true" android:theme="@style/bi_theme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:label="@string/settings_activity_name" android:name=".SettingsActivity"/>
+        <activity android:excludeFromRecents="true" android:hardwareAccelerated="false" android:label="@string/settings_activity_name" android:name=".AlarmsActivity"/>
+        <activity android:excludeFromRecents="true" android:label="@string/settings_activity_name" android:name=".AlarmEditActivity"/>
+        <activity android:excludeFromRecents="true" android:label="@string/settings_help_activity_name" android:name=".SettingsHelpActivity" android:stateNotNeeded="true" android:theme="@style/bi_help_theme"/>
+        <activity android:excludeFromRecents="true" android:label="@string/help_activity_name" android:name=".HelpActivity" android:stateNotNeeded="true" android:theme="@style/bi_help_theme"/>
+        <activity android:excludeFromRecents="true" android:label="@string/log_view_activity_name" android:name=".LogViewActivity" android:stateNotNeeded="true"/>
+        <service android:name=".BatteryIndicatorService"/>
+        <receiver android:enabled="true" android:exported="false" android:label="BootCompletedReceiver" android:name=".BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="AEdPqrEAAAAI1TP6LoD-hbZvgwhkJwVc2xQf9dq2GxSVpt3CJQ"/>
+    </application>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+<uses-sdk android:targetSdkVersion="14" android:minSdkVersion="8"/></manifest>

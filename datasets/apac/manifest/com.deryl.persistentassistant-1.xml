@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.deryl.persistentassistant" versionName="1.0" versionCode="1">
+    <application android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:label="@string/title_activity_main" android:name=".MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_calendar" android:name=".CalendarActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_new_cal_event" android:name=".NewCalEventActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_account_settings" android:name=".AccountSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/title_activity_tip_calculator" android:name=".TipCalculatorActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+    </application>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="14"/></manifest>

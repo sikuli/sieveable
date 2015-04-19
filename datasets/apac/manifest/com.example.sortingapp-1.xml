@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.sortingapp" versionName="1.0" versionCode="1">
+    <application android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/MyTheme">
+        <activity android:label="@string/title_activity_home_screen" android:name="com.example.sortingapp.ActivityHomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/title_activity_main" android:name="com.example.sortingapp.ActivitySingleAnimation"/>
+        <activity android:configChanges="orientation|screenSize" android:label="@string/title_activity_sort_split" android:name="com.example.sortingapp.ActivityComparedAnimation"/>
+    </application>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="14"/></manifest>

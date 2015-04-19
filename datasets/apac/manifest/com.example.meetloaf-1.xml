@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.meetloaf" versionName="1.0" versionCode="1">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application android:allowBackup="true" android:debuggable="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:name="com.example.meetloaf.MeetloafActivity" android:uiOptions="splitActionBarWhenNarrow">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.example.meetloaf.MeetloafReceiverActivity" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.example.meetloaf.service.MeetloafAppService"/>
+        <provider android:authorities="com.example.meetloaf.meeting.db.MeetingContentProvider" android:exported="false" android:name="com.example.meetloaf.meeting.db.MeetingContentProvider"/>
+    </application>
+<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="15"/></manifest>
