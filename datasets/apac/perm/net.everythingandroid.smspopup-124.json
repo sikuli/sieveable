@@ -1,6 +1,7 @@
 JSONPickle({
   "$type": "edu.colorado.permgrep.appData",
   "packageName": "net.everythingandroid.smspopup",
+  "versionCode":"124",
   "permissions": {
     "$type": "scala.collection.immutable.Set[java.lang.String]",
     "elems": [

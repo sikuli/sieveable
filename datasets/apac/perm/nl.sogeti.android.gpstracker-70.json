@@ -1,6 +1,7 @@
 JSONPickle({
   "$type": "edu.colorado.permgrep.appData",
   "packageName": "nl.sogeti.android.gpstracker",
+  "versionCode":"70",
   "permissions": {
     "$type": "scala.collection.immutable.Set[java.lang.String]",
     "elems": [

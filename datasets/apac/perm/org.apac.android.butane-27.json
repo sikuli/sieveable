@@ -1,6 +1,7 @@
 JSONPickle({
   "$type": "edu.colorado.permgrep.appData",
   "packageName": "org.apac.android.butane",
+  "versionCode":"27",
   "permissions": {
     "$type": "scala.collection.immutable.Set[java.lang.String]",
     "elems": [

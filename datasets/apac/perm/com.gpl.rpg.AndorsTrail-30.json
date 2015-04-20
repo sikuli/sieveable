@@ -1,6 +1,7 @@
 JSONPickle({
   "$type": "edu.colorado.permgrep.appData",
   "packageName": "com.gpl.rpg.AndorsTrail",
+  "versionCode":"30",
   "permissions": {
     "$type": "scala.collection.immutable.Set[java.lang.String]",
     "elems": [

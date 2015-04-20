@@ -1,6 +1,7 @@
 JSONPickle({
   "$type": "edu.colorado.permgrep.appData",
   "packageName": "com.smartcam.webcam",
+  "versionCode":"140",
   "permissions": {
     "$type": "scala.collection.immutable.Set[java.lang.String]",
     "elems": [
