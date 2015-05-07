@@ -1,94 +1,94 @@
-{n:"android.game",verc:"1"}
-{n:"android.util.smsbackup",verc:"1"}
-{n:"caldwell.ben.bites",verc:"4"}
-{n:"com.android.SMSBlocker",verc:"1"}
-{n:"com.android.app.snapshotshare",verc:"1"}
-{n:"com.android.applist",verc:"1"}
-{n:"com.android.videogame",verc:"3"}
-{n:"com.apac.geotagging",verc:"1"}
-{n:"com.apac.sentinel",verc:"1"}
-{n:"com.arabicize",verc:"1"}
-{n:"com.audiosidekick",verc:"1"}
-{n:"com.bae.drape.gui.calculator",verc:"1"}
-{n:"com.bbn.apac.orienteering",verc:"1"}
-{n:"com.bbn.map",verc:"1"}
-{n:"com.challenge.androidirc",verc:"1"}
-{n:"com.collaboration.shareloc",verc:"17"}
-{n:"com.cs141.kittey.kittey",verc:"1"}
-{n:"com.darshancomputing.BatteryIndicatorPro",verc:"3092"}
-{n:"com.deepSoft.fullcontrol",verc:"1"}
-{n:"com.deryl.meediafun",verc:"1"}
-{n:"com.deryl.newscollator",verc:"1"}
-{n:"com.deryl.persistentassistant",verc:"1"}
-{n:"com.deryl.wordhelper",verc:"1"}
-{n:"com.deviceadmin2",verc:"1"}
-{n:"com.example.agentsmith",verc:"1"}
-{n:"com.example.audioassure",verc:"1"}
-{n:"com.example.autoquiet",verc:"1"}
-{n:"com.example.backupHelper",verc:"18"}
-{n:"com.example.chatclient",verc:"1"}
-{n:"com.example.creations",verc:"1"}
-{n:"com.example.dvorakime",verc:"1"}
-{n:"com.example.expenses",verc:"1"}
-{n:"com.example.fileexplorer",verc:"1"}
-{n:"com.example.fillinfun",verc:"1"}
-{n:"com.example.flappy",verc:"1"}
-{n:"com.example.instantreplay",verc:"1"}
-{n:"com.example.meetloaf",verc:"1"}
-{n:"com.example.metascraper",verc:"1"}
-{n:"com.example.mypolicy",verc:"3"}
-{n:"com.example.passwordvault",verc:"1"}
-{n:"com.example.patrolheatmap",verc:"1"}
-{n:"com.example.podcastplayer",verc:"1"}
-{n:"com.example.quizmaster",verc:"1"}
-{n:"com.example.shyguycrm",verc:"1"}
-{n:"com.example.sortingapp",verc:"1"}
-{n:"com.example.udonlauncher",verc:"1"}
-{n:"com.example.vermilion",verc:"1"}
-{n:"com.example.wheremyappsat",verc:"1"}
-{n:"com.fivedirections.colormatcher",verc:"1"}
-{n:"com.fivedirections.password.saver",verc:"1"}
-{n:"com.fivedirections.split.timer",verc:"1"}
-{n:"com.fivedirections.yarr",verc:"1"}
-{n:"com.fun.draw",verc:"2"}
-{n:"com.gpl.rpg.AndorsTrail",verc:"30"}
-{n:"com.gueei.applocker",verc:"3"}
-{n:"com.incesoft.smsbot",verc:"1"}
-{n:"com.invincea.draw",verc:"1"}
-{n:"com.invincea.screensaver",verc:"1"}
-{n:"com.invincea.screensaver",verc:"2"}
-{n:"com.jpgextractor",verc:"1"}
-{n:"com.omnidroid",verc:"6"}
-{n:"com.p.morsecode",verc:"1"}
-{n:"com.pondl",verc:"1"}
-{n:"com.quickdroid",verc:"1"}
-{n:"com.reveal",verc:"44"}
-{n:"com.run.runningapp",verc:"1"}
-{n:"com.rwilliams.codegen",verc:"1"}
-{n:"com.sip.voip.net.phone",verc:"1"}
-{n:"com.smartcam.webcam",verc:"140"}
-{n:"com.sms.text.instantmessage",verc:"1"}
-{n:"com.tdizz.snote",verc:"1"}
-{n:"com.tdizz.sysmon",verc:"1"}
-{n:"com.todo.todo",verc:"26"}
-{n:"com.topicreel",verc:"1"}
-{n:"com.ultracoolmap",verc:"1"}
-{n:"com.url.sourceviewer",verc:"1"}
-{n:"com.wilers.Wifinder",verc:"1"}
-{n:"cri.sanity",verc:"21100"}
-{n:"net.bible.android.activity",verc:"80"}
-{n:"net.everythingandroid.smspopup",verc:"124"}
-{n:"net.everythingandroid.timer",verc:"11"}
-{n:"net.lp.androidsfortune",verc:"18"}
-{n:"nl.sogeti.android.gpstracker",verc:"70"}
-{n:"org.apac.android.butane",verc:"27"}
-{n:"org.darpa.smsreminder",verc:"1"}
-{n:"org.darpa.supersudoku",verc:"1"}
-{n:"org.entomologistproject.trac",verc:"2"}
-{n:"org.jsharkey.oilcan",verc:"1"}
-{n:"org.memotis",verc:"1"}
-{n:"org.nws.aweather",verc:"1"}
-{n:"org.thialfihar.android.apg",verc:"10900"}
-{n:"org.thoughtcrime.securesms",verc:"26"}
-{n:"org.tomdroid",verc:"11"}
-{n:"sk.vx.connectbot",verc:"21"}
+{n:"android.game",verc:"1", id:"android.game-1"}
+{n:"android.util.smsbackup",verc:"1", id:"android.util.smsbackup-1"}
+{n:"caldwell.ben.bites",verc:"4", id:"caldwell.ben.bites-4"}
+{n:"com.android.SMSBlocker",verc:"1", id:"com.android.SMSBlocker-1"}
+{n:"com.android.app.snapshotshare",verc:"1", id:"com.android.app.snapshotshare-1"}
+{n:"com.android.applist",verc:"1", id:"com.android.applist-1"}
+{n:"com.android.videogame",verc:"3", id:"com.android.videogame-3"}
+{n:"com.apac.geotagging",verc:"1", id:"com.apac.geotagging-1"}
+{n:"com.apac.sentinel",verc:"1", id:"com.apac.sentinel-1"}
+{n:"com.arabicize",verc:"1", id:"com.arabicize-1"}
+{n:"com.audiosidekick",verc:"1", id:"com.audiosidekick-1"}
+{n:"com.bae.drape.gui.calculator",verc:"1", id:"com.bae.drape.gui.calculator-1"}
+{n:"com.bbn.apac.orienteering",verc:"1", id:"com.bbn.apac.orienteering-1"}
+{n:"com.bbn.map",verc:"1", id:"com.bbn.map-1"}
+{n:"com.challenge.androidirc",verc:"1", id:"com.challenge.androidirc-1"}
+{n:"com.collaboration.shareloc",verc:"17", id:"com.collaboration.shareloc-17"}
+{n:"com.cs141.kittey.kittey",verc:"1", id:"com.cs141.kittey.kittey-1"}
+{n:"com.darshancomputing.BatteryIndicatorPro",verc:"3092", id:"com.darshancomputing.BatteryIndicatorPro-3092"}
+{n:"com.deepSoft.fullcontrol",verc:"1", id:"com.deepSoft.fullcontrol-1"}
+{n:"com.deryl.meediafun",verc:"1", id:"com.deryl.meediafun-1"}
+{n:"com.deryl.newscollator",verc:"1", id:"com.deryl.newscollator-1"}
+{n:"com.deryl.persistentassistant",verc:"1", id:"com.deryl.persistentassistant-1"}
+{n:"com.deryl.wordhelper",verc:"1", id:"com.deryl.wordhelper-1"}
+{n:"com.deviceadmin2",verc:"1", id:"com.deviceadmin2-1"}
+{n:"com.example.agentsmith",verc:"1", id:"com.example.agentsmith-1"}
+{n:"com.example.audioassure",verc:"1", id:"com.example.audioassure-1"}
+{n:"com.example.autoquiet",verc:"1", id:"com.example.autoquiet-1"}
+{n:"com.example.backupHelper",verc:"18", id:"com.example.backupHelper-18"}
+{n:"com.example.chatclient",verc:"1", id:"com.example.chatclient-1"}
+{n:"com.example.creations",verc:"1", id:"com.example.creations-1"}
+{n:"com.example.dvorakime",verc:"1", id:"com.example.dvorakime-1"}
+{n:"com.example.expenses",verc:"1", id:"com.example.expenses-1"}
+{n:"com.example.fileexplorer",verc:"1", id:"com.example.fileexplorer-1"}
+{n:"com.example.fillinfun",verc:"1", id:"com.example.fillinfun-1"}
+{n:"com.example.flappy",verc:"1", id:"com.example.flappy-1"}
+{n:"com.example.instantreplay",verc:"1", id:"com.example.instantreplay-1"}
+{n:"com.example.meetloaf",verc:"1", id:"com.example.meetloaf-1"}
+{n:"com.example.metascraper",verc:"1", id:"com.example.metascraper-1"}
+{n:"com.example.mypolicy",verc:"3", id:"com.example.mypolicy-3"}
+{n:"com.example.passwordvault",verc:"1", id:"com.example.passwordvault-1"}
+{n:"com.example.patrolheatmap",verc:"1", id:"com.example.patrolheatmap-1"}
+{n:"com.example.podcastplayer",verc:"1", id:"com.example.podcastplayer-1"}
+{n:"com.example.quizmaster",verc:"1", id:"com.example.quizmaster-1"}
+{n:"com.example.shyguycrm",verc:"1", id:"com.example.shyguycrm-1"}
+{n:"com.example.sortingapp",verc:"1", id:"com.example.sortingapp-1"}
+{n:"com.example.udonlauncher",verc:"1", id:"com.example.udonlauncher-1"}
+{n:"com.example.vermilion",verc:"1", id:"com.example.vermilion-1"}
+{n:"com.example.wheremyappsat",verc:"1", id:"com.example.wheremyappsat-1"}
+{n:"com.fivedirections.colormatcher",verc:"1", id:"com.fivedirections.colormatcher-1"}
+{n:"com.fivedirections.password.saver",verc:"1", id:"com.fivedirections.password.saver-1"}
+{n:"com.fivedirections.split.timer",verc:"1", id:"com.fivedirections.split.timer-1"}
+{n:"com.fivedirections.yarr",verc:"1", id:"com.fivedirections.yarr-1"}
+{n:"com.fun.draw",verc:"2", id:"com.fun.draw-2"}
+{n:"com.gpl.rpg.AndorsTrail",verc:"30", id:"com.gpl.rpg.AndorsTrail-30"}
+{n:"com.gueei.applocker",verc:"3", id:"com.gueei.applocker-3"}
+{n:"com.incesoft.smsbot",verc:"1", id:"com.incesoft.smsbot-1"}
+{n:"com.invincea.draw",verc:"1", id:"com.invincea.draw-1"}
+{n:"com.invincea.screensaver",verc:"1", id:"com.invincea.screensaver-1"}
+{n:"com.invincea.screensaver",verc:"2", id:"com.invincea.screensaver-2"}
+{n:"com.jpgextractor",verc:"1", id:"com.jpgextractor-1"}
+{n:"com.omnidroid",verc:"6", id:"com.omnidroid-6"}
+{n:"com.p.morsecode",verc:"1", id:"com.p.morsecode-1"}
+{n:"com.pondl",verc:"1", id:"com.pondl-1"}
+{n:"com.quickdroid",verc:"1", id:"com.quickdroid-1"}
+{n:"com.reveal",verc:"44", id:"com.reveal-44"}
+{n:"com.run.runningapp",verc:"1", id:"com.run.runningapp-1"}
+{n:"com.rwilliams.codegen",verc:"1", id:"com.rwilliams.codegen-1"}
+{n:"com.sip.voip.net.phone",verc:"1", id:"com.sip.voip.net.phone-1"}
+{n:"com.smartcam.webcam",verc:"140", id:"com.smartcam.webcam-140"}
+{n:"com.sms.text.instantmessage",verc:"1", id:"com.sms.text.instantmessage-1"}
+{n:"com.tdizz.snote",verc:"1", id:"com.tdizz.snote-1"}
+{n:"com.tdizz.sysmon",verc:"1", id:"com.tdizz.sysmon-1"}
+{n:"com.todo.todo",verc:"26", id:"com.todo.todo-26"}
+{n:"com.topicreel",verc:"1", id:"com.topicreel-1"}
+{n:"com.ultracoolmap",verc:"1", id:"com.ultracoolmap-1"}
+{n:"com.url.sourceviewer",verc:"1", id:"com.url.sourceviewer-1"}
+{n:"com.wilers.Wifinder",verc:"1", id:"com.wilers.Wifinder-1"}
+{n:"cri.sanity",verc:"21100", id:"cri.sanity-21100"}
+{n:"net.bible.android.activity",verc:"80", id:"net.bible.android.activity-80"}
+{n:"net.everythingandroid.smspopup",verc:"124", id:"net.everythingandroid.smspopup-124"}
+{n:"net.everythingandroid.timer",verc:"11", id:"net.everythingandroid.timer-11"}
+{n:"net.lp.androidsfortune",verc:"18", id:"net.lp.androidsfortune-18"}
+{n:"nl.sogeti.android.gpstracker",verc:"70", id:"nl.sogeti.android.gpstracker-70"}
+{n:"org.apac.android.butane",verc:"27", id:"org.apac.android.butane-27"}
+{n:"org.darpa.smsreminder",verc:"1", id:"org.darpa.smsreminder-1"}
+{n:"org.darpa.supersudoku",verc:"1", id:"org.darpa.supersudoku-1"}
+{n:"org.entomologistproject.trac",verc:"2", id:"org.entomologistproject.trac-2"}
+{n:"org.jsharkey.oilcan",verc:"1", id:"org.jsharkey.oilcan-1"}
+{n:"org.memotis",verc:"1", id:"org.memotis-1"}
+{n:"org.nws.aweather",verc:"1", id:"org.nws.aweather-1"}
+{n:"org.thialfihar.android.apg",verc:"10900", id:"org.thialfihar.android.apg-10900"}
+{n:"org.thoughtcrime.securesms",verc:"26", id:"org.thoughtcrime.securesms-26"}
+{n:"org.tomdroid",verc:"11", id:"org.tomdroid-11"}
+{n:"sk.vx.connectbot",verc:"21", id:"sk.vx.connectbot-21"}
