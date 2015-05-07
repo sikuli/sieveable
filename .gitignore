@@ -4,6 +4,7 @@ node_modules
 # Test data files
 fixtures/*/*.json
 fixtures/*/*.xml
+fixtures/code/*.txt
 fixtures/db
 # Intellij IDEA
 .idea/
