@@ -1,0 +1,15 @@
+{
+  "dbConfig": {
+    "mongo": {
+      "host": "localhost",
+      "port": 27017,
+      "db": "apps"
+    },
+    "solr": {
+      "host": "localhost",
+      "port": 8983,
+      "collection": "sievely-code"
+
+    }
+  }
+}
