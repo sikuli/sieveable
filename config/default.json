@@ -3,15 +3,16 @@
     "mongo": {
       "host": "localhost",
       "port": 27017,
-      "db": "apps"
+      "db": "apps",
+      "config": "config/mongod.conf"
     },
     "solr": {
       "host": "localhost",
       "port": 8983,
-      "collection": "sievely-code"
+      "collection": "sieveable-code"
     }
   },
-  "datasets": {
-    "root": "DATA_DIR"
+  "dataset": {
+    "root": "SIEVEABLE_DATA_DIR"
   }
 }
