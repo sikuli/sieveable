@@ -27,8 +27,8 @@ gulp.task('index:code', function (callback) {
 gulp.task('solr:indexCode', function (callback) {
     glob(path.join(DATASET_ROOT, 'code', '*.txt'), function (er, files) {
         codeIndex.index(files);
+        callback();
     });
-    callback();
 })
 
 gulp.task('solr:commit', function () {
@@ -133,6 +133,6 @@ gulp.task('load:db', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-    runSequence('extract:archives', 'build:tagname',
+    runSequence('extract:archives', 'index:ui','index-code',
         'load:db', callback);
 });
