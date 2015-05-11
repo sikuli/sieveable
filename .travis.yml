@@ -4,11 +4,12 @@ before_install:
   - npm install -g gulp
   - wget http://archive.apache.org/dist/lucene/solr/5.1.0/solr-5.1.0.tgz
   - tar -xzf solr-5.1.0.tgz
-  - sudo sh ./solr-5.1.0/bin/solr start -cloud -V -m 4g -p 8983
+  - export PATH=$PATH:$PWD/solr-5.1.0/bin/
 
 before_script:
-  - sleep 20
-  - sh solr-5.1.0/bin/solr create -c sieveable-code
+  - solr start -cloud -V -m 4g -p 8983
+  - sleep 15
+  - solr create -c sieveable-code
   - sleep 10
   - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-code/schema
   - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-code/schema
@@ -21,13 +22,20 @@ script:
 services:
   - mongodb
 
+after_script:
+  # Delete indexed documents and stop solr
+  - curl http://localhost:8983/solr/sieveable-code/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8'
+  - curl http://localhost:8983/solr/sieveable-code/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'
+  - curl http://localhost:8983/solr/admin/collections?action=DELETE&name=sieveable-code
+  - solr stop
+
 node_js:
   - '0.12'
 
 jdk:
   - oraclejdk7
 
-sudo: true
+sudo: false
 
 notifications:
   email: false
