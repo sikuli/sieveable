@@ -1,10 +1,11 @@
 language: node_js
+
 before_install:
   - npm install -g gulp
   - wget http://archive.apache.org/dist/lucene/solr/5.1.0/solr-5.1.0.tgz
   - tar -xzf solr-5.1.0.tgz
-  - ls
-  - sh ./solr-5.1.0/bin/solr start -cloud -V -m 4g
+  - sudo sh ./solr-5.1.0/bin/solr start -cloud -V -m 4g -p 8983
+
 before_script:
   - sleep 20
   - sh solr-5.1.0/bin/solr create -c sieveable-code
@@ -19,10 +20,14 @@ script:
 
 services:
   - mongodb
+
 node_js:
   - '0.12'
+
 jdk:
   - oraclejdk7
-sudo: false
+
+sudo: true
+
 notifications:
   email: false
