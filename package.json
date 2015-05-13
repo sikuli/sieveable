@@ -1,7 +1,7 @@
 {
   "name": "diff-apps",
   "version": "1.0.0",
-  "description": "analyze and diff android apps",
+  "description": "Sieveable: Mobile Apps Search and Filtering System.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -11,37 +11,36 @@
   "devDependencies": {
     "chai": "^2.3.0",
     "chai-things": "^0.2.0",
-    "debug": "^2.1.1",
-    "decompress-tarbz2": "^3.1.0",
+    "debug": "^2.2.0",
     "gulp": "^3.8.11",
-    "mocha": "^2.1.0",
+    "mocha": "^2.2.4",
     "pretty-data": "^0.40.0",
-    "run-sequence": "^1.0.2",
-    "supertest": "^0.15.0",
-    "vinyl-assign": "^1.1.0"
+    "run-sequence": "^1.1.0",
+    "supertest": "^1.0.1"
   },
   "bin": {
     "apps": "./bin/diff_apps.js"
   },
   "dependencies": {
     "archy": "^1.0.0",
-    "bluebird": "^2.9.14",
-    "body-parser": "^1.12.0",
+    "bluebird": "^2.9.25",
+    "body-parser": "^1.12.4",
     "chalk": "^1.0.0",
-    "cheerio": "^0.18.0",
-    "commander": "^2.6.0",
-    "config": "^1.12.0",
+    "cheerio": "^0.19.0",
+    "commander": "^2.8.1",
+    "config": "^1.13.0",
+    "decompress": "^2.3.0",
     "express": "^4.12.2",
     "eyes": "^0.1.8",
-    "glob": "^4.3.5",
+    "glob": "^5.0.6",
     "jade": "^1.9.2",
-    "lodash": "^3.5.0",
-    "mongodb": "^2.0.25",
+    "lodash": "^3.8.0",
+    "mongodb": "^2.0.31",
     "pretty-data": "^0.40.0",
     "request": "^2.55.0",
     "through2": "^0.6.3",
     "vinyl": "^0.4.6",
-    "xml2js": "^0.4.6",
+    "xml2js": "^0.4.8",
     "xmlbuilder": "^2.6.2"
   }
 }
