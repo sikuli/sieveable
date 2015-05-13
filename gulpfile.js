@@ -4,12 +4,11 @@ var fs = require('fs');
 var glob = require("glob");
 var through2 = require('through2');
 var runSequence = require('run-sequence');
-var tarbz2 = require('decompress-tarbz2');
-var vinylAssign = require('vinyl-assign');
 var exec = require('child_process').exec;
 var uiIndex = require('./lib/findBy/tagname/searchIndex/build-stream');
 var codeIndex = require('./lib/findBy/code/searchIndex/build-stream');
 var Promise = require("bluebird");
+var execAsync = Promise.promisify(exec);
 var config = require("config");
 var mongo = require('./lib/db/connection');
 var DATASET_ROOT = config.get('dataset.root');
@@ -18,36 +17,46 @@ gulp.task('index:ui', function () {
     gulp.src(path.join(DATASET_ROOT, 'ui', '*.xml'))
         .pipe(uiIndex())
         .pipe(gulp.dest('indexes/tagname'));
-})
+});
 
 gulp.task('solr:indexCode', function (callback) {
     glob(path.join(DATASET_ROOT, 'code', '*.txt'), function (er, files) {
         codeIndex.index(files);
         callback();
     });
-})
+});
 
 gulp.task('solr:commit', function () {
     codeIndex.commit();
-})
+});
 
-gulp.task('extract:archives', function () {
-    // Extract listing details JSON files
-    gulp.src(path.join(DATASET_ROOT, 'listing', 'listing.tar.bz2'))
-        .pipe(vinylAssign({extract: true}))
-        .pipe(tarbz2({strip: 1}))
-        .pipe(gulp.dest(path.join(DATASET_ROOT, 'listing')));
-    // Extract UI xml files
-    gulp.src(path.join(DATASET_ROOT, 'ui', 'ui-xml.tar.bz2'))
-        .pipe(vinylAssign({extract: true}))
-        .pipe(tarbz2({strip: 1}))
-        .pipe(gulp.dest(path.join(DATASET_ROOT, 'ui')));
-    // Extract smali code text files
-    gulp.src(path.join(DATASET_ROOT, 'code', 'smali-invoked-methods.tar.bz2'))
-        .pipe(vinylAssign({extract: true}))
-        .pipe(tarbz2({strip: 1}))
-        .pipe(gulp.dest(path.join(DATASET_ROOT, 'code')));
-})
+gulp.task('extract:archives', function (done) {
+    var untarListings = 'tar xvjf ' + path.join(DATASET_ROOT, 'listing',
+            'listing.tar.bz2') + ' -C ' + path.join(DATASET_ROOT, 'listing');
+    var untarUI = 'tar xvjf ' + path.join(DATASET_ROOT, 'ui', 'ui-xml.tar.bz2') +
+        ' -C ' + path.join(DATASET_ROOT, 'ui');
+    var untarCode = 'tar xvjf ' + path.join(DATASET_ROOT, 'code',
+            'smali-invoked-methods.tar.bz2') + ' -C ' + path.join(DATASET_ROOT,
+            'code');
+    console.log("Extracting listing details json files...");
+    execAsync(untarListings)
+        .then(function () {
+            console.log("Extracting UI xml files...");
+            return execAsync(untarUI);
+        })
+        .then(function () {
+            console.log("Extracting code text files...");
+            return execAsync(untarCode);
+        })
+        .then(function () {
+            console.log("All archives have been extracted.");
+            done();
+        })
+        .error(function (error) {
+            console.error(error);
+            done(error);
+        });
+});
 
 gulp.task('start:db', function (callback) {
     try {
@@ -57,7 +66,7 @@ gulp.task('start:db', function (callback) {
     }
     // start Solr in SolrCloud mode as a daemon
     var solr = 'solr start -cloud -V -h ' + config.get('dbConfig.solr.host') +
-        ' -p ' + config.get('dbConfig.solr.port')
+        ' -p ' + config.get('dbConfig.solr.port');
     console.log("Starting Solr server in SolrCloud mode. " + solr);
     exec(solr,
         function (error, stdout, stderr) {
@@ -68,7 +77,7 @@ gulp.task('start:db', function (callback) {
     // start MongoDB
     var mongod = 'mongod --port ' + config.get('dbConfig.mongo.port') +
         ' --config ' + config.get('dbConfig.mongo.config') +
-        ' --dbpath ' + path.join(DATASET_ROOT, 'db')
+        ' --dbpath ' + path.join(DATASET_ROOT, 'db');
     console.log("Starting MongoDB server: " + mongod);
     exec(mongod,
         function (error, stdout, stderr) {
@@ -76,13 +85,13 @@ gulp.task('start:db', function (callback) {
             console.log(stderr);
             callback(stderr);
         });
-})
+});
 
 gulp.task('mongo:insertListing', function (done) {
     gulp.src(path.join(DATASET_ROOT, 'listing', '*.json'))
         .pipe(new through2.obj(function (file, enc, cb) {
             var doc = JSON.parse(file.contents);
-            doc.id = doc.n + '-' + doc.verc;
+            doc['id'] = doc['n'] + '-' + doc['verc'];
             mongo.upsertOne('listings', doc, doc)
                 .then(function () {
                     cb();
@@ -90,12 +99,11 @@ gulp.task('mongo:insertListing', function (done) {
                 .error(function (e) {
                     console.error('Error in insert:listing task: ' + e.message);
                 });
-            ;
         }, function () {
             done();
         }));
 
-})
+});
 
 gulp.task('mongo:indexListing', function (done) {
     mongo.createIndex('listings', {id: 1}, {unique: true})
