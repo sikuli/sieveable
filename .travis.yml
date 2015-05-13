@@ -20,7 +20,7 @@ before_script:
 
 script:
   # Make sure Solr is running.
-  - curl http://localhost:8983/solr/admin/ping
+  - curl http://localhost:8983/solr/admin/collections?action=LIST&wt=json
 
 services:
   - mongodb
