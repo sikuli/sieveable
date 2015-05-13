@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var path = require('path');
 var fs = require('fs');
-var glob = require("glob")
+var glob = require("glob");
 var through2 = require('through2');
 var runSequence = require('run-sequence');
 var tarbz2 = require('decompress-tarbz2');
@@ -17,11 +17,7 @@ var DATASET_ROOT = config.get('dataset.root');
 gulp.task('index:ui', function () {
     gulp.src(path.join(DATASET_ROOT, 'ui', '*.xml'))
         .pipe(uiIndex())
-        .pipe(gulp.dest('indexes/tagname'))
-})
-
-gulp.task('index:code', function (callback) {
-    runSequence('solr:indexCode', 'solr:commit', callback);
+        .pipe(gulp.dest('indexes/tagname'));
 })
 
 gulp.task('solr:indexCode', function (callback) {
@@ -40,17 +36,17 @@ gulp.task('extract:archives', function () {
     gulp.src(path.join(DATASET_ROOT, 'listing', 'listing.tar.bz2'))
         .pipe(vinylAssign({extract: true}))
         .pipe(tarbz2({strip: 1}))
-        .pipe(gulp.dest(path.join(DATASET_ROOT, 'listing')))
+        .pipe(gulp.dest(path.join(DATASET_ROOT, 'listing')));
     // Extract UI xml files
     gulp.src(path.join(DATASET_ROOT, 'ui', 'ui-xml.tar.bz2'))
         .pipe(vinylAssign({extract: true}))
         .pipe(tarbz2({strip: 1}))
-        .pipe(gulp.dest(path.join(DATASET_ROOT, 'ui')))
+        .pipe(gulp.dest(path.join(DATASET_ROOT, 'ui')));
     // Extract smali code text files
     gulp.src(path.join(DATASET_ROOT, 'code', 'smali-invoked-methods.tar.bz2'))
         .pipe(vinylAssign({extract: true}))
         .pipe(tarbz2({strip: 1}))
-        .pipe(gulp.dest(path.join(DATASET_ROOT, 'code')))
+        .pipe(gulp.dest(path.join(DATASET_ROOT, 'code')));
 })
 
 gulp.task('start:db', function (callback) {
@@ -82,14 +78,13 @@ gulp.task('start:db', function (callback) {
         });
 })
 
-gulp.task('insert:listing', function () {
+gulp.task('mongo:insertListing', function (done) {
     gulp.src(path.join(DATASET_ROOT, 'listing', '*.json'))
         .pipe(new through2.obj(function (file, enc, cb) {
             var doc = JSON.parse(file.contents);
-            console.log(doc)
+            doc.id = doc.n + '-' + doc.verc;
             mongo.upsertOne('listings', doc, doc)
                 .then(function () {
-                    //mongo.close();
                     cb();
                 })
                 .error(function (e) {
@@ -97,42 +92,31 @@ gulp.task('insert:listing', function () {
                 });
             ;
         }, function () {
-            mongo.close()
+            done();
         }));
+
 })
 
-gulp.task('insert:listingId', function () {
-    gulp.src(path.join(DATASET_ROOT, 'listing', '*.json'))
-        .pipe(new through2.obj(function (file, enc, cb) {
-            var doc = JSON.parse(file.contents.toString());
-            var id = {id: doc.n + '-' + doc.verc};
-            mongo.upsertOne('listings', doc, id)
-                .then(function () {
-                    cb();
-                })
-                .error(function (e) {
-                    console.error('Error in insert:listingId task: ' + e.message);
-                });
-        }, function () {
-            mongo.close()
-        }))
-});
-
-gulp.task('mongoIndex', function () {
+gulp.task('mongo:indexListing', function (done) {
     mongo.createIndex('listings', {id: 1}, {unique: true})
+        .then(function () {
+            done();
+        })
         .error(function (e) {
             console.error('Error in mongoIndex task: ' + e.message);
-        }, function () {
-            mongo.close()
         })
+});
+
+gulp.task('mongo:close', function () {
+    mongo.close();
 });
 
 
 gulp.task('load:db', function (callback) {
-    runSequence('insert:listing', 'insert:listingId', 'mongoIndex', callback)
+    runSequence('mongo:insertListing', 'mongo:indexListing', 'mongo:close', callback)
 });
 
 gulp.task('default', function (callback) {
-    runSequence('extract:archives', 'index:ui','index-code',
+    runSequence('extract:archives', 'index:ui', 'solr:indexCode', 'solr:commit',
         'load:db', callback);
 });
