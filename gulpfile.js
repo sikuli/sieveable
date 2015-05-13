@@ -125,6 +125,5 @@ gulp.task('load:db', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-    runSequence('extract:archives', 'index:ui', 'solr:indexCode', 'solr:commit',
-        'load:db', callback);
+    runSequence('extract:archives', 'load:db', callback);
 });
