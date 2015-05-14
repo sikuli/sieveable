@@ -35,14 +35,22 @@ gulp.task('extract:archives', function (done) {
             'listing.tar.bz2') + ' -C ' + path.join(DATASET_ROOT, 'listing');
     var untarUI = 'tar xvjf ' + path.join(DATASET_ROOT, 'ui', 'ui-xml.tar.bz2') +
         ' -C ' + path.join(DATASET_ROOT, 'ui');
+    var untarManifest = 'tar xvjf ' + path.join(DATASET_ROOT, 'manifest',
+            'manifest.tar.bz2') + ' -C ' + path.join(DATASET_ROOT,
+            'manifest');
     var untarCode = 'tar xvjf ' + path.join(DATASET_ROOT, 'code',
             'smali-invoked-methods.tar.bz2') + ' -C ' + path.join(DATASET_ROOT,
             'code');
+
     console.log("Extracting listing details json files...");
     execAsync(untarListings)
         .then(function () {
             console.log("Extracting UI xml files...");
             return execAsync(untarUI);
+        })
+        .then(function () {
+            console.log("Extracting Manifest xml files...");
+            return execAsync(untarManifest);
         })
         .then(function () {
             console.log("Extracting code text files...");
