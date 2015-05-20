@@ -1,15 +1,13 @@
-var fs = require('fs'),
-    request = require('supertest'),
-    parse = require('../lib/parse.js'),
-    app = require('../lib/server/server'),
-    should = require('should'),
-    chai = require("chai"),
-    eyes = require('eyes');
-
+var fs = require('fs');
+var request = require('supertest');
+var parse = require('../lib/parse.js');
+var app = require('../lib/server/server');
+var chai = require("chai");
+var eyes = require('eyes');
+var should = chai.should();
 chai.use(require('chai-things'));
-chai.should();
 
-//TODO: Validate results manually.
+
 describe('Listing Details Examples: Answers to multiple listing details by example questions.', function () {
     this.timeout(0)
 
