@@ -2,7 +2,9 @@ var gulp = require('gulp');
 var path = require('path');
 var fs = require('fs');
 var glob = require("glob");
+var byline = require('byline');
 var through2 = require('through2');
+var redis = require("redis");
 var runSequence = require('run-sequence');
 var exec = require('child_process').exec;
 var uiIndex = require('./lib/findBy/tagname/searchIndex/build-stream');
@@ -11,16 +13,16 @@ var Promise = require("bluebird");
 var execAsync = Promise.promisify(exec);
 var config = require("config");
 var mongo = require('./lib/db/connection');
-var DATASET_ROOT = config.get('dataset.root');
+var DATASET_PATH = path.resolve(__dirname, 'config', config.get('dataset.path'));
 
 gulp.task('index:ui', function () {
-    gulp.src(path.join(DATASET_ROOT, 'ui', '*.xml'))
+    gulp.src(path.join(DATASET_PATH, 'ui', '*.xml'))
         .pipe(uiIndex())
         .pipe(gulp.dest('indexes/tagname'));
 });
 
 gulp.task('solr:indexCode', function (callback) {
-    glob(path.join(DATASET_ROOT, 'code', '*.txt'), function (er, files) {
+    glob(path.join(DATASET_PATH, 'code', '*.txt'), function (er, files) {
         codeIndex.index(files);
         callback();
     });
@@ -31,15 +33,15 @@ gulp.task('solr:commit', function () {
 });
 
 gulp.task('extract:archives', function (done) {
-    var untarListings = 'tar xvjf ' + path.join(DATASET_ROOT, 'listing',
-            'listing.tar.bz2') + ' -C ' + path.join(DATASET_ROOT, 'listing');
-    var untarUI = 'tar xvjf ' + path.join(DATASET_ROOT, 'ui', 'ui-xml.tar.bz2') +
-        ' -C ' + path.join(DATASET_ROOT, 'ui');
-    var untarManifest = 'tar xvjf ' + path.join(DATASET_ROOT, 'manifest',
-            'manifest.tar.bz2') + ' -C ' + path.join(DATASET_ROOT,
+    var untarListings = 'tar xvjf ' + path.join(DATASET_PATH, 'listing',
+            'listing.tar.bz2') + ' -C ' + path.join(DATASET_PATH, 'listing');
+    var untarUI = 'tar xvjf ' + path.join(DATASET_PATH, 'ui', 'ui-xml.tar.bz2') +
+        ' -C ' + path.join(DATASET_PATH, 'ui');
+    var untarManifest = 'tar xvjf ' + path.join(DATASET_PATH, 'manifest',
+            'manifest.tar.bz2') + ' -C ' + path.join(DATASET_PATH,
             'manifest');
-    var untarCode = 'tar xvjf ' + path.join(DATASET_ROOT, 'code',
-            'smali-invoked-methods.tar.bz2') + ' -C ' + path.join(DATASET_ROOT,
+    var untarCode = 'tar xvjf ' + path.join(DATASET_PATH, 'code',
+            'smali-invoked-methods.tar.bz2') + ' -C ' + path.join(DATASET_PATH,
             'code');
 
     console.log("Extracting listing details json files...");
@@ -68,7 +70,7 @@ gulp.task('extract:archives', function (done) {
 
 gulp.task('start:db', function (callback) {
     try {
-        fs.mkdirSync(path.join(DATASET_ROOT, 'db'));
+        fs.mkdirSync(path.resolve(DATASET_PATH, 'db'));
     } catch (error) {
         if (error.code != 'EEXIST') callback(error);
     }
@@ -82,10 +84,21 @@ gulp.task('start:db', function (callback) {
             console.log(stderr);
             callback(stderr);
         });
+    // start Redis server
+    var redis = 'redis-server ' + path.resolve(__dirname, 'config',
+            config.get('dbConfig.redis.config'));
+    console.log("Starting Redis server as a daemon process. " + redis);
+    exec(redis,
+        function (error, stdout, stderr) {
+            console.log(stdout);
+            console.log(stderr);
+            callback(stderr);
+        });
     // start MongoDB
     var mongod = 'mongod --port ' + config.get('dbConfig.mongo.port') +
-        ' --config ' + config.get('dbConfig.mongo.config') +
-        ' --dbpath ' + path.join(DATASET_ROOT, 'db');
+        ' --config ' + path.resolve(__dirname, 'config',
+            config.get('dbConfig.mongo.config')) +
+        ' --dbpath ' + path.join(DATASET_PATH, 'db');
     console.log("Starting MongoDB server: " + mongod);
     exec(mongod,
         function (error, stdout, stderr) {
@@ -96,7 +109,7 @@ gulp.task('start:db', function (callback) {
 });
 
 gulp.task('mongo:insertListing', function (done) {
-    gulp.src(path.join(DATASET_ROOT, 'listing', '*.json'))
+    gulp.src(path.join(DATASET_PATH, 'listing', '*.json'))
         .pipe(new through2.obj(function (file, enc, cb) {
             var doc = JSON.parse(file.contents);
             doc['id'] = doc['n'] + '-' + doc['verc'];
@@ -111,6 +124,30 @@ gulp.task('mongo:insertListing', function (done) {
             done();
         }));
 
+});
+
+gulp.task('redis:addKeys', function (done) {
+    var client = redis.createClient();
+    client.on("error", function (err) {
+        console.error("Error " + err);
+        throw (err);
+    });
+
+    var keysFile = path.resolve(__dirname, 'config', config.get('dataset.keysFile'));
+    var key = config.get('dataset.keyName');
+    var stream = fs.createReadStream(keysFile, {encoding: 'utf8'});
+    stream = byline.createStream(stream);
+
+    stream.on('data', function (line) {
+        if (line.trim()) {
+            console.log(key + " => " + line);
+            client.sadd(key, line)
+        }
+    });
+    stream.on('end', function () {
+        client.quit();
+        done();
+    })
 });
 
 gulp.task('mongo:indexListing', function (done) {
