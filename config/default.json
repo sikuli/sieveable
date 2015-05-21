@@ -10,9 +10,14 @@
       "host": "localhost",
       "port": 8983,
       "collection": "sieveable-code"
+    },
+    "redis": {
+      "config": "./redis.conf"
     }
   },
   "dataset": {
-    "path": "../fixtures"
+    "path": "../fixtures",
+    "keysFile": "../fixtures/keys.txt",
+    "keyName": "dataset:id"
   }
 }
