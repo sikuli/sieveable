@@ -9,6 +9,7 @@
   "author": "Khalid Alharbi, Tom Yeh",
   "license": "MIT",
   "devDependencies": {
+    "byline": "^4.2.1",
     "chai": "^2.3.0",
     "chai-things": "^0.2.0",
     "debug": "^2.2.0",
@@ -37,6 +38,7 @@
     "lodash": "^3.8.0",
     "mongodb": "^2.0.31",
     "pretty-data": "^0.40.0",
+    "redis": "^0.12.1",
     "request": "^2.55.0",
     "through2": "^0.6.3",
     "vinyl": "^0.4.6",
