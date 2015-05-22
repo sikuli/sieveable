@@ -1,4 +1,4 @@
-var defaultQuery1 = '<callpath from="onClick" \n\tuses-permission="AUDIO"/>'
+var defaultQuery1 = 'MATCH app\nWHERE\n\t<callpath from="onClick"/> \n\t<uses-permission="android.permission.RECORD_AUDIO"/>\nRETURN app'
 
 function Frame() {
     this.id = Frame.prototype.count
