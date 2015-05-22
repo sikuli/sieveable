@@ -1,6 +1,7 @@
-var sort = require('../lib/sort.js'),
-    _ = require('lodash'),
-    should = require('should');
+var sort = require('../lib/sort.js');
+var _ = require('lodash');
+var chai = require('chai');
+chai.should();
 
 describe('sort', function () {
     it('order and sort attributes', function (done) {
@@ -33,18 +34,18 @@ describe('sort', function () {
 
         var firstObjectSorted = sort(firstObject);
         var secondObjectSorted = sort(secondObject);
-        console.log('Before:')
-        console.log(firstObject)
-        console.log('After:')
-        console.log(firstObjectSorted)
-        console.log('=========================================================')
-        console.log('Before:')
-        console.log(secondObject)
-        console.log('After:')
-        console.log(secondObjectSorted)
+        console.log('Before:');
+        console.log(firstObject);
+        console.log('After:');
+        console.log(firstObjectSorted);
+        console.log('=========================================================');
+        console.log('Before:');
+        console.log(secondObject);
+        console.log('After:');
+        console.log(secondObjectSorted);
         var comparison = _.isEqual(firstObjectSorted, secondObjectSorted);
-        comparison.should.be.true
+        comparison.should.be.true;
 
         done();
     })
-})
+});
