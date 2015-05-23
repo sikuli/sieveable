@@ -24,6 +24,7 @@ script:
 
 services:
   - mongodb
+  - redis-server
 
 after_script:
   # Delete indexed documents and stop solr
