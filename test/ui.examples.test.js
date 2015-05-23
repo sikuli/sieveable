@@ -2,44 +2,44 @@ var fs = require('fs');
 var request = require('supertest');
 var parse = require('../lib/parse.js');
 var app = require('../lib/server/server');
-var should = require('should');
 var chai = require("chai");
 var pd = require('pretty-data').pd;
 var eyes = require('eyes');
-
+var should = chai.should();
 chai.use(require('chai-things'));
-chai.should();
 
 //TODO: Validate results manually.
 describe('UI Examples: Answers to multiple UI design by example questions.', function () {
     this.timeout(20000)
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
-    '/../examples/ui/q1-a.xml', 'utf-8');
+    '/../fixtures/examples/ui/q1-a.xml', 'utf-8');
     var query_xml_q1_b = fs.readFileSync(__dirname +
-    '/../examples/ui/q1-b.xml', 'utf-8');
+    '/../fixtures/examples/ui/q1-b.xml', 'utf-8');
+    var query_xml_q1_c = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q1-c.xml', 'utf-8');
     var query_xml_q2 = fs.readFileSync(__dirname +
-    '/../examples/ui/q2.xml', 'utf-8');
+    '/../fixtures/examples/ui/q2.xml', 'utf-8');
     var query_xml_q3_a = fs.readFileSync(__dirname +
-    '/../examples/ui/q3-a.xml', 'utf-8');
+    '/../fixtures/examples/ui/q3-a.xml', 'utf-8');
     var query_xml_q3_b = fs.readFileSync(__dirname +
-    '/../examples/ui/q3-b.xml', 'utf-8');
+    '/../fixtures/examples/ui/q3-b.xml', 'utf-8');
     var query_xml_q4 = fs.readFileSync(__dirname +
-    '/../examples/ui/q4.xml', 'utf-8');
+    '/../fixtures/examples/ui/q4.xml', 'utf-8');
     var query_xml_q5_a = fs.readFileSync(__dirname +
-    '/../examples/ui/q5-a.xml', 'utf-8');
+    '/../fixtures/examples/ui/q5-a.xml', 'utf-8');
     var query_xml_q5_b = fs.readFileSync(__dirname +
-    '/../examples/ui/q5-b.xml', 'utf-8');
+    '/../fixtures/examples/ui/q5-b.xml', 'utf-8');
     var query_xml_q6 = fs.readFileSync(__dirname +
-    '/../examples/ui/q6.xml', 'utf-8');
+    '/../fixtures/examples/ui/q6.xml', 'utf-8');
     var query_xml_q7 = fs.readFileSync(__dirname +
-    '/../examples/ui/q7.xml', 'utf-8');
+    '/../fixtures/examples/ui/q7.xml', 'utf-8');
     var query_xml_q8 = fs.readFileSync(__dirname +
-    '/../examples/ui/q8.xml', 'utf-8');
+    '/../fixtures/examples/ui/q8.xml', 'utf-8');
     var query_xml_q9 = fs.readFileSync(__dirname +
-    '/../examples/ui/q9.xml', 'utf-8');
+    '/../fixtures/examples/ui/q9.xml', 'utf-8');
     var query_xml_q10 = fs.readFileSync(__dirname +
-    '/../examples/ui/q10.xml', 'utf-8');
+    '/../fixtures/examples/ui/q10.xml', 'utf-8');
     this.timeout(0);
 
     it('q1-a it should search for the following example: \n' +
@@ -93,7 +93,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 {
                     id: "com.whatsapp-48450", packageName: "com.whatsapp",
                     version: "48450"
-                }]
+                }];
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -118,9 +118,42 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 });
         })
 
+    it('q1-c it should search for the following example: \n' +
+        pd.xml(query_xml_q1_c) + '\n' +
+        'and find only one version of com.whatsapp, version: 48450',
+        function (done) {
+            var q = 'MATCH app\nWHERE ' + query_xml_q1_c + '\n RETURN app';
+            var expected_q1_c = [
+                {
+                    id: "com.whatsapp-48450", packageName: "com.whatsapp",
+                    version: "48450"
+                }];
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err)
+                    should.exist(res.body)
+                    res.body.should.have.length(1)
+                    try {
+                        res.body.should.include.something.that.deep.equals(expected_q1_c[0])
+                    }
+                    catch (e) {
+                        console.log('Expected:')
+                        eyes.inspect(expected_q1_c)
+                        console.log('Actual:')
+                        eyes.inspect(res.body)
+                        throw e
+                    }
+                    done()
+                });
+        })
+
     it('q2 it should search for the following example: \n' +
         pd.xml(query_xml_q2) + '\n' +
-        'and find 11 apps, two of which are:\n' +
+        'and find 13 apps, two of which are:\n' +
         '"com.google.android.apps.plus, versions: 413076433 and 413148638"',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q2 + '\n RETURN app';
@@ -142,7 +175,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(11)
+                    res.body.should.have.length(13)
                     try {
                         res.body.should.include.something.that.deep.equals(expected_q2[0])
                         res.body.should.include.something.that.deep.equals(expected_q2[1])
