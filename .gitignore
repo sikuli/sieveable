@@ -1,6 +1,5 @@
 #node
 node_modules
-
 # Test data files
 fixtures/*/*.json
 fixtures/*/*.xml
@@ -9,6 +8,7 @@ fixtures/db
 # Intellij IDEA
 .idea/
 *.iml
-
 # out files
 indexes/
+# Redis dump file
+dump.rdb
