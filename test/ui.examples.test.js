@@ -290,7 +290,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q4 it should search for the following example: \n' +
         pd.xml(query_xml_q4) + '\n' +
-        'and find 6 app, four of which are:\n' +
+        'and find 9 apps, four of which are:\n' +
         '"com.facebook.katana, version: 666397 and 258882"\n' +
         '"com.instagram.android, version: 639564"\n' +
         '"com.sgiggle.production, version: 1386724633"\n',
@@ -320,7 +320,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(6)
+                    res.body.should.have.length(9)
                     try {
                         res.body.should.include.something.that.deep.equals(expected_q4[0])
                         res.body.should.include.something.that.deep.equals(expected_q4[1])
