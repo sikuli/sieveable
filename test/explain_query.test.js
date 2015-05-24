@@ -85,6 +85,39 @@ describe('explain query', function () {
         done();
     })
 
+    it('explain UI query with an anonymous tag', function (done) {
+        var query = 'MATCH app\n' +
+            'WHERE\n' +
+            '<LinearLayout>\n' +
+            '<_>\n' +
+            '<ImageView/>\n' +
+            '</_>\n' +
+            '</LinearLayout>\n' +
+            'RETURN app';
+        var actual = explainQuery(query);
+        var expected = {
+            match: ['app'],
+            ui: '<LinearLayout>' +
+            '<_>' +
+            '<ImageView/>' +
+            '</_>' +
+            '</LinearLayout>',
+            return: ['app'],
+            limit: 100
+        };
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
+        done();
+    })
+
     it('explain listing query', function (done) {
         var query = 'MATCH app\n' +
             'WHERE\n' +
