@@ -1,0 +1,62 @@
+[
+  {
+    "id": "com.cleanmaster.mguard-40101776",
+    "packageName": "com.cleanmaster.mguard",
+    "version": "40101776"
+  },
+  {
+    "id": "com.cleanmaster.mguard-50511533",
+    "packageName": "com.cleanmaster.mguard",
+    "version": "50511533"
+  },
+  {
+    "id": "com.facebook.katana-258882",
+    "packageName": "com.facebook.katana",
+    "version": "258882"
+  },
+  {
+    "id": "com.facebook.katana-666397",
+    "packageName": "com.facebook.katana",
+    "version": "666397"
+  },
+  {
+    "id": "com.facebook.orca-936981",
+    "packageName": "com.facebook.orca",
+    "version": "936981"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  {
+    "id": "com.google.android.youtube-5021",
+    "packageName": "com.google.android.youtube",
+    "version": "5021"
+  },
+  {
+    "id": "com.google.android.youtube-5738",
+    "packageName": "com.google.android.youtube",
+    "version": "5738"
+  },
+  {
+    "id": "com.sec.chaton-207103000",
+    "packageName": "com.sec.chaton",
+    "version": "207103000"
+  },
+  {
+    "id": "com.sec.chaton-302115000",
+    "packageName": "com.sec.chaton",
+    "version": "302115000"
+  },
+  {
+    "id": "com.tencent.mm-405",
+    "packageName": "com.tencent.mm",
+    "version": "405"
+  }
+]

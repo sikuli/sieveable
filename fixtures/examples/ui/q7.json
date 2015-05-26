@@ -1,0 +1,47 @@
+[
+  {
+    "id": "com.android.chrome-1547059",
+    "packageName": "com.android.chrome",
+    "version": "1547059"
+  },
+  {
+    "id": "com.google.android.gm-4720010",
+    "packageName": "com.google.android.gm",
+    "version": "4720010"
+  },
+  {
+    "id": "com.google.android.gm-4800250",
+    "packageName": "com.google.android.gm",
+    "version": "4800250"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  {
+    "id": "com.android.chrome-1650059",
+    "packageName": "com.android.chrome",
+    "version": "1650059"
+  },
+  {
+    "id": "com.sec.chaton-207103000",
+    "packageName": "com.sec.chaton",
+    "version": "207103000"
+  },
+  {
+    "id": "com.viber.voip-37",
+    "packageName": "com.viber.voip",
+    "version": "37"
+  },
+  {
+    "id": "com.viber.voip-47",
+    "packageName": "com.viber.voip",
+    "version": "47"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "com.android.chrome-1547059",
+    "packageName": "com.android.chrome",
+    "version": "1547059"
+  },
+  {
+    "id": "com.whatsapp-48450",
+    "packageName": "com.whatsapp",
+    "version": "48450"
+  },
+  {
+    "id": "com.google.android.apps.babel-21224130",
+    "packageName": "com.google.android.apps.babel",
+    "version": "21224130"
+  },
+  {
+    "id": "com.google.android.apps.babel-21311130",
+    "packageName": "com.google.android.apps.babel",
+    "version": "21311130"
+  },
+  {
+    "id": "com.google.android.apps.plus-413076433",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413076433"
+  },
+  {
+    "id": "com.google.android.apps.plus-413148638",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413148638"
+  },
+  {
+    "id": "com.google.android.gm-4720010",
+    "packageName": "com.google.android.gm",
+    "version": "4720010"
+  },
+  {
+    "id": "com.android.chrome-1650059",
+    "packageName": "com.android.chrome",
+    "version": "1650059"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  {
+    "id": "com.shazam.android-81291",
+    "packageName": "com.shazam.android",
+    "version": "81291"
+  },
+  {
+    "id": "com.shazam.android-89487",
+    "packageName": "com.shazam.android",
+    "version": "89487"
+  },
+  {
+    "id": "com.google.android.gm-4800250",
+    "packageName": "com.google.android.gm",
+    "version": "4800250"
+  }
+]
