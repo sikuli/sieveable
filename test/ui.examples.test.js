@@ -6,40 +6,80 @@ var chai = require("chai");
 var pd = require('pretty-data').pd;
 var eyes = require('eyes');
 var should = chai.should();
-chai.use(require('chai-things'));
 
-//TODO: Validate results manually.
 describe('UI Examples: Answers to multiple UI design by example questions.', function () {
     this.timeout(20000)
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q1-a.xml', 'utf-8');
+    var result_json_q1_a = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q1-a.json', 'utf-8');
+
     var query_xml_q1_b = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q1-b.xml', 'utf-8');
+    var result_json_q1_b = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q1-b.json', 'utf-8');
+
     var query_xml_q1_c = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q1-c.xml', 'utf-8');
+    var result_json_q1_c = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q1-c.json', 'utf-8');
+
     var query_xml_q2 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q2.xml', 'utf-8');
+    var result_json_q2 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q2.json', 'utf-8');
+
     var query_xml_q3_a = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q3-a.xml', 'utf-8');
+    var result_json_q3_a = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q3-a.json', 'utf-8');
+
     var query_xml_q3_b = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q3-b.xml', 'utf-8');
+    var result_json_q3_b = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q3-b.json', 'utf-8');
+
     var query_xml_q4 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q4.xml', 'utf-8');
+    var result_json_q4 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q4.json', 'utf-8');
+
     var query_xml_q5_a = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q5-a.xml', 'utf-8');
+    var result_json_q5_a = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q5-a.json', 'utf-8');
+
     var query_xml_q5_b = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q5-b.xml', 'utf-8');
+    var result_json_q5_b = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q5-b.json', 'utf-8');
+
     var query_xml_q6 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q6.xml', 'utf-8');
+    var result_json_q6 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q6.json', 'utf-8');
+
     var query_xml_q7 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q7.xml', 'utf-8');
+    var result_json_q7 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q7.json', 'utf-8');
+
     var query_xml_q8 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q8.xml', 'utf-8');
+    var result_json_q8 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q8.json', 'utf-8');
+
     var query_xml_q9 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q9.xml', 'utf-8');
+    var result_json_q9 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q9.json', 'utf-8');
+
     var query_xml_q10 = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q10.xml', 'utf-8');
+    var result_json_q10 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/ui/q10.json', 'utf-8');
+
     this.timeout(0);
 
     it('q1-a it should search for the following example: \n' +
@@ -47,16 +87,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         'and find two versions of "com.whatsapp", version: "48364" and "48450"',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q1_a + '\n RETURN app';
-            var expected_q1_a = [{
-                id: "com.whatsapp-48364",
-                packageName: "com.whatsapp",
-                version: "48364"
-            },
-                {
-                    id: "com.whatsapp-48450",
-                    packageName: "com.whatsapp",
-                    version: "48450"
-                }]
+            var expected_q1_a = JSON.parse(result_json_q1_a);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -66,8 +97,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.not.exist(err)
                     should.exist(res.body)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q1_a[0])
-                        res.body.should.include.something.that.deep.equals(expected_q1_a[1])
+                        res.body.should.deep.include.members(expected_q1_a);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -85,15 +115,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         'and find two versions of "com.whatsapp", version: "48364" and "48450"',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q1_b + '\n RETURN app';
-            var expected_q1_b = [
-                {
-                    id: "com.whatsapp-48364", packageName: "com.whatsapp",
-                    version: "48364"
-                },
-                {
-                    id: "com.whatsapp-48450", packageName: "com.whatsapp",
-                    version: "48450"
-                }];
+            var expected_q1_b = JSON.parse(result_json_q1_b);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -104,8 +126,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(2)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q1_b[0])
-                        res.body.should.include.something.that.deep.equals(expected_q1_b[1])
+                        res.body.should.deep.include.members(expected_q1_b);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -123,11 +144,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         'and find only one version of com.whatsapp, version: 48450',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q1_c + '\n RETURN app';
-            var expected_q1_c = [
-                {
-                    id: "com.whatsapp-48450", packageName: "com.whatsapp",
-                    version: "48450"
-                }];
+            var expected_q1_c = JSON.parse(result_json_q1_c);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -138,7 +155,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(1)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q1_c[0])
+                        res.body.should.deep.include.members(expected_q1_c)
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -153,20 +170,10 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q2 it should search for the following example: \n' +
         pd.xml(query_xml_q2) + '\n' +
-        'and find 13 apps, two of which are:\n' +
-        '"com.google.android.apps.plus, versions: 413076433 and 413148638"',
+        'and find 13 apps.',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q2 + '\n RETURN app';
-            var expected_q2 = [{
-                id: "com.google.android.apps.plus-413076433",
-                packageName: "com.google.android.apps.plus",
-                version: "413076433"
-            },
-                {
-                    id: "com.google.android.apps.plus-413148638",
-                    packageName: "com.google.android.apps.plus",
-                    version: "413148638"
-                }]
+            var expected_q2 = JSON.parse(result_json_q2);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -177,8 +184,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(13)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q2[0])
-                        res.body.should.include.something.that.deep.equals(expected_q2[1])
+                        res.body.should.deep.include.members(expected_q2);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -192,30 +198,10 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         })
 
     it('q3-a it should search for the following example: \n' +
-        pd.xml(query_xml_q3_a) + '\n' +
-        'and find 4 apps:\n' +
-        '"com.google.android.apps.translate, versions: 30000023 and 30000028"\n'
-        + '"com.google.android.gm, versions: "4720010 and 4800250"',
+        pd.xml(query_xml_q3_a) + '\n' + 'and find 4 apps.',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q3_a + '\n RETURN app';
-            var expected_q3_a = [{
-                id: "com.google.android.apps.translate-30000023",
-                packageName: "com.google.android.apps.translate",
-                version: "30000023"
-            },
-                {
-                    id: "com.google.android.apps.translate-30000028",
-                    packageName: "com.google.android.apps.translate",
-                    version: "30000028"
-                },
-                {
-                    id: "com.google.android.gm-4720010",
-                    packageName: "com.google.android.gm", version: "4720010"
-                },
-                {
-                    id: "com.google.android.gm-4800250",
-                    packageName: "com.google.android.gm", version: "4800250"
-                }]
+            var expected_q3_a = JSON.parse(result_json_q3_a);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -226,10 +212,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(4)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q3_a[0])
-                        res.body.should.include.something.that.deep.equals(expected_q3_a[1])
-                        res.body.should.include.something.that.deep.equals(expected_q3_a[2])
-                        res.body.should.include.something.that.deep.equals(expected_q3_a[3])
+                        res.body.should.deep.include.members(expected_q3_a);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -244,24 +227,11 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q3-b it should search for the following example: \n' +
         pd.xml(query_xml_q3_b) + '\n' +
-        'and find 3 apps:\n' +
-        '"com.google.android.apps.books, version: 20921"\n'
-        + '"com.google.android.music, versions: "1317 and 1514"\n',
+        'and find 3 apps.',
         function (done) {
             pd.xml(query_xml_q3_b)
             var q = 'MATCH app\nWHERE ' + query_xml_q3_b + '\n RETURN app';
-            var expected_q3_b = [{
-                id: "com.google.android.apps.books-20921",
-                packageName: "com.google.android.apps.books", version: "20921"
-            },
-                {
-                    id: "com.google.android.music-1317",
-                    packageName: "com.google.android.music", version: "1317"
-                },
-                {
-                    id: "com.google.android.music-1514",
-                    packageName: "com.google.android.music", version: "1514"
-                }]
+            var expected_q3_b = JSON.parse(result_json_q3_b);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -272,9 +242,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(3)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q3_b[0])
-                        res.body.should.include.something.that.deep.equals(expected_q3_b[1])
-                        res.body.should.include.something.that.deep.equals(expected_q3_b[2])
+                        res.body.should.deep.include.members(expected_q3_b);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -290,28 +258,10 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q4 it should search for the following example: \n' +
         pd.xml(query_xml_q4) + '\n' +
-        'and find 9 apps, four of which are:\n' +
-        '"com.facebook.katana, version: 666397 and 258882"\n' +
-        '"com.instagram.android, version: 639564"\n' +
-        '"com.sgiggle.production, version: 1386724633"\n',
+        'and find 9 apps.',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q4 + '\n RETURN app';
-            var expected_q4 = [{
-                id: "com.facebook.katana-666397",
-                packageName: "com.facebook.katana", version: "666397"
-            },
-                {
-                    id: "com.facebook.katana-258882",
-                    packageName: "com.facebook.katana", version: "258882"
-                },
-                {
-                    id: "com.instagram.android-639564",
-                    packageName: "com.instagram.android", version: "639564"
-                },
-                {
-                    id: "com.sgiggle.production-1386724633",
-                    packageName: "com.sgiggle.production", version: "1386724633"
-                }]
+            var expected_q4 = JSON.parse(result_json_q4);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -322,10 +272,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(9)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q4[0])
-                        res.body.should.include.something.that.deep.equals(expected_q4[1])
-                        res.body.should.include.something.that.deep.equals(expected_q4[2])
-                        res.body.should.include.something.that.deep.equals(expected_q4[3])
+                        res.body.should.include.to.deep.equals(expected_q4);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -340,29 +287,10 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q5-a it should search for the following example: \n' +
         pd.xml(query_xml_q5_a) + '\n' +
-        'and find 23 apps, four of which are:\n' +
-        ' "com.viber.voip-47, version: 47"\n' +
-        ' "com.sec.chaton, versions: 207103000"\n' +
-        ' "com.android.chrome, version: 1547059"\n' +
-        ' "com.whatsapp, version: 48364"',
+        'and find 24 apps.',
         function (done) {
             var q = 'MATCH App\nWHERE ' + query_xml_q5_a + '\n RETURN app';
-            var expected_q5_a = [{
-                id: "com.viber.voip-47",
-                packageName: "com.viber.voip", version: "47"
-            },
-                {
-                    id: "com.sec.chaton-207103000",
-                    packageName: "com.sec.chaton", version: "207103000"
-                },
-                {
-                    id: "com.android.chrome-1547059",
-                    packageName: "com.android.chrome", version: "1547059"
-                },
-                {
-                    id: "com.whatsapp-48364",
-                    packageName: "com.whatsapp", version: "48364"
-                }]
+            var expected_q5_a = JSON.parse(result_json_q5_a);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -371,12 +299,9 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(23)
+                    res.body.should.have.length(24)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q5_a[0])
-                        res.body.should.include.something.that.deep.equals(expected_q5_a[1])
-                        res.body.should.include.something.that.deep.equals(expected_q5_a[2])
-                        res.body.should.include.something.that.deep.equals(expected_q5_a[3])
+                        res.body.should.deep.include.members(expected_q5_a);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -398,22 +323,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         ' "com.tencent.mm, version: 405"',
         function (done) {
             var q = 'MATCH App\nWHERE ' + query_xml_q5_b + '\n RETURN app';
-            var expected_q5_b = [{
-                id: "com.facebook.orca-936981",
-                packageName: "com.facebook.orca", version: "936981"
-            },
-                {
-                    id: "com.sec.chaton-302115000",
-                    packageName: "com.sec.chaton", version: "302115000"
-                },
-                {
-                    id: "com.sec.chaton-207103000",
-                    packageName: "com.sec.chaton", version: "207103000"
-                },
-                {
-                    id: "com.tencent.mm-405",
-                    packageName: "com.tencent.mm", version: "405"
-                }]
+            var expected_q5_b = JSON.parse(result_json_q5_b);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -424,10 +334,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(12)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q5_b[0])
-                        res.body.should.include.something.that.deep.equals(expected_q5_b[1])
-                        res.body.should.include.something.that.deep.equals(expected_q5_b[2])
-                        res.body.should.include.something.that.deep.equals(expected_q5_b[3])
+                        res.body.should.deep.include.members(expected_q5_b);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -442,29 +349,10 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q6 it should search for the following example: \n' +
         pd.xml(query_xml_q6) + '\n' +
-        'and find 29 apps, four of which are:\n' +
-        ' "com.viber.voip-37, version: 666397"\n' +
-        ' "com.sgiggle.production, versions: 68"\n' +
-        ' "com.outfit7.talkingtom2free, version: 142"\n' +
-        ' "com.google.android.music-1317, version: 48364"',
+        'and find 32 apps.',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q6 + '\n RETURN app';
-            var expected_q6 = [{
-                id: "com.viber.voip-37",
-                packageName: "com.viber.voip", version: "37"
-            },
-                {
-                    id: "com.sgiggle.production-68",
-                    packageName: "com.sgiggle.production", version: "68"
-                },
-                {
-                    id: "com.outfit7.talkingtom2free-142",
-                    packageName: "com.outfit7.talkingtom2free", version: "142"
-                },
-                {
-                    id: "com.google.android.music-1317",
-                    packageName: "com.google.android.music", version: "1317"
-                }]
+            var expected_q6 = JSON.parse(result_json_q6);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -473,18 +361,15 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err)
                     should.exist(res.body)
-                    res.body.should.have.length(29)
+                    res.body.should.have.length(32)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q6[0])
-                        res.body.should.include.something.that.deep.equals(expected_q6[1])
-                        res.body.should.include.something.that.deep.equals(expected_q6[2])
-                        res.body.should.include.something.that.deep.equals(expected_q6[3])
+                        res.body.should.deep.include.members(expected_q6);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q6)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q6);
+                        console.log('Actual:');
+                        eyes.inspect(res.body);
                         throw e
                     }
                     done()
@@ -493,29 +378,10 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
 
     it('q7 it should search for the following example: \n' +
         pd.xml(query_xml_q7) + '\n' +
-        'and find 9 apps, four of which are:\n' +
-        ' "com.android.chrome, version: 1547059"\n' +
-        ' "om.sec.chaton, versions: 207103000"\n' +
-        ' "com.viber.voip, version: 37"\n' +
-        ' "com.viber.voip, version: 47"',
+        'and find 9 apps.',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q7 + '\n RETURN app';
-            var expected_q7 = [{
-                id: "com.android.chrome-1547059",
-                packageName: "com.android.chrome", version: "1547059"
-            },
-                {
-                    id: "com.sec.chaton-207103000",
-                    packageName: "com.sec.chaton", version: "207103000"
-                },
-                {
-                    id: "com.viber.voip-37",
-                    packageName: "com.viber.voip", version: "37"
-                },
-                {
-                    id: "com.viber.voip-47",
-                    packageName: "com.viber.voip", version: "47"
-                }]
+            var expected_q7 = JSON.parse(result_json_q7);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -526,10 +392,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(9)
                     try {
-                        res.body.should.include.something.that.deep.equals(expected_q7[0])
-                        res.body.should.include.something.that.deep.equals(expected_q7[1])
-                        res.body.should.include.something.that.deep.equals(expected_q7[2])
-                        res.body.should.include.something.that.deep.equals(expected_q7[3])
+                        res.body.should.deep.include.members(expected_q7)
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -546,21 +409,27 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         pd.xml(query_xml_q8) + '\n' +
         'and find 1 app: "com.google.android.youtube, version: 5738."\n',
         function (done) {
-            var q = parse(query_xml_q8)
-            var expected_q8 = [{
-                id: "com.google.android.youtube-5738",
-                packageName: "com.google.android.youtube", version: "5738"
-            }]
+            var q = 'MATCH app\nWHERE ' + query_xml_q8 + '\n RETURN app';
+            var expected_q8 = JSON.parse(result_json_q8);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(1)
-                    res.body.should.include.something.that.deep.equals(expected_q8[0])
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(1);
+                    try {
+                        res.body.should.deep.include.members(expected_q8);
+                    }
+                    catch (e) {
+                        console.log('Expected:')
+                        eyes.inspect(expected_q8)
+                        console.log('Actual:')
+                        eyes.inspect(res.body)
+                        throw e
+                    }
                     done()
                 });
         })
