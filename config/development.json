@@ -18,6 +18,12 @@
   "dataset": {
     "path": "../fixtures",
     "keysFile": "../fixtures/keys.txt",
-    "keyName": "dataset:id"
+    "keyName": "dataset:id",
+    "uiKeysFile": "../fixtures/ui/ui.keys",
+    "uiKeyName": "dataset:ui",
+    "manifestKeysFile": "../fixtures/manifest/manifest.keys",
+    "manifestKeyName": "dataset:manifest",
+    "codeKeysFile": "../fixtures/code/code.keys",
+    "codeKeyName": "dataset:code"
   }
 }
