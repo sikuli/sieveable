@@ -127,28 +127,53 @@ gulp.task('mongo:insertListing', function (done) {
 });
 
 gulp.task('redis:addKeys', function (done) {
-    var client = redis.createClient();
-    client.on("error", function (err) {
+    var redisClient = redis.createClient();
+    redisClient.on("error", function (err) {
         console.error("Error " + err);
         throw (err);
     });
-
     var keysFile = path.resolve(__dirname, 'config', config.get('dataset.keysFile'));
     var key = config.get('dataset.keyName');
-    var stream = fs.createReadStream(keysFile, {encoding: 'utf8'});
-    stream = byline.createStream(stream);
+    var uiKeysFile = path.resolve(__dirname, 'config', config.get('dataset.uiKeysFile'));
+    var uiKey = config.get('dataset.uiKeyName');
+    var manifestKeysFile = path.resolve(__dirname, 'config', config.get('dataset.manifestKeysFile'));
+    var manifestKey = config.get('dataset.manifestKeyName');
+    var codeKeysFile = path.resolve(__dirname, 'config', config.get('dataset.codeKeysFile'));
+    var codeKey = config.get('dataset.codeKeyName');
 
-    stream.on('data', function (line) {
-        if (line.trim()) {
-            console.log(key + " => " + line);
-            client.sadd(key, line)
+    Promise.join(
+        indexRedis(key, keysFile, redisClient),
+        indexRedis(uiKey, uiKeysFile, redisClient),
+        indexRedis(manifestKey, manifestKeysFile, redisClient),
+        indexRedis(codeKey, codeKeysFile, redisClient), function () {
+            console.log('All keys and values have been added to redis.')
+            redisClient.quit();
+            done();
         }
-    });
-    stream.on('end', function () {
-        client.quit();
-        done();
-    })
+    )
+
+
 });
+
+function indexRedis(key, textFile, redisClient) {
+    return new Promise(function (resolve, reject) {
+        var stream = fs.createReadStream(textFile, {encoding: 'utf8'});
+        stream = byline.createStream(stream);
+        stream.on('data', function (line) {
+            if (line.trim()) {
+                console.log(key + " => " + line);
+                redisClient.sadd(key, line)
+            }
+        });
+        stream.on('end', function () {
+            resolve();
+        })
+        stream.on('error', function () {
+            reject(new TypeError("Error in indexRedis"));
+        })
+    })
+
+}
 
 gulp.task('mongo:indexListing', function (done) {
     mongo.createIndex('listings', {id: 1}, {unique: true})
@@ -166,7 +191,7 @@ gulp.task('mongo:close', function () {
 
 
 gulp.task('load:db', function (callback) {
-    runSequence('mongo:insertListing', 'mongo:indexListing', 'mongo:close', callback)
+    runSequence('mongo:insertListing', 'mongo:indexListing', 'mongo:close', 'redis:addKeys', callback)
 });
 
 gulp.task('default', function (callback) {
