@@ -5,6 +5,7 @@ before_install:
   - wget http://archive.apache.org/dist/lucene/solr/5.1.0/solr-5.1.0.tgz
   - tar -xzf solr-5.1.0.tgz
   - export PATH=$PATH:$PWD/solr-5.1.0/bin/
+  - export NODE_ENV=development
 
 before_script:
   - solr start -cloud -V -m 4g -p 8983
