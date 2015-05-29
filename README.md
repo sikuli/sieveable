@@ -1,6 +1,6 @@
 # Sieveable [![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable)
 
-Mobile Apps Search and Filtering System.
+Searching and Filtering Mobile Apps.
 
 
 # Requirements
@@ -45,3 +45,4 @@ Mobile Apps Search and Filtering System.
 
 # Known Issues
 - If you run the indexing task (```gulp index:code```) and get out of memory errors, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 4g -cloud -V ```
+
