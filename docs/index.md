@@ -1,8 +1,15 @@
-FDQL
-====
+Sieveable and FDQL
+===================
 ## What is FDQL?
-Functions and Design Query Language. A query language for searching UI functions and designs by examples.
+FDQL stands for Functions and Design Query Language. It is a domain-specific language (DSL) for searching user interface (UI) specific functions and design by examples. Sieveable takes FDQL queries as input and returns the results that match the given queries. FDQL is a declarative language that matches apps' features at multiple levels: Listing details, user interface, source code, and functions (actual behaviors).
 
+## Syntax
+FDQL is a declarative language that uses a simple syntax with four main clauses:
+
+- ```MATCH```: The app to match.
+- ```WHERE```: It contains predicates that describe the data to match based on specific criteria or example.
+- ```RETURN```: It specifies the data returned by the query.
+- ```LIMIT```: It constrains the number of results returned by the query.
 
 ## UI Search Queries
 
