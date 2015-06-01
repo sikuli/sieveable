@@ -1,0 +1,67 @@
+[
+  {
+    "id": "com.facebook.katana-258882",
+    "packageName": "com.facebook.katana",
+    "version": "258882"
+  },
+  {
+    "id": "com.facebook.katana-666397",
+    "packageName": "com.facebook.katana",
+    "version": "666397"
+  },
+  {
+    "id": "com.google.android.apps.books-30149",
+    "packageName": "com.google.android.apps.books",
+    "version": "30149"
+  },
+  {
+    "id": "com.google.android.apps.maps-705001703",
+    "packageName": "com.google.android.apps.maps",
+    "version": "705001703"
+  },
+  {
+    "id": "com.google.android.apps.plus-413076433",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413076433"
+  },
+  {
+    "id": "com.google.android.apps.plus-413148638",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413148638"
+  },
+  {
+    "id": "com.google.android.gm-4720010",
+    "packageName": "com.google.android.gm",
+    "version": "4720010"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  {
+    "id": "com.google.android.tts-210030103",
+    "packageName": "com.google.android.tts",
+    "version": "210030103"
+  },
+  {
+    "id": "com.google.android.youtube-5021",
+    "packageName": "com.google.android.youtube",
+    "version": "5021"
+  },
+  {
+    "id": "com.google.android.youtube-5738",
+    "packageName": "com.google.android.youtube",
+    "version": "5738"
+  },
+  {
+    "id": "com.whatsapp-48450",
+    "packageName": "com.whatsapp",
+    "version": "48450"
+  }
+]

@@ -5,41 +5,33 @@ var app = require('../lib/server/server');
 var chai = require("chai");
 var eyes = require('eyes');
 var should = chai.should();
-chai.use(require('chai-things'));
-
 
 describe('Listing Details Examples: Answers to multiple listing details by example questions.', function () {
     this.timeout(0)
 
+    var result_json_q1 = fs.readFileSync(__dirname +
+        '/../fixtures/examples/listing/q1.json', 'utf-8');
 
-    it('It should search for the Google+ app by its title' +
-        'and find two versions of the app: "413076433" and "413148638"',
+    var result_json_q2 = fs.readFileSync(__dirname +
+        '/../fixtures/examples/listing/q2.json', 'utf-8');
+
+    it('q1: It should search for the Google+ app by its title' +
+        'and find two versions of the app: "413076433" and "413148638".',
         function (done) {
             var listing_query = '<title>Google+</title>'
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
-            var expected = [
-                {
-                    id: "com.google.android.apps.plus-413076433",
-                    packageName: "com.google.android.apps.plus",
-                    version: "413076433"
-                },
-                {
-                    id: "com.google.android.apps.plus-413148638",
-                    packageName: "com.google.android.apps.plus",
-                    version: "413148638"
-                }
-            ]
+            var expected = JSON.parse(result_json_q1);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(2);
                     try {
-                        res.body.should.include.something.that.deep.equals(expected[0])
-                        res.body.should.include.something.that.deep.equals(expected[1])
+                        res.body.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -52,36 +44,23 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                 });
         })
 
-    it('It should search for apps with downloads count between of 500,000,000' +
-        'and 1,000,000,000' +
-        'and find n apps, two of which are: com.google.android.apps.plus versions:' +
-        '"413076433" and "413148638"',
+    it('q2: It should search for apps with downloads count between of 500,000,000' +
+        ' and 1,000,000,000 and find 13 apps.',
         function (done) {
             var listing_query = '<downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>'
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
-            var expected = [
-                {
-                    id: "com.google.android.apps.plus-413076433",
-                    packageName: "com.google.android.apps.plus",
-                    version: "413076433"
-                },
-                {
-                    id: "com.google.android.apps.plus-413148638",
-                    packageName: "com.google.android.apps.plus",
-                    version: "413148638"
-                }
-            ]
+            var expected = JSON.parse(result_json_q2);
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(13);
                     try {
-                        res.body.should.include.something.that.deep.equals(expected[0])
-                        res.body.should.include.something.that.deep.equals(expected[1])
+                        res.body.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:')
