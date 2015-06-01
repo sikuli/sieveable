@@ -7,7 +7,7 @@ var fs = require('fs'),
     inspect = require('eyes').inspector(),
     eyes = require('eyes');
 
-chai.use(require('chai-things'));
+//chai.use(require('chai-things'));
 chai.should();
 
 describe('Perm Examples', function () {
