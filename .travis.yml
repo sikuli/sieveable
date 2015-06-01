@@ -24,12 +24,10 @@ script:
   # Make sure Solr is running.
   - curl http://localhost:8983/solr/admin/collections?action=LIST&wt=json
 
-services:
-  - mongodb
-  - redis-server
+after_success:
+  - npm run coveralls
 
 after_script:
-  - npm run coveralls
   # Delete indexed documents and stop solr
   - curl http://localhost:8983/solr/sieveable-code/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8'
   - curl http://localhost:8983/solr/sieveable-code/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'
@@ -41,6 +39,10 @@ node_js:
 
 jdk:
   - oraclejdk7
+
+services:
+  - mongodb
+  - redis-server
 
 sudo: false
 
