@@ -20,7 +20,6 @@
     "istanbul": "^0.3.14",
     "mocha": "^2.2.4",
     "mocha-lcov-reporter": "0.0.2",
-    "pretty-data": "^0.40.0",
     "run-sequence": "^1.1.0",
     "supertest": "^1.0.1"
   },
