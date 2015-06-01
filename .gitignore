@@ -12,3 +12,5 @@ fixtures/db
 indexes/
 # Redis dump file
 dump.rdb
+# Coverage
+coverage
