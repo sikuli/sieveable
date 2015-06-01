@@ -29,6 +29,7 @@ services:
   - redis-server
 
 after_script:
+  - npm run coveralls
   # Delete indexed documents and stop solr
   - curl http://localhost:8983/solr/sieveable-code/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8'
   - curl http://localhost:8983/solr/sieveable-code/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'
@@ -36,7 +37,7 @@ after_script:
   - solr stop
 
 node_js:
-  - '0.12'
+  - "0.12"
 
 jdk:
   - oraclejdk7
