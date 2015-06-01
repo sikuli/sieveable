@@ -1,0 +1,37 @@
+[
+  {
+    "id": "com.google.android.apps.translate-30000023",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000023"
+  },
+  {
+    "id": "com.google.android.apps.translate-30000028",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000028"
+  },
+  {
+    "id": "com.instagram.android-639564",
+    "packageName": "com.instagram.android",
+    "version": "639564"
+  },
+  {
+    "id": "com.instagram.android-824805",
+    "packageName": "com.instagram.android",
+    "version": "824805"
+  },
+  {
+    "id": "com.whatsapp-48364",
+    "packageName": "com.whatsapp",
+    "version": "48364"
+  },
+  {
+    "id": "com.whatsapp-48450",
+    "packageName": "com.whatsapp",
+    "version": "48450"
+  },
+  {
+    "id": "com.facebook.orca-936981",
+    "packageName": "com.facebook.orca",
+    "version": "936981"
+  }
+]
