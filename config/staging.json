@@ -9,10 +9,19 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
-      "collection": "sieveable-code"
+      "collection": "sieveable-code",
+      "collections": [
+        {
+          "collection": "listings",
+          "type": "listingsCollection",
+          "description": "Listing details collection"
+        }
+      ]
     },
     "redis": {
-      "config": "./redis.conf"
+      "config": "./redis.conf",
+      "host": "localhost",
+      "port": 6379
     }
   },
   "dataset": {
