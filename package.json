@@ -1,7 +1,9 @@
 {
   "name": "sieveable",
   "version": "1.0.0",
-  "description": "Sieveable: Mobile Apps Search and Filtering System.",
+  "description": "Sieveable: Searching and filtering mobile apps.",
+  "repository": "sikuli/sieveable",
+  "homepage":"http://sieveable.io",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
