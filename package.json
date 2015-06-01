@@ -4,16 +4,20 @@
   "description": "Sieveable: Mobile Apps Search and Filtering System.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "author": "Khalid Alharbi, Tom Yeh",
   "license": "MIT",
   "devDependencies": {
     "byline": "^4.2.1",
     "chai": "^2.3.0",
+    "coveralls": "^2.11.2",
     "debug": "^2.2.0",
     "gulp": "^3.8.11",
+    "istanbul": "^0.3.14",
     "mocha": "^2.2.4",
+    "mocha-lcov-reporter": "0.0.2",
     "pretty-data": "^0.40.0",
     "run-sequence": "^1.1.0",
     "supertest": "^1.0.1"
