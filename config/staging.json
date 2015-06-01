@@ -25,5 +25,10 @@
     "manifestKeyName": "dataset:manifest",
     "codeKeyFile": "../fixtures/code/code.keys",
     "codeKeyName": "dataset:code"
+  },
+  "logger": {
+    "error": {
+      "path": "/var/tmp/sieveable-stage-error.log"
+    }
   }
 }
