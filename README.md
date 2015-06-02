@@ -21,8 +21,8 @@ Searching and Filtering Mobile Apps.
   -  `export NODE_ENV=development` This variable contains the name of the application's deployment environment and can take the value of the base name of the configuration files at the ./config directory, i.e., any of the following values: ```development```, ```staging```, ```production```.
   - To check the value of the exported *NODE_ENV* variable before running the app, execute `echo $NODE_ENV` in your shell to see the current value.
   - If you want to use a different dataset, then you can change the path to the dataset directory in the configuration file at *./config* depending on the config file you want to use. The dataset path must be a relative path to the configuration file.
-- Start mongod, redis, and solr in cloud mode. You can do that in your shell or you can run the _start:db_ gulp task in another shell window or tab: ``` $ gulp start:db ```
-- Run the following gulp tasks one by one, in the exact order shown below: 
+- Start mongod, redis, and solr in cloud mode. You can do that in your shell or you can run the _start:db_ gulp task in another shell window: ``` $ gulp start:db ```
+- Once all database servers are running, run the following gulp tasks one by one, in the exact order shown below: 
 
   ```shell
    $ gulp
