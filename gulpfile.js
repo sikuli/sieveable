@@ -23,13 +23,16 @@ gulp.task('index:ui', function () {
 
 gulp.task('solr:indexCode', function (callback) {
     glob(path.join(DATASET_PATH, 'code', '*.txt'), function (er, files) {
-        codeIndex.index(files);
-        callback();
+        codeIndex.index(files, function (err) {
+            callback(err);
+        });
     });
 });
 
-gulp.task('solr:commit', function () {
-    codeIndex.commit();
+gulp.task('solr:commit', function (callback) {
+    codeIndex.commit(function (err) {
+        callback(err);
+    });
 });
 
 gulp.task('extract:archives', function (done) {
