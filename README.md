@@ -1,4 +1,4 @@
-# Sieveable [![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable)
+# Sieveable [![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable.svg)
 
 Searching and Filtering Mobile Apps.
 
@@ -39,9 +39,6 @@ Searching and Filtering Mobile Apps.
   ```
   - The server should be running at: http://localhost:3000/ui
 
-# Test
-
-	$ mocha
 
 # Known Issues
 - If you run the indexing task (```gulp index:code```) and get out of memory errors, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 4g -cloud -V ```
