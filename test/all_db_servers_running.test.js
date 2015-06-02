@@ -41,12 +41,14 @@ describe("Test that all external db servers are running using their " +
                 client.EXISTS(key, function (err, res) {
                     res.should.equal(1);
                     if (idx == keys.length - 1) {
+                        client.quit();
                         done();
                     }
                 });
             })
         })
         client.on('error', function (error) {
+            client.quit();
             throw new Error("Redis client error " + client.host + ":" +
                 client.port + " - " + error);
         })
