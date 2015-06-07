@@ -16,7 +16,9 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
-      "collection": "sieveable-code"
+      "ui-tag-collection": "sieveable-ui-tag",
+      "ui-tag-h1-collection": "sieveable-ui-h-tag",
+      "code-collection": "sieveable-code"
     },
     "redis": {
       "config": "./redis.conf",
@@ -34,6 +36,10 @@
     "manifestKeyName": "dataset:manifest",
     "codeKeyFile": "../fixtures/code/code.keys",
     "codeKeyName": "dataset:code"
+  },
+  "index":{
+    "extractUITagDir": "../indexes/ui/tag",
+    "extractUIH1Dir": "../indexes/ui-h1/tag"
   },
   "logger": {
     "error": {
