@@ -39,7 +39,7 @@
   },
   "index":{
     "extractUITagDir": "../indexes/ui/tag",
-    "extractUIH1Dir": "../indexes/ui-h1/tag"
+    "extractUIH1Dir": "../indexes/ui/h1"
   },
   "logger": {
     "error": {
