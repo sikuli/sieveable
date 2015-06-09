@@ -17,7 +17,7 @@
       "host": "localhost",
       "port": 8983,
       "ui-tag-collection": "sieveable-ui-tag",
-      "ui-tag-h1-collection": "sieveable-ui-h-tag",
+      "ui-tag-h1-collection": "sieveable-ui-h1",
       "code-collection": "sieveable-code"
     },
     "redis": {
