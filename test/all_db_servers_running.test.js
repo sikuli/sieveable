@@ -38,8 +38,8 @@ function checkSolrCollectionExists(collectionName) {
 describe("Test that all external db servers are running using their " +
     "respected configuration options.", function () {
 
-    it('It should ensure that Solr is running and has docs in all the ' +
-        'collections defined in the config file.', function (done) {
+    it('It should ensure that Solr is running all the collections defined ' +
+        'in the config file exist.', function (done) {
         var collections = [config.get("dbConfig.solr.uiTagCollection"),
             config.get("dbConfig.solr.uiTagH1Collection"),
             config.get("dbConfig.solr.manifestCollection"),
@@ -53,6 +53,7 @@ describe("Test that all external db servers are running using their " +
             })
             .catch(SolrCollectionError, function (e) {
                 console.error("ERROR: " + e.message);
+                throw e;
             })
     })
 
