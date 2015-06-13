@@ -16,9 +16,10 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
-      "ui-tag-collection": "sieveable-ui-tag",
-      "ui-tag-h1-collection": "sieveable-ui-h1",
-      "code-collection": "sieveable-code"
+      "uiTagCollection": "sieveable-ui-tag",
+      "uiTagH1Collection": "sieveable-ui-h1",
+      "manifestCollection": "sieveable-manifest",
+      "codeCollection": "sieveable-code"
     },
     "redis": {
       "config": "./redis.conf",
@@ -30,6 +31,8 @@
     "path": "../fixtures",
     "keysFile": "../fixtures/keys.txt",
     "keyName": "dataset:id",
+    "indexKeysFile": "../fixtures/index/index.keys",
+    "indexKeyName": "dataset:index",
     "uiKeysFile": "../fixtures/ui/ui.keys",
     "uiKeyName": "dataset:ui",
     "manifestKeysFile": "../fixtures/manifest/manifest.keys",
@@ -37,7 +40,7 @@
     "codeKeyFile": "../fixtures/code/code.keys",
     "codeKeyName": "dataset:code"
   },
-  "index":{
+  "index": {
     "extractUITagDir": "../indexes/ui/tag",
     "extractUIH1Dir": "../indexes/ui/h1"
   },
