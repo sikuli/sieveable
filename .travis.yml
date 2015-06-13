@@ -12,17 +12,24 @@ before_script:
   - sleep 15
   - solr create -c sieveable-code
   - solr create -c sieveable-ui-tag
-  - solr create -c sieveable-ui-h-tag
+  - solr create -c sieveable-ui-h1
+  - solr create -c sieveable-manifest
   - sleep 10
   - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-code/schema
   - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-code/schema
   - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-tag/schema
   - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-tag/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-h-tag/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-h-tag/schema
+  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-h1/schema
+  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-h1/schema
+  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-manifest/schema
+  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-manifest/schema
   - gulp
   - gulp load:db
   - gulp index:ui
+  - gulp extract:ui-tag
+  - gulp extract:ui-h1
+  - gulp solr:indexUITag
+  - gulp solr:indexH1
   - gulp solr:indexCode
   - gulp solr:commit
 
