@@ -2,15 +2,14 @@
 
 Searching and Filtering Mobile Apps.
 
-
 # Requirements
 
 - node.js version 0.12 or higher.
 - Install node.js project dependencies:
   - `npm install`
   - Install [gulp]('http://gulpjs.com/'): `npm install gulp -g`
-- This system requires running three servers: [MongoDB]('https://www.mongodb.org/'), [Redis]('http://redis.io/'), and [Solr]('http://lucene.apache.org/solr/').
-- The location of the following executables must be defined in your PATH.
+- This system requires running three database servers: [MongoDB]('https://www.mongodb.org/'), [Redis]('http://redis.io/'), and [Solr]('http://lucene.apache.org/solr/').
+- The location of the following executables must be defined in your PATH:
   - mongod
   - redis-server
   - solr
@@ -22,17 +21,12 @@ Searching and Filtering Mobile Apps.
   - To check the value of the exported *NODE_ENV* variable before running the app, execute `echo $NODE_ENV` in your shell to see the current value.
   - If you want to use a different dataset, then you can change the path to the dataset directory in the configuration file at *./config* depending on the config file you want to use. The dataset path must be a relative path to the configuration file.
 - Start mongod, redis, and solr in cloud mode. You can do that in your shell or you can run the _start:db_ gulp task in another shell window: ``` $ gulp start:db ```
-- Once all database servers are running, run the following gulp tasks one by one, in the exact order shown below: 
+- Once all database servers are running, run the following gulp task: 
 
   ```shell
-   $ gulp
-   $ gulp load:db
-   $ gulp index:ui
-   $ gulp solr:indexCode
-   $ gulp solr:commit
-   ```
- 
-- Start the server:
+  $ gulp
+  ```
+- Start sieveable's web server:
 
   ```shell
   node bin/www
@@ -41,5 +35,5 @@ Searching and Filtering Mobile Apps.
 
 
 # Known Issues
-- If you run the indexing task (```gulp index:code```) and get out of memory errors, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 4g -cloud -V ```
+- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 4g -cloud -V ```
 
