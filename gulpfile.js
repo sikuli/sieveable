@@ -3,34 +3,102 @@ var path = require('path');
 var fs = require('fs');
 var glob = require("glob");
 var byline = require('byline');
+var mkdirp = require("mkdirp");
 var through2 = require('through2');
 var redis = require("redis");
 var runSequence = require('run-sequence');
 var exec = require('child_process').exec;
-var uiIndex = require('./lib/findBy/tagname/searchIndex/build-stream');
-var codeIndex = require('./lib/findBy/code/searchIndex/build-stream');
 var Promise = require("bluebird");
 var execAsync = Promise.promisify(exec);
 var config = require("config");
+var solrIndex = require('./lib/index/solr-index');
+var tagNameExtractor = require("./lib/index/tag-name-extractor");
+var h1Extractor = require("./lib/index/h1-extractor");
 var mongo = require('./lib/db/connection');
 var DATASET_PATH = path.resolve(__dirname, 'config', config.get('dataset.path'));
 
-gulp.task('index:ui', function () {
-    gulp.src(path.join(DATASET_PATH, 'ui', '*.xml'))
-        .pipe(uiIndex())
-        .pipe(gulp.dest('indexes/tagname'));
+gulp.task('extract:ui-tag', function (callback) {
+    // create a directory that contains all extracted files.
+    var dir = path.resolve(__dirname, 'config', config.get('index.extractUITagDir'));
+    mkdirp.sync(dir, {mode: "2775"});
+    // Extract tag names and attributes.
+    glob(path.join(DATASET_PATH, 'ui', '*.xml'), function (err, files) {
+        tagNameExtractor(files, dir, "-ui-tag", function (e) {
+            callback(e);
+        });
+    });
+
+});
+
+gulp.task('extract:ui-h1', function (callback) {
+    // create a directory that contains all extracted files.
+    var dir = path.resolve(__dirname, 'config', config.get('index.extractUIH1Dir'));
+    mkdirp.sync(dir, {mode: "2775"});
+    // Extract tag names and attributes.
+    glob(path.join(DATASET_PATH, 'ui', '*.xml'), function (err, files) {
+        h1Extractor(files, dir, function (e) {
+            callback(e);
+        });
+    });
+
+});
+
+gulp.task('extract:manifest', function (callback) {
+    // create a directory that contains all extracted files.
+    var dir = path.resolve(__dirname, 'config', config.get('index.extractManifestDir'));
+    mkdirp.sync(dir, {mode: "2775"});
+    // Extract tag names and attributes.
+    glob(path.join(DATASET_PATH, 'manifest', '*.xml'), function (err, files) {
+        tagNameExtractor(files, dir, "-manifest-tag", function (e) {
+            callback(e);
+        });
+    });
+
+});
+
+gulp.task('solr:indexUITag', function (callback) {
+    var dir = path.resolve(__dirname, 'config', config.get('index.extractUITagDir'));
+    var collectionName = config.get("dbConfig.solr.uiTagCollection");
+    glob(path.join(dir, '*.txt'), function (err, files) {
+        solrIndex.index(files, "-ui-tag.txt", collectionName, function (e) {
+            callback(e);
+        });
+    });
+});
+
+gulp.task('solr:indexH1', function (callback) {
+    var dir = path.resolve(__dirname, 'config', config.get('index.extractUIH1Dir'));
+    var collectionName = config.get("dbConfig.solr.uiTagH1Collection");
+    glob(path.join(dir, '*.txt'), function (err, files) {
+        solrIndex.index(files, "-ui-h1.txt", collectionName, function (e) {
+            callback(e);
+        });
+    });
+});
+
+gulp.task('solr:indexManifest', function (callback) {
+    var dir = path.resolve(__dirname, 'config', config.get('index.extractManifestDir'));
+    var collectionName = config.get("dbConfig.solr.manifestCollection");
+    glob(path.join(dir, '*.txt'), function (err, files) {
+        solrIndex.index(files, "-manifest-tag.txt", collectionName, function (e) {
+            callback(e);
+        });
+    });
 });
 
 gulp.task('solr:indexCode', function (callback) {
+    var collectionName = config.get("dbConfig.solr.codeCollection");
     glob(path.join(DATASET_PATH, 'code', '*.txt'), function (er, files) {
-        codeIndex.index(files, function (err) {
+        solrIndex.index(files, ".smali.txt", collectionName, function (err) {
             callback(err);
         });
     });
 });
 
+
 gulp.task('solr:commit', function (callback) {
-    codeIndex.commit(function (err) {
+    var collectionName = config.get("dbConfig.solr.codeCollection");
+    solrIndex.commit(collectionName, function (err) {
         callback(err);
     });
 });
@@ -137,6 +205,8 @@ gulp.task('redis:addKeys', function (done) {
     });
     var keysFile = path.resolve(__dirname, 'config', config.get('dataset.keysFile'));
     var key = config.get('dataset.keyName');
+    var indexKeysFile = path.resolve(__dirname, 'config', config.get('dataset.indexKeysFile'));
+    var indexKey = config.get('dataset.indexKeyName');
     var uiKeysFile = path.resolve(__dirname, 'config', config.get('dataset.uiKeysFile'));
     var uiKey = config.get('dataset.uiKeyName');
     var manifestKeysFile = path.resolve(__dirname, 'config', config.get('dataset.manifestKeysFile'));
@@ -146,6 +216,7 @@ gulp.task('redis:addKeys', function (done) {
 
     Promise.join(
         indexRedis(key, keysFile, redisClient),
+        indexRedis(indexKey, indexKeysFile, redisClient),
         indexRedis(uiKey, uiKeysFile, redisClient),
         indexRedis(manifestKey, manifestKeysFile, redisClient),
         indexRedis(codeKey, codeKeysFile, redisClient), function () {
@@ -192,11 +263,16 @@ gulp.task('mongo:close', function () {
     mongo.close();
 });
 
-
 gulp.task('load:db', function (callback) {
     runSequence('mongo:insertListing', 'mongo:indexListing', 'mongo:close', 'redis:addKeys', callback)
 });
 
+gulp.task('solr:index', function (callback) {
+    runSequence('extract:ui-tag', 'extract:ui-h1', 'extract:manifest',
+        'solr:indexUITag', 'solr:indexH1', 'solr:indexManifest',
+        'solr:indexCode', 'solr:commit', callback)
+});
+
 gulp.task('default', function (callback) {
-    runSequence('extract:archives', 'load:db', callback);
+    runSequence('extract:archives', 'load:db', 'solr:index', callback);
 });
