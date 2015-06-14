@@ -8,7 +8,7 @@ var eyes = require('eyes');
 var should = chai.should();
 
 describe('UI Examples: Answers to multiple UI design by example questions.', function () {
-    this.timeout(20000)
+    this.timeout(40000)
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
     '/../fixtures/examples/ui/q1-a.xml', 'utf-8');
@@ -208,8 +208,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
+                    should.not.exist(err);
+                    should.exist(res.body);
                     res.body.should.have.length(4)
                     try {
                         res.body.should.deep.include.members(expected_q3_a);
@@ -272,7 +272,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(9)
                     try {
-                        res.body.should.include.to.deep.equals(expected_q4);
+                        res.body.should.deep.include.members(expected_q4);
                     }
                     catch (e) {
                         console.log('Expected:')

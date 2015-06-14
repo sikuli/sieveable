@@ -10,9 +10,8 @@ var result_json_q1 = fs.readFileSync(__dirname +
 '/../fixtures/examples/manifest/q1.json', 'utf-8');
 
 describe('Manifest Examples: Answers to multiple manifest by example questions.', function () {
-    this.timeout(0)
-
-    it('q1- It should search for apps that use android.permission.CAMERA\n' +
+    this.timeout(20000)
+    it('q1 It should search for apps that use android.permission.CAMERA\n' +
         'and find 29 apps.',
         function (done) {
             var manifest_query = '<uses-permission android:name="android.permission.CAMERA"/>'

@@ -11,7 +11,7 @@ describe('test UI tag names and attributes extractor', function () {
         var file = [path.resolve(__dirname + "/../fixtures/examples/index/me.pou.app-188.xml")];
         var expected = fs.readFileSync(__dirname + "/../fixtures/examples/index/me.pou.app-188-ui-tag.txt", "utf8");
         var target = path.resolve(__dirname + "/../indexes/ui/tag");
-        tagNameExtractor(file, target, function (err, res) {
+        tagNameExtractor(file, target, "-ui-tag", function (err, res) {
             should.not.exist(err);
             var targetFile = path.resolve(__dirname + "/../indexes/ui/tag/me.pou.app-188-ui-tag.txt");
             var exists = fs.existsSync(targetFile);
