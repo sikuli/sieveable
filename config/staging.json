@@ -42,7 +42,8 @@
   },
   "index": {
     "extractUITagDir": "../indexes/ui/tag",
-    "extractUIH1Dir": "../indexes/ui/h1"
+    "extractUIH1Dir": "../indexes/ui/h1",
+    "manifestDir": "../indexes/manifest"
   },
   "logger": {
     "error": {
