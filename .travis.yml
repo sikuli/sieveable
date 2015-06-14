@@ -10,19 +10,6 @@ before_install:
 before_script:
   - solr start -cloud -V -m 4g -p 8983
   - sleep 15
-  - solr create -c sieveable-code
-  - solr create -c sieveable-ui-tag
-  - solr create -c sieveable-ui-h1
-  - solr create -c sieveable-manifest
-  - sleep 10
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-code/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-code/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-tag/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-tag/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-h1/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-ui-h1/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"package_name", "type":"string", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-manifest/schema
-  - curl -X POST -H 'Content-type:application/json' --data-binary '{ "add-field":{ "name":"version_code", "type":"int", "indexed":true, "required":true, "stored":true } }' http://localhost:8983/solr/sieveable-manifest/schema
   - gulp
 
 script:
@@ -34,10 +21,11 @@ after_success:
   - npm run coveralls
 
 after_script:
-  # Delete indexed documents and stop solr
-  - curl http://localhost:8983/solr/sieveable-code/update --data '<delete><query>*:*</query></delete>' -H 'Content-type:text/xml; charset=utf-8'
-  - curl http://localhost:8983/solr/sieveable-code/update --data '<commit/>' -H 'Content-type:text/xml; charset=utf-8'
-  - curl http://localhost:8983/solr/admin/collections?action=DELETE&name=sieveable-code
+  # Delete Solr Collections
+  - solr delete -c sieveable-ui-tag -deleteConfig true
+  - solr delete -c sieveable-ui-h1 -deleteConfig true
+  - solr delete -c sieveable-manifest -deleteConfig true
+  - solr delete -c sieveable-code -deleteConfig true
   - solr stop
 
 node_js:
