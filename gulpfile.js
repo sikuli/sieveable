@@ -10,8 +10,10 @@ var runSequence = require('run-sequence');
 var exec = require('child_process').exec;
 var Promise = require("bluebird");
 var execAsync = Promise.promisify(exec);
+var request = Promise.promisifyAll(require("request"));
 var config = require("config");
 var solrIndex = require('./lib/index/solr-index');
+var solrAdmin = require('./lib/index/solr-admin');
 var tagNameExtractor = require("./lib/index/tag-name-extractor");
 var h1Extractor = require("./lib/index/h1-extractor");
 var mongo = require('./lib/db/connection');
@@ -101,6 +103,63 @@ gulp.task('solr:commit', function (callback) {
     solrIndex.commit(collectionName, function (err) {
         callback(err);
     });
+});
+
+gulp.task('solr:create', function (callback) {
+    var collections = [config.get("dbConfig.solr.uiTagCollection"),
+        config.get("dbConfig.solr.uiTagH1Collection"),
+        config.get("dbConfig.solr.manifestCollection"),
+        config.get("dbConfig.solr.codeCollection")];
+    Promise.all([solrAdmin.createCollection(collections[0]),
+        solrAdmin.createCollection(collections[1]),
+        solrAdmin.createCollection(collections[2]),
+        solrAdmin.createCollection(collections[3])])
+        .then(function () {
+            callback();
+        })
+        .catch(function (e) {
+            console.error("ERROR: " + e.message);
+            callback(e);
+        })
+});
+
+gulp.task('solr:addField', function (callback) {
+    var collections = [config.get("dbConfig.solr.uiTagCollection"),
+        config.get("dbConfig.solr.uiTagH1Collection"),
+        config.get("dbConfig.solr.manifestCollection"),
+        config.get("dbConfig.solr.codeCollection")];
+    var packageField = {
+        "name": "package_name",
+        "type": "string",
+        "indexed": true,
+        "required": true,
+        "stored": true
+    };
+    var versionCodeField = {
+        "name": "version_code",
+        "type": "int",
+        "indexed": true,
+        "required": true,
+        "stored": true
+    };
+
+    Promise.all([
+        solrAdmin.addField(collections[0], packageField),
+        solrAdmin.addField(collections[0], versionCodeField),
+        solrAdmin.addField(collections[1], packageField),
+        solrAdmin.addField(collections[1], versionCodeField),
+        solrAdmin.addField(collections[2], packageField),
+        solrAdmin.addField(collections[2], versionCodeField),
+        solrAdmin.addField(collections[3], packageField),
+        solrAdmin.addField(collections[3], versionCodeField),
+    ])
+        .then(function () {
+            callback();
+        })
+        .catch(function (e) {
+            console.error("ERROR: " + e.message);
+            callback(e);
+        })
 });
 
 gulp.task('extract:archives', function (done) {
@@ -274,5 +333,5 @@ gulp.task('solr:index', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-    runSequence('extract:archives', 'load:db', 'solr:index', callback);
+    runSequence('solr:create', 'solr:addField', 'extract:archives', 'load:db', 'solr:index', callback);
 });
