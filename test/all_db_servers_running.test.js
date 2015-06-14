@@ -1,39 +1,13 @@
 var Promise = require("bluebird");
-var request = Promise.promisifyAll(require("request"));
 var mongodb = require('mongodb');
 var config = require("config");
 var util = require('util');
 var redis = require("redis");
 var _ = require("lodash");
 var chai = require("chai");
+var solrAdmin = require("../lib/index/solr-admin");
 var should = chai.should();
 var MongoClient = mongodb.MongoClient;
-
-function SolrCollectionError(collectionName) {
-    this.message = "Collection " + collectionName + " does not exists.";
-    this.name = "SolrCollectionError";
-}
-SolrCollectionError.prototype = Object.create(Error.prototype);
-SolrCollectionError.prototype.constructor = SolrCollectionError;
-
-function checkSolrCollectionExists(collectionName) {
-    var solrUrl = 'http://' + config.get("dbConfig.solr.host") + ':' +
-        config.get("dbConfig.solr.port") + '/solr/admin/collections';
-    return request.getAsync({
-        url: solrUrl,
-        qs: {action: 'LIST', wt: 'json'}
-    }).spread(function (response, body) {
-        response.statusCode.should.be.equal(200);
-        var resObj = JSON.parse(body);
-        resObj.responseHeader.status.should.be.equal(0);
-        resObj.collections.should.include(collectionName);
-        console.log("Collection " + collectionName + " exists.");
-        return Promise.resolve();
-    }).catch(function () {
-        return Promise.reject(new SolrCollectionError("Collection " + collectionName +
-            " does not exists."));
-    })
-}
 
 describe("Test that all external db servers are running using their " +
     "respected configuration options.", function () {
@@ -44,14 +18,14 @@ describe("Test that all external db servers are running using their " +
             config.get("dbConfig.solr.uiTagH1Collection"),
             config.get("dbConfig.solr.manifestCollection"),
             config.get("dbConfig.solr.codeCollection")];
-        Promise.all([checkSolrCollectionExists(collections[0]),
-            checkSolrCollectionExists(collections[1]),
-            checkSolrCollectionExists(collections[2]),
-            checkSolrCollectionExists(collections[3])])
+        Promise.all([solrAdmin.exists(collections[0]),
+            solrAdmin.exists(collections[1]),
+            solrAdmin.exists(collections[2]),
+            solrAdmin.exists(collections[3])])
             .then(function () {
                 done();
             })
-            .catch(SolrCollectionError, function (e) {
+            .catch(function (e) {
                 console.error("ERROR: " + e.message);
                 throw e;
             })
