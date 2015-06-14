@@ -1,4 +1,4 @@
-var defaultQuery1 = 'MATCH app\nWHERE\n\t<callpath from="onClick"/> \n\t<uses-permission="android.permission.RECORD_AUDIO"/>\nRETURN app'
+var defaultQuery1 = "MATCH app\nWHERE\n\t<LinearLayout>\n\t<Button></Button>\n\t<Button></Button>\n\t<Button></Button>\n\t</LinearLayout>\nRETURN app";
 
 function Frame() {
     this.id = Frame.prototype.count
@@ -102,7 +102,7 @@ var NoteBook = React.createClass({
             </div>
         </div>
     }
-})
+});
 
 var FrameComponent = React.createClass({
 

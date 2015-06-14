@@ -3,7 +3,10 @@
 <!--
 MATCH app
 WHERE
-    <callpath from="onRestart"/>
+    <android.support.v4.widget.DrawerLayout>
+        <_/>
+        <_/>
+    </android.support.v4.widget.DrawerLayout>
 RETURN app
         -->
     </div>
@@ -14,8 +17,7 @@ RETURN app
 <!--
 MATCH app
 WHERE
-<callpath from="onClick"/>
-<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<view class="com.whatsapp.*"/>
 RETURN app
 -->
     </div>
@@ -26,54 +28,10 @@ RETURN app
 <!--
 MATCH app
 WHERE
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <callpath from="^on"/>
-RETURN app
--->
-    </div>
-</div>
-
-
-<div class="example">
-    <div class="query">
-<!--
-MATCH app
-WHERE
-    <uses-permission android:name="android.permission.RECORD_CAMERA"/>
-    <callpath from="onRestart"/>
-RETURN app
--->
-    </div>
-</div>
-
-<div class="example">
-    <div class="query">
-
-<!--
-MATCH app
-WHERE
-<LinearLayout>
-   <ImageButton></ImageButton>
-   <ImageButton></ImageButton>
-   <ImageButton></ImageButton>
-   <ImageButton></ImageButton>
-   <ImageButton></ImageButton>
-</LinearLayout>
-RETURN app
--->
-    </div>
-</div>
-
-<div class="example">
-    <div class="query">
-<!--
-MATCH app
-WHERE
-    <package-name>com.android.chrome</package-name>
     <LinearLayout>
-        <ImageButton></ImageButton>
-        <ImageButton></ImageButton>
-        <ImageButton></ImageButton>
+        <Button></Button>
+        <Button></Button>
+        <Button></Button>
     </LinearLayout>
 RETURN app
 -->
@@ -86,35 +44,10 @@ RETURN app
 <!--
 MATCH app
 WHERE
-        <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-        <Button>
-                <callpath from_method="onClick"/>
-        </Button>
-RETURN app, Button
--->
-    </div>
-</div>
-
-<div class="example">
-    <div class="query">
-<!--
-MATCH app
-WHERE
-    <callpath from_method="onRestart"/>
-    <uses-permission="android.permission.CAMERA"/>
-RETURN app
--->
-    </div>
-</div>
-
-
-<div class="example">
-    <div class="query">
-<!--
-MATCH app
-WHERE
-    <package-name>com.example.instantreplay</package-name>
-    <call creates="CameraActivity"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>
+    <code class="android.hardware.Camera" method ="takePicture" />
+    <code class="android.hardware.Camera" method ="startPreview" />
 RETURN app
 -->
     </div>
