@@ -11,6 +11,8 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
 
     var result_json_q1 = fs.readFileSync(__dirname +
         '/../fixtures/examples/code/q1.json', 'utf-8');
+    var result_json_q2 = fs.readFileSync(__dirname +
+        '/../fixtures/examples/code/q2.json', 'utf-8');
 
     it('q1: It should search for apps that use the API call ' +
     'android.hardware.CAMERA.takePicture\n' +
@@ -40,6 +42,36 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
                     throw e
                 }
                 done()
+            });
+    })
+
+    it('q2: It should search for apps that use the API call ' +
+        'com.google.android.gms.location.LocationListener.takePicture\n' +
+        'and find 7 apps.', function (done) {
+        var code_query =
+            '<code class="com.google.android.gms.location.LocationListener" method ="onLocationChanged" />\n';
+        var q = 'MATCH app\nWHERE\n' + code_query + '\nRETURN app';
+        var expected = JSON.parse(result_json_q2);
+        request(app)
+            .get('/q/json')
+            .query({queryText: q})
+            .set('Accept', 'application/json')
+            .expect(200)
+            .end(function (err, res) {
+                should.not.exist(err);
+                should.exist(res.body);
+                try {
+                    res.body.should.have.length(7);
+                    res.body.should.deep.include.members(expected);
+                }
+                catch (e) {
+                    console.log('Expected:')
+                    eyes.inspect(expected)
+                    console.log('Actual:')
+                    eyes.inspect(res.body)
+                    throw e
+                }
+                done();
             });
     })
 
