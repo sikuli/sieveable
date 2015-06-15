@@ -1,4 +1,7 @@
-var defaultQuery1 = "MATCH app\nWHERE\n\t<LinearLayout>\n\t<Button></Button>\n\t<Button></Button>\n\t<Button></Button>\n\t</LinearLayout>\nRETURN app";
+var defaultQuery1 = "MATCH app\nWHERE\n" + '<uses-permission android:name= "android.permission.ACCESS_FINE_LOCATION" />\n' +
+    '<code class="android.telephony.SmsManager" method ="sendDataMessage" />\n' +
+    "<LinearLayout>\n\t<Button/>\n\t<Button/>\n</LinearLayout>" +
+    "\nRETURN app";
 
 function Frame() {
     this.id = Frame.prototype.count
@@ -19,9 +22,9 @@ var NoteBook = React.createClass({
 
     handleSearchDidComplete: function (frame) {
         console.log('did complete', frame)
-        //if (frame.props.isFirst) {
-        //    this.addNewFrame()
-        //}
+        if (frame.props.isFirst) {
+            this.addNewFrame()
+        }
     },
 
     handleCopyToTop: function (frame) {
@@ -57,19 +60,17 @@ var NoteBook = React.createClass({
     },
 
     render: function () {
-
         var frames = this.state.frames
-        console.log(frames)
         var self = this
         var fs = frames.map(function (frame, i) {
             return <FrameComponent frame={frame}
-                query={defaultQuery1}
-                key={frame.id}
-                isFirst={i == 0}
-                isSelected={frame.id == self.state.selected}
-                onFocusChange={self.handleFocusChange}
-                onCopyToTop={self.handleCopyToTop}
-                onSearchDidComplete={self.handleSearchDidComplete} />
+                                   query={defaultQuery1}
+                                   key={frame.id}
+                                   isFirst={i == 0}
+                                   isSelected={frame.id == self.state.selected}
+                                   onFocusChange={self.handleFocusChange}
+                                   onCopyToTop={self.handleCopyToTop}
+                                   onSearchDidComplete={self.handleSearchDidComplete}/>
         })
 
         var exampleStyle = {
@@ -86,19 +87,20 @@ var NoteBook = React.createClass({
             return <div style={exampleStyle} key={i}>
                 <pre style={pre}>{e}</pre>
                 <button onClick={_.partial(self.handleUse, i)}
-                    className="btn btn-info"
-                >
-                    Use</button>
+                        className="btn btn-info"
+                    >
+                    Use
+                </button>
             </div>
         })
 
         return <div className="row">
             <div className="col-md-3">
                 <h5>Examples</h5>
-                        {es}
+                {es}
             </div>
             <div className="col-md-9">
-                        {fs}
+                {fs}
             </div>
         </div>
     }
@@ -137,7 +139,7 @@ var FrameComponent = React.createClass({
         console.log('submit query:', query_text)
         this.setState({isRunning: true})
         this.refs.viewer.setState({results: []})
-        
+
         $.ajax({
             url: '/q/json',
             data: {queryText: query_text},
@@ -196,12 +198,14 @@ var FrameComponent = React.createClass({
             padding: 5
         }
 
-        var runButton = <button key="run" className="btn btn-primary" onClick={this.handleSearch}>
+        var runButton = <button key="run" className="btn btn-primary"
+                                onClick={this.handleSearch}>
             <span>Run</span>
         </button>
 
         var copyButton =
-            <button key="copy" className="btn btn-info" onClick={this.handleCopyButtonPressed}>
+            <button key="copy" className="btn btn-info"
+                    onClick={this.handleCopyButtonPressed}>
                 <span>Copy To Top</span>
             </button>
 
@@ -232,18 +236,19 @@ var FrameComponent = React.createClass({
                     </div>
 
                     <QueryEditor contents={this.props.frame.query}
-                        onSearchHotkey={this.handleSearch}
-                        onFocusChange={this.handleFocusChange}
-                        ref="editor"
-                        style={editorStyle}
-                    />
+                                 onSearchHotkey={this.handleSearch}
+                                 onFocusChange={this.handleFocusChange}
+                                 ref="editor"
+                                 style={editorStyle}
+                        />
+
                     <div>
                         {this.props.isSelected ? buttons : null}
                     </div>
                 </div>
                 <div className="col-md-7" style={viewerStyle}>
                     {statusMessage}
-                    <ResultViewer ref="viewer" />
+                    <ResultViewer ref="viewer"/>
                 </div>
             </div>
         )
