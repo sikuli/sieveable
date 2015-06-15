@@ -16,33 +16,14 @@ var ResultViewer = React.createClass({
         }
 
         var resultNodes = this.state.results.map(function(result,index){
-
-
-            console.log('perm',result.perm)
-
-            var perm = result.perm.map(function(p){
-
-                console.log('p.views',p.views)
-                var views = p.views.map(function(v){
-
-
-                    var vvs = v.views.elems.map(function(el){
-                        return <span className='label label-info'>{el.text}</span>
-                    })
-
-                    return <li><span className='label label-warning'>{v.methodName.className}</span> <span className='label label-danger'>{v.methodName.methodName}</span> {vvs}</li>
-                })
-
-                return <div>
-                            <div><b>permission:</b> {p.permission[0].value}</div>
-                            <div><ul>{views} </ul></div>
-                       </div>
-            })
-
             return (
                 <div className="row" key={index}>
-                    <h3>{result.id}</h3>
-                    {perm}
+                    <div className="col-md-6">
+                        {result.packageName}
+                    </div>
+                    <div className="col-md-2">
+                        {result.version}
+                    </div>
                 </div>
             )
 
