@@ -1,5 +1,19 @@
 <div class="example">
     <div class="query">
+        <!--
+        MATCH app
+        WHERE
+            <uses-permission android:name="android.permission.CAMERA"/>
+            <downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>
+            <code class="android.hardware.Camera" method ="takePicture" />
+            <code class="android.hardware.Camera" method ="startPreview" />
+        RETURN app
+        -->
+    </div>
+</div>
+
+<div class="example">
+    <div class="query">
 <!--
 MATCH app
 WHERE
@@ -28,9 +42,9 @@ RETURN app
 <!--
 MATCH app
 WHERE
+    <uses-permission android:name= "android.permission.ACCESS_COARSE_LOCATION" />
+    '<code class="com.google.android.gms.location.LocationListener" method ="onLocationChanged" />\n'
     <LinearLayout>
-        <Button></Button>
-        <Button></Button>
         <Button></Button>
     </LinearLayout>
 RETURN app
@@ -38,17 +52,3 @@ RETURN app
     </div>
 </div>
 
-
-<div class="example">
-    <div class="query">
-<!--
-MATCH app
-WHERE
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <downloads-count-text>500,000,000 - 1,000,000,000</downloads-count-text>
-    <code class="android.hardware.Camera" method ="takePicture" />
-    <code class="android.hardware.Camera" method ="startPreview" />
-RETURN app
--->
-    </div>
-</div>
