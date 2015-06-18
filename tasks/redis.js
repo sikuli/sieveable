@@ -1,46 +1,45 @@
 var gulp = require('gulp');
 var config = require('config');
-var redis = require('redis');
 var Promise = require("bluebird");
 var log = require("../lib/logger");
 var redisAdmin = require('../lib/index/redis-admin');
 
+var key = config.get('dataset.keyName');
+var indexKey = config.get('dataset.indexKeyName');
+var uiKey = config.get('dataset.uiKeyName');
+var manifestKey = config.get('dataset.manifestKeyName');
+var codeKey = config.get('dataset.codeKeyName');
 
-gulp.task('redis:addKeys', function (done) {
+gulp.task('redis:addAllKeys', function (callback) {
+
+    redisAdmin.insertDatasetKeys(key, [indexKey, uiKey, manifestKey,
+        codeKey])
+        .then(function () {
+            log.info('Successfully added all keys and values to the redis ' +
+                'set collection %s', key);
+            callback(null);
+        })
+        .catch(function (e) {
+            callback(e);
+        });
+})
+
+gulp.task('redis:addSolrKeys', function (callback) {
     var collections = [config.get("dbConfig.solr.uiTagCollection"),
         config.get("dbConfig.solr.uiTagH1Collection"),
         config.get("dbConfig.solr.manifestCollection"),
         config.get("dbConfig.solr.codeCollection")];
 
-    var redisClient = redis.createClient();
-    redisClient.on("error", function (err) {
-        log.error("Error " + err);
-        throw (err);
-    });
-    var key = config.get('dataset.keyName');
-    var indexKey = config.get('dataset.indexKeyName');
-    var uiKey = config.get('dataset.uiKeyName');
-    var manifestKey = config.get('dataset.manifestKeyName');
-    var codeKey = config.get('dataset.codeKeyName');
-
-    Promise.join(
-        redisAdmin.insertSet(indexKey, collections[0], redisClient),
-        redisAdmin.insertSet(uiKey, collections[1], redisClient),
-        redisAdmin.insertSet(manifestKey, collections[2], redisClient),
-        redisAdmin.insertSet(codeKey, collections[3], redisClient), function () {
-            log.info('Successfully added all keys and values to redis.');
-        })
+    Promise.all([
+        redisAdmin.insertSolrKeys(indexKey, collections[0]),
+        redisAdmin.insertSolrKeys(uiKey, collections[1]),
+        redisAdmin.insertSolrKeys(manifestKey, collections[2]),
+        redisAdmin.insertSolrKeys(codeKey, collections[3])])
         .then(function () {
-            return redisAdmin.insertUnion(key, redisClient);
-        })
-        .then(function () {
-            log.info('Successfully added all keys and values to the redis ' +
-                'set collection ' + key);
-            redisClient.quit();
-            done();
-        })
-        .catch(function (e) {
-            throw e;
+            log.info('Successfully added all ids stored in Solr collections ' +
+                'to redis.');
+            callback();
+        }).catch(function (e) {
+            callback(e);
         });
-});
-
+})
