@@ -106,7 +106,11 @@ gulp.task('solr:indexCode', function (callback) {
 
 gulp.task('solr:commit', function (callback) {
     var collectionName = config.get("dbConfig.solr.codeCollection");
-    solrIndex.commit(collectionName, function (err) {
-        callback(err);
-    });
+    solrIndex.commit(collectionName)
+        .then(function () {
+            callback();
+        })
+        .catch(function (err) {
+            callback(err);
+        })
 });
