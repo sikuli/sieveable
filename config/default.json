@@ -16,6 +16,7 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
+      "maxRows" : 10000000,
       "uiTagCollection": "sieveable-ui-tag",
       "uiTagH1Collection": "sieveable-ui-h1",
       "manifestCollection": "sieveable-manifest",
@@ -29,15 +30,10 @@
   },
   "dataset": {
     "path": "../fixtures",
-    "keysFile": "../fixtures/keys.txt",
     "keyName": "dataset:id",
-    "indexKeysFile": "../fixtures/index/index.keys",
     "indexKeyName": "dataset:index",
-    "uiKeysFile": "../fixtures/ui/ui.keys",
     "uiKeyName": "dataset:ui",
-    "manifestKeysFile": "../fixtures/manifest/manifest.keys",
     "manifestKeyName": "dataset:manifest",
-    "codeKeyFile": "../fixtures/code/code.keys",
     "codeKeyName": "dataset:code"
   },
   "index": {
