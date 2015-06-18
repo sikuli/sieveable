@@ -10,6 +10,10 @@ before_install:
 before_script:
   - solr start -cloud -V -m 4g -p 8983
   - sleep 15
+  - solr create -c sieveable-code
+  - solr create -c sieveable-ui-tag
+  - solr create -c sieveable-ui-h1
+  - solr create -c sieveable-manifest
   - gulp
 
 script:
