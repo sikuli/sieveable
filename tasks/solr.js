@@ -6,7 +6,7 @@ var glob = require("glob");
 var solrIndex = require('../lib/index/solr-index');
 var solrAdmin = require('../lib/index/solr-admin');
 var log = require("../lib/logger");
-var DATASET_PATH = path.resolve(__dirname, 'config', config.get('dataset.path'));
+var DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('dataset.path'));
 
 gulp.task('solr:create', function (callback) {
     var collections = [config.get("dbConfig.solr.uiTagCollection"),
@@ -66,7 +66,7 @@ gulp.task('solr:addField', function (callback) {
 });
 
 gulp.task('solr:indexUITag', function (callback) {
-    var dir = path.resolve(__dirname, 'config', config.get('index.extractUITagDir'));
+    var dir = path.resolve(__dirname + '/../', 'config', config.get('index.extractUITagDir'));
     var collectionName = config.get("dbConfig.solr.uiTagCollection");
     glob(path.join(dir, '*.txt'), function (err, files) {
         solrIndex.index(files, "-ui-tag.txt", collectionName, function (e) {
@@ -76,7 +76,7 @@ gulp.task('solr:indexUITag', function (callback) {
 });
 
 gulp.task('solr:indexH1', function (callback) {
-    var dir = path.resolve(__dirname, 'config', config.get('index.extractUIH1Dir'));
+    var dir = path.resolve(__dirname + '/../', 'config', config.get('index.extractUIH1Dir'));
     var collectionName = config.get("dbConfig.solr.uiTagH1Collection");
     glob(path.join(dir, '*.txt'), function (err, files) {
         solrIndex.index(files, "-ui-h1.txt", collectionName, function (e) {
@@ -86,7 +86,7 @@ gulp.task('solr:indexH1', function (callback) {
 });
 
 gulp.task('solr:indexManifest', function (callback) {
-    var dir = path.resolve(__dirname, 'config', config.get('index.extractManifestDir'));
+    var dir = path.resolve(__dirname + '/../', 'config', config.get('index.extractManifestDir'));
     var collectionName = config.get("dbConfig.solr.manifestCollection");
     glob(path.join(dir, '*.txt'), function (err, files) {
         solrIndex.index(files, "-manifest-tag.txt", collectionName, function (e) {
