@@ -4,7 +4,7 @@ var config = require('config');
 var through2 = require('through2');
 var mongo = require('../lib/db/connection');
 var log = require("../lib/logger");
-var DATASET_PATH = path.resolve(__dirname, 'config', config.get('dataset.path'));
+var DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('dataset.path'));
 
 gulp.task('mongo:insertListing', function (done) {
     gulp.src(path.join(DATASET_PATH, 'listing', '*.json'))
