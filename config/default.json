@@ -18,7 +18,7 @@
       "port": 8983,
       "maxRows" : 10000000,
       "uiTagCollection": "sieveable-ui-tag",
-      "uiTagH1Collection": "sieveable-ui-h1",
+      "uiSuffixCollection": "sieveable-ui-suffix",
       "manifestCollection": "sieveable-manifest",
       "codeCollection": "sieveable-code"
     },
@@ -31,14 +31,13 @@
   "dataset": {
     "path": "../fixtures",
     "keyName": "dataset:id",
-    "indexKeyName": "dataset:index",
     "uiKeyName": "dataset:ui",
     "manifestKeyName": "dataset:manifest",
     "codeKeyName": "dataset:code"
   },
-  "index": {
+  "indexes": {
     "extractUITagDir": "../indexes/ui/tag",
-    "extractUIH1Dir": "../indexes/ui/h1",
+    "extractUISuffixDir": "../indexes/ui/suffix",
     "extractManifestDir": "../indexes/manifest"
   },
   "logger": {
