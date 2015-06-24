@@ -39,6 +39,10 @@
     "extractUISuffixDir": "../indexes/ui/suffix",
     "extractManifestDir": "../indexes/manifest"
   },
+  "results": {
+    "maxUI": 60,
+    "maxManifest": 60
+  },
   "logger": {
     "error": {
       "path": "/var/tmp/sieveable-dev-error.log"

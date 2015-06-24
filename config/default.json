@@ -16,7 +16,7 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
-      "maxRows" : 10000000,
+      "maxRows": 10000000,
       "uiTagCollection": "sieveable-ui-tag",
       "uiSuffixCollection": "sieveable-ui-suffix",
       "manifestCollection": "sieveable-manifest",
@@ -39,6 +39,10 @@
     "extractUITagDir": "../indexes/ui/tag",
     "extractUISuffixDir": "../indexes/ui/suffix",
     "extractManifestDir": "../indexes/manifest"
+  },
+  "results": {
+    "maxUI": 10,
+    "maxManifest": 10
   },
   "logger": {
     "error": {
