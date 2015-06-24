@@ -22,6 +22,11 @@ Searching and Filtering Mobile Apps.
   ```shell
   $ gulp
   ```
+- Make sure all tests pass before starting sieveable's web server.
+
+  ```shell
+  $ npm test
+  ```
 - Start sieveable's web server:
 
   ```shell
@@ -31,5 +36,5 @@ Searching and Filtering Mobile Apps.
 
 
 # Known Issues
-- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 4g -cloud -V ```
+- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 1g -cloud -V ```
 
