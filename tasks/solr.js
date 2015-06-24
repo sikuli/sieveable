@@ -66,7 +66,7 @@ gulp.task('solr:addField', function (callback) {
 });
 
 gulp.task('solr:indexUITag', function (callback) {
-    var dir = path.resolve(__dirname + '/../', 'config', config.get('index.extractUITagDir'));
+    var dir = path.resolve(__dirname + '/../', 'config', config.get('indexes.extractUITagDir'));
     var collectionName = config.get("dbConfig.solr.uiTagCollection");
     glob(path.join(dir, '*.txt'), function (err, files) {
         solrIndex.index(files, "-ui-tag.txt", collectionName, function (e) {
@@ -75,18 +75,18 @@ gulp.task('solr:indexUITag', function (callback) {
     });
 });
 
-gulp.task('solr:indexH1', function (callback) {
-    var dir = path.resolve(__dirname + '/../', 'config', config.get('index.extractUIH1Dir'));
-    var collectionName = config.get("dbConfig.solr.uiTagH1Collection");
+gulp.task('solr:indexUISuffix', function (callback) {
+    var dir = path.resolve(__dirname + '/../', 'config', config.get('indexes.extractUISuffixDir'));
+    var collectionName = config.get("dbConfig.solr.uiSuffixCollection");
     glob(path.join(dir, '*.txt'), function (err, files) {
-        solrIndex.index(files, "-ui-h1.txt", collectionName, function (e) {
+        solrIndex.index(files, "-ui-suffix.txt", collectionName, function (e) {
             callback(e);
         });
     });
 });
 
 gulp.task('solr:indexManifest', function (callback) {
-    var dir = path.resolve(__dirname + '/../', 'config', config.get('index.extractManifestDir'));
+    var dir = path.resolve(__dirname + '/../', 'config', config.get('indexes.extractManifestDir'));
     var collectionName = config.get("dbConfig.solr.manifestCollection");
     glob(path.join(dir, '*.txt'), function (err, files) {
         solrIndex.index(files, "-manifest-tag.txt", collectionName, function (e) {

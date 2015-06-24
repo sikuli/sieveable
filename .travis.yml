@@ -12,7 +12,7 @@ before_script:
   - sleep 15
   - solr create -c sieveable-code
   - solr create -c sieveable-ui-tag
-  - solr create -c sieveable-ui-h1
+  - solr create -c sieveable-ui-suffix
   - solr create -c sieveable-manifest
   - gulp
 
@@ -27,7 +27,7 @@ after_success:
 after_script:
   # Delete Solr Collections
   - solr delete -c sieveable-ui-tag -deleteConfig true
-  - solr delete -c sieveable-ui-h1 -deleteConfig true
+  - solr delete -c sieveable-ui-suffix -deleteConfig true
   - solr delete -c sieveable-manifest -deleteConfig true
   - solr delete -c sieveable-code -deleteConfig true
   - solr stop

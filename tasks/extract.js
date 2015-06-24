@@ -8,7 +8,7 @@ var config = require('config');
 var mkdirp = require('mkdirp');
 var log = require("../lib/logger");
 var tagNameExtractor = require("../lib/index/tag-name-extractor");
-var h1Extractor = require("../lib/index/h1-extractor");
+var suffixExtractor = require("../lib/index/suffix-extractor");
 var DATASET_PATH = path.resolve(__dirname + "/../", 'config',
     config.get('dataset.path'));
 
@@ -51,7 +51,7 @@ gulp.task('extract:archives', function (done) {
 gulp.task('extract:ui-tag', function (callback) {
     // create a directory that contains all extracted files.
     var dir = path.resolve(__dirname + "/../", 'config',
-        config.get('index.extractUITagDir'));
+        config.get('indexes.extractUITagDir'));
     mkdirp.sync(dir, {mode: "2775"});
     // Extract tag names and attributes.
     glob(path.join(DATASET_PATH, 'ui', '*.xml'), function (err, files) {
@@ -62,14 +62,14 @@ gulp.task('extract:ui-tag', function (callback) {
 
 });
 
-gulp.task('extract:ui-h1', function (callback) {
+gulp.task('extract:ui-suffix', function (callback) {
     // create a directory that contains all extracted files.
     var dir = path.resolve(__dirname + "/../", 'config',
-        config.get('index.extractUIH1Dir'));
+        config.get('indexes.extractUISuffixDir'));
     mkdirp.sync(dir, {mode: "2775"});
     // Extract tag names and attributes.
     glob(path.join(DATASET_PATH, 'ui', '*.xml'), function (err, files) {
-        h1Extractor(files, dir, function (e) {
+        suffixExtractor(files, dir, function (e) {
             callback(e);
         });
     });
@@ -78,7 +78,7 @@ gulp.task('extract:ui-h1', function (callback) {
 gulp.task('extract:manifest', function (callback) {
     // create a directory that contains all extracted files.
     var dir = path.resolve(__dirname + "/../", 'config',
-        config.get('index.extractManifestDir'));
+        config.get('indexes.extractManifestDir'));
     mkdirp.sync(dir, {mode: "2775"});
     // Extract tag names and attributes.
     glob(path.join(DATASET_PATH, 'manifest', '*.xml'), function (err, files) {

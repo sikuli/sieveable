@@ -9,8 +9,8 @@ gulp.task('mongo:insert', function (callback) {
 });
 
 gulp.task('solr:insert', function (callback) {
-    runSequence('extract:ui-tag', 'extract:ui-h1', 'extract:manifest',
-        'solr:indexUITag', 'solr:indexH1', 'solr:indexManifest',
+    runSequence('extract:ui-tag', 'extract:ui-suffix', 'extract:manifest',
+        'solr:indexUITag', 'solr:indexUISuffix', 'solr:indexManifest',
         'solr:indexCode', 'solr:commit', callback);
 });
 
