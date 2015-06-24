@@ -15,7 +15,7 @@ describe("Test that all external db servers are running using their " +
     it('It should ensure that Solr is running all the collections defined ' +
         'in the config file exist.', function (done) {
         var collections = [config.get("dbConfig.solr.uiTagCollection"),
-            config.get("dbConfig.solr.uiTagH1Collection"),
+            config.get("dbConfig.solr.uiSuffixCollection"),
             config.get("dbConfig.solr.manifestCollection"),
             config.get("dbConfig.solr.codeCollection")];
         Promise.all([solrAdmin.exists(collections[0]),

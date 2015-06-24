@@ -10,7 +10,7 @@ var DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('datase
 
 gulp.task('solr:create', function (callback) {
     var collections = [config.get("dbConfig.solr.uiTagCollection"),
-        config.get("dbConfig.solr.uiTagH1Collection"),
+        config.get("dbConfig.solr.uiSuffixCollection"),
         config.get("dbConfig.solr.manifestCollection"),
         config.get("dbConfig.solr.codeCollection")];
     Promise.all([solrAdmin.createCollection(collections[0]),
@@ -28,7 +28,7 @@ gulp.task('solr:create', function (callback) {
 
 gulp.task('solr:addField', function (callback) {
     var collections = [config.get("dbConfig.solr.uiTagCollection"),
-        config.get("dbConfig.solr.uiTagH1Collection"),
+        config.get("dbConfig.solr.uiSuffixCollection"),
         config.get("dbConfig.solr.manifestCollection"),
         config.get("dbConfig.solr.codeCollection")];
     var packageField = {
