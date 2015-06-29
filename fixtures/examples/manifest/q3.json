@@ -1,0 +1,62 @@
+[
+  {
+    "id": "me.pou.app-157",
+    "packageName": "me.pou.app",
+    "version": "157"
+  },
+  {
+    "id": "com.viber.voip-37",
+    "packageName": "com.viber.voip",
+    "version": "37"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  {
+    "id": "me.pou.app-188",
+    "packageName": "me.pou.app",
+    "version": "188"
+  },
+  {
+    "id": "com.sgiggle.production-68",
+    "packageName": "com.sgiggle.production",
+    "version": "68"
+  },
+  {
+    "id": "com.sgiggle.production-1386724633",
+    "packageName": "com.sgiggle.production",
+    "version": "1386724633"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  {
+    "id": "com.viber.voip-47",
+    "packageName": "com.viber.voip",
+    "version": "47"
+  },
+  {
+    "id": "com.google.android.apps.babel-21311130",
+    "packageName": "com.google.android.apps.babel",
+    "version": "21311130"
+  },
+  {
+    "id": "com.google.android.apps.babel-21224130",
+    "packageName": "com.google.android.apps.babel",
+    "version": "21224130"
+  },
+  {
+    "id": "com.tencent.mm-361",
+    "packageName": "com.tencent.mm",
+    "version": "361"
+  },
+  {
+    "id": "com.tencent.mm-405",
+    "packageName": "com.tencent.mm",
+    "version": "405"
+  }
+]
