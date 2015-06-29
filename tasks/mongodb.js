@@ -5,13 +5,14 @@ var through2 = require('through2');
 var mongo = require('../lib/db/connection');
 var log = require("../lib/logger");
 var DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('dataset.path'));
+var collectionName = config.get("dbConfig.mongo.collections")[0].collection;
 
 gulp.task('mongo:insertListing', function (done) {
-    gulp.src(path.join(DATASET_PATH, 'listing', '*.json'))
+    gulp.src(path.join(DATASET_PATH, 'listings', '*.json'))
         .pipe(new through2.obj(function (file, enc, cb) {
             var doc = JSON.parse(file.contents);
             doc['id'] = doc['n'] + '-' + doc['verc'];
-            mongo.upsertOne('listings', doc, doc)
+            mongo.upsertOne(collectionName, doc, doc)
                 .then(function () {
                     cb();
                 })
@@ -24,7 +25,7 @@ gulp.task('mongo:insertListing', function (done) {
 });
 
 gulp.task('mongo:indexListing', function (done) {
-    mongo.createIndex('listings', {id: 1}, {unique: true})
+    mongo.createIndex(collectionName, {id: 1}, {unique: true})
         .then(function () {
             done();
         })
