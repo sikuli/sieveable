@@ -23,8 +23,8 @@ describe('diff()', function() {
         }
 
         // runs before all tests in this block
-        var xml1 = fs.readFileSync(__dirname + '/fixtures/a1.xml', 'utf8')
-        var xml2 = fs.readFileSync(__dirname + '/fixtures/a2.xml', 'utf8')
+        var xml1 = fs.readFileSync(__dirname + '/../fixtures/examples/diff/a1.xml', 'utf8')
+        var xml2 = fs.readFileSync(__dirname + '/../fixtures/examples/diff/a2.xml', 'utf8')
 
         dom1 = $.load(xml1, opts)
         dom2 = $.load(xml2, opts)
