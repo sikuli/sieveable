@@ -15,7 +15,7 @@ describe('explain query', function () {
             ui: '<LinearLayout android:orientation="vertical"/>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -41,7 +41,7 @@ describe('explain query', function () {
             ui: '<Button $exactly="70"/>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -64,7 +64,7 @@ describe('explain query', function () {
             '<ProgressBar></ProgressBar>\n' +
             '</LinearLayout>\n' +
             'RETURN app\n' +
-            'MODE strict';
+            'MODE normal';
         var actual = explainQuery(query);
         var expected = {
             match: ['app'],
@@ -74,7 +74,7 @@ describe('explain query', function () {
             '</LinearLayout>',
             return: ['app'],
             limit: 100,
-            mode: 'strict'
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -108,7 +108,7 @@ describe('explain query', function () {
             '</LinearLayout>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -136,7 +136,7 @@ describe('explain query', function () {
             '<crt>Google Inc.</crt>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -166,7 +166,7 @@ describe('explain query', function () {
             '<uses-sdk android:minSdkVersion="11"/>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -194,7 +194,7 @@ describe('explain query', function () {
             '<Code type="defined" method="createCameraPreviewSession"/>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -228,7 +228,7 @@ describe('explain query', function () {
             perm: '<callpath/>',
             return: ['app'],
             limit: 100,
-            mode: 'normal'
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
