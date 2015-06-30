@@ -146,14 +146,23 @@ var FrameComponent = React.createClass({
             dataType: 'json',
             success: function (data) {
                 console.log('got search result from server:', data)
-                this.refs.viewer.setState({results: data})
+                if (data.length === 0) {
+                    this.refs.viewer.setState({
+                        results: "Search query did not match any apps."
+                    })
+                }
+                else {
+                    this.refs.viewer.setState({results: data})
+                }
                 this.setState({isRunning: false})
                 if (this.props.onSearchDidComplete) {
                     this.props.onSearchDidComplete(this)
                 }
             }.bind(this),
             error: function (xhr, status, err) {
+                this.setState({isRunning: false})
                 //console.error(this.props.url, status, err.toString());
+
             }.bind(this)
         })
     },
