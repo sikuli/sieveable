@@ -14,7 +14,8 @@ describe('explain query', function () {
             match: ['app'],
             ui: '<LinearLayout android:orientation="vertical"/>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -39,7 +40,8 @@ describe('explain query', function () {
             match: ['app'],
             ui: '<Button $exactly="70"/>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -61,7 +63,8 @@ describe('explain query', function () {
             '<Button></Button>\n' +
             '<ProgressBar></ProgressBar>\n' +
             '</LinearLayout>\n' +
-            'RETURN app';
+            'RETURN app\n' +
+            'MODE strict';
         var actual = explainQuery(query);
         var expected = {
             match: ['app'],
@@ -70,7 +73,8 @@ describe('explain query', function () {
             '<ProgressBar/>' +
             '</LinearLayout>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'strict'
         };
         try {
             actual.should.deep.equal(expected);
@@ -103,7 +107,8 @@ describe('explain query', function () {
             '</_>' +
             '</LinearLayout>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -130,7 +135,8 @@ describe('explain query', function () {
             listing: '<cat>Communication</cat>' +
             '<crt>Google Inc.</crt>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -159,7 +165,8 @@ describe('explain query', function () {
             '<activity $min="20"/>' +
             '<uses-sdk android:minSdkVersion="11"/>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -186,7 +193,8 @@ describe('explain query', function () {
             code: '<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>' +
             '<Code type="defined" method="createCameraPreviewSession"/>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
@@ -213,13 +221,14 @@ describe('explain query', function () {
         var actual = explainQuery(query);
         var expected = {
             match: ['app'],
-            listing:'<dct>10000</dct>',
-            ui:'<Button $exactly="70"/>',
-            manifest:'<uses-permission android:name="android.permission.CAMERA"/>',
-            code:'<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>',
-            perm:'<callpath/>',
+            listing: '<dct>10000</dct>',
+            ui: '<Button $exactly="70"/>',
+            manifest: '<uses-permission android:name="android.permission.CAMERA"/>',
+            code: '<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>',
+            perm: '<callpath/>',
             return: ['app'],
-            limit: 100
+            limit: 100,
+            mode: 'normal'
         };
         try {
             actual.should.deep.equal(expected);
