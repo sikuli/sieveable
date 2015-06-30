@@ -11,74 +11,74 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
     this.timeout(40000)
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q1-a.xml', 'utf-8');
+        '/../fixtures/examples/ui/q1-a.xml', 'utf-8');
     var result_json_q1_a = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q1-a.json', 'utf-8');
+        '/../fixtures/examples/ui/q1-a.json', 'utf-8');
 
     var query_xml_q1_b = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q1-b.xml', 'utf-8');
+        '/../fixtures/examples/ui/q1-b.xml', 'utf-8');
     var result_json_q1_b = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q1-b.json', 'utf-8');
+        '/../fixtures/examples/ui/q1-b.json', 'utf-8');
 
     var query_xml_q1_c = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q1-c.xml', 'utf-8');
+        '/../fixtures/examples/ui/q1-c.xml', 'utf-8');
     var result_json_q1_c = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q1-c.json', 'utf-8');
+        '/../fixtures/examples/ui/q1-c.json', 'utf-8');
 
     var query_xml_q2 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q2.xml', 'utf-8');
+        '/../fixtures/examples/ui/q2.xml', 'utf-8');
     var result_json_q2 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q2.json', 'utf-8');
+        '/../fixtures/examples/ui/q2.json', 'utf-8');
 
     var query_xml_q3_a = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q3-a.xml', 'utf-8');
+        '/../fixtures/examples/ui/q3-a.xml', 'utf-8');
     var result_json_q3_a = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q3-a.json', 'utf-8');
+        '/../fixtures/examples/ui/q3-a.json', 'utf-8');
 
     var query_xml_q3_b = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q3-b.xml', 'utf-8');
+        '/../fixtures/examples/ui/q3-b.xml', 'utf-8');
     var result_json_q3_b = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q3-b.json', 'utf-8');
+        '/../fixtures/examples/ui/q3-b.json', 'utf-8');
 
     var query_xml_q4 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q4.xml', 'utf-8');
+        '/../fixtures/examples/ui/q4.xml', 'utf-8');
     var result_json_q4 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q4.json', 'utf-8');
+        '/../fixtures/examples/ui/q4.json', 'utf-8');
 
     var query_xml_q5_a = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q5-a.xml', 'utf-8');
+        '/../fixtures/examples/ui/q5-a.xml', 'utf-8');
     var result_json_q5_a = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q5-a.json', 'utf-8');
+        '/../fixtures/examples/ui/q5-a.json', 'utf-8');
 
     var query_xml_q5_b = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q5-b.xml', 'utf-8');
+        '/../fixtures/examples/ui/q5-b.xml', 'utf-8');
     var result_json_q5_b = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q5-b.json', 'utf-8');
+        '/../fixtures/examples/ui/q5-b.json', 'utf-8');
 
     var query_xml_q6 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q6.xml', 'utf-8');
+        '/../fixtures/examples/ui/q6.xml', 'utf-8');
     var result_json_q6 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q6.json', 'utf-8');
+        '/../fixtures/examples/ui/q6.json', 'utf-8');
 
     var query_xml_q7 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q7.xml', 'utf-8');
+        '/../fixtures/examples/ui/q7.xml', 'utf-8');
     var result_json_q7 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q7.json', 'utf-8');
+        '/../fixtures/examples/ui/q7.json', 'utf-8');
 
     var query_xml_q8 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q8.xml', 'utf-8');
+        '/../fixtures/examples/ui/q8.xml', 'utf-8');
     var result_json_q8 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q8.json', 'utf-8');
+        '/../fixtures/examples/ui/q8.json', 'utf-8');
 
     var query_xml_q9 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q9.xml', 'utf-8');
+        '/../fixtures/examples/ui/q9.xml', 'utf-8');
     var result_json_q9 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q9.json', 'utf-8');
+        '/../fixtures/examples/ui/q9.json', 'utf-8');
 
     var query_xml_q10 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q10.xml', 'utf-8');
+        '/../fixtures/examples/ui/q10.xml', 'utf-8');
     var result_json_q10 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/ui/q10.json', 'utf-8');
+        '/../fixtures/examples/ui/q10.json', 'utf-8');
 
     this.timeout(0);
 
@@ -426,6 +426,34 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     catch (e) {
                         console.log('Expected:')
                         eyes.inspect(expected_q8)
+                        console.log('Actual:')
+                        eyes.inspect(res.body)
+                        throw e
+                    }
+                    done()
+                });
+        })
+
+    it('q9 it should search for the following example: \n' +
+        pd.xml(query_xml_q9) + '\n' + 'and find 5 apps."',
+        function (done) {
+            var q = 'MATCH app\nWHERE ' + query_xml_q9 + '\n RETURN app';
+            var expected_q9 = JSON.parse(result_json_q9);
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(5);
+                    try {
+                        res.body.should.deep.include.members(expected_q9);
+                    }
+                    catch (e) {
+                        console.log('Expected:')
+                        eyes.inspect(expected_q9)
                         console.log('Actual:')
                         eyes.inspect(res.body)
                         throw e

@@ -1,7 +1,4 @@
-<RelativeLayout>
-    <GridView>
-        <__ __name="?">
-            <__ __name="?" __count="1+"/>
-        </__>
-    </GridView>
-</RelativeLayout>
+<LinearLayout android:orientation="horizontal">
+    <Button android:text="OK"/>
+    <Button android:text="Cancel"/>
+</LinearLayout>

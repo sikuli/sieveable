@@ -1,12 +1,27 @@
 [
   {
-    "id": "",
-    "packageName": "",
-    "version": ""
+    "id": "me.pou.app-188",
+    "packageName": "me.pou.app",
+    "version": "188"
   },
   {
-    "id": "",
-    "packageName": "",
-    "version": ""
+    "id": "me.pou.app-157",
+    "packageName": "me.pou.app",
+    "version": "157"
+  },
+  {
+    "id": "com.whatsapp-48450",
+    "packageName": "com.whatsapp",
+    "version": "48450"
+  },
+  {
+    "id": "com.whatsapp-48364",
+    "packageName": "com.whatsapp",
+    "version": "48364"
+  },
+  {
+    "id": "com.sec.chaton-207103000",
+    "packageName": "com.sec.chaton",
+    "version": "207103000"
   }
 ]
