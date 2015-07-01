@@ -27,6 +27,10 @@ gulp.task('mongo:insertListing', function (done) {
 gulp.task('mongo:indexListing', function (done) {
     mongo.createIndex(collectionName, {id: 1}, {unique: true})
         .then(function () {
+            mongo.createIndex(collectionName, {"$**": "text"},
+                {name: "FullTextIndex"})
+        })
+        .then(function () {
             done();
         })
         .error(function (e) {
