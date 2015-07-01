@@ -11,9 +11,12 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
 
     var result_json_q1 = fs.readFileSync(__dirname +
         '/../fixtures/examples/listing/q1.json', 'utf-8');
-
     var result_json_q2 = fs.readFileSync(__dirname +
         '/../fixtures/examples/listing/q2.json', 'utf-8');
+    var result_json_q3 = fs.readFileSync(__dirname +
+        '/../fixtures/examples/listing/q3.json', 'utf-8');
+    var result_json_q4 = fs.readFileSync(__dirname +
+        '/../fixtures/examples/listing/q4.json', 'utf-8');
 
     it('q1: It should search for the Google+ app by its title' +
         'and find two versions of the app: "413076433" and "413148638".',
@@ -34,10 +37,10 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                         res.body.should.deep.include.members(expected);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected);
+                        console.log('Actual:');
+                        eyes.inspect(res.body);
                         throw e
                     }
                     done()
@@ -63,15 +66,75 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                         res.body.should.deep.include.members(expected);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected);
+                        console.log('Actual:');
+                        eyes.inspect(res.body);
                         throw e
                     }
                     done()
                 });
         })
 
+    it('q3: It should search for apps with the word PDF ' +
+        'in their listing details using the full text index ' +
+        'and find 2 apps.',
+        function (done) {
+            var listing_query = '<listing-details>PDF</listing-details>'
+            var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
+            var expected = JSON.parse(result_json_q3);
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(2);
+                    try {
+                        res.body.should.deep.include.members(expected);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected);
+                        console.log('Actual:');
+                        eyes.inspect(res.body);
+                        throw e
+                    }
+                    done()
+                });
+        })
+
+    it('q4: It should search for apps by providing multiple listing details ' +
+        'fields using the full text index along with absolute values search.',
+        function (done) {
+            var listing_query = '<description>Hats and Eyeglasses</description>'
+                + '<price>Free</price>'
+                + '<store-category>Casual</store-category>';
+            var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
+            var expected = JSON.parse(result_json_q4);
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(1);
+                    try {
+                        res.body.should.deep.include.members(expected);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected);
+                        console.log('Actual:');
+                        eyes.inspect(res.body);
+                        throw e
+                    }
+                    done()
+                });
+        })
 
 })
