@@ -1,6 +1,6 @@
 # Sieveable [![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable.svg)
 
-Searching and Filtering Mobile Apps.
+Searching and Filtering Android Apps.
 
 # Requirements
 - A Unix-like operating system (eg. Linux, FreeBSD, Mac OS X, etc.).
@@ -8,7 +8,10 @@ Searching and Filtering Mobile Apps.
 - Install node.js project dependencies:
   - `npm install`
   - Install [gulp]('http://gulpjs.com/'): `npm install gulp -g`
-- This system requires running three database servers: [MongoDB]('https://www.mongodb.org/'), [Redis]('http://redis.io/'), and [Solr]('http://lucene.apache.org/solr/').
+- This system requires running three database servers: 
+  - [MongoDB]('https://www.mongodb.org/') version: 2.6 or higher. 
+  - [Redis]('http://redis.io/') version 3.0 or higher. 
+  - [Solr]('http://lucene.apache.org/solr/') version 5.1 or higher.
   
 # Usage
 
