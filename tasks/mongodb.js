@@ -41,14 +41,8 @@ gulp.task('mongo:indexListing', function (done) {
                     name: "FullTextIndex"
                 }],
                 function (err, res) {
-                    if (err) {
-                        log.error('Error in mongoIndex task: ' + err);
-                        done();
-                    }
-                    else {
-                        console.log(res);
-                        done();
-                    }
+                    console.log(res);
+                    done(err);
                 }
             )
         })
