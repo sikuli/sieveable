@@ -27,19 +27,30 @@ gulp.task('mongo:insertListing', function (done) {
 gulp.task('mongo:indexListing', function (done) {
     mongo.createIndex(collectionName, {id: 1}, {unique: true})
         .then(function () {
-            mongo.createIndex(collectionName, {
-                t: "text", desc: "text",
-                new: "text"
-            }, {
-                weights: {t: 10, desc: 5, new: 1},
-                name: "FullTextIndex"
-            })
-        })
-        .then(function () {
-            done();
-        })
-        .error(function (e) {
-            log.error('Error in mongoIndex task: ' + e.message);
+            mongo.createIndexes(collectionName, [{
+                    key: {
+                        t: "text",
+                        desc: "text",
+                        new: "text"
+                    },
+                    weights: {
+                        t: 10,
+                        desc: 5,
+                        new: 1
+                    },
+                    name: "FullTextIndex"
+                }],
+                function (err, res) {
+                    if (err) {
+                        log.error('Error in mongoIndex task: ' + err);
+                        done();
+                    }
+                    else {
+                        console.log(res);
+                        done();
+                    }
+                }
+            )
         })
 });
 
