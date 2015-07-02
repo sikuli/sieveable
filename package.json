@@ -1,10 +1,13 @@
 {
   "name": "sieveable",
-  "version": "1.0.0",
-  "description": "Sieveable: Searching and filtering mobile apps.",
+  "version": "0.0.4",
+  "description": "Sieveable: Searching and filtering Android apps.",
   "repository": "sikuli/sieveable",
   "homepage": "http://sieveable.io",
-  "main": "index.js",
+  "engines": {
+    "node": "0.12.x",
+    "npm": "2.x.x"
+  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
