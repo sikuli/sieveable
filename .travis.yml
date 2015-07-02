@@ -1,7 +1,11 @@
 language: node_js
-
 node_js:
   - "0.12"
+
+services:
+  - redis-server
+jdk:
+  - oraclejdk7
 
 env:
   global:
@@ -34,8 +38,6 @@ before_install:
   # MongoDB
   - curl -O ${MONGODB_DOWNLOAD}${MONGODB_FILE}
   - mv ${MONGODB_FILE} ${MONGODB_TARGET_FILE}
-  # Gulp
-  - npm install -g gulp
 
 install:
   # Solr
@@ -44,6 +46,9 @@ install:
   # MongoDB
   - tar -zxvf ${MONGODB_TARGET_FILE} -C ${MONGODB_INSTALL_DIR} --strip-components 1
   - export PATH=${MONGODB_INSTALL_DIR}/bin:$PATH
+  # Gulp
+  - npm install -g gulp
+  - npm install
 
 before_script:
   # Start Solr
@@ -81,12 +86,6 @@ after_script:
   # Delete data dirs
   - rm -rf ${MONGODB_DATA_DIR}
   - rm -rf ${MONGODB_LOG_DIR}
-
-jdk:
-  - oraclejdk7
-
-services:
-  - redis-server
 
 sudo: false
 
