@@ -17,8 +17,9 @@ env:
     - MONGODB_TARGET_FILE="mongodb-3.0.4.tgz"
     - MONGODB_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/mongodb-3.0.4
     - MONGODB_LOG_DIR=$TRAVIS_BUILD_DIR/srv/log/mongodb
+    - MONGODB_LOG_FILE=$TRAVIS_BUILD_DIR/srv/log/mongodb/mongod.log
     - MONGODB_DATA_DIR=$TRAVIS_BUILD_DIR/srv/mongodb/data
-    - MONGODB_OPTS="--port 27017 --fork --logpath ${MONGODB_LOG_DIR} --dbpath ${MONGODB_DATA_DIR}"
+    - MONGODB_OPTS="--port 27017 --fork --logpath ${MONGODB_LOG_FILE} --dbpath ${MONGODB_DATA_DIR}"
   matrix:
     - NODE_ENV=development
 
@@ -27,6 +28,7 @@ before_install:
   - mkdir -p ${MONGODB_INSTALL_DIR}
   - mkdir -p ${MONGODB_LOG_DIR}
   - mkdir -p ${MONGODB_DATA_DIR}
+  - touch ${MONGODB_LOG_FILE}
   # Solr
   - curl -O ${SOLR_DOWNLOAD}${SOLR_VERSION}/${SOLR_FILE}
   # MongoDB
@@ -75,7 +77,7 @@ after_script:
   # Stop Solr
   - solr stop
   # Stop MongoDB
-  - mongod --shutdown
+  - mongo --eval "db.getSiblingDB('admin').shutdownServer()"
   # Delete data dirs
   - rm -rf ${MONGODB_DATA_DIR}
   - rm -rf ${MONGODB_LOG_DIR}
