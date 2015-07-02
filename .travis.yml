@@ -9,14 +9,14 @@ env:
     - SOLR_VERSION="5.1.0"
     - SOLR_DOWNLOAD="http://archive.apache.org/dist/lucene/solr/"
     - SOLR_FILE="solr-5.1.0.tgz"
-    - SOLR_INSTALL_DIR="/srv/solr-5.1.0"
+    - SOLR_INSTALL_DIR="~/srv/solr-5.1.0"
     # MongoDB 3.0
     - MONGODB_DOWNLOAD="https://fastdl.mongodb.org/linux/"
     - MONGODB_FILE="mongodb-linux-x86_64-ubuntu1204-3.0.4.tgz"
     - MONGODB_TARGET_FILE="mongodb-3.0.4.tgz"
-    - MONGODB_INSTALL_DIR="/srv/mongodb-3.0.4"
-    - MONGODB_LOG_DIR="/srv/log/mongodb"
-    - MONGODB_DATA_DIR="/srv/mongodb/data"
+    - MONGODB_INSTALL_DIR="~/srv/mongodb-3.0.4"
+    - MONGODB_LOG_DIR="~/srv/log/mongodb"
+    - MONGODB_DATA_DIR="~/srv/mongodb/data"
   matrix:
     - NODE_ENV=development
 
