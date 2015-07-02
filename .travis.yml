@@ -45,7 +45,7 @@ install:
   - tar -zxvf ${MONGODB_TARGET_FILE} -C ${MONGODB_INSTALL_DIR} --strip-components 1
   - export PATH=${MONGODB_INSTALL_DIR}/bin:$PATH
   # Gulp
-  -npm install gulp -g
+  - npm install gulp -g
 
 before_script:
   # Start Solr
