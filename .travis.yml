@@ -1,27 +1,59 @@
 language: node_js
 
+env:
+  global:
+    # MongoDB 3.0
+    - MONGO_REPO="http://repo.mongodb.org/apt/ubuntu"
+    - REPO_TYPE="/mongodb-org/3.0 multiverse"
+    - SOURCES_LOC="/etc/apt/sources.list.d/mongodb-org-3.0.list"
+    - KEY_SERVER="hkp://keyserver.ubuntu.com:80"
+    # Solr 5.1
+    - SOLR_VERSION="5.1.0"
+    - SOLR_MIRROR="http://archive.apache.org/dist/lucene/solr"
+    - SOLR_FILE="solr-5.1.0.tgz"
+    - SOLR_BIN="solr-5.1.0/bin/
+  matrix:
+    - NODE_ENV=development
+
 before_install:
+  # Gulp 3.9
   - npm install -g gulp
-  - wget http://archive.apache.org/dist/lucene/solr/5.1.0/solr-5.1.0.tgz
-  - tar -xzf solr-5.1.0.tgz
-  - export PATH=$PATH:$PWD/solr-5.1.0/bin/
-  - export NODE_ENV=development
+  # Solr
+  - wget ${SOLR_MIRROR}/${SOLR_VERSION}/${SOLR_FILE}
+  # MongoDB
+  - sudo apt-key adv --keyserver ${KEY_SERVER} --recv 7F0CEB10
+  - echo "deb ${MONGO_REPO} ${REPO_TYPE}" | sudo tee ${SOURCES_LOC}
+  # Update all the repositories
+  - sudo apt-get update -qq
+
+install:
+  # Solr
+  - tar -xzf ${SOLR_FILE}
+  - export PATH=$PATH:$PWD/${SOLR_BIN}
+  # MongoDB
+  - sudo apt-get install mongodb-org-server
 
 before_script:
+  # Start Solr
   - solr start -cloud -V -m 4g -p 8983
-  - sleep 15
+  - "until nc -z localhost 8983; do echo Waiting for Solr; sleep 1; done"
   - solr create -c sieveable-code
   - solr create -c sieveable-ui-tag
   - solr create -c sieveable-ui-suffix
   - solr create -c sieveable-manifest
+  # Start MongoDB
+  - mongod --version
+  - sudo service mongod start
+  - "until nc -z localhost 27017; do echo Waiting for MongoDB; sleep 1; done"
+  # Kick off the default gulp task
   - gulp
 
 script:
-  # Make sure Solr is running.
-  - curl http://localhost:8983/solr/admin/collections?action=LIST&wt=json
+  # Test the server
   - npm test
 
 after_success:
+  # Report test coverage
   - npm run coveralls
 
 after_script:
@@ -31,6 +63,7 @@ after_script:
   - solr delete -c sieveable-manifest -deleteConfig true
   - solr delete -c sieveable-code -deleteConfig true
   - solr stop
+  - sudo service mongod stop
 
 node_js:
   - "0.12"
@@ -39,12 +72,11 @@ jdk:
   - oraclejdk7
 
 services:
-  - mongodb
   - redis-server
 
 sudo: false
 
 notifications:
   email: false
-  slack:
-    secure: ZMjCr3IV5/frTvI91Tb2516pY/0ofZ0CqIBYy84tczMfwtpKvkPFBqo0xW/bGrQ5AoMwFQG3UdYJ9334j4Ayj+gscQVuAoqp032Eql4hhUBfHYQr10/LfdcKvKD2ebSFhtO6SMyNlHRk9sCHTGqKdiRLf3Wp44ejcpxaG+RMeoE=
+  #slack:
+    #secure: ZMjCr3IV5/frTvI91Tb2516pY/0ofZ0CqIBYy84tczMfwtpKvkPFBqo0xW/bGrQ5AoMwFQG3UdYJ9334j4Ayj+gscQVuAoqp032Eql4hhUBfHYQr10/LfdcKvKD2ebSFhtO6SMyNlHRk9sCHTGqKdiRLf3Wp44ejcpxaG+RMeoE=
