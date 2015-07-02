@@ -36,7 +36,7 @@ before_install:
 install:
   # Solr
   - tar -zxvf ${SOLR_FILE} -C ${SOLR_INSTALL_DIR} --strip-components 1
-  - export PATH=$PWD/${SOLR_BIN}:$PATH
+  - export PATH=${SOLR_INSTALL_DIR}/bin:$PATH
   # MongoDB
   - tar -zxvf ${MONGODB_TARGET_FILE} -C ${MONGODB_INSTALL_DIR} --strip-components 1
   - export PATH=${MONGODB_INSTALL_DIR}/bin:$PATH
