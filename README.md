@@ -50,5 +50,8 @@
 For a getting started guide, sieveable search query syntax, examples, etc. see the [Wiki](https://github.com/sikuli/sieveable/wiki).
 
 # Known Issues
-- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting the Solr server with: ```solr -restart -m 1g -cloud -V ```
+- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting Solr with: ```solr -restart -m 1g -cloud -V ```
 
+## Caution:
+- **Contains JavaScript.**
+- **Made in a facility that also processes Java.**
