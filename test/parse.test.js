@@ -33,7 +33,8 @@ describe('parse', function () {
             name: 'LinearLayout',
             attributes: [{
                 name: 'android:layout_width',
-                value: 'match_parent'
+                value: 'match_parent',
+                toReturn: false
             }
             ],
             count: 1
@@ -49,6 +50,33 @@ describe('parse', function () {
             throw e
         }
     })
+
+    it('A simple tag with an attribute whose value must be returned in the result',
+        function () {
+            var q = '<Button android:text="(*)"/>'
+            var actual = parse(q)
+            var expected = {
+                type: 'tag',
+                name: 'Button',
+                attributes: [{
+                    name: 'android:text',
+                    value: '(*)',
+                    toReturn: true
+                }
+                ],
+                count: 1
+            }
+            try {
+                expect(actual).to.deep.equal(expected)
+            }
+            catch (e) {
+                console.log('Expected:')
+                eyes.inspect(expected)
+                console.log('Actual:')
+                eyes.inspect(actual)
+                throw e
+            }
+        })
 
     it('A parent-child relationship', function () {
 
@@ -92,8 +120,7 @@ describe('parse', function () {
                 type: 'tag',
                 name: 'Button',
                 count: 2
-            },
-            ],
+            }],
             count: 1
         }
         try {
@@ -121,22 +148,42 @@ describe('parse', function () {
         var expected = {
             type: 'tag',
             name: 'LinearLayout',
-            attributes: [{name: 'android:layout_height', value: 'match_parent'},
-                {name: 'android:layout_width', value: 'match_parent'}
+            attributes: [
+                {
+                    name: 'android:layout_height', value: 'match_parent',
+                    toReturn: false
+                },
+                {
+                    name: 'android:layout_width', value: 'match_parent',
+                    toReturn: false
+                }
             ],
             children: [{
                 type: 'tag',
                 name: 'Button',
-                attributes: [{name: 'android:text', value: '@string/send'}],
+                attributes: [{
+                    name: 'android:text', value: '@string/send',
+                    toReturn: false
+                }],
                 count: 1
             },
                 {
                     type: 'tag',
                     name: 'Button',
                     attributes: [
-                        {name: 'android:layout_gravity', value: 'right'},
-                        {name: 'android:layout_height', value: 'wrap_content'},
-                        {name: 'android:layout_width', value: '100dp'}
+                        {
+                            name: 'android:layout_gravity', value: 'right',
+                            toReturn: false
+                        },
+                        {
+                            name: 'android:layout_height',
+                            value: 'wrap_content',
+                            toReturn: false
+                        },
+                        {
+                            name: 'android:layout_width', value: '100dp',
+                            toReturn: false
+                        }
                     ],
                     count: 1
                 }],
@@ -169,8 +216,12 @@ describe('parse', function () {
             type: 'tag',
             name: 'LinearLayout',
             attributes: [
-                {name: 'android:layout_height', value: 'match_parent'}, {
-                    name: 'android:layout_width', value: 'match_parent'
+                {
+                    name: 'android:layout_height', value: 'match_parent',
+                    toReturn: false
+                }, {
+                    name: 'android:layout_width', value: 'match_parent',
+                    toReturn: false
                 }
             ],
             count: 1,
@@ -179,10 +230,12 @@ describe('parse', function () {
                 name: 'TextView',
                 attributes: [{
                     name: 'android:layout_height',
-                    value: 'wrap_content'
+                    value: 'wrap_content',
+                    toReturn: false
                 }, {
                     name: 'android:layout_width',
-                    value: 'fill_parent'
+                    value: 'fill_parent',
+                    toReturn: false
                 }
                 ],
                 count: 4
@@ -227,16 +280,28 @@ describe('parse', function () {
             type: 'tag',
             name: 'Button',
             attributes: [
-                {name: "android:layout_height", value: "wrap_content"},
-                {name: "android:layout_width", value: "wrap_content"}
+                {
+                    name: "android:layout_height", value: "wrap_content",
+                    toReturn: false
+                },
+                {
+                    name: "android:layout_width", value: "wrap_content",
+                    toReturn: false
+                }
             ],
             count: 2
         }, {
             type: 'tag',
             name: 'ImageButton',
             attributes: [
-                {name: "android:layout_height", value: "wrap_content"},
-                {name: "android:layout_width", value: "wrap_content"}
+                {
+                    name: "android:layout_height", value: "wrap_content",
+                    toReturn: false
+                },
+                {
+                    name: "android:layout_width", value: "wrap_content",
+                    toReturn: false
+                }
             ],
             count: 2
         }
@@ -302,16 +367,28 @@ describe('parse', function () {
             type: 'tag',
             name: 'LinearLayout',
             attributes: [
-                {name: "android:layout_height", value: "wrap_content"},
-                {name: "android:layout_width", value: "wrap_content"}
+                {
+                    name: "android:layout_height", value: "wrap_content",
+                    toReturn: false
+                },
+                {
+                    name: "android:layout_width", value: "wrap_content",
+                    toReturn: false
+                }
             ],
             count: 1,
             children: [{
                 type: 'tag',
                 name: 'FrameLayout',
                 attributes: [
-                    {name: "android:layout_height", value: "wrap_content"},
-                    {name: "android:layout_width", value: "wrap_content"}
+                    {
+                        name: "android:layout_height", value: "wrap_content",
+                        toReturn: false
+                    },
+                    {
+                        name: "android:layout_width", value: "wrap_content",
+                        toReturn: false
+                    }
                 ],
                 count: 1,
                 children: [
@@ -321,11 +398,13 @@ describe('parse', function () {
                         attributes: [
                             {
                                 name: "android:layout_height",
-                                value: "wrap_content"
+                                value: "wrap_content",
+                                toReturn: false
                             },
                             {
                                 name: "android:layout_width",
-                                value: "wrap_content"
+                                value: "wrap_content",
+                                toReturn: false
                             }
                         ],
                         count: 1
