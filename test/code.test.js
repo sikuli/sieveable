@@ -1,4 +1,5 @@
 var fs = require('fs');
+var _ = require('lodash');
 var request = require('supertest');
 var parse = require('../lib/parse.js');
 var app = require('../lib/server/server');
@@ -7,7 +8,7 @@ var should = chai.should();
 var eyes = require('eyes');
 
 describe('Code Examples: Answers to multiple code by example questions.', function () {
-    this.timeout(0)
+    this.timeout(0);
 
     var result_json_q1 = fs.readFileSync(__dirname +
         '/../fixtures/examples/code/q1.json', 'utf-8');
@@ -15,8 +16,8 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
         '/../fixtures/examples/code/q2.json', 'utf-8');
 
     it('q1: It should search for apps that use the API call ' +
-    'android.hardware.CAMERA.takePicture\n' +
-    'and find 7 apps.', function (done) {
+        'android.hardware.CAMERA.takePicture\n' +
+        'and find 7 apps.', function (done) {
         var code_query =
             '<code class="android.hardware.Camera" method ="takePicture" />\n' +
             '<code class="android.hardware.Camera" method ="startPreview" />'
@@ -32,7 +33,8 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
                 should.exist(res.body);
                 try {
                     res.body.should.have.length(7);
-                    res.body.should.deep.include.members(expected);
+                    var apps = _.pluck(res.body, 'app');
+                    apps.should.deep.include.members(expected);
                 }
                 catch (e) {
                     console.log('Expected:')
@@ -62,7 +64,8 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
                 should.exist(res.body);
                 try {
                     res.body.should.have.length(7);
-                    res.body.should.deep.include.members(expected);
+                    var apps = _.pluck(res.body, 'app');
+                    apps.should.deep.include.members(expected);
                 }
                 catch (e) {
                     console.log('Expected:')

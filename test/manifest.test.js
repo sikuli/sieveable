@@ -1,4 +1,5 @@
 var fs = require('fs');
+var _ = require('lodash');
 var request = require('supertest');
 var parse = require('../lib/parse.js');
 var app = require('../lib/server/server');
@@ -14,7 +15,7 @@ var result_json_q3 = fs.readFileSync(__dirname +
     '/../fixtures/examples/manifest/q3.json', 'utf-8');
 
 describe('Manifest Examples: Answers to multiple manifest by example questions.', function () {
-    this.timeout(0)
+    this.timeout(0);
     it('Manifest q1 It should search for apps that use android.permission.CAMERA\n' +
         'and find 29 apps.',
         function (done) {
@@ -31,7 +32,8 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     should.exist(res.body);
                     res.body.should.have.length(29);
                     try {
-                        res.body.should.deep.include.members(expected)
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -61,7 +63,8 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     should.exist(res.body);
                     res.body.should.have.length(33);
                     try {
-                        res.body.should.deep.include.members(expected)
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -92,7 +95,8 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     should.exist(res.body);
                     res.body.should.have.length(12);
                     try {
-                        res.body.should.deep.include.members(expected)
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:')

@@ -1,4 +1,5 @@
 var fs = require('fs');
+var _ = require('lodash');
 var request = require('supertest');
 var parse = require('../lib/parse.js');
 var app = require('../lib/server/server');
@@ -97,7 +98,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.not.exist(err)
                     should.exist(res.body)
                     try {
-                        res.body.should.deep.include.members(expected_q1_a);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q1_a);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -126,7 +128,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(2)
                     try {
-                        res.body.should.deep.include.members(expected_q1_b);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q1_b);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -155,7 +158,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(1)
                     try {
-                        res.body.should.deep.include.members(expected_q1_c)
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q1_c);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -184,7 +188,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(13)
                     try {
-                        res.body.should.deep.include.members(expected_q2);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q2);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -212,7 +217,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body);
                     res.body.should.have.length(4)
                     try {
-                        res.body.should.deep.include.members(expected_q3_a);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q3_a);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -242,7 +248,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(3)
                     try {
-                        res.body.should.deep.include.members(expected_q3_b);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q3_b);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -272,7 +279,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(9)
                     try {
-                        res.body.should.deep.include.members(expected_q4);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q4);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -301,7 +309,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(24)
                     try {
-                        res.body.should.deep.include.members(expected_q5_a);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q5_a);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -334,7 +343,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(12)
                     try {
-                        res.body.should.deep.include.members(expected_q5_b);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q5_b);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -363,7 +373,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(32)
                     try {
-                        res.body.should.deep.include.members(expected_q6);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q6);
                     }
                     catch (e) {
                         console.log('Expected:');
@@ -392,7 +403,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body)
                     res.body.should.have.length(9)
                     try {
-                        res.body.should.deep.include.members(expected_q7)
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q7);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -421,7 +433,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body);
                     res.body.should.have.length(1);
                     try {
-                        res.body.should.deep.include.members(expected_q8);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q8);
                     }
                     catch (e) {
                         console.log('Expected:')
@@ -449,7 +462,8 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body);
                     res.body.should.have.length(5);
                     try {
-                        res.body.should.deep.include.members(expected_q9);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q9);
                     }
                     catch (e) {
                         console.log('Expected:')
