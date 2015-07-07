@@ -28,13 +28,13 @@ var QueryEditor = React.createClass({
         })
         editor.getSession().on('change', this.handleChange)
         editor.on("focus", _.partial(this.handleFocusChange, true))
-        editor.on("blur",  _.partial(this.handleFocusChange, false)) 
+        editor.on("blur",  _.partial(this.handleFocusChange, false))
         this.setState({
             editor: editor
         })
         this.editor = editor
     },
-    
+
     handleFocusChange: function(hasFocus){
         console.log('focus change', hasFocus)
         if (this.props.onFocusChange){
@@ -43,21 +43,26 @@ var QueryEditor = React.createClass({
     },
 
     handleChange: function(){
-        if (this.props.onHeightChange){            
-            this.props.onHeightChange(this.getHeight())            
+        if (this.props.onHeightChange){
+            this.props.onHeightChange(this.getHeight())
         }
        this.setState({width:0})//his.getContentWidth()})
     },
 
-    getValue: function() {        
+    getValue: function() {
         return this.editor.getValue()
     },
 
     getContentWidth: function(){
-        var w = this.editor.getSession().getScreenWidth() * this.editor.renderer.characterWidth
-        var gutterWidth = this.editor.renderer.$gutterLayer.gutterWidth  || 41
-        w += gutterWidth
-        return w
+        if (this.editor){
+            var w = this.editor.getSession().getScreenWidth() * this.editor.renderer.characterWidth
+            var gutterWidth = this.editor.renderer.$gutterLayer.gutterWidth  || 100
+            w += gutterWidth
+            return w
+        }
+        else {
+            return 0;
+        }
     },
 
     componentDidUpdate: function(){
@@ -66,17 +71,17 @@ var QueryEditor = React.createClass({
         }
     },
 
-    getContentHeight: function() {   
-        if (this.editor){     
+    getContentHeight: function() {
+        if (this.editor){
             var h =
                   this.editor.getSession().getScreenLength()
                   * this.editor.renderer.lineHeight
-                  + this.editor.renderer.scrollBar.getWidth()        
+                  + this.editor.renderer.scrollBar.getWidth()
             return h
         }else{
             return 0
         }
-    },    
+    },
 
     getValue: function() {
         return this.state.editor.getValue()
@@ -85,7 +90,9 @@ var QueryEditor = React.createClass({
     render: function() {
 
         var style = {
-            left: 20,            
+            left: 20,
+            width: this.getContentWidth(),
+            minWidth: '800px',
             height: this.getContentHeight(),
             minHeight: '100px',
             background: 'rgba(240,240,240,0.15)'
