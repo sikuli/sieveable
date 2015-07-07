@@ -9,7 +9,7 @@ var eyes = require('eyes');
 var should = chai.should();
 
 describe('UI Examples: Answers to multiple UI design by example questions.', function () {
-    this.timeout(40000)
+    this.timeout(40000);
 
     var query_xml_q1_a = fs.readFileSync(__dirname +
         '/../fixtures/examples/ui/q1-a.xml', 'utf-8');
@@ -81,132 +81,13 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
     var result_json_q10 = fs.readFileSync(__dirname +
         '/../fixtures/examples/ui/q10.json', 'utf-8');
 
-    this.timeout(0);
-
     it('q1-a it should search for the following example: \n' +
         pd.xml(query_xml_q1_a) + '\n' +
         'and find two versions of "com.whatsapp", version: "48364" and "48450"',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q1_a + '\n RETURN app';
             var expected_q1_a = JSON.parse(result_json_q1_a);
-            request(app)
-                .get('/q/json')
-                .query({queryText: q})
-                .set('Accept', 'application/json')
-                .expect(200)
-                .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    try {
-                        var apps = _.pluck(res.body, 'app');
-                        apps.should.deep.include.members(expected_q1_a);
-                    }
-                    catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q1_a)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
-                        throw e
-                    }
-                    done()
-                });
-        })
-
-    it('q1-b it should search for the following example: \n' +
-        pd.xml(query_xml_q1_b) + '\n' +
-        'and find two versions of "com.whatsapp", version: "48364" and "48450"',
-        function (done) {
-            var q = 'MATCH app\nWHERE ' + query_xml_q1_b + '\n RETURN app';
-            var expected_q1_b = JSON.parse(result_json_q1_b);
-            request(app)
-                .get('/q/json')
-                .query({queryText: q})
-                .set('Accept', 'application/json')
-                .expect(200)
-                .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(2)
-                    try {
-                        var apps = _.pluck(res.body, 'app');
-                        apps.should.deep.include.members(expected_q1_b);
-                    }
-                    catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q1_b)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
-                        throw e
-                    }
-                    done()
-                });
-        })
-
-    it('q1-c it should search for the following example: \n' +
-        pd.xml(query_xml_q1_c) + '\n' +
-        'and find only one version of com.whatsapp, version: 48450',
-        function (done) {
-            var q = 'MATCH app\nWHERE ' + query_xml_q1_c + '\n RETURN app';
-            var expected_q1_c = JSON.parse(result_json_q1_c);
-            request(app)
-                .get('/q/json')
-                .query({queryText: q})
-                .set('Accept', 'application/json')
-                .expect(200)
-                .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(1)
-                    try {
-                        var apps = _.pluck(res.body, 'app');
-                        apps.should.deep.include.members(expected_q1_c);
-                    }
-                    catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q1_c)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
-                        throw e
-                    }
-                    done()
-                });
-        })
-
-    it('q2 it should search for the following example: \n' +
-        pd.xml(query_xml_q2) + '\n' +
-        'and find 13 apps.',
-        function (done) {
-            var q = 'MATCH app\nWHERE ' + query_xml_q2 + '\n RETURN app';
-            var expected_q2 = JSON.parse(result_json_q2);
-            request(app)
-                .get('/q/json')
-                .query({queryText: q})
-                .set('Accept', 'application/json')
-                .expect(200)
-                .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(13)
-                    try {
-                        var apps = _.pluck(res.body, 'app');
-                        apps.should.deep.include.members(expected_q2);
-                    }
-                    catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q2)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
-                        throw e
-                    }
-                    done()
-                });
-        })
-
-    it('q3-a it should search for the following example: \n' +
-        pd.xml(query_xml_q3_a) + '\n' + 'and find 4 apps.',
-        function (done) {
-            var q = 'MATCH app\nWHERE ' + query_xml_q3_a + '\n RETURN app';
-            var expected_q3_a = JSON.parse(result_json_q3_a);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -215,53 +96,177 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
-                    res.body.should.have.length(4)
+                    res.body.should.have.length(2);
                     try {
-                        var apps = _.pluck(res.body, 'app');
-                        apps.should.deep.include.members(expected_q3_a);
+                        apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q1_a);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q3_a)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q1_a);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
-        })
+        });
 
-    it('q3-b it should search for the following example: \n' +
-        pd.xml(query_xml_q3_b) + '\n' +
-        'and find 3 apps.',
+    it('q1-b it should search for the following example: \n' +
+        pd.xml(query_xml_q1_b) + '\n' +
+        'and find two versions of "com.whatsapp", version: "48364" and "48450"',
         function (done) {
-            pd.xml(query_xml_q3_b)
-            var q = 'MATCH app\nWHERE ' + query_xml_q3_b + '\n RETURN app';
-            var expected_q3_b = JSON.parse(result_json_q3_b);
+            var q = 'MATCH app\nWHERE ' + query_xml_q1_b + '\n RETURN app';
+            var expected_q1_b = JSON.parse(result_json_q1_b);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(3)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(2);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q1_b);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected_q1_b);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
+                        throw e
+                    }
+                    done()
+                });
+        });
+
+    it('q1-c it should search for the following example: \n' +
+        pd.xml(query_xml_q1_c) + '\n' +
+        'and find only one version of com.whatsapp, version: 48450',
+        function (done) {
+            var q = 'MATCH app\nWHERE ' + query_xml_q1_c + '\n RETURN app';
+            var expected_q1_c = JSON.parse(result_json_q1_c);
+            var apps;
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(1);
+                    try {
+                        apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q1_c);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected_q1_c);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
+                        throw e
+                    }
+                    done()
+                });
+        });
+
+    it('q2 it should search for the following example: \n' +
+        pd.xml(query_xml_q2) + '\n' +
+        'and find 13 apps.',
+        function (done) {
+            var q = 'MATCH app\nWHERE ' + query_xml_q2 + '\n RETURN app';
+            var expected_q2 = JSON.parse(result_json_q2);
+            var apps;
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(13);
+                    try {
+                        apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q2);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected_q2);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
+                        throw e
+                    }
+                    done()
+                });
+        });
+
+    it('q3-a it should search for the following example: \n' +
+        pd.xml(query_xml_q3_a) + '\n' + 'and find 4 apps.',
+        function (done) {
+            var q = 'MATCH app\nWHERE ' + query_xml_q3_a + '\n RETURN app';
+            var expected_q3_a = JSON.parse(result_json_q3_a);
+            var apps;
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(4);
+                    try {
+                        apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q3_a);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected_q3_a);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
+                        throw e
+                    }
+                    done()
+                });
+        });
+
+    it('q3-b it should search for the following example: \n' +
+        pd.xml(query_xml_q3_b) + '\n' +
+        'and find 3 apps.',
+        function (done) {
+            pd.xml(query_xml_q3_b);
+            var q = 'MATCH app\nWHERE ' + query_xml_q3_b + '\n RETURN app';
+            var expected_q3_b = JSON.parse(result_json_q3_b);
+            var apps;
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(3);
+                    try {
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q3_b);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q3_b)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q3_b);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
         }
-    )
+    );
 
     it('q4 it should search for the following example: \n' +
         pd.xml(query_xml_q4) + '\n' +
@@ -269,29 +274,30 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q4 + '\n RETURN app';
             var expected_q4 = JSON.parse(result_json_q4);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(9)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(9);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q4);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q4)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q4);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
-        })
+        });
 
     it('q5-a it should search for the following example: \n' +
         pd.xml(query_xml_q5_a) + '\n' +
@@ -299,29 +305,30 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         function (done) {
             var q = 'MATCH App\nWHERE ' + query_xml_q5_a + '\n RETURN app';
             var expected_q5_a = JSON.parse(result_json_q5_a);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(24)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(24);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q5_a);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q5_a)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q5_a);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
-        })
+        });
 
     it('q5-b it should search for the following example: \n' +
         pd.xml(query_xml_q5_b) + '\n' +
@@ -333,29 +340,30 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         function (done) {
             var q = 'MATCH App\nWHERE ' + query_xml_q5_b + '\n RETURN app';
             var expected_q5_b = JSON.parse(result_json_q5_b);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(12)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(12);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q5_b);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q5_b)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q5_b);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
-        })
+        });
 
     it('q6 it should search for the following example: \n' +
         pd.xml(query_xml_q6) + '\n' +
@@ -369,9 +377,9 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(32)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(32);
                     try {
                         var apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q6);
@@ -385,7 +393,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     }
                     done()
                 });
-        })
+        });
 
     it('q7 it should search for the following example: \n' +
         pd.xml(query_xml_q7) + '\n' +
@@ -393,29 +401,30 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q7 + '\n RETURN app';
             var expected_q7 = JSON.parse(result_json_q7);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {
-                    should.not.exist(err)
-                    should.exist(res.body)
-                    res.body.should.have.length(9)
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.have.length(9);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q7);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q7)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q7);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
-        })
+        });
 
     it('q8 it should search for the following example: \n' +
         pd.xml(query_xml_q8) + '\n' +
@@ -423,6 +432,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q8 + '\n RETURN app';
             var expected_q8 = JSON.parse(result_json_q8);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -433,25 +443,26 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body);
                     res.body.should.have.length(1);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q8);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q8)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q8);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
-        })
+        });
 
     it('q9 it should search for the following example: \n' +
         pd.xml(query_xml_q9) + '\n' + 'and find 5 apps."',
         function (done) {
             var q = 'MATCH app\nWHERE ' + query_xml_q9 + '\n RETURN app';
             var expected_q9 = JSON.parse(result_json_q9);
+            var apps;
             request(app)
                 .get('/q/json')
                 .query({queryText: q})
@@ -462,18 +473,18 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     should.exist(res.body);
                     res.body.should.have.length(5);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected_q9);
                     }
                     catch (e) {
-                        console.log('Expected:')
-                        eyes.inspect(expected_q9)
-                        console.log('Actual:')
-                        eyes.inspect(res.body)
+                        console.log('Expected:');
+                        eyes.inspect(expected_q9);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
                         throw e
                     }
                     done()
                 });
         })
 
-})
+});
