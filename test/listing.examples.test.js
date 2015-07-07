@@ -1,4 +1,5 @@
 var fs = require('fs');
+var _ = require("lodash");
 var request = require('supertest');
 var parse = require('../lib/parse.js');
 var app = require('../lib/server/server');
@@ -18,7 +19,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
     var result_json_q4 = fs.readFileSync(__dirname +
         '/../fixtures/examples/listing/q4.json', 'utf-8');
 
-    it('q1: It should search for the Google+ app by its title' +
+    it('q1: It should search for the Google+ app by its title ' +
         'and find two versions of the app: "413076433" and "413148638".',
         function (done) {
             var listing_query = '<title>Google+</title>'
@@ -34,7 +35,8 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(2);
                     try {
-                        res.body.should.deep.include.members(expected);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:');
@@ -63,7 +65,8 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(13);
                     try {
-                        res.body.should.deep.include.members(expected);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:');
@@ -93,7 +96,8 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(2);
                     try {
-                        res.body.should.deep.include.members(expected);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:');
@@ -124,7 +128,8 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(1);
                     try {
-                        res.body.should.deep.include.members(expected);
+                        var apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected);
                     }
                     catch (e) {
                         console.log('Expected:');
