@@ -239,7 +239,7 @@ var FrameComponent = React.createClass({
 
         return (
             <div className="row" style={frameStyle}>
-                <div className="col-md-5" style={m}>
+                <div style={m}>
                     <div style={idStyle}>
                         {this.props.frame.id}
                     </div>
@@ -255,7 +255,7 @@ var FrameComponent = React.createClass({
                         {this.props.isSelected ? buttons : null}
                     </div>
                 </div>
-                <div className="col-md-7" style={viewerStyle}>
+                <div style={viewerStyle}>
                     {statusMessage}
                     <ResultViewer ref="viewer"/>
                 </div>
