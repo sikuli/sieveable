@@ -17,7 +17,7 @@ var ResultViewer = React.createClass({
         if (Array.isArray(this.state.results) === false) {
             return (
                 <div className="row" key={0}>
-                    <div className="col-md-6">
+                    <div>
                         {this.state.results}
                     </div>
                 </div>
@@ -27,14 +27,10 @@ var ResultViewer = React.createClass({
             return (
                 <div className="row" key={index}>
                     <div className="col-md-6">
-                        {result.packageName}
-                    </div>
-                    <div className="col-md-2">
-                        {result.version}
+                        {result.app.id}
                     </div>
                 </div>
             )
-
         })
 
         if (resultNodes.length > 0) {
