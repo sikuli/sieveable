@@ -5,7 +5,7 @@
 </p>
 
 # Sieveable
-**Searching and Filtering Android Apps.**
+**Searching and Filtering Android Apps.** *Powered by Node.js*
 
 [![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable) [![devDependency Status](https://david-dm.org/sikuli/sieveable/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sikuli/sieveable)
@@ -53,5 +53,12 @@ For a getting started guide, sieveable search query syntax, examples, etc. see t
 - If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting Solr with: ```solr -restart -m 1g -cloud -V ```
 
 ## Caution:
-- **Contains JavaScript.**
-- **Made in a facility that also processes Java.**
+- *Contains JavaScript.*
+- *Made in a facility that also processes Java.*
+
+# License
+MIT
+
+***
+
+<p align="center"> &copy; Sikuli Lab 2015 </p>
