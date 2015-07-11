@@ -56,6 +56,11 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
     var result_json_q5_b = fs.readFileSync(__dirname +
         '/../fixtures/examples/ui/q5-b.json', 'utf-8');
 
+    var query_xml_q5_c = fs.readFileSync(__dirname +
+        '/../fixtures/examples/ui/q5-c.xml', 'utf-8');
+    var result_json_q5_c = fs.readFileSync(__dirname +
+        '/../fixtures/examples/ui/q5-c.json', 'utf-8');
+
     var query_xml_q6 = fs.readFileSync(__dirname +
         '/../fixtures/examples/ui/q6.xml', 'utf-8');
     var result_json_q6 = fs.readFileSync(__dirname +
@@ -96,6 +101,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(2);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -127,6 +133,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(2);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -158,6 +165,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(1);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -189,6 +197,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(13);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -219,6 +228,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(4);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -251,6 +261,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(3);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -283,6 +294,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(9);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -314,6 +326,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(24);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -349,6 +362,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(12);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -357,6 +371,38 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     catch (e) {
                         console.log('Expected:');
                         eyes.inspect(expected_q5_b);
+                        console.log('Actual:');
+                        eyes.inspect(apps);
+                        throw e
+                    }
+                    done()
+                });
+        });
+
+    it('q5-c it should search for the following example: \n' +
+        pd.xml(query_xml_q5_c) + '\n' +
+        'and find 4 apps.',
+        function (done) {
+            var q = 'MATCH App\nWHERE ' + query_xml_q5_c + '\n RETURN app';
+            var expected_q5_c = JSON.parse(result_json_q5_c);
+            var apps;
+            request(app)
+                .get('/q/json')
+                .query({queryText: q})
+                .set('Accept', 'application/json')
+                .expect(200)
+                .end(function (err, res) {
+                    should.not.exist(err);
+                    should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
+                    res.body.should.have.length(4);
+                    try {
+                        apps = _.pluck(res.body, 'app');
+                        apps.should.deep.include.members(expected_q5_c);
+                    }
+                    catch (e) {
+                        console.log('Expected:');
+                        eyes.inspect(expected_q5_c);
                         console.log('Actual:');
                         eyes.inspect(apps);
                         throw e
@@ -379,6 +425,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(32);
                     try {
                         var apps = _.pluck(res.body, 'app');
@@ -410,6 +457,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(9);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -441,6 +489,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(1);
                     try {
                         apps = _.pluck(res.body, 'app');
@@ -471,6 +520,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
+                    res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(5);
                     try {
                         apps = _.pluck(res.body, 'app');
