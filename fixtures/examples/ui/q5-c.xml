@@ -1,0 +1,4 @@
+<EditText android:inputType="textEmailAddress"/>
+<EditText android:inputType="textPassword"/>
+<EditText/>
+<Button/>
