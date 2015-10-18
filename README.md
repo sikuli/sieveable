@@ -1,11 +1,11 @@
 <p align="center">
   <a href="http://sieveable.io">
-    <img height="150" width="450" src="https://github.com/sikuli/sieveable/wiki/images/sieveable.png">
+    <img src="http://sieveable.io/images/sieveable.png">
   </a>
 </p>
 
-# Sieveable
-**Searching and Filtering Android Apps.** *Powered by Node.js*
+# [Sieveable](http://sieveable.io)
+**The deep search engine for Android apps.** *Powered by Node.js*
 
 [![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable) [![devDependency Status](https://david-dm.org/sikuli/sieveable/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sikuli/sieveable)
@@ -49,16 +49,21 @@
 # Documentation
 For a getting started guide, sieveable search query syntax, examples, etc. see the [Wiki](https://github.com/sikuli/sieveable/wiki).
 
+# Additional Tools
+- [sieveable-tools](https://github.com/sieveable/sieveable-browser): tools for importing data into Sieveable
+- [sieveable-browser](https://github.com/sieveable/sieveable-tools): a web-based user interface for Sieveable
+
 # Known Issues
 - If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size by restarting Solr with: ```solr -restart -m 1g -cloud -V ```
 
-## Caution:
-- *Contains JavaScript.*
-- *Made in a facility that also processes Java.*
+# Caution:
+- *Contains JavaScript.* :astonished:
+- *Made in a facility that also processes Java and Python.*  :smiley:
 
 # License
-MIT
+- Sieveable is licensed under the [MIT license]((./LICENSE)).
+- Documentation is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
 
 ***
 
-<p align="center"> &copy; Sikuli Lab 2015 </p>
+<p align="center"> &copy; <a href="http://lab.sikuli.org">Sikuli Lab</a> 2015</p>
