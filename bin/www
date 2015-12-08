@@ -5,7 +5,7 @@ const app = require('../lib/server/server');
 app.set('port', (process.env.PORT || 3000));
 
 const server = app.listen(app.get('port'), () => {
-    const host = server.address().address;
-    const port = server.address().port;
+    const host = server.address().address,
+        port = server.address().port;
     console.log('Server is listening at http://%s:%s', host, port);
 });
