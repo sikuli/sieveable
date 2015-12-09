@@ -110,6 +110,39 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     }
                     done()
                 });
-        })
+        });
+
+    // TODO: test for __excatly
+    // it('q4 It should search for apps that request exactly 11 permissions\n' +
+    //     'and find 33 apps.',
+    //     function (done) {
+    //         var manifest_query = fs.readFileSync(__dirname +
+    //             '/../fixtures/examples/manifest/q4.xml', 'utf8');
+    //         var q = 'MATCH app\nWHERE\n' + manifest_query + '\nRETURN app';
+    //         var expected = JSON.parse(result_json_q3);
+    //         var apps;
+    //         request(app)
+    //             .get('/q/json')
+    //             .query({ queryText: q })
+    //             .set('Accept', 'application/json')
+    //             .expect(200)
+    //             .end((err, res) => {
+    //                 should.not.exist(err);
+    //                 should.exist(res.body);
+    //                 res.body.should.have.length(12);
+    //                 try {
+    //                     apps = _.pluck(res.body, 'app');
+    //                     apps.should.deep.include.members(expected);
+    //                 }
+    //                 catch (e) {
+    //                     console.log('Expected:');
+    //                     eyes.inspect(expected);
+    //                     console.log('Actual:');
+    //                     eyes.inspect(apps);
+    //                     throw e;
+    //                 }
+    //                 done();
+    //             });
+    //     });
 
 });
