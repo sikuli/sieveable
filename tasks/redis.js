@@ -1,42 +1,41 @@
-var gulp = require('gulp');
-var config = require('config');
-var Promise = require("bluebird");
-var log = require("../lib/logger");
-var redisAdmin = require('../lib/index/redis-admin');
+'use strict';
+const gulp = require('gulp'),
+    config = require('config'),
+    Promise = require('bluebird'),
+    log = require('../lib/logger'),
+    redisAdmin = require('../lib/index/redis-admin'),
+    key = config.get('dataset.keyName'),
+    uiKey = config.get('dataset.uiKeyName'),
+    manifestKey = config.get('dataset.manifestKeyName'),
+    codeKey = config.get('dataset.codeKeyName');
 
-var key = config.get('dataset.keyName');
-var uiKey = config.get('dataset.uiKeyName');
-var manifestKey = config.get('dataset.manifestKeyName');
-var codeKey = config.get('dataset.codeKeyName');
-
-gulp.task('redis:addAllKeys', function (callback) {
-
+gulp.task('redis:addAllKeys', (callback) => {
     redisAdmin.insertDatasetKeys(key, [uiKey, manifestKey, codeKey])
-        .then(function () {
+        .then(() => {
             log.info('Successfully added all keys and values to the redis ' +
                 'set collection %s', key);
             callback(null);
         })
-        .catch(function (e) {
+        .catch((e) => {
             callback(e);
         });
-})
+});
 
-gulp.task('redis:addSolrKeys', function (callback) {
-    var collections = [config.get("dbConfig.solr.uiTagCollection"),
-        config.get("dbConfig.solr.uiSuffixCollection"),
-        config.get("dbConfig.solr.manifestCollection"),
-        config.get("dbConfig.solr.codeCollection")];
+gulp.task('redis:addSolrKeys', (callback) => {
+    const collections = [config.get('dbConfig.solr.uiTagCollection'),
+        config.get('dbConfig.solr.uiSuffixCollection'),
+        config.get('dbConfig.solr.manifestCollection'),
+        config.get('dbConfig.solr.codeCollection')];
 
     Promise.all([
         redisAdmin.insertSolrKeys(uiKey, collections[1]),
         redisAdmin.insertSolrKeys(manifestKey, collections[2]),
         redisAdmin.insertSolrKeys(codeKey, collections[3])])
-        .then(function () {
+        .then(() => {
             log.info('Successfully added all ids stored in Solr collections ' +
                 'to redis.');
             callback();
-        }).catch(function (e) {
+        }).catch((e) => {
             callback(e);
         });
-})
+});

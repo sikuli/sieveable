@@ -1,111 +1,111 @@
-var gulp = require('gulp');
-var Promise = require('bluebird');
-var fs = require('fs');
-var path = require('path');
-var exec = require('child_process').exec;
-var execAsync = Promise.promisify(exec);
-var config = require('config');
-var log = require("../lib/logger");
-var DATASET_PATH = path.resolve(__dirname + "/../", 'config', config.get('dataset.path'));
+'use strict';
+const gulp = require('gulp'),
+    Promise = require('bluebird'),
+    fs = require('fs'),
+    path = require('path'),
+    exec = require('child_process').exec,
+    execAsync = Promise.promisify(exec),
+    config = require('config'),
+    log = require('../lib/logger'),
+    DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('dataset.path'));
 
 
 function startSolr() {
-    var solrStatus = 'solr status';
-    // start Solr in SolrCloud mode as a daemon
-    var solrHost = config.get('dbConfig.solr.host');
-    var solrPort = config.get('dbConfig.solr.port');
-    var solrStart = 'solr start -cloud -V -h ' + solrHost +
-        ' -p ' + solrPort;
-    log.info("Starting Solr server in SolrCloud mode. ");
-    return new Promise(function (resolve, reject) {
-            execAsync(solrStatus).then(function (stdout) {
-                if (stdout && stdout.indexOf('on port ' + solrPort)) {
-                    log.info("Solr is already running on " + solrPort);
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            }).then(function (solrIsRunning) {
-                if (solrIsRunning) {
-                    resolve()
-                }
-                else {
-                    return execAsync(solrStart)
-                        .then(function (stdout, stderr) {
-                            if (stderr) {
-                                reject(new Error("Failed to start Solr\n" + stderr));
-                            }
-                            else {
-                                resolve()
-                            }
-                        })
-                }
-            })
-        }
-    )
+    const solrStatus = 'solr status',
+        // start Solr in SolrCloud mode as a daemon
+        solrHost = config.get('dbConfig.solr.host'),
+        solrPort = config.get('dbConfig.solr.port'),
+        solrStart = 'solr start -cloud -V -h ' + solrHost +
+                    ' -p ' + solrPort;
+    log.info('Starting Solr server in SolrCloud mode. ');
+    return new Promise((resolve, reject) => {
+        execAsync(solrStatus).then((stdout) => {
+            if (stdout && stdout.indexOf('on port ' + solrPort)) {
+                log.info('Solr is already running on ' + solrPort);
+                return true;
+            }
+            return false;
+        }).then((solrIsRunning) => {
+            if (solrIsRunning) {
+                resolve();
+            }
+            else {
+                return execAsync(solrStart)
+                    .then((stdout, stderr) => {
+                        if (stderr) {
+                            reject(new Error('Failed to start Solr\n' + stderr));
+                        }
+                        else {
+                            resolve();
+                        }
+                    });
+            }
+        });
+    });
 }
 
 function startRedis() {
     // start Redis server
-    var redisStart = 'redis-server ' + path.resolve(__dirname + "/../", 'config',
+    const redisStart = 'redis-server ' + path.resolve(__dirname + '/../', 'config',
             config.get('dbConfig.redis.config'));
-    log.info("Starting Redis server as a daemon process. ");
-    return new Promise(function (resolve, reject) {
+    log.info('Starting Redis server as a daemon process. ');
+    return new Promise((resolve, reject) => {
         execAsync(redisStart)
-            .then(function (stdout, stderr) {
+            .then((stdout, stderr) => {
                 if (stderr) {
-                    throw new Error("Failed to start redis " + stderr);
+                    throw new Error('Failed to start redis ' + stderr);
                 }
                 resolve();
-            }).catch(function (e) {
+            }).catch((e) => {
                 reject(e);
-            })
+            });
     });
 }
 
 function startMongoDB() {
     // start MongoDB
-    var mongod = 'mongod --port ' + config.get('dbConfig.mongo.port') +
-        ' --config ' + path.resolve(__dirname + "/../", 'config',
+    const mongod = 'mongod --port ' + config.get('dbConfig.mongo.port') +
+        ' --config ' + path.resolve(__dirname + '/../', 'config',
             config.get('dbConfig.mongo.config')) +
         ' --dbpath ' + path.join(DATASET_PATH, 'db');
-    log.info("Starting MongoDB server.");
-    return new Promise(function (resolve, reject) {
-        execAsync(mongod).then(function (stderr, stdout) {
+    log.info('Starting MongoDB server.');
+    return new Promise((resolve, reject) => {
+        execAsync(mongod).then((stderr, stdout) => {
             if (stderr) {
                 throw new Error(stderr);
             }
             else {
                 log.info(stdout);
-                log.info("MongoDB server is running now and this process will remain running.");
+                log.info('MongoDB server is running now and this process will remain running.');
                 resolve(stdout);
             }
-        }).catch(function (e) {
-            reject(new Error(" Failed to start MongoDB. Please ensure that " +
-                "MongoDB is not already running or port number " +
-                config.get('dbConfig.mongo.port') + " is not " +
-                " already being used. \n" + e.message));
-        })
+        }).catch((e) => {
+            reject(new Error(' Failed to start MongoDB. Please ensure that ' +
+                'MongoDB is not already running or port number ' +
+                config.get('dbConfig.mongo.port') + ' is not ' +
+                ' already being used. \n' + e.message));
+        });
     });
 }
 
-gulp.task('start:db', function (callback) {
+gulp.task('start:db', (callback) => {
     try {
         fs.mkdirSync(path.resolve(DATASET_PATH, 'db'));
-    } catch (error) {
-        if (error.code != 'EEXIST') callback(error);
+    }
+    catch (error) {
+        if (error.code !== 'EEXIST') {
+            callback(error);
+        }
     }
 
     startSolr()
-        .then(function () {
-            return startRedis()
-        }).then(function () {
+        .then(() => {
+            return startRedis();
+        }).then(() => {
             return startMongoDB();
         })
-        .catch(function (e) {
+        .catch((e) => {
             log.error(e.message);
             callback(e);
-        })
-
+        });
 });
