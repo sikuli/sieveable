@@ -16,6 +16,7 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
+      "listingCollection": "sieveable-listing",
       "uiTagCollection": "sieveable-ui-tag",
       "uiSuffixCollection": "sieveable-ui-suffix",
       "manifestCollection": "sieveable-manifest",
