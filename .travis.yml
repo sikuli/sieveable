@@ -54,6 +54,7 @@ before_script:
   # Start Solr
   - solr start ${SOLR_OPTS}
   - "until nc -z localhost 8983; do echo Waiting for Solr; sleep 1; done"
+  - solr create -c sieveable-listing
   - solr create -c sieveable-code
   - solr create -c sieveable-ui-tag
   - solr create -c sieveable-ui-suffix
