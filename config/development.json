@@ -1,18 +1,5 @@
 {
   "dbConfig": {
-    "mongo": {
-      "host": "localhost",
-      "port": 27017,
-      "db": "apps",
-      "config": "./mongod.conf",
-      "collections": [
-        {
-          "collection": "listings",
-          "type": "listingsCollection",
-          "description": "Listing details collection"
-        }
-      ]
-    },
     "solr": {
       "host": "localhost",
       "port": 8983,
@@ -31,6 +18,7 @@
   "dataset": {
     "path": "../fixtures",
     "keyName": "dataset:id",
+    "listingKeyName": "dataset:listing",
     "uiKeyName": "dataset:ui",
     "manifestKeyName": "dataset:manifest",
     "codeKeyName": "dataset:code"
