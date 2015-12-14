@@ -8,10 +8,14 @@ gulp.task('mongo:insert', function (callback) {
         callback);
 });
 
+gulp.task('solr:schema', function (callback) {
+   runSequence('solr:addKeyFields', 'solr:addListingFields', callback);
+});
+
 gulp.task('solr:insert', function (callback) {
     runSequence('extract:ui-tag', 'extract:ui-suffix', 'extract:manifest',
-        'solr:indexUITag', 'solr:indexUISuffix', 'solr:indexManifest',
-        'solr:indexCode', 'solr:commit', callback);
+        'solr:indexListing', 'solr:indexUITag', 'solr:indexUISuffix',
+        'solr:indexManifest', 'solr:indexCode', 'solr:commitAll', callback);
 });
 
 gulp.task('redis:insert', function (callback) {
@@ -19,6 +23,6 @@ gulp.task('redis:insert', function (callback) {
 });
 
 gulp.task('default', function (callback) {
-    runSequence('solr:create', 'solr:addField', 'extract:archives', 'solr:insert',
+    runSequence('solr:create', 'solr:schema', 'extract:archives', 'solr:insert',
         'mongo:insert', 'redis:insert', callback);
 });
