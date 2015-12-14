@@ -5,12 +5,13 @@ const gulp = require('gulp'),
     log = require('../lib/logger'),
     redisAdmin = require('../lib/index/redis-admin'),
     key = config.get('dataset.keyName'),
+    listingKey = config.get('dataset.listingKeyName'),
     uiKey = config.get('dataset.uiKeyName'),
     manifestKey = config.get('dataset.manifestKeyName'),
     codeKey = config.get('dataset.codeKeyName');
 
 gulp.task('redis:addAllKeys', (callback) => {
-    redisAdmin.insertDatasetKeys(key, [uiKey, manifestKey, codeKey])
+    redisAdmin.insertDatasetKeys(key, [listingKey, uiKey, manifestKey, codeKey])
         .then(() => {
             log.info('Successfully added all keys and values to the redis ' +
                 'set collection %s', key);
@@ -22,15 +23,16 @@ gulp.task('redis:addAllKeys', (callback) => {
 });
 
 gulp.task('redis:addSolrKeys', (callback) => {
-    const collections = [config.get('dbConfig.solr.uiTagCollection'),
-        config.get('dbConfig.solr.uiSuffixCollection'),
-        config.get('dbConfig.solr.manifestCollection'),
-        config.get('dbConfig.solr.codeCollection')];
-
     Promise.all([
-        redisAdmin.insertSolrKeys(uiKey, collections[1]),
-        redisAdmin.insertSolrKeys(manifestKey, collections[2]),
-        redisAdmin.insertSolrKeys(codeKey, collections[3])])
+        redisAdmin.insertSolrKeys(listingKey,
+                config.get('dbConfig.solr.listingCollection')),
+        redisAdmin.insertSolrKeys(uiKey,
+            config.get('dbConfig.solr.uiSuffixCollection')),
+        redisAdmin.insertSolrKeys(manifestKey,
+            config.get('dbConfig.solr.manifestCollection')),
+        redisAdmin.insertSolrKeys(codeKey,
+            config.get('dbConfig.solr.codeCollection'))
+    ])
         .then(() => {
             log.info('Successfully added all ids stored in Solr collections ' +
                 'to redis.');
