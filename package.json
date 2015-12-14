@@ -40,7 +40,6 @@
     "glob": "^6.0.1",
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
-    "mongodb": "^2.1.0",
     "pretty-data": "^0.40.0",
     "redis": "^2.4.2",
     "request": "^2.67.0",
