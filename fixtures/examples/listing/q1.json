@@ -1,5 +1,35 @@
 [
   {
+    "id": "com.google.android.music-1317",
+    "packageName": "com.google.android.music",
+    "version": "1317"
+  },
+  {
+    "id": "com.google.android.music-1514",
+    "packageName": "com.google.android.music",
+    "version": "1514"
+  },
+  {
+    "id": "com.google.android.tts-210020403",
+    "packageName": "com.google.android.tts",
+    "version": "210020403"
+  },
+  {
+    "id": "com.google.android.tts-210030103",
+    "packageName": "com.google.android.tts",
+    "version": "210030103"
+  },
+  {
+    "id": "com.google.android.videos-31221",
+    "packageName": "com.google.android.videos",
+    "version": "31221"
+  },
+  {
+    "id": "com.google.android.videos-32251",
+    "packageName": "com.google.android.videos",
+    "version": "32251"
+  },
+  {
     "id": "com.google.android.apps.plus-413076433",
     "packageName": "com.google.android.apps.plus",
     "version": "413076433"
@@ -8,5 +38,45 @@
     "id": "com.google.android.apps.plus-413148638",
     "packageName": "com.google.android.apps.plus",
     "version": "413148638"
+  },
+  {
+    "id": "com.google.android.apps.translate-30000023",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000023"
+  },
+  {
+    "id": "com.google.android.apps.translate-30000028",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000028"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  {
+    "id": "com.android.chrome-1547059",
+    "packageName": "com.android.chrome",
+    "version": "1547059"
+  },
+  {
+    "id": "com.android.chrome-1650059",
+    "packageName": "com.android.chrome",
+    "version": "1650059"
+  },
+  {
+    "id": "com.google.android.apps.books-20921",
+    "packageName": "com.google.android.apps.books",
+    "version": "20921"
+  },
+  {
+    "id": "com.google.android.apps.books-30149",
+    "packageName": "com.google.android.apps.books",
+    "version": "30149"
   }
 ]

@@ -1,11 +1,12 @@
-var fs = require('fs');
-var _ = require("lodash");
-var request = require('supertest');
-var parse = require('../lib/parse.js');
-var app = require('../lib/server/server');
-var chai = require("chai");
-var eyes = require('eyes');
-var should = chai.should();
+'use strict';
+const fs = require('fs'),
+    _ = require('lodash'),
+    request = require('supertest'),
+    parse = require('../lib/parse.js'),
+    app = require('../lib/server/server'),
+    chai = require('chai'),
+    eyes = require('eyes'),
+    should = chai.should();
 
 describe('Listing Details Examples: Answers to multiple listing details by example questions.', function () {
     this.timeout(0)
@@ -19,10 +20,10 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
     var result_json_q4 = fs.readFileSync(__dirname +
         '/../fixtures/examples/listing/q4.json', 'utf-8');
 
-    it('q1: It should search for the Google+ app by its title ' +
-        'and find two versions of the app: "413076433" and "413148638".',
+    it('q1: It should search for apps that have the word Google in their title ' +
+        'and find 16 apps.',
         function (done) {
-            var listing_query = '<title>Google+</title>'
+            var listing_query = '<title>Google</title>'
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
             var expected = JSON.parse(result_json_q1);
             request(app)
@@ -33,7 +34,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
-                    res.body.should.have.length(2);
+                    res.body.should.have.length(16);
                     try {
                         var apps = _.pluck(res.body, 'app');
                         apps.should.deep.include.members(expected);
@@ -83,12 +84,12 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         'in their listing details using the full text index ' +
         'and find 2 apps.',
         function (done) {
-            var listing_query = '<listing-details>PDF</listing-details>'
+            var listing_query = '<description>PDF</description>'
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
             var expected = JSON.parse(result_json_q3);
             request(app)
                 .get('/q/json')
-                .query({queryText: q})
+                .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
                 .end(function (err, res) {

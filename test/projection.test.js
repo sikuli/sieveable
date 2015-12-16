@@ -13,8 +13,8 @@ var result_json_q1 = fs.readFileSync(__dirname +
 var result_json_q2 = fs.readFileSync(__dirname +
     '/../fixtures/examples/projection/q2.json', 'utf-8');
 
-describe('Query Projection', function () {
-    this.timeout(40000);
+describe('Query Projection', function (done) {
+    this.timeout(0);
 
     it('q1: it should search for apps by matching text ' +
         'wildcards and returning their permissions and the text value of ' +
@@ -23,7 +23,7 @@ describe('Query Projection', function () {
             var exampleQuery = 'MATCH app\n' +
                 'WHERE\n' +
                 '<uses-permission android:name = "(android.permission.READ_*)"/>' +
-                '<description>Learn*Chinese*</description>\n' +
+                '<description>ch*t SMS</description>\n' +
                 '<store-category>(*)</store-category>\n' +
                 '<Button android:text="(*)"></Button>\n' +
                 'RETURN app, $1, $2, $3';
@@ -36,7 +36,7 @@ describe('Query Projection', function () {
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
-                    res.body.should.have.length(10);
+                    res.body.should.have.length(6);
                     try {
                         res.body.should.deep.include.members(expectedResult);
                     }
