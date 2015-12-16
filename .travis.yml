@@ -15,37 +15,18 @@ env:
     - SOLR_FILE="solr-5.1.0.tgz"
     - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-5.1.0
     - SOLR_OPTS="-cloud -V -m 4g -p 8983"
-    # MongoDB 3.0
-    - MONGODB_DOWNLOAD="https://fastdl.mongodb.org/linux/"
-    - MONGODB_FILE="mongodb-linux-x86_64-ubuntu1204-3.0.4.tgz"
-    - MONGODB_TARGET_FILE="mongodb-3.0.4.tgz"
-    - MONGODB_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/mongodb-3.0.4
-    - MONGODB_LOG_DIR=$TRAVIS_BUILD_DIR/srv/log/mongodb
-    - MONGODB_LOG_FILE=$TRAVIS_BUILD_DIR/srv/log/mongodb/mongod.log
-    - MONGODB_DATA_DIR=$TRAVIS_BUILD_DIR/srv/mongodb/data
-    - MONGODB_OPTS="--port 27017 --fork --logpath ${MONGODB_LOG_FILE} --dbpath ${MONGODB_DATA_DIR}"
   matrix:
     - NODE_ENV=development
 
 before_install:
   - mkdir -p ${SOLR_INSTALL_DIR}
-  - mkdir -p ${MONGODB_INSTALL_DIR}
-  - mkdir -p ${MONGODB_LOG_DIR}
-  - mkdir -p ${MONGODB_DATA_DIR}
-  - touch ${MONGODB_LOG_FILE}
   # Solr
   - curl -O ${SOLR_DOWNLOAD}${SOLR_VERSION}/${SOLR_FILE}
-  # MongoDB
-  - curl -O ${MONGODB_DOWNLOAD}${MONGODB_FILE}
-  - mv ${MONGODB_FILE} ${MONGODB_TARGET_FILE}
 
 install:
   # Solr
   - tar -zxvf ${SOLR_FILE} -C ${SOLR_INSTALL_DIR} --strip-components 1
   - export PATH=${SOLR_INSTALL_DIR}/bin:$PATH
-  # MongoDB
-  - tar -zxvf ${MONGODB_TARGET_FILE} -C ${MONGODB_INSTALL_DIR} --strip-components 1
-  - export PATH=${MONGODB_INSTALL_DIR}/bin:$PATH
   # Gulp
   - npm install -g gulp
   - npm install
@@ -59,10 +40,6 @@ before_script:
   - solr create -c sieveable-ui-tag
   - solr create -c sieveable-ui-suffix
   - solr create -c sieveable-manifest
-  # Start MongoDB
-  - mongod --version
-  - mongod ${MONGODB_OPTS}
-  - "until nc -z localhost 27017; do echo Waiting for MongoDB; sleep 1; done"
   # Kick off the default gulp task
   - gulp
 
@@ -82,11 +59,6 @@ after_script:
   - solr delete -c sieveable-code -deleteConfig true
   # Stop Solr
   - solr stop
-  # Stop MongoDB
-  - mongo --eval "db.getSiblingDB('admin').shutdownServer()"
-  # Delete data dirs
-  - rm -rf ${MONGODB_DATA_DIR}
-  - rm -rf ${MONGODB_LOG_DIR}
 
 sudo: false
 
