@@ -62,32 +62,6 @@ function startRedis() {
     });
 }
 
-function startMongoDB() {
-    // start MongoDB
-    const mongod = 'mongod --port ' + config.get('dbConfig.mongo.port') +
-        ' --config ' + path.resolve(__dirname + '/../', 'config',
-            config.get('dbConfig.mongo.config')) +
-        ' --dbpath ' + path.join(DATASET_PATH, 'db');
-    log.info('Starting MongoDB server.');
-    return new Promise((resolve, reject) => {
-        execAsync(mongod).then((stderr, stdout) => {
-            if (stderr) {
-                throw new Error(stderr);
-            }
-            else {
-                log.info(stdout);
-                log.info('MongoDB server is running now and this process will remain running.');
-                resolve(stdout);
-            }
-        }).catch((e) => {
-            reject(new Error(' Failed to start MongoDB. Please ensure that ' +
-                'MongoDB is not already running or port number ' +
-                config.get('dbConfig.mongo.port') + ' is not ' +
-                ' already being used. \n' + e.message));
-        });
-    });
-}
-
 gulp.task('start:db', (callback) => {
     try {
         fs.mkdirSync(path.resolve(DATASET_PATH, 'db'));
@@ -101,8 +75,6 @@ gulp.task('start:db', (callback) => {
     startSolr()
         .then(() => {
             return startRedis();
-        }).then(() => {
-            return startMongoDB();
         })
         .catch((e) => {
             log.error(e.message);
