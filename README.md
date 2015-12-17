@@ -55,8 +55,8 @@
 For a getting started guide, sieveable search query syntax, examples, etc. see the [Wiki](https://github.com/sikuli/sieveable/wiki).
 
 # Additional Tools
-- [sieveable-tools](https://github.com/sieveable/sieveable-browser): tools for importing data into Sieveable
-- [sieveable-browser](https://github.com/sieveable/sieveable-tools): a web-based user interface for Sieveable
+- [sieveable-browser](https://github.com/sieveable/sieveable-browser): a web-based user interface for Sieveable.
+- [sieveable-tools](https://github.com/sieveable/sieveable-tools): tools for extracting features from apps and importing data into Sieveable.
 
 # Known Issues
 - If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size. You can do that by restarting Solr with: ```solr -restart -m 1g -cloud -V ```
