@@ -61,13 +61,13 @@ For a getting started guide, sieveable search query syntax, examples, etc. see t
 # Known Issues
 - If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size. You can do that by restarting Solr with: ```solr -restart -m 1g -cloud -V ```
 
-# Caution:
+# Caution
 - *Contains JavaScript.* :astonished:
 - *Made in a facility that also processes Java and Python.*  :smiley:
 
 # License
-- Sieveable is licensed under the [MIT license]((./LICENSE)).
-- Documentation is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+- Sieveable is licensed under the [MIT license](./LICENSE.txt).
+- Documentation is licensed under a [Creative Commons Attribution 4.0 International license](./LICENSE-docs).
 
 ***
 
