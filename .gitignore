@@ -1,10 +1,14 @@
 #node
 node_modules
-# Test data files
-fixtures/*/*.json
-fixtures/*/*.xml
-fixtures/code/*.txt
-fixtures/db
+# exclude everything in fixtures
+/fixtures/code/*
+/fixtures/listing/*
+/fixtures/manifest/*
+/fixtures/ui/*
+/fixtures/db
+# But not the examples directory and tar files
+!/fixtures/**/*.tar.bz2
+!/fixtures/examples/*
 # Intellij IDEA
 .idea/
 *.iml
