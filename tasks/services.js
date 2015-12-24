@@ -1,14 +1,12 @@
 'use strict';
 const gulp = require('gulp'),
     Promise = require('bluebird'),
-    fs = require('fs'),
     path = require('path'),
     exec = require('child_process').exec,
     execAsync = Promise.promisify(exec),
     config = require('config'),
     log = require('../lib/logger'),
-    DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('dataset.path'));
-
+    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
 
 function startSolr() {
     const solrStatus = 'solr status',
@@ -46,7 +44,7 @@ function startSolr() {
 
 function startRedis() {
     // start Redis server
-    const redisStart = 'redis-server ' + path.resolve(__dirname + '/../', 'config',
+    const redisStart = 'redis-server ' + path.resolve(CONFIG_PATH,
             config.get('dbConfig.redis.config'));
     log.info('Starting Redis server as a daemon process. ');
     return new Promise((resolve, reject) => {
@@ -63,15 +61,7 @@ function startRedis() {
 }
 
 gulp.task('start:db', (callback) => {
-    try {
-        fs.mkdirSync(path.resolve(DATASET_PATH, 'db'));
-    }
-    catch (error) {
-        if (error.code !== 'EEXIST') {
-            callback(error);
-        }
-    }
-
+    // start db servers
     startSolr()
         .then(() => {
             return startRedis();
