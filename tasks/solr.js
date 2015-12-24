@@ -3,35 +3,32 @@ const gulp = require('gulp'),
     Promise = require('bluebird'),
     config = require('config'),
     path = require('path'),
-    glob = require('glob'),
-    through = require('through2'),
+    fs = Promise.promisifyAll(require('fs')),
+    _ = require('lodash'),
     solrIndex = require('../lib/index/solr-index'),
     solrAdmin = require('../lib/index/solr-admin'),
     log = require('../lib/logger'),
-    DATASET_PATH = path.resolve(__dirname + '/../', 'config', config.get('dataset.path'));
+    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
 
-gulp.task('solr:create', (callback) => {
+gulp.task('solr:create', () => {
     const collections = [
         config.get('dbConfig.solr.listingCollection'),
         config.get('dbConfig.solr.uiTagCollection'),
         config.get('dbConfig.solr.uiSuffixCollection'),
         config.get('dbConfig.solr.manifestCollection'),
         config.get('dbConfig.solr.codeCollection')];
-    Promise.all([solrAdmin.createCollection(collections[0]),
+    return Promise.all([solrAdmin.createCollection(collections[0]),
         solrAdmin.createCollection(collections[1]),
         solrAdmin.createCollection(collections[2]),
         solrAdmin.createCollection(collections[3]),
         solrAdmin.createCollection(collections[4])])
-        .then(() => {
-            callback();
-        })
         .catch((e) => {
             log.error('ERROR: ' + e.message);
-            callback(e);
+            return Promise.reject(e);
         });
 });
 
-gulp.task('solr:addKeyFields', (callback) => {
+gulp.task('solr:addKeyFields', () => {
     const collections = [config.get('dbConfig.solr.uiTagCollection'),
                          config.get('dbConfig.solr.uiSuffixCollection'),
                          config.get('dbConfig.solr.manifestCollection'),
@@ -51,7 +48,7 @@ gulp.task('solr:addKeyFields', (callback) => {
             'stored': true
         };
 
-    Promise.all([
+    return Promise.all([
         solrAdmin.addField(collections[0], packageField),
         solrAdmin.addField(collections[0], versionCodeField),
         solrAdmin.addField(collections[1], packageField),
@@ -61,25 +58,22 @@ gulp.task('solr:addKeyFields', (callback) => {
         solrAdmin.addField(collections[3], packageField),
         solrAdmin.addField(collections[3], versionCodeField),
     ])
-        .then(() => {
-            callback();
-        })
-        .catch((e) => {
-            log.error('ERROR: ' + e.message);
-            callback(e);
-        });
+      .catch((e) => {
+          log.error('ERROR: ' + e.message);
+          return Promise.reject(e);
+      });
 });
 
 // add all listing detail fields to the schema
-gulp.task('solr:addListingFields', (callback) => {
-   const collection = config.get('dbConfig.solr.listingCollection'),
-       packageField = {
-           'name': 'n',
-           'type': 'string',
-           'indexed': true,
-           'required': true,
-           'stored': true
-       },
+gulp.task('solr:addListingFields', () => {
+    const collection = config.get('dbConfig.solr.listingCollection'),
+        packageField = {
+            'name': 'n',
+            'type': 'string',
+            'indexed': true,
+            'required': true,
+            'stored': true
+        },
         versionCodeField = {
             'name': 'verc',
             'type': 'int',
@@ -87,126 +81,126 @@ gulp.task('solr:addListingFields', (callback) => {
             'required': true,
             'stored': true
         },
-       creatorAddressField = {
-           'name': 'cadd',
-           'type': 'text_general',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       categoryField = {
-           'name': 'cat',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       contentRatingField = {
-           'name': 'crat',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       creatorField = {
-           'name': 'crt',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       creatorUrlField = {
-           'name': 'curl',
-           'type': 'string',
-           'indexed': false,
-           'required': false,
-           'stored': true
-       },
-       minDownloadCountField = {
-           'name': 'dct',
-           'type': 'long',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       descriptionField = {
-           'name': 'desc',
-           'type': 'text_general',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       datePublishedField = {
-           'name': 'dtp',
-           'type': 'text_general',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       downloadCountTextField = {
-           'name': 'dtxt',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       whatsNewField = {
-           'name': 'new',
-           'type': 'text_general',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       osField = {
-           'name': 'os',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       priceField = {
-           'name': 'pri',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       privacyUrlField = {
-           'name': 'purl',
-           'type': 'string',
-           'indexed': false,
-           'required': false,
-           'stored': true
-       },
-       starRatingField = {
-           'name': 'rate',
-           'type': 'float',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       ratingCountField = {
-           'name': 'rct',
-           'type': 'int',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       downloadSizeField = {
-           'name': 'sz',
-           'type': 'string',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       },
-       titleField = {
-           'name': 't',
-           'type': 'text_general',
-           'indexed': true,
-           'required': false,
-           'stored': true
-       };
-    Promise.all([
+        creatorAddressField = {
+            'name': 'cadd',
+            'type': 'text_general',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        categoryField = {
+            'name': 'cat',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        contentRatingField = {
+            'name': 'crat',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        creatorField = {
+            'name': 'crt',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        creatorUrlField = {
+            'name': 'curl',
+            'type': 'string',
+            'indexed': false,
+            'required': false,
+            'stored': true
+        },
+        minDownloadCountField = {
+            'name': 'dct',
+            'type': 'long',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        descriptionField = {
+            'name': 'desc',
+            'type': 'text_general',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        datePublishedField = {
+            'name': 'dtp',
+            'type': 'text_general',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        downloadCountTextField = {
+            'name': 'dtxt',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        whatsNewField = {
+            'name': 'new',
+            'type': 'text_general',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        osField = {
+            'name': 'os',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        priceField = {
+            'name': 'pri',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        privacyUrlField = {
+            'name': 'purl',
+            'type': 'string',
+            'indexed': false,
+            'required': false,
+            'stored': true
+        },
+        starRatingField = {
+            'name': 'rate',
+            'type': 'float',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        ratingCountField = {
+            'name': 'rct',
+            'type': 'int',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        downloadSizeField = {
+            'name': 'sz',
+            'type': 'string',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        },
+        titleField = {
+            'name': 't',
+            'type': 'text_general',
+            'indexed': true,
+            'required': false,
+            'stored': true
+        };
+    return Promise.all([
         solrAdmin.addField(collection, packageField),
         solrAdmin.addField(collection, versionCodeField),
         solrAdmin.addField(collection, creatorField),
@@ -226,70 +220,167 @@ gulp.task('solr:addListingFields', (callback) => {
         solrAdmin.addField(collection, ratingCountField),
         solrAdmin.addField(collection, whatsNewField),
         solrAdmin.addField(collection, titleField)
-        ])
-        .then(() => {
-            callback();
-        })
-        .catch((e) => {
-            log.error('ERROR: ' + e.message);
-            callback(e);
-        });
-
+    ])
+      .catch((e) => {
+          log.error('ERROR: ' + e.message);
+          return Promise.reject(e);
+      });
 });
 
-gulp.task('solr:indexUITag', (callback) => {
-    const dir = path.resolve(__dirname + '/../', 'config', config.get('indexes.extractUITagDir')),
-        collectionName = config.get('dbConfig.solr.uiTagCollection');
-    glob(path.join(dir, '*.txt'), (err, files) => {
-        solrIndex.indexFile(files, '-ui-tag.txt', collectionName, (e) => {
-            callback(e);
+gulp.task('solr:indexUITag', () => {
+    const collectionName = config.get('dbConfig.solr.uiTagCollection'),
+        datasetDirs = _.pluck(config.get('dataset.ui'), 'indexes.extractUITagDir'),
+        datasetPaths = _.map(datasetDirs, (dir) => {
+            return path.resolve(CONFIG_PATH, dir);
         });
+    return Promise.map(datasetPaths, (datasetPath) => {
+        return fs.readdirAsync(datasetPath)
+                 .then((files) => {
+                     return _.filter(files, (f) => {
+                         return path.extname(f) === '.txt';
+                     });
+                 })
+                 .then((files) => {
+                     const fileNamePaths = _.map(files, (f) => {
+                         return path.resolve(datasetPath, f);
+                     });
+                     return solrIndex.indexFile(fileNamePaths, '-ui-tag.txt', collectionName);
+                 })
+                 .catch((e) => {
+                     log.error(e);
+                 });
+    })
+    .then(() => {
+        return Promise.resolve();
+    }).catch((e) => {
+        log.error(e);
+        return Promise.reject(e);
     });
 });
 
-gulp.task('solr:indexUISuffix', (callback) => {
-    const dir = path.resolve(__dirname + '/../', 'config', config.get('indexes.extractUISuffixDir')),
-        collectionName = config.get('dbConfig.solr.uiSuffixCollection');
-    glob(path.join(dir, '*.txt'), (err, files) => {
-        solrIndex.indexFile(files, '-ui-suffix.txt', collectionName, (e) => {
-            callback(e);
+gulp.task('solr:indexUISuffix', () => {
+    const collectionName = config.get('dbConfig.solr.uiSuffixCollection'),
+        datasetDirs = _.pluck(config.get('dataset.ui'), 'indexes.extractUISuffixDir'),
+        datasetPaths = _.map(datasetDirs, (dir) => {
+            return path.resolve(CONFIG_PATH, dir);
         });
+    return Promise.map(datasetPaths, (datasetPath) => {
+        return fs.readdirAsync(datasetPath)
+                 .then((files) => {
+                     return _.filter(files, (f) => {
+                         return path.extname(f) === '.txt';
+                     });
+                 })
+                 .then((files) => {
+                     const fileNamePaths = _.map(files, (f) => {
+                         return path.resolve(datasetPath, f);
+                     });
+                     return solrIndex.indexFile(fileNamePaths, '-ui-suffix.txt', collectionName);
+                 })
+                 .catch((e) => {
+                     log.error(e);
+                 });
+    })
+    .then(() => {
+        return Promise.resolve();
+    }).catch((e) => {
+        log.error(e);
+        return Promise.reject(e);
     });
 });
 
-gulp.task('solr:indexManifest', (callback) => {
-    const dir = path.resolve(__dirname + '/../', 'config', config.get('indexes.extractManifestDir')),
-        collectionName = config.get('dbConfig.solr.manifestCollection');
-    glob(path.join(dir, '*.txt'), (err, files) => {
-        solrIndex.indexFile(files, '-manifest-tag.txt', collectionName, (e) => {
-            callback(e);
+gulp.task('solr:indexManifest', () => {
+    const collectionName = config.get('dbConfig.solr.manifestCollection'),
+        datasetDirs = _.pluck(config.get('dataset.manifest'), 'indexes.extractManifestDir'),
+        datasetPaths = _.map(datasetDirs, (dir) => {
+            return path.resolve(CONFIG_PATH, dir);
         });
+    return Promise.map(datasetPaths, (datasetPath) => {
+        return fs.readdirAsync(datasetPath)
+                 .then((files) => {
+                     return _.filter(files, (f) => {
+                         return path.extname(f) === '.txt';
+                     });
+                 })
+                 .then((files) => {
+                     const fileNamePaths = _.map(files, (f) => {
+                         return path.resolve(datasetPath, f);
+                     });
+                     return solrIndex.indexFile(fileNamePaths, '-manifest-tag.txt', collectionName);
+                 })
+                 .catch((e) => {
+                     log.error(e);
+                 });
+    })
+    .then(() => {
+        return Promise.resolve();
+    }).catch((e) => {
+        log.error(e);
+        return Promise.reject(e);
     });
 });
 
-gulp.task('solr:indexCode', (callback) => {
-    const collectionName = config.get('dbConfig.solr.codeCollection');
-    glob(path.join(DATASET_PATH, 'code', '*.txt'), (er, files) => {
-        solrIndex.indexFile(files, '.smali.txt', collectionName, (err) => {
-            callback(err);
+gulp.task('solr:indexCode', () => {
+    const collectionName = config.get('dbConfig.solr.codeCollection'),
+        datasetDirs = _.pluck(config.get('dataset.code'), 'target'),
+        datasetPaths = _.map(datasetDirs, (dir) => {
+            return path.resolve(CONFIG_PATH, dir);
         });
+    return Promise.map(datasetPaths, (datasetPath) => {
+        return fs.readdirAsync(datasetPath)
+                 .then((files) => {
+                     return _.filter(files, (f) => {
+                         return path.extname(f) === '.txt';
+                     });
+                 })
+                 .then((files) => {
+                     const fileNamePaths = _.map(files, (f) => {
+                         return path.resolve(datasetPath, f);
+                     });
+                     return solrIndex.indexFile(fileNamePaths, '.smali.txt', collectionName);
+                 })
+                 .catch((e) => {
+                     log.error(e);
+                 });
+    })
+    .then(() => {
+        return Promise.resolve();
+    }).catch((e) => {
+        log.error(e);
+        return Promise.reject(e);
     });
 });
 
-gulp.task('solr:indexListing', (callback) => {
-    gulp.src(path.join(DATASET_PATH, 'listing', '*.json'))
-        .pipe(new through.obj((file, encoding, cb) => {
-            solrIndex.indexListing(file.contents).then(() =>{
-                cb();
-            }).catch((e)=>{
-                cb(e);
-            });
-    }, () => {
-            callback();
-          }));
+gulp.task('solr:indexListing', () => {
+    const datasetDirs = _.pluck(config.get('dataset.listing'), 'target'),
+        datasetPaths = _.map(datasetDirs, (dir) => {
+            return path.resolve(CONFIG_PATH, dir);
+        });
+    return Promise.map(datasetPaths, (datasetPath) => {
+        return fs.readdirAsync(datasetPath)
+                  .then((files) => {
+                      return _.filter(files, (f) => {
+                          return path.extname(f) === '.json';
+                      });
+                  })
+                 .then((files) => {
+                     return _.map(files, (f) => {
+                         return path.resolve(datasetPath, f);
+                     });
+                 })
+                 .map((fileName) => {
+                     return fs.readFileAsync(fileName, 'utf8')
+                            .then((content) => {
+                                return solrIndex.indexListing(content);
+                            });
+                 })
+                 .catch((e) => {
+                     return Promise.reject(e);
+                 });
+    });
 });
 
-gulp.task('solr:commitAll', (callback) => {
+gulp.task('solr:commitAll', () => {
     const solrConfig = config.get('dbConfig.solr');
     return Promise.all([
         solrIndex.commit(solrConfig.listingCollection),
@@ -301,6 +392,6 @@ gulp.task('solr:commitAll', (callback) => {
         log.info('Successfully committed changes to all indexes.');
     }).catch((e) => {
         log.error('Failed to commit all index changes. ', e);
-        callback(e);
+        return Promise.reject(e);
     });
 });
