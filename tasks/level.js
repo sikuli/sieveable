@@ -4,34 +4,12 @@ const gulp = require('gulp'),
     path = require('path'),
     mkdirp = require('mkdirp'),
     config = require('config'),
-    levelup = require('level'),
+    levelDB = require('../lib/db/level'),
     _ = require('lodash'),
     fs = Promise.promisifyAll(require('fs')),
     log = require('../lib/logger'),
-    CONFIG_PATH = path.resolve(__dirname + '/../', 'config'),
-    DB_PATH = path.resolve(CONFIG_PATH, config.get('dbConfig.leveldb.location')),
-    db = levelup(DB_PATH, { valueEncoding: 'json' }),
-    dbGetAsync = Promise.promisify(dbGet),
-    dbPutAsync = Promise.promisify(dbPut);
+    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
 
-function dbGet(id, callback) {
-    db.get(id, (err, value) => {
-        if (err) {
-            callback(err);
-        }
-        callback(null, value);
-    });
-}
-
-function dbPut(id, value, callback) {
-    return db.put(id, value, (err) => {
-        if (err) {
-            log.error('Failed to insert values for %s', id, err);
-            callback(err);
-        }
-        callback(null, value);
-    });
-}
 /**
 * Insert keys (app ids) and values (file path names) into leveldb.
 *
@@ -48,10 +26,10 @@ function insertToLevel(datasetType, extension) {
                  .map((fileName) => {
                      const id = path.basename(fileName, extension),
                          fileAbsPath = path.join(dirPath, fileName);
-                     return dbGetAsync(id)
+                     return levelDB.dbGetAsync(id)
                        .then((val) => {
                            val[datasetType] = fileAbsPath;
-                           return dbPutAsync(id, val);
+                           return levelDB.dbPutAsync(id, val);
                        })
                        .then(() => {
                            log.info('Inserted %s path for %s', datasetType, id);
@@ -60,7 +38,7 @@ function insertToLevel(datasetType, extension) {
                            if (getErr.notFound) {
                                const val = {};
                                val[datasetType] = fileAbsPath;
-                               return dbPutAsync(id, val);
+                               return levelDB.dbPutAsync(id, val);
                            }
                            log.error('Failed to find %s ', id, getErr);
                        });
@@ -80,29 +58,18 @@ gulp.task('leveldb:create', (callback) => {
     callback();
 });
 
-gulp.task('leveldb:readFullDB', (callback) => {
-    db.createReadStream()
-    .on('data', (data) => {
-        log.info(data.key, '=>', JSON.stringify(data.value));
-    })
-    .on('error', (err) => {
-        log.error('Failed to read full db', err);
-        callback(err);
-    })
-    .on('close', () => {
-        console.log('Stream closed');
-        callback();
-    });
+gulp.task('leveldb:readFullDB', () => {
+    return levelDB.readFullDB();
 });
 
 gulp.task('leveldb:addListing', ['leveldb:create'], () => {
-    insertToLevel('listing', '.json');
+    return insertToLevel('listing', '.json');
 });
 
 gulp.task('leveldb:addManifest', ['leveldb:create'], () => {
-    insertToLevel('manifest', '.xml');
+    return insertToLevel('manifest', '.xml');
 });
 
 gulp.task('leveldb:addUI', ['leveldb:create'], () => {
-    insertToLevel('ui', '.xml');
+    return insertToLevel('ui', '.xml');
 });
