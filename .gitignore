@@ -18,3 +18,7 @@ indexes/
 dump.rdb
 # Coverage
 coverage
+# npm
+npm-debug.log*
+.npm
+.node_repl_history
