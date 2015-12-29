@@ -12,14 +12,16 @@ describe('test UI tag names and attributes extractor', function() {
         const file = [path.resolve(__dirname + '/../fixtures/examples/index/me.pou.app-188.xml')],
             expected = fs.readFileSync(__dirname + '/../fixtures/examples/index/me.pou.app-188-ui-tag.txt', 'utf8'),
             target = path.resolve(__dirname + '/../indexes/ui/tag');
-        tagNameExtractor(file, target, '-ui-tag', (err, res) => {
-            should.not.exist(err);
+        tagNameExtractor(file, target, '-ui-tag').then(() => {
             const targetFile = path.resolve(__dirname + '/../indexes/ui/tag/me.pou.app-188-ui-tag.txt'),
                 exists = fs.existsSync(targetFile);
             exists.should.equal(true);
             const result = fs.readFileSync(targetFile, 'utf8');
             result.should.equal(expected);
             done();
+        }).catch((e) => {
+            should.not.exist(e);
+            done(e);
         });
     });
 });
