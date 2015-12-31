@@ -8,15 +8,16 @@ const chai = require('chai'),
 
 describe('Test Solr admin/util module.', function() {
     this.timeout(0);
-    const solrTestCollection = 'test-collection',
+    const testCollection = 'test-collection',
         testField = { 'name': 'package_name', 'type': 'string',
                       'indexed': true, 'required': true, 'stored': true
                     };
 
     before((done) => {
-      solrAdmin.createCollection(solrTestCollection)
+      solrAdmin.createCollection(testCollection)
           .then(() => {
-              return solrAdmin.addField(solrTestCollection, testField);
+              console.log('Adding a new field to ' + testCollection);
+              return solrAdmin.addField(testCollection, testField);
           })
           .then(() => {
               done();
@@ -27,17 +28,58 @@ describe('Test Solr admin/util module.', function() {
     });
 
     it('It should ensure that the test collection ('
-        + solrTestCollection + ') exists.', (done) => {
-            solrAdmin.exists(solrTestCollection).then(() => {
+        + testCollection + ') exists.', (done) => {
+            solrAdmin.exists(testCollection).then(() => {
                 done();
             }).catch((e) => {
                 done(e);
             });
     });
 
+    it('It should ensure that a collection named no-collection does not exist.', (done) => {
+        solrAdmin.exists('no-collection')
+            .then((res) => {
+                should.not.exist(res);
+                done(new Error('collection should not exist.')); })
+            .catch((e) => {
+                should.exist(e);
+                done();
+            });
+    });
+
+    it('It should not create a collection that already exists', (done) => {
+        solrAdmin.createCollection(testCollection).then((res) => {
+            res.should.contain('already exist');
+            done();
+        }).catch((e) => {
+            should.not.exist(e);
+            done(e);
+        });
+    });
+
+    it('It should not create a field that already exists', (done) => {
+        solrAdmin.addField(testCollection, testField).then((res) => {
+            res.should.contain('already exist');
+            done();
+        }).catch((e) => {
+            should.not.exist(e);
+            done(e);
+        });
+    });
+
+    it('It should not create an invalid field', (done) => {
+        solrAdmin.addField(testCollection, 'test').then((res) => {
+            should.not.exist(res);
+            done(new Error('An invalid field has been created.'));
+        }).catch((e) => {
+            should.exist(e);
+            done();
+        });
+    });
+
     it('It should ensure that the test field has been added to the test collection.', (done) => {
         const solrUrl = 'http://' + config.get('dbConfig.solr.host') + ':' +
-            config.get('dbConfig.solr.port') + '/solr/' + solrTestCollection + '/schema/fields';
+            config.get('dbConfig.solr.port') + '/solr/' + testCollection + '/schema/fields';
         return request.getAsync({
             url: solrUrl,
             qs: { wt: 'json' }
@@ -58,17 +100,17 @@ describe('Test Solr admin/util module.', function() {
       return request.postAsync({
           url: solrUrl,
           qs: {
-              action: 'DELETE', name: solrTestCollection, wt: 'json'
+              action: 'DELETE', name: testCollection, wt: 'json'
           },
           json: true
       }).spread((response, body) => {
           if (response.statusCode === 200 && body.responseHeader.status === 0) {
-              console.log('Solr test collection ' + solrTestCollection + ' has been deleted.');
+              console.log('Solr test collection ' + testCollection + ' has been deleted.');
               done();
           }
           else {
               throw new Error('Failed to delete our test collection: '
-                  + solrTestCollection + '. Reason: ' + body.error.msg);
+                  + testCollection + '. Reason: ' + body.error.msg);
           }
       }).catch((e) => {
           done(e);
