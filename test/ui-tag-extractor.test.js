@@ -24,4 +24,18 @@ describe('test UI tag names and attributes extractor', function() {
             done(e);
         });
     });
+
+    it('should fail to extract tag names and attributes for invalid files', (done) => {
+        const file = [path.resolve(__dirname, '../fixtures/examples/index/no.such.file-123.xml')],
+            target = path.resolve(__dirname, '../no-such-dir');
+        tagNameExtractor(file, target, '-ui-tag').then(() => {
+            const targetFile = path.resolve(__dirname, '../indexes/ui/tag/no.such.file-123-ui-tag.txt'),
+                exists = fs.existsSync(targetFile);
+            exists.should.equal(false);
+            done();
+        }).catch((e) => {
+            should.not.exist(e);
+            done(e);
+        });
+    });
 });
