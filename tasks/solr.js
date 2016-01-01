@@ -353,6 +353,7 @@ gulp.task('solr:indexCode', () => {
 
 gulp.task('solr:indexListing', () => {
     const datasetDirs = _.pluck(config.get('dataset.listing'), 'target'),
+        listingCollection = config.get('dbConfig.solr.listingCollection'),
         datasetPaths = _.map(datasetDirs, (dir) => {
             return path.resolve(CONFIG_PATH, dir);
         });
@@ -371,7 +372,7 @@ gulp.task('solr:indexListing', () => {
                  .map((fileName) => {
                      return fs.readFileAsync(fileName, 'utf8')
                             .then((content) => {
-                                return solrIndex.indexListing(content);
+                                return solrIndex.indexListing(content, listingCollection);
                             });
                  })
                  .catch((e) => {
