@@ -9,7 +9,6 @@ const chai = require('chai'),
 describe('Test redis admin/util module.', function() {
     this.timeout(2000);
     const testKey = 'test-manifest',
-        allDatasetTestKey = 'test-dataset',
         redisClient = redis.createClient();
     redisClient.on('error', (err) => {
         console.error('Redis connection error ', err);
@@ -21,8 +20,6 @@ describe('Test redis admin/util module.', function() {
         redisAdmin.insertSolrKeys(testKey,
                                   config.get('dbConfig.solr.manifestCollection'))
               .then(() => {
-                  return redisAdmin.insertDatasetKeys(allDatasetTestKey, [testKey]);
-              }).then(() => {
                   console.log('Successfully inserted data into Redis.');
                   done();
               }).catch((e) => {
@@ -31,28 +28,26 @@ describe('Test redis admin/util module.', function() {
               });
     });
 
-    it('It should ensure that our testKey has 58 values in redis within 2 seconds.', (done) => {
+    it('It should ensure that our testKey has 58 values in redis.', (done) => {
         const scardAsync = Promise.promisify(redisClient.scard, redisClient);
+        console.log('testKey= ' + testKey);
         scardAsync(testKey)
             .then((result) => {
                 result.should.equal(58);
-                return scardAsync(allDatasetTestKey);
-            }).then((result) => {
-                result.should.equal(58);
-                done();
+                done(); 
             }).catch((e) => {
                 done(e);
             });
     });
 
     after((done) => {
-        redisClient.del([testKey, allDatasetTestKey], (err, res) => {
+        redisClient.del(testKey, (err, res) => {
           if(err) {
-            console.error('Failed to delete test keys.', err);
+            console.error('Failed to delete test key.', err);
             done(err);
           }
           redisClient.quit();
-          console.log('Successfully deleted test keys in Redis.');
+          console.log('Successfully deleted test key in Redis.');
           done();
         });
     });

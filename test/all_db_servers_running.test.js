@@ -31,8 +31,7 @@ describe('Test that all external db servers are running using their ' +
         'and has all the keys defined in the config file.', function (done) {
         var dbConfig = config.get('dbConfig.redis');
         var datasetConfig = config.get('dataset');
-        var keys = [datasetConfig.keyName,
-            datasetConfig.listingKeyName,
+        var keys = [ datasetConfig.listingKeyName,
             datasetConfig.uiKeyName,
             datasetConfig.manifestKeyName,
             datasetConfig.codeKeyName];
