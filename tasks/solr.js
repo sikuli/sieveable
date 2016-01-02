@@ -8,7 +8,7 @@ const gulp = require('gulp'),
     solrIndex = require('../lib/index/solr-index'),
     solrAdmin = require('../lib/index/solr-admin'),
     log = require('../lib/logger'),
-    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
+    CONFIG_PATH = path.resolve(__dirname, '..', 'config');
 
 gulp.task('solr:create', () => {
     const collections = [

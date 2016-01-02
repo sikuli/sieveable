@@ -8,7 +8,7 @@ const gulp = require('gulp'),
     _ = require('lodash'),
     fs = Promise.promisifyAll(require('fs')),
     log = require('../lib/logger'),
-    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
+    CONFIG_PATH = path.resolve(__dirname, '..', 'config');
 
 /**
 * Insert keys (app ids) and values (file path names) into leveldb.
@@ -21,6 +21,8 @@ function insertToLevel(datasetType, extension) {
         dirPaths = _.map(dirs, (dir) => {
             return path.resolve(CONFIG_PATH, dir);
         });
+    // TODO: Remove this
+    console.log(dirPaths);
     return Promise.map(dirPaths, (dirPath) => {
         return fs.readdirAsync(dirPath)
                  .map((fileName) => {
@@ -44,7 +46,7 @@ function insertToLevel(datasetType, extension) {
                        });
                  });
     }).then(() => {
-        log.info('Finished inserting listing details path values.');
+        log.info('Finished inserting %s path values.', datasetType);
     }).catch((e) => {
         log.error('Error ', e);
         return Promise.reject(e);
@@ -62,14 +64,14 @@ gulp.task('leveldb:readFullDB', () => {
     return levelDB.readFullDB();
 });
 
-gulp.task('leveldb:addListing', ['leveldb:create'], () => {
+gulp.task('leveldb:addListing', () => {
     return insertToLevel('listing', '.json');
 });
 
-gulp.task('leveldb:addManifest', ['leveldb:create'], () => {
+gulp.task('leveldb:addManifest', () => {
     return insertToLevel('manifest', '.xml');
 });
 
-gulp.task('leveldb:addUI', ['leveldb:create'], () => {
+gulp.task('leveldb:addUI', () => {
     return insertToLevel('ui', '.xml');
 });

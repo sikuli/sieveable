@@ -9,6 +9,7 @@
     "comma-dangle" : [0, "never"],
     "strict" : [2, "global"],
     "no-use-before-define" : [2, "nofunc"],
+    "no-path-concat": 2,
     "brace-style": [1, "stroustrup"],
     "no-else-return": 1,
     "new-cap": 1,

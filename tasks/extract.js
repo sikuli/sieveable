@@ -11,7 +11,7 @@ const gulp = require('gulp'),
     log = require('../lib/logger'),
     tagNameExtractor = require('../lib/index/tag-name-extractor'),
     suffixExtractor = require('../lib/index/suffix-extractor'),
-    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
+    CONFIG_PATH = path.resolve(__dirname, '..', 'config');
 
 function getUntarCommand(obj) {
     // If the target directory does not exist, create it

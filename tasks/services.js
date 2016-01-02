@@ -6,7 +6,7 @@ const gulp = require('gulp'),
     execAsync = Promise.promisify(exec),
     config = require('config'),
     log = require('../lib/logger'),
-    CONFIG_PATH = path.resolve(__dirname + '/../', 'config');
+    CONFIG_PATH = path.resolve(__dirname, '..', 'config');
 
 function startSolr() {
     const solrStatus = 'solr status',
