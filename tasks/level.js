@@ -28,8 +28,10 @@ function insertToLevel(datasetType, extension) {
                  .map((fileName) => {
                      const id = path.basename(fileName, extension),
                          fileAbsPath = path.join(dirPath, fileName);
+                     console.log(fileAbsPath);
                      return levelDB.dbGetAsync(id)
                        .then((val) => {
+                           console.log(val);
                            val[datasetType] = fileAbsPath;
                            return levelDB.dbPutAsync(id, val);
                        })
