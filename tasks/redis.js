@@ -4,23 +4,10 @@ const gulp = require('gulp'),
     Promise = require('bluebird'),
     log = require('../lib/logger'),
     redisAdmin = require('../lib/index/redis-admin'),
-    key = config.get('dataset.keyName'),
     listingKey = config.get('dataset.listingKeyName'),
     uiKey = config.get('dataset.uiKeyName'),
     manifestKey = config.get('dataset.manifestKeyName'),
     codeKey = config.get('dataset.codeKeyName');
-
-gulp.task('redis:addAllKeys', (callback) => {
-    redisAdmin.insertDatasetKeys(key, [listingKey, uiKey, manifestKey, codeKey])
-        .then(() => {
-            log.info('Successfully added all keys and values to the redis ' +
-                'set collection %s', key);
-            callback(null);
-        })
-        .catch((e) => {
-            callback(e);
-        });
-});
 
 gulp.task('redis:addSolrKeys', (callback) => {
     Promise.all([

@@ -14,7 +14,7 @@ gulp.task('solr:insert', (callback) => {
 });
 
 gulp.task('redis:insert', (callback) => {
-    runSequence('redis:addSolrKeys', 'redis:addAllKeys', callback);
+    runSequence('redis:addSolrKeys', callback);
 });
 
 gulp.task('leveldb:insert', (callback) => {
