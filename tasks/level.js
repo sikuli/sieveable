@@ -21,14 +21,11 @@ function insertToLevel(datasetType, extension) {
         dirPaths = _.map(dirs, (dir) => {
             return path.resolve(CONFIG_PATH, dir);
         });
-    // TODO: Remove this
-    console.log(dirPaths);
     return Promise.map(dirPaths, (dirPath) => {
         return fs.readdirAsync(dirPath)
                  .map((fileName) => {
                      const id = path.basename(fileName, extension),
                          fileAbsPath = path.join(dirPath, fileName);
-                     console.log(fileAbsPath);
                      return levelDB.dbGetAsync(id)
                        .then((val) => {
                            console.log(val);
@@ -42,7 +39,9 @@ function insertToLevel(datasetType, extension) {
                            if (getErr.notFound) {
                                const val = {};
                                val[datasetType] = fileAbsPath;
-                               return levelDB.dbPutAsync(id, val);
+                               return levelDB.dbPutAsync(id, val).then(() => {
+                                   log.info('Inserted %s path for %s', datasetType, id);
+                               });
                            }
                            log.error('Failed to find %s ', id, getErr);
                        });
