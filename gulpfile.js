@@ -19,7 +19,7 @@ gulp.task('redis:insert', (callback) => {
 
 gulp.task('leveldb:insert', (callback) => {
     runSequence('leveldb:create', 'leveldb:addListing', 'leveldb:addManifest',
-        'leveldb:addUI', 'leveldb:readFullDB', callback);
+        'leveldb:addUI', callback);
 });
 
 gulp.task('default', (callback) => {
