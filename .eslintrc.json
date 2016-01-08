@@ -1,9 +1,5 @@
 {
   "rules": {
-    "indent": [
-      1,
-      4
-    ],
     "no-console": 0,
     "one-var": [1, "always"],
     "comma-dangle" : [0, "never"],
@@ -15,10 +11,7 @@
     "new-cap": 1,
     "camelcase": [1,{ "properties": "always" }]
   },
-  "extends": "airbnb",
-  "plugins": [
-    "react"
-  ],
+  "extends": "airbnb/base",
   "env": {
     "node": true,
     "mocha": true
