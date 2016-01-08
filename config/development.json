@@ -18,7 +18,7 @@
   "dataset": {
     "listing": [
       {
-        "source": "../fixtures/listing/listing-2.tar.bz2",
+        "source": "../fixtures/listing/listing-1.tar.bz2",
         "target": "../fixtures/listing/1"
       },
       {
