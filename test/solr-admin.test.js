@@ -140,7 +140,7 @@ describe('Test Solr admin and index modules.', function() {
     });
 
     it('It should index a listing details file.', (done) => {
-        const listingFile = path.resolve(__dirname, '../fixtures/listing/1/me.pou.app-188.json'),
+        const listingFile = path.resolve(__dirname, '../fixtures/listing/2/me.pou.app-188.json'),
             content = fs.readFileSync(listingFile, 'utf8'),
             listing = JSON.parse(content);
         solrIndex.indexListing(JSON.stringify(listing), testListingCollection).then(() => {
