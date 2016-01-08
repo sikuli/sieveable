@@ -7,7 +7,7 @@ const chai = require('chai'),
     redisAdmin = require('../lib/index/redis-admin');
 
 describe('Test redis admin/util module.', function() {
-    this.timeout(2000);
+    this.timeout(0);
     const testKey = 'test-manifest',
         redisClient = redis.createClient();
     redisClient.on('error', (err) => {
@@ -34,7 +34,7 @@ describe('Test redis admin/util module.', function() {
         scardAsync(testKey)
             .then((result) => {
                 result.should.equal(58);
-                done(); 
+                done();
             }).catch((e) => {
                 done(e);
             });
