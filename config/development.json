@@ -76,8 +76,8 @@
     "codeKeyName": "dataset:code"
   },
   "results": {
-    "maxUI": 60,
-    "maxManifest": 60
+    "maxUI": 35,
+    "maxManifest": 35
   },
   "logger": {
     "error": {
