@@ -1,11 +1,13 @@
-var fs = require('fs');
-var _ = require('lodash');
-var request = require('supertest');
-var parse = require('../lib/parse.js');
-var app = require('../lib/server/server');
-var chai = require("chai");
-var eyes = require('eyes');
-var should = chai.should();
+'use strict';
+const fs = require('fs'),
+  _ = require('lodash'),
+  config = require('config'),
+  request = require('supertest'),
+  parse = require('../lib/parse.js'),
+  app = require('../lib/server/server'),
+  chai = require('chai'),
+  eyes = require('eyes'),
+  should = chai.should();
 
 var result_json_q1 = fs.readFileSync(__dirname +
     '/../fixtures/examples/manifest/q1.json', 'utf-8');
@@ -111,6 +113,25 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     done()
                 });
         });
+
+    it('q4 it should search for the following example: \n' +
+        '<uses-permission/>\nand returns a number of apps equal to the limit ' +
+        'defined in the config file (' + config.get('results.maxManifest') + ')', (done) => {
+          const q = 'MATCH app\nWHERE <uses-permission/>\n RETURN app';
+          let apps = {};
+          request(app)
+              .get('/q/json')
+              .query({ queryText: q })
+              .set('Accept', 'application/json')
+              .expect(200)
+              .end((err, res) => {
+                should.not.exist(err);
+                should.exist(res.body);
+                res.body.should.be.an('array', 'Response body is not an array');
+                res.body.should.have.length(config.get('results.maxManifest'));
+                done();
+              });
+    });
 
     // TODO: test for __excatly
     // it('q4 It should search for apps that request exactly 11 permissions\n' +

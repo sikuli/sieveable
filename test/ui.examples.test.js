@@ -4,6 +4,7 @@ const fs = require('fs'),
     request = require('supertest'),
     app = require('../lib/server/server'),
     chai = require('chai'),
+    config = require('config'),
     pd = require('pretty-data').pd,
     eyes = require('eyes'),
     should = chai.should();
@@ -523,4 +524,23 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     done();
                 });
         });
+
+    it('q10 it should search for the following example: \n' +
+        '<View/>\nand returns a number of apps equal to the limit ' +
+        'defined in the config file (' + config.get('results.maxUI') + ')', (done) => {
+          const q = 'MATCH app\nWHERE <View/>\n RETURN app';
+          let apps = {};
+          request(app)
+              .get('/q/json')
+              .query({ queryText: q })
+              .set('Accept', 'application/json')
+              .expect(200)
+              .end((err, res) => {
+                should.not.exist(err);
+                should.exist(res.body);
+                res.body.should.be.an('array', 'Response body is not an array');
+                res.body.should.have.length(config.get('results.maxUI'));
+                done();
+              });
+    });
 });
