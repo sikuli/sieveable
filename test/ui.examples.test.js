@@ -543,4 +543,73 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 done();
               });
     });
+    it('q11 it should search for apps that have an element name ' +
+       '<android.support.v4.widget.DrawerLayout/> that has any descendant child named ' +
+       '<FrameLayout/> using the non-default normal matching mode.', (done) => {
+          const q = 'MATCH app\nWHERE <LinearLayout>\n' +
+            '\n\t<RelativeLayout></RelativeLayout>' +
+            '\n\t<RelativeLayout></RelativeLayout>' +
+            '\n\t<RelativeLayout></RelativeLayout>' +
+            '\n</LinearLayout>' +
+            '\nRETURN app\nMODE normal';
+          let apps = {};
+         request(app)
+             .get('/q/json')
+             .query({ queryText: q })
+             .set('Accept', 'application/json')
+             .expect(200)
+             .end((err, res) => {
+               should.not.exist(err);
+               should.exist(res.body);
+               res.body.should.be.an('array', 'Response body is not an array');
+               res.body.should.have.length(35);
+               done();
+             });
+    });
+    it('q12 it should search for apps that have the following siblings using normal macth mode:' +
+       '<FrameLayout/>\n<FrameLayout/>\n' +
+       '<FrameLayout/>\n<FrameLayout/>.\n', (done) => {
+          const q = 'MATCH app\nWHERE\n' +
+            '\n\t<FrameLayout/>' +
+            '\n\t<FrameLayout/>' +
+            '\n\t<FrameLayout/>' +
+            '\n\t<FrameLayout/>' +
+            '\nRETURN app\nMODE normal';
+          let apps = {};
+         request(app)
+             .get('/q/json')
+             .query({ queryText: q })
+             .set('Accept', 'application/json')
+             .expect(200)
+             .end((err, res) => {
+               should.not.exist(err);
+               should.exist(res.body);
+               res.body.should.be.an('array', 'Response body is not an array');
+               res.body.should.have.length(18);
+               done();
+             });
+    });
+    it('q13 it should search for apps that have the following example using normal macth mode:' +
+       '\n<FrameLayout>\n\t<ProgressBar/>\n\t<ImageView/>\n</FrameLayout>\n', (done) => {
+          const q = 'MATCH app\nWHERE\n' +
+            '\n<FrameLayout>' +
+            '\n\t<ProgressBar/>' +
+            '\n\t<ImageView/>' +
+            '\n\t<TextView/>' +
+            '\n</FrameLayout>' +
+            '\nRETURN app\nMODE normal';
+          let apps = {};
+         request(app)
+             .get('/q/json')
+             .query({ queryText: q })
+             .set('Accept', 'application/json')
+             .expect(200)
+             .end((err, res) => {
+               should.not.exist(err);
+               should.exist(res.body);
+               res.body.should.be.an('array', 'Response body is not an array');
+               res.body.should.have.length(35);
+               done();
+             });
+    });
 });
