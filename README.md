@@ -44,7 +44,8 @@
   $ node bin/www
   ```
   - The server should be running at: http://localhost:3000
-  - We can send HTTTP GET requests to query Sieveable. For example, to find apps that have the word "Google" in their title and has a RelativeLayout with a Button child, we can send the following HTTP GET request using *curl*:
+  - We can open the Sieveable-Browser UI in the web browser to submit search queries to Sieveable at http://localhost:3000/#/
+  - Alternatively, we can send HTTTP GET requests to query Sieveable. For example, to find apps that have the word "Google" in their title and has a RelativeLayout with a Button child, we can send the following HTTP GET request using *curl*:
 
   ```shell
   curl -G "http://localhost:3000/q/json" --data-urlencode \
