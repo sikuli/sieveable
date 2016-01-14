@@ -1,17 +1,20 @@
-var fs = require('fs');
-var _ = require('lodash');
-var request = require('supertest');
-var parse = require('../lib/parse.js');
-var app = require('../lib/server/server');
-var chai = require("chai");
-var pd = require('pretty-data').pd;
-var eyes = require('eyes');
-var should = chai.should();
+'use strict';
+const fs = require('fs'),
+  _ = require('lodash'),
+  request = require('supertest'),
+  parse = require('../lib/parse.js'),
+  app = require('../lib/server/server'),
+  chai = require('chai'),
+  pd = require('pretty-data').pd,
+  eyes = require('eyes'),
+  should = chai.should();
 
-var result_json_q1 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/projection/q1.json', 'utf-8');
-var result_json_q2 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/projection/q2.json', 'utf-8');
+const result_json_q1 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/projection/q1.json', 'utf-8'),
+result_json_q2 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/projection/q2.json', 'utf-8'),
+result_json_q3 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/projection/q3.json', 'utf-8');
 
 describe('Query Projection', function (done) {
     this.timeout(0);
@@ -85,4 +88,35 @@ describe('Query Projection', function (done) {
                     done();
                 });
         });
+
+    it('q3: it should search for apps with the ACCESS_FINE_LOCATION ' +
+        'and return the latest app version. \n', (done) => {
+          var exampleQuery = 'MATCH app.latest\n' +
+                    'WHERE\n' +
+                    '<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>\n' +
+                    'RETURN app';
+                var expectedResult = JSON.parse(result_json_q3);
+                request(app)
+                    .get('/q/json')
+                    .query({queryText: exampleQuery})
+                    .set('Accept', 'application/json')
+                    .expect(200)
+                    .end(function (err, res) {
+                        should.not.exist(err);
+                        should.exist(res.body);
+                        console.log(res.body);
+                        res.body.should.have.length(15);
+                        try {
+                            res.body.should.deep.include.members(expectedResult);
+                        }
+                        catch (e) {
+                            console.log('Expected:');
+                            eyes.inspect(expectedResult);
+                            console.log('Actual:');
+                            eyes.inspect(res.body);
+                            throw e;
+                        }
+                        done();
+                    });
+            });
 })

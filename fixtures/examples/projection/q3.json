@@ -1,0 +1,180 @@
+[{
+    "app": {
+      "id": "com.google.android.googlequicksearchbox-300304160",
+      "packageName": "com.google.android.googlequicksearchbox",
+      "version": "300304160"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.sgiggle.production-1386724633",
+      "packageName": "com.sgiggle.production",
+      "version": "1386724633"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.instagram.android-824805",
+      "packageName": "com.instagram.android",
+      "version": "824805"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.facebook.orca-2909635",
+      "packageName": "com.facebook.orca",
+      "version": "2909635"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.viber.voip-47",
+      "packageName": "com.viber.voip",
+      "version": "47"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.whatsapp-48450",
+      "packageName": "com.whatsapp",
+      "version": "48450"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.creativemobile.DragRacing-121",
+      "packageName": "com.creativemobile.DragRacing",
+      "version": "121"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.google.android.apps.babel-21311130",
+      "packageName": "com.google.android.apps.babel",
+      "version": "21311130"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.sec.chaton-302115000",
+      "packageName": "com.sec.chaton",
+      "version": "302115000"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.android.chrome-1650059",
+      "packageName": "com.android.chrome",
+      "version": "1650059"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.shazam.android-89487",
+      "packageName": "com.shazam.android",
+      "version": "89487"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.facebook.katana-666397",
+      "packageName": "com.facebook.katana",
+      "version": "666397"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.tencent.mm-405",
+      "packageName": "com.tencent.mm",
+      "version": "405"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.google.android.apps.maps-705001703",
+      "packageName": "com.google.android.apps.maps",
+      "version": "705001703"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  },
+  {
+    "app": {
+      "id": "com.google.android.apps.gmm-801000903",
+      "packageName": "com.google.android.apps.gmm",
+      "version": "801000903"
+    },
+    "listing": {},
+    "ui": {},
+    "manifest": {
+      "returnAttributes": {}
+    }
+  }]
