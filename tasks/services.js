@@ -17,7 +17,7 @@ function startSolr() {
     ' -p ' + solrPort;
   log.info('Starting Solr server in SolrCloud mode. ');
   return new Promise((resolve, reject) => {
-    execAsync(solrStatus)
+    execAsync(solrStatus, { shell: config.get('system.shell') })
       .then((stdout) => {
         if (stdout && stdout.indexOf('on port ' + solrPort)) {
           log.info('Solr is already running on ' + solrPort);
@@ -30,7 +30,7 @@ function startSolr() {
           resolve();
         }
         else {
-          return execAsync(solrStart)
+          return execAsync(solrStart, { shell: config.get('system.shell') })
             .then((stdout, stderr) => {
               if (stderr) {
                 reject(new Error('Failed to start Solr\n' + stderr));
@@ -50,7 +50,7 @@ function startRedis() {
     config.get('dbConfig.redis.config'));
   log.info('Starting Redis server as a daemon process. ');
   return new Promise((resolve, reject) => {
-    execAsync(redisStart)
+    execAsync(redisStart, { shell: config.get('system.shell') })
       .then((stdout, stderr) => {
         if (stderr) {
           throw new Error('Failed to start redis ' + stderr);

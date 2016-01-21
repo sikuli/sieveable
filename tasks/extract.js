@@ -19,7 +19,7 @@ function getUntarCommand(obj) {
     mode: '2775'
   });
   // return the extract tar command
-  return 'tar xvjf ' + path.resolve(CONFIG_PATH, obj.source) +
+  return 'tar -xvjf ' + path.resolve(CONFIG_PATH, obj.source) +
     ' -C ' + path.resolve(CONFIG_PATH, obj.target);
 }
 
@@ -33,7 +33,7 @@ gulp.task('extract:archives', () => {
     .concat(ui);
   return Promise.map(commands, (cmd) => {
     log.info(cmd);
-    return execAsync(cmd);
+    return execAsync(cmd, { shell: config.get('system.shell') });
   })
     .then(() => {
       log.info('All archives have been extracted.');

@@ -1,4 +1,7 @@
 {
+  "system": {
+    "shell": "/bin/bash"
+  },
   "dbConfig": {
     "solr": {
       "host": "localhost",
