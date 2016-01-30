@@ -6,7 +6,7 @@
     "solr": {
       "host": "localhost",
       "port": 8983,
-      "maxRows": 10000000,
+      "maxRows": 100,
       "listingCollection": "sieveable-listing",
       "uiTagCollection": "sieveable-ui-tag",
       "uiSuffixCollection": "sieveable-ui-suffix",
