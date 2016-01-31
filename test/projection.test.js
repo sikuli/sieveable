@@ -14,14 +14,16 @@ const result_json_q1 = fs.readFileSync(__dirname +
 result_json_q2 = fs.readFileSync(__dirname +
     '/../fixtures/examples/projection/q2.json', 'utf-8'),
 result_json_q3 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/projection/q3.json', 'utf-8');
+    '/../fixtures/examples/projection/q3.json', 'utf-8'),
+result_json_q4 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/projection/q4.json', 'utf-8');
 
 describe('Query Projection', function (done) {
     this.timeout(0);
 
     it('q1: it should search for apps by matching text ' +
         'wildcards and returning their permissions and the text value of ' +
-        'their buttons using the $ symbol. 10 apps must be found.\n',
+        'their buttons using the $ symbol. Three apps must be found.\n',
         function (done) {
             var exampleQuery = 'MATCH app\n' +
                 'WHERE\n' +
@@ -39,7 +41,8 @@ describe('Query Projection', function (done) {
                 .end(function (err, res) {
                     should.not.exist(err);
                     should.exist(res.body);
-                    res.body.should.have.length(6);
+                    console.log(res.body);
+                    res.body.should.have.length(3);
                     try {
                         res.body.should.deep.include.members(expectedResult);
                     }
@@ -104,7 +107,6 @@ describe('Query Projection', function (done) {
                     .end(function (err, res) {
                         should.not.exist(err);
                         should.exist(res.body);
-                        console.log(res.body);
                         res.body.should.have.length(15);
                         try {
                             res.body.should.deep.include.members(expectedResult);
@@ -119,4 +121,32 @@ describe('Query Projection', function (done) {
                         done();
                     });
             });
+    it('q4: it should return all store categories \n', (done) => {
+      var exampleQuery = 'MATCH app\n' +
+                         'WHERE\n' +
+                          '<store-category>(*)</store-category>"\n' +
+                          'RETURN app, $1';
+      var expectedResult = JSON.parse(result_json_q4);
+      request(app)
+        .get('/q/json')
+        .query({queryText: exampleQuery})
+        .set('Accept', 'application/json')
+        .expect(200)
+        .end(function (err, res) {
+          should.not.exist(err);
+          should.exist(res.body);
+          res.body.should.have.length(57);
+          try {
+              res.body.should.deep.include.members(expectedResult);
+          }
+          catch (e) {
+              console.log('Expected:');
+              eyes.inspect(expectedResult);
+              console.log('Actual:');
+              eyes.inspect(res.body);
+              throw e;
+          }
+          done();
+      });
+});
 })
