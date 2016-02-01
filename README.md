@@ -4,15 +4,15 @@
   </a>
 </p>
 
-# [Sieveable](http://sieveable.io)
+# Sieveable
 **The deep search engine for Android apps.** *Powered by Node.js*
 
-[![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable) [![devDependency Status](https://david-dm.org/sikuli/sieveable/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sikuli/sieveable)
+[![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable) [![devDependency Status](https://david-dm.org/sikuli/sieveable/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies) [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/sikuli/sieveable)
 
+**Try it now at [sieveable.io](http://sieveable.io)**
 
 # Requirements
-- A Unix-like operating system (eg. Linux, FreeBSD, Mac OS X, etc.).
+- A Unix-like operating system (eg. Debian, CentOS, Mac OS X, etc.).
 - node.js version 5.x.
 - Install node.js project dependencies:
   - `npm install`
