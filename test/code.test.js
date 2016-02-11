@@ -24,7 +24,7 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
         var q = 'MATCH app\nWHERE\n' + code_query + '\nRETURN app';
         var expected = JSON.parse(result_json_q1);
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)
@@ -55,7 +55,7 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
         var q = 'MATCH app\nWHERE\n' + code_query + '\nRETURN app';
         var expected = JSON.parse(result_json_q2);
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)

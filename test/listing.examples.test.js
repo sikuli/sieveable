@@ -27,7 +27,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
             var expected = JSON.parse(result_json_q1);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -57,7 +57,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
             var expected = JSON.parse(result_json_q2);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -88,7 +88,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
             var expected = JSON.parse(result_json_q3);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -120,7 +120,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
             var q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
             var expected = JSON.parse(result_json_q4);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -148,7 +148,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         const listing_query = '<rating> $gte:4.5 </rating>',
           q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)
@@ -165,7 +165,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         const listing_query = '<rating> $gt:4.5817795 </rating>',
           q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)
@@ -182,7 +182,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         const listing_query = '<rating> $lte:3.8888636 </rating>',
           q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)
@@ -199,7 +199,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         const listing_query = '<rating> $lt:3.8888636 </rating>',
           q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)
@@ -215,7 +215,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         const listing_query = '<rating> </rating>',
           q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)
@@ -231,7 +231,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
         const listing_query = '<downloads>1000000000</downloads>',
           q = 'MATCH app\nWHERE\n' + listing_query + '\n RETURN app';
         request(app)
-            .get('/q/json')
+            .get('/q')
             .query({queryText: q})
             .set('Accept', 'application/json')
             .expect(200)

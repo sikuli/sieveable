@@ -26,7 +26,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
             var expected = JSON.parse(result_json_q1);
             var apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -58,7 +58,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
             var expected = JSON.parse(result_json_q2);
             var apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -91,7 +91,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
             var expected = JSON.parse(result_json_q3);
             var apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: q})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -120,7 +120,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
           const q = 'MATCH app\nWHERE <uses-permission/>\n RETURN app';
           let apps = {};
           request(app)
-              .get('/q/json')
+              .get('/q')
               .query({ queryText: q })
               .set('Accept', 'application/json')
               .expect(200)
@@ -143,7 +143,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
     //         var expected = JSON.parse(result_json_q3);
     //         var apps;
     //         request(app)
-    //             .get('/q/json')
+    //             .get('/q')
     //             .query({ queryText: q })
     //             .set('Accept', 'application/json')
     //             .expect(200)

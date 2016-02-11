@@ -34,7 +34,7 @@ describe('Query Projection', function (done) {
                 'RETURN app, $1, $2, $3';
             var expectedResult = JSON.parse(result_json_q1);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: exampleQuery})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -70,7 +70,7 @@ describe('Query Projection', function (done) {
                 'RETURN app, m$1 as permissions, l$1 as title, u$1 as buttonText';
             var expectedResult = JSON.parse(result_json_q2);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({queryText: exampleQuery})
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -100,7 +100,7 @@ describe('Query Projection', function (done) {
                     'RETURN app';
                 var expectedResult = JSON.parse(result_json_q3);
                 request(app)
-                    .get('/q/json')
+                    .get('/q')
                     .query({queryText: exampleQuery})
                     .set('Accept', 'application/json')
                     .expect(200)
@@ -128,7 +128,7 @@ describe('Query Projection', function (done) {
                           'RETURN app, $1';
       var expectedResult = JSON.parse(result_json_q4);
       request(app)
-        .get('/q/json')
+        .get('/q')
         .query({queryText: exampleQuery})
         .set('Accept', 'application/json')
         .expect(200)

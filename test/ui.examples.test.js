@@ -82,7 +82,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q1_a = JSON.parse(result_json_q1_a);
             let apps = {};
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -114,7 +114,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q1_b = JSON.parse(result_json_q1_b);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -146,7 +146,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q1_c = JSON.parse(result_json_q1_c);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -178,7 +178,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q2 = JSON.parse(result_json_q2);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -209,7 +209,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q3_a = JSON.parse(result_json_q3_a);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -242,7 +242,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q3_b = JSON.parse(result_json_q3_b);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -275,7 +275,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q4 = JSON.parse(result_json_q4);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -307,7 +307,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q5_a = JSON.parse(result_json_q5_a);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -343,7 +343,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q5_b = JSON.parse(result_json_q5_b);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -375,7 +375,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q5_c = JSON.parse(result_json_q5_c);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -406,7 +406,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
             const q = 'MATCH app\nWHERE ' + query_xml_q6 + '\n RETURN app',
                 expected_q6 = JSON.parse(result_json_q6);
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -438,7 +438,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q7 = JSON.parse(result_json_q7);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -470,7 +470,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q8 = JSON.parse(result_json_q8);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -501,7 +501,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                 expected_q9 = JSON.parse(result_json_q9);
             let apps;
             request(app)
-                .get('/q/json')
+                .get('/q')
                 .query({ queryText: q })
                 .set('Accept', 'application/json')
                 .expect(200)
@@ -531,7 +531,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
           const q = 'MATCH app\nWHERE <View/>\n RETURN app';
           let apps = {};
           request(app)
-              .get('/q/json')
+              .get('/q')
               .query({ queryText: q })
               .set('Accept', 'application/json')
               .expect(200)
@@ -554,7 +554,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
             '\nRETURN app\nMODE normal';
           let apps = {};
          request(app)
-             .get('/q/json')
+             .get('/q')
              .query({ queryText: q })
              .set('Accept', 'application/json')
              .expect(200)
@@ -577,7 +577,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
             '\nRETURN app\nMODE normal';
           let apps = {};
          request(app)
-             .get('/q/json')
+             .get('/q')
              .query({ queryText: q })
              .set('Accept', 'application/json')
              .expect(200)
@@ -600,7 +600,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
             '\nRETURN app\nMODE normal';
           let apps = {};
          request(app)
-             .get('/q/json')
+             .get('/q')
              .query({ queryText: q })
              .set('Accept', 'application/json')
              .expect(200)
