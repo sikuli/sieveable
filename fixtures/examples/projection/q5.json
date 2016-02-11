@@ -1,0 +1,73 @@
+[{
+  "app": {
+    "id": "com.google.android.apps.plus-413148638",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413148638"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.translate-30000028",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000028"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.android.chrome-1650059",
+    "packageName": "com.android.chrome",
+    "version": "1650059"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.books-30149",
+    "packageName": "com.google.android.apps.books",
+    "version": "30149"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.music-1514",
+    "packageName": "com.google.android.music",
+    "version": "1514"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.tts-210030103",
+    "packageName": "com.google.android.tts",
+    "version": "210030103"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.videos-32251",
+    "packageName": "com.google.android.videos",
+    "version": "32251"
+  },
+  "listing": {},
+  "ui": {},
+  "manifest": {}
+}]

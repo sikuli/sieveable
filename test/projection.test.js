@@ -16,7 +16,9 @@ result_json_q2 = fs.readFileSync(__dirname +
 result_json_q3 = fs.readFileSync(__dirname +
     '/../fixtures/examples/projection/q3.json', 'utf-8'),
 result_json_q4 = fs.readFileSync(__dirname +
-    '/../fixtures/examples/projection/q4.json', 'utf-8');
+    '/../fixtures/examples/projection/q4.json', 'utf-8'),
+result_json_q5 = fs.readFileSync(__dirname +
+    '/../fixtures/examples/projection/q5.json', 'utf-8');
 
 describe('Query Projection', function (done) {
     this.timeout(0);
@@ -149,4 +151,35 @@ describe('Query Projection', function (done) {
           done();
       });
 });
+
+it('q5: it should find apps whose title contain the word Google and return the ' +
+   'latest app version. \n', (done) => {
+  var exampleQuery = 'MATCH app.latest\n' +
+                     'WHERE\n' +
+                      '<title>Google</title>"\n' +
+                      'RETURN app';
+  var expectedResult = JSON.parse(result_json_q5);
+  request(app)
+    .get('/q')
+    .query({queryText: exampleQuery})
+    .set('Accept', 'application/json')
+    .expect(200)
+    .end(function (err, res) {
+      should.not.exist(err);
+      should.exist(res.body);
+      res.body.should.have.length(8);
+      try {
+        res.body.should.deep.include.members(expectedResult);
+      }
+      catch (e) {
+        console.log('Expected:');
+        eyes.inspect(expectedResult);
+        console.log('Actual:');
+        eyes.inspect(res.body);
+        throw e;
+      }
+      done();
+  });
+});
+
 })
