@@ -7,7 +7,7 @@
 # Sieveable
 **The deep search engine for Android apps.** *Powered by Node.js*
 
-[![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable) [![devDependency Status](https://david-dm.org/sikuli/sieveable/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies) [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/sikuli/sieveable)
+[![Build Status](https://travis-ci.org/sikuli/sieveable.svg?branch=master)](http://travis-ci.org/sikuli/sieveable) [![Coverage Status](https://coveralls.io/repos/sikuli/sieveable/badge.svg)](https://coveralls.io/r/sikuli/sieveable) [![Dependency Status](https://david-dm.org/sikuli/sieveable.svg)](https://david-dm.org/sikuli/sieveable) [![devDependency Status](https://david-dm.org/sikuli/sieveable/dev-status.svg)](https://david-dm.org/sikuli/sieveable#info=devDependencies) [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 
 **Try it now at [sieveable.io](http://sieveable.io)**
 
@@ -44,23 +44,29 @@
   $ node bin/www
   ```
   - The server should be running at: http://localhost:3000
-  - We can open the Sieveable-Browser UI in the web browser to submit search queries to Sieveable at http://localhost:3000/#/
-  - Alternatively, we can send HTTTP GET requests to query Sieveable. For example, to find apps that have the word "Google" in their title and has a RelativeLayout with a Button child, we can send the following HTTP GET request using *curl*:
+- We can now send an HTTTP GET request to query Sieveable. For example, to find apps that have the word "Google" in their title and has a RelativeLayout with a Button child, we can send the following HTTP GET request using *curl*:
 
   ```shell
-  curl -G "http://localhost:3000/q/json" --data-urlencode \
-   "queryText=MATCH app WHERE <title>Google</title><RelativeLayout><Button></Button></RelativeLayout> RETURN app"
+  curl -G "http://localhost:3000/q" --data-urlencode \
+   "queryText=\
+   MATCH app\
+   WHERE\
+   <title>Google</title>\
+   <RelativeLayout>\
+      <Button></Button>\
+   </RelativeLayout>\
+   RETURN app"
   ```
 
 # Documentation
-For a getting started guide, sieveable search query syntax, examples, etc. see the [Wiki](https://github.com/sikuli/sieveable/wiki).
+For a getting started guide, sieveable search query syntax, and examples, see the [Wiki](https://github.com/sikuli/sieveable/wiki).
 
 # Additional Tools
 - [sieveable-browser](https://github.com/sieveable/sieveable-browser): a web-based user interface for Sieveable.
 - [sieveable-tools](https://github.com/sieveable/sieveable-tools): tools for extracting features from apps and importing data into Sieveable.
 
 # Known Issues
-- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size. You can do that by restarting Solr with: ```solr -restart -m 1g -cloud -V ```
+- If the code indexing task (```gulp index:code```) fails with an out of memory error, try to increase solr's heap size. You can do that by restarting Solr with: ```solr -restart -c -m 1g```
 
 # Caution
 - *Contains JavaScript.* :astonished:
@@ -69,7 +75,3 @@ For a getting started guide, sieveable search query syntax, examples, etc. see t
 # License
 - Sieveable is licensed under the [MIT license](./LICENSE.txt).
 - Documentation is licensed under a [Creative Commons Attribution 4.0 International license](./LICENSE-docs).
-
-***
-
-<p align="center"> &copy; <a href="http://lab.sikuli.org">Sikuli Lab</a> 2015</p>
