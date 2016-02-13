@@ -22,3 +22,10 @@ coverage
 npm-debug.log*
 .npm
 .node_repl_history
+# config files
+# ignore everything in /config
+/config/
+# But not those files
+!/config/default.json
+!/config/development.json
+!/config/redis.conf
