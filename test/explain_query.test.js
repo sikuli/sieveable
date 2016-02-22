@@ -11,7 +11,7 @@ describe('explain query', function () {
             "RETURN app";
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             ui: '<LinearLayout android:orientation="vertical"/>',
             return: ['app'],
             limit: 100,
@@ -37,7 +37,7 @@ describe('explain query', function () {
             "RETURN app";
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             ui: '<Button $exactly="70"/>',
             return: ['app'],
             limit: 100,
@@ -67,7 +67,7 @@ describe('explain query', function () {
             'MODE normal';
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             ui: '<LinearLayout>' +
             '<Button/>' +
             '<ProgressBar/>' +
@@ -100,7 +100,7 @@ describe('explain query', function () {
             'RETURN app';
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             ui: '<LinearLayout>' +
             '<_>' +
             '<ImageView/>' +
@@ -131,7 +131,7 @@ describe('explain query', function () {
             'RETURN app';
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             listing: '<cat>Communication</cat>' +
             '<crt>Google Inc.</crt>',
             return: ['app'],
@@ -160,7 +160,7 @@ describe('explain query', function () {
             'RETURN app';
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             manifest: '<uses-permission android:name="android.permission.CAMERA"/>' +
             '<activity $min="20"/>' +
             '<uses-sdk android:minSdkVersion="11"/>',
@@ -189,7 +189,7 @@ describe('explain query', function () {
             'RETURN app';
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             code: '<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>' +
             '<Code type="defined" method="createCameraPreviewSession"/>',
             return: ['app'],
@@ -219,7 +219,7 @@ describe('explain query', function () {
             'RETURN app';
         var actual = explainQuery(query);
         var expected = {
-            match: ['app'],
+            match: { app: 'app' },
             listing: '<dct>10000</dct>',
             ui: '<Button $exactly="70"/>',
             manifest: '<uses-permission android:name="android.permission.CAMERA"/>',
@@ -238,6 +238,65 @@ describe('explain query', function () {
             eyes.inspect(actual);
             throw e;
         }
+        done();
+    });
+
+    it('explain a query with specific properties to match', function (done) {
+        var query = 'MATCH app(package=com.myapp, latest=true)\n' +
+            'WHERE\n' +
+            '<downloads>10000</downloads>\n' +
+            '<uses-permission android:name="android.permission.CAMERA" />\n' +
+            '<Button $exactly="70"/>\n' +
+            '<Code type="invoked" class="android.hardware.Camera" method="takePicture" />\n' +
+            'RETURN app';
+        var actual = explainQuery(query);
+        var expected = {
+            match: { app: 'app',
+                     props: [
+                       { name: 'package', value: 'com.myapp' },
+                       { name: 'latest', value: true }
+                     ]
+                   },
+            listing: '<dct>10000</dct>',
+            ui: '<Button $exactly="70"/>',
+            manifest: '<uses-permission android:name="android.permission.CAMERA"/>',
+            code: '<Code type="invoked" class="android.hardware.Camera" method="takePicture"/>',
+            return: ['app'],
+            limit: 100,
+            mode: 'strict'
+        };
+        try {
+            actual.should.deep.equal(expected);
+        }
+        catch (e) {
+            console.log('Expected:');
+            eyes.inspect(expected);
+            console.log('Actual:');
+            eyes.inspect(actual);
+            throw e;
+        }
+        done();
+    });
+
+    it('It should fail to explain a query with invalid properties.', function (done) {
+        var query = 'MATCH app(package, latest)\n' +
+            'WHERE\n' +
+            '<downloads>10000</downloads>\n' +
+            'RETURN app';
+        var actual = explainQuery(query);
+        var expected = {
+            match: { app: 'app',
+                     props: [
+                       { name: 'package', value: 'com.myapp' },
+                       { name: 'latest', value: true }
+                     ]
+                   },
+            listing: '<dct>10000</dct>',
+            return: ['app'],
+            limit: 100,
+            mode: 'strict'
+        };
+        should.not.exist(actual);
         done();
     })
 
