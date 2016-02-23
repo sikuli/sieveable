@@ -87,8 +87,10 @@
     "maxManifest": 10
   },
   "logger": {
-    "error": {
-      "path": "/var/tmp/sieveable-error.log"
+    "transports": {
+      "file": {
+        "path": "/var/tmp/sieveable-dev-error.log"
+      }
     }
   }
 }
