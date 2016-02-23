@@ -8,7 +8,8 @@
     "brace-style": [1, "stroustrup"],
     "no-else-return": 1,
     "new-cap": 1,
-    "camelcase": [1,{ "properties": "always" }]
+    "camelcase": [1,{ "properties": "always" }],
+    "arrow-body-style": [2, "always"]
   },
   "extends": "airbnb/base",
   "env": {
