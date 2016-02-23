@@ -96,7 +96,7 @@ describe('Query Projection', function (done) {
 
     it('q3: it should search for apps with the ACCESS_FINE_LOCATION ' +
         'and return the latest app version. \n', (done) => {
-          var exampleQuery = 'MATCH app.latest\n' +
+          var exampleQuery = 'MATCH app(latest=true)\n' +
                     'WHERE\n' +
                     '<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>\n' +
                     'RETURN app';
@@ -154,7 +154,7 @@ describe('Query Projection', function (done) {
 
 it('q5: it should find apps whose title contain the word Google and return the ' +
    'latest app version. \n', (done) => {
-  var exampleQuery = 'MATCH app.latest\n' +
+  var exampleQuery = 'MATCH app(latest=true)\n' +
                      'WHERE\n' +
                       '<title>Google</title>"\n' +
                       'RETURN app';
@@ -182,4 +182,39 @@ it('q5: it should find apps whose title contain the word Google and return the '
   });
 });
 
-})
+it('q6: It should search for the latest version of the Google Music app ' +
+    'that uses the AdMob class "com.google.android.gms.ads"\n' +
+    'and find one app version.', function (done) {
+    var code_query =
+        '<code class="com.google.android.gms.ads" />\n';
+    var q = 'MATCH app(package=com.google.android.music, latest=true) \nWHERE\n' + code_query + '\nRETURN app';
+    var expected = [{
+        id: 'com.google.android.music-1514',
+        packageName: 'com.google.android.music',
+        version: '1514'
+    }];
+    request(app)
+        .get('/q')
+        .query({queryText: q})
+        .set('Accept', 'application/json')
+        .expect(200)
+        .end(function (err, res) {
+            should.not.exist(err);
+            should.exist(res.body);
+            try {
+                res.body.should.have.length(1);
+                var apps = _.pluck(res.body, 'app');
+                apps.should.deep.include.members(expected);
+            }
+            catch (e) {
+                console.log('Expected:')
+                eyes.inspect(expected)
+                console.log('Actual:')
+                eyes.inspect(res.body)
+                throw e
+            }
+            done();
+        });
+});
+
+});
