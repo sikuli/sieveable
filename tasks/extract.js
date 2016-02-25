@@ -1,3 +1,4 @@
+'use strict';
 const gulp = require('gulp'),
   path = require('path'),
   _ = require('lodash'),
@@ -18,8 +19,8 @@ function getUntarCommand(obj) {
     mode: '2775'
   });
   // return the extract tar command
-  return `tar -xvjf ${path.resolve(CONFIG_PATH, obj.source)}` +
-    `-C ${path.resolve(CONFIG_PATH, obj.target)}`;
+  return 'tar -xvjf ' + path.resolve(CONFIG_PATH, obj.source) +
+    ' -C ' + path.resolve(CONFIG_PATH, obj.target);
 }
 
 gulp.task('extract:archives', () => {
@@ -66,7 +67,7 @@ gulp.task('extract:ui-tag', () => {
             path.resolve(CONFIG_PATH, uiConfig.target), '-ui-tag');
         })
         .then(() => {
-          log.info('Extracted ui tag names for all XML files at %s',
+          log.info('Extracted ui tag names for all XML files at ' +
             path.resolve(CONFIG_PATH, uiConfig.source));
         })
         .catch((e) => {
@@ -105,7 +106,7 @@ gulp.task('extract:ui-suffix', () => {
             path.resolve(CONFIG_PATH, uiConfig.target));
         })
         .then(() => {
-          log.info('Extracted ui suffix for all XML files at %s',
+          log.info('Extracted ui suffix for all XML files at ' +
             path.resolve(CONFIG_PATH, uiConfig.source));
         })
         .catch((e) => {
@@ -146,7 +147,8 @@ gulp.task('extract:manifest', () => {
             '-manifest-tag');
         })
         .then(() => {
-          log.info('Extracted manifest tag names for all XML files at %s',
+          log.info(
+            'Extracted manifest tag names for all XML files at ' +
             path.resolve(CONFIG_PATH, manifestConfig.source));
         })
         .catch((e) => {

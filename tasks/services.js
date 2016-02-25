@@ -1,42 +1,66 @@
+'use strict';
 const gulp = require('gulp'),
   Promise = require('bluebird'),
   path = require('path'),
-  exec = require('child_process')
-  .exec,
+  exec = require('child_process').exec,
   execAsync = Promise.promisify(exec),
   config = require('config'),
   log = require('../lib/logger'),
   CONFIG_PATH = path.resolve(__dirname, '..', 'config');
 
 function startSolr() {
-  // start Solr in SolrCloud mode as a daemon
-  const solrHost = config.get('dbConfig.solr.host'),
+  const solrStatus = 'solr status',
+    // start Solr in SolrCloud mode as a daemon
+    solrHost = config.get('dbConfig.solr.host'),
     solrPort = config.get('dbConfig.solr.port'),
-    solrStart = `solr start -cloud -V -h ${solrHost} -p ${solrPort}`;
+    solrStart = 'solr start -cloud -V -h ' + solrHost +
+    ' -p ' + solrPort;
   log.info('Starting Solr server in SolrCloud mode. ');
-  return execAsync(solrStart, { shell: config.get('system.shell') })
-    .then((stdout) => {
-      log.info(stdout);
-    })
-    .catch((e) => {
-      log.error('Failed to start Solr', e);
-      return Promise.reject(e);
-    });
+  return new Promise((resolve, reject) => {
+    execAsync(solrStatus, { shell: config.get('system.shell') })
+      .then((stdout) => {
+        if (stdout && stdout.indexOf('on port ' + solrPort)) {
+          log.info('Solr is already running on ' + solrPort);
+          return true;
+        }
+        return false;
+      })
+      .then((solrIsRunning) => {
+        if (solrIsRunning) {
+          resolve();
+        }
+        else {
+          return execAsync(solrStart, { shell: config.get('system.shell') })
+            .then((stdout, stderr) => {
+              if (stderr) {
+                reject(new Error('Failed to start Solr\n' + stderr));
+              }
+              else {
+                resolve();
+              }
+            });
+        }
+      });
+  });
 }
 
 function startRedis() {
   // start Redis server
-  const redisStart = 'redis-server ' +
-    `${path.resolve(CONFIG_PATH, config.get('dbConfig.redis.config'))}`;
+  const redisStart = 'redis-server ' + path.resolve(CONFIG_PATH,
+    config.get('dbConfig.redis.config'));
   log.info('Starting Redis server as a daemon process. ');
-  return execAsync(redisStart, { shell: config.get('system.shell') })
-    .then((stdout) => {
-      log.info(stdout);
-    })
-    .catch((e) => {
-      log.error('Failed to start Redis', e);
-      return Promise.reject(e);
-    });
+  return new Promise((resolve, reject) => {
+    execAsync(redisStart, { shell: config.get('system.shell') })
+      .then((stdout, stderr) => {
+        if (stderr) {
+          throw new Error('Failed to start redis ' + stderr);
+        }
+        resolve();
+      })
+      .catch((e) => {
+        reject(e);
+      });
+  });
 }
 
 gulp.task('start:db', (callback) => {
@@ -44,10 +68,6 @@ gulp.task('start:db', (callback) => {
   startSolr()
     .then(() => {
       return startRedis();
-    })
-    .then(() => {
-      log.info('Solr and Redis have been successfully started.');
-      callback();
     })
     .catch((e) => {
       log.error(e.message);

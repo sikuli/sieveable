@@ -1,3 +1,4 @@
+'use strict';
 const gulp = require('gulp'),
   Promise = require('bluebird'),
   config = require('config'),
@@ -22,7 +23,7 @@ gulp.task('solr:create', () => {
         solrAdmin.createCollection(collections[3]),
         solrAdmin.createCollection(collections[4])])
     .catch((e) => {
-      log.error('SolrCreateCollectionError', e);
+      log.error('ERROR: ' + e.message);
       return Promise.reject(e);
     });
 });
@@ -33,18 +34,18 @@ gulp.task('solr:addKeyFields', () => {
                          config.get('dbConfig.solr.manifestCollection'),
                          config.get('dbConfig.solr.codeCollection')],
     packageField = {
-      name: 'package_name',
-      type: 'string',
-      indexed: true,
-      required: true,
-      stored: true
+      'name': 'package_name',
+      'type': 'string',
+      'indexed': true,
+      'required': true,
+      'stored': true
     },
     versionCodeField = {
-      name: 'version_code',
-      type: 'int',
-      indexed: true,
-      required: true,
-      stored: true
+      'name': 'version_code',
+      'type': 'int',
+      'indexed': true,
+      'required': true,
+      'stored': true
     };
 
   return Promise.all([
@@ -58,7 +59,7 @@ gulp.task('solr:addKeyFields', () => {
     solrAdmin.addField(collections[3], versionCodeField),
   ])
     .catch((e) => {
-      log.error('ERROR: ', e);
+      log.error('ERROR: ' + e.message);
       return Promise.reject(e);
     });
 });
@@ -67,137 +68,137 @@ gulp.task('solr:addKeyFields', () => {
 gulp.task('solr:addListingFields', () => {
   const collection = config.get('dbConfig.solr.listingCollection'),
     packageField = {
-      name: 'n',
-      type: 'string',
-      indexed: true,
-      required: true,
-      stored: true
+      'name': 'n',
+      'type': 'string',
+      'indexed': true,
+      'required': true,
+      'stored': true
     },
     versionCodeField = {
-      name: 'verc',
-      type: 'int',
-      indexed: true,
-      required: true,
-      stored: true
+      'name': 'verc',
+      'type': 'int',
+      'indexed': true,
+      'required': true,
+      'stored': true
     },
     creatorAddressField = {
-      name: 'cadd',
-      type: 'text_general',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'cadd',
+      'type': 'text_general',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     categoryField = {
-      name: 'cat',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'cat',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     contentRatingField = {
-      name: 'crat',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'crat',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     creatorField = {
-      name: 'crt',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'crt',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     creatorUrlField = {
-      name: 'curl',
-      type: 'string',
-      indexed: false,
-      required: false,
-      stored: true
+      'name': 'curl',
+      'type': 'string',
+      'indexed': false,
+      'required': false,
+      'stored': true
     },
     minDownloadCountField = {
-      name: 'dct',
-      type: 'long',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'dct',
+      'type': 'long',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     descriptionField = {
-      name: 'desc',
-      type: 'text_general',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'desc',
+      'type': 'text_general',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     datePublishedField = {
-      name: 'dtp',
-      type: 'text_general',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'dtp',
+      'type': 'text_general',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     downloadCountTextField = {
-      name: 'dtxt',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'dtxt',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     whatsNewField = {
-      name: 'new',
-      type: 'text_general',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'new',
+      'type': 'text_general',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     osField = {
-      name: 'os',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'os',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     priceField = {
-      name: 'pri',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'pri',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     privacyUrlField = {
-      name: 'purl',
-      type: 'string',
-      indexed: false,
-      required: false,
-      stored: true
+      'name': 'purl',
+      'type': 'string',
+      'indexed': false,
+      'required': false,
+      'stored': true
     },
     starRatingField = {
-      name: 'rate',
-      type: 'float',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'rate',
+      'type': 'float',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     ratingCountField = {
-      name: 'rct',
-      type: 'int',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'rct',
+      'type': 'int',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     downloadSizeField = {
-      name: 'sz',
-      type: 'string',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 'sz',
+      'type': 'string',
+      'indexed': true,
+      'required': false,
+      'stored': true
     },
     titleField = {
-      name: 't',
-      type: 'text_general',
-      indexed: true,
-      required: false,
-      stored: true
+      'name': 't',
+      'type': 'text_general',
+      'indexed': true,
+      'required': false,
+      'stored': true
     };
   return Promise.all([
     solrAdmin.addField(collection, packageField),
@@ -221,7 +222,7 @@ gulp.task('solr:addListingFields', () => {
     solrAdmin.addField(collection, titleField)
   ])
     .catch((e) => {
-      log.error('SolrAddFieldError', e);
+      log.error('ERROR: ' + e.message);
       return Promise.reject(e);
     });
 });
