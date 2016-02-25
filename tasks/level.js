@@ -1,4 +1,3 @@
-'use strict';
 const gulp = require('gulp'),
   Promise = require('bluebird'),
   path = require('path'),
@@ -28,9 +27,10 @@ function insertToLevel(datasetType, extension) {
             fileAbsPath = path.join(dirPath, fileName);
           return levelDB.dbGetAsync(id)
             .then((val) => {
-              console.log(val);
-              val[datasetType] = fileAbsPath;
-              return levelDB.dbPutAsync(id, val);
+              const newVal = val;
+              log.info(newVal);
+              newVal[datasetType] = fileAbsPath;
+              return levelDB.dbPutAsync(id, newVal);
             })
             .then(() => {
               log.info('Inserted %s path for %s', datasetType, id);
@@ -45,7 +45,9 @@ function insertToLevel(datasetType, extension) {
                       id);
                   });
               }
+              // log the error and return a resolved promise
               log.error('Failed to find %s ', id, getErr);
+              return Promise.resolve(id);
             });
         });
   })
