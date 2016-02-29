@@ -13,14 +13,13 @@ function startSolr() {
     // start Solr in SolrCloud mode as a daemon
     solrHost = config.get('dbConfig.solr.host'),
     solrPort = config.get('dbConfig.solr.port'),
-    solrStart = 'solr start -cloud -V -h ' + solrHost +
-    ' -p ' + solrPort;
+    solrStart = `solr start -cloud -V -h ${solrHost} -p ${solrPort}`;
   log.info('Starting Solr server in SolrCloud mode. ');
   return new Promise((resolve, reject) => {
     execAsync(solrStatus, { shell: config.get('system.shell') })
       .then((stdout) => {
-        if (stdout && stdout.indexOf('on port ' + solrPort)) {
-          log.info('Solr is already running on ' + solrPort);
+        if (stdout && stdout.indexOf(`on port ${solrPort}`)) {
+          log.info(`Solr is already running on ${solrPort}`);
           return true;
         }
         return false;
@@ -29,31 +28,29 @@ function startSolr() {
         if (solrIsRunning) {
           resolve();
         }
-        else {
-          return execAsync(solrStart, { shell: config.get('system.shell') })
+        return execAsync(solrStart, { shell: config.get('system.shell') })
             .then((stdout, stderr) => {
               if (stderr) {
-                reject(new Error('Failed to start Solr\n' + stderr));
+                reject(new Error(`Failed to start Solr\n ${stderr}`));
               }
               else {
                 resolve();
               }
             });
-        }
       });
   });
 }
 
 function startRedis() {
   // start Redis server
-  const redisStart = 'redis-server ' + path.resolve(CONFIG_PATH,
-    config.get('dbConfig.redis.config'));
+  const redisStart =
+  `redis-server ${path.resolve(CONFIG_PATH, config.get('dbConfig.redis.config'))}`;
   log.info('Starting Redis server as a daemon process. ');
   return new Promise((resolve, reject) => {
     execAsync(redisStart, { shell: config.get('system.shell') })
       .then((stdout, stderr) => {
         if (stderr) {
-          throw new Error('Failed to start redis ' + stderr);
+          throw new Error(`Failed to start redis \n${stderr}`);
         }
         resolve();
       })
