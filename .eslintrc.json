@@ -1,17 +1,19 @@
 {
+  "extends": "airbnb/base",
   "rules": {
     "one-var": [1, "always"],
     "comma-dangle" : [0, "never"],
-    "strict" : [2, "global"],
+    "strict" : [1, "function"],
     "no-use-before-define" : [2, "nofunc"],
     "no-path-concat": 2,
     "brace-style": [1, "stroustrup"],
-    "no-else-return": 1,
     "new-cap": 1,
     "camelcase": [1,{ "properties": "always" }],
-    "arrow-body-style": [2, "always"]
+    "arrow-body-style": [2, "always"],
+    "complexity": [2, 5],
+    "max-depth": [2, 2],
+    "max-statements": [2, 10]
   },
-  "extends": "airbnb/base",
   "env": {
     "node": true,
     "mocha": true
