@@ -1,11 +1,10 @@
 const Promise = require('bluebird'),
-   config = require('config'),
-   util = require('util'),
-   redis = require('redis'),
-   _ = require('lodash'),
-   chai = require('chai'),
-   solrAdmin = require('../lib/index/solr-admin'),
-   should = chai.should();
+  config = require('config'),
+  redis = require('redis'),
+  _ = require('lodash'),
+  chai = require('chai'),
+  solrAdmin = require('../lib/index/solr-admin'),
+  should = chai.should();
 
 describe('Test that all external db servers are running using their ' +
     'respected configuration options.', function () {
