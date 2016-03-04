@@ -33,7 +33,7 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
                 should.exist(res.body);
                 try {
                     res.body.should.have.length(7);
-                    var apps = _.pluck(res.body, 'app');
+                    var apps = _.map(res.body, 'app');
                     apps.should.deep.include.members(expected);
                 }
                 catch (e) {
@@ -64,7 +64,7 @@ describe('Code Examples: Answers to multiple code by example questions.', functi
                 should.exist(res.body);
                 try {
                     res.body.should.have.length(7);
-                    var apps = _.pluck(res.body, 'app');
+                    var apps = _.map(res.body, 'app');
                     apps.should.deep.include.members(expected);
                 }
                 catch (e) {

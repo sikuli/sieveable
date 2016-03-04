@@ -92,7 +92,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(2);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q1_a);
                     }
                     catch (e) {
@@ -124,7 +124,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(2);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q1_b);
                     }
                     catch (e) {
@@ -156,7 +156,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(1);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q1_c);
                     }
                     catch (e) {
@@ -188,7 +188,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(13);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q2);
                     }
                     catch (e) {
@@ -219,7 +219,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(4);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q3_a);
                     }
                     catch (e) {
@@ -252,7 +252,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(3);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q3_b);
                     }
                     catch (e) {
@@ -285,7 +285,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(9);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q4);
                     }
                     catch (e) {
@@ -317,7 +317,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(24);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q5_a);
                     }
                     catch (e) {
@@ -353,7 +353,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(12);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q5_b);
                     }
                     catch (e) {
@@ -385,7 +385,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(4);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q5_c);
                     }
                     catch (e) {
@@ -416,7 +416,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(32);
                     try {
-                        const apps = _.pluck(res.body, 'app');
+                        const apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q6);
                     }
                     catch (e) {
@@ -448,7 +448,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(9);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q7);
                     }
                     catch (e) {
@@ -480,7 +480,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(1);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q8);
                     }
                     catch (e) {
@@ -511,7 +511,7 @@ describe('UI Examples: Answers to multiple UI design by example questions.', fun
                     res.body.should.be.an('array', 'Response body is not an array');
                     res.body.should.have.length(5);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected_q9);
                     }
                     catch (e) {

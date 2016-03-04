@@ -16,7 +16,7 @@ const gulp = require('gulp'),
  * @extension  file extension name (e.g., .xml, or .json).
  */
 function insertToLevel(datasetType, extension) {
-  const dirs = _.pluck(config.dataset[datasetType], 'target'),
+  const dirs = _.map(config.dataset[datasetType], 'target'),
     dirPaths = _.map(dirs, (dir) => {
       return path.resolve(CONFIG_PATH, dir);
     });

@@ -36,7 +36,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(16);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        var apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {
@@ -66,7 +66,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(13);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        var apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {
@@ -97,7 +97,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(2);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        var apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {
@@ -129,7 +129,7 @@ describe('Listing Details Examples: Answers to multiple listing details by examp
                     should.exist(res.body);
                     res.body.should.have.length(1);
                     try {
-                        var apps = _.pluck(res.body, 'app');
+                        var apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {

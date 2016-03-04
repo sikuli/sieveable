@@ -201,7 +201,7 @@ describe('Query Projection', function (done) {
         should.exist(res.body);
         try {
           res.body.should.have.length(1);
-          const apps = _.pluck(res.body, 'app');
+          const apps = _.map(res.body, 'app');
           apps.should.deep.include.members(expected);
         }
         catch (e) {

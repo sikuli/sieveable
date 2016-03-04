@@ -35,7 +35,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     should.exist(res.body);
                     res.body.should.have.length(29);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {
@@ -67,7 +67,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     should.exist(res.body);
                     res.body.should.have.length(33);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {
@@ -100,7 +100,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
                     should.exist(res.body);
                     res.body.should.have.length(12);
                     try {
-                        apps = _.pluck(res.body, 'app');
+                        apps = _.map(res.body, 'app');
                         apps.should.deep.include.members(expected);
                     }
                     catch (e) {
@@ -152,7 +152,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
     //                 should.exist(res.body);
     //                 res.body.should.have.length(12);
     //                 try {
-    //                     apps = _.pluck(res.body, 'app');
+    //                     apps = _.map(res.body, 'app');
     //                     apps.should.deep.include.members(expected);
     //                 }
     //                 catch (e) {

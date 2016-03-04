@@ -228,7 +228,7 @@ gulp.task('solr:addListingFields', () => {
 
 gulp.task('solr:indexUITag', () => {
   const collectionName = config.get('dbConfig.solr.uiTagCollection'),
-    datasetDirs = _.pluck(config.get('dataset.ui'),
+    datasetDirs = _.map(config.get('dataset.ui'),
       'indexes.extractUITagDir'),
     datasetPaths = _.map(datasetDirs, (dir) => {
       return path.resolve(CONFIG_PATH, dir);
@@ -262,7 +262,7 @@ gulp.task('solr:indexUITag', () => {
 
 gulp.task('solr:indexUISuffix', () => {
   const collectionName = config.get('dbConfig.solr.uiSuffixCollection'),
-    datasetDirs = _.pluck(config.get('dataset.ui'),
+    datasetDirs = _.map(config.get('dataset.ui'),
       'indexes.extractUISuffixDir'),
     datasetPaths = _.map(datasetDirs, (dir) => {
       return path.resolve(CONFIG_PATH, dir);
@@ -296,7 +296,7 @@ gulp.task('solr:indexUISuffix', () => {
 
 gulp.task('solr:indexManifest', () => {
   const collectionName = config.get('dbConfig.solr.manifestCollection'),
-    datasetDirs = _.pluck(config.get('dataset.manifest'),
+    datasetDirs = _.map(config.get('dataset.manifest'),
       'indexes.extractManifestDir'),
     datasetPaths = _.map(datasetDirs, (dir) => {
       return path.resolve(CONFIG_PATH, dir);
@@ -330,7 +330,7 @@ gulp.task('solr:indexManifest', () => {
 
 gulp.task('solr:indexCode', () => {
   const collectionName = config.get('dbConfig.solr.codeCollection'),
-    datasetDirs = _.pluck(config.get('dataset.code'), 'target'),
+    datasetDirs = _.map(config.get('dataset.code'), 'target'),
     datasetPaths = _.map(datasetDirs, (dir) => {
       return path.resolve(CONFIG_PATH, dir);
     });
@@ -362,7 +362,7 @@ gulp.task('solr:indexCode', () => {
 });
 
 gulp.task('solr:indexListing', () => {
-  const datasetDirs = _.pluck(config.get('dataset.listing'), 'target'),
+  const datasetDirs = _.map(config.get('dataset.listing'), 'target'),
     listingCollection = config.get('dbConfig.solr.listingCollection'),
     datasetPaths = _.map(datasetDirs, (dir) => {
       return path.resolve(CONFIG_PATH, dir);
