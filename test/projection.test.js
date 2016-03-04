@@ -18,7 +18,7 @@ const q1ResultFile = fs.readFileSync(
   q5ResultFile = fs.readFileSync(
     `${__dirname}/../fixtures/examples/projection/q5.json`, 'utf-8');
 
-describe('Query Projection', function (done) {
+describe('Query Projection', function () {
   this.timeout(0);
 
   it('q1: it should search for apps by matching text ' +
@@ -56,8 +56,8 @@ describe('Query Projection', function (done) {
             });
       });
 
-  it('q2: it should search for apps by matching '+
-    'wildcards and return the results using name aliases. '+
+  it('q2: it should search for apps by matching ' +
+    'wildcards and return the results using name aliases. ' +
     'It must find 4 apps\n',
     function (done) {
       const exampleQuery = 'MATCH app\n' +
@@ -106,7 +106,6 @@ describe('Query Projection', function (done) {
       .end(function (err, res) {
         should.not.exist(err);
         should.exist(res.body);
-        console.log('actual=', _.map(res.body, (val, key) => { return val.app.id;} ));
         res.body.should.have.length(15);
         try {
           res.body.should.deep.include.members(expectedResult);
