@@ -1,492 +1,742 @@
-[
-    {
-        "app": {
-            "id": "me.pou.app-188",
-            "packageName": "me.pou.app",
-            "version": "188"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Casual"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "me.pou.app-157",
-            "packageName": "me.pou.app",
-            "version": "157"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Casual"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.tts-210020403",
-            "packageName": "com.google.android.tts",
-            "version": "210020403"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.adobe.reader-77969",
-            "packageName": "com.adobe.reader",
-            "version": "77969"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Productivity"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.whatsapp-48364",
-            "packageName": "com.whatsapp",
-            "version": "48364"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.whatsapp-48450",
-            "packageName": "com.whatsapp",
-            "version": "48450"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.facebook.orca-936981",
-            "packageName": "com.facebook.orca",
-            "version": "936981"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.zxing.client.android-94",
-            "packageName": "com.google.zxing.client.android",
-            "version": "94"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Shopping"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.zxing.client.android-100",
-            "packageName": "com.google.zxing.client.android",
-            "version": "100"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Shopping"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.creativemobile.DragRacing-121",
-            "packageName": "com.creativemobile.DragRacing",
-            "version": "121"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Racing"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.creativemobile.DragRacing-106",
-            "packageName": "com.creativemobile.DragRacing",
-            "version": "106"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Racing"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.android.chrome-1547059",
-            "packageName": "com.android.chrome",
-            "version": "1547059"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.android.chrome-1650059",
-            "packageName": "com.android.chrome",
-            "version": "1650059"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.googlequicksearchbox-300304160",
-            "packageName": "com.google.android.googlequicksearchbox",
-            "version": "300304160"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.instagram.android-824805",
-            "packageName": "com.instagram.android",
-            "version": "824805"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Social"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.instagram.android-639564",
-            "packageName": "com.instagram.android",
-            "version": "639564"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Social"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.facebook.katana-258882",
-            "packageName": "com.facebook.katana",
-            "version": "258882"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Social"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.apps.translate-30000028",
-            "packageName": "com.google.android.apps.translate",
-            "version": "30000028"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.apps.translate-30000023",
-            "packageName": "com.google.android.apps.translate",
-            "version": "30000023"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.facebook.katana-666397",
-            "packageName": "com.facebook.katana",
-            "version": "666397"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Social"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.adobe.reader-85478",
-            "packageName": "com.adobe.reader",
-            "version": "85478"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Productivity"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.tencent.mm-361",
-            "packageName": "com.tencent.mm",
-            "version": "361"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.sec.chaton-207103000",
-            "packageName": "com.sec.chaton",
-            "version": "207103000"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.sgiggle.production-68",
-            "packageName": "com.sgiggle.production",
-            "version": "68"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Social"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.sgiggle.production-1386724633",
-            "packageName": "com.sgiggle.production",
-            "version": "1386724633"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Social"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.googlequicksearchbox-300301240",
-            "packageName": "com.google.android.googlequicksearchbox",
-            "version": "300301240"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.outfit7.talkingtom-102",
-            "packageName": "com.outfit7.talkingtom",
-            "version": "102"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Entertainment"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.videos-32251",
-            "packageName": "com.google.android.videos",
-            "version": "32251"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Media & Video"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.tencent.mm-405",
-            "packageName": "com.tencent.mm",
-            "version": "405"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.google.android.videos-31221",
-            "packageName": "com.google.android.videos",
-            "version": "31221"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Media & Video"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.cleanmaster.mguard-50511533",
-            "packageName": "com.cleanmaster.mguard",
-            "version": "50511533"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.cleanmaster.mguard-40101776",
-            "packageName": "com.cleanmaster.mguard",
-            "version": "40101776"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Tools"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.viber.voip-47",
-            "packageName": "com.viber.voip",
-            "version": "47"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Communication"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.outfit7.talkingtom2free-142",
-            "packageName": "com.outfit7.talkingtom2free",
-            "version": "142"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Entertainment"
-            }
-        },
-        "manifest": {},
-        "ui": {}
-    },
-    {
-        "app": {
-            "id": "com.surpax.ledflashlight.panel-5",
-            "packageName": "com.surpax.ledflashlight.panel",
-            "version": "5"
-        },
-        "listing": {
-            "returnAttributes": {
-                "$1": "Productivity"
-            }
-        },
-        "manifest": {},
-        "ui": {}
+[{
+  "app": {
+    "id": "com.adobe.reader-77969",
+    "packageName": "com.adobe.reader",
+    "version": "77969"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Productivity"
     }
-]
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.adobe.reader-85478",
+    "packageName": "com.adobe.reader",
+    "version": "85478"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Productivity"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.android.chrome-1547059",
+    "packageName": "com.android.chrome",
+    "version": "1547059"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.android.chrome-1650059",
+    "packageName": "com.android.chrome",
+    "version": "1650059"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.facebook.katana-258882",
+    "packageName": "com.facebook.katana",
+    "version": "258882"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.facebook.katana-666397",
+    "packageName": "com.facebook.katana",
+    "version": "666397"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.facebook.orca-2909635",
+    "packageName": "com.facebook.orca",
+    "version": "2909635"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.facebook.orca-936981",
+    "packageName": "com.facebook.orca",
+    "version": "936981"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.books-20921",
+    "packageName": "com.google.android.apps.books",
+    "version": "20921"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Books & Reference"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.books-30149",
+    "packageName": "com.google.android.apps.books",
+    "version": "30149"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Books & Reference"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.maps-705001703",
+    "packageName": "com.google.android.apps.maps",
+    "version": "705001703"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Travel & Local"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.plus-413076433",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413076433"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.plus-413148638",
+    "packageName": "com.google.android.apps.plus",
+    "version": "413148638"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.translate-30000023",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000023"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.apps.translate-30000028",
+    "packageName": "com.google.android.apps.translate",
+    "version": "30000028"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.gm-4720010",
+    "packageName": "com.google.android.gm",
+    "version": "4720010"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.gm-4800250",
+    "packageName": "com.google.android.gm",
+    "version": "4800250"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300301240"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "packageName": "com.google.android.googlequicksearchbox",
+    "version": "300304160"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.music-1317",
+    "packageName": "com.google.android.music",
+    "version": "1317"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Music & Audio"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.music-1514",
+    "packageName": "com.google.android.music",
+    "version": "1514"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Music & Audio"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.tts-210020403",
+    "packageName": "com.google.android.tts",
+    "version": "210020403"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.tts-210030103",
+    "packageName": "com.google.android.tts",
+    "version": "210030103"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.videos-31221",
+    "packageName": "com.google.android.videos",
+    "version": "31221"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Media & Video"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.videos-32251",
+    "packageName": "com.google.android.videos",
+    "version": "32251"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Media & Video"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.youtube-5021",
+    "packageName": "com.google.android.youtube",
+    "version": "5021"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Media & Video"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.android.youtube-5738",
+    "packageName": "com.google.android.youtube",
+    "version": "5738"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Media & Video"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.zxing.client.android-100",
+    "packageName": "com.google.zxing.client.android",
+    "version": "100"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Shopping"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.google.zxing.client.android-94",
+    "packageName": "com.google.zxing.client.android",
+    "version": "94"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Shopping"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.instagram.android-824805",
+    "packageName": "com.instagram.android",
+    "version": "824805"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.surpax.ledflashlight.panel-4",
+    "packageName": "com.surpax.ledflashlight.panel",
+    "version": "4"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Productivity"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "me.pou.app-157",
+    "packageName": "me.pou.app",
+    "version": "157"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Casual"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.sec.chaton-302115000",
+    "packageName": "com.sec.chaton",
+    "version": "302115000"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.sgiggle.production-68",
+    "packageName": "com.sgiggle.production",
+    "version": "68"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.opera.mini.android-25",
+    "packageName": "com.opera.mini.android",
+    "version": "25"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.outfit7.talkingtom2free-83",
+    "packageName": "com.outfit7.talkingtom2free",
+    "version": "83"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Entertainment"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.shazam.android-89487",
+    "packageName": "com.shazam.android",
+    "version": "89487"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Music & Audio"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.surpax.ledflashlight.panel-5",
+    "packageName": "com.surpax.ledflashlight.panel",
+    "version": "5"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Productivity"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.cleanmaster.mguard-50511533",
+    "packageName": "com.cleanmaster.mguard",
+    "version": "50511533"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.opera.mini.android-27",
+    "packageName": "com.opera.mini.android",
+    "version": "27"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.tencent.mm-405",
+    "packageName": "com.tencent.mm",
+    "version": "405"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.whatsapp-48364",
+    "packageName": "com.whatsapp",
+    "version": "48364"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "me.pou.app-188",
+    "packageName": "me.pou.app",
+    "version": "188"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Casual"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.sgiggle.production-1386724633",
+    "packageName": "com.sgiggle.production",
+    "version": "1386724633"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.whatsapp-48450",
+    "packageName": "com.whatsapp",
+    "version": "48450"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.creativemobile.DragRacing-106",
+    "packageName": "com.creativemobile.DragRacing",
+    "version": "106"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Racing"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.outfit7.talkingtom-73",
+    "packageName": "com.outfit7.talkingtom",
+    "version": "73"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Entertainment"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.shazam.android-81291",
+    "packageName": "com.shazam.android",
+    "version": "81291"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Music & Audio"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.viber.voip-47",
+    "packageName": "com.viber.voip",
+    "version": "47"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.instagram.android-639564",
+    "packageName": "com.instagram.android",
+    "version": "639564"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Social"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.outfit7.talkingtom2free-142",
+    "packageName": "com.outfit7.talkingtom2free",
+    "version": "142"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Entertainment"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.outfit7.talkingtom-102",
+    "packageName": "com.outfit7.talkingtom",
+    "version": "102"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Entertainment"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.creativemobile.DragRacing-121",
+    "packageName": "com.creativemobile.DragRacing",
+    "version": "121"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Racing"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.cleanmaster.mguard-40101776",
+    "packageName": "com.cleanmaster.mguard",
+    "version": "40101776"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Tools"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.sec.chaton-207103000",
+    "packageName": "com.sec.chaton",
+    "version": "207103000"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.tencent.mm-361",
+    "packageName": "com.tencent.mm",
+    "version": "361"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}, {
+  "app": {
+    "id": "com.viber.voip-37",
+    "packageName": "com.viber.voip",
+    "version": "37"
+  },
+  "listing": {
+    "returnAttributes": {
+      "$1": "Communication"
+    }
+  },
+  "ui": {},
+  "manifest": {}
+}]
