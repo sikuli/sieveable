@@ -1,51 +1,40 @@
-var sort = require('../lib/sort.js');
-var _ = require('lodash');
-var chai = require('chai');
-chai.should();
+/* eslint-env node, mocha */
+/* eslint no-console: 0, max-statements:[2,20] */
 
-describe('sort', function () {
-    it('order and sort attributes', function (done) {
+'use strict';
+const sort = require('../lib/sort.js'),
+  chai = require('chai'),
+  should = chai.should();
 
-        var firstObject = {
-            name: 'LinearLayout',
-            type: 'tag',
-            attributes: [{
-                value: 'fill_parent',
-                name: 'android:layout_height'
-            }, {
-                name: 'android:layout_width',
-                value: 'match_parent'
-            }
-            ]
-        };
-        var secondObject = {
-            type: 'tag',
-            name: 'LinearLayout',
-            attributes: [{
-                name: 'android:layout_width',
-                value: 'match_parent'
-            },
-                {
-                    name: 'android:layout_height',
-                    value: 'fill_parent'
-                },
-            ]
-        };
-
-        var firstObjectSorted = sort(firstObject);
-        var secondObjectSorted = sort(secondObject);
-        console.log('Before:');
-        console.log(firstObject);
-        console.log('After:');
-        console.log(firstObjectSorted);
-        console.log('=========================================================');
-        console.log('Before:');
-        console.log(secondObject);
-        console.log('After:');
-        console.log(secondObjectSorted);
-        var comparison = _.isEqual(firstObjectSorted, secondObjectSorted);
-        comparison.should.be.true;
-
-        done();
-    })
+describe('sort', () => {
+  it('order and sort attributes', (done) => {
+    const firstObject = {
+        name: 'LinearLayout',
+        type: 'tag',
+        attributes: [{
+          value: 'fill_parent',
+          name: 'android:layout_height'
+        }, {
+          name: 'android:layout_width',
+          value: 'match_parent'
+        }]
+      },
+      secondObject = {
+        type: 'tag',
+        name: 'LinearLayout',
+        attributes: [{
+          name: 'android:layout_width',
+          value: 'match_parent'
+        }, {
+          name: 'android:layout_height',
+          value: 'fill_parent'
+        },
+      ] },
+      firstObjectSorted = sort(firstObject),
+      secondObjectSorted = sort(secondObject);
+    should.exist(firstObjectSorted);
+    should.exist(secondObjectSorted);
+    firstObjectSorted.should.deep.equal(secondObjectSorted);
+    done();
+  });
 });
