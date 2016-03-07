@@ -75,7 +75,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
 
   it('q3: It should search for apps that request 3 permissions\n' +
     'BLUETOOTH, RECORD_AUDIO, and INTERNET and find 33 apps.', (done) => {
-    const q = `MATCH app\nWHERE\n${queryFileQ3} + '\nRETURN app`,
+    const q = `MATCH app\nWHERE\n${queryFileQ3}\nRETURN app`,
       expected = JSON.parse(resultQ3);
     testAPI(q, expected, true, () => {
       done();
@@ -85,7 +85,7 @@ describe('Manifest Examples: Answers to multiple manifest by example questions.'
   it('q4: it should search for the following example: \n' +
     '<uses-permission/>\nand returns a number of apps equal to the limit ' +
     `defined in the config file (${config.get('results.maxManifest')})`, (done) => {
-    const q = 'MATCH app\nWHERE <uses-permission/>\n RETURN app',
+    const q = 'MATCH app\nWHERE <uses-permission/>\nRETURN app',
       expected = Array(config.get('results.maxManifest'));
     testAPI(q, expected, false, () => {
       done();
