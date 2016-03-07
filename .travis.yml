@@ -15,7 +15,7 @@ env:
     - SOLR_FILE="solr-5.1.0.tgz"
     - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-5.1.0
     - SOLR_PORT=8983
-    - SOLR_OPTS="-cloud -V -m 4g -p $SOLR_PORT"
+    - SOLR_OPTS="-cloud -V -m 1g -p $SOLR_PORT"
   matrix:
     - NODE_ENV=development
 
