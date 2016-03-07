@@ -4,7 +4,7 @@
   },
   "dbConfig": {
     "solr": {
-      "host": "localhost",
+      "host": "127.0.0.1",
       "port": 8983,
       "maxRows": 100,
       "listingCollection": "sieveable-listing",
@@ -15,7 +15,7 @@
     },
     "redis": {
       "config": "./redis.conf",
-      "host": "localhost",
+      "host": "127.0.0.1",
       "port": 6379
     },
     "leveldb": {
