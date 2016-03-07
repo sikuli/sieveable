@@ -5,7 +5,7 @@
   "repository": "sikuli/sieveable",
   "homepage": "http://sieveable.io",
   "engines": {
-    "node": "5.1.x",
+    "node": "5.7.x",
     "npm": "3.x.x"
   },
   "scripts": {
@@ -16,17 +16,20 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
-    "coveralls": "^2.11.6",
-    "eslint": "^2.2.0",
-    "eslint-config-airbnb": "^6.0.2",
+    "coveralls": "^2.11.8",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eyes": "^0.1.8",
     "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0",
     "istanbul": "^0.4.1",
+    "mkdirp": "^0.5.1",
     "mocha": "^2.4.5",
-    "mocha-lcov-reporter": "^1.0.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "pretty-data": "^0.40.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
-    "supertest": "^1.1.0"
+    "supertest": "^1.2.0"
   },
   "dependencies": {
     "bluebird": "^2.9.32",
@@ -35,16 +38,13 @@
     "cheerio": "^0.20.0",
     "config": "^1.17.1",
     "express": "^4.13.3",
-    "eyes": "^0.1.8",
     "graceful-fs": "^4.1.3",
     "level": "^1.4.0",
     "lodash": "^4.6.1",
-    "mkdirp": "^0.5.1",
-    "pretty-data": "^0.40.0",
     "redis": "^2.4.2",
     "request": "^2.69.0",
-    "sax": "^1.1.5",
-    "winston": "^2.1.1",
+    "sax": "^1.1.6",
+    "winston": "^2.2.0",
     "winston-daily-rotate-file": "^1.0.1",
     "winston-loggly": "^1.3.1",
     "xml2js": "^0.4.8",
