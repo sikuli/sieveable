@@ -14,7 +14,8 @@ env:
     - SOLR_DOWNLOAD="http://archive.apache.org/dist/lucene/solr/"
     - SOLR_FILE="solr-5.1.0.tgz"
     - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-5.1.0
-    - SOLR_OPTS="-cloud -V -m 4g -p 8983"
+    - SOLR_PORT=8983
+    - SOLR_OPTS="-cloud -V -m 4g -p $SOLR_PORT"
   matrix:
     - NODE_ENV=development
 
@@ -57,8 +58,9 @@ after_script:
   - solr delete -c sieveable-ui-suffix -deleteConfig true
   - solr delete -c sieveable-manifest -deleteConfig true
   - solr delete -c sieveable-code -deleteConfig true
+  - solr delete -c sieveable-listing -deleteConfig true
   # Stop Solr
-  - solr stop
+  - solr stop -p ${SOLR_PORT}
 
 sudo: false
 
