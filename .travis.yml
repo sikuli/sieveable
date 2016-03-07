@@ -35,7 +35,7 @@ install:
 before_script:
   # Start Solr
   - solr start ${SOLR_OPTS}
-  - "until nc -z localhost 8983; do echo Waiting for Solr; sleep 1; done"
+  - until nc -z 127.0.0.1 8983; do echo Waiting for Solr; sleep 1; done
   - solr create -c sieveable-listing -p ${SOLR_PORT}
   - solr create -c sieveable-code -p ${SOLR_PORT}
   - solr create -c sieveable-ui-tag -p ${SOLR_PORT}
