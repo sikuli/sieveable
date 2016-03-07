@@ -1,5 +1,4 @@
 # Ignore test files
-test/
 node_modules/
 fixtures/
 coverage/
