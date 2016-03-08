@@ -5,7 +5,7 @@
 FROM centos:7
 MAINTAINER Khalid Alharbi "https://github.com/kalharbi"
 # SET environment variables
-ENV SOLR_VERSION 5.4.0
+ENV SOLR_VERSION 5.1.0
 ENV JAVA_VERSION 1.7.0
 ENV REDIS_VERSION 3.0.6
 ENV NODE_VERSION 5
