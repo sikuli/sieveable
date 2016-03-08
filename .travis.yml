@@ -9,8 +9,8 @@ jdk:
 
 env:
   global:
-    # Solr 5.5
-    - SOLR_VERSION="5.5.0"
+    # Solr 5.3
+    - SOLR_VERSION="5.3.0"
     - SOLR_DOWNLOAD="http://archive.apache.org/dist/lucene/solr/"
     - SOLR_FILE=solr-$SOLR_VERSION.tgz
     - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-$SOLR_VERSION
@@ -35,8 +35,6 @@ install:
 before_script:
   # Start Solr
   - mkdir -p ${SOLR_INSTALL_DIR}/server/logs
-  - touch ${SOLR_INSTALL_DIR}/server/logs/solr.log
-  - ls -a ${SOLR_INSTALL_DIR}/server/logs/solr.log
   - solr start ${SOLR_OPTS}
   - solr create -c sieveable-listing -p ${SOLR_PORT}
   - solr create -c sieveable-code -p ${SOLR_PORT}
