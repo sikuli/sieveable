@@ -9,8 +9,8 @@ jdk:
 
 env:
   global:
-    # Solr 5.3
-    - SOLR_VERSION="5.3.0"
+    # Solr 5.1
+    - SOLR_VERSION="5.1.0"
     - SOLR_DOWNLOAD="http://archive.apache.org/dist/lucene/solr/"
     - SOLR_FILE=solr-$SOLR_VERSION.tgz
     - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-$SOLR_VERSION
