@@ -9,11 +9,11 @@ jdk:
 
 env:
   global:
-    # Solr 5.5
-    - SOLR_VERSION="5.5.0"
+    # Solr 5.4
+    - SOLR_VERSION="5.4.0"
     - SOLR_DOWNLOAD="http://archive.apache.org/dist/lucene/solr/"
-    - SOLR_FILE="solr-5.5.0.tgz"
-    - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-5.5.0
+    - SOLR_FILE=solr-$SOLR_VERSION.tgz
+    - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-$SOLR_VERSION
     - SOLR_PORT=8983
     - SOLR_OPTS="-cloud -V -m 1g -p $SOLR_PORT"
   matrix:
