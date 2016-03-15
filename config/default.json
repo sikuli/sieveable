@@ -2,6 +2,10 @@
   "system": {
     "shell": "/bin/bash"
   },
+  "server": {
+    "port": 3000,
+    "corsOrigin": "http://localhost"
+  },
   "dbConfig": {
     "solr": {
       "host": "127.0.0.1",
