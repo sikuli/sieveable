@@ -7,11 +7,11 @@
     "solr": {
       "host": "127.0.0.1",
       "port": 8983,
-      "listingCollection": "sieveable-listing",
-      "uiTagCollection": "sieveable-ui-tag",
-      "uiSuffixCollection": "sieveable-ui-suffix",
-      "manifestCollection": "sieveable-manifest",
-      "codeCollection": "sieveable-code"
+      "listingCollection": "sieveable_listing",
+      "uiTagCollection": "sieveable_ui_tag",
+      "uiSuffixCollection": "sieveable_ui_suffix",
+      "manifestCollection": "sieveable_manifest",
+      "codeCollection": "sieveable_code"
     },
     "redis": {
       "config": "./redis.conf",

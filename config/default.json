@@ -10,12 +10,7 @@
     "solr": {
       "host": "127.0.0.1",
       "port": 8983,
-      "maxRows": 100,
-      "listingCollection": "sieveable-listing",
-      "uiTagCollection": "sieveable-ui-tag",
-      "uiSuffixCollection": "sieveable-ui-suffix",
-      "manifestCollection": "sieveable-manifest",
-      "codeCollection": "sieveable-code"
+      "maxRows": 100
     },
     "redis": {
       "config": "./redis.conf",
@@ -31,10 +26,6 @@
       {
         "source": "../fixtures/listing/listing-1.tar.bz2",
         "target": "../fixtures/listing/1"
-      },
-      {
-        "source": "../fixtures/listing/listing-2.tar.bz2",
-        "target": "../fixtures/listing/2"
       }
     ],
     "ui": [
@@ -45,14 +36,6 @@
           "extractUITagDir": "../indexes/ui/tag/1",
           "extractUISuffixDir": "../indexes/ui/suffix/1"
         }
-      },
-      {
-        "source": "../fixtures/ui/ui-2.tar.bz2",
-        "target": "../fixtures/ui/2",
-        "indexes": {
-          "extractUITagDir": "../indexes/ui/tag/2",
-          "extractUISuffixDir": "../indexes/ui/suffix/2"
-        }
       }
     ],
     "manifest": [
@@ -62,23 +45,12 @@
         "indexes": {
           "extractManifestDir": "../indexes/manifest/1"
         }
-      },
-      {
-        "source": "../fixtures/manifest/manifest-2.tar.bz2",
-        "target": "../fixtures/manifest/2",
-        "indexes": {
-          "extractManifestDir": "../indexes/manifest/2"
-        }
       }
     ],
     "code": [
       {
         "source": "../fixtures/code/code-1.tar.bz2",
         "target": "../fixtures/code/1"
-      },
-      {
-        "source": "../fixtures/code/code-2.tar.bz2",
-        "target": "../fixtures/code/2"
       }
     ],
     "listingKeyName": "dataset:listing",
