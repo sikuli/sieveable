@@ -35,11 +35,11 @@ install:
 before_script:
   # Start Solr
   - solr start ${SOLR_OPTS}
-  - solr create -c sieveable-listing -p ${SOLR_PORT}
-  - solr create -c sieveable-code -p ${SOLR_PORT}
-  - solr create -c sieveable-ui-tag -p ${SOLR_PORT}
-  - solr create -c sieveable-ui-suffix -p ${SOLR_PORT}
-  - solr create -c sieveable-manifest -p ${SOLR_PORT}
+  - solr create -c sieveable_listing -p ${SOLR_PORT}
+  - solr create -c sieveable_code -p ${SOLR_PORT}
+  - solr create -c sieveable_ui_tag -p ${SOLR_PORT}
+  - solr create -c sieveable_ui_suffix -p ${SOLR_PORT}
+  - solr create -c sieveable_manifest -p ${SOLR_PORT}
   # Kick off the default gulp task
   - gulp
 
@@ -53,11 +53,11 @@ after_success:
 
 after_script:
   # Delete Solr Collections
-  - solr delete -c sieveable-ui-tag -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable-ui-suffix -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable-manifest -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable-code -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable-listing -deleteConfig true -p ${SOLR_PORT}
+  - solr delete -c sieveable_ui_tag -deleteConfig true -p ${SOLR_PORT}
+  - solr delete -c sieveable_ui_suffix -deleteConfig true -p ${SOLR_PORT}
+  - solr delete -c sieveable_manifest -deleteConfig true -p ${SOLR_PORT}
+  - solr delete -c sieveable_code -deleteConfig true -p ${SOLR_PORT}
+  - solr delete -c sieveable_listing -deleteConfig true -p ${SOLR_PORT}
   # Stop Solr
   - solr stop -p ${SOLR_PORT}
 
