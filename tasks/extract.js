@@ -19,7 +19,7 @@ function getUntarCommand(obj) {
   });
   // return the extract tar command
   return `tar -xvjf ${path.resolve(CONFIG_PATH, obj.source)}` +
-    ` -C ${path.resolve(CONFIG_PATH, obj.target)} --strip-components=2`;
+    ` -C ${path.resolve(CONFIG_PATH, obj.target)}`;
 }
 
 gulp.task('extract:archives', () => {
