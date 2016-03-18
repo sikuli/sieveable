@@ -7,7 +7,7 @@ const chai = require('chai'),
   fs = require('fs'),
   path = require('path'),
   Promise = require('bluebird'),
-  request = Promise.promisifyAll(require('request')),
+  request = Promise.promisifyAll(require('request'), { multiArgs: true }),
   solrAdmin = require('../lib/index/solr-admin'),
   solrIndex = require('../lib/index/solr-index');
 
