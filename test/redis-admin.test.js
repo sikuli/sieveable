@@ -30,7 +30,7 @@ describe('Test redis admin/util module.', function () {
   });
 
   it('It should ensure that our testKey has 58 values in redis.', (done) => {
-    const scardAsync = Promise.promisify(redisClient.scard, redisClient);
+    const scardAsync = Promise.promisify(redisClient.scard, { context: redisClient });
     console.log('testKey= ', testKey);
     scardAsync(testKey)
     .then((result) => {
