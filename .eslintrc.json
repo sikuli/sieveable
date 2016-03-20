@@ -13,7 +13,8 @@
     "complexity": [2, 5],
     "max-depth": [2, 2],
     "max-statements": [2, 10],
-    "no-console": 2
+    "no-console": 2,
+    "no-sync": 2
   },
   "env": {
     "node": true,
