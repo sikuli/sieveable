@@ -1,10 +1,10 @@
 /* eslint-env node, mocha */
-/* eslint no-console: 0 */
 'use strict';
-const chai = require('chai'),
+const Promise = require('bluebird'),
+  chai = require('chai'),
   should = chai.should(),
   path = require('path'),
-  fs = require('fs'),
+  fs = Promise.promisifyAll(require('fs')),
   tagNameExtractor = require('../lib/index/tag-name-extractor');
 
 describe('test UI tag names and attributes extractor', function () {
@@ -12,14 +12,18 @@ describe('test UI tag names and attributes extractor', function () {
   it('should extract tag names and attributes', (done) => {
     const file = [path.resolve(__dirname, '..', 'fixtures',
                               'examples', 'index', 'me.pou.app-188.xml')],
-      expected = fs.readFileSync(path.resolve(__dirname, '..', 'fixtures', 'examples',
-                              'index', 'me.pou.app-188-ui-tag.txt'), 'utf8'),
       target = path.resolve(__dirname, '..', 'indexes', 'ui', 'tag');
-    tagNameExtractor(file, target, '-ui-tag').then(() => {
-      const targetFile = path.resolve(__dirname, '', '..', 'indexes', 'ui',
+    tagNameExtractor(file, target, '-ui-tag')
+    .then(() => {
+      const actualFile = path.resolve(__dirname, '', '..', 'indexes', 'ui',
                                       'tag', 'me.pou.app-188-ui-tag.txt'),
-        result = fs.readFileSync(targetFile, 'utf8');
-      result.should.equal(expected);
+        expectedFile = path.resolve(__dirname, '..', 'fixtures', 'examples',
+                                      'index', 'me.pou.app-188-ui-tag.txt');
+      return Promise.all([fs.readFileAsync(expectedFile, 'utf8'),
+                          fs.readFileAsync(actualFile, 'utf8')]);
+    })
+    .spread((expected, actual) => {
+      actual.should.equal(expected);
       done();
     })
     .catch((e) => {
@@ -31,16 +35,20 @@ describe('test UI tag names and attributes extractor', function () {
   it('should fail to extract tag names and attributes for invalid files', (done) => {
     const file = [path.resolve(__dirname, '..', 'fixtures', 'examples',
                               'index', 'no.such.file-123.xml')],
-      target = path.resolve(__dirname, '..', 'no-such-dir');
-    tagNameExtractor(file, target, '-ui-tag').then(() => {
-      const targetFile = path.join(target, 'no.such.file-123-ui-tag.txt'),
-        exists = fs.existsSync(targetFile);
-      exists.should.equal(false);
-      done();
+      targetDir = path.resolve(__dirname, '..', 'no-such-dir');
+    tagNameExtractor(file, targetDir, '-ui-tag')
+    .then(() => {
+      const targetFile = path.join(targetDir, 'no.such.file-123-ui-tag.txt');
+      return fs.statAsync(targetFile);
+    })
+    .then((statObj) => {
+      should.not.exist(statObj);
+      done(statObj);
     })
     .catch((e) => {
-      should.not.exist(e);
-      done(e);
+      should.exist(e);
+      e.code.should.equal('ENOENT');
+      done();
     });
   });
 });

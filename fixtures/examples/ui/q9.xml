@@ -1,4 +1,0 @@
-<LinearLayout android:orientation="horizontal">
-    <Button android:text="OK"/>
-    <Button android:text="Cancel"/>
-</LinearLayout>

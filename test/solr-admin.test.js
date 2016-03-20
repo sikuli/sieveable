@@ -1,12 +1,12 @@
 /* eslint-env node, mocha */
 /* eslint no-console: 0, max-statements:[2,20] */
 'use strict';
-const chai = require('chai'),
+const Promise = require('bluebird'),
+  chai = require('chai'),
   should = chai.should(),
   config = require('config'),
-  fs = require('fs'),
+  fs = Promise.promisifyAll(require('fs')),
   path = require('path'),
-  Promise = require('bluebird'),
   request = Promise.promisifyAll(require('request'), { multiArgs: true }),
   solrAdmin = require('../lib/index/solr-admin'),
   solrIndex = require('../lib/index/solr-index');
@@ -42,25 +42,27 @@ describe('Test Solr admin and index modules.', function () {
     invalidUITagFile = path.resolve(__dirname, '../indexes/invalid.file-ui-tag.txt');
 
   before((done) => {
-    fs.writeFileSync(invalidUITagFile, '');
-    solrAdmin.createCollection(testUICollection)
-        .then(() => {
-          return solrAdmin.createCollection(testListingCollection);
-        })
-        .then(() => {
-          console.log('Adding a new field to ', testUICollection);
-          return solrAdmin.addField(testUICollection, testUIField);
-        })
-        .then(() => {
-          console.log('Adding a new field to ', testListingCollection);
-          return solrAdmin.addField(testListingCollection, testListingField);
-        })
-        .then(() => {
-          done();
-        })
-        .catch((e) => {
-          done(e);
-        });
+    fs.writeFileAsync(invalidUITagFile, '')
+    .then(() => {
+      return solrAdmin.createCollection(testUICollection);
+    })
+    .then(() => {
+      return solrAdmin.createCollection(testListingCollection);
+    })
+    .then(() => {
+      console.log('Adding a new field to ', testUICollection);
+      return solrAdmin.addField(testUICollection, testUIField);
+    })
+    .then(() => {
+      console.log('Adding a new field to ', testListingCollection);
+      return solrAdmin.addField(testListingCollection, testListingField);
+    })
+    .then(() => {
+      done();
+    })
+    .catch((e) => {
+      done(e);
+    });
   });
 
   it(`It should ensure that both test collections (${testUICollection} and ` +
@@ -89,7 +91,8 @@ describe('Test Solr admin and index modules.', function () {
   });
 
   it('It should not create a collection that already exists', (done) => {
-    solrAdmin.createCollection(testUICollection).then((res) => {
+    solrAdmin.createCollection(testUICollection)
+    .then((res) => {
       res.should.contain('already exist');
       done();
     })
@@ -168,18 +171,19 @@ describe('Test Solr admin and index modules.', function () {
   });
 
   it('It should index a listing details file.', (done) => {
-    const listingFile = path.resolve(__dirname, '../fixtures/listing/2/me.pou.app-188.json'),
-      content = fs.readFileSync(listingFile, 'utf8'),
-      listing = JSON.parse(content);
-    solrIndex.indexListing(JSON.stringify(listing), testListingCollection).then(() => {
+    const listingFile = path.resolve(__dirname, '../fixtures/listing/2/me.pou.app-188.json');
+    fs.readFileAsync(listingFile, 'utf8')
+    .then((content) => {
+      return solrIndex.indexListing(content, testListingCollection);
+    })
+    .then(() => {
       return solrIndex.commit(testListingCollection);
     })
     .then(() => {
       done();
     })
     .catch((e) => {
-      should.not.exist(e);
-      done();
+      done(e);
     });
   });
 
@@ -195,8 +199,10 @@ describe('Test Solr admin and index modules.', function () {
   });
 
   after((done) => {
-    fs.unlinkSync(invalidUITagFile);
-    deleteCollection(testUICollection)
+    fs.unlinkAsync(invalidUITagFile)
+    .then(() => {
+      return deleteCollection(testUICollection);
+    })
     .then(() => {
       return deleteCollection(testListingCollection);
     })
