@@ -10,7 +10,7 @@
     "solr": {
       "host": "127.0.0.1",
       "port": 8983,
-      "maxRows": 100
+      "maxRows": 10
     },
     "redis": {
       "config": "./redis.conf",
