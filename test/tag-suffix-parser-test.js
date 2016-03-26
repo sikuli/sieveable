@@ -73,7 +73,7 @@ describe('test tag names and suffix array parser', () => {
     done();
   });
 
-  it('6- It should extract tag names from an anonymous tag that has children ', (done) => {
+  it('6- It should extract tag names from an anonymous tag that has children.', (done) => {
     const q = '<_><EditText/><Button/></_>',
       tagNames = tagParser.getTagNames(q),
       suffixNames = suffixParser.getSuffixNames(q);
@@ -112,6 +112,15 @@ describe('test tag names and suffix array parser', () => {
              'android.support.v7.internal.widget.ActionBarOverlayLayout' +
              '$android.support.v7.internal.widget.ActionBarContainer'],
              suffixNames);
+    done();
+  });
+
+  it('8- It should only extract the tag name from a single XML element.', (done) => {
+    const q = '<Button/>',
+      tagNames = tagParser.getTagNames(q),
+      suffixNames = suffixParser.getSuffixNames(q);
+    compare(['Button'], tagNames);
+    compare([], suffixNames);
     done();
   });
 });
