@@ -32,7 +32,7 @@ function deleteCollection(collectionName) {
 }
 
 describe('Test Solr admin and index modules.', function () {
-  this.timeout(0);
+  this.timeout(30000);
   const testUICollection = 'test_ui_collection',
     testListingCollection = 'test_listing_collection',
     testUIField = { name: 'package_name', type: 'string',
