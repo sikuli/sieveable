@@ -55,17 +55,17 @@ describe('test tag names and suffix array parser', () => {
   });
 
   it('4- It should extract tag names from a UI tag whose name contains a wild card.', (done) => {
-    const q = '<com.myapp.*></com.myapp.*>',
+    const q = '<com.myapp.* android:gravity="center"></com.myapp.*>',
       tagNames = tagParser.getTagNames(q),
       suffixNames = suffixParser.getSuffixNames(q);
-    compare(['com.myapp.*'], tagNames);
+    compare(['com.myapp.* AND (android:gravity="center")'], tagNames);
     compare([], suffixNames);
     done();
   });
 
   it('5- It should extract tag names from a UI tag whose name contains a wild card ' +
   'and has children.', (done) => {
-    const q = '<com.myapp.*><EditText/><Button/></com.myapp.*>',
+    const q = '<com.myapp.* ><EditText/><Button/></com.myapp.*>',
       tagNames = tagParser.getTagNames(q),
       suffixNames = suffixParser.getSuffixNames(q);
     compare(['com.myapp.*', 'EditText', 'Button'], tagNames);
@@ -78,11 +78,20 @@ describe('test tag names and suffix array parser', () => {
       tagNames = tagParser.getTagNames(q),
       suffixNames = suffixParser.getSuffixNames(q);
     compare(['*', 'EditText', 'Button'], tagNames);
-    compare(['_$EditText', '_$Button'], suffixNames);
+    compare([], suffixNames);
     done();
   });
 
-  it('7- It should extract tag names from a more complex layout example.', (done) => {
+  it('7- It should extract tag names from a tag that has an anonymous child.', (done) => {
+    const q = '<TabHost><_><TabWidget/></_></TabHost>',
+      tagNames = tagParser.getTagNames(q),
+      suffixNames = suffixParser.getSuffixNames(q);
+    compare(['TabHost', '*', 'TabWidget'], tagNames);
+    compare([], suffixNames);
+    done();
+  });
+
+  it('8- It should extract tag names from a more complex layout example.', (done) => {
     const q = '<android.support.v7.internal.widget.ActionBarOverlayLayout>' +
                 '<FrameLayout/>' +
                 '<LinearLayout>' +
@@ -115,11 +124,20 @@ describe('test tag names and suffix array parser', () => {
     done();
   });
 
-  it('8- It should only extract the tag name from a single XML element.', (done) => {
+  it('9- It should only extract the tag name from a single XML element.', (done) => {
     const q = '<Button/>',
       tagNames = tagParser.getTagNames(q),
       suffixNames = suffixParser.getSuffixNames(q);
     compare(['Button'], tagNames);
+    compare([], suffixNames);
+    done();
+  });
+
+  it('10- It should extracts a tag whose attribute value contains a star.', (done) => {
+    const q = '<view class="com.myapp.*"/>',
+      tagNames = tagParser.getTagNames(q),
+      suffixNames = suffixParser.getSuffixNames();
+    compare(['view AND com.myapp.*'], tagNames);
     compare([], suffixNames);
     done();
   });
