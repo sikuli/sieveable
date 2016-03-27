@@ -21,7 +21,7 @@ function compare(expected, actual) {
   }
 }
 
-describe('test tag names and suffix array parser', () => {
+describe('Test tag name and suffix array parsers:', () => {
   it('1- It should extract tag names from a simple UI query.', (done) => {
     const q = '<LinearLayout><Button/><TextView/></LinearLayout>',
       tagNames = tagParser.getTagNames(q),
@@ -58,7 +58,7 @@ describe('test tag names and suffix array parser', () => {
     const q = '<com.myapp.* android:gravity="center"></com.myapp.*>',
       tagNames = tagParser.getTagNames(q),
       suffixNames = suffixParser.getSuffixNames(q);
-    compare(['com.myapp.* AND (android:gravity="center")'], tagNames);
+    compare(['com.myapp.*', 'android:gravity="center"'], tagNames);
     compare([], suffixNames);
     done();
   });
@@ -133,11 +133,31 @@ describe('test tag names and suffix array parser', () => {
     done();
   });
 
-  it('10- It should extracts a tag whose attribute value contains a star.', (done) => {
+  it('10- It should extract a tag whose attribute value contains a star.', (done) => {
     const q = '<view class="com.myapp.*"/>',
       tagNames = tagParser.getTagNames(q),
-      suffixNames = suffixParser.getSuffixNames();
-    compare(['view AND com.myapp.*'], tagNames);
+      suffixNames = suffixParser.getSuffixNames(q);
+    compare(['view', 'com.myapp.*'], tagNames);
+    compare([], suffixNames);
+    done();
+  });
+
+  it('11- It should extract a tag that has an attribute whose value must be returned' +
+     ' (using projection queries).', (done) => {
+    const q = '<Button android:text="(*)"></Button>',
+      tagNames = tagParser.getTagNames(q),
+      suffixNames = suffixParser.getSuffixNames(q);
+    compare(['Button'], tagNames);
+    compare([], suffixNames);
+    done();
+  });
+
+  it('12- It should extract a tag that has an attribute whose value must be returned' +
+     ' (using projection queries).', (done) => {
+    const q = '<uses-permission android:name="(android.permission.ACCESS_*)"/>',
+      tagNames = tagParser.getTagNames(q),
+      suffixNames = suffixParser.getSuffixNames(q);
+    compare(['uses-permission', 'android.permission.ACCESS_*'], tagNames);
     compare([], suffixNames);
     done();
   });
