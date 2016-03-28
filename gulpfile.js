@@ -13,10 +13,6 @@ gulp.task('solr:insert', (callback) => {
     'solr:indexManifest', 'solr:indexCode', 'solr:commitAll', callback);
 });
 
-gulp.task('redis:insert', (callback) => {
-  runSequence('redis:addSolrKeys', callback);
-});
-
 gulp.task('leveldb:insert', (callback) => {
   runSequence('leveldb:create', 'leveldb:addListing',
     'leveldb:addManifest',
@@ -25,5 +21,5 @@ gulp.task('leveldb:insert', (callback) => {
 
 gulp.task('default', ['lint'], (callback) => {
   runSequence('solr:create', 'solr:schema', 'extract:archives',
-    'solr:insert', 'redis:insert', 'leveldb:insert', callback);
+    'solr:insert', 'leveldb:insert', callback);
 });

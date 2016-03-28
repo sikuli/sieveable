@@ -1,12 +1,10 @@
 'use strict';
 const gulp = require('gulp'),
   Promise = require('bluebird'),
-  path = require('path'),
   exec = require('child_process').exec,
   execAsync = Promise.promisify(exec),
   config = require('config'),
-  log = require('../lib/logger'),
-  CONFIG_PATH = path.resolve(__dirname, '..', 'config');
+  log = require('../lib/logger');
 
 function startSolr() {
   const solrStatus = 'solr status',
@@ -41,30 +39,12 @@ function startSolr() {
   });
 }
 
-function startRedis() {
-  // start Redis server
-  const redisStart =
-  `redis-server ${path.resolve(CONFIG_PATH, config.get('dbConfig.redis.config'))}`;
-  log.info('Starting Redis server as a daemon process. ');
-  return new Promise((resolve, reject) => {
-    execAsync(redisStart, { shell: config.get('system.shell') })
-      .then((stdout, stderr) => {
-        if (stderr) {
-          throw new Error(`Failed to start redis \n${stderr}`);
-        }
-        resolve();
-      })
-      .catch((e) => {
-        reject(e);
-      });
-  });
-}
 
 gulp.task('start:db', (callback) => {
   // start db servers
   startSolr()
     .then(() => {
-      return startRedis();
+      callback();
     })
     .catch((e) => {
       log.error(e.message);

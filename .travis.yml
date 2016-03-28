@@ -2,8 +2,6 @@ language: node_js
 node_js:
   - "5.7"
 
-services:
-  - redis-server
 jdk:
   - oraclejdk7
 

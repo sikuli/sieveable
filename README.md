@@ -29,9 +29,7 @@ docker run -p 3000:3000 -d username/sieveable:latest
 - Install node.js project dependencies:
   - `npm install`
   - Install [gulp]('http://gulpjs.com/') globally: `npm install gulp -g`
-- This system requires running two NoSQL database servers:
-  - [Redis]('http://redis.io/') version 3.x.
-  - [Solr]('http://lucene.apache.org/solr/') version 5.x.
+- This system requires running an [Apache Solr server]('http://lucene.apache.org/solr/'), version 5.x, in cloud mode (SolrCloud).
 
  ### Installation
 - Clone the repo.
@@ -39,9 +37,9 @@ docker run -p 3000:3000 -d username/sieveable:latest
   -  `export NODE_ENV=development` This variable contains the name of the application's deployment environment and can take the value of the base name of the configuration files at the ./config directory, e.g., _development_.
   - To check the value of the exported *NODE_ENV* variable before running the app, execute `echo $NODE_ENV` in your shell.
   - If you want to use a different dataset, then you can change the path to the dataset directory in the configuration file at *./config* depending on the config file you want to use. All dataset paths must be relative to the configuration file.
-- Start redis-server and solr (in cloud mode). You can do that in your shell or you can run ``` gulp start:db ``` task in another shell window, which requires redis-server and solr binaries to be defined in your PATH in addition to editing the configuration file at ```config/redis.conf```.
+- Start Solr (in cloud mode).
 - Create the Solr collections defined in your config file at `config/`.
-- Once all database servers are running, run the default gulp build task:
+- Once Solr is running, run the default gulp build task:
 
   ```shell
   gulp
