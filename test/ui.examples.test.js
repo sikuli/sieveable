@@ -29,12 +29,13 @@ function testApi(q, expected, deepMatch, callback) {
   .end((err, res) => {
     should.not.exist(err);
     should.exist(res.body);
-    res.body.should.be.an('array', 'Response body is not an array');
-    res.body.should.have.length(expected.length);
+    should.exist(res.body.apps);
+    res.body.apps.should.be.an('array', 'Response body is not an array');
+    res.body.apps.should.have.length(expected.length);
     let apps = {};
     try {
       if (deepMatch) {
-        apps = _.map(res.body, 'app');
+        apps = _.map(res.body.apps, 'app');
         apps.should.deep.include.members(expected);
       }
     }
