@@ -21,15 +21,22 @@ describe('Test fetching cursors from Solr', () => {
   it('it should iterate through the cursor and get the next results ' +
   'for a simple ui tag collection query', (done) => {
     const collectionName = config.get('dbConfig.solr.uiTagCollection');
-    fetchCursor.get(collectionName, 'Button', '*')
+    fetchCursor.get(collectionName, 'Text', '*')
     .then((result) => {
       should.exist(result.cursor);
-      result.ids.should.have.length.above(1);
-      return fetchCursor.get(collectionName, 'Button', result.cursor);
+      result.ids.should.have.length.above(0);
+      return [result.cursor, fetchCursor.get(collectionName, 'Text', result.cursor)];
     })
-    .then((result) => {
+    .spread((prevCursor, result) => {
       should.exist(result.cursor);
-      result.ids.should.have.length.above(1);
+      prevCursor.should.not.equal(result.cursor);
+      result.ids.should.have.length.above(0);
+      return [result.cursor, fetchCursor.get(collectionName, 'Text', result.cursor)];
+    })
+    .spread((prevCursor, result) => {
+      // The two cursor should be equal because we reached the end of the result set.
+      prevCursor.should.equal(result.cursor);
+      result.ids.should.have.length(0);
       done();
     })
     .catch((e) => {
