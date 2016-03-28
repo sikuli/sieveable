@@ -20,10 +20,12 @@ function testAPI(q, expected, deepMatch, callback) {
   .end((err, res) => {
     should.not.exist(err);
     should.exist(res.body);
-    res.body.should.have.length(expected.length);
+    should.exist(res.body.apps);
+    res.body.apps.should.be.an('array', 'Response body is not an array');
+    res.body.apps.should.have.length(expected.length);
     try {
       if (deepMatch) {
-        res.body.should.deep.include.members(expected);
+        res.body.apps.should.deep.include.members(expected);
       }
     }
     catch (e) {
