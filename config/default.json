@@ -4,7 +4,8 @@
   },
   "server": {
     "port": 3000,
-    "corsOrigin": "http://localhost"
+    "corsOrigin": "http://localhost",
+    "returnCursor": false
   },
   "dbConfig": {
     "solr": {

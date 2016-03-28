@@ -1,12 +1,14 @@
 {
   "server": {
     "port": 3000,
-    "corsOrigin": "http://localhost:8888"
+    "corsOrigin": "http://localhost:8888",
+    "returnCursor": true
   },
   "dbConfig": {
     "solr": {
       "host": "127.0.0.1",
       "port": 8983,
+      "maxRows": 57,
       "listingCollection": "sieveable_listing",
       "uiTagCollection": "sieveable_ui_tag",
       "uiSuffixCollection": "sieveable_ui_suffix",
