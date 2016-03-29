@@ -8,19 +8,19 @@ JAVA_VERSION=1.7.0
 SOLR_INSTALL_DIR=/mnt/pd1/home/bin/solr
 ZOOKEEPER_INSTALL_DIR=/mnt/pd1/home/bin/zookeeper
 # Update and install lsof, gcc, gcc-c++, and make
-yum update-minimal
-yum -y install bzip2
-yum -y install lsof
-yum -y install gcc gcc-c++ make
+sudo yum update-minimal
+sudo yum -y install bzip2
+sudo yum -y install lsof
+sudo yum -y install gcc gcc-c++ make
 # Install git
-yum install -y git
+sudo yum install -y git
 # Install tmux
-yum install -y tmux
+sudo yum install -y tmux
 # Install Java
-yum -y install java-$JAVA_VERSION-openjdk-devel
+sudo yum -y install java-$JAVA_VERSION-openjdk-devel
 # Install node
-curl --silent --location https://rpm.nodesource.com/setup_$NODE_VERSION.x | bash -
-yum -y install nodejs
+curl --silent --location https://rpm.nodesource.com/setup_$NODE_VERSION.x | sudo bash -
+sudo yum -y install nodejs
 # Download and install Solr
 curl -O "http://archive.apache.org/dist/lucene/solr/$SOLR_VERSION/solr-$SOLR_VERSION.tgz"
 mkdir -p $SOLR_INSTALL_DIR
@@ -32,5 +32,8 @@ mkdir -p $ZOOKEEPER_INSTALL_DIR
 tar -xzf zookeeper-$ZOOKEEPER_VERSION.tar.gz -C $ZOOKEEPER_INSTALL_DIR --strip-components=1
 rm zookeeper-$ZOOKEEPER_VERSION.tar.gz
 # Install npm globals
-npm install -g gulp mocha
-yum -y clean all
+sudo npm install -g gulp mocha
+sudo yum -y clean all
+# Add Solr scripts to PATH
+echo "export PATH=/mnt/pd1/home/bin/solr/bin:\$PATH" >> ~/.bash_profile
+source ~/.bash_profile
