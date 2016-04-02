@@ -14,11 +14,6 @@
       "uiSuffixCollection": "sieveable_ui_suffix",
       "manifestCollection": "sieveable_manifest",
       "codeCollection": "sieveable_code"
-    },
-    "redis": {
-      "config": "./redis.conf",
-      "host": "127.0.0.1",
-      "port": 6379
     }
   },
   "dataset": {
@@ -75,11 +70,7 @@
         "source": "../fixtures/code/code-2.tar.bz2",
         "target": "../fixtures/code/2"
       }
-    ],
-    "listingKeyName": "dataset:listing",
-    "uiKeyName": "dataset:ui",
-    "manifestKeyName": "dataset:manifest",
-    "codeKeyName": "dataset:code"
+    ]
   },
   "results": {
     "maxUI": 35,

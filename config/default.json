@@ -13,11 +13,6 @@
       "port": 8983,
       "maxRows": 10
     },
-    "redis": {
-      "config": "./redis.conf",
-      "host": "127.0.0.1",
-      "port": 6379
-    },
     "leveldb": {
       "location": "../fixtures/db"
     }
@@ -53,11 +48,7 @@
         "source": "../fixtures/code/code-1.tar.bz2",
         "target": "../fixtures/code/1"
       }
-    ],
-    "listingKeyName": "dataset:listing",
-    "uiKeyName": "dataset:ui",
-    "manifestKeyName": "dataset:manifest",
-    "codeKeyName": "dataset:code"
+    ]
   },
   "results": {
     "maxUI": 10,
