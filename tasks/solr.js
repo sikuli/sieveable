@@ -252,6 +252,9 @@ gulp.task('solr:indexUITag', () => {
         });
   })
     .then(() => {
+      return solrIndex.commit(collectionName);
+    })
+    .then(() => {
       return Promise.resolve();
     })
     .catch((e) => {
@@ -285,6 +288,9 @@ gulp.task('solr:indexUISuffix', () => {
           log.error(e);
         });
   })
+    .then(() => {
+      return solrIndex.commit(collectionName);
+    })
     .then(() => {
       return Promise.resolve();
     })
@@ -320,6 +326,9 @@ gulp.task('solr:indexManifest', () => {
         });
   })
     .then(() => {
+      return solrIndex.commit(collectionName);
+    })
+    .then(() => {
       return Promise.resolve();
     })
     .catch((e) => {
@@ -352,6 +361,9 @@ gulp.task('solr:indexCode', () => {
           log.error(e);
         });
   })
+    .then(() => {
+      return solrIndex.commit(collectionName);
+    })
     .then(() => {
       return Promise.resolve();
     })
@@ -389,6 +401,16 @@ gulp.task('solr:indexListing', () => {
       .catch((e) => {
         return Promise.reject(e);
       });
+  })
+  .then(() => {
+    return solrIndex.commit(listingCollection);
+  })
+  .then(() => {
+    return Promise.resolve();
+  })
+  .catch((e) => {
+    log.error(e);
+    return Promise.reject(e);
   });
 });
 
