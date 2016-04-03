@@ -48,8 +48,8 @@ function insertToLevel(datasetType, extension) {
               log.error('Failed to find %s ', id, getErr);
               return Promise.reject(getErr);
             });
-        });
-  })
+        }, { concurrency: 400 });
+  }, { concurrency: 2 })
     .then(() => {
       log.info('Finished inserting %s path values.', datasetType);
     })
@@ -68,10 +68,6 @@ gulp.task('leveldb:create', (callback) => {
 
 gulp.task('leveldb:readFullDB', () => {
   return levelDB.readFullDB();
-});
-
-gulp.task('leveldb:addListing', () => {
-  return insertToLevel('listing', '.json');
 });
 
 gulp.task('leveldb:addManifest', () => {

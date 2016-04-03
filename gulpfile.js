@@ -14,9 +14,7 @@ gulp.task('solr:insert', (callback) => {
 });
 
 gulp.task('leveldb:insert', (callback) => {
-  runSequence('leveldb:create', 'leveldb:addListing',
-    'leveldb:addManifest',
-    'leveldb:addUI', callback);
+  runSequence('leveldb:create', 'leveldb:addManifest', 'leveldb:addUI', callback);
 });
 
 gulp.task('default', ['lint'], (callback) => {
