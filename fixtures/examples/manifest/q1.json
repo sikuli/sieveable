@@ -2,146 +2,175 @@
   {
     "id": "com.google.zxing.client.android-94",
     "packageName": "com.google.zxing.client.android",
-    "version": "94"
+    "versionCode": 94,
+    "versionName": "4.5.1"
   },
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   },
   {
     "id": "com.google.android.apps.translate-30000028",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000028"
+    "versionCode": 30000028,
+    "versionName": "3.0.4"
   },
   {
     "id": "com.surpax.ledflashlight.panel-5",
     "packageName": "com.surpax.ledflashlight.panel",
-    "version": "5"
+    "versionCode": 5,
+    "versionName": "1.0.4"
   },
   {
     "id": "com.google.android.youtube-5738",
     "packageName": "com.google.android.youtube",
-    "version": "5738"
+    "versionCode": 5738,
+    "versionName": "5.7.38"
   },
   {
     "id": "com.sgiggle.production-1386724633",
     "packageName": "com.sgiggle.production",
-    "version": "1386724633"
+    "versionCode": 1386724633,
+    "versionName": "3.3.70435"
   },
   {
     "id": "com.viber.voip-47",
     "packageName": "com.viber.voip",
-    "version": "47"
+    "versionCode": 47,
+    "versionName": "4.1.0.665"
   },
   {
     "id": "com.tencent.mm-405",
     "packageName": "com.tencent.mm",
-    "version": "405"
+    "versionCode": 405,
+    "versionName": "5.3.0.87_r717458"
   },
   {
     "id": "com.google.android.apps.translate-30000023",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000023"
+    "versionCode": 30000023,
+    "versionName": "3.0.1"
   },
   {
     "id": "com.surpax.ledflashlight.panel-4",
     "packageName": "com.surpax.ledflashlight.panel",
-    "version": "4"
+    "versionCode": 4,
+    "versionName": "1.0.3"
   },
   {
     "id": "com.tencent.mm-361",
     "packageName": "com.tencent.mm",
-    "version": "361"
+    "versionCode": 361,
+    "versionName": "5.1"
   },
   {
     "id": "com.instagram.android-639564",
     "packageName": "com.instagram.android",
-    "version": "639564"
+    "versionCode": 639564,
+    "versionName": "4.2.6"
   },
   {
     "id": "com.facebook.katana-666397",
     "packageName": "com.facebook.katana",
-    "version": "666397"
+    "versionCode": 666397,
+    "versionName": "3.9"
   },
   {
     "id": "com.google.android.apps.babel-21224130",
     "packageName": "com.google.android.apps.babel",
-    "version": "21224130"
+    "versionCode": 21224130,
+    "versionName": "2.1.224 (1212213-30)"
   },
   {
     "id": "com.sgiggle.production-68",
     "packageName": "com.sgiggle.production",
-    "version": "68"
+    "versionCode": 68,
+    "versionName": "3.3.69887"
   },
   {
     "id": "com.sec.chaton-207103000",
     "packageName": "com.sec.chaton",
-    "version": "207103000"
+    "versionCode": 207103000,
+    "versionName": "2.7.103"
   },
   {
     "id": "com.google.zxing.client.android-100",
     "packageName": "com.google.zxing.client.android",
-    "version": "100"
+    "versionCode": 100,
+    "versionName": "4.7.0"
   },
   {
     "id": "com.android.chrome-1650059",
     "packageName": "com.android.chrome",
-    "version": "1650059"
+    "versionCode": 1650059,
+    "versionName": "31.0.1650.59"
   },
   {
     "id": "com.viber.voip-37",
     "packageName": "com.viber.voip",
-    "version": "37"
+    "versionCode": 37,
+    "versionName": "3.1.1.15"
   },
   {
     "id": "com.cleanmaster.mguard-50511533",
     "packageName": "com.cleanmaster.mguard",
-    "version": "50511533"
+    "versionCode": 50511533,
+    "versionName": "5.5.1"
   },
   {
     "id": "com.facebook.orca-936981",
     "packageName": "com.facebook.orca",
-    "version": "936981"
+    "versionCode": 936981,
+    "versionName": "3.2.3-release"
   },
   {
     "id": "com.sec.chaton-302115000",
     "packageName": "com.sec.chaton",
-    "version": "302115000"
+    "versionCode": 302115000,
+    "versionName": "3.2.115"
   },
   {
     "id": "com.android.chrome-1547059",
     "packageName": "com.android.chrome",
-    "version": "1547059"
+    "versionCode": 1547059,
+    "versionName": "29.0.1547.59"
   },
   {
     "id": "com.whatsapp-48364",
     "packageName": "com.whatsapp",
-    "version": "48364"
+    "versionCode": 48364,
+    "versionName": "2.11.152"
   },
   {
     "id": "com.google.android.youtube-5021",
     "packageName": "com.google.android.youtube",
-    "version": "5021"
+    "versionCode": 5021,
+    "versionName": "5.0.21"
   },
   {
     "id": "com.instagram.android-824805",
     "packageName": "com.instagram.android",
-    "version": "824805"
+    "versionCode": 824805,
+    "versionName": "5.0.1"
   },
   {
     "id": "com.google.android.apps.babel-21311130",
     "packageName": "com.google.android.apps.babel",
-    "version": "21311130"
+    "versionCode": 21311130,
+    "versionName": "2.1.311 (1231142-30)"
   },
   {
     "id": "com.facebook.orca-2909635",
     "packageName": "com.facebook.orca",
-    "version": "2909635"
+    "versionCode": 2909635,
+    "versionName": "6.0.0.27.0"
   },
   {
     "id": "com.facebook.katana-258882",
     "packageName": "com.facebook.katana",
-    "version": "258882"
+    "versionCode": 258882,
+    "versionName": "3.4"
   }
 ]

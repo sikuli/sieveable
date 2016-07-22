@@ -29,7 +29,9 @@ function testApi(q, expected, deepMatch, callback) {
     let apps = {};
     try {
       if (deepMatch) {
-        apps = _.map(res.body.apps, 'app');
+        apps = _.map(res.body.apps, (appObj) => {
+          return _.pick(appObj, ['id', 'packageName', 'versionCode', 'versionName']);
+        });
         apps.should.deep.include.members(expected);
       }
     }
