@@ -27,7 +27,9 @@ function testApi(q, expected, deepMatch, callback) {
     let apps = {};
     try {
       if (deepMatch) {
-        apps = _.map(res.body.apps, 'app');
+        apps = _.map(res.body.apps, (appObj) => {
+          return _.pick(appObj, ['id', 'packageName', 'versionCode', 'versionName']);
+        });
         apps.should.deep.include.members(expected);
       }
     }
@@ -35,7 +37,7 @@ function testApi(q, expected, deepMatch, callback) {
       console.log('Expected:');
       eyes.inspect(expected);
       console.log('Actual:');
-      eyes.inspect(apps);
+      console.log(apps);
       throw e;
     }
     callback();
@@ -190,7 +192,8 @@ describe('Listing Details Examples: Answers to multiple listing details ' +
       q = `MATCH app\nWHERE\n${listingQuery}\n RETURN app`,
       expected = [{ id: 'com.google.android.gm-4800250',
                     packageName: 'com.google.android.gm',
-                    version: '4800250'
+                    versionCode: 4800250,
+                    versionName: '4.8 (1167183)'
                   }];
     testApiAsync(q, expected, true)
     .then(() => {

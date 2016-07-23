@@ -32,7 +32,7 @@ function testAPI(q, expected, deepMatch, callback) {
       console.log('Expected:');
       eyes.inspect(expected);
       console.log('Actual:');
-      eyes.inspect(res.body);
+      console.log(res.body.apps);
       throw e;
     }
     callback();
@@ -150,11 +150,10 @@ describe('Query Projection', function () {
     const query = 'MATCH app(package=com.google.android.music, latest=true)' +
           ` \nWHERE\n<code class="com.google.android.gms.ads" />\nRETURN app`,
       expectedResult = [{
-        app: {
-          id: 'com.google.android.music-1514',
-          packageName: 'com.google.android.music',
-          version: '1514'
-        },
+        id: 'com.google.android.music-1514',
+        packageName: 'com.google.android.music',
+        versionCode: 1514,
+        versionName: '5.5.1514O.1185867',
         listing: {},
         ui: {},
         manifest: {}

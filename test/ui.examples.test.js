@@ -35,7 +35,9 @@ function testApi(q, expected, deepMatch, callback) {
     let apps = {};
     try {
       if (deepMatch) {
-        apps = _.map(res.body.apps, 'app');
+        apps = _.map(res.body.apps, (appObj) => {
+          return _.pick(appObj, ['id', 'packageName', 'versionCode', 'versionName']);
+        });
         apps.should.deep.include.members(expected);
       }
     }
@@ -43,7 +45,7 @@ function testApi(q, expected, deepMatch, callback) {
       console.log('Expected:');
       eyes.inspect(expected);
       console.log('Actual:');
-      eyes.inspect(apps);
+      console.log(apps);
       throw e;
     }
     callback();
