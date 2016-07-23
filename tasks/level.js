@@ -5,6 +5,7 @@ const gulp = require('gulp'),
   config = require('config'),
   levelDB = require('../lib/db/level'),
   _ = require('lodash'),
+  cheerio = require('cheerio'),
   fs = Promise.promisifyAll(require('fs')),
   log = require('../lib/logger'),
   CONFIG_PATH = path.resolve(__dirname, '..', 'config');
@@ -30,6 +31,12 @@ function insertToLevel(datasetType, extension) {
               const result = val;
               log.info(result);
               result[datasetType] = fileAbsPath;
+              if (datasetType === 'manifest') {
+                return addVersionName(result, fileAbsPath);
+              }
+              return Promise.resolve(result);
+            })
+            .then((result) => {
               return levelDB.dbPutAsync(id, result);
             })
             .then(() => {
@@ -56,6 +63,17 @@ function insertToLevel(datasetType, extension) {
     .catch((e) => {
       log.error('Error ', e);
       return Promise.reject(e);
+    });
+}
+
+// Add the app's version name from the manifest file to the result
+function addVersionName(result, manifestPath) {
+  const resultObj = result;
+  return fs.readFileAsync(manifestPath)
+    .then((content) => {
+      const $ = cheerio.load(content, { xmlMode: true });
+      resultObj.vern = $('manifest').attr('versionName');
+      return resultObj;
     });
 }
 

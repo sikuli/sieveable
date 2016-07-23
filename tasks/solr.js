@@ -80,6 +80,13 @@ gulp.task('solr:addListingFields', () => {
       required: true,
       stored: true
     },
+    versionNameField = {
+      name: 'vern',
+      type: 'string',
+      indexed: true,
+      required: true,
+      stored: true
+    },
     creatorAddressField = {
       name: 'cadd',
       type: 'text_general',
@@ -202,6 +209,7 @@ gulp.task('solr:addListingFields', () => {
   return Promise.all([
     solrAdmin.addField(collection, packageField),
     solrAdmin.addField(collection, versionCodeField),
+    solrAdmin.addField(collection, versionNameField),
     solrAdmin.addField(collection, creatorField),
     solrAdmin.addField(collection, creatorAddressField),
     solrAdmin.addField(collection, categoryField),
