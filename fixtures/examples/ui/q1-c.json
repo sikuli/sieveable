@@ -2,6 +2,7 @@
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   }
 ]

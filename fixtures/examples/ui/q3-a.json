@@ -2,21 +2,25 @@
   {
     "id": "com.google.android.apps.translate-30000023",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000023"
+    "versionCode": 30000023,
+    "versionName" : "3.0.1"
   },
   {
     "id": "com.google.android.apps.translate-30000028",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000028"
+    "versionCode": 30000028,
+    "versionName" : "3.0.4"
   },
   {
     "id": "com.google.android.gm-4720010",
     "packageName": "com.google.android.gm",
-    "version": "4720010"
+    "versionCode": 4720010,
+    "versionName": "4.7.2 (967015)"
   },
   {
     "id": "com.google.android.gm-4800250",
     "packageName": "com.google.android.gm",
-    "version": "4800250"
+    "versionCode": 4800250,
+    "versionName": "4.8 (1167183)"
   }
 ]

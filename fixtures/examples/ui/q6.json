@@ -2,161 +2,191 @@
   {
     "id": "com.cleanmaster.mguard-40101776",
     "packageName": "com.cleanmaster.mguard",
-    "version": "40101776"
+    "versionCode": 40101776,
+    "versionName": "4.1.0"
   },
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   },
   {
     "id": "com.facebook.katana-258882",
     "packageName": "com.facebook.katana",
-    "version": "258882"
+    "versionCode": 258882,
+    "versionName": "3.4"
   },
   {
     "id": "com.facebook.katana-666397",
     "packageName": "com.facebook.katana",
-    "version": "666397"
+    "versionCode": 666397,
+    "versionName": "3.9"
   },
   {
     "id": "com.facebook.orca-2909635",
     "packageName": "com.facebook.orca",
-    "version": "2909635"
+    "versionCode": 2909635,
+    "versionName": "6.0.0.27.0"
   },
   {
     "id": "com.facebook.orca-936981",
     "packageName": "com.facebook.orca",
-    "version": "936981"
+    "versionCode": 936981,
+    "versionName": "3.2.3-release"
   },
   {
     "id": "com.google.android.apps.babel-21224130",
     "packageName": "com.google.android.apps.babel",
-    "version": "21224130"
+    "versionCode": 21224130,
+    "versionName": "2.1.224 (1212213-30)"
   },
   {
     "id": "com.google.android.apps.babel-21311130",
     "packageName": "com.google.android.apps.babel",
-    "version": "21311130"
+    "versionCode": 21311130,
+    "versionName": "2.1.311 (1231142-30)"
   },
   {
     "id": "com.google.android.apps.books-20921",
     "packageName": "com.google.android.apps.books",
-    "version": "20921"
+    "versionCode": 20921,
+    "versionName": "2.9.21"
   },
   {
     "id": "com.google.android.apps.books-30149",
     "packageName": "com.google.android.apps.books",
-    "version": "30149"
+    "versionCode": 30149,
+    "versionName": "3.1.49"
   },
   {
     "id": "com.google.android.apps.gmm-801000903",
     "packageName": "com.google.android.apps.gmm",
-    "version": "801000903"
+    "versionCode": 801000903,
+    "versionName": "8.1.0"
   },
   {
     "id": "com.google.android.apps.maps-705001703",
     "packageName": "com.google.android.apps.maps",
-    "version": "705001703"
+    "versionCode": 705001703,
+    "versionName": "7.5.0"
   },
   {
     "id": "com.google.android.apps.plus-413076433",
     "packageName": "com.google.android.apps.plus",
-    "version": "413076433"
+    "versionCode": 413076433
   },
   {
     "id": "com.google.android.apps.plus-413148638",
     "packageName": "com.google.android.apps.plus",
-    "version": "413148638"
+    "versionCode": 413148638
   },
   {
     "id": "com.google.android.apps.translate-30000023",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000023"
+    "versionCode": 30000023,
+    "versionName": "3.0.1"
   },
   {
     "id": "com.google.android.apps.translate-30000028",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000028"
+    "versionCode": 30000028,
+    "versionName": "3.0.4"
   },
   {
     "id": "com.cleanmaster.mguard-50511533",
     "packageName": "com.cleanmaster.mguard",
-    "version": "50511533"
+    "versionCode": 50511533,
+    "versionName": "5.5.1"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300304160",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300304160"
+    "versionCode": 300304160,
+    "versionName": "3.4.16.1149292.arm"
   },
   {
     "id": "com.google.android.music-1317",
     "packageName": "com.google.android.music",
-    "version": "1317"
+    "versionCode": 1317,
+    "versionName": "5.3.1317M.940995"
   },
   {
     "id": "com.google.android.music-1514",
     "packageName": "com.google.android.music",
-    "version": "1514"
+    "versionCode": 1514,
+    "versionName": "5.5.1514O.1185867"
   },
   {
     "id": "com.google.android.youtube-5738",
     "packageName": "com.google.android.youtube",
-    "version": "5738"
+    "versionCode": 5738,
+    "versionName": "5.7.38"
   },
   {
     "id": "com.outfit7.talkingtom2free-142",
     "packageName": "com.outfit7.talkingtom2free",
-    "version": "142"
+    "versionCode": 142,
+    "versionName": "4.5.2"
   },
   {
     "id": "com.outfit7.talkingtom2free-83",
     "packageName": "com.outfit7.talkingtom2free",
-    "version": "83"
+    "versionCode": 83,
+    "versionName": "4.2"
   },
   {
     "id": "com.sec.chaton-207103000",
     "packageName": "com.sec.chaton",
-    "version": "207103000"
+    "versionCode": 207103000,
+    "versionName": "2.7.103"
   },
   {
     "id": "com.sec.chaton-302115000",
     "packageName": "com.sec.chaton",
-    "version": "302115000"
+    "versionCode": 302115000,
+    "versionName": "3.2.115"
   },
   {
     "id": "com.sgiggle.production-1386724633",
     "packageName": "com.sgiggle.production",
-    "version": "1386724633"
+    "versionCode": 1386724633,
+    "versionName": "3.3.70435"
   },
   {
     "id": "com.sgiggle.production-68",
     "packageName": "com.sgiggle.production",
-    "version": "68"
+    "versionCode": 68,
+    "versionName": "3.3.69887"
   },
   {
     "id": "com.tencent.mm-405",
     "packageName": "com.tencent.mm",
-    "version": "405"
+    "versionCode": 405,
+    "versionName": "5.3.0.87_r717458"
   },
   {
     "id": "com.viber.voip-37",
     "packageName": "com.viber.voip",
-    "version": "37"
+    "versionCode": 37,
+    "versionName": "3.1.1.15"
   },
   {
     "id": "com.viber.voip-47",
     "packageName": "com.viber.voip",
-    "version": "47"
+    "versionCode": 47,
+    "versionName": "4.1.0.665"
   },
   {
     "id": "com.whatsapp-48364",
     "packageName": "com.whatsapp",
-    "version": "48364"
+    "versionCode": 48364,
+    "versionName": "2.11.152"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300301240",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300301240"
+    "versionCode": 300301240,
+    "versionName": "3.1.24.941712.arm"
   }
 ]

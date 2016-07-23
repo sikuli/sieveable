@@ -2,36 +2,43 @@
   {
     "id": "com.google.android.apps.translate-30000023",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000023"
+    "versionCode": 30000023,
+    "versionName": "3.0.1"
   },
   {
     "id": "com.google.android.apps.translate-30000028",
     "packageName": "com.google.android.apps.translate",
-    "version": "30000028"
+    "versionCode": 30000028,
+    "versionName": "3.0.4"
   },
   {
     "id": "com.instagram.android-639564",
     "packageName": "com.instagram.android",
-    "version": "639564"
+    "versionCode": 639564,
+    "versionName": "4.2.6"
   },
   {
     "id": "com.instagram.android-824805",
     "packageName": "com.instagram.android",
-    "version": "824805"
+    "versionCode": 824805,
+    "versionName": "5.0.1"
   },
   {
     "id": "com.whatsapp-48364",
     "packageName": "com.whatsapp",
-    "version": "48364"
+    "versionCode": 48364,
+    "versionName": "2.11.152"
   },
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   },
   {
     "id": "com.facebook.orca-936981",
     "packageName": "com.facebook.orca",
-    "version": "936981"
+    "versionCode": 936981,
+    "versionName": "3.2.3-release"
   }
 ]

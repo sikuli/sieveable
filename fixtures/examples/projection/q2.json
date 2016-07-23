@@ -1,10 +1,9 @@
 [
   {
-    "app": {
-      "id": "com.facebook.orca-936981",
-      "packageName": "com.facebook.orca",
-      "version": "936981"
-    },
+    "id": "com.facebook.orca-936981",
+    "packageName": "com.facebook.orca",
+    "versionCode": 936981,
+    "versionName": "3.2.3-release",
     "listing": {
       "returnAttributes": {
         "title": "Facebook Messenger"
@@ -139,11 +138,10 @@
     }
   },
   {
-    "app": {
-      "id": "com.facebook.orca-2909635",
-      "packageName": "com.facebook.orca",
-      "version": "2909635"
-    },
+    "id": "com.facebook.orca-2909635",
+    "packageName": "com.facebook.orca",
+    "versionCode": 2909635,
+    "versionName": "6.0.0.27.0",
     "listing": {
       "returnAttributes": {
         "title": "Facebook Messenger"
@@ -209,11 +207,10 @@
     }
   },
   {
-    "app": {
-      "id": "com.facebook.katana-666397",
-      "packageName": "com.facebook.katana",
-      "version": "666397"
-    },
+    "id": "com.facebook.katana-666397",
+    "packageName": "com.facebook.katana",
+    "versionCode": 666397,
+    "versionName": "3.9",
     "listing": {
       "returnAttributes": {
         "title": "Facebook"
@@ -445,11 +442,10 @@
     }
   },
   {
-    "app": {
-      "id": "com.facebook.katana-258882",
-      "packageName": "com.facebook.katana",
-      "version": "258882"
-    },
+    "id": "com.facebook.katana-258882",
+    "packageName": "com.facebook.katana",
+    "versionCode": 258882,
+    "versionName": "3.4",
     "listing": {
       "returnAttributes": {
         "title": "Facebook"

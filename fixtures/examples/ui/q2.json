@@ -2,66 +2,77 @@
   {
     "id": "com.android.chrome-1547059",
     "packageName": "com.android.chrome",
-    "version": "1547059"
+    "versionCode": 1547059,
+    "versionName": "29.0.1547.59"
   },
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   },
   {
     "id": "com.google.android.apps.babel-21224130",
     "packageName": "com.google.android.apps.babel",
-    "version": "21224130"
+    "versionCode": 21224130,
+    "versionName": "2.1.224 (1212213-30)"
   },
   {
     "id": "com.google.android.apps.babel-21311130",
     "packageName": "com.google.android.apps.babel",
-    "version": "21311130"
+    "versionCode": 21311130,
+    "versionName": "2.1.311 (1231142-30)"
   },
   {
     "id": "com.google.android.apps.plus-413076433",
     "packageName": "com.google.android.apps.plus",
-    "version": "413076433"
+    "versionCode": 413076433
   },
   {
     "id": "com.google.android.apps.plus-413148638",
     "packageName": "com.google.android.apps.plus",
-    "version": "413148638"
+    "versionCode": 413148638
   },
   {
     "id": "com.google.android.gm-4720010",
     "packageName": "com.google.android.gm",
-    "version": "4720010"
+    "versionCode": 4720010,
+    "versionName": "4.7.2 (967015)"
   },
   {
     "id": "com.android.chrome-1650059",
     "packageName": "com.android.chrome",
-    "version": "1650059"
+    "versionCode": 1650059,
+    "versionName": "31.0.1650.59"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300301240",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300301240"
+    "versionCode": 300301240,
+    "versionName": "3.1.24.941712.arm"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300304160",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300304160"
+    "versionCode": 300304160,
+    "versionName": "3.4.16.1149292.arm"
   },
   {
     "id": "com.shazam.android-81291",
     "packageName": "com.shazam.android",
-    "version": "81291"
+    "versionCode": 81291,
+    "versionName": "4.3.0-JB81291"
   },
   {
     "id": "com.shazam.android-89487",
     "packageName": "com.shazam.android",
-    "version": "89487"
+    "versionCode": 89487,
+    "versionName": "4.7.3-JB89487"
   },
   {
     "id": "com.google.android.gm-4800250",
     "packageName": "com.google.android.gm",
-    "version": "4800250"
+    "versionCode": 4800250,
+    "versionName": "4.8 (1167183)"
   }
 ]

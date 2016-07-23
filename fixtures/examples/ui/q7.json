@@ -2,46 +2,55 @@
   {
     "id": "com.android.chrome-1547059",
     "packageName": "com.android.chrome",
-    "version": "1547059"
+    "versionCode": 1547059,
+    "versionName": "29.0.1547.59"
   },
   {
     "id": "com.google.android.gm-4720010",
     "packageName": "com.google.android.gm",
-    "version": "4720010"
+    "versionCode": 4720010,
+    "versionName": "4.7.2 (967015)"
   },
   {
     "id": "com.google.android.gm-4800250",
     "packageName": "com.google.android.gm",
-    "version": "4800250"
+    "versionCode": 4800250,
+    "versionName": "4.8 (1167183)"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300301240",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300301240"
+    "versionCode": 300301240,
+    "versionName": "3.1.24.941712.arm"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300304160",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300304160"
+    "versionCode": 300304160,
+    "versionName": "3.4.16.1149292.arm"
   },
   {
     "id": "com.android.chrome-1650059",
     "packageName": "com.android.chrome",
-    "version": "1650059"
+    "versionCode": 1650059,
+    "versionName": "31.0.1650.59"
   },
   {
     "id": "com.sec.chaton-207103000",
     "packageName": "com.sec.chaton",
-    "version": "207103000"
+    "versionCode": 207103000,
+    "versionName": "2.7.103"
   },
   {
     "id": "com.viber.voip-37",
     "packageName": "com.viber.voip",
-    "version": "37"
+    "versionCode": 37,
+    "versionName": "3.1.1.15"
   },
   {
     "id": "com.viber.voip-47",
     "packageName": "com.viber.voip",
-    "version": "47"
+    "versionCode": 47,
+    "versionName": "4.1.0.665"
   }
 ]

@@ -2,6 +2,7 @@
   {
     "id": "me.pou.app-157",
     "packageName": "me.pou.app",
-    "version": "157"
+    "versionCode": 157,
+    "versionName": "1.4.12"
   }
 ]

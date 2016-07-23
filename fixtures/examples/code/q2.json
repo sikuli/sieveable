@@ -2,36 +2,43 @@
   {
     "id": "com.whatsapp-48364",
     "packageName": "com.whatsapp",
-    "version": "48364"
+    "versionCode": 48364,
+    "versionName": "2.11.152"
   },
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   },
   {
     "id": "com.viber.voip-47",
     "packageName": "com.viber.voip",
-    "version": "47"
+    "versionCode": 47,
+    "versionName": "4.1.0.665"
   },
   {
     "id": "com.surpax.ledflashlight.panel-5",
     "packageName": "com.surpax.ledflashlight.panel",
-    "version": "5"
+    "versionCode": 5,
+    "versionName": "1.0.4"
   },
   {
     "id": "com.google.android.apps.books-30149",
     "packageName": "com.google.android.apps.books",
-    "version": "30149"
+    "versionCode": 30149,
+    "versionName": "3.1.49"
   },
   {
     "id": "com.creativemobile.DragRacing-106",
     "packageName": "com.creativemobile.DragRacing",
-    "version": "106"
+    "versionCode": 106,
+    "versionName": "1.6.16"
   },
   {
     "id": "com.creativemobile.DragRacing-121",
     "packageName": "com.creativemobile.DragRacing",
-    "version": "121"
+    "versionCode": 121,
+    "versionName": "1.6.22"
   }
 ]

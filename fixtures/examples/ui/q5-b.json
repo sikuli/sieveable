@@ -2,61 +2,73 @@
   {
     "id": "com.cleanmaster.mguard-40101776",
     "packageName": "com.cleanmaster.mguard",
-    "version": "40101776"
+    "versionCode": 40101776,
+    "versionName": "4.1.0"
   },
   {
     "id": "com.cleanmaster.mguard-50511533",
     "packageName": "com.cleanmaster.mguard",
-    "version": "50511533"
+    "versionCode": 50511533,
+    "versionName": "5.5.1"
   },
   {
     "id": "com.facebook.katana-258882",
     "packageName": "com.facebook.katana",
-    "version": "258882"
+    "versionCode": 258882,
+    "versionName": "3.4"
   },
   {
     "id": "com.facebook.katana-666397",
     "packageName": "com.facebook.katana",
-    "version": "666397"
+    "versionCode": 666397,
+    "versionName": "3.9"
   },
   {
     "id": "com.facebook.orca-936981",
     "packageName": "com.facebook.orca",
-    "version": "936981"
+    "versionCode": 936981,
+    "versionName": "3.2.3-release"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300301240",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300301240"
+    "versionCode": 300301240,
+    "versionName": "3.1.24.941712.arm"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300304160",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300304160"
+    "versionCode": 300304160,
+    "versionName": "3.4.16.1149292.arm"
   },
   {
     "id": "com.google.android.youtube-5021",
     "packageName": "com.google.android.youtube",
-    "version": "5021"
+    "versionCode": 5021,
+    "versionName": "5.0.21"
   },
   {
     "id": "com.google.android.youtube-5738",
     "packageName": "com.google.android.youtube",
-    "version": "5738"
+    "versionCode": 5738,
+    "versionName": "5.7.38"
   },
   {
     "id": "com.sec.chaton-207103000",
     "packageName": "com.sec.chaton",
-    "version": "207103000"
+    "versionCode": 207103000,
+    "versionName": "2.7.103"
   },
   {
     "id": "com.sec.chaton-302115000",
     "packageName": "com.sec.chaton",
-    "version": "302115000"
+    "versionCode": 302115000,
+    "versionName": "3.2.115"
   },
   {
     "id": "com.tencent.mm-405",
     "packageName": "com.tencent.mm",
-    "version": "405"
+    "versionCode": 405,
+    "versionName": "5.3.0.87_r717458"
   }
 ]

@@ -2,11 +2,13 @@
   {
     "id": "com.adobe.reader-77969",
     "packageName": "com.adobe.reader",
-    "version": "77969"
+    "versionCode": 77969,
+    "versionName": "@string/IDS_ADOBE_READER_VERSION_GLB"
   },
   {
     "id": "com.adobe.reader-85478",
     "packageName": "com.adobe.reader",
-    "version": "85478"
+    "versionCode": 85478,
+    "versionName": "@string/IDS_ADOBE_READER_VERSION_GLB"
   }
 ]

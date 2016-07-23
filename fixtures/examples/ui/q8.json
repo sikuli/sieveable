@@ -2,6 +2,7 @@
   {
     "id": "com.google.android.youtube-5738",
     "packageName": "com.google.android.youtube",
-    "version": "5738"
+    "versionCode": 5738,
+    "versionName": "5.7.38"
   }
 ]

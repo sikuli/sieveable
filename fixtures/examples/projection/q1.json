@@ -1,10 +1,9 @@
 [
   {
-    "app": {
-      "id": "com.sgiggle.production-68",
-      "packageName": "com.sgiggle.production",
-      "version": "68"
-    },
+    "id": "com.sgiggle.production-68",
+    "packageName": "com.sgiggle.production",
+    "versionCode": 68,
+    "versionName": "3.3.69887",
     "listing": {
       "returnAttributes": {
         "$1": "Social"
@@ -139,11 +138,10 @@
     }
   },
   {
-    "app": {
-      "id": "com.sgiggle.production-1386724633",
-      "packageName": "com.sgiggle.production",
-      "version": "1386724633"
-    },
+    "id": "com.sgiggle.production-1386724633",
+    "packageName": "com.sgiggle.production",
+    "versionCode": 1386724633,
+    "versionName": "3.3.70435",
     "listing": {
       "returnAttributes": {
         "$1": "Social"
@@ -278,11 +276,10 @@
     }
   },
   {
-    "app": {
-      "id": "com.sec.chaton-302115000",
-      "packageName": "com.sec.chaton",
-      "version": "302115000"
-    },
+    "id": "com.sec.chaton-302115000",
+    "packageName": "com.sec.chaton",
+    "versionCode": 302115000,
+    "versionName": "3.2.115",
     "listing": {
       "returnAttributes": {
         "$1": "Communication"

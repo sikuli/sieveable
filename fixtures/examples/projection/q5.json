@@ -1,72 +1,63 @@
 [{
-  "app": {
-    "id": "com.google.android.apps.plus-413148638",
-    "packageName": "com.google.android.apps.plus",
-    "version": "413148638"
-  },
+  "id": "com.google.android.apps.plus-413148638",
+  "packageName": "com.google.android.apps.plus",
+  "versionCode": 413148638,
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.google.android.apps.translate-30000028",
-    "packageName": "com.google.android.apps.translate",
-    "version": "30000028"
-  },
+  "id": "com.google.android.apps.translate-30000028",
+  "packageName": "com.google.android.apps.translate",
+  "versionCode": 30000028,
+  "versionName": "3.0.4",
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.google.android.googlequicksearchbox-300304160",
-    "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300304160"
-  },
+  "id": "com.google.android.googlequicksearchbox-300304160",
+  "packageName": "com.google.android.googlequicksearchbox",
+  "versionCode": 300304160,
+  "versionName": "3.4.16.1149292.arm",
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.android.chrome-1650059",
-    "packageName": "com.android.chrome",
-    "version": "1650059"
-  },
+  "id": "com.android.chrome-1650059",
+  "packageName": "com.android.chrome",
+  "versionCode": 1650059,
+  "versionName": "31.0.1650.59",
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.google.android.apps.books-30149",
-    "packageName": "com.google.android.apps.books",
-    "version": "30149"
-  },
+  "id": "com.google.android.apps.books-30149",
+  "packageName": "com.google.android.apps.books",
+  "versionCode": 30149,
+  "versionName": "3.1.49",
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.google.android.music-1514",
-    "packageName": "com.google.android.music",
-    "version": "1514"
-  },
+  "id": "com.google.android.music-1514",
+  "packageName": "com.google.android.music",
+  "versionCode": 1514,
+  "versionName": "5.5.1514O.1185867",
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.google.android.tts-210030103",
-    "packageName": "com.google.android.tts",
-    "version": "210030103"
-  },
+  "id": "com.google.android.tts-210030103",
+  "packageName": "com.google.android.tts",
+  "versionCode": 210030103,
+  "versionName": "3.1.3.1162895",
   "listing": {},
   "ui": {},
   "manifest": {}
 }, {
-  "app": {
-    "id": "com.google.android.videos-32251",
-    "packageName": "com.google.android.videos",
-    "version": "32251"
-  },
+  "id": "com.google.android.videos-32251",
+  "packageName": "com.google.android.videos",
+  "versionCode": 32251,
+  "versionName": "3.2.25",
   "listing": {},
   "ui": {},
   "manifest": {}

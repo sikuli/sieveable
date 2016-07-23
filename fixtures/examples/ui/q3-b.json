@@ -2,16 +2,19 @@
   {
     "id": "com.google.android.apps.books-20921",
     "packageName": "com.google.android.apps.books",
-    "version": "20921"
+    "versionCode": 20921,
+    "versionName" : "2.9.21"
   },
   {
     "id": "com.google.android.music-1317",
     "packageName": "com.google.android.music",
-    "version": "1317"
+    "versionCode": 1317,
+    "versionName": "5.3.1317M.940995"
   },
   {
     "id": "com.google.android.music-1514",
     "packageName": "com.google.android.music",
-    "version": "1514"
+    "versionCode": 1514,
+    "versionName":"5.5.1514O.1185867"
   }
 ]

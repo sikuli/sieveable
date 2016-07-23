@@ -2,46 +2,55 @@
   {
     "id": "com.android.chrome-1547059",
     "packageName": "com.android.chrome",
-    "version": "1547059"
+    "versionCode":  1547059,
+    "versionName": "29.0.1547.59"
   },
   {
     "id": "com.sgiggle.production-68",
     "packageName": "com.sgiggle.production",
-    "version": "68"
+    "versionCode":  68,
+    "versionName": "3.3.69887"
   },
   {
     "id": "com.facebook.katana-666397",
     "packageName": "com.facebook.katana",
-    "version": "666397"
+    "versionCode":  666397,
+    "versionName": "3.9"
   },
   {
     "id": "com.facebook.katana-258882",
     "packageName": "com.facebook.katana",
-    "version": "258882"
+    "versionCode":  258882,
+    "versionName": "3.4"
   },
   {
     "id": "com.instagram.android-824805",
     "packageName": "com.instagram.android",
-    "version": "824805"
+    "versionCode":  824805,
+    "versionName": "5.0.1"
   },
   {
     "id": "com.sec.chaton-207103000",
     "packageName": "com.sec.chaton",
-    "version": "207103000"
+    "versionCode":  207103000,
+    "versionName": "2.7.103"
   },
   {
     "id": "com.sec.chaton-302115000",
     "packageName": "com.sec.chaton",
-    "version": "302115000"
+    "versionCode":  302115000,
+    "versionName": "3.2.115"
   },
   {
     "id": "com.sgiggle.production-1386724633",
     "packageName": "com.sgiggle.production",
-    "version": "1386724633"
+    "versionCode":  1386724633,
+    "versionName": "3.3.70435"
   },
   {
     "id": "com.instagram.android-639564",
     "packageName": "com.instagram.android",
-    "version": "639564"
+    "versionCode":  639564,
+    "versionName": "4.2.6"
   }
 ]

@@ -2,66 +2,77 @@
   {
     "id": "com.facebook.katana-258882",
     "packageName": "com.facebook.katana",
-    "version": "258882"
+    "versionCode": 258882,
+    "versionName": "3.4"
   },
   {
     "id": "com.facebook.katana-666397",
     "packageName": "com.facebook.katana",
-    "version": "666397"
+    "versionCode": 666397,
+    "versionName": "3.9"
   },
   {
     "id": "com.google.android.apps.books-30149",
     "packageName": "com.google.android.apps.books",
-    "version": "30149"
+    "versionCode": 30149,
+    "versionName": "3.1.49"
   },
   {
     "id": "com.google.android.apps.maps-705001703",
     "packageName": "com.google.android.apps.maps",
-    "version": "705001703"
+    "versionCode": 705001703,
+    "versionName": "7.5.0"
   },
   {
     "id": "com.google.android.apps.plus-413076433",
     "packageName": "com.google.android.apps.plus",
-    "version": "413076433"
+    "versionCode": 413076433
   },
   {
     "id": "com.google.android.apps.plus-413148638",
     "packageName": "com.google.android.apps.plus",
-    "version": "413148638"
+    "versionCode": 413148638
   },
   {
     "id": "com.google.android.gm-4720010",
     "packageName": "com.google.android.gm",
-    "version": "4720010"
+    "versionCode": 4720010,
+    "versionName": "4.7.2 (967015)"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300301240",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300301240"
+    "versionCode": 300301240,
+    "versionName": "3.1.24.941712.arm"
   },
   {
     "id": "com.google.android.googlequicksearchbox-300304160",
     "packageName": "com.google.android.googlequicksearchbox",
-    "version": "300304160"
+    "versionCode": 300304160,
+    "versionName": "3.4.16.1149292.arm"
   },
   {
     "id": "com.google.android.tts-210030103",
     "packageName": "com.google.android.tts",
-    "version": "210030103"
+    "versionCode": 210030103,
+    "versionName": "3.1.3.1162895"
   },
   {
     "id": "com.google.android.youtube-5021",
     "packageName": "com.google.android.youtube",
-    "version": "5021"
+    "versionCode": 5021,
+    "versionName": "5.0.21"
   },
   {
     "id": "com.google.android.youtube-5738",
     "packageName": "com.google.android.youtube",
-    "version": "5738"
+    "versionCode": 5738,
+    "versionName": "5.7.38"
   },
   {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
-    "version": "48450"
+    "versionCode": 48450,
+    "versionName": "2.11.238"
   }
 ]
