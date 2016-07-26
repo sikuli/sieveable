@@ -18,6 +18,6 @@ gulp.task('leveldb:insert', (callback) => {
 });
 
 gulp.task('default', ['lint'], (callback) => {
-  runSequence('solr:create', 'solr:schema', 'extract:archives',
+  runSequence('solr:exists', 'solr:schema', 'extract:archives',
     'solr:insert', 'leveldb:insert', callback);
 });

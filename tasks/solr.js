@@ -9,20 +9,20 @@ const gulp = require('gulp'),
   log = require('../lib/logger'),
   CONFIG_PATH = path.resolve(__dirname, '..', 'config');
 
-gulp.task('solr:create', () => {
+gulp.task('solr:exists', () => {
   const collections = [
     config.get('dbConfig.solr.listingCollection'),
     config.get('dbConfig.solr.uiTagCollection'),
     config.get('dbConfig.solr.uiSuffixCollection'),
     config.get('dbConfig.solr.manifestCollection'),
     config.get('dbConfig.solr.codeCollection')];
-  return Promise.all([solrAdmin.createCollection(collections[0]),
-        solrAdmin.createCollection(collections[1]),
-        solrAdmin.createCollection(collections[2]),
-        solrAdmin.createCollection(collections[3]),
-        solrAdmin.createCollection(collections[4])])
+  return Promise.all([solrAdmin.exists(collections[0]),
+        solrAdmin.exists(collections[1]),
+        solrAdmin.exists(collections[2]),
+        solrAdmin.exists(collections[3]),
+        solrAdmin.exists(collections[4])])
     .catch((e) => {
-      log.error('Failed to create Solr collections.', e);
+      log.error('Failed to find Solr collections.', e);
       return Promise.reject(e);
     });
 });
