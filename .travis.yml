@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "5.7"
+  - "6"
 
 jdk:
   - oraclejdk7
@@ -12,8 +12,6 @@ env:
     - SOLR_DOWNLOAD="http://archive.apache.org/dist/lucene/solr/"
     - SOLR_FILE=solr-$SOLR_VERSION.tgz
     - SOLR_INSTALL_DIR=$TRAVIS_BUILD_DIR/srv/solr-$SOLR_VERSION
-    - SOLR_PORT=8983
-    - SOLR_OPTS="-cloud -V -m 1g -p $SOLR_PORT"
   matrix:
     - NODE_ENV=development
 
@@ -26,20 +24,12 @@ install:
   # Solr
   - tar -zxf ${SOLR_FILE} -C ${SOLR_INSTALL_DIR} --strip-components 1
   - export PATH=${SOLR_INSTALL_DIR}/bin:$PATH
-  # Gulp
-  - npm install -g gulp
   - npm install
 
 before_script:
-  # Start Solr
-  - solr start ${SOLR_OPTS}
-  - solr create -c sieveable_listing -p ${SOLR_PORT}
-  - solr create -c sieveable_code -p ${SOLR_PORT}
-  - solr create -c sieveable_ui_tag -p ${SOLR_PORT}
-  - solr create -c sieveable_ui_suffix -p ${SOLR_PORT}
-  - solr create -c sieveable_manifest -p ${SOLR_PORT}
-  # Kick off the default gulp task
-  - gulp
+  - bash ./scripts/solr-startup.sh
+  # Kick off the default build task
+  - npm run build
 
 script:
   # Test the server
@@ -50,14 +40,7 @@ after_success:
   - npm run coveralls
 
 after_script:
-  # Delete Solr Collections
-  - solr delete -c sieveable_ui_tag -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable_ui_suffix -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable_manifest -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable_code -deleteConfig true -p ${SOLR_PORT}
-  - solr delete -c sieveable_listing -deleteConfig true -p ${SOLR_PORT}
-  # Stop Solr
-  - solr stop -p ${SOLR_PORT}
+  - bash ./scripts/solr-teardown.sh
 
 sudo: false
 
