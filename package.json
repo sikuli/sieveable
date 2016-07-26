@@ -9,9 +9,10 @@
     "npm": "3.x.x"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
+    "build": "gulp",
+    "test": "mocha",
     "start": "node bin/www",
-    "cover": "./node_modules/istanbul/lib/cli.js cover _mocha",
+    "cover": "istanbul cover _mocha",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "author": "Khalid Alharbi, Tom Yeh",

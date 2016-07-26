@@ -23,15 +23,15 @@ docker run -p 3000:3000 -d username/sieveable:latest
 ```
 
 ## Option 2: Building from source
+
 ### Requirements
 - A Unix-like operating system (eg. Debian, CentOS, Mac OS X, etc.).
 - node.js version 5.x.
-- Install node.js project dependencies:
-  - `npm install`
-  - Install [gulp]('http://gulpjs.com/') globally: `npm install gulp -g`
+- Install node.js project dependencies: `npm install`
 - This system requires running an [Apache Solr server]('http://lucene.apache.org/solr/'), version 5.x, in cloud mode (SolrCloud).
 
- ### Installation
+
+### Installation
 - Clone the repo.
 - Set the *NODE_ENV* configuration environment variable:
   -  `export NODE_ENV=development` This variable contains the name of the application's deployment environment and can take the value of the base name of the configuration files at the ./config directory, e.g., _development_.
@@ -39,10 +39,10 @@ docker run -p 3000:3000 -d username/sieveable:latest
   - If you want to use a different dataset, then you can change the path to the dataset directory in the configuration file at *./config* depending on the config file you want to use. All dataset paths must be relative to the configuration file.
 - Start Solr (in cloud mode).
 - Create the Solr collections defined in your config file at `config/`.
-- Once Solr is running, run the default gulp build task:
+- Once Solr is running, run the build task:
 
   ```shell
-  gulp
+  npm run build
   ```
 - Make sure all tests pass before starting sieveable's web server.
 
