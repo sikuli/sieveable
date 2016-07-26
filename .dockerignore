@@ -1,0 +1,11 @@
+#node
+node_modules
+# exclude everything in fixtures
+/fixtures/code/*
+/fixtures/listing/*
+/fixtures/manifest/*
+/fixtures/ui/*
+/fixtures/db
+# But not the examples directory and tar files
+!/fixtures/**/*.tar.bz2
+!/fixtures/examples/*
