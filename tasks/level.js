@@ -29,7 +29,6 @@ function insertToLevel(datasetType, extension) {
           return levelDB.dbGetAsync(id)
             .then((val) => {
               const result = val;
-              log.info(result);
               result[datasetType] = fileAbsPath;
               if (datasetType === 'manifest') {
                 return addVersionName(result, fileAbsPath);
@@ -66,6 +65,42 @@ function insertToLevel(datasetType, extension) {
     });
 }
 
+function insertVersionName() {
+  const dirs = _.map(config.dataset.manifest, 'target'),
+    dirPaths = _.map(dirs, (dir) => {
+      return path.resolve(CONFIG_PATH, dir);
+    });
+  return Promise.map(dirPaths, (dirPath) => {
+    return fs.readdirAsync(dirPath)
+        .map((fileName) => {
+          const id = path.basename(fileName, '.xml'),
+            fileAbsPath = path.join(dirPath, fileName);
+          return levelDB.dbGetAsync(id)
+            .then((val) => {
+              return addVersionName(val, fileAbsPath);
+            })
+            .then((result) => {
+              return levelDB.dbPutAsync(id, result);
+            })
+            .then(() => {
+              log.info('Inserted version name for %s', id);
+            })
+            .catch((getErr) => {
+              log.error('Failed to find %s ', id, getErr);
+              return Promise.reject(getErr);
+            });
+        }, { concurrency: 400 });
+  }, { concurrency: 2 })
+    .then(() => {
+      log.info('Finished inserting version name values.');
+    })
+    .catch((e) => {
+      log.error('Error ', e);
+      return Promise.reject(e);
+    });
+}
+
+
 // Add the app's version name from the manifest file to the result
 function addVersionName(result, manifestPath) {
   const resultObj = result;
@@ -90,6 +125,10 @@ gulp.task('leveldb:readFullDB', () => {
 
 gulp.task('leveldb:addManifest', () => {
   return insertToLevel('manifest', '.xml');
+});
+
+gulp.task('leveldb:addVersionName', () => {
+  return insertVersionName();
 });
 
 gulp.task('leveldb:addUI', () => {
