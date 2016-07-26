@@ -1,11 +1,11 @@
 {
   "name": "sieveable",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Sieveable: Searching and filtering Android apps.",
   "repository": "sikuli/sieveable",
   "homepage": "http://sieveable.io",
   "engines": {
-    "node": "5.7.x",
+    "node": "6.x.x",
     "npm": "3.x.x"
   },
   "scripts": {
