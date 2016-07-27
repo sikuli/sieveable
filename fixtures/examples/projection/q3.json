@@ -2,164 +2,120 @@
     "id": "com.google.android.googlequicksearchbox-300304160",
     "packageName": "com.google.android.googlequicksearchbox",
     "versionCode": 300304160,
-    "versionName": "3.4.16.1149292.arm" ,
+    "versionName": "3.4.16.1149292.arm",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.sgiggle.production-1386724633",
     "packageName": "com.sgiggle.production",
     "versionCode": 1386724633,
     "versionName": "3.3.70435",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.instagram.android-824805",
     "packageName": "com.instagram.android",
     "versionCode": 824805,
     "versionName": "5.0.1",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.facebook.orca-2909635",
     "packageName": "com.facebook.orca",
     "versionCode": 2909635,
     "versionName": "6.0.0.27.0",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.viber.voip-47",
     "packageName": "com.viber.voip",
     "versionCode": 47,
     "versionName": "4.1.0.665",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.whatsapp-48450",
     "packageName": "com.whatsapp",
     "versionCode": 48450,
     "versionName": "2.11.238",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.creativemobile.DragRacing-121",
     "packageName": "com.creativemobile.DragRacing",
     "versionCode": 121,
     "versionName": "1.6.22",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.google.android.apps.babel-21311130",
     "packageName": "com.google.android.apps.babel",
     "versionCode": 21311130,
     "versionName": "2.1.311 (1231142-30)",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.sec.chaton-302115000",
     "packageName": "com.sec.chaton",
     "versionCode": 302115000,
     "versionName": "3.2.115",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.android.chrome-1650059",
     "packageName": "com.android.chrome",
     "versionCode": 1650059,
     "versionName": "31.0.1650.59",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.shazam.android-89487",
     "packageName": "com.shazam.android",
     "versionCode": 89487,
     "versionName": "4.7.3-JB89487",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.facebook.katana-666397",
     "packageName": "com.facebook.katana",
     "versionCode": 666397,
     "versionName": "3.9",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.tencent.mm-405",
     "packageName": "com.tencent.mm",
     "versionCode": 405,
     "versionName": "5.3.0.87_r717458",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.google.android.apps.maps-705001703",
     "packageName": "com.google.android.apps.maps",
     "versionCode": 705001703,
     "versionName": "7.5.0",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  },
-  {
+    "manifest": {}
+}, {
     "id": "com.google.android.apps.gmm-801000903",
     "packageName": "com.google.android.apps.gmm",
     "versionCode": 801000903,
     "versionName": "8.1.0",
     "listing": {},
     "ui": {},
-    "manifest": {
-      "returnAttributes": {}
-    }
-  }]
+    "manifest": {}
+}]

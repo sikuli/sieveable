@@ -5,12 +5,9 @@
     "versionCode": 936981,
     "versionName": "3.2.3-release",
     "listing": {
-      "returnAttributes": {
         "title": "Facebook Messenger"
-      }
     },
     "ui": {
-      "returnAttributes": {
         "buttonText": [
           "Install Now",
           "Remind Me Later",
@@ -88,10 +85,8 @@
           "Get the Latest Version",
           "Log Out"
         ]
-      }
     },
     "manifest": {
-      "returnAttributes": {
         "permissions": [
           "android.permission.INTERNET",
           "android.permission.GET_ACCOUNTS",
@@ -135,7 +130,6 @@
           "com.facebook.orca.permission.C2D_MESSAGE"
         ]
       }
-    }
   },
   {
     "id": "com.facebook.orca-2909635",
@@ -143,19 +137,14 @@
     "versionCode": 2909635,
     "versionName": "6.0.0.27.0",
     "listing": {
-      "returnAttributes": {
         "title": "Facebook Messenger"
-      }
     },
     "ui": {
-      "returnAttributes": {
         "buttonText": [
           "Tap to Retry"
         ]
-      }
     },
     "manifest": {
-      "returnAttributes": {
         "permissions": [
           "android.permission.INTERNET",
           "android.permission.GET_ACCOUNTS",
@@ -204,7 +193,6 @@
           "com.amazon.device.messaging.permission.RECEIVE"
         ]
       }
-    }
   },
   {
     "id": "com.facebook.katana-666397",
@@ -212,12 +200,9 @@
     "versionCode": 666397,
     "versionName": "3.9",
     "listing": {
-      "returnAttributes": {
         "title": "Facebook"
-      }
     },
     "ui": {
-      "returnAttributes": {
         "buttonText": [
           "Confirm",
           "Send Code Again",
@@ -384,10 +369,8 @@
           "Find Friends",
           "Send"
         ]
-      }
     },
     "manifest": {
-      "returnAttributes": {
         "permissions": [
           "android.permission.ACCESS_COARSE_LOCATION",
           "android.permission.WAKE_LOCK",
@@ -438,7 +421,6 @@
           "android.permission.BATTERY_STATS",
           "android.permission.READ_EXTERNAL_STORAGE"
         ]
-      }
     }
   },
   {
@@ -447,12 +429,9 @@
     "versionCode": 258882,
     "versionName": "3.4",
     "listing": {
-      "returnAttributes": {
         "title": "Facebook"
-      }
     },
     "ui": {
-      "returnAttributes": {
         "buttonText": [
           "Save Credit Card",
           "Install Now",
@@ -626,10 +605,8 @@
           "Find Friends",
           "Send"
         ]
-      }
     },
     "manifest": {
-      "returnAttributes": {
         "permissions": [
           "android.permission.ACCESS_COARSE_LOCATION",
           "android.permission.WAKE_LOCK",
@@ -678,6 +655,5 @@
           "android.permission.BATTERY_STATS"
         ]
       }
-    }
   }
 ]

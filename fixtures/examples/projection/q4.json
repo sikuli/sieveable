@@ -1,683 +1,569 @@
 [{
-  "id": "com.adobe.reader-77969",
-  "packageName": "com.adobe.reader",
-  "versionCode": 77969,
-  "versionName": "@string/IDS_ADOBE_READER_VERSION_GLB",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Productivity"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.adobe.reader-77969",
+    "listing": {
+        "$1": "Productivity"
+    },
+    "manifest": {},
+    "packageName": "com.adobe.reader",
+    "ui": {},
+    "versionCode": 77969,
+    "versionName": "@string/IDS_ADOBE_READER_VERSION_GLB"
 }, {
-  "id": "com.adobe.reader-85478",
-  "packageName": "com.adobe.reader",
-  "versionCode": 85478,
-  "versionName": "@string/IDS_ADOBE_READER_VERSION_GLB",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Productivity"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.adobe.reader-85478",
+    "listing": {
+        "$1": "Productivity"
+    },
+    "manifest": {},
+    "packageName": "com.adobe.reader",
+    "ui": {},
+    "versionCode": 85478,
+    "versionName": "@string/IDS_ADOBE_READER_VERSION_GLB"
 }, {
-  "id": "com.android.chrome-1547059",
-  "packageName": "com.android.chrome",
-  "versionCode": 1547059,
-  "versionName": "29.0.1547.59",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.android.chrome-1547059",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.android.chrome",
+    "ui": {},
+    "versionCode": 1547059,
+    "versionName": "29.0.1547.59"
 }, {
-  "id": "com.android.chrome-1650059",
-  "packageName": "com.android.chrome",
-  "versionCode": 1650059,
-  "versionName": "31.0.1650.59",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.android.chrome-1650059",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.android.chrome",
+    "ui": {},
+    "versionCode": 1650059,
+    "versionName": "31.0.1650.59"
 }, {
-  "id": "com.facebook.katana-258882",
-  "packageName": "com.facebook.katana",
-  "versionCode": 258882,
-  "versionName": "3.4",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.facebook.katana-258882",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.facebook.katana",
+    "ui": {},
+    "versionCode": 258882,
+    "versionName": "3.4"
 }, {
-  "id": "com.facebook.katana-666397",
-  "packageName": "com.facebook.katana",
-  "versionCode": 666397,
-  "versionName": "3.9",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.facebook.katana-666397",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.facebook.katana",
+    "ui": {},
+    "versionCode": 666397,
+    "versionName": "3.9"
 }, {
-  "id": "com.facebook.orca-2909635",
-  "packageName": "com.facebook.orca",
-  "versionCode": 2909635,
-  "versionName": "6.0.0.27.0",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.facebook.orca-2909635",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.facebook.orca",
+    "ui": {},
+    "versionCode": 2909635,
+    "versionName": "6.0.0.27.0"
 }, {
-  "id": "com.facebook.orca-936981",
-  "packageName": "com.facebook.orca",
-  "versionCode": 936981,
-  "versionName": "3.2.3-release",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.facebook.orca-936981",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.facebook.orca",
+    "ui": {},
+    "versionCode": 936981,
+    "versionName": "3.2.3-release"
 }, {
-  "id": "com.google.android.apps.books-20921",
-  "packageName": "com.google.android.apps.books",
-  "versionCode": 20921,
-  "versionName": "2.9.21",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Books & Reference"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.apps.books-20921",
+    "listing": {
+        "$1": "Books & Reference"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.apps.books",
+    "ui": {},
+    "versionCode": 20921,
+    "versionName": "2.9.21"
 }, {
     "id": "com.google.android.apps.books-30149",
+    "listing": {
+        "$1": "Books & Reference"
+    },
+    "manifest": {},
     "packageName": "com.google.android.apps.books",
+    "ui": {},
     "versionCode": 30149,
-    "versionName": "3.1.49",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Books & Reference"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "versionName": "3.1.49"
 }, {
-  "id": "com.google.android.apps.maps-705001703",
-  "packageName": "com.google.android.apps.maps",
-  "versionCode": 705001703,
-  "versionName": "7.5.0",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Travel & Local"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.apps.maps-705001703",
+    "listing": {
+        "$1": "Travel & Local"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.apps.maps",
+    "ui": {},
+    "versionCode": 705001703,
+    "versionName": "7.5.0"
 }, {
-  "id": "com.google.android.apps.plus-413076433",
-  "packageName": "com.google.android.apps.plus",
-  "versionCode": 413076433,
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.apps.plus-413076433",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.apps.plus",
+    "ui": {},
+    "versionCode": 413076433
 }, {
-  "id": "com.google.android.apps.plus-413148638",
-  "packageName": "com.google.android.apps.plus",
-  "versionCode": 413148638,
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.apps.plus-413148638",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.apps.plus",
+    "ui": {},
+    "versionCode": 413148638
 }, {
-  "id": "com.google.android.apps.translate-30000023",
-  "packageName": "com.google.android.apps.translate",
-  "versionCode": 30000023,
-  "versionName": "3.0.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.apps.translate-30000023",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.apps.translate",
+    "ui": {},
+    "versionCode": 30000023,
+    "versionName": "3.0.1"
 }, {
-  "id": "com.google.android.apps.translate-30000028",
-  "packageName": "com.google.android.apps.translate",
-  "versionCode": 30000028,
-  "versionName": "3.0.4",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.apps.translate-30000028",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.apps.translate",
+    "ui": {},
+    "versionCode": 30000028,
+    "versionName": "3.0.4"
 }, {
-  "id": "com.google.android.gm-4720010",
-  "packageName": "com.google.android.gm",
-  "versionCode": 4720010,
-  "versionName": "4.7.2 (967015)",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.gm-4720010",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.gm",
+    "ui": {},
+    "versionCode": 4720010,
+    "versionName": "4.7.2 (967015)"
 }, {
-  "id": "com.google.android.gm-4800250",
-  "packageName": "com.google.android.gm",
-  "versionCode": 4800250,
-  "versionName": "4.8 (1167183)",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.gm-4800250",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.gm",
+    "ui": {},
+    "versionCode": 4800250,
+    "versionName": "4.8 (1167183)"
 }, {
-  "id": "com.google.android.googlequicksearchbox-300301240",
-  "packageName": "com.google.android.googlequicksearchbox",
-  "versionCode": 300301240,
-  "versionName": "3.1.24.941712.arm",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.googlequicksearchbox-300301240",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.googlequicksearchbox",
+    "ui": {},
+    "versionCode": 300301240,
+    "versionName": "3.1.24.941712.arm"
 }, {
-  "id": "com.google.android.googlequicksearchbox-300304160",
-  "packageName": "com.google.android.googlequicksearchbox",
-  "versionCode": 300304160,
-  "versionName": "3.4.16.1149292.arm",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.googlequicksearchbox-300304160",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.googlequicksearchbox",
+    "ui": {},
+    "versionCode": 300304160,
+    "versionName": "3.4.16.1149292.arm"
 }, {
-  "id": "com.google.android.music-1317",
-  "packageName": "com.google.android.music",
-  "versionCode": 1317,
-  "versionName": "5.3.1317M.940995",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Music & Audio"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.music-1317",
+    "listing": {
+        "$1": "Music & Audio"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.music",
+    "ui": {},
+    "versionCode": 1317,
+    "versionName": "5.3.1317M.940995"
 }, {
-  "id": "com.google.android.music-1514",
-  "packageName": "com.google.android.music",
-  "versionCode": 1514,
-  "versionName": "5.5.1514O.1185867",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Music & Audio"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.music-1514",
+    "listing": {
+        "$1": "Music & Audio"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.music",
+    "ui": {},
+    "versionCode": 1514,
+    "versionName": "5.5.1514O.1185867"
 }, {
-  "id": "com.google.android.tts-210020403",
-  "packageName": "com.google.android.tts",
-  "versionCode": 210020403,
-  "versionName": "2.4.3.864779",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.tts-210020403",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.tts",
+    "ui": {},
+    "versionCode": 210020403,
+    "versionName": "2.4.3.864779"
 }, {
-  "id": "com.google.android.tts-210030103",
-  "packageName": "com.google.android.tts",
-  "versionCode": 210030103,
-  "versionName": "3.1.3.1162895",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.tts-210030103",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.tts",
+    "ui": {},
+    "versionCode": 210030103,
+    "versionName": "3.1.3.1162895"
 }, {
-  "id": "com.google.android.videos-31221",
-  "packageName": "com.google.android.videos",
-  "versionCode": 31221,
-  "versionName": "3.1.22",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Media & Video"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.videos-31221",
+    "listing": {
+        "$1": "Media & Video"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.videos",
+    "ui": {},
+    "versionCode": 31221,
+    "versionName": "3.1.22"
 }, {
-  "id": "com.google.android.videos-32251",
-  "packageName": "com.google.android.videos",
-  "versionCode": 32251,
-  "versionName": "3.2.25",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Media & Video"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.videos-32251",
+    "listing": {
+        "$1": "Media & Video"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.videos",
+    "ui": {},
+    "versionCode": 32251,
+    "versionName": "3.2.25"
 }, {
-  "id": "com.google.android.youtube-5021",
-  "packageName": "com.google.android.youtube",
-  "versionCode": 5021,
-  "versionName": "5.0.21",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Media & Video"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.youtube-5021",
+    "listing": {
+        "$1": "Media & Video"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.youtube",
+    "ui": {},
+    "versionCode": 5021,
+    "versionName": "5.0.21"
 }, {
-  "id": "com.google.android.youtube-5738",
-  "packageName": "com.google.android.youtube",
-  "versionCode": 5738,
-  "versionName": "5.7.38",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Media & Video"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.android.youtube-5738",
+    "listing": {
+        "$1": "Media & Video"
+    },
+    "manifest": {},
+    "packageName": "com.google.android.youtube",
+    "ui": {},
+    "versionCode": 5738,
+    "versionName": "5.7.38"
 }, {
-  "id": "com.google.zxing.client.android-100",
-  "packageName": "com.google.zxing.client.android",
-  "versionCode": 100,
-  "versionName": "4.7.0",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Shopping"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.zxing.client.android-100",
+    "listing": {
+        "$1": "Shopping"
+    },
+    "manifest": {},
+    "packageName": "com.google.zxing.client.android",
+    "ui": {},
+    "versionCode": 100,
+    "versionName": "4.7.0"
 }, {
-  "id": "com.google.zxing.client.android-94",
-  "packageName": "com.google.zxing.client.android",
-  "versionCode": 94,
-  "versionName": "4.5.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Shopping"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.google.zxing.client.android-94",
+    "listing": {
+        "$1": "Shopping"
+    },
+    "manifest": {},
+    "packageName": "com.google.zxing.client.android",
+    "ui": {},
+    "versionCode": 94,
+    "versionName": "4.5.1"
 }, {
-  "id": "com.instagram.android-824805",
-  "packageName": "com.instagram.android",
-  "versionCode": 824805,
-  "versionName": "5.0.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.instagram.android-824805",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.instagram.android",
+    "ui": {},
+    "versionCode": 824805,
+    "versionName": "5.0.1"
 }, {
-  "id": "com.surpax.ledflashlight.panel-4",
-  "packageName": "com.surpax.ledflashlight.panel",
-  "versionCode": 4,
-  "versionName": "1.0.3",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Productivity"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.surpax.ledflashlight.panel-4",
+    "listing": {
+        "$1": "Productivity"
+    },
+    "manifest": {},
+    "packageName": "com.surpax.ledflashlight.panel",
+    "ui": {},
+    "versionCode": 4,
+    "versionName": "1.0.3"
 }, {
-  "id": "me.pou.app-157",
-  "packageName": "me.pou.app",
-  "versionCode": 157,
-  "versionName": "1.4.12",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Casual"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "me.pou.app-157",
+    "listing": {
+        "$1": "Casual"
+    },
+    "manifest": {},
+    "packageName": "me.pou.app",
+    "ui": {},
+    "versionCode": 157,
+    "versionName": "1.4.12"
 }, {
-  "id": "com.sec.chaton-302115000",
-  "packageName": "com.sec.chaton",
-  "versionCode": 302115000,
-  "versionName": "3.2.115",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.sec.chaton-302115000",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.sec.chaton",
+    "ui": {},
+    "versionCode": 302115000,
+    "versionName": "3.2.115"
 }, {
-  "id": "com.sgiggle.production-68",
-  "packageName": "com.sgiggle.production",
-  "versionCode": 68,
-  "versionName": "3.3.69887",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.sgiggle.production-68",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.sgiggle.production",
+    "ui": {},
+    "versionCode": 68,
+    "versionName": "3.3.69887"
 }, {
-  "id": "com.opera.mini.android-25",
-  "packageName": "com.opera.mini.android",
-  "versionCode": 25,
-  "versionName": "7.5.3",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.opera.mini.android-25",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.opera.mini.android",
+    "ui": {},
+    "versionCode": 25,
+    "versionName": "7.5.3"
 }, {
-  "id": "com.outfit7.talkingtom2free-83",
-  "packageName": "com.outfit7.talkingtom2free",
-  "versionCode": 83,
-  "versionName": "4.2",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Entertainment"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.outfit7.talkingtom2free-83",
+    "listing": {
+        "$1": "Entertainment"
+    },
+    "manifest": {},
+    "packageName": "com.outfit7.talkingtom2free",
+    "ui": {},
+    "versionCode": 83,
+    "versionName": "4.2"
 }, {
-  "id": "com.shazam.android-89487",
-  "packageName": "com.shazam.android",
-  "versionCode": 89487,
-  "versionName": "4.7.3-JB89487",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Music & Audio"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.shazam.android-89487",
+    "listing": {
+        "$1": "Music & Audio"
+    },
+    "manifest": {},
+    "packageName": "com.shazam.android",
+    "ui": {},
+    "versionCode": 89487,
+    "versionName": "4.7.3-JB89487"
 }, {
-  "id": "com.surpax.ledflashlight.panel-5",
-  "packageName": "com.surpax.ledflashlight.panel",
-  "versionCode": 5,
-  "versionName": "1.0.4",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Productivity"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.surpax.ledflashlight.panel-5",
+    "listing": {
+        "$1": "Productivity"
+    },
+    "manifest": {},
+    "packageName": "com.surpax.ledflashlight.panel",
+    "ui": {},
+    "versionCode": 5,
+    "versionName": "1.0.4"
 }, {
-  "id": "com.cleanmaster.mguard-50511533",
-  "packageName": "com.cleanmaster.mguard",
-  "versionCode": 50511533,
-  "versionName": "5.5.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.cleanmaster.mguard-50511533",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.cleanmaster.mguard",
+    "ui": {},
+    "versionCode": 50511533,
+    "versionName": "5.5.1"
 }, {
-  "id": "com.opera.mini.android-27",
-  "packageName": "com.opera.mini.android",
-  "versionCode": 27,
-  "versionName": "7.5.4",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.opera.mini.android-27",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.opera.mini.android",
+    "ui": {},
+    "versionCode": 27,
+    "versionName": "7.5.4"
 }, {
-  "id": "com.tencent.mm-405",
-  "packageName": "com.tencent.mm",
-  "versionCode": 405,
-  "versionName": "5.3.0.87_r717458",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.tencent.mm-405",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.tencent.mm",
+    "ui": {},
+    "versionCode": 405,
+    "versionName": "5.3.0.87_r717458"
 }, {
-  "id": "com.whatsapp-48364",
-  "packageName": "com.whatsapp",
-  "versionCode": 48364,
-  "versionName": "2.11.152",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.whatsapp-48364",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.whatsapp",
+    "ui": {},
+    "versionCode": 48364,
+    "versionName": "2.11.152"
 }, {
-  "id": "me.pou.app-188",
-  "packageName": "me.pou.app",
-  "versionCode": 188,
-  "versionName": "1.4.43",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Casual"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "me.pou.app-188",
+    "listing": {
+        "$1": "Casual"
+    },
+    "manifest": {},
+    "packageName": "me.pou.app",
+    "ui": {},
+    "versionCode": 188,
+    "versionName": "1.4.43"
 }, {
-  "id": "com.sgiggle.production-1386724633",
-  "packageName": "com.sgiggle.production",
-  "versionCode": 1386724633,
-  "versionName": "3.3.70435",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.sgiggle.production-1386724633",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.sgiggle.production",
+    "ui": {},
+    "versionCode": 1386724633,
+    "versionName": "3.3.70435"
 }, {
-  "id": "com.whatsapp-48450",
-  "packageName": "com.whatsapp",
-  "versionCode": 48450,
-  "versionName": "2.11.238",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.whatsapp-48450",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.whatsapp",
+    "ui": {},
+    "versionCode": 48450,
+    "versionName": "2.11.238"
 }, {
-  "id": "com.creativemobile.DragRacing-106",
-  "packageName": "com.creativemobile.DragRacing",
-  "versionCode": 106,
-  "versionName": "1.6.16",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Racing"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.creativemobile.DragRacing-106",
+    "listing": {
+        "$1": "Racing"
+    },
+    "manifest": {},
+    "packageName": "com.creativemobile.DragRacing",
+    "ui": {},
+    "versionCode": 106,
+    "versionName": "1.6.16"
 }, {
-  "id": "com.outfit7.talkingtom-73",
-  "packageName": "com.outfit7.talkingtom",
-  "versionCode": 73,
-  "versionName": "2.1.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Entertainment"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.outfit7.talkingtom-73",
+    "listing": {
+        "$1": "Entertainment"
+    },
+    "manifest": {},
+    "packageName": "com.outfit7.talkingtom",
+    "ui": {},
+    "versionCode": 73,
+    "versionName": "2.1.1"
 }, {
-  "id": "com.shazam.android-81291",
-  "packageName": "com.shazam.android",
-  "versionCode": 81291,
-  "versionName": "4.3.0-JB81291",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Music & Audio"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.shazam.android-81291",
+    "listing": {
+        "$1": "Music & Audio"
+    },
+    "manifest": {},
+    "packageName": "com.shazam.android",
+    "ui": {},
+    "versionCode": 81291,
+    "versionName": "4.3.0-JB81291"
 }, {
-  "id": "com.viber.voip-47",
-  "packageName": "com.viber.voip",
-  "versionCode": 47,
-  "versionName": "4.1.0.665",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.viber.voip-47",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.viber.voip",
+    "ui": {},
+    "versionCode": 47,
+    "versionName": "4.1.0.665"
 }, {
-  "id": "com.instagram.android-639564",
-  "packageName": "com.instagram.android",
-  "versionCode": 639564,
-  "versionName": "4.2.6",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Social"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.instagram.android-639564",
+    "listing": {
+        "$1": "Social"
+    },
+    "manifest": {},
+    "packageName": "com.instagram.android",
+    "ui": {},
+    "versionCode": 639564,
+    "versionName": "4.2.6"
 }, {
-  "id": "com.outfit7.talkingtom2free-142",
-  "packageName": "com.outfit7.talkingtom2free",
-  "versionCode": 142,
-  "versionName": "4.5.2",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Entertainment"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.outfit7.talkingtom2free-142",
+    "listing": {
+        "$1": "Entertainment"
+    },
+    "manifest": {},
+    "packageName": "com.outfit7.talkingtom2free",
+    "ui": {},
+    "versionCode": 142,
+    "versionName": "4.5.2"
 }, {
-  "id": "com.outfit7.talkingtom-102",
-  "packageName": "com.outfit7.talkingtom",
-  "versionCode": 102,
-  "versionName": "2.4.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Entertainment"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.outfit7.talkingtom-102",
+    "listing": {
+        "$1": "Entertainment"
+    },
+    "manifest": {},
+    "packageName": "com.outfit7.talkingtom",
+    "ui": {},
+    "versionCode": 102,
+    "versionName": "2.4.1"
 }, {
-  "id": "com.creativemobile.DragRacing-121",
-  "packageName": "com.creativemobile.DragRacing",
-  "versionCode": 121,
-  "versionName": "1.6.22",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Racing"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.creativemobile.DragRacing-121",
+    "listing": {
+        "$1": "Racing"
+    },
+    "manifest": {},
+    "packageName": "com.creativemobile.DragRacing",
+    "ui": {},
+    "versionCode": 121,
+    "versionName": "1.6.22"
 }, {
-  "id": "com.cleanmaster.mguard-40101776",
-  "packageName": "com.cleanmaster.mguard",
-  "versionCode": 40101776,
-  "versionName": "4.1.0",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Tools"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.cleanmaster.mguard-40101776",
+    "listing": {
+        "$1": "Tools"
+    },
+    "manifest": {},
+    "packageName": "com.cleanmaster.mguard",
+    "ui": {},
+    "versionCode": 40101776,
+    "versionName": "4.1.0"
 }, {
-  "id": "com.sec.chaton-207103000",
-  "packageName": "com.sec.chaton",
-  "versionCode": 207103000,
-  "versionName": "2.7.103",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.sec.chaton-207103000",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.sec.chaton",
+    "ui": {},
+    "versionCode": 207103000,
+    "versionName": "2.7.103"
 }, {
-  "id": "com.tencent.mm-361",
-  "packageName": "com.tencent.mm",
-  "versionCode": 361,
-  "versionName": "5.1",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.tencent.mm-361",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.tencent.mm",
+    "ui": {},
+    "versionCode": 361,
+    "versionName": "5.1"
 }, {
-  "id": "com.viber.voip-37",
-  "packageName": "com.viber.voip",
-  "versionCode": 37,
-  "versionName": "3.1.1.15",
-  "listing": {
-    "returnAttributes": {
-      "$1": "Communication"
-    }
-  },
-  "ui": {},
-  "manifest": {}
+    "id": "com.viber.voip-37",
+    "listing": {
+        "$1": "Communication"
+    },
+    "manifest": {},
+    "packageName": "com.viber.voip",
+    "ui": {},
+    "versionCode": 37,
+    "versionName": "3.1.1.15"
 }]
