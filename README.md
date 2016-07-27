@@ -56,8 +56,9 @@ docker run -p 3000:3000 -d username/sieveable:latest
   ```
 
 # Usage
-- The server should be running at: http://localhost:3000
-  - We can now send an HTTTP GET request to query Sieveable. For example, to find apps that have the word "Google" in their title and has a RelativeLayout with a Button child, we can send the following HTTP GET request using *curl*:
+The server should be running at: http://localhost:3000
+
+We can now send an HTTTP GET request to query Sieveable. For example, to find apps that have the word "Google" in their title, have a RelativeLayout with a Button child, and obtain their star ratings, we can send the following HTTP GET request using *curl*:
 
   ```shell
   curl -G "http://localhost:3000/q" --data-urlencode \
@@ -67,8 +68,39 @@ docker run -p 3000:3000 -d username/sieveable:latest
    <title>Google</title>\
    <RelativeLayout>\
       <Button></Button>\
-   </RelativeLayout>\
-   RETURN app"
+   </RelativeLayout>
+   <rating>(*)</rating>\
+   RETURN app, l\$1 AS starRating"
+  ```
+which returns the following response:
+
+  ```json
+{
+"apps": [
+    {
+      "id": "com.android.chrome-1650059",
+      "packageName": "com.android.chrome",
+      "versionCode": 1650059,
+      "versionName": "31.0.1650.59",
+      "listing": {
+        "starRating": 4.178911
+      },
+      "ui": {},
+      "manifest": {}
+    },
+    {
+      "id": "com.google.android.music-1317",
+      "packageName": "com.google.android.music",
+      "versionCode": 1317,
+      "versionName": "5.3.1317M.940995",
+      "listing": {
+        "starRating": 3.8888636
+      },
+      "ui": {},
+      "manifest": {}
+    }
+  ]
+}
   ```
 
 # Documentation
