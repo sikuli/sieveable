@@ -3,7 +3,7 @@
 # (CentOS v7.x) to perform automated tasks every time we boot up a new instance.
 SOLR_VERSION=5.4.1
 ZOOKEEPER_VERSION=3.4.6
-NODE_VERSION=5
+NODE_VERSION=6
 JAVA_VERSION=1.7.0
 SOLR_INSTALL_DIR=/mnt/pd1/home/bin/solr
 ZOOKEEPER_INSTALL_DIR=/mnt/pd1/home/bin/zookeeper
@@ -27,7 +27,7 @@ mkdir -p $SOLR_INSTALL_DIR
 tar -xzf solr-$SOLR_VERSION.tgz -C $SOLR_INSTALL_DIR --strip-components=1
 rm solr-$SOLR_VERSION.tgz
 # Install zookeeper
-curl -O "http://apache.arvixe.com/zookeeper/zookeeper-$ZOOKEEPER_VERSION/zookeeper-$ZOOKEEPER_VERSION.tar.gz"
+curl -O "http://archive.apache.org/dist/zookeeper/zookeeper-$ZOOKEEPER_VERSION/zookeeper-$ZOOKEEPER_VERSION.tar.gz"
 mkdir -p $ZOOKEEPER_INSTALL_DIR
 tar -xzf zookeeper-$ZOOKEEPER_VERSION.tar.gz -C $ZOOKEEPER_INSTALL_DIR --strip-components=1
 rm zookeeper-$ZOOKEEPER_VERSION.tar.gz
