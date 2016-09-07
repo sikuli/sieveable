@@ -84,7 +84,8 @@ gulp.task('solr:addListingFields', () => {
       name: 'vern',
       type: 'string',
       indexed: true,
-      required: true,
+      required: false,
+      default: '',
       stored: true
     },
     creatorAddressField = {
