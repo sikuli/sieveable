@@ -177,13 +177,20 @@ describe('Listing Details Examples: Answers to multiple listing details ' +
     'log an error message', (done) => {
     const listingQuery = '<rating> </rating>',
       q = `MATCH app\nWHERE\n${listingQuery}\nRETURN app`;
-    testApiAsync(q, Array(0), false)
-    .then(() => {
-      done();
-    })
-    .catch((e) => {
-      done(e);
-    });
+    request(app)
+      .get('/q')
+      .query({ queryText: q })
+      .set('Accept', 'application/json')
+      .expect(400)
+      .end((err, res) => {
+        if (err) {
+          done(new Error('Expected the invalid query to not throw an error.'));
+        }
+        else {
+          should.not.exist(res.body.apps);
+          done();
+        }
+      });
   });
 
   it('q10: It should search for apps that have a minimum download count of ' +
