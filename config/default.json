@@ -11,7 +11,8 @@
     "solr": {
       "host": "127.0.0.1",
       "port": 8983,
-      "maxRows": 10
+      "maxRows": 10,
+      "timeout": 60000
     },
     "leveldb": {
       "location": "../fixtures/db"
