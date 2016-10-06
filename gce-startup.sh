@@ -1,10 +1,10 @@
 #!/bin/bash
 # This script is used as a startup script on Google Compute Engine's virtual machines
 # (CentOS v7.x) to perform automated tasks every time we boot up a new instance.
-SOLR_VERSION=5.4.1
+SOLR_VERSION=5.5.2
 ZOOKEEPER_VERSION=3.4.6
 NODE_VERSION=6
-JAVA_VERSION=1.7.0
+JAVA_VERSION=1.8.0
 SOLR_INSTALL_DIR=/mnt/pd1/home/bin/solr
 ZOOKEEPER_INSTALL_DIR=/mnt/pd1/home/bin/zookeeper
 # Update and install lsof, gcc, gcc-c++, and make
