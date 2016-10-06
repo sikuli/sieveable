@@ -46,5 +46,3 @@ sudo: false
 
 notifications:
   email: false
-  slack:
-    secure: ZMjCr3IV5/frTvI91Tb2516pY/0ofZ0CqIBYy84tczMfwtpKvkPFBqo0xW/bGrQ5AoMwFQG3UdYJ9334j4Ayj+gscQVuAoqp032Eql4hhUBfHYQr10/LfdcKvKD2ebSFhtO6SMyNlHRk9sCHTGqKdiRLf3Wp44ejcpxaG+RMeoE=
